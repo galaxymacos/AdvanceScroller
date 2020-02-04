@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerAnimationController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CharacterMovement2D.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/UnityBoolEvent.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/PlayerAnimationController.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerInput.cs" />
+        <option value="$PROJECT_DIR$/Assets/CharacterMovement2D.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1XK0hM7vv1r93Bo0Es6UaFETHcU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="" />
+      <created>1580779597384</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580779597384</updated>
+      <workItem from="1580779601147" duration="10000" />
+      <workItem from="1580779638001" duration="4850000" />
+      <workItem from="1580822244099" duration="8678000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="WindowStateProjectService">
+    <state x="534" y="211" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1580779606581">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="534" y="211" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580779606581" />
+    <state x="385" y="125" key="SettingsEditor" timestamp="1580779655107">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="385" y="125" key="SettingsEditor/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580779655107" />
+    <state width="498" height="450" key="SwitcherDM" timestamp="1580827095087">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="498" height="450" key="SwitcherDM/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580827095087" />
+    <state x="510" y="221" key="run.anything.popup" timestamp="1580782244858">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1580828529998">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580828529998" />
+  </component>
+</project>
