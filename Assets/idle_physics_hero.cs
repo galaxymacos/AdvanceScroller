@@ -35,6 +35,10 @@ public class idle_physics_hero : StateMachineBehaviour
             messagingSystem.heroInput.jump = false;
             animator.SetTrigger("jump");
         }
+        else if (!messagingSystem.isGrounded)
+        {
+            animator.SetTrigger("fall down");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

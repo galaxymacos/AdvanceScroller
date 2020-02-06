@@ -8,6 +8,7 @@ public class WolfSkill : MonoBehaviour
     public bool moveRight;
     private ProjectileFlipComponent flipComponent;
     private ProjectileMovementComponent movementComponent;
+    public int damage = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -29,8 +30,22 @@ public class WolfSkill : MonoBehaviour
         Destroy(gameObject);
     }
     
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Knockable>() != null)
+        {
+            other.GetComponent<Knockable>().KnockUp(GetComponent<KnockComponent>());
+        }
+
+        if (other.GetComponent<HealthSystem>() != null)
+        {
+            other.GetComponent<HealthSystem>().TakeDamage(damage);
+        }
+    }
     
 }
+
+
 
 public class ProjectileMovementComponent: MovementComponent
 {

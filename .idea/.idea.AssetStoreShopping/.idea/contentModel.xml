@@ -10,8 +10,13 @@
         <e p="attack_psychic_hero.cs" t="Include" />
         <e p="double_jump_psychic_hero.cs" t="Include" />
         <e p="fall_down_psychic_hero.cs" t="Include" />
+        <e p="HealthSystem.cs" t="Include" />
+        <e p="hurt_psychic_hero.cs" t="Include" />
         <e p="idle_physics_hero.cs" t="Include" />
+        <e p="jump_attack_psychic_hero.cs" t="Include" />
         <e p="jump_psychic_hero.cs" t="Include" />
+        <e p="Knockable.cs" t="Include" />
+        <e p="KnockComponent.cs" t="Include" />
         <e p="MovementComponent.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="Psychic Hero" t="Include">

@@ -36,6 +36,10 @@ public class run_psychic_hero : StateMachineBehaviour
             animator.SetTrigger("jump");
         }
 
+        if (!messagingSystem.isGrounded)
+        {
+            animator.SetTrigger("fall down");
+        }
         
     }
 

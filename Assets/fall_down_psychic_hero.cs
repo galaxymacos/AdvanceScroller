@@ -15,14 +15,20 @@ public class fall_down_psychic_hero : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (messagingSystem.heroInput.jump)
+        if (messagingSystem.heroInput.jump && !messagingSystem.hasDoubleJump)
         {
             messagingSystem.heroInput.jump = false;
+            messagingSystem.hasDoubleJump = true;
             animator.SetTrigger("double jump");
         }
         if (messagingSystem.isGrounded )
         {
             animator.SetTrigger("idle");
+        }
+        
+        if (messagingSystem.heroInput.attack)
+        {
+            animator.SetTrigger("jump attack");
         }
 
     }

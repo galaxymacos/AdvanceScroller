@@ -2,658 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Falldown.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Falldown.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MovementComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/MovementComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayerInputActions.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayerInputActions.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/acquire.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/acquire.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/climb.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/climb.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/dash.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/dash.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/die.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/die.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/double jump.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/double jump.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/fall down.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/fall down.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/idle.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/idle.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/run.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/run.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill3.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill3.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/wallslide.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/wallslide.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Demo.unity" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Demo.unity.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/Wall Slide FX/Wall Slide FX06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/axe/axe08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/diesmoke/diesmoke08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/dust/dust10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/eye bullet/eye bullet03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword disappear/sword disappear10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword/sword.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/FX/sword/sword.PNG.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Aquire.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Aquire/Aquire01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Aquire/Aquire01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Attack/Attack09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Climb/Climb08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Dash.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Dash/Dash01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Dash/Dash01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Die/Die08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Double Jump/Double Jump03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Hurt/Hurt03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Idle/Idle04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump Attack/Jump Attack08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Jump/Jump03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Run/Run04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill101.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill102.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill103.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill103.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill104.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill104.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill105.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill105.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill106.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill106.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill107.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill1/Skill107.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill201.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill201.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill202.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill202.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill203.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill203.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill204.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill204.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill205.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill205.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill206.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill2/Skill206.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill301.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill301.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill302.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill302.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill303.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill303.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill304.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill304.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill305.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill305.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill306.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill306.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill307.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill307.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill308.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill308.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill309.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill309.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill310.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill311.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill311.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill312.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill312.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill313.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill313.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill314.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill314.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill315.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill315.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill316.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Skill3/Skill316.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Wall Slide.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Wall Slide/Wall Slide01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/HD/Hero/Wall Slide/Wall Slide01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/Wall Slide FX/Wall Slide FX06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/axe/axe08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/diesmoke/diesmoke08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/dust/dust10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/eye bullet/eye bullet03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword disappear/sword disappear10.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword/sword.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/FX/sword/sword.PNG.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Aquire.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Aquire/Aquire01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Aquire/Aquire01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack09.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Attack/Attack09.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Climb/Climb08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Dash.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Dash/Dash01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Dash/Dash01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Die/Die08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Double Jump/Double Jump03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Hurt/Hurt03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Idle/Idle04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack05.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack05.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack06.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack06.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack07.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump Attack/Jump Attack08.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Jump/Jump03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run02.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run02.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run03.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run03.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run04.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Run/Run04.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill101.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill102.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill103.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill103.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill104.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill104.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill105.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill105.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill106.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill106.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill107.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill1/Skill107.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill201.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill201.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill202.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill202.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill203.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill203.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill204.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill204.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill205.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill205.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill206.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill2/Skill206.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill301.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill301.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill302.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill302.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill303.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill303.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill304.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill304.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill305.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill305.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill306.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill306.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill307.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill307.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill308.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill308.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill309.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill309.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill310.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill310.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill311.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill311.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill312.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill312.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill313.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill313.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill314.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill314.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill315.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill315.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill316.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Skill3/Skill316.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Wall Slide.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Wall Slide/Wall Slide01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Original/Hero/Wall Slide/Wall Slide01.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Read Me.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Read Me.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/animation content.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/animation content.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PsychicHeroInput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sword.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/HealthSystem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/KnockComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Knockable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Knockable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordPrincess.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SwordPrincess.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterMovement2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterMovement2D.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputActions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputActions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputActions.inputactions" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputActions.inputactions.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAnimationController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerAnimationController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/SwordPrincess.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/SwordPrincess.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/jump attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/jump attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityBoolEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/UnityBoolEvent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -666,27 +38,33 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/idle_physics_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D2763AD-8235-4FC6-A022-A2846086CA7B/9f/af21fe48/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/HealthSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/run_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/KnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Knockable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineAnimatorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/idle_physics_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D2763AD-8235-4FC6-A022-A2846086CA7B/9f/af21fe48/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/run_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -713,22 +91,27 @@
         <option value="$PROJECT_DIR$/Assets/PlayerInputActions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputActions.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/HorizontalMovementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" />
         <option value="$PROJECT_DIR$/Assets/Sword.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
         <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/KnockEnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/Knockable.cs" />
+        <option value="$PROJECT_DIR$/Assets/KnockComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" />
+        <option value="$PROJECT_DIR$/Assets/HealthSystem.cs" />
       </list>
     </option>
   </component>
@@ -791,7 +174,7 @@
       <workItem from="1580822244099" duration="27645000" />
       <workItem from="1580918045105" duration="11081000" />
       <workItem from="1580934817799" duration="1607000" />
-      <workItem from="1580936975386" duration="21550000" />
+      <workItem from="1580936975386" duration="30980000" />
     </task>
     <servers />
   </component>
@@ -837,9 +220,9 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1580961778026">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1580967946599">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580961778026" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580967946599" />
   </component>
 </project>

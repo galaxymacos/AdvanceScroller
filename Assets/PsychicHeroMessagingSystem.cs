@@ -11,6 +11,13 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
     
+    public GameObject knifePrefab;
+    public Transform spawnTransform;
+    public bool hasDoubleJump = false;
+    
+    public bool isFacingRight => transform.localScale.x > 0;
+
+    
     
     public float movementSpeed = 5f;
     public bool canMove;
@@ -26,6 +33,8 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
         
         psychicHeroHorizontalMovementComponent = new PsychicHeroHorizontalMovementComponent(movementSpeed, transform, heroInput);
         flipComponent = new CharacterFlipComponent(transform);
+        spawnTransform = transform.Find("SpawnLocations").Find("Sword");
+
     }
 
     private void Update()
@@ -36,7 +45,17 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        if (isGrounded)
+        {
+            hasDoubleJump = false;
+        }
         flipComponent.Flip(heroInput.horizontalMovement);
         
+    }
+    
+    public void SpawnKnife()
+    {
+        GameObject knife = Instantiate(knifePrefab, spawnTransform.position, transform.rotation);
+        knife.GetComponent<Sword>().moveRight = isFacingRight;
     }
 }
