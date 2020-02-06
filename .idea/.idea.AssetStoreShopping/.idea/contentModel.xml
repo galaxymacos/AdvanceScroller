@@ -4,16 +4,46 @@
     <e p="C:\Users\galax\.Rider2019.3\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\galax\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AssetStoreShopping.1774483846.00" t="ExcludeRecursive" />
     <e p="G:\Unity\AssetStoreShopping" t="IncludeRecursive">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="CharacterMovement2D.cs" t="Include" />
-        <e p="InputActions.cs" t="Include" />
-        <e p="PlayerAnimationController.cs" t="Include" />
-        <e p="PlayerInput.cs" t="Include" />
+        <e p="attack_psychic_hero.cs" t="Include" />
+        <e p="double_jump_psychic_hero.cs" t="Include" />
+        <e p="fall_down_psychic_hero.cs" t="Include" />
+        <e p="idle_physics_hero.cs" t="Include" />
+        <e p="jump_psychic_hero.cs" t="Include" />
+        <e p="MovementComponent.cs" t="Include" />
+        <e p="PlayerInputActions.cs" t="Include" />
+        <e p="Psychic Hero" t="Include">
+          <e p="Read Me.txt" t="Include" />
+        </e>
+        <e p="PsychicHeroHorizontalMovementComponent.cs" t="Include" />
+        <e p="PsychicHeroInput.cs" t="Include" />
+        <e p="PsychicHeroMessagingSystem.cs" t="Include" />
+        <e p="run_psychic_hero.cs" t="Include" />
+        <e p="Scripts" t="Include">
+          <e p="AttackState.cs" t="Include" />
+          <e p="FallDownState.cs" t="Include" />
+          <e p="FlipComponent.cs" t="Include" />
+          <e p="GroundMovementState.cs" t="Include" />
+          <e p="Heroine.cs" t="Include" />
+          <e p="HeroineAnimatorController.cs" t="Include" />
+          <e p="HeroineInput.cs" t="Include" />
+          <e p="HeroineState.cs" t="Include" />
+          <e p="HurtState.cs" t="Include" />
+          <e p="IdleState.cs" t="Include" />
+          <e p="JumpAttackState.cs" t="Include" />
+          <e p="JumpState.cs" t="Include" />
+          <e p="ProjectileFlipComponent.cs" t="Include" />
+          <e p="RunState.cs" t="Include" />
+          <e p="Skill1State.cs" t="Include" />
+          <e p="UtilityClass.cs" t="Include" />
+          <e p="WolfSkill.cs" t="Include" />
+        </e>
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="UnityBoolEvent.cs" t="Include" />
+        <e p="Sword.cs" t="Include" />
       </e>
       <e p="AssetStoreShopping.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
