@@ -2,31 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/HealthSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/KnockComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Knockable.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Knockable.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Animations/SwordPrincess.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/SwordPrincess.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Sword.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hurt.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/jump attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/dash.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/dash.anim" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DashState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DashState.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +28,6 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" root0="FORCE_HIGHLIGHTING" />
@@ -51,9 +41,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/dash_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Knockable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -62,9 +53,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DashState.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -100,18 +93,22 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
         <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/KnockEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Knockable.cs" />
         <option value="$PROJECT_DIR$/Assets/KnockComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DashState.cs" />
+        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
       </list>
     </option>
   </component>
@@ -175,6 +172,7 @@
       <workItem from="1580918045105" duration="11081000" />
       <workItem from="1580934817799" duration="1607000" />
       <workItem from="1580936975386" duration="30980000" />
+      <workItem from="1581044600685" duration="11552000" />
     </task>
     <servers />
   </component>
@@ -220,9 +218,9 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1580967946599">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581057661722">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580967946599" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581057661722" />
   </component>
 </project>

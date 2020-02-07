@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump_psychic_hero : StateMachineBehaviour
+public class jump_psychic_hero : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 10f;
     private PsychicHeroMessagingSystem messagingSystem;
@@ -12,6 +12,8 @@ public class jump_psychic_hero : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateEnter(animator, stateInfo,layerIndex);
+        RegisterInputToNextState(new List<string> {"double jump", "fall down", "dash", "jump attack","skill3"});
         messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
         rb = animator.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
@@ -20,21 +22,14 @@ public class jump_psychic_hero : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
         messagingSystem.canMove = true;
 
-        
         animator.GetComponent<PsychicHeroMessagingSystem>().psychicHeroHorizontalMovementComponent.UpdateMovement();
+
         
-        if (messagingSystem.heroInput.jumpButtonPressed && !messagingSystem.hasDoubleJump)
-        {
-            animator.SetTrigger("double jump");
-        }
-
-        if (messagingSystem.heroInput.attackButtonPressed)
-        {
-            animator.SetTrigger("jump attack");
-        }
-
+        
+        
         if (rb.velocity.y < 0)
         {
             animator.SetTrigger("fall down");

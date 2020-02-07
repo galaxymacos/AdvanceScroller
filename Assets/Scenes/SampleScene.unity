@@ -373,9 +373,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7835aacc87b834cae2c11107edf5eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontalMovement: 0
-  jump: 0
-  attack: 0
+  horizontalAxis: 0
+  jumpButtonPressed: 0
+  attackButtonPressed: 0
+  dashButtonPressed: 0
+  skill1ButtonPressed: 0
+  skill2ButtonPressed: 0
+  skill3ButtonPressed: 0
+  skill4ButtonPressed: 0
 --- !u!114 &429101693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +487,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockupAnimationString: hurt
   knockDirection: {x: 0, y: 0}
+--- !u!114 &577360655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577360652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3569f56ee4f4849a093b2404595c4c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class idle_physics_hero : StateMachineBehaviour
+public class idle_physics_hero : CharacterStateMachineBehavior
 {
     private float horizontalMovement;
     private PsychicHeroMessagingSystem messagingSystem;
@@ -10,6 +10,8 @@ public class idle_physics_hero : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+        RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
         messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
         
     }
@@ -17,25 +19,11 @@ public class idle_physics_hero : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        
         messagingSystem.canMove = true;
-
-        horizontalMovement = messagingSystem.heroInput.horizontalAxis;
-
-        if (Mathf.Abs(horizontalMovement)>Mathf.Epsilon)
-        {
-            animator.SetTrigger("Run");
-            
-        }
-        else if (messagingSystem.heroInput.attackButtonPressed)
-        {
-            animator.SetTrigger("attack");
-        }
-        else if (messagingSystem.heroInput.jumpButtonPressed)
-        {
-            messagingSystem.heroInput.jumpButtonPressed = false;
-            animator.SetTrigger("jump");
-        }
-        else if (!messagingSystem.isGrounded)
+        
+        if (!messagingSystem.isGrounded)
         {
             animator.SetTrigger("fall down");
         }

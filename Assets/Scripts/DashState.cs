@@ -18,7 +18,15 @@ public class DashState : HeroineState
         if (animationTimeCounter <= 0)
         {
             rb.velocity = Vector2.zero;
-            return heroine.RetrieveLastState();
+
+            if (!heroine.isGrounded)
+            {
+                return GetComponent<FallDownState>();
+            }
+            else
+            {
+                return GetComponent<IdleState>();
+            }
         }
         return base.HandleInput(heroine, input);
     }
