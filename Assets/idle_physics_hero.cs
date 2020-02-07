@@ -19,20 +19,20 @@ public class idle_physics_hero : StateMachineBehaviour
     {
         messagingSystem.canMove = true;
 
-        horizontalMovement = messagingSystem.heroInput.horizontalMovement;
+        horizontalMovement = messagingSystem.heroInput.horizontalAxis;
 
         if (Mathf.Abs(horizontalMovement)>Mathf.Epsilon)
         {
             animator.SetTrigger("Run");
             
         }
-        else if (messagingSystem.heroInput.attack)
+        else if (messagingSystem.heroInput.attackButtonPressed)
         {
             animator.SetTrigger("attack");
         }
-        else if (messagingSystem.heroInput.jump)
+        else if (messagingSystem.heroInput.jumpButtonPressed)
         {
-            messagingSystem.heroInput.jump = false;
+            messagingSystem.heroInput.jumpButtonPressed = false;
             animator.SetTrigger("jump");
         }
         else if (!messagingSystem.isGrounded)

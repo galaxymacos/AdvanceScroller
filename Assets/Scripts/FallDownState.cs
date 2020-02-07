@@ -11,24 +11,37 @@ public class FallDownState : HeroineState
         
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         if (heroine.isGrounded)
         {
             return GetComponent<IdleState>();
         }
 
-        if (input.attack)
+        if (input.attackButtonPressed)
         {
             return GetComponent<JumpAttackState>() ? GetComponent<JumpAttackState>(): gameObject.AddComponent<JumpAttackState>();
         }
         
-        return null;
+        if (input.dashButtonPressed)
+        {
+            print("dashButtonPressed");
+            if (GetComponent<DashState>())
+            {
+                return GetComponent<DashState>();
+            }
+            else
+            {
+                return gameObject.AddComponent<DashState>();
+            }
+        }
+        return base.HandleInput(heroine, input);
+        
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
-        horizontalMovement = input.horizontalMovement;
+        horizontalMovement = input.horizontalAxis;
         rb.velocity = new Vector2(horizontalMovement* heroine.moveSpeedInair, rb.velocity.y);
     }
 }

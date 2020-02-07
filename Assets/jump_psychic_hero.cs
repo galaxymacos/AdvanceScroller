@@ -25,12 +25,12 @@ public class jump_psychic_hero : StateMachineBehaviour
         
         animator.GetComponent<PsychicHeroMessagingSystem>().psychicHeroHorizontalMovementComponent.UpdateMovement();
         
-        if (messagingSystem.heroInput.jump && !messagingSystem.hasDoubleJump)
+        if (messagingSystem.heroInput.jumpButtonPressed && !messagingSystem.hasDoubleJump)
         {
             animator.SetTrigger("double jump");
         }
 
-        if (messagingSystem.heroInput.attack)
+        if (messagingSystem.heroInput.attackButtonPressed)
         {
             animator.SetTrigger("jump attack");
         }

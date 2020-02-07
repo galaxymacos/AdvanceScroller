@@ -11,7 +11,7 @@ public class IdleState : GroundMovementState
         heroine.GetComponent<HeroineAnimatorController>().AnimateIdle();
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         var state = base.HandleInput(heroine, input);
         if (state != null)
@@ -19,7 +19,7 @@ public class IdleState : GroundMovementState
             return state;
         }
 
-        if (input.attack)
+        if (input.attackButtonPressed)
         {
             if (GetComponent<AttackState>() != null)
             {
@@ -32,7 +32,7 @@ public class IdleState : GroundMovementState
 
         }
         
-        if (Mathf.Abs(input.horizontalMovement) > Mathf.Epsilon)
+        if (Mathf.Abs(input.horizontalAxis) > Mathf.Epsilon)
         {
             if (GetComponent<RunState>() != null)
             {
@@ -46,7 +46,7 @@ public class IdleState : GroundMovementState
         return null;
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
         base.update(heroine, input);
         

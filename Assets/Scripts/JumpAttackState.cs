@@ -15,7 +15,7 @@ public class JumpAttackState : HeroineState
         heroine.GetComponent<HeroineAnimatorController>().AnimateJumpAttack();
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         animationTimeCounter -= Time.deltaTime;
         if (animationTimeCounter <= 0)
@@ -28,9 +28,9 @@ public class JumpAttackState : HeroineState
         return null;
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
-        rb.velocity = new Vector2(input.horizontalMovement* heroine.moveSpeedInair, rb.velocity.y);
+        rb.velocity = new Vector2(input.horizontalAxis* heroine.moveSpeedInair, rb.velocity.y);
     }
     
    

@@ -37,7 +37,7 @@ public class double_jump_psychic_hero : StateMachineBehaviour
             animator.SetTrigger("fall down");
         }
         
-        if (messagingSystem.heroInput.attack)
+        if (messagingSystem.heroInput.attackButtonPressed)
         {
             animator.SetTrigger("jump attack");
         }

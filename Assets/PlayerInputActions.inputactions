@@ -30,9 +30,41 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Hurt",
+                    "name": "Dash",
                     "type": "Button",
-                    "id": "2fe3e92d-0c4e-4140-85ee-62d0b3eeaf27",
+                    "id": "5267eb09-6b26-4574-bccb-631f2599292a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Skill1",
+                    "type": "Button",
+                    "id": "9fa1dbb3-01de-49a3-843e-38693338990c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Skill2",
+                    "type": "Button",
+                    "id": "9d96a0b6-0458-4240-a21d-a1700c450dab",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Skill3",
+                    "type": "Button",
+                    "id": "0a35dbb0-0500-4990-81bd-2e18b33d3912",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Skill4",
+                    "type": "Button",
+                    "id": "702ce3e2-25ff-437f-b91e-6847f8935aee",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -96,12 +128,56 @@
                 },
                 {
                     "name": "",
-                    "id": "d1f557fe-ec5f-49d2-a619-e3d400e07531",
+                    "id": "6eab921f-e0a7-487c-9256-0d25c0bcde55",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fbe9920c-5867-480d-b011-548f12e42ded",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "13826233-807c-4176-b0cf-b44be3e25208",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Hurt",
+                    "action": "Skill2",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "001d11c3-9c0b-44e0-8591-7f429963ba8e",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill3",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "34fd2b2e-b1c0-4f20-b2a3-4fc75a3dffac",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill4",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

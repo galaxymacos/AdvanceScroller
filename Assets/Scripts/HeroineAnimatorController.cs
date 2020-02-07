@@ -11,16 +11,27 @@ public class HeroineAnimatorController : MonoBehaviour
     public string jumpAttack = "jump attack";
     public string hurt = "hurt";
     public string fallDown = "fall down";
+    public string dash = "dash";
     public string skill1 = "skill1";
+    public string skill2 = "skill2";
+    public string skill3 = "skill3";
+    public string skill4 = "skill4";
 
     private void Start()
     {
         animator = GetComponent<Animator>();
     }
 
+   
+    
     public void AnimateIdle()
     {
         Animate(idle);
+    }
+
+    public void AnimateDash()
+    {
+        Animate(dash);
     }
 
     public void AnimateRun()
@@ -56,6 +67,21 @@ public class HeroineAnimatorController : MonoBehaviour
     public void AnimateSkill1()
     {
         Animate(skill1);
+    }
+
+    public void AnimateSkill2()
+    {
+        Animate(skill2);
+    }
+
+    public void AnimateSkill3()
+    {
+        Animate(skill3);
+    }
+
+    public void AnimateSkill4()
+    {
+        Animate(skill4);
     }
     
     private void Animate(string boolName)

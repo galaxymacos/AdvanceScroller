@@ -8,12 +8,12 @@ public class HurtState : HeroineState
         
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         return base.HandleInput(heroine, input);
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
         
     }

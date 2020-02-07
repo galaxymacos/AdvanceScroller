@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PsychicHeroMessagingSystem : MonoBehaviour
 {
-    public PsychicHeroInput heroInput;
+    public PlayerTwoInput heroInput;
     public Transform groundCheck;
     public bool isGrounded;
     public float checkRadius;
@@ -28,7 +28,7 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
     private void Awake()
     {
         // set up variable
-        heroInput = GetComponent<PsychicHeroInput>();
+        heroInput = GetComponent<PlayerTwoInput>();
         
         
         psychicHeroHorizontalMovementComponent = new PsychicHeroHorizontalMovementComponent(movementSpeed, transform, heroInput);
@@ -49,7 +49,7 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
         {
             hasDoubleJump = false;
         }
-        flipComponent.Flip(heroInput.horizontalMovement);
+        flipComponent.Flip(heroInput.horizontalAxis);
         
     }
     

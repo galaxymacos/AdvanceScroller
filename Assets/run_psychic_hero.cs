@@ -19,20 +19,20 @@ public class run_psychic_hero : StateMachineBehaviour
 
 
 
-        if (messagingSystem.heroInput.horizontalMovement > -Mathf.Epsilon && messagingSystem.heroInput.horizontalMovement < Mathf.Epsilon)
+        if (messagingSystem.heroInput.horizontalAxis > -Mathf.Epsilon && messagingSystem.heroInput.horizontalAxis < Mathf.Epsilon)
         {
             animator.SetTrigger("idle");
         }
 
-        if (messagingSystem.heroInput.attack)
+        if (messagingSystem.heroInput.attackButtonPressed)
         {
-            messagingSystem.heroInput.attack = false;
+            messagingSystem.heroInput.attackButtonPressed = false;
             animator.SetTrigger("attack");
         }
         
-        if (messagingSystem.heroInput.jump)
+        if (messagingSystem.heroInput.jumpButtonPressed)
         {
-            messagingSystem.heroInput.jump = false;
+            messagingSystem.heroInput.jumpButtonPressed = false;
             animator.SetTrigger("jump");
         }
 

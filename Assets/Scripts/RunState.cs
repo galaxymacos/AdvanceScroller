@@ -12,7 +12,7 @@ public class RunState : GroundMovementState
         heroine.GetComponent<HeroineAnimatorController>().AnimateRun();
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         var state = base.HandleInput(heroine, input);
         if (state != null)
@@ -20,7 +20,7 @@ public class RunState : GroundMovementState
             return state;
         }
         
-        if (input.attack)
+        if (input.attackButtonPressed)
         {
             if (GetComponent<AttackState>() != null)
             {
@@ -48,10 +48,10 @@ public class RunState : GroundMovementState
         return null;
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
         base.update(heroine, input);
-        horizontalMovement = input.horizontalMovement;
+        horizontalMovement = input.horizontalAxis;
         rb.velocity = new Vector2(horizontalMovement* heroine.runSpeed, rb.velocity.y);
     }
 

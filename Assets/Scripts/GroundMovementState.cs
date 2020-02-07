@@ -5,9 +5,9 @@
         
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
-        if (input.jump)
+        if (input.jumpButtonPressed)
         {
             if (GetComponent<JumpState>())
             {
@@ -18,11 +18,24 @@
                 return gameObject.AddComponent<JumpState>();
             }
         }
-        return null;
 
+        if (input.dashButtonPressed)
+        {
+            print("dashButtonPressed");
+            if (GetComponent<DashState>())
+            {
+                return GetComponent<DashState>();
+            }
+            else
+            {
+                return gameObject.AddComponent<DashState>();
+            }
+        }
+        return null;
+        
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
         
     }

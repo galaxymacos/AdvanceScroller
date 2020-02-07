@@ -7,7 +7,7 @@ public class AttackState : HeroineState
     private bool playerHitAttack;
     public override void Enter(Heroine heroine)
     {
-        heroine.GetComponent<HeroineInput>().attack = false;
+        heroine.GetComponent<PlayerOneInput>().attackButtonPressed = false;
 
         Reset();
         
@@ -22,15 +22,13 @@ public class AttackState : HeroineState
         playerHitAttack = false;
     }
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
 
-        if (input.attack)
+        if (input.attackButtonPressed)
         {
-            
             // Consume player input
-            input.attack = false;
-            
+            input.attackButtonPressed = false;
             playerHitAttack = true;
         }
         
@@ -43,10 +41,10 @@ public class AttackState : HeroineState
             }
             return heroine.RetrieveLastState();
         }
-        return null;
+        return base.HandleInput(heroine, input);
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
     }
 }

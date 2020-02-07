@@ -7,7 +7,7 @@ using UnityEngine;
 public sealed class Heroine : MonoBehaviour
 {
     private HeroineState state;
-    private HeroineInput input;
+    private PlayerOneInput input;
 
     private Rigidbody2D rb;
 
@@ -35,7 +35,7 @@ public sealed class Heroine : MonoBehaviour
         states = new Stack<HeroineState>();
         animator = GetComponent<Animator>();
         state = gameObject.AddComponent<IdleState>();
-        input = GetComponent<HeroineInput>();
+        input = GetComponent<PlayerOneInput>();
         rb = GetComponent<Rigidbody2D>();
         
         
@@ -48,7 +48,7 @@ public sealed class Heroine : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         UpdateStateMachine();
         
-        flipComponent.Flip(input.horizontalMovement);
+        flipComponent.Flip(input.horizontalAxis);
 
     }
 
@@ -70,7 +70,7 @@ public sealed class Heroine : MonoBehaviour
         return states.Pop();
     }
 
-    public void HandleInput(HeroineInput input)
+    public void HandleInput(PlayerOneInput input)
     {
         HeroineState newState = state.HandleInput(this,input);
         if (newState != null)

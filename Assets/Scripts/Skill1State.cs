@@ -21,7 +21,7 @@ public class Skill1State : HeroineState
     }
 
 
-    public override HeroineState HandleInput(Heroine heroine, HeroineInput input)
+    public override HeroineState HandleInput(Heroine heroine, PlayerOneInput input)
     {
         animationTimeCounter -= Time.deltaTime;
         if (animationTimeCounter <= 0)
@@ -32,7 +32,7 @@ public class Skill1State : HeroineState
         return null;
     }
 
-    public override void update(Heroine heroine, HeroineInput input)
+    public override void update(Heroine heroine, PlayerOneInput input)
     {
     }
 

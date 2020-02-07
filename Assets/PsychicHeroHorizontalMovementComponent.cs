@@ -7,11 +7,11 @@ public class PsychicHeroHorizontalMovementComponent: MovementComponent
 {
     private float movementSpeed;
     private Rigidbody2D rb;
-    private PsychicHeroInput input;
+    private PlayerTwoInput input;
     private bool canMove;
     private PsychicHeroMessagingSystem psychicHeroMessagingSystem;
 
-    public PsychicHeroHorizontalMovementComponent(float movementSpeed, Transform entity, PsychicHeroInput input)
+    public PsychicHeroHorizontalMovementComponent(float movementSpeed, Transform entity, PlayerTwoInput input)
     {
         this.movementSpeed = movementSpeed;
         rb = entity.GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ public class PsychicHeroHorizontalMovementComponent: MovementComponent
         if (canMove)
         {
             
-            rb.velocity = new Vector2(movementSpeed * input.horizontalMovement, rb.velocity.y);
+            rb.velocity = new Vector2(movementSpeed * input.horizontalAxis, rb.velocity.y);
         }
         
     }
