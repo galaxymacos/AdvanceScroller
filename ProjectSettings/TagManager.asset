@@ -41,6 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Projectile
+  - name: PlayerBack
+    uniqueID: 1261829911
+    locked: 0
+  - name: PlayerFront
+    uniqueID: 1090928561
+    locked: 0
+  - name: PlayerProjectile
     uniqueID: 2468258897
+    locked: 0
+  - name: VFX
+    uniqueID: 3226184423
     locked: 0

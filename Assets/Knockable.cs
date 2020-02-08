@@ -26,6 +26,25 @@ public class Knockable : MonoBehaviour
         knockDirection = knockDirectionHorizontal * knockComponent.knockHorizontalForce+new Vector2(0,knockComponent.knockVerticalForce);
         GetComponent<Animator>().SetTrigger(knockupAnimationString);    
     }
+    
+    public void KnockUp(float knockHorizontalForce, float knockVerticalForce, Transform knocker)
+    {
+        Vector3 knockerLocation = knocker.position;
+        Vector3 knockableLocation = transform.position;
+
+        Vector2 knockDirectionHorizontal;
+        if (knockerLocation.x - knockableLocation.x > 0)
+        {
+            knockDirectionHorizontal = Vector2.left;
+        }
+        else
+        {
+            knockDirectionHorizontal = Vector2.right;
+        }
+
+        knockDirection = knockDirectionHorizontal * knockHorizontalForce+new Vector2(0,knockVerticalForce);
+        GetComponent<Animator>().SetTrigger(knockupAnimationString);    
+    }
 
     private void Awake()
     {

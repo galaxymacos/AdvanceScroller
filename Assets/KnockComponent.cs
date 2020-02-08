@@ -3,27 +3,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Projectile))]
 public class KnockComponent : MonoBehaviour
 {
+    private Projectile projectile;
     public float knockHorizontalForce = 5f;
     public float knockVerticalForce = 5f;
     // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        projectile = GetComponent<Projectile>();
+        projectile.onProjectileHitTarget += KnockUp;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void KnockUp(GameObject target)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<Knockable>() != null)
+        if (target.GetComponent<Knockable>() != null)
         {
-            other.GetComponent<Knockable>().KnockUp(this);
+            target.GetComponent<Knockable>().KnockUp(this);
         }
     }
 }

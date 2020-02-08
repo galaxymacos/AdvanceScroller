@@ -10,11 +10,12 @@
         <e p="attack_psychic_hero.cs" t="Include" />
         <e p="CharacterGroundMovementComponent.cs" t="Include" />
         <e p="CharacterStateMachineBehavior.cs" t="Include" />
+        <e p="Cross.cs" t="Include" />
         <e p="DamageComponent.cs" t="Include" />
         <e p="dash_psychic_hero.cs" t="Include" />
         <e p="double_jump_psychic_hero.cs" t="Include" />
         <e p="fall_down_psychic_hero.cs" t="Include" />
-        <e p="HealthSystem.cs" t="Include" />
+        <e p="HealthComponent.cs" t="Include" />
         <e p="hurt_psychic_hero.cs" t="Include" />
         <e p="idle_physics_hero.cs" t="Include" />
         <e p="jump_attack_psychic_hero.cs" t="Include" />
@@ -57,7 +58,8 @@
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="SwordPrincessAnimationEventContainer.cs" t="Include" />
+        <e p="Sword.cs" t="Include" />
+        <e p="SwordPrincess.cs" t="Include" />
       </e>
       <e p="AssetStoreShopping.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

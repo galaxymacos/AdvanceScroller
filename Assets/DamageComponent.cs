@@ -8,22 +8,18 @@ public class DamageComponent : MonoBehaviour
     private Projectile projectile;
     private int damage = 20;
     // Start is called before the first frame update
-    void Start()
+
+    private void Awake()
     {
         projectile = GetComponent<Projectile>();
+        projectile.onProjectileHitTarget += DealDamage;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void DealDamage(GameObject target)
     {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.GetComponent<HealthSystem>() != null && other.gameObject != projectile.owner.gameObject)
+        if (target.GetComponent<HealthComponent>() != null)
         {
-            other.GetComponent<HealthSystem>().TakeDamage(damage);
+            target.GetComponent<HealthComponent>().TakeDamage(damage);
         }
     }
 }
