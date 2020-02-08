@@ -12,8 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     public LayerMask whatIsGround;
     public bool hasDoubleJump;
     
-    public GameObject knifePrefab;
-    public Transform spawnTransform;
+
     
     public bool isFacingRight => transform.localScale.x > 0;
 
@@ -28,12 +27,12 @@ public class PlayerCharacter : MonoBehaviour
     private void Awake()
     {
         // set up variable
-        playerInput = GetComponent<PlayerTwoInput>();
+        playerInput = GetComponent<PlayerInput>();
         
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
-        spawnTransform = transform.Find("SpawnLocations").Find("Sword");
+        // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
     }
 
@@ -53,10 +52,6 @@ public class PlayerCharacter : MonoBehaviour
         
     }
     
-    public void SpawnKnife()
-    {
-        GameObject knife = Instantiate(knifePrefab, spawnTransform.position, transform.rotation);
-        knife.GetComponent<Sword>().moveRight = isFacingRight;
-    }
+   
 }
 

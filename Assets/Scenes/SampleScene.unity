@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 429101694}
   - component: {fileID: 429101695}
   - component: {fileID: 429101696}
+  - component: {fileID: 429101697}
   m_Layer: 9
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -401,9 +402,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   hasDoubleJump: 0
-  knifePrefab: {fileID: 4985245455587790691, guid: 51eb78a1a06df9d4da23e95d22f944ee,
-    type: 3}
-  spawnTransform: {fileID: 1524515760}
   movementSpeed: 5
   canMove: 0
 --- !u!50 &429101694
@@ -454,6 +452,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockupAnimationString: hurt
   knockDirection: {x: 0, y: 0}
+--- !u!114 &429101697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429101686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c137f56bf47aa247b097cfc989bd9de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knifePrefab: {fileID: 4985245455587790691, guid: 51eb78a1a06df9d4da23e95d22f944ee,
+    type: 3}
+  spawnTransform: {fileID: 1524515760}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,32 +559,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &787438326 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3658480544048443873, guid: bbbdbfdc8d7a216439bbd4925f47ab14,
-    type: 3}
-  m_PrefabInstance: {fileID: 3658480544410250007}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &787438327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 787438326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7073898f28ee4727a68f11d9805f3c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!1 &818455609
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524515760}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: KnifeLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

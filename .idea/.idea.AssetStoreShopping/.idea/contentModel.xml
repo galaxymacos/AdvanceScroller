@@ -10,6 +10,7 @@
         <e p="attack_psychic_hero.cs" t="Include" />
         <e p="CharacterGroundMovementComponent.cs" t="Include" />
         <e p="CharacterStateMachineBehavior.cs" t="Include" />
+        <e p="DamageComponent.cs" t="Include" />
         <e p="dash_psychic_hero.cs" t="Include" />
         <e p="double_jump_psychic_hero.cs" t="Include" />
         <e p="fall_down_psychic_hero.cs" t="Include" />
@@ -27,6 +28,7 @@
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
         <e p="run_psychic_hero.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AttackState.cs" t="Include" />
@@ -43,17 +45,19 @@
           <e p="JumpState.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
           <e p="PlayerOneInput.cs" t="Include" />
+          <e p="Projectile.cs" t="Include" />
           <e p="ProjectileFlipComponent.cs" t="Include" />
+          <e p="ProjectileMovementComponent.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="Skill1State.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
-          <e p="WolfSkill.cs" t="Include" />
         </e>
+        <e p="skill1_sword_princess.cs" t="Include" />
         <e p="skill3_psychic_hero.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="Sword.cs" t="Include" />
+        <e p="SwordPrincessAnimationEventContainer.cs" t="Include" />
       </e>
       <e p="AssetStoreShopping.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

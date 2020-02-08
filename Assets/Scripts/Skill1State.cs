@@ -36,10 +36,5 @@ public class Skill1State : HeroineState
     {
     }
 
-    public void SpawnWolf()
-    {
-        GameObject generatedWolf = Instantiate(wolf, transform.Find("SpawnLocations").Find("Wolf").position, transform.rotation);
-        generatedWolf.GetComponent<WolfSkill>().moveRight = heroine.isFacingRight;
-
-    }
+    
 }

@@ -11,8 +11,11 @@ GameObject:
   - component: {fileID: 4985245455587790694}
   - component: {fileID: 4985245455587790689}
   - component: {fileID: 4985245455587790688}
+  - component: {fileID: 1187303070972835726}
+  - component: {fileID: -2834311645762949623}
+  - component: {fileID: -8981488516740328143}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -89,10 +92,52 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4985245455587790691}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 54c4d567c96fab347b79cb12de24e2cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveRight: 0
   movementSpeed: 5
+--- !u!114 &1187303070972835726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985245455587790691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 096e93fd9e94ad8409df5c93a5af9d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movementSpeed: 5
+  flyingAngle: 0
+  owner: {fileID: 0}
+  damage: 10
+--- !u!114 &-2834311645762949623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985245455587790691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8981488516740328143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4985245455587790691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b4f3245643ec2741863bd94fc8c058c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockHorizontalForce: 5
+  knockVerticalForce: 5

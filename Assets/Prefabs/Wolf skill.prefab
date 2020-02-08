@@ -14,8 +14,9 @@ GameObject:
   - component: {fileID: 2548071627742475473}
   - component: {fileID: 2548071627742475472}
   - component: {fileID: 3655376192732016551}
+  - component: {fileID: -7724172610136562243}
   m_Layer: 0
-  m_Name: Wolf skill
+  m_Name: Wolf Skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  moveRight: 0
+  flyingAngle: 45
+  owner: {fileID: 0}
+  damage: 10
 --- !u!114 &3655376192732016551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,3 +161,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockHorizontalForce: 3
   knockVerticalForce: 3
+--- !u!114 &-7724172610136562243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548071627742475471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
