@@ -5,7 +5,7 @@ using UnityEngine;
 public class double_jump_psychic_hero : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 2;
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter messagingSystem;
     private Rigidbody2D rb;
     
 
@@ -15,7 +15,7 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"jump attack","skill3"});
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        messagingSystem = animator.GetComponent<PlayerCharacter>();
         messagingSystem.hasDoubleJump = true;
         rb = animator.GetComponent<Rigidbody2D>();
 

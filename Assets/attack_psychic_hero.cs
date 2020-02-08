@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class attack_psychic_hero : StateMachineBehaviour
 {
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter playerCharacter;
 
     
     
@@ -12,13 +12,13 @@ public class attack_psychic_hero : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        playerCharacter = animator.GetComponent<PlayerCharacter>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        messagingSystem.canMove = false;
+        playerCharacter.canMove = false;
 
     }
 

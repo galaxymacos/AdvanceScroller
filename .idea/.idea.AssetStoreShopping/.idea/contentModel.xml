@@ -8,6 +8,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="attack_psychic_hero.cs" t="Include" />
+        <e p="CharacterGroundMovementComponent.cs" t="Include" />
+        <e p="CharacterStateMachineBehavior.cs" t="Include" />
         <e p="dash_psychic_hero.cs" t="Include" />
         <e p="double_jump_psychic_hero.cs" t="Include" />
         <e p="fall_down_psychic_hero.cs" t="Include" />
@@ -19,13 +21,12 @@
         <e p="Knockable.cs" t="Include" />
         <e p="KnockComponent.cs" t="Include" />
         <e p="MovementComponent.cs" t="Include" />
+        <e p="PlayerCharacter.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerTwoInput.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="PsychicHeroHorizontalMovementComponent.cs" t="Include" />
-        <e p="PsychicHeroMessagingSystem.cs" t="Include" />
         <e p="run_psychic_hero.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AttackState.cs" t="Include" />

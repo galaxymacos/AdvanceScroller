@@ -3,17 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PsychicHeroMessagingSystem : MonoBehaviour
+public class PlayerCharacter : MonoBehaviour
 {
-    public PlayerTwoInput heroInput;
+    public PlayerInput playerInput;
     public Transform groundCheck;
     public bool isGrounded;
     public float checkRadius;
     public LayerMask whatIsGround;
+    public bool hasDoubleJump;
     
     public GameObject knifePrefab;
     public Transform spawnTransform;
-    public bool hasDoubleJump = false;
     
     public bool isFacingRight => transform.localScale.x > 0;
 
@@ -21,17 +21,17 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
     
     public float movementSpeed = 5f;
     public bool canMove;
-    [HideInInspector]public PsychicHeroHorizontalMovementComponent psychicHeroHorizontalMovementComponent;
+    [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipComponent;
     
 
     private void Awake()
     {
         // set up variable
-        heroInput = GetComponent<PlayerTwoInput>();
+        playerInput = GetComponent<PlayerTwoInput>();
         
         
-        psychicHeroHorizontalMovementComponent = new PsychicHeroHorizontalMovementComponent(movementSpeed, transform, heroInput);
+        characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
         spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
@@ -39,7 +39,7 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
 
     private void Update()
     {
-        psychicHeroHorizontalMovementComponent.UpdateMovement();
+        characterGroundMovementComponent.UpdateMovement();
     }
 
     private void FixedUpdate()
@@ -49,7 +49,7 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
         {
             hasDoubleJump = false;
         }
-        flipComponent.Flip(heroInput.horizontalAxis);
+        flipComponent.Flip(playerInput.horizontalAxis);
         
     }
     
@@ -59,3 +59,4 @@ public class PsychicHeroMessagingSystem : MonoBehaviour
         knife.GetComponent<Sword>().moveRight = isFacingRight;
     }
 }
+

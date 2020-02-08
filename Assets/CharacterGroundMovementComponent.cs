@@ -3,25 +3,25 @@
 /// <summary>
 /// A component that control the entity's horizontal movement base on user input
 /// </summary>
-public class PsychicHeroHorizontalMovementComponent: MovementComponent
+public class CharacterGroundMovementComponent: MovementComponent
 {
     private float movementSpeed;
     private Rigidbody2D rb;
-    private PlayerTwoInput input;
+    private PlayerInput input;
     private bool canMove;
-    private PsychicHeroMessagingSystem psychicHeroMessagingSystem;
+    private PlayerCharacter _playerCharacter;
 
-    public PsychicHeroHorizontalMovementComponent(float movementSpeed, Transform entity, PlayerTwoInput input)
+    public CharacterGroundMovementComponent(float movementSpeed, Transform entity, PlayerInput input)
     {
         this.movementSpeed = movementSpeed;
         rb = entity.GetComponent<Rigidbody2D>();
         this.input = input;
-        psychicHeroMessagingSystem = entity.GetComponent<PsychicHeroMessagingSystem>();
+        _playerCharacter = entity.GetComponent<PlayerCharacter>();
     }
 
     public override void UpdateMovement()
     {
-        canMove = psychicHeroMessagingSystem.canMove;
+        canMove = _playerCharacter.canMove;
         if (canMove)
         {
             

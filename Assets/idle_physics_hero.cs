@@ -5,14 +5,14 @@ using UnityEngine;
 public class idle_physics_hero : CharacterStateMachineBehavior
 {
     private float horizontalMovement;
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter messagingSystem;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        messagingSystem = animator.GetComponent<PlayerCharacter>();
         
     }
 

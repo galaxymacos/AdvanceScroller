@@ -5,7 +5,7 @@ using UnityEngine;
 public class jump_psychic_hero : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 10f;
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter playerCharacter;
     private Rigidbody2D rb;
 
 
@@ -13,8 +13,8 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string> {"double jump", "fall down", "dash", "jump attack","skill3"});
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        RegisterInputToNextState(new List<string> {"double jump", "dash", "jump attack","skill3"});
+        playerCharacter = animator.GetComponent<PlayerCharacter>();
         rb = animator.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
     }
@@ -23,9 +23,9 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        messagingSystem.canMove = true;
+        playerCharacter.canMove = true;
 
-        animator.GetComponent<PsychicHeroMessagingSystem>().psychicHeroHorizontalMovementComponent.UpdateMovement();
+        animator.GetComponent<PlayerCharacter>().characterGroundMovementComponent.UpdateMovement();
 
         
         

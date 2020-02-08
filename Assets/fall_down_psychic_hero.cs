@@ -5,13 +5,13 @@ using UnityEngine;
 
 public class fall_down_psychic_hero : CharacterStateMachineBehavior
 {
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo,layerIndex);
         RegisterInputToNextState(new List<string>{"jump attack", "skill3"});
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        messagingSystem = animator.GetComponent<PlayerCharacter>();
         if (!messagingSystem.hasDoubleJump)
         {
             RegisterInputToNextState("double jump");

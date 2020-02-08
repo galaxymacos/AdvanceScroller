@@ -24,9 +24,9 @@ public class dash_psychic_hero : StateMachineBehaviour
         {
             animator.SetTrigger("idle");
         }
-        animator.GetComponent<PsychicHeroMessagingSystem>().canMove = false;
+        animator.GetComponent<PlayerCharacter>().canMove = false;
         Rigidbody2D rb = animator.GetComponent<Rigidbody2D>();
-        if (animator.GetComponent<PsychicHeroMessagingSystem>().isFacingRight)
+        if (animator.GetComponent<PlayerCharacter>().isFacingRight)
         {
             rb.velocity = Vector2.right*dashSpeed;
         }
@@ -40,7 +40,7 @@ public class dash_psychic_hero : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<PsychicHeroMessagingSystem>().canMove = true;
+        animator.GetComponent<PlayerCharacter>().canMove = true;
         
     }
 

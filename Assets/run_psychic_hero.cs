@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class run_psychic_hero : CharacterStateMachineBehavior
 {
-    private PsychicHeroMessagingSystem messagingSystem;
+    private PlayerCharacter messagingSystem;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -11,7 +11,7 @@ public class run_psychic_hero : CharacterStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"attack", "idle", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
 
-        messagingSystem = animator.GetComponent<PsychicHeroMessagingSystem>();
+        messagingSystem = animator.GetComponent<PlayerCharacter>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

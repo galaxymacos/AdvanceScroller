@@ -5,6 +5,7 @@ public class PlayerOneInput: PlayerInput
     public override void BindValueToInput()
     {
         inputAction.Player.Run.performed += ctx => horizontalAxis = ctx.ReadValue<float>();
+        inputAction.Player.Run.canceled += ctx => horizontalAxis = 0;
         inputAction.Player.Jump.performed += ctx => jumpButtonPressed = true;
         inputAction.Player.Jump.canceled += ctx => jumpButtonPressed = false;
         inputAction.Player.Dash.performed += ctx => dashButtonPressed = true;
