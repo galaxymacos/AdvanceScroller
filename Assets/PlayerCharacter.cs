@@ -11,6 +11,10 @@ public class PlayerCharacter : MonoBehaviour
     public float checkRadius;
     public LayerMask whatIsGround;
     public bool hasDoubleJump;
+    public int maxDashTimeInAir = 1;
+    public int dashTimeCounter;
+    public List<Collider2D> collidersAlive;
+    public List<Collider2D> collidersDead;
     
 
     
@@ -47,6 +51,7 @@ public class PlayerCharacter : MonoBehaviour
         if (isGrounded)
         {
             hasDoubleJump = false;
+            dashTimeCounter = 0;
         }
         flipComponent.Flip(playerInput.horizontalAxis);
         

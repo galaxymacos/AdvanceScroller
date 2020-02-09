@@ -5,15 +5,15 @@ using UnityEngine;
 public class jump_attack_psychic_hero : CharacterStateMachineBehavior
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(animator, stateInfo, layerIndex);
+        base.OnStateEnter(_animator, stateInfo, layerIndex);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        base.OnStateUpdate(_animator, stateInfo, layerIndex);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

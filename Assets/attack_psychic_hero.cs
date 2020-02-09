@@ -2,22 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attack_psychic_hero : StateMachineBehaviour
+public class attack_psychic_hero : CharacterStateMachineBehavior
 {
-    private PlayerCharacter playerCharacter;
-
-    
     
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter = animator.GetComponent<PlayerCharacter>();
+        base.OnStateEnter(_animator, stateInfo, layerIndex);
+        RegisterInputToNextState(new List<string>{"skill1","skill2","skill3","skill4","jump","dash"});
+        playerCharacter = _animator.GetComponent<PlayerCharacter>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(_animator, stateInfo, layerIndex);
         playerCharacter.canMove = false;
 
     }

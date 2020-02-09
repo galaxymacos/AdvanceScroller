@@ -11,13 +11,13 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump attack","skill3"});
-        messagingSystem = animator.GetComponent<PlayerCharacter>();
+        base.OnStateEnter(_animator, stateInfo, layerIndex);
+        RegisterInputToNextState(new List<string> {"jump attack","skill3","dash"});
+        messagingSystem = _animator.GetComponent<PlayerCharacter>();
         messagingSystem.hasDoubleJump = true;
-        rb = animator.GetComponent<Rigidbody2D>();
+        rb = _animator.GetComponent<Rigidbody2D>();
 
         
         messagingSystem.canMove = true;
@@ -26,17 +26,17 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        base.OnStateUpdate(_animator, stateInfo, layerIndex);
         if (messagingSystem.isGrounded)
         {
-            animator.SetTrigger("idle");
+            _animator.SetTrigger("idle");
         }
         
         if (rb.velocity.y < 0)
         {
-            animator.SetTrigger("fall down");
+            _animator.SetTrigger("fall down");
         }
 
     }

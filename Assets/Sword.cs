@@ -6,19 +6,17 @@ using UnityEngine;
 public class Sword : MonoBehaviour
 {
     private Projectile projectile;
-    public GameObject swordDisapperPrefab;
 
     private void Awake()
     {
         projectile = GetComponent<Projectile>();
-        projectile.onProjectileHitTarget += GenerateParticle;
+        projectile.onObjectCollided += DestroySword;
     }
 
-    public void GenerateParticle(GameObject target)
-    {
-        if (target.GetComponent<PlayerCharacter>() != null)
+    public void DestroySword(GameObject target)
+    {    
+        if (target != projectile.owner.gameObject && target.GetComponent<PlayerCharacter>()!=null)
         {
-            Instantiate(swordDisapperPrefab, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

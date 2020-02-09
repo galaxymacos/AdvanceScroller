@@ -6,27 +6,69 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
     /// </summary>
-    private Dictionary<string, bool> animations;
-    private Animator animator;
-    private PlayerInput playerInput;
+    protected Dictionary<string, bool> animations;
+    protected Animator animator;
+    protected PlayerInput playerInput;
+    public ForceCancelProcessor forceCancelProcessor;
+    protected PlayerCharacter playerCharacter;
 
     // private Knockable knockable;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        this.animator = animator;
-        playerInput = animator.GetComponent<PlayerInput>();
+        this.animator = _animator;
+        playerInput = _animator.GetComponent<PlayerInput>();
         animations = new Dictionary<string, bool>();
-        foreach (AnimatorControllerParameter parameter in animator.parameters)
+        foreach (AnimatorControllerParameter parameter in _animator.parameters)
         {
             animations.Add(parameter.name, false);
         }
+
+        if (forceCancelProcessor)
+        {
+            RegisterInputToNextState(forceCancelProcessor.animationNameToTransfer);
+        }
+        playerCharacter = _animator.GetComponent<PlayerCharacter>();
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        UpdateInput();
+        string animationName = InputFilter();
+        if (forceCancelProcessor)
+        {
+            animationName = forceCancelProcessor.Process(animationName, _animator);
+        }
+
+        if (animationName != null)
+        {        
+            animationName = LimitUsageFilter(animationName);
+            if (animationName != null)
+            {
+                _animator.SetTrigger(animationName);
+            }
+        }
+    }
+
+    public string LimitUsageFilter(string animationName)
+    {
+        switch (animationName)
+        {
+            case "dash":
+                if (playerCharacter.dashTimeCounter < playerCharacter.maxDashTimeInAir)
+                {
+                    return "dash";
+                }
+                else
+                {
+                    return null;
+                }
+
+                break;
+        }
+
+        return animationName;
     }
 
     public void RegisterInputToNextState(List<string> inputs)
@@ -37,7 +79,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
     }
 
-    public void UpdateInput()
+    public string InputFilter()
     {
         foreach (string animationsKey in animations.Keys)
         {
@@ -48,15 +90,15 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                     case "idle":
                         if (Mathf.Abs(playerInput.horizontalAxis) < Mathf.Epsilon)
                         {
-                            animator.SetTrigger("idle");
+                            return "idle";
                         }
 
                         break;
                     case "run":
                         if (Mathf.Abs(playerInput.horizontalAxis) >= Mathf.Epsilon)
                         {
-                            
-                            animator.SetTrigger("run");
+
+                            return "run";
                         }
 
                         break;
@@ -64,7 +106,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.jumpButtonPressed)
                         {
                             playerInput.jumpButtonPressed = false;
-                            animator.SetTrigger("jump");
+                            return "jump";
                         }
 
                     
@@ -74,7 +116,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.jumpButtonPressed)
                         {
                             playerInput.jumpButtonPressed = false;
-                            animator.SetTrigger("double jump");
+                            return "double jump";
                         }
 
                         break;
@@ -82,7 +124,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.dashButtonPressed)
                         {
                             playerInput.dashButtonPressed = false;
-                            animator.SetTrigger("dash");
+                            return "dash";
                         }
 
                         break;
@@ -90,7 +132,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.attackButtonPressed)
                         {
                             playerInput.attackButtonPressed = false;
-                            animator.SetTrigger("attack");
+                            return "attack";
                         }
 
                         break;
@@ -98,7 +140,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.skill1ButtonPressed)
                         {
                             playerInput.skill1ButtonPressed = false;
-                            animator.SetTrigger("skill1");
+                            return "skill1";
                         }
 
                         break;
@@ -107,7 +149,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.skill2ButtonPressed)
                         {
                             playerInput.skill2ButtonPressed = false;
-                            animator.SetTrigger("skill2");
+                            return "skill2";
                         }
 
                         break;
@@ -115,7 +157,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.skill3ButtonPressed)
                         {
                             playerInput.skill3ButtonPressed = false;
-                            animator.SetTrigger("skill3");
+                            return "skill3";
                         }
 
                         break;
@@ -123,20 +165,22 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         if (playerInput.skill4ButtonPressed)
                         {
                             playerInput.skill4ButtonPressed = false;
-                            animator.SetTrigger("skill4");
+                            return "skill4";
                         }
 
                         break;
                     case "jump attack":
                         if (playerInput.attackButtonPressed)
                         {
-                            animator.SetTrigger("jump attack");
+                            return "jump attack";
                         }
 
                         break;
                 }
             }
         }
+
+        return null;
     }
 
 
@@ -158,7 +202,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             }
         }
     }
-
+    
     public void DeregisterInput(string input)
     {
         if (animations.ContainsKey(input))

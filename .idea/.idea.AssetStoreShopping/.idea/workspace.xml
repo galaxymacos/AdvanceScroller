@@ -2,31 +2,141 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Cross.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Sword.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeManager.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/CameraShake.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ContinuousAttack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ContinuousAttack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/EnergyComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Modern UI Pack.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ParticleDisposer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/CrossExplosion.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/CrossExplosion.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/Sword Disappear.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/Sword Disappear.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionDetector.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionDetector.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/die.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DamageComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/DamageComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthSystem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KnockComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/KnockComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Cross/Cross.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Cross/Cross.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DamageComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/DamageComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KnockComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/KnockComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Knockable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Knockable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Princess.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Princess.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cross.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cross.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrossExplosion.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrossExplosion.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Disappear.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Disappear.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincessAnimationEventContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwordPrincess.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincessAnimationEventContainer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwordPrincess.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill3.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,64 +148,63 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/idle_physics_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D2763AD-8235-4FC6-A022-A2846086CA7B/9f/af21fe48/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/run_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerCharacter.cs.meta" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/KnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/dash_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Cross.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ParticleDisposer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Knockable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DashState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EnergyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/CameraShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/skill3_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/idle_physics_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BulletTimeComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/BulletTimeManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/run_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RunState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CollisionDetector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/JumpState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/die.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroine.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ContinuousAttack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineAnimatorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerOneInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SwordPrincess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CharacterGroundMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerTwoInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/DashState.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/DamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeMaxSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/skill1_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/JumpState.cs" />
-        <option value="$PROJECT_DIR$/Assets/FallDownState.cs" />
-        <option value="$PROJECT_DIR$/Assets/JumpAttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/HurtState.cs" />
-        <option value="$PROJECT_DIR$/Assets/HeroineAnimatorController.cs" />
-        <option value="$PROJECT_DIR$/Assets/HeroineState.cs" />
-        <option value="$PROJECT_DIR$/Assets/HeroineInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/AttackState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Skill1State.cs" />
-        <option value="$PROJECT_DIR$/Assets/WolfSkill.cs" />
-        <option value="$PROJECT_DIR$/Assets/Heroine.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsysicsHeroJumpState.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerInputActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerInputActions.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroInput.cs" />
         <option value="$PROJECT_DIR$/Assets/HorizontalMovementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" />
@@ -106,32 +215,47 @@
         <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerOneInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimationEventContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/skill1_sword_princess.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" />
         <option value="$PROJECT_DIR$/Assets/SwordPrincessAnimationEventContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Cross.cs" />
         <option value="$PROJECT_DIR$/Assets/Knockable.cs" />
-        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
         <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/DamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
+        <option value="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/CameraShake.cs" />
+        <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" />
+        <option value="$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" />
+        <option value="$PROJECT_DIR$/Assets/EnergyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/KnockComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/BulletTimeManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" />
+        <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/HealthComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/ParticleDisposer.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sword.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/ContinuousAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/die.cs" />
+        <option value="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" />
       </list>
     </option>
   </component>
@@ -196,7 +320,9 @@
       <workItem from="1580934817799" duration="1607000" />
       <workItem from="1580936975386" duration="30980000" />
       <workItem from="1581044600685" duration="11552000" />
-      <workItem from="1581117851970" duration="18668000" />
+      <workItem from="1581117851970" duration="19518000" />
+      <workItem from="1581189652292" duration="24835000" />
+      <workItem from="1581265642521" duration="18693000" />
     </task>
     <servers />
   </component>
@@ -226,25 +352,110 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="534" y="211" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580779606581" />
+    <state width="1665" height="307" key="GridCell.Tab.0.bottom" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.0.bottom/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.0.bottom/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.0.center" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.0.center/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.0.center/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.0.left" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.0.left/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.0.left/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.0.right" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.0.right/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.0.right/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.1.bottom" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.1.bottom/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.1.bottom/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.1.center" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.1.center/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.1.center/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.1.left" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.1.left/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.1.left/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.1.right" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.1.right/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.1.right/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.2.bottom" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.2.bottom/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250305" />
+    <state width="1665" height="307" key="GridCell.Tab.2.bottom/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.2.center" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.2.center/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.2.center/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.2.left" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.2.left/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.2.left/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.2.right" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.2.right/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250304" />
+    <state width="1665" height="307" key="GridCell.Tab.2.right/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.3.bottom" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.3.bottom/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250305" />
+    <state width="1665" height="307" key="GridCell.Tab.3.bottom/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.3.center" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.3.center/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250305" />
+    <state width="1665" height="307" key="GridCell.Tab.3.center/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.3.left" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.3.left/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250305" />
+    <state width="1665" height="307" key="GridCell.Tab.3.left/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
+    <state width="1665" height="307" key="GridCell.Tab.3.right" timestamp="1581233401468">
+      <screen x="0" y="0" width="1707" height="960" />
+    </state>
+    <state width="1665" height="307" key="GridCell.Tab.3.right/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581230250305" />
+    <state width="1665" height="307" key="GridCell.Tab.3.right/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581233401468" />
     <state x="595" y="198" key="RiderGenerateDialog" timestamp="1580922779636">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="595" y="198" key="RiderGenerateDialog/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580922779636" />
-    <state x="385" y="125" key="SettingsEditor" timestamp="1580779655107">
+    <state x="385" y="125" key="SettingsEditor" timestamp="1581145088273">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="385" y="125" key="SettingsEditor/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580779655107" />
+    <state x="385" y="125" key="SettingsEditor/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581145088273" />
     <state width="498" height="450" key="SwitcherDM" timestamp="1580955601790">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state width="498" height="450" key="SwitcherDM/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580955601790" />
+    <state x="-2415" y="-9" width="1333" height="918" maximized="true" key="dock-window-1" timestamp="1581207617998">
+      <screen x="-2560" y="0" width="1707" height="960" />
+    </state>
+    <state x="-2415" y="-9" width="1333" height="918" maximized="true" key="dock-window-1/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581207617998" />
     <state x="510" y="221" key="run.anything.popup" timestamp="1580782244858">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581141560227">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581287380717">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581141560227" />
+    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581231110170" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581287380717" />
   </component>
 </project>

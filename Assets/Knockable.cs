@@ -8,9 +8,9 @@ public class Knockable : MonoBehaviour
     public string knockupAnimationString = "hurt";
     private Rigidbody2D rb;
     [HideInInspector]public Vector2 knockDirection;
-    public void KnockUp(KnockComponent knockComponent)
+    public void KnockUp(ProjectileKnockComponent projectileKnockComponent)
     {
-        Vector3 knockerLocation = knockComponent.transform.position;
+        Vector3 knockerLocation = projectileKnockComponent.transform.position;
         Vector3 knockableLocation = transform.position;
 
         Vector2 knockDirectionHorizontal;
@@ -23,7 +23,7 @@ public class Knockable : MonoBehaviour
             knockDirectionHorizontal = Vector2.right;
         }
 
-        knockDirection = knockDirectionHorizontal * knockComponent.knockHorizontalForce+new Vector2(0,knockComponent.knockVerticalForce);
+        knockDirection = knockDirectionHorizontal * projectileKnockComponent.knockHorizontalForce+new Vector2(0,projectileKnockComponent.knockVerticalForce);
         GetComponent<Animator>().SetTrigger(knockupAnimationString);    
     }
     

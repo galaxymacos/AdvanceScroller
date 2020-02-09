@@ -7,11 +7,11 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
 {
     private PlayerCharacter messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string>{"jump attack", "skill3"});
-        messagingSystem = animator.GetComponent<PlayerCharacter>();
+        base.OnStateEnter(_animator, stateInfo,layerIndex);
+        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash"});
+        messagingSystem = _animator.GetComponent<PlayerCharacter>();
         if (!messagingSystem.hasDoubleJump)
         {
             RegisterInputToNextState("double jump");
@@ -19,12 +19,12 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-      base.OnStateUpdate(animator, stateInfo, layerIndex);
+      base.OnStateUpdate(_animator, stateInfo, layerIndex);
         if (messagingSystem.isGrounded)
         {
-            animator.SetTrigger("idle");
+            _animator.SetTrigger("idle");
         }
         
 
