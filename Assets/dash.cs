@@ -15,6 +15,7 @@ public class dash : CharacterStateMachineBehavior
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         dashTimeCounter = dashDuration;
         _animator.GetComponent<PlayerCharacter>().dashTimeCounter++;
+        playerCharacter.onPlayerStartDash?.Invoke();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

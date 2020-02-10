@@ -5,7 +5,10 @@ using UnityEngine;
 
 public class ParticleSpawner : MonoBehaviour
 {
-    public GameObject playerDieDust;
+    public GameObject DieDust;
+    public GameObject GroundDust;
+    public GameObject GroundDustTwoWays;
+    
 
     public static ParticleSpawner Instance;
 
@@ -24,7 +27,8 @@ public class ParticleSpawner : MonoBehaviour
     
     public void SpawnPlayerParticle(GameObject particle, PlayerCharacter player)
     {
-        GameObject newParticle = Instantiate(particle, player.transform.Find("SpawnLocations").Find("DieDust").position, player.transform.rotation);
+        GameObject newParticle = Instantiate(particle, player.transform.Find("SpawnLocations").Find(particle.name).position, player.transform.rotation);
         newParticle.GetComponent<ParticleFacingComponent>().Setup(player);
     }
+    
 }

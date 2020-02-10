@@ -6,6 +6,6 @@ public class ParticleMessagingSystem : MonoBehaviour
 {
     public void SpawnDieParticle()
     {
-        ParticleSpawner.Instance.SpawnPlayerParticle(ParticleSpawner.Instance.playerDieDust,GetComponent<PlayerCharacter>());
+        ParticleSpawner.Instance.SpawnPlayerParticle(ParticleSpawner.Instance.DieDust,GetComponent<PlayerCharacter>());
     }
 }

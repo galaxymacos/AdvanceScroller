@@ -2,32 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/Die.anim" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/Die.anim.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GameObject.controller" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GameObject.controller.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/DieDust.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/DieDust.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/die.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/die.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/die.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dash.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +24,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0D2763AD-8235-4FC6-A022-A2846086CA7B/9f/af21fe48/AnimatorStateInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
@@ -99,7 +85,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DashState.cs" />
         <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
@@ -136,7 +121,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/ContinuousAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" />
-        <option value="$PROJECT_DIR$/Assets/dash.cs" />
         <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" />
@@ -146,10 +130,12 @@
         <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" />
-        <option value="$PROJECT_DIR$/Assets/ParticleSpawner.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/die.cs" />
+        <option value="$PROJECT_DIR$/Assets/dash.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/ParticleSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" />
       </list>
     </option>
   </component>
@@ -169,7 +155,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="TWShift.4" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
@@ -217,6 +203,8 @@
       <workItem from="1581117851970" duration="19518000" />
       <workItem from="1581189652292" duration="24835000" />
       <workItem from="1581265642521" duration="35572000" />
+      <workItem from="1581349757530" duration="35000" />
+      <workItem from="1581349971388" duration="3182000" />
     </task>
     <servers />
   </component>
@@ -330,9 +318,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="595" y="198" key="RiderGenerateDialog/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580922779636" />
-    <state x="385" y="125" key="SettingsEditor" timestamp="1581145088273">
-      <screen x="0" y="0" width="1707" height="960" />
+    <state x="-2867" y="147" key="SettingsEditor" timestamp="1581350043419">
+      <screen x="-2560" y="0" width="1707" height="960" />
     </state>
+    <state x="-2867" y="147" key="SettingsEditor/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581350043419" />
     <state x="385" y="125" key="SettingsEditor/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581145088273" />
     <state width="498" height="450" key="SwitcherDM" timestamp="1580955601790">
       <screen x="0" y="0" width="1707" height="960" />
@@ -346,10 +335,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581311390998">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581351770337">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581231110170" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581311390998" />
+    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581350206170" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581351770337" />
   </component>
 </project>

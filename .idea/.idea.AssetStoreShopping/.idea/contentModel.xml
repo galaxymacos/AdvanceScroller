@@ -137,6 +137,7 @@
         <e p="ParticleSpawner.cs" t="Include" />
         <e p="PlayerCharacter.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
+        <e p="PlayerParticleSpawnerProxy.cs" t="Include" />
         <e p="PlayerTwoInput.cs" t="Include" />
         <e p="ProgressBarDataUpdater.cs" t="Include" />
         <e p="ProjectileDamageComponent.cs" t="Include" />

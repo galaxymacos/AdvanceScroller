@@ -23,7 +23,7 @@ public class PlayerCharacter : MonoBehaviour
     public GameObject groundDustTwoWays;
     [Space(10)]
 
-    public Action facingDirectionChanged;
+    public Action onFacingDirectionChanged;
     public Action onPlayerStartMove;
     public Action onPlayerStartDoubleJump;
     public Action onPlayerStartJump;
@@ -50,10 +50,7 @@ public class PlayerCharacter : MonoBehaviour
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
-        facingDirectionChanged += SpawnGroundDust;
-        onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
-        onPlayerStartJump += SpawnGroundDustTwoWays;
-        onPlayerGrounded += SpawnGroundDustTwoWays;
+        
         // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
     }
@@ -76,32 +73,9 @@ public class PlayerCharacter : MonoBehaviour
         flipComponent.Flip(playerInput.horizontalAxis);
         if (isFacingRight != wasFacingRight)
         {
-            facingDirectionChanged?.Invoke();
+            onFacingDirectionChanged?.Invoke();
             
         }
-    }
-
-    public void SpawnGroundDust()
-    {
-        if (!isGrounded)
-        {
-            return;
-        }
-        var groundDust = Instantiate(this.groundDust, transform.Find("SpawnLocations").Find("GroundDust").position,
-            transform.rotation);
-        groundDust.GetComponent<ParticleFacingComponent>().Setup(this);
-    }
-    
-    public void SpawnGroundDustTwoWays()
-    {
-        if (groundDustTwoWays != null)
-        {
-            var groundDust = Instantiate(groundDustTwoWays, transform.Find("SpawnLocations").Find("GroundDustTwoWays").position,
-                transform.rotation);
-            groundDust.GetComponent<ParticleFacingComponent>().Setup(this);
-        }
-        
-        
     }
 
     private void FixedUpdate()
