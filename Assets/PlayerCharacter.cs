@@ -15,6 +15,10 @@ public class PlayerCharacter : MonoBehaviour
     public int dashTimeCounter;
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
+    public GameObject runParticle;
+    public GameObject groundDustTwoWays;
+
+    public Action facingDirectionChanged;
     
 
     
@@ -36,27 +40,76 @@ public class PlayerCharacter : MonoBehaviour
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
+        facingDirectionChanged += SpawnGroundDust;
         // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
     }
 
     private void Update()
     {
+        float horizontalVelocityBefore = GetComponent<Rigidbody2D>().velocity.x;
         characterGroundMovementComponent.UpdateMovement();
+        float horizontalVelocityAfter = GetComponent<Rigidbody2D>().velocity.x;
+        if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter > Mathf.Epsilon && isFacingRight)
+        {
+            SpawnGroundDust();
+        }
+        else if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter < -Mathf.Epsilon && !isFacingRight)
+        {
+            SpawnGroundDust();
+        }
+
+            var wasFacingRight = isFacingRight;
+        flipComponent.Flip(playerInput.horizontalAxis);
+        if (isFacingRight != wasFacingRight)
+        {
+            facingDirectionChanged?.Invoke();
+            
+        }
+    }
+
+    public void SpawnGroundDust()
+    {
+        if (!isGrounded)
+        {
+            return;
+        }
+        var groundDust = Instantiate(runParticle, transform.Find("SpawnLocations").Find("GroundDust").position,
+            transform.rotation);
+        groundDust.GetComponent<ParticleFacingComponent>().Setup(this);
+    }
+    
+    public void SpawnGroundDustTwoWays()
+    {
+        if (groundDustTwoWays != null)
+        {
+            var groundDust = Instantiate(groundDustTwoWays, transform.Find("SpawnLocations").Find("GroundDustTwoWays").position,
+                transform.rotation);
+            groundDust.GetComponent<ParticleFacingComponent>().Setup(this);
+        }
+        
+        
     }
 
     private void FixedUpdate()
     {
+        updateGrounded();
+    }
+
+    private void updateGrounded()
+    {
+        bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        if (wasGrounded != isGrounded && isGrounded)
+        {
+            SpawnGroundDustTwoWays();
+
+        }
         if (isGrounded)
         {
             hasDoubleJump = false;
             dashTimeCounter = 0;
         }
-        flipComponent.Flip(playerInput.horizontalAxis);
-        
     }
-    
-   
 }
 

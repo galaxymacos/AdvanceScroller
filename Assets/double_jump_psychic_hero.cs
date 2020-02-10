@@ -22,6 +22,7 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
         
         messagingSystem.canMove = true;
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        playerCharacter.SpawnGroundDustTwoWays();
         
     }
 

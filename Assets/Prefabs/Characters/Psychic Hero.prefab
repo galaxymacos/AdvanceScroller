@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 904546213}
   - component: {fileID: 904546212}
   - component: {fileID: 904546214}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Tornado
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 904546210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.24, y: 0.03, z: 0}
+  m_LocalPosition: {x: 0.23, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 891296965063577104}
@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5afaac99e3c4104a6cb18f965c1e4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectsInCollision: []
   duration: 3
   tickInterval: 0.2
   damagePerTick: 3
@@ -86,6 +87,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1954124835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954124836}
+  m_Layer: 9
+  m_Name: GroundDust
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1954124836
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954124835}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.17, y: 0.271, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 891296965063577104}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891296965063577107
 GameObject:
   m_ObjectHideFlags: 0
@@ -95,7 +126,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891296965063577104}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SpawnLocations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,11 +141,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891296965063577107}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.473, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 891296966238984182}
   - {fileID: 904546211}
+  - {fileID: 1954124836}
   m_Father: {fileID: 891296965151884860}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -138,7 +170,9 @@ GameObject:
   - component: {fileID: 891296965151884998}
   - component: {fileID: 891296965151884999}
   - component: {fileID: 1588731322}
-  m_Layer: 9
+  - component: {fileID: 1588731334}
+  - component: {fileID: 1588731335}
+  m_Layer: 10
   m_Name: Psychic Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,10 +324,18 @@ MonoBehaviour:
   checkRadius: 0.03
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
+  collidersAlive:
+  - {fileID: 891296965151884862}
+  - {fileID: 891296965151884849}
+  collidersDead:
+  - {fileID: 1588731335}
+  - {fileID: 1588731334}
+  runParticle: {fileID: 4206754594151700826, guid: b667a071cbfe04e43a074692f215eb48,
+    type: 3}
   movementSpeed: 5
   canMove: 0
 --- !u!114 &891296965151884858
@@ -421,6 +463,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!58 &1588731334
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.02, y: -0.2}
+  serializedVersion: 2
+  m_Radius: 0.18
+--- !u!58 &1588731335
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.27, y: -0.13}
+  serializedVersion: 2
+  m_Radius: 0.25
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891296965803389052}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -460,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 891296966238984182}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: KnifeLocation
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +549,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 891296966238984169}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.078, y: -0.136, z: 0}
+  m_LocalPosition: {x: 0.5, y: -0.136, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 891296965063577104}

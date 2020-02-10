@@ -2,142 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/BulletTimeManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/CameraShake.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ContinuousAttack.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ContinuousAttack.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/EnergyComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Modern UI Pack.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ParticleDisposer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/CrossExplosion.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/CrossExplosion.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/Sword Disappear.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Particles/Sword Disappear.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionDetector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CollisionDetector.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap-Mobile.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Bitmap.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF Overlay.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Masking.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile Overlay.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Mobile.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface-Mobile.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF-Surface.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_SDF.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMP_Sprite.shader.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Properties.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Shaders/TMPro_Surface.cginc.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/die.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Particle/GroundDust.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/GroundDust.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/GroundDust.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/GroundDustTwoWays.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/GroundDustTwoWays.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterFlipComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterFlipComponent.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Cross/Cross.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Cross/Cross.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/Wolf skill.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Wolf Skill/use.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DamageComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/DamageComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KnockComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/KnockComponent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knockable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Knockable.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cross.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Cross.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrossExplosion.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/CrossExplosion.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Knife.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Disappear.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Sword Disappear.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Wolf skill.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill3.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/skill3.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwordPrincess.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/die.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/die.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,11 +38,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/HealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Projectile.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerCharacter.cs.meta" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/dash_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/dash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Cross.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ParticleDisposer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -200,20 +86,17 @@
     <setting file="file://$PROJECT_DIR$/Assets/CharacterGroundMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerTwoInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeMaxSlider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/skill1_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/HorizontalMovementComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/HeroineInput.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FlipComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
         <option value="$PROJECT_DIR$/Assets/KnockEnemyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/HealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DashState.cs" />
         <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
@@ -229,7 +112,6 @@
         <option value="$PROJECT_DIR$/Assets/Knockable.cs" />
         <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/DamageComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
         <option value="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraShake.cs" />
@@ -242,7 +124,6 @@
         <option value="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/BulletTimeManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" />
         <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
@@ -253,9 +134,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
         <option value="$PROJECT_DIR$/Assets/ContinuousAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
-        <option value="$PROJECT_DIR$/Assets/die.cs" />
         <option value="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/dash.cs" />
+        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
+        <option value="$PROJECT_DIR$/Assets/die.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
+        <option value="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
       </list>
     </option>
   </component>
@@ -322,7 +209,7 @@
       <workItem from="1581044600685" duration="11552000" />
       <workItem from="1581117851970" duration="19518000" />
       <workItem from="1581189652292" duration="24835000" />
-      <workItem from="1581265642521" duration="18693000" />
+      <workItem from="1581265642521" duration="27697000" />
     </task>
     <servers />
   </component>
@@ -452,10 +339,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581287380717">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581297385964">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581231110170" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581287380717" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581297385964" />
   </component>
 </project>

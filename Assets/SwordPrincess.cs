@@ -7,6 +7,7 @@ public class SwordPrincess : MonoBehaviour
 {
     public GameObject wolf;
     public GameObject cross;
+    public GameObject runParticlePrefab;
     private PlayerCharacter playerCharacter;
 
     private void Awake()
@@ -40,5 +41,11 @@ public class SwordPrincess : MonoBehaviour
             }
             
         }
+    }
+
+    public void SpawnRunParticle()
+    {
+        GameObject runParticle = Instantiate(runParticlePrefab, transform.Find("SpawnLocations").Find("Run").position, transform.rotation);
+
     }
 }

@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class die : CharacterStateMachineBehavior
 {
-    private PlayerCharacter playerCharacter;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter = animator.GetComponent<PlayerCharacter>();
+        base.OnStateEnter(animator, stateInfo, layerIndex);
         foreach (Collider2D collider2D in playerCharacter.collidersAlive)
         {
             collider2D.enabled = false;
@@ -21,10 +20,10 @@ public class die : CharacterStateMachineBehavior
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        
-    }
+    // public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    // {
+    //     
+    // }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -132,6 +132,7 @@
         </e>
         <e p="MovementComponent.cs" t="Include" />
         <e p="ParticleDisposer.cs" t="Include" />
+        <e p="ParticleFacingComponent.cs" t="Include" />
         <e p="PlayerCharacter.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerTwoInput.cs" t="Include" />
@@ -145,6 +146,7 @@
         <e p="run_psychic_hero.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AttackState.cs" t="Include" />
+          <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CollisionDetector.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
           <e p="FallDownState.cs" t="Include" />
