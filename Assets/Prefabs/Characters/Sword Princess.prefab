@@ -122,6 +122,36 @@ MonoBehaviour:
   tickInterval: 0.2
   damagePerTick: 3
   owner: {fileID: 3658480544048443884}
+--- !u!1 &1643300113
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643300114}
+  m_Layer: 9
+  m_Name: GroundDustTwoWays
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643300114
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643300113}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3658480543698845594}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1906817070504165008
 GameObject:
   m_ObjectHideFlags: 0
@@ -146,7 +176,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1906817070504165008}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.17, y: 0.271, z: 0}
+  m_LocalPosition: {x: -0.45, y: 0.271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3658480543698845594}
@@ -214,6 +244,7 @@ Transform:
   - {fileID: 986091363}
   - {fileID: 1033922195312039100}
   - {fileID: 1094605604}
+  - {fileID: 1643300114}
   m_Father: {fileID: 3658480544048443415}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -402,6 +433,8 @@ MonoBehaviour:
   - {fileID: 1086934268}
   - {fileID: 1086934267}
   runParticle: {fileID: 4206754594151700826, guid: b667a071cbfe04e43a074692f215eb48,
+    type: 3}
+  groundDustTwoWays: {fileID: 2507875056641089187, guid: b3fc23b6d0b53524e9dbaa130ba770fa,
     type: 3}
   movementSpeed: 5
   canMove: 0

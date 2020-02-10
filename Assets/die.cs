@@ -8,35 +8,23 @@ public class die : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        foreach (Collider2D collider2D in playerCharacter.collidersAlive)
-        {
-            collider2D.enabled = false;
-        }
-
-        foreach (Collider2D collider2D in playerCharacter.collidersDead)
-        {
-            collider2D.enabled = true;
-        }
+        SwitchCollider(true);
     }
 
+    
+
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    // public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    // {
-    //     
-    // }
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        
+
+    }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        foreach (Collider2D collider2D in playerCharacter.collidersAlive)
-        {
-            collider2D.enabled = true;
-        }
-
-        foreach (Collider2D collider2D in playerCharacter.collidersDead)
-        {
-            collider2D.enabled = false;
-        }
+        SwitchCollider(false);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
@@ -50,4 +38,17 @@ public class die : CharacterStateMachineBehavior
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
+    
+    private void SwitchCollider(bool isDead)
+    {
+        foreach (Collider2D collider2D in playerCharacter.collidersAlive)
+        {
+            collider2D.enabled = !isDead;
+        }
+
+        foreach (Collider2D collider2D in playerCharacter.collidersDead)
+        {
+            collider2D.enabled = isDead;
+        }
+    }
 }

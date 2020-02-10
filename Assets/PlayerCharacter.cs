@@ -13,12 +13,22 @@ public class PlayerCharacter : MonoBehaviour
     public bool hasDoubleJump;
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
+    
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
-    public GameObject runParticle;
+    
+    [Header("Particle")]
+    public GameObject groundDust;
+    public GameObject deadParticle;
     public GameObject groundDustTwoWays;
+    [Space(10)]
 
     public Action facingDirectionChanged;
+    public Action onPlayerStartMove;
+    public Action onPlayerStartDoubleJump;
+    public Action onPlayerStartJump;
+    public Action onPlayerGrounded;
+    public Action onPlayerStartDash;
     
 
     
@@ -41,6 +51,9 @@ public class PlayerCharacter : MonoBehaviour
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
         facingDirectionChanged += SpawnGroundDust;
+        onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
+        onPlayerStartJump += SpawnGroundDustTwoWays;
+        onPlayerGrounded += SpawnGroundDustTwoWays;
         // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
     }
@@ -52,14 +65,14 @@ public class PlayerCharacter : MonoBehaviour
         float horizontalVelocityAfter = GetComponent<Rigidbody2D>().velocity.x;
         if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter > Mathf.Epsilon && isFacingRight)
         {
-            SpawnGroundDust();
+            onPlayerStartMove?.Invoke();
         }
         else if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter < -Mathf.Epsilon && !isFacingRight)
         {
-            SpawnGroundDust();
+            onPlayerStartMove?.Invoke();
         }
 
-            var wasFacingRight = isFacingRight;
+        var wasFacingRight = isFacingRight;
         flipComponent.Flip(playerInput.horizontalAxis);
         if (isFacingRight != wasFacingRight)
         {
@@ -74,7 +87,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             return;
         }
-        var groundDust = Instantiate(runParticle, transform.Find("SpawnLocations").Find("GroundDust").position,
+        var groundDust = Instantiate(this.groundDust, transform.Find("SpawnLocations").Find("GroundDust").position,
             transform.rotation);
         groundDust.GetComponent<ParticleFacingComponent>().Setup(this);
     }
@@ -102,7 +115,7 @@ public class PlayerCharacter : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         if (wasGrounded != isGrounded && isGrounded)
         {
-            SpawnGroundDustTwoWays();
+            onPlayerGrounded?.Invoke();
 
         }
         if (isGrounded)
@@ -111,5 +124,6 @@ public class PlayerCharacter : MonoBehaviour
             dashTimeCounter = 0;
         }
     }
+
 }
 

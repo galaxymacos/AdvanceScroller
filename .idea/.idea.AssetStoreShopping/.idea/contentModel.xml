@@ -133,6 +133,8 @@
         <e p="MovementComponent.cs" t="Include" />
         <e p="ParticleDisposer.cs" t="Include" />
         <e p="ParticleFacingComponent.cs" t="Include" />
+        <e p="ParticleMessagingSystem.cs" t="Include" />
+        <e p="ParticleSpawner.cs" t="Include" />
         <e p="PlayerCharacter.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerTwoInput.cs" t="Include" />

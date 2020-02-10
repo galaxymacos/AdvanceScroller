@@ -16,8 +16,8 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         rb = _animator.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-        
-        playerCharacter.SpawnGroundDustTwoWays();
+
+        playerCharacter.onPlayerStartJump?.Invoke();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
