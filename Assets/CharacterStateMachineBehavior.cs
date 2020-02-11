@@ -36,19 +36,21 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         string animationName = InputFilter();
+        
         if (forceCancelProcessor)
         {
             animationName = forceCancelProcessor.Process(animationName, _animator);
         }
 
-        if (animationName != null)
-        {        
-            animationName = LimitUsageFilter(animationName);
-            if (animationName != null)
-            {
-                _animator.SetTrigger(animationName);
-            }
+             
+        animationName = LimitUsageFilter(animationName); 
+        animationName = CoolDownFilter(animationName);
+
+        if (animationName != "")
+        {
+            _animator.SetTrigger(animationName);
         }
+        
         
         
     }
@@ -71,10 +73,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                 }
                 else
                 {
-                    return null;
+                    return "";
                 }
-
-                break;
         }
 
         return animationName;
@@ -189,7 +189,18 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             }
         }
 
-        return null;
+        return "";
+    }
+
+    public string CoolDownFilter(string skillName)
+    {
+        SkillManager playerSkillManager = playerCharacter.GetComponent<SkillManager>();
+        if (playerSkillManager.Use(skillName))
+        {
+            return skillName;
+        }
+
+        return "";
     }
 
 

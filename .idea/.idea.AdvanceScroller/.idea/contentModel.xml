@@ -177,10 +177,12 @@
           <e p="UtilityClass.cs" t="Include" />
         </e>
         <e p="SingleAttackComponent.cs" t="Include" />
+        <e p="Skill.cs" t="Include" />
         <e p="skill1_psychic_hero.cs" t="Include" />
         <e p="skill1_sword_princess.cs" t="Include" />
         <e p="skill3_psychic_hero.cs" t="Include" />
         <e p="skill3_sword_princess.cs" t="Include" />
+        <e p="SkillManager.cs" t="Include" />
         <e p="StunComponent.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />

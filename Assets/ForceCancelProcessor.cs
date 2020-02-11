@@ -26,11 +26,11 @@ public class ForceCancelProcessor : StateMachineBehaviour
                     return animationName;
                 }
 
-                return null;
+                return "";
             }
         }
 
-        return null;
+        return "";
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
