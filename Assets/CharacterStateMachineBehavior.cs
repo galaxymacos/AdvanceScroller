@@ -29,7 +29,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             RegisterInputToNextState(forceCancelProcessor.animationNameToTransfer);
         }
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
-        _animator.GetComponent<HealthComponent>().onPlayerDie += StartDieAnimation;
 
     }
 
@@ -50,13 +49,14 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                 _animator.SetTrigger(animationName);
             }
         }
+        
+        
     }
 
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
         
-        _animator.GetComponent<HealthComponent>().onPlayerDie -= StartDieAnimation;
 
     }
 
@@ -220,8 +220,5 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
     }
 
-    public void StartDieAnimation()
-    {
-        animator.SetTrigger("die");
-    }
+   
 }

@@ -6,9 +6,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
 
-    private Transform pierceAttack;
 
-    private ContinuousAttack continuousAttackComponent;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -16,9 +14,8 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         RegisterInputToNextState(new List<string> {"dash"});
         rb = _animator.GetComponent<Rigidbody2D>();
         
-        pierceAttack = animator.transform.Find("SpawnLocations").Find("PierceAttack");
-        continuousAttackComponent = pierceAttack.GetComponent<ContinuousAttack>();
-        continuousAttackComponent.Execute();
+        playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(1);
+        playerCharacter.canMove = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,7 +28,8 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        continuousAttackComponent.Stop();
+        playerCharacter.canMove = true;
+        playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(0);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

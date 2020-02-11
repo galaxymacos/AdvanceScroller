@@ -13,6 +13,7 @@ public class PlayerCharacter : MonoBehaviour
     public bool hasDoubleJump;
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
+    public bool isDead;
     
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
@@ -51,8 +52,15 @@ public class PlayerCharacter : MonoBehaviour
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
         
+        GetComponent<HealthComponent>().onPlayerDie = PlayerDie;
+        
         // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
+    }
+
+    private void PlayerDie()
+    {
+        isDead = true;
     }
 
     private void Update()
@@ -74,7 +82,6 @@ public class PlayerCharacter : MonoBehaviour
         if (isFacingRight != wasFacingRight)
         {
             onFacingDirectionChanged?.Invoke();
-            
         }
     }
 

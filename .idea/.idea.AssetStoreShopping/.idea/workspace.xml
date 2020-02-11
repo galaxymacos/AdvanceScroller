@@ -2,17 +2,62 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Axes.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Axes/Axe.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Axes/Axe.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Axes/axe.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Axes/axe.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Eye Bullet.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Eye Bullet/Eye Bullet.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Eye Bullet/Eye Bullet.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Eye Bullet/eye bullet.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/Eye Bullet/eye bullet.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/AttackMessagingComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/EyeBullet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlashYellowComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/FlashYellowComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Axe.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Axe.prefab.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hit stun.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/hit stun.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SingleAttackComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/SingleAttackComponent.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/StunComponent.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/attack_sword_princess.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/jump_attack_sword_princess.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/skill1_psychic_hero.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ContinuousAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/ContinuousAttack.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Cross.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Cross.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HealthComponent.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Cross.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Sword.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Skills/Wolf Skill.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/Psychic Hero.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dash.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/dash.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill1.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Psychic Hero/Animation/skill2.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/die.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/die.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/jump attack.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/jump attack.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincess.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +77,18 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/attack_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/dash.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Cross.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ParticleDisposer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Knockable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerCharacter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sword.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/hitstun.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/skill1_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
@@ -49,10 +96,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/DashState.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/EnergyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StunComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerInputActions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CameraShake.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SingleAttackComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/skill3_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/idle_physics_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ParticleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
@@ -65,6 +114,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/EyeBullet.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/die.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Heroine.cs" root0="FORCE_HIGHLIGHTING" />
@@ -72,37 +122,22 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HeroineAnimatorController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerOneInput.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/SwordPrincess.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/AttackMessagingComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/jump_attack_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/CharacterGroundMovementComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PlayerTwoInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Slider/RangeMaxSlider.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/FlashYellowComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/skill1_sword_princess.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/DashState.cs" />
-        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroHorizontalMovementComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroMessagingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerOneInput.cs" />
-        <option value="$PROJECT_DIR$/Assets/AnimationEventContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/skill1_sword_princess.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/WolfSkill.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Skill1State.cs" />
-        <option value="$PROJECT_DIR$/Assets/SwordPrincessAnimationEventContainer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Cross.cs" />
-        <option value="$PROJECT_DIR$/Assets/Knockable.cs" />
-        <option value="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/DamageComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" />
         <option value="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/CameraShake.cs" />
         <option value="$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" />
@@ -115,27 +150,45 @@
         <option value="$PROJECT_DIR$/Assets/BulletTimeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" />
-        <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleDisposer.cs" />
         <option value="$PROJECT_DIR$/Assets/Sword.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
-        <option value="$PROJECT_DIR$/Assets/ContinuousAttack.cs" />
-        <option value="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" />
-        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Heroine.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
-        <option value="$PROJECT_DIR$/Assets/HealthComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/die.cs" />
         <option value="$PROJECT_DIR$/Assets/dash.cs" />
-        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/ParticleSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/AttackComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" />
+        <option value="$PROJECT_DIR$/Assets/SingleAttackComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/AttackMessagingComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" />
+        <option value="$PROJECT_DIR$/Assets/Cross.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/ProjectileMovementComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Projectile.cs" />
+        <option value="$PROJECT_DIR$/Assets/SwordPrincessProjectileSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/SwordPrincess.cs" />
+        <option value="$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs" />
+        <option value="$PROJECT_DIR$/Assets/StunComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/hitstun.cs" />
+        <option value="$PROJECT_DIR$/Assets/ContinuousAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/skill1_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/EyeBullet.cs" />
+        <option value="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" />
+        <option value="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/attack_sword_princess.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_sword_princess.cs" />
+        <option value="$PROJECT_DIR$/Assets/jump_attack_sword_princess.cs" />
+        <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" />
+        <option value="$PROJECT_DIR$/Assets/idle_physics_hero.cs" />
+        <option value="$PROJECT_DIR$/Assets/HealthComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/FlashYellowComponent.cs" />
       </list>
     </option>
   </component>
@@ -204,7 +257,8 @@
       <workItem from="1581189652292" duration="24835000" />
       <workItem from="1581265642521" duration="35572000" />
       <workItem from="1581349757530" duration="35000" />
-      <workItem from="1581349971388" duration="3182000" />
+      <workItem from="1581349971388" duration="3575000" />
+      <workItem from="1581367190125" duration="24764000" />
     </task>
     <servers />
   </component>
@@ -335,10 +389,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581351770337">
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581402549676">
       <screen x="0" y="0" width="1707" height="960" />
     </state>
-    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581350206170" />
-    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581351770337" />
+    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581384176050" />
+    <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581402549676" />
   </component>
 </project>

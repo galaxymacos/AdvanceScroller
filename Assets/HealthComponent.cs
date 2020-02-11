@@ -17,9 +17,11 @@ public class HealthComponent : MonoBehaviour
     private float maxBulletTime = 0.4f;
     private float bulletTime;
     private CameraShake cameraShake;
+    public bool isPlayerDead => health <= 0;
     
     
     public FloatAction onHealthChanged;
+    public Action onTakeDamage;
     public Action onPlayerDie;
     
     private void Awake()
@@ -38,7 +40,7 @@ public class HealthComponent : MonoBehaviour
         health = Mathf.Clamp(health-amount, 0, 100);
         if (health == 0)
         {
-            onPlayerDie?.Invoke();
+                onPlayerDie?.Invoke();
         }
 
         float percentage = (float) amount / health;
@@ -54,7 +56,7 @@ public class HealthComponent : MonoBehaviour
         }
 
         onHealthChanged?.Invoke(health);
-
+        onTakeDamage?.Invoke();
     }
 
     public void HitFreeze()

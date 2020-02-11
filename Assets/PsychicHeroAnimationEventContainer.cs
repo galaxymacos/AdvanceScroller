@@ -6,6 +6,8 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
 {
     private PlayerCharacter playerCharacter;
     public GameObject knifePrefab;
+    public GameObject axePrefab;
+    public GameObject eyeBulletPrefab;
     public Transform spawnTransform;
 
     private void Awake()
@@ -17,20 +19,21 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     {
         GameObject knife = Instantiate(knifePrefab, spawnTransform.position, transform.rotation);
         var projectile = knife.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter);
+        projectile.Setup(playerCharacter, 30,0f);
     }
-
-    public void TornadoAttack()
-    {
-        Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.Find("SpawnLocations").Find("Tornado").position, 0.5f);
-        foreach (Collider2D hitCollider in hitColliders)
-        {
-            if (hitCollider.gameObject != gameObject)
-            {
-                hitCollider.GetComponent<HealthComponent>()?.TakeDamage(10);
-                hitCollider.GetComponent<Knockable>()?.KnockUp(5,5,transform);
-            }
-            
-        }
+    
+    public void SpawnAxes()
+    { 
+        GameObject generatedCross = Instantiate(axePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
+        Projectile projectile = generatedCross.GetComponent<Projectile>();
+        projectile.Setup(playerCharacter, 20, 45f);
     }
+    
+    public void SpawnEyeBullet()
+    { 
+        GameObject generatedCross = Instantiate(eyeBulletPrefab, transform.Find("SpawnLocations").Find("Eye Bullet").position, transform.rotation);
+        Projectile projectile = generatedCross.GetComponent<Projectile>();
+        projectile.Setup(playerCharacter, 6, 0f);
+    }
+    
 }

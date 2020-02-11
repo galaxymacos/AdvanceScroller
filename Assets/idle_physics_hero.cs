@@ -27,6 +27,12 @@ public class idle_physics_hero : CharacterStateMachineBehavior
         {
             _animator.SetTrigger("fall down");
         }
+
+        if (playerCharacter.isDead)
+        {
+            _animator.SetTrigger("die");
+        }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

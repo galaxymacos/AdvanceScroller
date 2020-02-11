@@ -16,7 +16,7 @@ public class Cross : MonoBehaviour
     {
         if (other.GetComponent<Knockable>() != null && other.gameObject != projectile.owner.gameObject)
         {
-            Instantiate(crossExplosion, transform.position, Quaternion.identity);
+            // Instantiate(crossExplosion, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

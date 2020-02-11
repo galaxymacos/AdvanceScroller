@@ -25,7 +25,7 @@ public class attack_psychic_hero : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-
+        base.OnStateExit(animator,stateInfo, layerIndex);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

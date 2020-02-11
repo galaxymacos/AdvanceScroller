@@ -9,6 +9,8 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="attack_psychic_hero.cs" t="Include" />
+        <e p="attack_sword_princess.cs" t="Include" />
+        <e p="AttackMessagingComponent.cs" t="Include" />
         <e p="BulletTimeComponent.cs" t="Include" />
         <e p="BulletTimeManager.cs" t="Include" />
         <e p="CameraShake.cs" t="Include" />
@@ -20,12 +22,16 @@
         <e p="die.cs" t="Include" />
         <e p="double_jump_psychic_hero.cs" t="Include" />
         <e p="EnergyComponent.cs" t="Include" />
+        <e p="EyeBullet.cs" t="Include" />
         <e p="fall_down_psychic_hero.cs" t="Include" />
+        <e p="FlashYellowComponent.cs" t="Include" />
         <e p="ForceCancelProcessor.cs" t="Include" />
         <e p="HealthComponent.cs" t="Include" />
+        <e p="hitstun.cs" t="Include" />
         <e p="hurt_psychic_hero.cs" t="Include" />
         <e p="idle_physics_hero.cs" t="Include" />
         <e p="jump_attack_psychic_hero.cs" t="Include" />
+        <e p="jump_attack_sword_princess.cs" t="Include" />
         <e p="jump_psychic_hero.cs" t="Include" />
         <e p="Knockable.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
@@ -166,19 +172,21 @@
           <e p="PlayerOneInput.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="ProjectileFlipComponent.cs" t="Include" />
-          <e p="ProjectileMovementComponent.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="Skill1State.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
         </e>
+        <e p="SingleAttackComponent.cs" t="Include" />
+        <e p="skill1_psychic_hero.cs" t="Include" />
         <e p="skill1_sword_princess.cs" t="Include" />
         <e p="skill3_psychic_hero.cs" t="Include" />
         <e p="skill3_sword_princess.cs" t="Include" />
+        <e p="StunComponent.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="Sword.cs" t="Include" />
-        <e p="SwordPrincess.cs" t="Include" />
+        <e p="SwordPrincessParticleSpawner.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

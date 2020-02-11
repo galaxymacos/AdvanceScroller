@@ -11,11 +11,20 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
             playerCharacter = GetComponent<PlayerCharacter>();
         }
 
-        playerCharacter.onFacingDirectionChanged += SpawnGroundDust;
+        playerCharacter.onFacingDirectionChanged += SpawnGroundDustGroundLimited;
         playerCharacter.onPlayerStartDash += SpawnGroundDust;
+        playerCharacter.onPlayerStartMove += SpawnGroundDustGroundLimited;
         playerCharacter.onPlayerStartJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerGrounded += SpawnGroundDustTwoWays;
+    }
+
+    public void SpawnGroundDustGroundLimited()
+    {
+        if (playerCharacter.isGrounded)
+        {
+            SpawnGroundDust();
+        }
     }
 
     public void SpawnGroundDust()
