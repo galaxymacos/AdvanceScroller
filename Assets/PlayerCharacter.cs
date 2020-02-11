@@ -14,6 +14,9 @@ public class PlayerCharacter : MonoBehaviour
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
     public bool isDead;
+    public float dashInvincibleTime = 0.25f;
+    public float dashInvincibleTimeCounter;
+    
     
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
@@ -30,6 +33,8 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerStartJump;
     public Action onPlayerGrounded;
     public Action onPlayerStartDash;
+    public Action onPlayerDodgeDamage;
+    
     
 
     
@@ -54,7 +59,6 @@ public class PlayerCharacter : MonoBehaviour
         
         GetComponent<HealthComponent>().onPlayerDie = PlayerDie;
         
-        // spawnTransform = transform.Find("SpawnLocations").Find("Sword");
 
     }
 
@@ -82,6 +86,11 @@ public class PlayerCharacter : MonoBehaviour
         if (isFacingRight != wasFacingRight)
         {
             onFacingDirectionChanged?.Invoke();
+        }
+
+        if (dashInvincibleTimeCounter > 0)
+        {
+            dashInvincibleTimeCounter -= Time.deltaTime;
         }
     }
 

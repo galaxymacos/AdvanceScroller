@@ -7,11 +7,13 @@ public class dash : CharacterStateMachineBehavior
     [SerializeField] private float dashSpeed = 8;
 
     [SerializeField] private float dashDuration = 0.4f;
+    private bool hasActivatedBulletTime;
 
     private float dashTimeCounter;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        hasActivatedBulletTime = false;
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         dashTimeCounter = dashDuration;
         _animator.GetComponent<PlayerCharacter>().dashTimeCounter++;
@@ -58,4 +60,13 @@ public class dash : CharacterStateMachineBehavior
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
+
+    public void ActivateDodgeBulletTime()
+    {
+        if (!hasActivatedBulletTime)
+        {
+            BulletTimeManager.instance.Register(0.2f);
+            hasActivatedBulletTime = true;
+        }
+    }
 }

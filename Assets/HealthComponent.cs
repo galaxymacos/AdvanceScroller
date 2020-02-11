@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(PlayerCharacter))]
 public class HealthComponent : MonoBehaviour
 {
     public int health = 100;
@@ -18,6 +19,7 @@ public class HealthComponent : MonoBehaviour
     private float bulletTime;
     private CameraShake cameraShake;
     public bool isPlayerDead => health <= 0;
+    public PlayerCharacter playerCharacter;
     
     
     public FloatAction onHealthChanged;
@@ -28,6 +30,7 @@ public class HealthComponent : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         if (Camera.main != null) cameraShake = Camera.main.GetComponent<CameraShake>();
+        playerCharacter = GetComponent<PlayerCharacter>();
     }
 
     private void Update()
@@ -37,6 +40,10 @@ public class HealthComponent : MonoBehaviour
     // Start is called before the first frame update
     public void TakeDamage(int amount, bool canTimeFreezed = true)
     {
+        if (playerCharacter.dashInvincibleTimeCounter > 0)
+        {
+            playerCharacter.onPlayerDodgeDamage?.Invoke();
+        }
         health = Mathf.Clamp(health-amount, 0, 100);
         if (health == 0)
         {
