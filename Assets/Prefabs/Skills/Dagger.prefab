@@ -11,14 +11,11 @@ GameObject:
   - component: {fileID: 4985245455587790694}
   - component: {fileID: 4985245455587790689}
   - component: {fileID: 1187303070972835726}
-  - component: {fileID: -2834311645762949623}
-  - component: {fileID: -8981488516740328143}
   - component: {fileID: 7862864406526074693}
   - component: {fileID: 6895560838892462545}
-  - component: {fileID: -528759426720921838}
   - component: {fileID: 6811955420605573615}
   m_Layer: 10
-  m_Name: Sword
+  m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -100,37 +97,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096e93fd9e94ad8409df5c93a5af9d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
   owner: {fileID: 0}
   deadParticle: {fileID: 7322871736219514346, guid: a5de7dfe75bb4d2458e26c4fe443b5a2,
     type: 3}
---- !u!114 &-2834311645762949623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4985245455587790691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
---- !u!114 &-8981488516740328143
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4985245455587790691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4f3245643ec2741863bd94fc8c058c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockHorizontalForce: 5
-  knockVerticalForce: 5
+  damageData: {fileID: 11400000, guid: 20b7c39c482be23418e4016a4191b2b0, type: 2}
+  destroyedWhenHitPlayer: 0
 --- !u!61 &7862864406526074693
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -167,18 +138,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90707424de954844db9614f8b7811eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-528759426720921838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4985245455587790691}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 63048540688c9074eb6bbfb6b589bbb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!50 &6811955420605573615

@@ -10,6 +10,7 @@ public class DamageReceiver : MonoBehaviour
     private StunComponent stunComponent;
     private HealthComponent healthComponent;
     private Knockable knockableComponent;
+    private PushComponent pushComponent;
 
     private void Awake()
     {
@@ -17,13 +18,14 @@ public class DamageReceiver : MonoBehaviour
         stunComponent = GetComponent<StunComponent>();
         healthComponent = GetComponent<HealthComponent>();
         knockableComponent = GetComponent<Knockable>();
+        pushComponent = GetComponent<PushComponent>();
     }
 
     public void Analyze(DamageData damageData, Transform damageOwner)
     {
         if (damageData.pushPower > 0)
         {
-            // TODO
+            pushComponent.Push(transform, damageData.pushPower);
         }
 
         if (damageData.hitStunPower > 0)
