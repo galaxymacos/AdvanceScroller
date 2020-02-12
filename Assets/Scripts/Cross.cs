@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Cross : MonoBehaviour
 {
-    public GameObject crossExplosion;
     private Projectile projectile;
     // Start is called before the first frame update
     void Start()

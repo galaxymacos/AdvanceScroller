@@ -8,11 +8,17 @@ public class WallCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!playerCharacter.isFacingRight)
+        {
+            print("player should be initialized to face right");
+        }
         playerCharacter.onFacingDirectionChanged += Flip;
 
     }
     public void Flip()
     {
-        transform.localPosition = new Vector3(-transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
+        var localPosition = transform.localPosition;
+        localPosition = new Vector3(-localPosition.x, localPosition.y, localPosition.z);
+        transform.localPosition = localPosition;
     }
 }

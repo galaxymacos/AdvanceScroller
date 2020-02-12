@@ -8,7 +8,7 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class CollisionDetector: MonoBehaviour
 {
-    public List<GameObject> objectsInCollision;
+    protected List<GameObject> objectsInCollision;
     public Action<GameObject> onObjectCollided;
 
     public void ResetCollision()

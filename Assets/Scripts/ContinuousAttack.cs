@@ -13,10 +13,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     
     [SerializeField] private float duration = 5f;
     [SerializeField] private float tickInterval = 0.2f;
-    [SerializeField] private int damagePerTick = 3;
-
-    [SerializeField]private bool canHitStun;
-    [SerializeField] private float hitStunTime;
+    [SerializeField] private DamageData damageData;
     
     [SerializeField] private PlayerCharacter owner;
     private float runTime;
@@ -71,20 +68,11 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     {
         foreach (GameObject target in objectsInCollision)
         {
-            if (target == null) continue;
-            var healthComponent = target.GetComponent<HealthComponent>();
-            if (healthComponent != null && target != owner.gameObject)
+            if (target == null || target == owner.gameObject) continue;
+            var damageReceiver = target.GetComponent<DamageReceiver>();
+            if (damageReceiver != null)
             {
-                healthComponent.TakeDamage(damagePerTick, true);
-            }
-
-            if (canHitStun)
-            {
-                StunComponent stunComponent = target.GetComponent<StunComponent>();
-                if (stunComponent != null && target != owner.gameObject)
-                {
-                    stunComponent.SetStunTime(hitStunTime);
-                }
+                damageReceiver.Analyze(damageData, transform.root);
             }
             
         }

@@ -13,8 +13,6 @@ GameObject:
   - component: {fileID: 1421687569583083976}
   - component: {fileID: 1421687569583083983}
   - component: {fileID: 1421687569583083982}
-  - component: {fileID: 1421687569583083981}
-  - component: {fileID: 1421687569583083980}
   - component: {fileID: -5290135968203565051}
   m_Layer: 0
   m_Name: Axe
@@ -137,33 +135,8 @@ MonoBehaviour:
   objectsInCollision: []
   owner: {fileID: 0}
   deadParticle: {fileID: 0}
---- !u!114 &1421687569583083981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421687569583083984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
---- !u!114 &1421687569583083980
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421687569583083984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4f3245643ec2741863bd94fc8c058c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockHorizontalForce: 2
-  knockVerticalForce: 7
+  damageData: {fileID: 11400000, guid: 5643387cf797089468c55b483fe21159, type: 2}
+  destroyedWhenHitPlayer: 1
 --- !u!50 &-5290135968203565051
 Rigidbody2D:
   serializedVersion: 4

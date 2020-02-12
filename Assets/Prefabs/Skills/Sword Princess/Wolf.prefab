@@ -13,12 +13,10 @@ GameObject:
   - component: {fileID: 2548071627742475474}
   - component: {fileID: 2548071627742475473}
   - component: {fileID: 2548071627742475472}
-  - component: {fileID: 3655376192732016551}
-  - component: {fileID: -7724172610136562243}
   - component: {fileID: -7400156890656677697}
   - component: {fileID: -8403626024299865894}
   m_Layer: 9
-  m_Name: Wolf Skill
+  m_Name: Wolf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,33 +146,8 @@ MonoBehaviour:
   objectsInCollision: []
   owner: {fileID: 0}
   deadParticle: {fileID: 0}
---- !u!114 &3655376192732016551
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548071627742475471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4f3245643ec2741863bd94fc8c058c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockHorizontalForce: 3
-  knockVerticalForce: 3
---- !u!114 &-7724172610136562243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2548071627742475471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
+  damageData: {fileID: 11400000, guid: e2fbaf007a5357847ab2bba1403cdb66, type: 2}
+  destroyedWhenHitPlayer: 0
 --- !u!114 &-7400156890656677697
 MonoBehaviour:
   m_ObjectHideFlags: 0

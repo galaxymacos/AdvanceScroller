@@ -79,28 +79,48 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Update()
     {
-        float horizontalVelocityBefore = GetComponent<Rigidbody2D>().velocity.x;
-        characterGroundMovementComponent.UpdateMovement();
-        float horizontalVelocityAfter = GetComponent<Rigidbody2D>().velocity.x;
-        if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter > Mathf.Epsilon && isFacingRight)
-        {
-            onPlayerStartMove?.Invoke();
-        }
-        else if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter < -Mathf.Epsilon && !isFacingRight)
-        {
-            onPlayerStartMove?.Invoke();
-        }
+        UpdateMovement();
 
+        UpdateFacingDirection();
+
+        if (dashInvincibleTimeCounter > 0)
+        {
+            dashInvincibleTimeCounter -= Time.deltaTime;
+        }
+    }
+
+    private void UpdateFacingDirection()
+    {
         var wasFacingRight = isFacingRight;
         flipComponent.Flip(playerInput.horizontalAxis);
         if (isFacingRight != wasFacingRight)
         {
             onFacingDirectionChanged?.Invoke();
         }
+    }
 
-        if (dashInvincibleTimeCounter > 0)
+    private void UpdateMovement()
+    {
+        float horizontalVelocityBefore = GetComponent<Rigidbody2D>().velocity.x;
+        float previousXLocation = transform.position.x;
+        characterGroundMovementComponent.UpdateMovement();
+        float horizontalVelocityAfter = GetComponent<Rigidbody2D>().velocity.x;
+        float afterXLocation = transform.position.x;
+
+        if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter > Mathf.Epsilon && isFacingRight)
         {
-            dashInvincibleTimeCounter -= Time.deltaTime;
+            if (Mathf.Abs(afterXLocation - previousXLocation) > Mathf.Epsilon)
+            {
+                onPlayerStartMove?.Invoke();
+            }
+        }
+        else if (Math.Abs(horizontalVelocityBefore) < Mathf.Epsilon && horizontalVelocityAfter < -Mathf.Epsilon &&
+                 !isFacingRight)
+        {
+            if (Mathf.Abs(afterXLocation - previousXLocation) > Mathf.Epsilon)
+            {
+                onPlayerStartMove?.Invoke();
+            }
         }
     }
 
@@ -130,7 +150,6 @@ public class PlayerCharacter : MonoBehaviour
         isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
         if (wasNextToWallRight != isNextToWallRight && isNextToWallRight && isFacingRight)
         {
-            print("player walk next to right wall");
             onPlayerWalkNextToWall?.Invoke();
         }
         
@@ -138,7 +157,6 @@ public class PlayerCharacter : MonoBehaviour
         isNextToWallLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsWall);
         if (wasNextToWallLeft != isNextToWallLeft && isNextToWallLeft && !isFacingRight)
         {
-            print("player walk next to left wall");
             onPlayerWalkNextToWall?.Invoke();
         }
     }

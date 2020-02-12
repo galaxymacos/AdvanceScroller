@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
+  damageData: {fileID: 11400000, guid: 6e799ec1cb837e64795e7fa8f5ab4cf3, type: 2}
 --- !u!1 &1094605603
 GameObject:
   m_ObjectHideFlags: 0
@@ -131,12 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5afaac99e3c4104a6cb18f965c1e4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
   duration: 5
   tickInterval: 0.2
-  damagePerTick: 3
-  canHitStun: 1
-  hitStunTime: 0.3
+  damageData: {fileID: 0}
   owner: {fileID: 3658480544048443884}
 --- !u!1 &1643300113
 GameObject:
@@ -207,6 +204,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5983302370228949104}
+  - component: {fileID: 1369094800}
   m_Layer: 0
   m_Name: WallCheckRight
   m_TagString: Untagged
@@ -228,6 +226,19 @@ Transform:
   m_Father: {fileID: 3658480544048443415}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1369094800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789550374252701433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a42462c3a40ee4393358fc7570849a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCharacter: {fileID: 3658480544048443884}
 --- !u!1 &1906817070504165008
 GameObject:
   m_ObjectHideFlags: 0
@@ -328,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
+  damageData: {fileID: 0}
 --- !u!1 &2690510395812290326
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,6 +436,8 @@ GameObject:
   - component: {fileID: 1086934270}
   - component: {fileID: 2202582281728647640}
   - component: {fileID: 1086934272}
+  - component: {fileID: 2072782494}
+  - component: {fileID: 196639348}
   m_Layer: 9
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -580,13 +593,13 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 1280
-  wallLeftCheck: {fileID: 0}
-  wallRightCheck: {fileID: 0}
+  wallLeftCheck: {fileID: 2888610044328624244}
+  wallRightCheck: {fileID: 5983302370228949104}
   isNextToWallLeft: 0
   isNextToWallRight: 0
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
@@ -817,6 +830,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunTimeCounter: 0
+--- !u!114 &2072782494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f25f8983ab04217ad19ecf9e38e7854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills:
+  - {fileID: 11400000, guid: f96e26041a7dac64eb5bdca844af4794, type: 2}
+  - {fileID: 11400000, guid: 04b4bae2921bf444698c73e9037074a4, type: 2}
+  - {fileID: 11400000, guid: 644baedbb7fdfa04f98dc9cb6e6e38b3, type: 2}
+  - {fileID: 11400000, guid: 17feb991f7a08744993b16d1938e1333, type: 2}
+--- !u!114 &196639348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0
@@ -916,6 +958,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2888610044328624244}
+  - component: {fileID: 589098949}
   m_Layer: 0
   m_Name: WallCheckLeft
   m_TagString: Untagged
@@ -937,6 +980,19 @@ Transform:
   m_Father: {fileID: 3658480544048443415}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &589098949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613753107250046932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24a42462c3a40ee4393358fc7570849a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCharacter: {fileID: 3658480544048443884}
 --- !u!1 &7672589315089459906
 GameObject:
   m_ObjectHideFlags: 0
@@ -960,8 +1016,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7672589315089459906}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.99, y: 0.048, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.83, y: 0.048, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3658480543698845594}

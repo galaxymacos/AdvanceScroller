@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 8064068707071226429}
   - component: {fileID: 8064068707071226428}
   - component: {fileID: 8064068707071226427}
-  - component: {fileID: 8064068707071226426}
-  - component: {fileID: 8064068707071226425}
   - component: {fileID: 230173151685336011}
   m_Layer: 0
   m_Name: Eye Bullet
@@ -169,33 +167,8 @@ MonoBehaviour:
   objectsInCollision: []
   owner: {fileID: 0}
   deadParticle: {fileID: 0}
---- !u!114 &8064068707071226426
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064068707071226424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b4f3245643ec2741863bd94fc8c058c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knockHorizontalForce: 5
-  knockVerticalForce: 5
---- !u!114 &8064068707071226425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8064068707071226424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99af24b1f66045d4780723cd63f6c751, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
+  damageData: {fileID: 11400000, guid: 14e8d8c21b79f4a4081fb2890e87ae5d, type: 2}
+  destroyedWhenHitPlayer: 0
 --- !u!114 &230173151685336011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,3 +181,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d567ca19e5d38254d956053530cdac67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  multiplier: 3

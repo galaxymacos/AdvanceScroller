@@ -6,6 +6,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 {
     private bool hasDealDamaged;
     private bool isRunning;
+    public DamageData damageData;
 
     private List<GameObject> objectsHasProcessed = new List<GameObject>();
 
@@ -29,8 +30,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
             {
                 if (!objectsHasProcessed.Contains(gameObjectCollided))
                 {
-                    gameObjectCollided.GetComponent<HealthComponent>()?.TakeDamage(10);
-                    gameObjectCollided.GetComponent<Knockable>()?.KnockUp(5,5,transform);
+                    gameObjectCollided.GetComponent<DamageReceiver>()?.Analyze(damageData, transform.root);
                     objectsHasProcessed.Add(gameObjectCollided);
                 }
             }
@@ -44,7 +44,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     }
 
     
-
+ 
     public void Stop()
     {
         isRunning = false;

@@ -11,6 +11,8 @@ public class Projectile : CollisionDetector
     public Action<GameObject> onProjectileCollided;
     private List<GameObject> _objectsHasCollided;
     private Rigidbody2D rb;
+    public DamageData damageData;
+    public bool destroyedWhenHitPlayer;
 
     private bool setupFinished;
 
@@ -53,6 +55,7 @@ public class Projectile : CollisionDetector
         onObjectCollided = FilterOwn;
         _objectsHasCollided = new List<GameObject>();
         rb = GetComponent<Rigidbody2D>();
+        onProjectileCollided += ProcessDamageToReceiver;
     }
 
     // Update is called once per frame
@@ -91,4 +94,23 @@ public class Projectile : CollisionDetector
             }
         }
     }
+    
+    public void ProcessDamageToReceiver(GameObject target)
+    {
+        var damageReceive = target.GetComponent<DamageReceiver>();
+        if (damageReceive != null)
+        {
+            damageReceive.Analyze(damageData, transform);
+        }
+
+        if (destroyedWhenHitPlayer)
+        {
+            if (target.GetComponent<PlayerCharacter>() != null)
+            {
+                Destroy(gameObject);
+            }
+        }
+    }
+    
+    
 }

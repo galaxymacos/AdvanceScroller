@@ -61,12 +61,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5afaac99e3c4104a6cb18f965c1e4f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
   duration: 3
-  tickInterval: 0.2
-  damagePerTick: 3
-  canHitStun: 0
-  hitStunTime: 0
+  tickInterval: 0.3
+  damageData: {fileID: 11400000, guid: 5a98f91c36d4b17459486749f7330a4d, type: 2}
   owner: {fileID: 891296965151884859}
 --- !u!50 &904546214
 Rigidbody2D:
@@ -87,7 +84,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!1 &1352531918
 GameObject:
@@ -143,7 +140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1954124835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 0.271, z: 0}
+  m_LocalPosition: {x: -0.45, y: 0.271, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 891296965063577104}
@@ -212,6 +209,8 @@ GameObject:
   - component: {fileID: 1588731335}
   - component: {fileID: 1588731337}
   - component: {fileID: 5838502795022130801}
+  - component: {fileID: 1375383487}
+  - component: {fileID: 1375383471}
   m_Layer: 10
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -367,13 +366,13 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 768
-  wallLeftCheck: {fileID: 0}
-  wallRightCheck: {fileID: 0}
+  wallLeftCheck: {fileID: 6066818458530017753}
+  wallRightCheck: {fileID: 1781532041058689586}
   isNextToWallLeft: 0
   isNextToWallRight: 0
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
@@ -491,8 +490,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knifePrefab: {fileID: 4985245455587790691, guid: 51eb78a1a06df9d4da23e95d22f944ee,
     type: 3}
-  axePrefab: {fileID: 0}
-  eyeBulletPrefab: {fileID: 0}
+  axePrefab: {fileID: 1421687569583083984, guid: fd257c150393fab469a9956246179d3f,
+    type: 3}
+  eyeBulletPrefab: {fileID: 8064068707071226424, guid: b493108a7ff76be4bbe6f0751881cbb4,
+    type: 3}
   spawnTransform: {fileID: 891296966238984182}
 --- !u!114 &1588731322
 MonoBehaviour:
@@ -580,6 +581,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stunTimeCounter: 0
+--- !u!114 &1375383487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f25f8983ab04217ad19ecf9e38e7854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skills:
+  - {fileID: 11400000, guid: f96e26041a7dac64eb5bdca844af4794, type: 2}
+  - {fileID: 11400000, guid: bdd38954f3f886d40ab452f88e91127f, type: 2}
+  - {fileID: 11400000, guid: 85086d68ef9880241979746451a6b365, type: 2}
+  - {fileID: 11400000, guid: 6d3203b7aed36534999455e4cd1e868e, type: 2}
+--- !u!114 &1375383471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,7 +650,7 @@ GameObject:
   m_Component:
   - component: {fileID: 891296966238984182}
   m_Layer: 0
-  m_Name: KnifeLocation
+  m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
