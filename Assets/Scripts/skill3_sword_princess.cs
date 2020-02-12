@@ -15,7 +15,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         rb = _animator.GetComponent<Rigidbody2D>();
         
         playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(1);
-        playerCharacter.canMove = false;
+        playerCharacter.canControlMovement = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -28,7 +28,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.canMove = true;
+        playerCharacter.canControlMovement = true;
         playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(0);
     }
 

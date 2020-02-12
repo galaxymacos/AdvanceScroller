@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SPNormalAttack
   m_EditorClassIdentifier: 
   damage: 10
-  pushPower: 0
+  pushPower: 5
   pushDegree: {x: 0, y: 0}
   hitStunPower: 0
-  launcherHorizontalForce: 5
-  launcherVerticalForce: 5
+  launcherHorizontalForce: 0
+  launcherVerticalForce: 0

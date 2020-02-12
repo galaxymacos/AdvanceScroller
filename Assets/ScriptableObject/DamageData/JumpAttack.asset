@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
   m_Name: JumpAttack
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 20
   pushPower: 0
   pushDegree: {x: 0, y: 0}
   hitStunPower: 0
-  launcherHorizontalForce: 0
-  launcherVerticalForce: 0
+  launcherHorizontalForce: 3
+  launcherVerticalForce: 6

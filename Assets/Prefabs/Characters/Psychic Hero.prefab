@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 5838502795022130801}
   - component: {fileID: 1375383487}
   - component: {fileID: 1375383471}
+  - component: {fileID: 5370246305263368930}
   m_Layer: 10
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -610,6 +611,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5370246305263368930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74036991f0ec5442bbbd30258d22d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDirection: {x: 0, y: 0}
+  pushSpeed: 0
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0

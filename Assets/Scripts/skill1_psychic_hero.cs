@@ -15,7 +15,7 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        playerCharacter.canMove = false;
+        playerCharacter.canControlMovement = false;
         animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
     }

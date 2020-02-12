@@ -20,7 +20,7 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
         rb = _animator.GetComponent<Rigidbody2D>();
 
         
-        messagingSystem.canMove = true;
+        messagingSystem.canControlMovement = true;
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         playerCharacter.onPlayerStartDoubleJump?.Invoke();
         

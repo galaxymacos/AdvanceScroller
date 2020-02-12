@@ -53,7 +53,7 @@ public class PlayerCharacter : MonoBehaviour
     
     
     public float movementSpeed = 5f;
-    public bool canMove;
+    public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipComponent;
     

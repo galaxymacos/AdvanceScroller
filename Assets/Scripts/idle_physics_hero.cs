@@ -5,14 +5,12 @@ using UnityEngine;
 public class idle_physics_hero : CharacterStateMachineBehavior
 {
     private float horizontalMovement;
-    private PlayerCharacter messagingSystem;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
     }
 
@@ -21,9 +19,9 @@ public class idle_physics_hero : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         
-        messagingSystem.canMove = true;
+        playerCharacter.canControlMovement = false;
         
-        if (!messagingSystem.isGrounded)
+        if (!playerCharacter.isGrounded)
         {
             _animator.SetTrigger("fall down");
         }

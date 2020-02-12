@@ -10,8 +10,13 @@ public class PushComponent : MonoBehaviour
     public float pushSpeed;
     public Action<Vector2> onHitWall;
     public Action<Vector2> onHitGround;
-    
 
+    public float checkRadius = 0.05f;
+    public Transform wallRightCheck;
+    public bool isNextToWallRight;
+    public Transform wallLeftCheck;
+    public bool isNextToWallLeft;
+    public LayerMask whatIsWall;
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
@@ -19,21 +24,27 @@ public class PushComponent : MonoBehaviour
 
     public void Push(Transform damageSource, float speed)
     {
-        pushDirection = Vector3.Normalize(damageSource.position - transform.position);
+        pushDirection = Vector3.Normalize(transform.position - damageSource.position );
         pushSpeed = speed;
         
         GetComponent<Animator>().SetTrigger("push");
+        print("push");
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void Update()
     {
-        if (other.gameObject.layer == playerCharacter.whatIsWall)
+        bool wasNextToWallRight = isNextToWallRight;
+        isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
+        if (wasNextToWallRight != isNextToWallRight && isNextToWallRight)
         {
-            onHitWall?.Invoke(other.ClosestPoint(transform.position));
+            onHitWall?.Invoke(wallRightCheck.position);
         }
-        if (other.gameObject.layer == playerCharacter.whatIsGround)
-        {
-            onHitGround?.Invoke(other.ClosestPoint(transform.position));
+        
+        bool wasNextToWallLeft = isNextToWallLeft;
+        isNextToWallLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsWall);
+        if (wasNextToWallLeft != isNextToWallLeft && isNextToWallLeft)
+        { 
+            onHitWall?.Invoke(wallLeftCheck.position);
         }
     }
 }

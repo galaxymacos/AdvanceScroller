@@ -16,7 +16,7 @@ public class run_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canMove = true;
+        playerCharacter.canControlMovement = true;
 
         if (!playerCharacter.isGrounded)
         {

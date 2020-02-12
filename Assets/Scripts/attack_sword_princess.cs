@@ -16,7 +16,7 @@ public class attack_sword_princess : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canMove = false;
+        playerCharacter.canControlMovement = false;
 
     }
 

@@ -13,7 +13,7 @@ public class hurt_psychic_hero : StateMachineBehaviour
     {
         rb = animator.GetComponent<Rigidbody2D>();
         playerCharacter = animator.GetComponent<PlayerCharacter>();
-        animator.GetComponent<PlayerCharacter>().canMove = false;
+        animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         knockable = animator.GetComponent<Knockable>();
         rb.velocity = knockable.knockDirection;
     }

@@ -25,7 +25,7 @@ public class DamageReceiver : MonoBehaviour
     {
         if (damageData.pushPower > 0)
         {
-            pushComponent.Push(transform, damageData.pushPower);
+            pushComponent.Push(damageOwner, damageData.pushPower);
         }
 
         if (damageData.hitStunPower > 0)

@@ -11,7 +11,7 @@ public class hitstun : CharacterStateMachineBehavior
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canMove = false;
+        playerCharacter.canControlMovement = false;
         stunComponent = animator.GetComponent<StunComponent>();
         stunComponent.onstunEnd += TransferToIdle;
         rb = animator.GetComponent<Rigidbody2D>();
@@ -32,7 +32,7 @@ public class hitstun : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         stunComponent.onstunEnd -= TransferToIdle;
-        playerCharacter.canMove = true;
+        playerCharacter.canControlMovement = true;
         if (playerCharacter.GetComponent<HealthComponent>().isPlayerDead)
         { 
             animator.SetTrigger("die");

@@ -21,7 +21,7 @@ public class CharacterGroundMovementComponent: MovementComponent
 
     public override void UpdateMovement()
     {
-        canMove = _playerCharacter.canMove;
+        canMove = _playerCharacter.canControlMovement;
         if (canMove)
         {
             

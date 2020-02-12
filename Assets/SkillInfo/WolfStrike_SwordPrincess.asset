@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb7afaf2b7b9234691a74b617e4d97e, type: 3}
-  m_Name: WolfStrike
+  m_Name: WolfStrike_SwordPrincess
   m_EditorClassIdentifier: 
   skillName: skill1
   coolDown: 5
-  coolDownCounter: -0.00015608221
+  coolDownCounter: -0.0076581864

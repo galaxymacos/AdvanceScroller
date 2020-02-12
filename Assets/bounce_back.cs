@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump_psychic_hero : CharacterStateMachineBehavior
+public class bounce_back : CharacterStateMachineBehavior
 {
-    [SerializeField] private float jumpForce = 10f;
     private Rigidbody2D rb;
 
 
@@ -12,13 +11,12 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string> {"double jump", "dash", "jump attack","skill3"});
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         rb = _animator.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        Vector2 pushDirection = Vector3.Normalize(playerCharacter.GetComponent<PushComponent>().pushDirection) *
+                                playerCharacter.GetComponent<PushComponent>().pushSpeed;
+        rb.AddForce(new Vector2(-1000, 1000));
 
-        playerCharacter.onPlayerStartJump?.Invoke();
-        playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -44,23 +42,6 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.onPlayerWalkNextToWall -= TransferToWallSlide;
 
     }
-
-    
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
-
-

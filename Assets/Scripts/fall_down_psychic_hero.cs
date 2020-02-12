@@ -10,6 +10,7 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
+        playerCharacter.canControlMovement = true;
         RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         if (!messagingSystem.hasDoubleJump)
@@ -25,7 +26,7 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded)
+        if (messagingSystem.isGrounded && animator.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             _animator.SetTrigger("idle");
         }

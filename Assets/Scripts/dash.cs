@@ -45,7 +45,7 @@ public class dash : CharacterStateMachineBehavior
         {
             _animator.SetTrigger("fall down");
         }
-        _animator.GetComponent<PlayerCharacter>().canMove = false;
+        _animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();
         if (dashRight)
         {
@@ -61,7 +61,7 @@ public class dash : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<PlayerCharacter>().canMove = true;
+        animator.GetComponent<PlayerCharacter>().canControlMovement = true;
         
     }
 

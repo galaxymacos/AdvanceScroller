@@ -12,10 +12,13 @@ public class push : CharacterStateMachineBehavior
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+        RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
+
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         pushComponent = animator.GetComponent<PushComponent>();
-        pushComponent.onHitGround += BounceFromGround;
         pushComponent.onHitWall += BounceFromWall;
+        playerCharacter.canControlMovement = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,20 +29,28 @@ public class push : CharacterStateMachineBehavior
         {
             rb.velocity = pushComponent.pushDirection * pushComponent.pushSpeed;
         }
+        // else
+        // {
+            // var vectorAfterBounce = new Vector2(-pushComponent.pushDirection.x, 4);
+            // rb.velocity = vectorAfterBounce;
+        // }
+
+        if (hasHitCollision && playerCharacter.isGrounded && rb.velocity.y <=0)
+        {
+            animator.SetTrigger("idle");
+        }
     }
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
+        rb.velocity = new Vector2(-4, 5);
+        // animator.SetTrigger("fall down");
         hasHitCollision = true;
-        var vectorAfterBounce = new Vector2(-rb.velocity.x, rb.velocity.y);
-        rb.velocity = vectorAfterBounce + Vector2.up * 5;
     }
 
     private void BounceFromGround(Vector2 collisionPoint)
     {
         hasHitCollision = true;
-        var vectorAfterBounce = new Vector2(rb.velocity.x, -rb.velocity.y);
-        rb.velocity = vectorAfterBounce;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
@@ -48,6 +59,7 @@ public class push : CharacterStateMachineBehavior
         base.OnStateExit(animator, stateInfo, layerIndex);
         pushComponent.onHitGround -= BounceFromGround;
         pushComponent.onHitWall -= BounceFromWall;
+        hasHitCollision = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
