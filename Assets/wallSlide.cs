@@ -25,7 +25,13 @@ public class wallSlide : CharacterStateMachineBehavior
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         rb.velocity = Vector2.down * fallDownSpeed;
         
-        if (!playerCharacter.isNextToWallRight && playerCharacter.isFacingRight)
+        if (playerCharacter.isNextToWallLeft && playerCharacter.isFacingRight)
+        {
+            animator.SetTrigger("fall down");
+        }
+        
+        
+        if (playerCharacter.isNextToWallRight && !playerCharacter.isFacingRight)
         {
             animator.SetTrigger("fall down");
         }

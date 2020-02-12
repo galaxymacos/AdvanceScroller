@@ -128,8 +128,17 @@ public class PlayerCharacter : MonoBehaviour
 
         bool wasNextToWallRight = isNextToWallRight;
         isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
-        if (wasNextToWallRight != isNextToWallRight && isNextToWallRight)
+        if (wasNextToWallRight != isNextToWallRight && isNextToWallRight && isFacingRight)
         {
+            print("player walk next to right wall");
+            onPlayerWalkNextToWall?.Invoke();
+        }
+        
+        bool wasNextToWallLeft = isNextToWallLeft;
+        isNextToWallLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsWall);
+        if (wasNextToWallLeft != isNextToWallLeft && isNextToWallLeft && !isFacingRight)
+        {
+            print("player walk next to left wall");
             onPlayerWalkNextToWall?.Invoke();
         }
     }

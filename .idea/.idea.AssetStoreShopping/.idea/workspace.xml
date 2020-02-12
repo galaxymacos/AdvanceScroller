@@ -2,116 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bcce291-1c7f-4307-a261-9d6c8e9916a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/SingleAttackComponent.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/wallSlide.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/WallCheck.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AssetStoreShopping/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AttackMessagingComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/AttackMessagingComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTimeComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTimeManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BulletTimeManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraShake.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CameraShake.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterGroundMovementComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterGroundMovementComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/CharacterStateMachineBehavior.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContinuousAttack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ContinuousAttack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cross.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Cross.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnergyComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EnergyComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EyeBullet.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EyeBullet.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlashYellowComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlashYellowComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HealthComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knockable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Knockable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MovementComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MovementComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleDisposer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleDisposer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleFacingComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleMessagingSystem.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ParticleSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerCharacter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerMat.physicsMaterial2D" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerMat.physicsMaterial2D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerParticleSpawnerProxy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerTwoInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PlayerTwoInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Psychic Hero.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Characters/Sword Princess.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProgressBarDataUpdater.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProjectileKnockComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/PsychicHeroAnimationEventContainer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RoughGround.physicsMaterial2D" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RoughGround.physicsMaterial2D.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SingleAttackComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SingleAttackComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skill.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Skill.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SkillManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SkillManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StunComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/StunComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sword Princess/Animation/Sword Princess Test.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sword.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SwordPrincessParticleSpawner.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_sword_princess.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/attack_sword_princess.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dash.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/dash.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/die.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/die.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/double_jump_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/fall_down_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hitstun.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hitstun.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/hurt_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/idle_physics_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_sword_princess.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_attack_sword_princess.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/jump_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/run_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill1_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill1_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill1_sword_princess.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill1_sword_princess.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill3_psychic_hero.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/skill3_sword_princess.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/wallSlide.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/wallSlide.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +24,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CharacterFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/double_jump_psychic_hero.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/Progress Bar/ProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/WallCheck.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/SingleAttackComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Modern UI Pack/Scripts/UI Manager/UIManagerProgressBar.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ProjectileFlipComponent.cs" root0="FORCE_HIGHLIGHTING" />
@@ -152,8 +48,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/ProjectileDamageComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/BulletTimeComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/BulletTimeManager.cs" />
         <option value="$PROJECT_DIR$/Assets/dash_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/ForceCancelProcessor.cs" />
@@ -197,12 +91,14 @@
         <option value="$PROJECT_DIR$/Assets/PlayerCharacter.cs" />
         <option value="$PROJECT_DIR$/Assets/run_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SingleAttackComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/wallSlide.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CharacterStateMachineBehavior.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/fall_down_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/double_jump_psychic_hero.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/dash.cs" />
+        <option value="$PROJECT_DIR$/Assets/wallSlide.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerCharacter.cs" />
+        <option value="$PROJECT_DIR$/Assets/WallCheck.cs" />
       </list>
     </option>
   </component>
@@ -273,7 +169,7 @@
       <workItem from="1581349757530" duration="35000" />
       <workItem from="1581349971388" duration="3575000" />
       <workItem from="1581367190125" duration="24764000" />
-      <workItem from="1581461970559" duration="5787000" />
+      <workItem from="1581461970559" duration="7887000" />
     </task>
     <servers />
   </component>
@@ -404,10 +300,10 @@
       <screen x="0" y="0" width="1707" height="960" />
     </state>
     <state x="510" y="221" key="run.anything.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1580782244858" />
-    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581467784213">
+    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup" timestamp="1581469825616">
       <screen x="-2560" y="0" width="1707" height="960" />
     </state>
-    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581467784213" />
+    <state x="-2044" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@-2560.0.1707.960" timestamp="1581469825616" />
     <state x="516" y="205" width="672" height="678" key="search.everywhere.popup/-2560.0.1707.960/0.0.1707.960@0.0.1707.960" timestamp="1581463885643" />
   </component>
 </project>
