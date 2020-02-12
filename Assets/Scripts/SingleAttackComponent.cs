@@ -23,7 +23,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     public void DealDamageToSingleTarget(GameObject gameObjectCollided)
     {
         
-        if (gameObjectCollided != transform.gameObject)
+        if (gameObjectCollided != transform.gameObject && gameObjectCollided != null)
         {
             if (gameObjectCollided.GetComponent<PlayerCharacter>() != null)
             {

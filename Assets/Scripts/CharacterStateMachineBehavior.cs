@@ -75,6 +75,15 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                 {
                     return "";
                 }
+            case "double jump":
+                if (!playerCharacter.hasDoubleJump)
+                {
+                    return "double jump";
+                }
+                else
+                {
+                    return "";
+                }
         }
 
         return animationName;
@@ -229,6 +238,11 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         {
             animations[input] = false;
         }
+    }
+    
+    protected void TransferToWallSlide()
+    {
+        animator.SetTrigger("wallslide");
     }
 
    

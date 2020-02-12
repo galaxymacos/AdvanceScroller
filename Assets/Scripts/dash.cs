@@ -5,8 +5,9 @@ using UnityEngine;
 public class dash : CharacterStateMachineBehavior
 {
     [SerializeField] private float dashSpeed = 8;
-
+    private bool isDashReversed;
     [SerializeField] private float dashDuration = 0.4f;
+    private bool dashRight;
     private bool hasActivatedBulletTime;
 
     private float dashTimeCounter;
@@ -18,6 +19,21 @@ public class dash : CharacterStateMachineBehavior
         dashTimeCounter = dashDuration;
         _animator.GetComponent<PlayerCharacter>().dashTimeCounter++;
         playerCharacter.onPlayerStartDash?.Invoke();
+        
+        dashRight = playerCharacter.isFacingRight;
+        if (playerCharacter.isFacingRight && playerCharacter.playerInput.horizontalAxis < 0)
+        {
+            isDashReversed = true;
+        }
+        else if (!playerCharacter.isFacingRight && playerCharacter.playerInput.horizontalAxis > 0)
+        {
+            isDashReversed = true;
+        }
+        else
+        {
+            isDashReversed = false;
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,14 +47,14 @@ public class dash : CharacterStateMachineBehavior
         }
         _animator.GetComponent<PlayerCharacter>().canMove = false;
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();
-        if (_animator.GetComponent<PlayerCharacter>().isFacingRight)
+        if (dashRight)
         {
-            rb.velocity = Vector2.right*dashSpeed;
+            rb.velocity = Vector2.right * (dashSpeed * (isDashReversed?-1:1));
         }
         else
         {
-            rb.velocity = -Vector2.right*dashSpeed;
-
+            rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed?-1:1));
+            
         }
     }
 

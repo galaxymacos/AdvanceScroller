@@ -1,33 +1,34 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fall_down_psychic_hero : CharacterStateMachineBehavior
+public class wallSlide : CharacterStateMachineBehavior
 {
-    private PlayerCharacter messagingSystem;
+    private bool isRightWallSlide;
+    [SerializeField] private float fallDownSpeed = 5f;
+
+    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(_animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash"});
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
-        if (!messagingSystem.hasDoubleJump)
-        {
-            RegisterInputToNextState("double jump");
-        }
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+        RegisterInputToNextState("double jump");
+        RegisterInputToNextState(new List<string>{"skill3", "dash"});
+        isRightWallSlide = playerCharacter.isNextToWallRight && playerCharacter.isFacingRight;
+        
+        rb = animator.GetComponent<Rigidbody2D>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-      base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded)
-        {
-            _animator.SetTrigger("idle");
-        }
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        rb.velocity = Vector2.down * fallDownSpeed;
         
-
+        if (!playerCharacter.isNextToWallRight && playerCharacter.isFacingRight)
+        {
+            animator.SetTrigger("fall down");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

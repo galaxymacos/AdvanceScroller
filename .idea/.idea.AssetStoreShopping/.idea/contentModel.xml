@@ -8,32 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="attack_psychic_hero.cs" t="Include" />
-        <e p="attack_sword_princess.cs" t="Include" />
-        <e p="AttackMessagingComponent.cs" t="Include" />
-        <e p="BulletTimeComponent.cs" t="Include" />
-        <e p="BulletTimeManager.cs" t="Include" />
-        <e p="CameraShake.cs" t="Include" />
-        <e p="CharacterGroundMovementComponent.cs" t="Include" />
-        <e p="CharacterStateMachineBehavior.cs" t="Include" />
-        <e p="ContinuousAttack.cs" t="Include" />
-        <e p="Cross.cs" t="Include" />
-        <e p="dash.cs" t="Include" />
-        <e p="die.cs" t="Include" />
-        <e p="double_jump_psychic_hero.cs" t="Include" />
-        <e p="EnergyComponent.cs" t="Include" />
-        <e p="EyeBullet.cs" t="Include" />
-        <e p="fall_down_psychic_hero.cs" t="Include" />
-        <e p="FlashYellowComponent.cs" t="Include" />
-        <e p="ForceCancelProcessor.cs" t="Include" />
-        <e p="HealthComponent.cs" t="Include" />
-        <e p="hitstun.cs" t="Include" />
-        <e p="hurt_psychic_hero.cs" t="Include" />
-        <e p="idle_physics_hero.cs" t="Include" />
-        <e p="jump_attack_psychic_hero.cs" t="Include" />
-        <e p="jump_attack_sword_princess.cs" t="Include" />
-        <e p="jump_psychic_hero.cs" t="Include" />
-        <e p="Knockable.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -136,57 +110,85 @@
             </e>
           </e>
         </e>
-        <e p="MovementComponent.cs" t="Include" />
-        <e p="ParticleDisposer.cs" t="Include" />
-        <e p="ParticleFacingComponent.cs" t="Include" />
-        <e p="ParticleMessagingSystem.cs" t="Include" />
-        <e p="ParticleSpawner.cs" t="Include" />
-        <e p="PlayerCharacter.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
-        <e p="PlayerParticleSpawnerProxy.cs" t="Include" />
-        <e p="PlayerTwoInput.cs" t="Include" />
-        <e p="ProgressBarDataUpdater.cs" t="Include" />
-        <e p="ProjectileDamageComponent.cs" t="Include" />
-        <e p="ProjectileKnockComponent.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
-        <e p="run_psychic_hero.cs" t="Include" />
         <e p="Scripts" t="Include">
+          <e p="attack_psychic_hero.cs" t="Include" />
+          <e p="attack_sword_princess.cs" t="Include" />
+          <e p="AttackMessagingComponent.cs" t="Include" />
           <e p="AttackState.cs" t="Include" />
+          <e p="BulletTimeComponent.cs" t="Include" />
+          <e p="BulletTimeManager.cs" t="Include" />
+          <e p="CameraShake.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
+          <e p="CharacterGroundMovementComponent.cs" t="Include" />
+          <e p="CharacterStateMachineBehavior.cs" t="Include" />
           <e p="CollisionDetector.cs" t="Include" />
+          <e p="ContinuousAttack.cs" t="Include" />
+          <e p="Cross.cs" t="Include" />
+          <e p="dash.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
+          <e p="die.cs" t="Include" />
+          <e p="double_jump_psychic_hero.cs" t="Include" />
+          <e p="EnergyComponent.cs" t="Include" />
+          <e p="EyeBullet.cs" t="Include" />
+          <e p="fall_down_psychic_hero.cs" t="Include" />
           <e p="FallDownState.cs" t="Include" />
+          <e p="FlashYellowComponent.cs" t="Include" />
           <e p="FlipComponent.cs" t="Include" />
+          <e p="ForceCancelProcessor.cs" t="Include" />
           <e p="GroundMovementState.cs" t="Include" />
+          <e p="HealthComponent.cs" t="Include" />
           <e p="Heroine.cs" t="Include" />
           <e p="HeroineAnimatorController.cs" t="Include" />
           <e p="HeroineState.cs" t="Include" />
+          <e p="hitstun.cs" t="Include" />
+          <e p="hurt_psychic_hero.cs" t="Include" />
           <e p="HurtState.cs" t="Include" />
+          <e p="idle_physics_hero.cs" t="Include" />
           <e p="IdleState.cs" t="Include" />
+          <e p="jump_attack_psychic_hero.cs" t="Include" />
+          <e p="jump_attack_sword_princess.cs" t="Include" />
+          <e p="jump_psychic_hero.cs" t="Include" />
           <e p="JumpAttackState.cs" t="Include" />
           <e p="JumpState.cs" t="Include" />
+          <e p="Knockable.cs" t="Include" />
+          <e p="MovementComponent.cs" t="Include" />
+          <e p="ParticleDisposer.cs" t="Include" />
+          <e p="ParticleFacingComponent.cs" t="Include" />
+          <e p="ParticleMessagingSystem.cs" t="Include" />
+          <e p="ParticleSpawner.cs" t="Include" />
+          <e p="PlayerCharacter.cs" t="Include" />
           <e p="PlayerInput.cs" t="Include" />
           <e p="PlayerOneInput.cs" t="Include" />
+          <e p="PlayerParticleSpawnerProxy.cs" t="Include" />
+          <e p="PlayerTwoInput.cs" t="Include" />
+          <e p="ProgressBarDataUpdater.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="ProjectileDamageComponent.cs" t="Include" />
           <e p="ProjectileFlipComponent.cs" t="Include" />
+          <e p="ProjectileKnockComponent.cs" t="Include" />
+          <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
+          <e p="run_psychic_hero.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
+          <e p="SingleAttackComponent.cs" t="Include" />
+          <e p="Skill.cs" t="Include" />
+          <e p="skill1_psychic_hero.cs" t="Include" />
+          <e p="skill1_sword_princess.cs" t="Include" />
           <e p="Skill1State.cs" t="Include" />
+          <e p="skill3_psychic_hero.cs" t="Include" />
+          <e p="skill3_sword_princess.cs" t="Include" />
+          <e p="SkillManager.cs" t="Include" />
+          <e p="StunComponent.cs" t="Include" />
+          <e p="Sword.cs" t="Include" />
+          <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
         </e>
-        <e p="SingleAttackComponent.cs" t="Include" />
-        <e p="skill1_psychic_hero.cs" t="Include" />
-        <e p="skill1_sword_princess.cs" t="Include" />
-        <e p="skill3_psychic_hero.cs" t="Include" />
-        <e p="skill3_sword_princess.cs" t="Include" />
-        <e p="StunComponent.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="Sword.cs" t="Include" />
-        <e p="SwordPrincessParticleSpawner.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -215,6 +217,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="wallSlide.cs" t="Include" />
       </e>
       <e p="AssetStoreShopping.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

@@ -6,10 +6,19 @@ using UnityEngine;
 public class PlayerCharacter : MonoBehaviour
 {
     public PlayerInput playerInput;
+    
+    
     public Transform groundCheck;
     public bool isGrounded;
     public float checkRadius;
     public LayerMask whatIsGround;
+
+    public Transform wallLeftCheck;
+    public Transform wallRightCheck;
+    public bool isNextToWallLeft;
+    public bool isNextToWallRight;
+    public LayerMask whatIsWall;
+    
     public bool hasDoubleJump;
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
@@ -34,6 +43,7 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerGrounded;
     public Action onPlayerStartDash;
     public Action onPlayerDodgeDamage;
+    public Action onPlayerWalkNextToWall;
     
     
 
@@ -97,6 +107,8 @@ public class PlayerCharacter : MonoBehaviour
     private void FixedUpdate()
     {
         updateGrounded();
+
+        
     }
 
     private void updateGrounded()
@@ -112,6 +124,13 @@ public class PlayerCharacter : MonoBehaviour
         {
             hasDoubleJump = false;
             dashTimeCounter = 0;
+        }
+
+        bool wasNextToWallRight = isNextToWallRight;
+        isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
+        if (wasNextToWallRight != isNextToWallRight && isNextToWallRight)
+        {
+            onPlayerWalkNextToWall?.Invoke();
         }
     }
 

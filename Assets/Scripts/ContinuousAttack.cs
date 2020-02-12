@@ -26,6 +26,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     public void Execute()
     {
         running = true;
+        Tick();
     }
 
     public void Stop()
@@ -40,26 +41,37 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     {
         if (running)
         {
-            runTime+=Time.deltaTime;
-            if (runTime > duration)
-            {
-                Stop();
-            }
             if (runTime > lastTickTime + tickInterval)
             {
                 Tick();
                 lastTickTime = runTime;
             }
+            
+            if (duration > 0)
+            {
+                StopIfTimeOver();
+            }
+            
+            
         }
         
     }
 
+    private void StopIfTimeOver()
+    {
+        runTime += Time.deltaTime;
+        if (runTime > duration)
+        {
+            Stop();
+        }
+    }
 
 
     public void Tick()
     {
         foreach (GameObject target in objectsInCollision)
         {
+            if (target == null) continue;
             var healthComponent = target.GetComponent<HealthComponent>();
             if (healthComponent != null && target != owner.gameObject)
             {
