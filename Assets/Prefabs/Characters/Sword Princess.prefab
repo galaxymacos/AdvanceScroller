@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 5
   tickInterval: 0.2
-  damageData: {fileID: 0}
+  damageData: {fileID: 11400000, guid: 7cf42af038feb5c4db7732aa7a51c0cd, type: 2}
   owner: {fileID: 3658480544048443884}
 --- !u!1 &1643300113
 GameObject:
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageData: {fileID: 0}
+  damageData: {fileID: 11400000, guid: e1dc999128cb101479066293e6753139, type: 2}
 --- !u!1 &2690510395812290326
 GameObject:
   m_ObjectHideFlags: 0
@@ -619,7 +619,7 @@ MonoBehaviour:
   groundDustTwoWays: {fileID: 2507875056641089187, guid: b3fc23b6d0b53524e9dbaa130ba770fa,
     type: 3}
   movementSpeed: 5
-  canMove: 0
+  canControlMovement: 0
 --- !u!114 &787438327
 MonoBehaviour:
   m_ObjectHideFlags: 0

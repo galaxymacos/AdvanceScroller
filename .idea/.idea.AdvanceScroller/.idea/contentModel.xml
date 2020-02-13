@@ -9,9 +9,13 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="bounce_back.cs" t="Include" />
-        <e p="DamageData.cs" t="Include" />
-        <e p="DamageReceiver.cs" t="Include" />
+        <e p="AB_BatHero_BatEnergy.cs" t="Include" />
+        <e p="AB_BatHero_JumpAttack.cs" t="Include" />
+        <e p="AB_BatHero_Transform.cs" t="Include" />
+        <e p="Bat Hero" t="Include">
+          <e p="Read Me.txt" t="Include" />
+        </e>
+        <e p="BatHeroAttackMessager.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -114,12 +118,11 @@
             </e>
           </e>
         </e>
+        <e p="PhychicHero_ExcelStrike.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="push.cs" t="Include" />
-        <e p="PushComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="attack_psychic_hero.cs" t="Include" />
           <e p="attack_sword_princess.cs" t="Include" />
@@ -134,6 +137,8 @@
           <e p="CollisionDetector.cs" t="Include" />
           <e p="ContinuousAttack.cs" t="Include" />
           <e p="Cross.cs" t="Include" />
+          <e p="DamageData.cs" t="Include" />
+          <e p="DamageReceiver.cs" t="Include" />
           <e p="dash.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
           <e p="die.cs" t="Include" />
@@ -177,6 +182,8 @@
           <e p="ProjectileFlipComponent.cs" t="Include" />
           <e p="ProjectileKnockComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
+          <e p="push.cs" t="Include" />
+          <e p="PushComponent.cs" t="Include" />
           <e p="run_psychic_hero.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
@@ -186,16 +193,18 @@
           <e p="Skill1State.cs" t="Include" />
           <e p="skill3_psychic_hero.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
-          <e p="SkillManager.cs" t="Include" />
+          <e p="SkillCooldownManager.cs" t="Include" />
           <e p="StunComponent.cs" t="Include" />
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
+          <e p="WallCheck.cs" t="Include" />
+          <e p="wallSlide.cs" t="Include" />
         </e>
+        <e p="SMB_BatHero_Attack.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
-        <e p="Tester.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -224,8 +233,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="WallCheck.cs" t="Include" />
-        <e p="wallSlide.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

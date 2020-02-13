@@ -6,6 +6,8 @@ public class PlayerOneInput: PlayerInput
     {
         inputAction.Player.Run.performed += ctx => horizontalAxis = ctx.ReadValue<float>();
         inputAction.Player.Run.canceled += ctx => horizontalAxis = 0;
+        inputAction.Player.VerticalMovement.performed += ctx => verticalAxis = ctx.ReadValue<float>();
+        inputAction.Player.VerticalMovement.canceled += ctx => verticalAxis = 0;
         inputAction.Player.Jump.performed += ctx => jumpButtonPressed = true;
         inputAction.Player.Jump.canceled += ctx => jumpButtonPressed = false;
         inputAction.Player.Dash.performed += ctx => dashButtonPressed = true;

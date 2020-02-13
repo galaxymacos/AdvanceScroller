@@ -81,13 +81,21 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""VerticalMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""f1673e26-d8d8-4fc0-839a-cb0570e166d5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
                 {
                     ""name"": """",
                     ""id"": ""cdd09132-d6f7-4430-9aa6-7179d7da4dd6"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -193,6 +201,50 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Skill4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""559bcea7-3271-4ce8-a9d0-8bd80c95e41a"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""7d08d8d3-d1ff-4248-8201-d5f483bbe1bd"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""391c29cb-92ec-4f67-8a4f-4f57a91fb959"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""115373d7-b932-4dd3-ba86-097f78fc59a1"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         },
@@ -260,6 +312,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""name"": ""Skill4"",
                     ""type"": ""Button"",
                     ""id"": ""a6f042df-c21e-4a5a-8ad2-3bc2e1d8e5da"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""VerticalMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""b11f95de-b7f1-428e-8696-bf24e9f68127"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """"
@@ -375,6 +435,39 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""Skill4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""b1997ef3-543f-4aac-804e-e603e4331065"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""6d3559a4-0ee2-4731-b946-6b5eb3a58ba1"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""9c0d9784-5f24-4153-b980-2b340aa46e5c"",
+                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
                 }
             ]
         }
@@ -391,6 +484,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player_Skill2 = m_Player.FindAction("Skill2", throwIfNotFound: true);
         m_Player_Skill3 = m_Player.FindAction("Skill3", throwIfNotFound: true);
         m_Player_Skill4 = m_Player.FindAction("Skill4", throwIfNotFound: true);
+        m_Player_VerticalMovement = m_Player.FindAction("VerticalMovement", throwIfNotFound: true);
         // Player2
         m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
         m_Player2_Run = m_Player2.FindAction("Run", throwIfNotFound: true);
@@ -401,6 +495,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player2_Skill2 = m_Player2.FindAction("Skill2", throwIfNotFound: true);
         m_Player2_Skill3 = m_Player2.FindAction("Skill3", throwIfNotFound: true);
         m_Player2_Skill4 = m_Player2.FindAction("Skill4", throwIfNotFound: true);
+        m_Player2_VerticalMovement = m_Player2.FindAction("VerticalMovement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -458,6 +553,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Skill2;
     private readonly InputAction m_Player_Skill3;
     private readonly InputAction m_Player_Skill4;
+    private readonly InputAction m_Player_VerticalMovement;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -470,6 +566,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Skill2 => m_Wrapper.m_Player_Skill2;
         public InputAction @Skill3 => m_Wrapper.m_Player_Skill3;
         public InputAction @Skill4 => m_Wrapper.m_Player_Skill4;
+        public InputAction @VerticalMovement => m_Wrapper.m_Player_VerticalMovement;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -503,6 +600,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Skill4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
                 @Skill4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
                 @Skill4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
+                @VerticalMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -531,6 +631,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Skill4.started += instance.OnSkill4;
                 @Skill4.performed += instance.OnSkill4;
                 @Skill4.canceled += instance.OnSkill4;
+                @VerticalMovement.started += instance.OnVerticalMovement;
+                @VerticalMovement.performed += instance.OnVerticalMovement;
+                @VerticalMovement.canceled += instance.OnVerticalMovement;
             }
         }
     }
@@ -547,6 +650,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player2_Skill2;
     private readonly InputAction m_Player2_Skill3;
     private readonly InputAction m_Player2_Skill4;
+    private readonly InputAction m_Player2_VerticalMovement;
     public struct Player2Actions
     {
         private @PlayerInputActions m_Wrapper;
@@ -559,6 +663,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Skill2 => m_Wrapper.m_Player2_Skill2;
         public InputAction @Skill3 => m_Wrapper.m_Player2_Skill3;
         public InputAction @Skill4 => m_Wrapper.m_Player2_Skill4;
+        public InputAction @VerticalMovement => m_Wrapper.m_Player2_VerticalMovement;
         public InputActionMap Get() { return m_Wrapper.m_Player2; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -592,6 +697,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Skill4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
                 @Skill4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
                 @Skill4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
+                @VerticalMovement.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
@@ -620,6 +728,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @Skill4.started += instance.OnSkill4;
                 @Skill4.performed += instance.OnSkill4;
                 @Skill4.canceled += instance.OnSkill4;
+                @VerticalMovement.started += instance.OnVerticalMovement;
+                @VerticalMovement.performed += instance.OnVerticalMovement;
+                @VerticalMovement.canceled += instance.OnVerticalMovement;
             }
         }
     }
@@ -634,6 +745,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSkill2(InputAction.CallbackContext context);
         void OnSkill3(InputAction.CallbackContext context);
         void OnSkill4(InputAction.CallbackContext context);
+        void OnVerticalMovement(InputAction.CallbackContext context);
     }
     public interface IPlayer2Actions
     {
@@ -645,5 +757,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSkill2(InputAction.CallbackContext context);
         void OnSkill3(InputAction.CallbackContext context);
         void OnSkill4(InputAction.CallbackContext context);
+        void OnVerticalMovement(InputAction.CallbackContext context);
     }
 }

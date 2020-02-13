@@ -4,6 +4,7 @@ public abstract class PlayerInput: MonoBehaviour
 {
     protected PlayerInputActions inputAction;
     [HideInInspector] public float horizontalAxis;
+    [HideInInspector] public float verticalAxis;
     [HideInInspector] public bool jumpButtonPressed;
     [HideInInspector] public bool attackButtonPressed;
     [HideInInspector] public bool dashButtonPressed;

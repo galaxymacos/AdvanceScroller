@@ -10,6 +10,8 @@ public class PlayerTwoInput : PlayerInput
     {
         inputAction.Player2.Run.performed += ctx => horizontalAxis = ctx.ReadValue<float>();
         inputAction.Player2.Run.canceled += OnRunOncanceled;
+        inputAction.Player2.VerticalMovement.performed += ctx => verticalAxis = ctx.ReadValue<float>();
+        inputAction.Player2.Run.canceled += OnVerticalMovementCanceled;
         inputAction.Player2.Jump.performed += ctx => jumpButtonPressed = true;
         inputAction.Player2.Jump.canceled += ctx => jumpButtonPressed = false;
         inputAction.Player2.Attack.performed += ctx => attackButtonPressed = true;
@@ -35,6 +37,17 @@ public class PlayerTwoInput : PlayerInput
         }
 
         horizontalAxis = rawMovement;
+    }
+    
+    private void OnVerticalMovementCanceled(InputAction.CallbackContext ctx)
+    {
+        float rawMovement = ctx.ReadValue<float>();
+        if (rawMovement > -0.3f && rawMovement < 0.3f)
+        {
+            rawMovement = 0f;
+        }
+
+        verticalAxis = rawMovement;
     }
 
     private void OnEnable()

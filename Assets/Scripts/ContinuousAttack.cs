@@ -5,7 +5,7 @@ using UnityEngine;
 public interface IAttackComponent
 {
     void Execute();
-    void Stop();
+    void StopDetectTarget();
 }
 public class ContinuousAttack : CollisionDetector, IAttackComponent
 {
@@ -26,7 +26,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         Tick();
     }
 
-    public void Stop()
+    public void StopDetectTarget()
     {
         running = false;
         runTime = 0;
@@ -59,7 +59,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         runTime += Time.deltaTime;
         if (runTime > duration)
         {
-            Stop();
+            StopDetectTarget();
         }
     }
 

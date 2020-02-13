@@ -27,7 +27,7 @@ public class skill3_psychic_hero : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        continuousAttackComponent.Stop();
+        continuousAttackComponent.StopDetectTarget();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

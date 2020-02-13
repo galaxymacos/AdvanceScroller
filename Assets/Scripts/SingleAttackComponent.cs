@@ -21,7 +21,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         }
     }
 
-    public void DealDamageToSingleTarget(GameObject gameObjectCollided)
+    private void DealDamageToSingleTarget(GameObject gameObjectCollided)
     {
         
         if (gameObjectCollided != transform.gameObject && gameObjectCollided != null)
@@ -45,7 +45,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     
  
-    public void Stop()
+    public void StopDetectTarget()
     {
         isRunning = false;
         

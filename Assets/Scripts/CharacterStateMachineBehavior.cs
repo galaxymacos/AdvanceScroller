@@ -203,8 +203,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 
     public string CoolDownFilter(string skillName)
     {
-        SkillManager playerSkillManager = playerCharacter.GetComponent<SkillManager>();
-        if (playerSkillManager.Use(skillName))
+        SkillCooldownManager playerSkillCooldownManager = playerCharacter.GetComponent<SkillCooldownManager>();
+        if (playerSkillCooldownManager.Use(skillName))
         {
             return skillName;
         }
