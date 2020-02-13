@@ -43,8 +43,14 @@ public class push : CharacterStateMachineBehavior
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
-        rb.velocity = new Vector2(-4, 5);
-        // animator.SetTrigger("fall down");
+        if (pushComponent.pushDirection.x > 0)
+        {
+            rb.velocity = new Vector2(-4, 5);
+        }
+        else
+        {
+            rb.velocity = new Vector2(4, 5);
+        }
         hasHitCollision = true;
     }
 
