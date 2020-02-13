@@ -13,6 +13,14 @@ public class SkillCooldownManager : MonoBehaviour
         playerCharacter = GetComponent<PlayerCharacter>();
     }
 
+    private void Start()
+    {
+        foreach (Skill skill in skills)
+        {
+            skill.coolDownCounter = 0;
+        }
+    }
+
     private void Update()
     {
         foreach (Skill skill in skills)

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: skill4
   coolDown: 9
-  coolDownCounter: 0
+  coolDownCounter: 6.216885

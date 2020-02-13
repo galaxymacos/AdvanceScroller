@@ -9,6 +9,8 @@ public class BatHeroAttackMessager : MonoBehaviour
     private PlayerCharacter playerCharacter;
     public SingleAttackComponent attackFirstStrike;
     public SingleAttackComponent attackSecondStrike;
+    public ContinuousAttack instantKill;
+    public ContinuousAttack closeYourEyes;
 
     public GameObject blueballPrefab;
     public GameObject kunaiPrefab;
@@ -84,6 +86,16 @@ public class BatHeroAttackMessager : MonoBehaviour
         GameObject kunai = Instantiate(kunaiPrefab, transform.Find("SpawnLocations").Find("Kunai").position, transform.rotation);
         var projectile = kunai.GetComponent<Projectile>();
         projectile.Setup(playerCharacter, 15 ,0);
+    }
+
+    public void InstantKill()
+    {
+        instantKill.Execute();
+    }
+
+    public void CloseYourEye()
+    {
+        closeYourEyes.Execute();
     }
     
     
