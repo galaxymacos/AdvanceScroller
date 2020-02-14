@@ -21,7 +21,7 @@
         <e p="AB_BatHero_Jump.cs" t="Include" />
         <e p="AB_BatHero_JumpAttack.cs" t="Include" />
         <e p="AB_BatHero_Transform.cs" t="Include" />
-        <e p="Axe Hero 1" t="Include">
+        <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="AxeHeroAttackMessager.cs" t="Include" />
@@ -31,6 +31,7 @@
         </e>
         <e p="BatHeroAttackMessager.cs" t="Include" />
         <e p="InstantKillContinuousAttack.cs" t="Include" />
+        <e p="MainMenuButtonAnimationController.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -133,6 +134,7 @@
             </e>
           </e>
         </e>
+        <e p="OptionMenuAnimatorController.cs" t="Include" />
         <e p="PhychicHero_ExcelStrike.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
