@@ -18,6 +18,7 @@ public class push : CharacterStateMachineBehavior
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         pushComponent = animator.GetComponent<PushComponent>();
         pushComponent.onHitWall += BounceFromWall;
+        pushComponent.onHitGround += BounceFromGround;
         playerCharacter.canControlMovement = false;
     }
 
@@ -45,18 +46,23 @@ public class push : CharacterStateMachineBehavior
     {
         if (pushComponent.pushDirection.x > 0)
         {
-            rb.velocity = new Vector2(-4, 5);
+            // rb.velocity = new Vector2(-4, 5);
         }
         else
         {
-            rb.velocity = new Vector2(4, 5);
+            // rb.velocity = new Vector2(4, 5);
         }
         hasHitCollision = true;
+        pushComponent.onHitGround -= BounceFromGround;
+        pushComponent.onHitWall -= BounceFromWall;
     }
 
     private void BounceFromGround(Vector2 collisionPoint)
     {
         hasHitCollision = true;
+        rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
+        pushComponent.onHitWall -= BounceFromWall;
+        pushComponent.onHitGround -= BounceFromGround;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

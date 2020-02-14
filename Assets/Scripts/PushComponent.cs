@@ -16,6 +16,8 @@ public class PushComponent : MonoBehaviour
     public bool isNextToWallRight;
     public Transform wallLeftCheck;
     public bool isNextToWallLeft;
+    public Transform groundCheck;
+    private bool wasOnGrounded;
     public LayerMask whatIsWall;
     private void Awake()
     {
@@ -24,11 +26,23 @@ public class PushComponent : MonoBehaviour
 
     public void Push(Transform damageSource, float speed)
     {
+        if (playerCharacter.isNextToWallRight)
+        {
+            Vector2 bounceDirection = new Vector2(-1, 1);
+            float bounceSpeed = speed / 2;
+        }
+        else if (playerCharacter.isNextToWallLeft)
+        {
+            
+        }
+        else
+        {
+            
+        }
         pushDirection = Vector3.Normalize(transform.position - damageSource.position );
         pushSpeed = speed;
         
         GetComponent<Animator>().SetTrigger("push");
-        print("push");
     }
 
     private void Update()
@@ -46,5 +60,13 @@ public class PushComponent : MonoBehaviour
         { 
             onHitWall?.Invoke(wallLeftCheck.position);
         }
+
+        if (playerCharacter.isGrounded && wasOnGrounded == false)
+        {
+            print("hit grounded");
+            onHitGround?.Invoke(playerCharacter.groundCheck.position);
+        }
+        wasOnGrounded = playerCharacter.isGrounded;
+        
     }
 }
