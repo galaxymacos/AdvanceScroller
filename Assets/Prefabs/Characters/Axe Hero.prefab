@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 8128414367645674110}
   - component: {fileID: 4758164498511339796}
   - component: {fileID: 4758164498511339797}
+  - component: {fileID: 1340760059}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -663,6 +664,29 @@ MonoBehaviour:
   hugeSlashDamageRed: {fileID: 11400000, guid: bfeb94df61190ca46ac8db8588204b80, type: 2}
   hugeSlashDamageGreen: {fileID: 11400000, guid: 810f298b18041af4992175310ef6778e,
     type: 2}
+--- !u!114 &1340760059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74036991f0ec5442bbbd30258d22d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDirection: {x: 0, y: 0}
+  pushSpeed: 0
+  checkRadius: 0.05
+  wallRightCheck: {fileID: 2577492763309506682}
+  isNextToWallRight: 0
+  wallLeftCheck: {fileID: 6402863349760954494}
+  isNextToWallLeft: 0
+  groundCheck: {fileID: 0}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 14
   pushPower: 0
-  pushDegree: {x: 0, y: 0}
+  offSetDegree: -45
   hitStunPower: 0
   launcherHorizontalForce: 2
   launcherVerticalForce: 5

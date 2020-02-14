@@ -6,6 +6,7 @@ public class push : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
     private PushComponent pushComponent;
+    private bool groundedOnInitialization;
 
     private bool hasHitCollision;
 
@@ -20,6 +21,7 @@ public class push : CharacterStateMachineBehavior
         pushComponent.onHitWall += BounceFromWall;
         pushComponent.onHitGround += BounceFromGround;
         playerCharacter.canControlMovement = false;
+        groundedOnInitialization = playerCharacter.isGrounded;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -44,25 +46,33 @@ public class push : CharacterStateMachineBehavior
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
-        if (pushComponent.pushDirection.x > 0)
+        if (groundedOnInitialization == true)
         {
-            // rb.velocity = new Vector2(-4, 5);
+            if (pushComponent.pushDirection.x > 0)
+            {
+                rb.velocity = new Vector2(-4, 5);
+            }
+            else
+            {
+                rb.velocity = new Vector2(4, 5);
+            }
+            hasHitCollision = true;
+            pushComponent.onHitGround -= BounceFromGround;
+            pushComponent.onHitWall -= BounceFromWall;
         }
-        else
-        {
-            // rb.velocity = new Vector2(4, 5);
-        }
-        hasHitCollision = true;
-        pushComponent.onHitGround -= BounceFromGround;
-        pushComponent.onHitWall -= BounceFromWall;
+       
     }
 
     private void BounceFromGround(Vector2 collisionPoint)
     {
-        hasHitCollision = true;
-        rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
-        pushComponent.onHitWall -= BounceFromWall;
-        pushComponent.onHitGround -= BounceFromGround;
+        if (groundedOnInitialization == false)
+        {
+            hasHitCollision = true;
+            rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
+            pushComponent.onHitWall -= BounceFromWall;
+            pushComponent.onHitGround -= BounceFromGround;
+        }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

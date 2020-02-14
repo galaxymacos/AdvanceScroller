@@ -5,7 +5,7 @@ public class DamageData: ScriptableObject
 {
     public int damage;
     public float pushPower;
-    public Vector2 pushDegree;
+    public float offSetDegree;
     public float hitStunPower;
     public float launcherHorizontalForce;
     public float launcherVerticalForce;
