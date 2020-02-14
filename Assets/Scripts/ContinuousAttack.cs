@@ -11,11 +11,11 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
 {
     private bool running;
     
-    [SerializeField] private float duration = 5f;
-    [SerializeField] private float tickInterval = 0.2f;
-    [SerializeField] private DamageData damageData;
+    [SerializeField] protected float duration = 5f;
+    [SerializeField] protected float tickInterval = 0.2f;
+    [SerializeField] protected DamageData damageData;
     
-    [SerializeField] private PlayerCharacter owner;
+    [SerializeField] protected PlayerCharacter owner;
     private float runTime;
     private float lastTickTime;
 
@@ -64,7 +64,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     }
 
 
-    public void Tick()
+    public virtual void Tick()
     {
         foreach (GameObject target in objectsInCollision)
         {

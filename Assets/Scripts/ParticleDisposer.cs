@@ -12,6 +12,7 @@ public class ParticleDisposer : MonoBehaviour
     {
         if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).loop)
         {
+            print("destroy in "+GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay+" seconds ");
             Destroy(transform.root.gameObject, GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length + delay);
         }
     }

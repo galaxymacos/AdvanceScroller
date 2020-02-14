@@ -9,14 +9,27 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AB_AxeHero_Attack.cs" t="Include" />
+        <e p="AB_AxeHero_FallDown.cs" t="Include" />
+        <e p="AB_AxeHero_JumpAttack.cs" t="Include" />
+        <e p="AB_AxeHero_Skill2.cs" t="Include" />
+        <e p="AB_AxeHero_Skill3.cs" t="Include" />
         <e p="AB_BatHero_BatEnergy.cs" t="Include" />
         <e p="AB_BatHero_BatFly.cs" t="Include" />
+        <e p="AB_BatHero_DoubleJump.cs" t="Include" />
+        <e p="AB_BatHero_FallDown.cs" t="Include" />
+        <e p="AB_BatHero_Jump.cs" t="Include" />
         <e p="AB_BatHero_JumpAttack.cs" t="Include" />
         <e p="AB_BatHero_Transform.cs" t="Include" />
+        <e p="Axe Hero 1" t="Include">
+          <e p="Read Me.txt" t="Include" />
+        </e>
+        <e p="AxeHeroAttackMessager.cs" t="Include" />
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="BatHeroAttackMessager.cs" t="Include" />
+        <e p="InstantKillContinuousAttack.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />

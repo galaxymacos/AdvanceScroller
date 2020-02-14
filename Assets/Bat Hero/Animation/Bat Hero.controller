@@ -39,6 +39,20 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-7162406955896212917
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d097e5a51ddf9804c87ac5e38fc2470b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceCancelProcessor: {fileID: 0}
+  jumpForce: 8
 --- !u!114 &-6955147699512888627
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -304,6 +318,7 @@ AnimatorState:
   m_Transitions: []
   m_StateMachineBehaviours:
   - {fileID: 4164293043781849771}
+  - {fileID: -468014991215709322}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -413,6 +428,20 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-809038548545392555
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cba60db7e5de83409e1f972c5e0c9c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceCancelProcessor: {fileID: 0}
+  jumpForce: 7
 --- !u!114 &-790502622891078255
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -451,6 +480,19 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-468014991215709322
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae873fefed7278741a36290db307640b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceCancelProcessor: {fileID: 0}
 --- !u!114 &-374645539992259154
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -742,7 +784,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 1580792274801275479}
+  - {fileID: -809038548545392555}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -880,7 +922,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 4940975050880742226}
+  - {fileID: -7162406955896212917}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1176,7 +1218,7 @@ AnimatorStateMachine:
     m_Position: {x: 310, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4214854724667011965}
-    m_Position: {x: 980, y: 700, z: 0}
+    m_Position: {x: 990, y: 700, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7999847333905206730}
     m_Position: {x: 1290, y: 380, z: 0}
@@ -1219,20 +1261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceCancelProcessor: {fileID: 0}
---- !u!114 &1580792274801275479
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc8d5e1b07d26c1429934d7d548bd272, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
-  jumpForce: 6
 --- !u!114 &1950352680183857104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1325,20 +1353,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceCancelProcessor: {fileID: 0}
---- !u!114 &4940975050880742226
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac716832e7a668c4a9b895f6e070b1b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
-  jumpForce: 7
 --- !u!114 &5596895217598118713
 MonoBehaviour:
   m_ObjectHideFlags: 1

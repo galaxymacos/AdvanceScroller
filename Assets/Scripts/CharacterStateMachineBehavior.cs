@@ -187,6 +187,26 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         }
 
                         break;
+                    
+                    case "skill2 jump":
+                        if (playerInput.skill2ButtonPressed)
+                        {
+                            playerInput.skill2ButtonPressed = false;
+                            return "skill2 jump";
+                        }
+
+                        break;
+                    
+                    case "skill3 jump":
+                        if (playerInput.skill3ButtonPressed)
+                        {
+                            playerInput.skill3ButtonPressed = false;
+                            return "skill3 jump";
+                        }
+
+                        break;
+                    
+                    
                     case "jump attack":
                         if (playerInput.attackButtonPressed)
                         {

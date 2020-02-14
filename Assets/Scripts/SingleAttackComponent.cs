@@ -8,7 +8,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     private bool isRunning;
     public DamageData damageData;
 
-    private List<GameObject> objectsHasProcessed = new List<GameObject>();
+    public List<GameObject> objectsHasProcessed = new List<GameObject>();
 
     private void Update()
     {

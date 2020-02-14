@@ -10,7 +10,7 @@ public class BatHeroAttackMessager : MonoBehaviour
     public SingleAttackComponent attackFirstStrike;
     public SingleAttackComponent attackSecondStrike;
     public ContinuousAttack instantKill;
-    public ContinuousAttack closeYourEyes;
+    public SingleAttackComponent closeYourEyes;
 
     public GameObject blueballPrefab;
     public GameObject kunaiPrefab;
@@ -31,37 +31,47 @@ public class BatHeroAttackMessager : MonoBehaviour
     
     public void Teleport()
     {
-        if (playerCharacter.isGrounded)
-        {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
             if (playerCharacter.isFacingRight)
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector2.right, 5, playerCharacter.whatIsWall);
+                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(rb.velocity), 5, playerCharacter.whatIsWall);
                 if (hitInfo.collider != null)
                 {
-                    playerCharacter.transform.position = hitInfo.transform.position;
+                    playerCharacter.transform.position = hitInfo.point+new Vector2(-1f,0);
                 }
                 else
                 {
-                    playerCharacter.transform.Translate(new Vector2(5,0));
-
+                    if (rb.velocity.magnitude <= Mathf.Epsilon)
+                    {
+                        playerCharacter.transform.Translate(Vector2.right*5);
+                    } 
+                    else
+                    {
+                        playerCharacter.transform.Translate(Vector3.Normalize(rb.velocity)*5);
+                    }
                 }
             }
             else
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector2.left, 5, playerCharacter.whatIsWall);
+                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(rb.velocity), 5, playerCharacter.whatIsWall);
                 if (hitInfo.collider != null)
                 {
-                    playerCharacter.transform.position = hitInfo.transform.position;
+                    playerCharacter.transform.position = hitInfo.point+new Vector2(1f, 0);
                 }
                 else
                 {
-                    playerCharacter.transform.Translate(new Vector2(-5,0));
-
+                    if (rb.velocity.magnitude <= Mathf.Epsilon)
+                    {
+                        playerCharacter.transform.Translate(-Vector2.right*5);
+                    } 
+                    else
+                    {
+                        playerCharacter.transform.Translate(Vector3.Normalize(rb.velocity)*5);
+                    }
                 }
 
             }
             
-        }
     }
 
     public void AttackFirstHit()

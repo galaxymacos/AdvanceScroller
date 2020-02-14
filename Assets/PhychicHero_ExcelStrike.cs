@@ -23,6 +23,8 @@ public class PhychicHero_ExcelStrike : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.canControlMovement = true;
+        animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTarget();
+        animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTarget();
 
     }
 
