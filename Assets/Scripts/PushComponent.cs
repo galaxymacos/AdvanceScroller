@@ -19,6 +19,7 @@ public class PushComponent : MonoBehaviour
     public Transform groundCheck;
     private bool wasOnGrounded;
     public LayerMask whatIsWall;
+
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
@@ -28,39 +29,44 @@ public class PushComponent : MonoBehaviour
     {
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
-            pushDirection = Vector3.Normalize(transform.position - damageSource.position );
+            pushDirection = Vector3.Normalize(transform.position - damageSource.position);
             pushSpeed = speed;
-        
+            print("First type push: " + pushDirection + "    " + pushSpeed);
             GetComponent<Animator>().SetTrigger("push");
         }
-        
     }
 
+    /// <summary>
+    /// Push the player to a specific angle
+    /// </summary>
+    /// <param name="damageSource"></param>
+    /// <param name="speed"></param>
+    /// <param name="angleOffset"></param>
     public void Push(Transform damageSource, float speed, float angleOffset)
     {
-        if (angleOffset < 0)
+
+        if (angleOffset < 0 && playerCharacter.isGrounded)
         {
-            if (!playerCharacter.isGrounded && !playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
+            return;
+        }
+        if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
+        {
+            Vector2 ownerFacingDirection = (damageSource.position.x - playerCharacter.transform.position.x) < 0
+                ? new Vector2(1, 0)
+                : new Vector2(-1, 0);
+            if (playerCharacter.isFacingRight)
             {
-                Vector2 ownerFacingDirection = (damageSource.position.x - playerCharacter.transform.position.x)<0 ? new Vector2(1, 0) : new Vector2(-1, 0);
-                if (playerCharacter.isFacingRight)
-                {
-                    pushDirection = Quaternion.AngleAxis(angleOffset, Vector3.forward) * ownerFacingDirection;
-                }
-                else
-                {
-                    pushDirection = Quaternion.AngleAxis(-angleOffset, Vector3.forward) * ownerFacingDirection;
-
-                }
-
-                pushSpeed = speed;
-                GetComponent<Animator>().SetTrigger("push");
+                pushDirection = Quaternion.AngleAxis(angleOffset, Vector3.forward) * ownerFacingDirection;
             }
-            
-            
+            else
+            {
+                pushDirection = Quaternion.AngleAxis(-angleOffset, Vector3.forward) * ownerFacingDirection;
+            }
 
+            pushSpeed = speed;
+            print("Second type push: " + pushDirection + "    " + pushSpeed);
 
-
+            GetComponent<Animator>().SetTrigger("push");
         }
     }
 
@@ -72,11 +78,11 @@ public class PushComponent : MonoBehaviour
         {
             onHitWall?.Invoke(wallRightCheck.position);
         }
-        
+
         bool wasNextToWallLeft = isNextToWallLeft;
         isNextToWallLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsWall);
         if (wasNextToWallLeft != isNextToWallLeft && isNextToWallLeft)
-        { 
+        {
             onHitWall?.Invoke(wallLeftCheck.position);
         }
 
@@ -84,7 +90,7 @@ public class PushComponent : MonoBehaviour
         {
             onHitGround?.Invoke(playerCharacter.groundCheck.position);
         }
+
         wasOnGrounded = playerCharacter.isGrounded;
-        
     }
 }

@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
   m_Name: Attack Red
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 0
   pushPower: 0
-  pushDegree: {x: 0, y: 0}
+  pushType: 1
+  offSetDegree: 0
   hitStunPower: 0
   launcherHorizontalForce: 2
   launcherVerticalForce: 2

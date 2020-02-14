@@ -8,6 +8,8 @@ public class AxeHeroAttackMessager : MonoBehaviour
 {
     public GameObject redAxeBuff;
     public GameObject greenAxeBuff;
+    public GameObject axePrefab;
+    public Transform axeSpawnPosition;
     public SingleAttackComponent attack;
     public SingleAttackComponent hugeSlash;
     private AxeHeroBuff buffType;
@@ -15,9 +17,12 @@ public class AxeHeroAttackMessager : MonoBehaviour
     public UnityEvent onTransformToRed;
     public UnityEvent onTransformToGreen;
 
+    private PlayerCharacter playerCharacter;
+    
     private void Awake()
     {
         buffType = AxeHeroBuff.None;
+        playerCharacter = GetComponent<PlayerCharacter>();
     }
 
     public void Buff()
@@ -47,6 +52,13 @@ public class AxeHeroAttackMessager : MonoBehaviour
             onTransformToGreen?.Invoke();
         }
 
+    }
+
+    public void ThrowAxe()
+    {
+        GameObject axe = Instantiate(axePrefab, axeSpawnPosition.position, Quaternion.identity);
+        Projectile projectile = axe.GetComponent<Projectile>();
+        projectile.Setup(playerCharacter, 10, 60);
     }
 
     public void Attack()

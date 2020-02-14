@@ -19,6 +19,10 @@ public class PlayerCharacter : MonoBehaviour
     public bool isNextToWallRight;
     public LayerMask whatIsWall;
     
+    public bool atEnemyLeft;
+    public bool atEnemyRight;
+    public LayerMask whatIsEnemy;
+    
     public bool hasDoubleJump;
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
@@ -159,6 +163,9 @@ public class PlayerCharacter : MonoBehaviour
         {
             onPlayerWalkNextToWall?.Invoke();
         }
+        
+        atEnemyRight = Physics2D.OverlapCircle(wallLeftCheck.position, 0.3f, whatIsEnemy);
+        atEnemyLeft = Physics2D.OverlapCircle(wallRightCheck.position, 0.3f, whatIsEnemy);
     }
 
 }

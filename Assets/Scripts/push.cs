@@ -11,7 +11,7 @@ public class push : CharacterStateMachineBehavior
     private bool hasHitCollision;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
@@ -22,6 +22,7 @@ public class push : CharacterStateMachineBehavior
         pushComponent.onHitGround += BounceFromGround;
         playerCharacter.canControlMovement = false;
         groundedOnInitialization = playerCharacter.isGrounded;
+        hasHitCollision = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -46,8 +47,6 @@ public class push : CharacterStateMachineBehavior
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
-        if (groundedOnInitialization == true)
-        {
             if (pushComponent.pushDirection.x > 0)
             {
                 rb.velocity = new Vector2(-4, 5);
@@ -59,7 +58,6 @@ public class push : CharacterStateMachineBehavior
             hasHitCollision = true;
             pushComponent.onHitGround -= BounceFromGround;
             pushComponent.onHitWall -= BounceFromWall;
-        }
        
     }
 

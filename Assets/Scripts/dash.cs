@@ -9,11 +9,13 @@ public class dash : CharacterStateMachineBehavior
     [SerializeField] private float dashDuration = 0.4f;
     private bool dashRight;
     private bool hasActivatedBulletTime;
+    private bool hitEnemy;
 
     private float dashTimeCounter;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        hitEnemy = false;
         hasActivatedBulletTime = false;
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         dashTimeCounter = dashDuration;
@@ -47,15 +49,32 @@ public class dash : CharacterStateMachineBehavior
         }
         _animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();
-        if (dashRight)
+        
+        
+        if (playerCharacter.isFacingRight && playerCharacter.atEnemyLeft)
         {
-            rb.velocity = Vector2.right * (dashSpeed * (isDashReversed?-1:1));
+            rb.velocity = Vector3.zero;
+            hitEnemy = true;
         }
-        else
+        else if (!playerCharacter.isFacingRight && playerCharacter.atEnemyRight)
         {
-            rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed?-1:1));
+            rb.velocity = Vector3.zero;
+            hitEnemy = true;
+        }
+
+        if (!hitEnemy)
+        {
+            if (dashRight)
+            {
+                rb.velocity = Vector2.right * (dashSpeed * (isDashReversed?-1:1));
+            }
+            else
+            {
+                rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed?-1:1));
             
+            }
         }
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
