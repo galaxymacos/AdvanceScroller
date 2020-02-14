@@ -25,6 +25,7 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="AxeHeroAttackMessager.cs" t="Include" />
+        <e p="AxeHeroAttackModifier.cs" t="Include" />
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
