@@ -3,12 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(HealthComponent), typeof(SpriteRenderer))]
+[RequireComponent(typeof(CharacterHealthComponent), typeof(SpriteRenderer))]
 public class FlashYellowComponent : MonoBehaviour
 {
 
     private SpriteRenderer spriteRenderer;
-    private HealthComponent healthComponent;
+    private CharacterHealthComponent characterHealthComponent;
 
     [SerializeField]
     private Sprite yellowSprite;
@@ -17,13 +17,13 @@ public class FlashYellowComponent : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        healthComponent = GetComponent<HealthComponent>();
-        healthComponent.onTakeDamage += FlashYellow;
+        characterHealthComponent = GetComponent<CharacterHealthComponent>();
+        characterHealthComponent.onTakeDamage += FlashYellow;
     }
 
     public bool isFlashing;
     
-    public void FlashYellow()
+    public void FlashYellow(CharacterHealthComponent characterHealthComponent)
     {
         isFlashing = true;
         spriteRenderer.sprite = yellowSprite;

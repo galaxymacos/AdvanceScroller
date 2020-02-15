@@ -71,7 +71,7 @@ public class PlayerCharacter : MonoBehaviour
         characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
         flipComponent = new CharacterFlipComponent(transform);
         
-        GetComponent<HealthComponent>().onPlayerDie = PlayerDie;
+        GetComponent<CharacterHealthComponent>().onPlayerDie = PlayerDie;
         
 
     }

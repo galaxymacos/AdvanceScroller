@@ -33,7 +33,7 @@ public class hitstun : CharacterStateMachineBehavior
         base.OnStateExit(animator, stateInfo, layerIndex);
         stunComponent.onstunEnd -= TransferToIdle;
         playerCharacter.canControlMovement = true;
-        if (playerCharacter.GetComponent<HealthComponent>().isPlayerDead)
+        if (playerCharacter.GetComponent<CharacterHealthComponent>().isPlayerDead)
         { 
             animator.SetTrigger("die");
         }

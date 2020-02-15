@@ -33,7 +33,7 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="BatHeroAttackMessager.cs" t="Include" />
-        <e p="CharacterParticleSpawner.cs" t="Include" />
+        <e p="BloodParticleSpawner.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -189,6 +189,7 @@
           <e p="CameraShake.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterGroundMovementComponent.cs" t="Include" />
+          <e p="CharacterHealthComponent.cs" t="Include" />
           <e p="CharacterStateMachineBehavior.cs" t="Include" />
           <e p="CollisionDetector.cs" t="Include" />
           <e p="ContinuousAttack.cs" t="Include" />
@@ -207,7 +208,6 @@
           <e p="FlipComponent.cs" t="Include" />
           <e p="ForceCancelProcessor.cs" t="Include" />
           <e p="GroundMovementState.cs" t="Include" />
-          <e p="HealthComponent.cs" t="Include" />
           <e p="Heroine.cs" t="Include" />
           <e p="HeroineAnimatorController.cs" t="Include" />
           <e p="HeroineState.cs" t="Include" />
@@ -235,9 +235,6 @@
           <e p="PlayerTwoInput.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
-          <e p="ProjectileDamageComponent.cs" t="Include" />
-          <e p="ProjectileFlipComponent.cs" t="Include" />
-          <e p="ProjectileKnockComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
           <e p="PushComponent.cs" t="Include" />
           <e p="run_psychic_hero.cs" t="Include" />

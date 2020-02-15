@@ -458,83 +458,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &463719341
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 134142, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_Name
-      value: BloodShowerLoop2D
-      objectReference: {fileID: 0}
-    - target: {fileID: 134142, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.5000001
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.49999994
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 462182, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 19835702, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19835702, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19835702, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19835702, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
 --- !u!1 &466229612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1502,6 +1425,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8906824143711737653, guid: e6750891bed24274dafecee240bfd1d4,
+        type: 3}
+      propertyPath: whatIsGround.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
         type: 3}
       propertyPath: m_Name
@@ -1910,9 +1838,12 @@ MonoBehaviour:
     type: 3}
   GroundDustTwoWays: {fileID: 2507875056641089187, guid: b3fc23b6d0b53524e9dbaa130ba770fa,
     type: 3}
-  BloodExplosion: {fileID: 149344, guid: 617378de28fbaa64c96485d5b0d9169b, type: 3}
-  BloodExplosionPenetration: {fileID: 125648, guid: 9fc1afc1190c21b459bff8bed1d9ec02,
+  BloodExplosion2D: {fileID: 149344, guid: 617378de28fbaa64c96485d5b0d9169b, type: 3}
+  BloodDripping2D: {fileID: 127866, guid: 70b26805973318349bb2c60f8b37c8c3, type: 3}
+  BloodShowerLoop2D: {fileID: 134142, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
+  BloodSplatDirectional2D: {fileID: 125648, guid: 9fc1afc1190c21b459bff8bed1d9ec02,
     type: 3}
+  BloodSplatCritcal2D: {fileID: 171432, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
 --- !u!4 &1854161405
 Transform:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerCharacter))]
@@ -15,9 +16,13 @@ public class BatHeroAttackMessager : MonoBehaviour
     public GameObject blueballPrefab;
     public GameObject kunaiPrefab;
 
+    private Rigidbody2D rb;
+    private Vector3 instantKillDirection;
+
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
+        rb = GetComponent<Rigidbody2D>();
     }
     
     
@@ -28,45 +33,54 @@ public class BatHeroAttackMessager : MonoBehaviour
     {
         
     }
+
+    private void RecordInstantKillVelocity()
+    {
+        instantKillDirection = rb.velocity;
+    }
     
     public void Teleport()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        print("the player's velocity is "+rb.velocity);
             if (playerCharacter.isFacingRight)
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(rb.velocity), 5, playerCharacter.whatIsWall);
+                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(instantKillDirection), 5, playerCharacter.whatIsWall);
                 if (hitInfo.collider != null)
                 {
+                    print("hit the wall at "+hitInfo.point);
                     playerCharacter.transform.position = hitInfo.point+new Vector2(-1f,0);
                 }
                 else
                 {
+                    print("doesn't hit the wall");
                     if (rb.velocity.magnitude <= Mathf.Epsilon)
                     {
                         playerCharacter.transform.Translate(Vector2.right*5);
                     } 
                     else
                     {
-                        playerCharacter.transform.Translate(Vector3.Normalize(rb.velocity)*5);
+                        playerCharacter.transform.Translate(Vector3.Normalize(instantKillDirection)*5);
                     }
                 }
             }
             else
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(rb.velocity), 5, playerCharacter.whatIsWall);
+                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(instantKillDirection), 5, playerCharacter.whatIsWall);
                 if (hitInfo.collider != null)
                 {
+                    print("hit the wall at "+hitInfo.point);
                     playerCharacter.transform.position = hitInfo.point+new Vector2(1f, 0);
                 }
                 else
                 {
+                    print("doesn't hit the wall");
                     if (rb.velocity.magnitude <= Mathf.Epsilon)
                     {
-                        playerCharacter.transform.Translate(-Vector2.right*5);
+                        playerCharacter.transform.Translate(Vector2.left*5);
                     } 
                     else
                     {
-                        playerCharacter.transform.Translate(Vector3.Normalize(rb.velocity)*5);
+                        playerCharacter.transform.Translate(Vector3.Normalize(instantKillDirection)*5);
                     }
                 }
 
@@ -106,6 +120,7 @@ public class BatHeroAttackMessager : MonoBehaviour
     public void CloseYourEye()
     {
         closeYourEyes.Execute();
+        RecordInstantKillVelocity();
     }
     
     

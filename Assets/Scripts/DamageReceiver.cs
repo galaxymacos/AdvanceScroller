@@ -8,7 +8,7 @@ public class DamageReceiver : MonoBehaviour
 {
     private PlayerCharacter playerCharacter;
     private StunComponent stunComponent;
-    private HealthComponent healthComponent;
+    private CharacterHealthComponent characterHealthComponent;
     private Knockable knockableComponent;
     private PushComponent pushComponent;
 
@@ -16,7 +16,7 @@ public class DamageReceiver : MonoBehaviour
     {
         playerCharacter = GetComponent<PlayerCharacter>();
         stunComponent = GetComponent<StunComponent>();
-        healthComponent = GetComponent<HealthComponent>();
+        characterHealthComponent = GetComponent<CharacterHealthComponent>();
         knockableComponent = GetComponent<Knockable>();
         pushComponent = GetComponent<PushComponent>();
     }
@@ -27,12 +27,10 @@ public class DamageReceiver : MonoBehaviour
         {
             if (damageData.pushType == PushType.SpecificAngleOnly)
             {
-                print("first type push");
                 pushComponent.Push(damageOwner, damageData.pushPower, damageData.offSetDegree, damageData.pushDistance);
             }
             else if (damageData.pushType == PushType.AccordingToRelativePosition)
             {
-                print("second type push");
                 pushComponent.Push(damageOwner, damageData.pushPower, damageData.pushDistance);
 
             }
@@ -45,7 +43,7 @@ public class DamageReceiver : MonoBehaviour
 
         if (damageData.damage > 0)
         {
-            healthComponent.TakeDamage(damageData.damage);
+            characterHealthComponent.TakeDamage(damageData,damageOwner,true);
         }
 
         if (damageData.launcherHorizontalForce > 0 || damageData.launcherVerticalForce > 0)

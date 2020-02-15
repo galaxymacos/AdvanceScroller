@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerCharacter))]
-public class HealthComponent : MonoBehaviour
+public class CharacterHealthComponent : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
@@ -24,8 +24,13 @@ public class HealthComponent : MonoBehaviour
     
     
     public FloatAction onHealthChanged;
-    public Action onTakeDamage;
+    public Action<CharacterHealthComponent> onTakeDamage;
     public Action onPlayerDie;
+    
+    // Store the information of the last attack
+    
+    [HideInInspector] public Transform damageSource;
+    [HideInInspector] public DamageData damageData;
     
     private void Awake()
     {
@@ -40,19 +45,22 @@ public class HealthComponent : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    public void TakeDamage(int amount, bool canTimeFreezed = true)
+    public void TakeDamage(DamageData _damageData, Transform _damageSource, bool canTimeFreezed)
     {
+        damageSource = _damageSource;
+        damageData = _damageData;
+        
         if (playerCharacter.dashInvincibleTimeCounter > 0)
         {
             playerCharacter.onPlayerDodgeDamage?.Invoke();
         }
-        currentHealth = Mathf.Clamp(currentHealth-amount, 0, 100);
+        currentHealth = Mathf.Clamp(currentHealth-_damageData.damage, 0, 100);
         if (currentHealth == 0)
         {
                 onPlayerDie?.Invoke();
         }
 
-        float percentage = (float) amount / maxHealth;
+        float percentage = (float) _damageData.damage / maxHealth;
 
         float strength = Mathf.Clamp01(percentage);
 
@@ -64,9 +72,11 @@ public class HealthComponent : MonoBehaviour
         {
             BulletTimeManager.instance.Register(bulletTime);
         }
+        
 
         onHealthChanged?.Invoke(currentHealth);
-        onTakeDamage?.Invoke();
+        onTakeDamage?.Invoke(this);
+        
     }
 
     public void HitFreeze()

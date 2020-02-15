@@ -8,9 +8,12 @@ public class ParticleSpawner : MonoBehaviour
     public GameObject DieDust;
     public GameObject GroundDust;
     public GameObject GroundDustTwoWays;
-    public GameObject BloodExplosion;
-    public GameObject BloodExplosionPenetration;
-    
+    public GameObject BloodExplosion2D;
+    public GameObject BloodDripping2D;
+    public GameObject BloodShowerLoop2D;
+    public GameObject BloodSplatDirectional2D;
+    public GameObject BloodSplatCritcal2D;
+
 
     public static ParticleSpawner Instance;
 

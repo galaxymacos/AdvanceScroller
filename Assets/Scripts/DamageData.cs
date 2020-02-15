@@ -9,6 +9,7 @@ public class DamageData: ScriptableObject
     public float pushPower;
     public float pushDistance;
     public PushType pushType;
+    public DamageType damageType;
     
     
     public float offSetDegree;
@@ -22,4 +23,9 @@ public class DamageData: ScriptableObject
 public enum PushType
 {
     AccordingToRelativePosition, SpecificAngleOnly
+}
+
+public enum DamageType
+{
+    Penetration, ShotGun, Explosion, Dripping, HorizontalDripping
 }
