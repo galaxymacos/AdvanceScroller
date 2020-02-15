@@ -4,11 +4,36 @@ using UnityEngine;
 
 public class AB_AxeHero_Skill3 : CharacterStateMachineBehavior
 {
+    public AnimationClip groundForm;
+    public AnimationClip jumpForm;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
+        
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string>{"skill3 jump"});
+        
+        if (!playerCharacter.isGrounded)
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(groundForm, jumpForm));
+ 
+            aoc.ApplyOverrides(anims);
+            animator.runtimeAnimatorController = aoc;
+        }
+        else
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(jumpForm, groundForm));
+ 
+            aoc.ApplyOverrides(anims);
+            animator.runtimeAnimatorController = aoc;
+        }
+        
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         playerCharacter.canControlMovement = false;
     }

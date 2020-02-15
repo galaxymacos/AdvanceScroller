@@ -12,6 +12,7 @@ public class dash : CharacterStateMachineBehavior
     private bool hitEnemy;
 
     private float dashTimeCounter;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -21,21 +22,28 @@ public class dash : CharacterStateMachineBehavior
         dashTimeCounter = dashDuration;
         _animator.GetComponent<PlayerCharacter>().dashTimeCounter++;
         playerCharacter.onPlayerStartDash?.Invoke();
-        
+
         dashRight = playerCharacter.isFacingRight;
         if (playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis < 0)
         {
+            Vector3 localScale = playerCharacter.transform.localScale;
+            localScale.x = -1;
+            playerCharacter.transform.localScale = localScale;
+            
             isDashReversed = true;
         }
         else if (!playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis > 0)
         {
+            Vector3 localScale = playerCharacter.transform.localScale;
+            localScale.x = 1;
+            playerCharacter.transform.localScale = localScale;
+            
             isDashReversed = true;
         }
         else
         {
             isDashReversed = false;
         }
-
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -45,43 +53,44 @@ public class dash : CharacterStateMachineBehavior
         dashTimeCounter -= Time.deltaTime;
         if (dashTimeCounter <= 0)
         {
-            _animator.SetTrigger("fall down");
+            _animator.SetTrigger("idle");
         }
+
         _animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();
-        
-        
-        if (playerCharacter.isFacingRight && playerCharacter.atEnemyLeft)
+
+        if (!isDashReversed)
         {
-            rb.velocity = Vector3.zero;
-            hitEnemy = true;
+            if (playerCharacter.isFacingRight && playerCharacter.atEnemyLeft)
+            {
+                rb.velocity = Vector3.zero;
+                hitEnemy = true;
+            }
+            else if (!playerCharacter.isFacingRight && playerCharacter.atEnemyRight)
+            {
+                rb.velocity = Vector3.zero;
+                hitEnemy = true;
+            }
         }
-        else if (!playerCharacter.isFacingRight && playerCharacter.atEnemyRight)
-        {
-            rb.velocity = Vector3.zero;
-            hitEnemy = true;
-        }
+        
 
         if (!hitEnemy)
         {
             if (dashRight)
             {
-                rb.velocity = Vector2.right * (dashSpeed * (isDashReversed?-1:1));
+                rb.velocity = Vector2.right * (dashSpeed * (isDashReversed ? -1 : 1));
             }
             else
             {
-                rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed?-1:1));
-            
+                rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed ? -1 : 1));
             }
         }
-        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<PlayerCharacter>().canControlMovement = true;
-        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

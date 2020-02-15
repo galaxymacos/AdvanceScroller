@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 15
   pushPower: 15
-  pushDistance: 10
+  pushDistance: 20
   pushType: 1
   damageType: 2
   offSetDegree: 0

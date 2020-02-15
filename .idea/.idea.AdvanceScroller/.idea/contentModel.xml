@@ -176,6 +176,7 @@
         <e p="PhychicHero_ExcelStrike.cs" t="Include" />
         <e p="PlayerCharacterSpawner.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
+        <e p="PlayerPanel.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>

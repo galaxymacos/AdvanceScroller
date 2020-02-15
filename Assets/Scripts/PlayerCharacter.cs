@@ -165,8 +165,8 @@ public class PlayerCharacter : MonoBehaviour
             onPlayerWalkNextToWall?.Invoke();
         }
         
-        atEnemyRight = Physics2D.OverlapCircle(wallLeftCheck.position, 0.3f, whatIsEnemy);
-        atEnemyLeft = Physics2D.OverlapCircle(wallRightCheck.position, 0.3f, whatIsEnemy);
+        atEnemyRight = Physics2D.OverlapCircle(wallLeftCheck.position, 0.2f, whatIsEnemy);
+        atEnemyLeft = Physics2D.OverlapCircle(wallRightCheck.position, 0.2f, whatIsEnemy);
     }
 
 }

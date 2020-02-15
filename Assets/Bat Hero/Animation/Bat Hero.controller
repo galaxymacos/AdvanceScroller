@@ -65,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c68d25efe1c8c04ea39b1903073ea4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forceCancelProcessor: {fileID: 0}
 --- !u!1101 &-6925585801540077999
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1450,7 +1451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a545cd0a2c08984d890510857763f9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  forceCancelProcessor: {fileID: 3312402770574090335}
 --- !u!114 &7666949632001827729
 MonoBehaviour:
   m_ObjectHideFlags: 1
