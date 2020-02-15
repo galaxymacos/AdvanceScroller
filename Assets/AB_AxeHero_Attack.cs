@@ -4,12 +4,18 @@ using UnityEngine;
 
 public class AB_AxeHero_Attack : CharacterStateMachineBehavior
 {
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
-        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        RegisterInputToNextState(new List<string> {"jump"});     // TODO
+
+        // if (playerCharacter.isGrounded)
+        // {
+            playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+            playerCharacter.canControlMovement = false;
+        // }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

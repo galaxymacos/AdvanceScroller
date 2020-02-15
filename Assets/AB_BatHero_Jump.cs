@@ -12,7 +12,7 @@ public class AB_BatHero_Jump : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string> {"double jump", "dash", "jump attack","skill3","skill2","skill4"});
+        RegisterInputToNextState(new List<string> {"double jump", "dash", "attack","skill3","skill2","skill4"});
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         rb = _animator.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);

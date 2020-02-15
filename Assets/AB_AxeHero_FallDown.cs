@@ -10,7 +10,7 @@ public class AB_AxeHero_FallDown : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash", "skill4"});
+        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         if (!messagingSystem.hasDoubleJump)
         {

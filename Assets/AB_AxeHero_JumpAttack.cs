@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class AB_AxeHero_JumpAttack : CharacterStateMachineBehavior
 {
+    public AnimationClip groundForm;
+    public AnimationClip jumpForm;
+    
     private AxeHeroAttackMessager messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

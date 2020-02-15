@@ -5,22 +5,17 @@ using UnityEngine;
 public class AB_AxeHero_DoubleJump : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 5;
-    private PlayerCharacter messagingSystem;
     private Rigidbody2D rb;
-    
-
-
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump attack","skill2","dash"});
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
-        messagingSystem.hasDoubleJump = true;
+        RegisterInputToNextState(new List<string> {"attack","skill2","dash"});
+        playerCharacter.hasDoubleJump = true;
         rb = _animator.GetComponent<Rigidbody2D>();
 
         
-        messagingSystem.canControlMovement = true;
+        playerCharacter.canControlMovement = true;
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         playerCharacter.onPlayerStartDoubleJump?.Invoke();
         
@@ -32,7 +27,7 @@ public class AB_AxeHero_DoubleJump : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded)
+        if (playerCharacter.isGrounded)
         {
             _animator.SetTrigger("idle");
         }

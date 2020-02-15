@@ -24,6 +24,8 @@ public class PlayerCharacter : MonoBehaviour
     public LayerMask whatIsEnemy;
     
     public bool hasDoubleJump;
+    [HideInInspector] public int jumpTime;
+    [HideInInspector] public int maxJumpTime = 2;
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
     public bool isDead;
@@ -148,6 +150,7 @@ public class PlayerCharacter : MonoBehaviour
         if (isGrounded)
         {
             hasDoubleJump = false;
+            jumpTime = 0;
             dashTimeCounter = 0;
         }
 
