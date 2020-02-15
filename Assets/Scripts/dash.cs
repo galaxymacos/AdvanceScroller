@@ -23,11 +23,11 @@ public class dash : CharacterStateMachineBehavior
         playerCharacter.onPlayerStartDash?.Invoke();
         
         dashRight = playerCharacter.isFacingRight;
-        if (playerCharacter.isFacingRight && playerCharacter.playerInput.horizontalAxis < 0)
+        if (playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis < 0)
         {
             isDashReversed = true;
         }
-        else if (!playerCharacter.isFacingRight && playerCharacter.playerInput.horizontalAxis > 0)
+        else if (!playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis > 0)
         {
             isDashReversed = true;
         }

@@ -199,7 +199,6 @@ GameObject:
   - component: {fileID: 891296965151884849}
   - component: {fileID: 891296965151884861}
   - component: {fileID: 891296965151884859}
-  - component: {fileID: 891296965151884858}
   - component: {fileID: 891296965151884856}
   - component: {fileID: 891296965151884857}
   - component: {fileID: 891296965151884998}
@@ -213,13 +212,14 @@ GameObject:
   - component: {fileID: 1375383471}
   - component: {fileID: 5370246305263368930}
   - component: {fileID: 48236528}
-  m_Layer: 10
+  - component: {fileID: -5606359923855577312}
+  m_Layer: 12
   m_Name: Psychic Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &891296965151884860
 Transform:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 891296965151884848}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 42515e02f351a4b49a93fe3a86ad9e12, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -361,7 +361,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4718823397561ad43975c87b6136942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
   groundCheck: {fileID: 891296965803389052}
   isGrounded: 0
   checkRadius: 0.03
@@ -375,6 +374,11 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  atEnemyLeft: 0
+  atEnemyRight: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
@@ -395,27 +399,6 @@ MonoBehaviour:
     type: 3}
   movementSpeed: 5
   canControlMovement: 0
---- !u!114 &891296965151884858
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891296965151884848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7835aacc87b834cae2c11107edf5eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  verticalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!50 &891296965151884856
 Rigidbody2D:
   serializedVersion: 4
@@ -627,11 +610,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushDirection: {x: 0, y: 0}
   pushSpeed: 0
+  pushDistance: 0
   checkRadius: 0.2
   wallRightCheck: {fileID: 1781532041058689586}
   isNextToWallRight: 0
   wallLeftCheck: {fileID: 6066818458530017753}
   isNextToWallLeft: 0
+  groundCheck: {fileID: 0}
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
@@ -649,6 +634,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yellowSprite: {fileID: 21300000, guid: 37cef3b572809bd4fbeefd9632ff8539, type: 3}
   isFlashing: 0
+--- !u!114 &-5606359923855577312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0

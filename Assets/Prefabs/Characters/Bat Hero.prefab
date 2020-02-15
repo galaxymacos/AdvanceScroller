@@ -564,7 +564,6 @@ GameObject:
   - component: {fileID: 8906824143711737651}
   - component: {fileID: 8906824143711737650}
   - component: {fileID: 8906824143711737653}
-  - component: {fileID: 5286924652215516206}
   - component: {fileID: 8906824143711737655}
   - component: {fileID: 8906824143711737654}
   - component: {fileID: 8906824143711737657}
@@ -578,13 +577,14 @@ GameObject:
   - component: {fileID: 5286924653077250119}
   - component: {fileID: 5286924651733753005}
   - component: {fileID: 5286924652371901397}
-  m_Layer: 9
+  - component: {fileID: 1595168072}
+  m_Layer: 10
   m_Name: Bat Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8906824143711737550
 Transform:
   m_ObjectHideFlags: 0
@@ -726,7 +726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4718823397561ad43975c87b6136942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
   groundCheck: {fileID: 8906824144421585213}
   isGrounded: 0
   checkRadius: 0.03
@@ -740,6 +739,11 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  atEnemyLeft: 0
+  atEnemyRight: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
@@ -760,27 +764,6 @@ MonoBehaviour:
     type: 3}
   movementSpeed: 5
   canControlMovement: 0
---- !u!114 &5286924652215516206
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906824143711737656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7073898f28ee4727a68f11d9805f3c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  verticalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!50 &8906824143711737655
 Rigidbody2D:
   serializedVersion: 4
@@ -1005,6 +988,18 @@ MonoBehaviour:
     type: 3}
   kunaiPrefab: {fileID: 7307467305279505974, guid: 10d06383cbb2b134dbf43eb35bda0422,
     type: 3}
+--- !u!114 &1595168072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

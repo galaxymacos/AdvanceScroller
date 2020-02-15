@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\galax\.Rider2019.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\galax\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AdvanceScroller.-49859817.00" t="ExcludeRecursive" />
-    <e p="E:\Repo_Unreal\AdvanceScroller" t="IncludeRecursive">
+    <e p="C:\Users\galax\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AdvanceScroller.883554470.00" t="ExcludeRecursive" />
+    <e p="G:\Unity\AdvanceScroller" t="IncludeRecursive">
+      <e p=".git\info\exclude" t="IncludeRecursive" />
       <e p="AdvanceScroller.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -32,6 +33,41 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="BatHeroAttackMessager.cs" t="Include" />
+        <e p="CharacterParticleSpawner.cs" t="Include" />
+        <e p="Epic Toon FX" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="ETFXButtonScript.cs" t="Include" />
+              <e p="ETFXFireProjectile.cs" t="Include" />
+              <e p="ETFXLoopScript.cs" t="Include" />
+              <e p="ETFXMouseOrbit.cs" t="Include" />
+              <e p="ETFXProjectileScript.cs" t="Include" />
+              <e p="ETFXSceneManager.cs" t="Include" />
+              <e p="ETFXTarget.cs" t="Include" />
+              <e p="VFX Library" t="Include">
+                <e p="ParticleEffectsLibrary.cs" t="Include" />
+                <e p="PEButtonScript.cs" t="Include" />
+                <e p="UICanvasManager.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="Prefabs" t="Include">
+            <e p="Combat" t="Include">
+              <e p="Combat FX.txt" t="Include" />
+            </e>
+            <e p="Environment" t="Include">
+              <e p="Environment FX.txt" t="Include" />
+            </e>
+            <e p="Interactive" t="Include">
+              <e p="Interactive FX.txt" t="Include" />
+            </e>
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="ETFXLightFade.cs" t="Include" />
+            <e p="ETFXPitchRandomizer.cs" t="Include" />
+            <e p="ETFXRotation.cs" t="Include" />
+          </e>
+        </e>
         <e p="InstantKillContinuousAttack.cs" t="Include" />
         <e p="MainMenuButtonAnimationController.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
@@ -138,6 +174,7 @@
         </e>
         <e p="OptionMenuAnimatorController.cs" t="Include" />
         <e p="PhychicHero_ExcelStrike.cs" t="Include" />
+        <e p="PlayerCharacterSpawner.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
@@ -194,6 +231,7 @@
           <e p="PlayerInput.cs" t="Include" />
           <e p="PlayerOneInput.cs" t="Include" />
           <e p="PlayerParticleSpawnerProxy.cs" t="Include" />
+          <e p="PlayerThreeInput.cs" t="Include" />
           <e p="PlayerTwoInput.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
@@ -201,7 +239,6 @@
           <e p="ProjectileFlipComponent.cs" t="Include" />
           <e p="ProjectileKnockComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
-          <e p="push.cs" t="Include" />
           <e p="PushComponent.cs" t="Include" />
           <e p="run_psychic_hero.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
@@ -213,6 +250,7 @@
           <e p="skill3_psychic_hero.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />
+          <e p="SMB_Push.cs" t="Include" />
           <e p="StunComponent.cs" t="Include" />
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />

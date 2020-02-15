@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Huge Slash Red
   m_EditorClassIdentifier: 
   damage: 14
-  pushPower: 0
+  pushPower: 3
+  pushDistance: 4
   pushType: 1
-  offSetDegree: -45
+  offSetDegree: 0
   hitStunPower: 0
-  launcherHorizontalForce: 2
-  launcherVerticalForce: 5
+  launcherHorizontalForce: 0
+  launcherVerticalForce: 0

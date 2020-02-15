@@ -8,6 +8,8 @@ public class ParticleSpawner : MonoBehaviour
     public GameObject DieDust;
     public GameObject GroundDust;
     public GameObject GroundDustTwoWays;
+    public GameObject BloodExplosion;
+    public GameObject BloodExplosionPenetration;
     
 
     public static ParticleSpawner Instance;
@@ -25,10 +27,20 @@ public class ParticleSpawner : MonoBehaviour
     }
 
     
-    public void SpawnPlayerParticle(GameObject particle, PlayerCharacter player)
+    public void SpawnPlayerParticle(GameObject particle, PlayerCharacter player, bool originalPlace = false)
     {
-        GameObject newParticle = Instantiate(particle, player.transform.Find("SpawnLocations").Find(particle.name).position, player.transform.rotation);
-        newParticle.GetComponent<ParticleFacingComponent>().Setup(player);
+        if (originalPlace == false)
+        {
+            GameObject newParticle = Instantiate(particle, player.transform.Find("SpawnLocations").Find(particle.name).position, player.transform.rotation);
+            newParticle.GetComponent<ParticleFacingComponent>().Setup(player);
+        }
+        else
+        {
+            GameObject newParticle = Instantiate(particle, player.transform.position, player.transform.rotation);
+            newParticle.GetComponent<ParticleFacingComponent>().Setup(player);
+        }
+        
     }
+    
     
 }

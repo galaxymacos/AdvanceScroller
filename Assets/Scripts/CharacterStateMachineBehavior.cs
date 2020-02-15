@@ -7,7 +7,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     /// Contain all animations in this animator, and whether we can transfer to that state
     /// </summary>
     protected Dictionary<string, bool> animations;
-    protected Animator animator;
+    protected Animator characterAnimator;
     protected PlayerInput playerInput;
     public ForceCancelProcessor forceCancelProcessor;
     protected PlayerCharacter playerCharacter;
@@ -16,7 +16,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        this.animator = _animator;
+        this.characterAnimator = _animator;
         playerInput = _animator.GetComponent<PlayerInput>();
         animations = new Dictionary<string, bool>();
         foreach (AnimatorControllerParameter parameter in _animator.parameters)
@@ -262,7 +262,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     
     protected void TransferToWallSlide()
     {
-        animator.SetTrigger("wallslide");
+        characterAnimator.SetTrigger("wallslide");
     }
 
    

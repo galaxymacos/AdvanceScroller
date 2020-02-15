@@ -7,7 +7,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerCharacter))]
 public class HealthComponent : MonoBehaviour
 {
-    public int health = 100;
+    public int maxHealth = 100;
+    private int currentHealth;
 
     private Animator animator;
     private static readonly int Die = Animator.StringToHash("die");
@@ -18,7 +19,7 @@ public class HealthComponent : MonoBehaviour
     private float maxBulletTime = 0.4f;
     private float bulletTime;
     private CameraShake cameraShake;
-    public bool isPlayerDead => health <= 0;
+    public bool isPlayerDead => currentHealth <= 0;
     public PlayerCharacter playerCharacter;
     
     
@@ -31,6 +32,7 @@ public class HealthComponent : MonoBehaviour
         animator = GetComponent<Animator>();
         if (Camera.main != null) cameraShake = Camera.main.GetComponent<CameraShake>();
         playerCharacter = GetComponent<PlayerCharacter>();
+        currentHealth = maxHealth;
     }
 
     private void Update()
@@ -44,13 +46,14 @@ public class HealthComponent : MonoBehaviour
         {
             playerCharacter.onPlayerDodgeDamage?.Invoke();
         }
-        health = Mathf.Clamp(health-amount, 0, 100);
-        if (health == 0)
+        currentHealth = Mathf.Clamp(currentHealth-amount, 0, 100);
+        if (currentHealth == 0)
         {
                 onPlayerDie?.Invoke();
         }
 
-        float percentage = (float) amount / health;
+        float percentage = (float) amount / maxHealth;
+
         float strength = Mathf.Clamp01(percentage);
 
         StartCoroutine(cameraShake.Shake(.15f, .1f));
@@ -62,7 +65,7 @@ public class HealthComponent : MonoBehaviour
             BulletTimeManager.instance.Register(bulletTime);
         }
 
-        onHealthChanged?.Invoke(health);
+        onHealthChanged?.Invoke(currentHealth);
         onTakeDamage?.Invoke();
     }
 
@@ -74,8 +77,8 @@ public class HealthComponent : MonoBehaviour
     
     public void Heal(int amount)
     {
-        health = Mathf.Clamp(health+amount, 0, 100);
-        onHealthChanged?.Invoke(health);
+        currentHealth = Mathf.Clamp(currentHealth+amount, 0, 100);
+        onHealthChanged?.Invoke(currentHealth);
     }
 }
 

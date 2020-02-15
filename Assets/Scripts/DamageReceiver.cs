@@ -28,12 +28,12 @@ public class DamageReceiver : MonoBehaviour
             if (damageData.pushType == PushType.SpecificAngleOnly)
             {
                 print("first type push");
-                pushComponent.Push(damageOwner, damageData.pushPower, damageData.offSetDegree);
+                pushComponent.Push(damageOwner, damageData.pushPower, damageData.offSetDegree, damageData.pushDistance);
             }
             else if (damageData.pushType == PushType.AccordingToRelativePosition)
             {
                 print("second type push");
-                pushComponent.Push(damageOwner, damageData.pushPower);
+                pushComponent.Push(damageOwner, damageData.pushPower, damageData.pushDistance);
 
             }
         }

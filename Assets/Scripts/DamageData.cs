@@ -4,8 +4,13 @@
 public class DamageData: ScriptableObject
 {
     public int damage;
+    
+    
     public float pushPower;
+    public float pushDistance;
     public PushType pushType;
+    
+    
     public float offSetDegree;
     public float hitStunPower;
     public float launcherHorizontalForce;

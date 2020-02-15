@@ -8,6 +8,7 @@ public class PushComponent : MonoBehaviour
     private PlayerCharacter playerCharacter;
     public Vector2 pushDirection;
     public float pushSpeed;
+    public float pushDistance;
     public Action<Vector2> onHitWall;
     public Action<Vector2> onHitGround;
 
@@ -25,13 +26,13 @@ public class PushComponent : MonoBehaviour
         playerCharacter = GetComponent<PlayerCharacter>();
     }
 
-    public void Push(Transform damageSource, float speed)
+    public void Push(Transform damageSource, float speed, float pushDistance)
     {
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
             pushDirection = Vector3.Normalize(transform.position - damageSource.position);
             pushSpeed = speed;
-            print("First type push: " + pushDirection + "    " + pushSpeed);
+            this.pushDistance = pushDistance;
             GetComponent<Animator>().SetTrigger("push");
         }
     }
@@ -42,7 +43,7 @@ public class PushComponent : MonoBehaviour
     /// <param name="damageSource"></param>
     /// <param name="speed"></param>
     /// <param name="angleOffset"></param>
-    public void Push(Transform damageSource, float speed, float angleOffset)
+    public void Push(Transform damageSource, float speed, float angleOffset, float pushDistance)
     {
 
         if (angleOffset < 0 && playerCharacter.isGrounded)
@@ -51,21 +52,20 @@ public class PushComponent : MonoBehaviour
         }
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
-            Vector2 ownerFacingDirection = (damageSource.position.x - playerCharacter.transform.position.x) < 0
+            Vector2 relativePositionBetweenActors = (damageSource.position.x - playerCharacter.transform.position.x) < 0
                 ? new Vector2(1, 0)
                 : new Vector2(-1, 0);
-            if (playerCharacter.isFacingRight)
+            if (damageSource.GetComponent<PlayerCharacter>().isFacingRight)
             {
-                pushDirection = Quaternion.AngleAxis(angleOffset, Vector3.forward) * ownerFacingDirection;
+                pushDirection = Quaternion.AngleAxis(angleOffset, Vector3.forward) * relativePositionBetweenActors;
             }
             else
             {
-                pushDirection = Quaternion.AngleAxis(-angleOffset, Vector3.forward) * ownerFacingDirection;
+                pushDirection = Quaternion.AngleAxis(-angleOffset, Vector3.forward) * relativePositionBetweenActors;
             }
 
             pushSpeed = speed;
-            print("Second type push: " + pushDirection + "    " + pushSpeed);
-
+            this.pushDistance = pushDistance;
             GetComponent<Animator>().SetTrigger("push");
         }
     }

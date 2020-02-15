@@ -12,12 +12,13 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     private void Update()
     {
-        if (isRunning)
+        if (!isRunning) return;
+        if (objectsInCollision == null) return;
+        
+        
+        foreach (GameObject objectCollided in objectsInCollision)
         {
-            foreach (GameObject objectCollided in objectsInCollision)
-            {
-                DealDamageToSingleTarget(objectCollided);
-            }
+            DealDamageToSingleTarget(objectCollided);
         }
     }
 

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public PlayerInput playerInput;
+    private PlayerInput playerInput;
     
     
     public Transform groundCheck;
@@ -19,8 +19,8 @@ public class PlayerCharacter : MonoBehaviour
     public bool isNextToWallRight;
     public LayerMask whatIsWall;
     
-    public bool atEnemyLeft;
-    public bool atEnemyRight;
+    [HideInInspector] public bool atEnemyLeft;
+    [HideInInspector] public bool atEnemyRight;
     public LayerMask whatIsEnemy;
     
     public bool hasDoubleJump;
@@ -75,6 +75,7 @@ public class PlayerCharacter : MonoBehaviour
         
 
     }
+    
 
     private void PlayerDie()
     {

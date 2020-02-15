@@ -190,7 +190,6 @@ GameObject:
   - component: {fileID: 4758164498511340000}
   - component: {fileID: 4758164498511340001}
   - component: {fileID: 4758164498511340006}
-  - component: {fileID: 8128414368269634301}
   - component: {fileID: 4758164498511340004}
   - component: {fileID: 4758164498511340005}
   - component: {fileID: 4758164498511340010}
@@ -205,13 +204,14 @@ GameObject:
   - component: {fileID: 4758164498511339796}
   - component: {fileID: 4758164498511339797}
   - component: {fileID: 1340760059}
+  - component: {fileID: 4556048856342974423}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4758164498511339549
 Transform:
   m_ObjectHideFlags: 0
@@ -353,7 +353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4718823397561ad43975c87b6136942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInput: {fileID: 0}
   groundCheck: {fileID: 4758164499162478574}
   isGrounded: 0
   checkRadius: 0.03
@@ -367,6 +366,11 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  atEnemyLeft: 0
+  atEnemyRight: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
   hasDoubleJump: 0
   maxDashTimeInAir: 1
   dashTimeCounter: 0
@@ -387,27 +391,6 @@ MonoBehaviour:
     type: 3}
   movementSpeed: 5
   canControlMovement: 0
---- !u!114 &8128414368269634301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758164498511340011}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7073898f28ee4727a68f11d9805f3c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  verticalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!50 &4758164498511340004
 Rigidbody2D:
   serializedVersion: 4
@@ -613,6 +596,9 @@ MonoBehaviour:
     type: 3}
   greenAxeBuff: {fileID: 4413467096699321655, guid: 9f91e29cec440d7499c0b16ce377b2ba,
     type: 3}
+  axePrefab: {fileID: 3141847192435845741, guid: fe5b6fba5134cba4e8f96db75e025fc5,
+    type: 3}
+  axeSpawnPosition: {fileID: 4367364928346544680}
   attack: {fileID: 979963005548017987}
   hugeSlash: {fileID: 5688817924904381308}
   onTransformToRed:
@@ -678,6 +664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pushDirection: {x: 0, y: 0}
   pushSpeed: 0
+  pushDistance: 0
   checkRadius: 0.05
   wallRightCheck: {fileID: 2577492763309506682}
   isNextToWallRight: 0
@@ -687,6 +674,18 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 0
+--- !u!114 &4556048856342974423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0

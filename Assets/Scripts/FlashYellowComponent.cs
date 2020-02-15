@@ -25,7 +25,6 @@ public class FlashYellowComponent : MonoBehaviour
     
     public void FlashYellow()
     {
-        print("flashing yellow");
         isFlashing = true;
         spriteRenderer.sprite = yellowSprite;
         
