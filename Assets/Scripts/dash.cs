@@ -20,7 +20,10 @@ public class dash : CharacterStateMachineBehavior
         hasActivatedBulletTime = false;
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         dashTimeCounter = dashDuration;
-        _animator.GetComponent<PlayerCharacter>().dashTimeCounter++;
+        if (!playerCharacter.isGrounded)
+        {
+            playerCharacter.dashTimeCounter++;
+        }
         playerCharacter.onPlayerStartDash?.Invoke();
 
         dashRight = playerCharacter.isFacingRight;

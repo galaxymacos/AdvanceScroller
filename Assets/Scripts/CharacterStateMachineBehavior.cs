@@ -75,10 +75,10 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                 {
                     return "";
                 }
-            case "double jump":
-                if (!playerCharacter.hasDoubleJump)
+            case "jump":
+                if (playerCharacter.jumpTime < playerCharacter.maxJumpTime)
                 {
-                    return "double jump";
+                    return "jump";
                 }
                 else
                 {

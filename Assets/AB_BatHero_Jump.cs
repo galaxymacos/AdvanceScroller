@@ -5,18 +5,47 @@ using UnityEngine;
 public class AB_BatHero_Jump : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 10f;
+
+    [SerializeField] private AnimationClip firstJump;
+    [SerializeField] private AnimationClip secondJump;
+    
     private Rigidbody2D rb;
 
+    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string> {"double jump", "dash", "attack","skill3","skill2","skill4"});
+        RegisterInputToNextState(new List<string> {"jump", "dash", "attack","skill3","skill2","skill4"});
+        
+        if (playerCharacter.jumpTime == 0)
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(secondJump, firstJump));
+ 
+            aoc.ApplyOverrides(anims);
+            _animator.runtimeAnimatorController = aoc;
+        }
+        else
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(firstJump, secondJump));
+ 
+            aoc.ApplyOverrides(anims);
+            _animator.runtimeAnimatorController = aoc;
+        }
+        
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         rb = _animator.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
 
+
+        playerCharacter.jumpTime++;
         playerCharacter.onPlayerStartJump?.Invoke();
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
     }

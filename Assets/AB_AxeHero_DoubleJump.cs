@@ -10,8 +10,8 @@ public class AB_AxeHero_DoubleJump : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
+        playerCharacter.jumpTime++;
         RegisterInputToNextState(new List<string> {"attack","skill2","dash"});
-        playerCharacter.hasDoubleJump = true;
         rb = _animator.GetComponent<Rigidbody2D>();
 
         

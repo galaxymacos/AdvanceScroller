@@ -11,12 +11,9 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash"});
+        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash","jump"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
-        if (!messagingSystem.hasDoubleJump)
-        {
-            RegisterInputToNextState("double jump");
-        }
+        
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
 

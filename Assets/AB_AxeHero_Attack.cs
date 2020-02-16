@@ -5,17 +5,39 @@ using UnityEngine;
 public class AB_AxeHero_Attack : CharacterStateMachineBehavior
 {
     
+    [SerializeField] private AnimationClip groundAttack;
+    [SerializeField] private AnimationClip jumpAttack;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(animator, stateInfo, layerIndex);
+        base.OnStateEnter(_animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"jump"});     // TODO
 
-        // if (playerCharacter.isGrounded)
-        // {
+        if (playerCharacter.isGrounded)
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(jumpAttack, groundAttack));
+ 
+            aoc.ApplyOverrides(anims);
+            _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             playerCharacter.canControlMovement = false;
-        // }
+        }
+        else
+        {
+            AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
+            var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
+ 
+            anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(groundAttack, jumpAttack));
+ 
+            aoc.ApplyOverrides(anims);
+            _animator.runtimeAnimatorController = aoc;
+        }
+        
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

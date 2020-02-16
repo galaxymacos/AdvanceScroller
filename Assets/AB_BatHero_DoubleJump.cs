@@ -16,7 +16,6 @@ public class AB_BatHero_DoubleJump : CharacterStateMachineBehavior
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"jump attack","skill3","dash","skill4"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
-        messagingSystem.hasDoubleJump = true;
         rb = _animator.GetComponent<Rigidbody2D>();
 
         

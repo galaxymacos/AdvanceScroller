@@ -22,8 +22,7 @@ public class PlayerCharacter : MonoBehaviour
     [HideInInspector] public bool atEnemyLeft;
     [HideInInspector] public bool atEnemyRight;
     public LayerMask whatIsEnemy;
-    
-    public bool hasDoubleJump;
+
     [HideInInspector] public int jumpTime;
     [HideInInspector] public int maxJumpTime = 2;
     public int maxDashTimeInAir = 1;
@@ -74,7 +73,8 @@ public class PlayerCharacter : MonoBehaviour
         flipComponent = new CharacterFlipComponent(transform);
         
         GetComponent<CharacterHealthComponent>().onPlayerDie = PlayerDie;
-        
+        onPlayerGrounded += ResetJumpTime;
+
 
     }
     
@@ -94,6 +94,7 @@ public class PlayerCharacter : MonoBehaviour
         {
             dashInvincibleTimeCounter -= Time.deltaTime;
         }
+        print("Player has jumped "+jumpTime);
     }
 
     private void UpdateFacingDirection()
@@ -147,12 +148,6 @@ public class PlayerCharacter : MonoBehaviour
             onPlayerGrounded?.Invoke();
 
         }
-        if (isGrounded)
-        {
-            hasDoubleJump = false;
-            jumpTime = 0;
-            dashTimeCounter = 0;
-        }
 
         bool wasNextToWallRight = isNextToWallRight;
         isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
@@ -172,5 +167,10 @@ public class PlayerCharacter : MonoBehaviour
         atEnemyLeft = Physics2D.OverlapCircle(wallRightCheck.position, 0.2f, whatIsEnemy);
     }
 
+    private void ResetJumpTime()
+    {
+        jumpTime = 0;
+        dashTimeCounter = 0;
+    }
 }
 
