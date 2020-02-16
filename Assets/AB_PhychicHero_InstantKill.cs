@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PhychicHero_ExcelStrike : CharacterStateMachineBehavior
+public class AB_PhychicHero_InstantKill : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

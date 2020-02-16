@@ -454,7 +454,6 @@ GameObject:
   - component: {fileID: 4879155709947218411}
   - component: {fileID: 8602365651466050991}
   - component: {fileID: 3028136784199849831}
-  - component: {fileID: 1152035883}
   m_Layer: 0
   m_Name: InstantKill
   m_TagString: Untagged
@@ -517,23 +516,6 @@ MonoBehaviour:
   damageData: {fileID: 11400000, guid: cf74dc6498b309d4caaed0b1ef1eb946, type: 2}
   objectsHasProcessed: []
 --- !u!114 &3028136784199849831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7122813176470938837}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8456295d22badd345ad86f27c764bdf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 1
-  tickInterval: 0.1
-  damageData: {fileID: 11400000, guid: cd37c68a8e5c8604d897dce4da1be7b2, type: 2}
-  owner: {fileID: 8906824143711737653}
-  SingleAttackComponent: {fileID: 8602365651466050991}
---- !u!114 &1152035883
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

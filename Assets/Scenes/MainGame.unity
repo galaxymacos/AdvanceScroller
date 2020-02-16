@@ -121,58 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &243797628
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 243797629}
-  - component: {fileID: 243797630}
-  m_Layer: 0
-  m_Name: Player2
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &243797629
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243797628}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &243797630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243797628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee7835aacc87b834cae2c11107edf5eb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  verticalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!1001 &356470744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1226,80 +1174,6 @@ MonoBehaviour:
   playerPanels:
   - {fileID: 1328209014}
   - {fileID: 1736088198}
---- !u!1001 &1582003094
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737550, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737653, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: whatIsGround.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-      propertyPath: m_Name
-      value: Bat Hero
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e6750891bed24274dafecee240bfd1d4, type: 3}
 --- !u!1 &1681197435
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,58 +1404,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8717b33e4f8b6e244a326538e17a1179, type: 3}
---- !u!1 &1723175356
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1723175357}
-  - component: {fileID: 1723175358}
-  m_Layer: 0
-  m_Name: Player1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1723175357
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723175356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1723175358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1723175356}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7073898f28ee4727a68f11d9805f3c53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  horizontalAxis: 0
-  verticalAxis: 0
-  jumpButtonPressed: 0
-  attackButtonPressed: 0
-  dashButtonPressed: 0
-  skill1ButtonPressed: 0
-  skill2ButtonPressed: 0
-  skill3ButtonPressed: 0
-  skill4ButtonPressed: 0
 --- !u!1 &1736088194
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +1840,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedHeros.Array.data[0]
       value: 
-      objectReference: {fileID: 4758164498511340011, guid: 131012b09bddffd4594a266bbc843069,
+      objectReference: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
         type: 3}
     - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
@@ -2064,7 +1886,7 @@ PrefabInstance:
     - target: {fileID: 6481704858091205022, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6481704858091205022, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}

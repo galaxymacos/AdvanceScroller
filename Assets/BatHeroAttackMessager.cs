@@ -18,74 +18,109 @@ public class BatHeroAttackMessager : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector3 instantKillDirection;
+    private float originalY;
 
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
         rb = GetComponent<Rigidbody2D>();
     }
-    
-    
 
 
     // Update is called once per frame
     void Update()
     {
-        
     }
 
     private void RecordInstantKillVelocity()
     {
         instantKillDirection = rb.velocity;
+        originalY = playerCharacter.transform.position.y;
     }
-    
+
     public void Teleport()
     {
-        print("the player's velocity is "+rb.velocity);
+        Vector3 teleportDirection = Vector3.zero;
+        if (playerCharacter.isFacingRight)
+        {
+            teleportDirection += new Vector3(5, 0);
+        }
+        else
+        {
+            teleportDirection += new Vector3(-5, 0);
+        }
+
+        teleportDirection += instantKillDirection * 0.2f;
+
+        RaycastHit2D hitInfoWall = Physics2D.Raycast(playerCharacter.transform.position,
+            Vector3.Normalize(teleportDirection), teleportDirection.magnitude, playerCharacter.whatIsWall);
+        
+        if (playerCharacter.isGrounded)
+        {
             if (playerCharacter.isFacingRight)
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(instantKillDirection), 5, playerCharacter.whatIsWall);
-                if (hitInfo.collider != null)
+                if (hitInfoWall.collider == null)
                 {
-                    print("hit the wall at "+hitInfo.point);
-                    playerCharacter.transform.position = hitInfo.point+new Vector2(-1f,0);
+                    teleportDirection = new Vector3(4, 0)+new Vector3(Vector3.Normalize(instantKillDirection).x,0);
+                    playerCharacter.transform.Translate(teleportDirection);
                 }
                 else
                 {
-                    print("doesn't hit the wall");
-                    if (rb.velocity.magnitude <= Mathf.Epsilon)
-                    {
-                        playerCharacter.transform.Translate(Vector2.right*5);
-                    } 
-                    else
-                    {
-                        playerCharacter.transform.Translate(Vector3.Normalize(instantKillDirection)*5);
-                    }
+                    playerCharacter.transform.position = hitInfoWall.point + new Vector2(-1f, 0);
                 }
             }
             else
             {
-                RaycastHit2D hitInfo = Physics2D.Raycast(playerCharacter.transform.position, Vector3.Normalize(instantKillDirection), 5, playerCharacter.whatIsWall);
-                if (hitInfo.collider != null)
+                if (hitInfoWall.collider == null)
                 {
-                    print("hit the wall at "+hitInfo.point);
-                    playerCharacter.transform.position = hitInfo.point+new Vector2(1f, 0);
+                    teleportDirection = new Vector3(-4, 0)+new Vector3(Vector3.Normalize(instantKillDirection).x,0);
+                    playerCharacter.transform.Translate(teleportDirection);
                 }
                 else
                 {
-                    print("doesn't hit the wall");
-                    if (rb.velocity.magnitude <= Mathf.Epsilon)
-                    {
-                        playerCharacter.transform.Translate(Vector2.left*5);
-                    } 
-                    else
-                    {
-                        playerCharacter.transform.Translate(Vector3.Normalize(instantKillDirection)*5);
-                    }
+                    playerCharacter.transform.position = hitInfoWall.point + new Vector2(1f, 0);
                 }
-
             }
-            
+        }
+        else // Player is on the air
+        {
+            Vector3 teleportDirectionHorizontal;
+            if (playerCharacter.isFacingRight)
+            {
+                if (hitInfoWall.collider == null)
+                {
+                    teleportDirectionHorizontal = playerCharacter.transform.position + new Vector3(4, 0)+Vector3.Normalize(instantKillDirection);
+                }
+                else
+                {
+                    teleportDirectionHorizontal = hitInfoWall.point + new Vector2(-1f, 0);
+                }
+            }
+            else
+            {
+                if (hitInfoWall.collider == null)
+                {
+                    teleportDirectionHorizontal = playerCharacter.transform.position + new Vector3(-4, 0)+Vector3.Normalize(instantKillDirection);
+                }
+                else
+                {
+                    teleportDirectionHorizontal = hitInfoWall.point + new Vector2(1f, 0);
+                }
+            }
+            RaycastHit2D hitInfoGround = Physics2D.Raycast(teleportDirectionHorizontal,
+                Vector2.down, playerCharacter.transform.position.y - originalY, playerCharacter.whatIsGround);
+            if (hitInfoGround.collider == null)
+            {
+                playerCharacter.transform.position =
+                    new Vector2(teleportDirectionHorizontal.x, playerCharacter.transform.position.y);
+            }
+            else
+            {
+                playerCharacter.transform.position =
+                    new Vector2(teleportDirectionHorizontal.x, hitInfoGround.point.y+2);
+            }
+        }
+        
     }
 
     public void AttackFirstHit()
@@ -100,16 +135,18 @@ public class BatHeroAttackMessager : MonoBehaviour
 
     public void SpawnBlueBall()
     {
-        GameObject blueball = Instantiate(blueballPrefab, transform.Find("SpawnLocations").Find("BlueBall").position, transform.rotation);
+        GameObject blueball = Instantiate(blueballPrefab, transform.Find("SpawnLocations").Find("BlueBall").position,
+            transform.rotation);
         var projectile = blueball.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 20 ,0);
+        projectile.Setup(playerCharacter, 20, 0);
     }
 
     public void SpawnKunai()
     {
-        GameObject kunai = Instantiate(kunaiPrefab, transform.Find("SpawnLocations").Find("Kunai").position, transform.rotation);
+        GameObject kunai = Instantiate(kunaiPrefab, transform.Find("SpawnLocations").Find("Kunai").position,
+            transform.rotation);
         var projectile = kunai.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 15 ,0);
+        projectile.Setup(playerCharacter, 15, 0);
     }
 
     public void InstantKill()
@@ -122,6 +159,4 @@ public class BatHeroAttackMessager : MonoBehaviour
         closeYourEyes.Execute();
         RecordInstantKillVelocity();
     }
-    
-    
 }

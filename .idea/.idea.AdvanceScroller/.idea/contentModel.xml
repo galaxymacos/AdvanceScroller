@@ -25,6 +25,7 @@
         <e p="AB_BatHero_Jump.cs" t="Include" />
         <e p="AB_BatHero_JumpAttack.cs" t="Include" />
         <e p="AB_BatHero_Transform.cs" t="Include" />
+        <e p="AB_PhychicHero_InstantKill.cs" t="Include" />
         <e p="AB_PsychicHero_EyeBullet.cs" t="Include" />
         <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
         <e p="AB_SwordPrincess_Jump.cs" t="Include" />
@@ -191,7 +192,6 @@
           </e>
         </e>
         <e p="OptionMenuAnimatorController.cs" t="Include" />
-        <e p="PhychicHero_ExcelStrike.cs" t="Include" />
         <e p="PlayerCharacterSpawner.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerPanel.cs" t="Include" />
