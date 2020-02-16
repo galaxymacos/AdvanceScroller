@@ -5,7 +5,7 @@ using UnityEngine;
 public class ForceCancelProcessor : StateMachineBehaviour
 {
     public List<string> animationNameToTransfer;
-
+    public float energyConsumePerUsage = 25f;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -21,7 +21,7 @@ public class ForceCancelProcessor : StateMachineBehaviour
             if (animationName == animationAvailable)
             {
                 CharacterEnergyComponent characterEnergy = anim.GetComponent<CharacterEnergyComponent>();
-                if (characterEnergy.Consume(50))
+                if (characterEnergy.Consume(energyConsumePerUsage))
                 {
                     return animationName;
                 }

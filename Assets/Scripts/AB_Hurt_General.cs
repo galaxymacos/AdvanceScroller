@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class hurt_psychic_hero : StateMachineBehaviour
+public class AB_Hurt_General : StateMachineBehaviour
 {
     private Rigidbody2D rb;
 
@@ -17,7 +17,7 @@ public class hurt_psychic_hero : StateMachineBehaviour
         knockable = animator.GetComponent<Knockable>();
         rb.velocity = knockable.knockDirection;
     }
-
+ 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

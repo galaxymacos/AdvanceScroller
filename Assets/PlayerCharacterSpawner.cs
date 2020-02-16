@@ -20,7 +20,7 @@ public class PlayerCharacterSpawner : MonoBehaviour
 
     public List<PlayerCharacter> charactersForPlayer;
 
-    public UnityAction onPlayerSpawnFinished;
+    public static Action onPlayerSpawnFinished;
 
     public static PlayerCharacterSpawner instance;
 
@@ -62,7 +62,6 @@ public class PlayerCharacterSpawner : MonoBehaviour
             }
                 
         }
-        
         onPlayerSpawnFinished?.Invoke();
         
     }
@@ -75,12 +74,5 @@ public class PlayerCharacterSpawner : MonoBehaviour
             layerNumber++;
         }
         return layerNumber - 1;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

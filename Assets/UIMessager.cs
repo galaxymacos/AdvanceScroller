@@ -8,10 +8,9 @@ public class UIMessager : MonoBehaviour
     public List<PlayerPanel> playerPanels;
     // Start is called before the first frame update
     
-    private void Start()
+    private void Awake()
     {
-        PlayerCharacterSpawner.instance.onPlayerSpawnFinished += Setup;
-        
+        PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
     }
 
 

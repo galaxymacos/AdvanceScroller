@@ -191,6 +191,7 @@
             </e>
           </e>
         </e>
+        <e p="MultipleTargetCamera.cs" t="Include" />
         <e p="OptionMenuAnimatorController.cs" t="Include" />
         <e p="PlayerCharacterSpawner.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
@@ -200,6 +201,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AB_Dash_General.cs" t="Include" />
+          <e p="AB_Hurt_General.cs" t="Include" />
           <e p="AB_PsychicHero_Attack.cs" t="Include" />
           <e p="AB_PsychicHero_Falldown.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
@@ -232,7 +234,6 @@
           <e p="HeroineAnimatorController.cs" t="Include" />
           <e p="HeroineState.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
-          <e p="hurt_psychic_hero.cs" t="Include" />
           <e p="HurtState.cs" t="Include" />
           <e p="idle_physics_hero.cs" t="Include" />
           <e p="IdleState.cs" t="Include" />

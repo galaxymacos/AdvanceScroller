@@ -23,3 +23,8 @@ public class CameraShake : MonoBehaviour
         transform.localPosition = originalPos;
     }
 }
+
+public interface CameraProcessor
+{ 
+    void Update();
+}

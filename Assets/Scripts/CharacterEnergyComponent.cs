@@ -16,7 +16,7 @@ public class CharacterEnergyComponent : MonoBehaviour
         currentEnergy = maxEnergy;
     }
 
-    public bool Consume(int amount)
+    public bool Consume(float amount)
     {
         if (currentEnergy - amount < 0)
         {
