@@ -39,6 +39,7 @@
         </e>
         <e p="BatHeroAttackMessager.cs" t="Include" />
         <e p="BloodParticleSpawner.cs" t="Include" />
+        <e p="DodgeShadow.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">

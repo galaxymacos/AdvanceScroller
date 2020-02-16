@@ -17,6 +17,7 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
         playerCharacter.onPlayerStartJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerGrounded += SpawnGroundDustTwoWays;
+        playerCharacter.onPlayerDodgeSucceed += SpawnDodgeShadow;
     }
 
     public void SpawnGroundDustGroundLimited()
@@ -42,5 +43,15 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
     public void SpawnDieParticle()
     {
         ParticleSpawner.Instance.SpawnPlayerParticle(ParticleSpawner.Instance.DieDust,playerCharacter);
+    }
+
+    public void SpawnDodgeShadow()
+    {
+        print("spawn dodge shadow");
+        Transform currentTransform = transform;
+        Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
+        GameObject dodgeShadow = Instantiate(ParticleSpawner.Instance.DodgeShadow, currentTransform.position, currentTransform.rotation);
+        dodgeShadow.transform.localScale = transform.localScale;
+        dodgeShadow.GetComponent<SpriteRenderer>().sprite = currentSprite;
     }
 }

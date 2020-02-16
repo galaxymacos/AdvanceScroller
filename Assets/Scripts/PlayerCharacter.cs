@@ -25,6 +25,8 @@ public class PlayerCharacter : MonoBehaviour
 
     [HideInInspector] public int jumpTime;
     [HideInInspector] public int maxJumpTime = 2;
+    
+    
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
     public bool isDead;
@@ -47,7 +49,7 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerStartJump;
     public Action onPlayerGrounded;
     public Action onPlayerStartDash;
-    public Action onPlayerDodgeDamage;
+    public Action onPlayerDodgeSucceed;
     public Action onPlayerWalkNextToWall;
     
     public bool isFacingRight => transform.localScale.x > 0;

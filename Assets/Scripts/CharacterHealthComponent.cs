@@ -50,10 +50,11 @@ public class CharacterHealthComponent : MonoBehaviour
         damageSource = _damageSource;
         damageData = _damageData;
         
-        if (playerCharacter.dashInvincibleTimeCounter > 0)
-        {
-            playerCharacter.onPlayerDodgeDamage?.Invoke();
-        }
+        // if (playerCharacter.dashInvincibleTimeCounter > 0)
+        // {
+            // playerCharacter.onPlayerDodgeDamage?.Invoke();
+        // }
+        
         currentHealth = Mathf.Clamp(currentHealth-_damageData.damage, 0, 100);
         if (currentHealth == 0)
         {

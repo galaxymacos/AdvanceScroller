@@ -13,6 +13,7 @@ public class ParticleSpawner : MonoBehaviour
     public GameObject BloodShowerLoop2D;
     public GameObject BloodSplatDirectional2D;
     public GameObject BloodSplatCritcal2D;
+    public GameObject DodgeShadow;
 
 
     public static ParticleSpawner Instance;
