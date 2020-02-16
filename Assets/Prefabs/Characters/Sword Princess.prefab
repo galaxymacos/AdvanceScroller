@@ -368,6 +368,7 @@ GameObject:
   - component: {fileID: 196639348}
   - component: {fileID: 7225560470583709286}
   - component: {fileID: 1513319369006766254}
+  - component: {fileID: 3263405227032971152}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -589,6 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
@@ -678,6 +680,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20c44992a9352499ea096b96dd5500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnergy: 0
   maxEnergy: 100
   recoverSpeed: 10
   onEnergyChanged:
@@ -801,6 +804,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yellowSprite: {fileID: 21300000, guid: ac04882c60c0fae40856436ed5970fc0, type: 3}
   isFlashing: 0
+--- !u!114 &3263405227032971152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74036991f0ec5442bbbd30258d22d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDirection: {x: 0, y: 0}
+  pushSpeed: 0
+  pushDistance: 0
+  checkRadius: 0.2
+  wallRightCheck: {fileID: 5983302370228949104}
+  isNextToWallRight: 0
+  wallLeftCheck: {fileID: 2888610044328624244}
+  isNextToWallLeft: 0
+  groundCheck: {fileID: 3658480544129214436}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

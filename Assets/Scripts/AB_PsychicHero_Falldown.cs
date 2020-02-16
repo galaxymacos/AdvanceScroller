@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fall_down_psychic_hero : CharacterStateMachineBehavior
+public class AB_PsychicHero_Falldown : CharacterStateMachineBehavior
 {
     private PlayerCharacter messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -11,7 +11,7 @@ public class fall_down_psychic_hero : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"jump attack", "skill3", "dash","jump"});
+        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash","jump"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         

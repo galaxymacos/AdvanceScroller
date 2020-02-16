@@ -63,6 +63,8 @@ public class PlayerCharacterSpawner : MonoBehaviour
                 
         }
         
+        onPlayerSpawnFinished?.Invoke();
+        
     }
     
     public static int layermask_to_layer(LayerMask layerMask) {

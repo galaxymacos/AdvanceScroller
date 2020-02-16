@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class CharacterHealthComponent : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    [HideInInspector] public int currentHealth;
 
     private Animator animator;
     private static readonly int Die = Animator.StringToHash("die");

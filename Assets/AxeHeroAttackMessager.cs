@@ -51,6 +51,10 @@ public class AxeHeroAttackMessager : MonoBehaviour
             buffKing.GetComponent<SpriteRenderer>().color =Color.green;
             onTransformToGreen?.Invoke();
         }
+        else
+        {
+            return;
+        }
 
     }
 
@@ -63,11 +67,13 @@ public class AxeHeroAttackMessager : MonoBehaviour
 
     public void Attack()
     {
+        print("attack");
         attack.Execute();
     }
 
     public void HugeSlash()
     {
+        print("huge slash");
         hugeSlash.Execute();
     }
 }

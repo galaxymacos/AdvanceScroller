@@ -50,12 +50,7 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerDodgeDamage;
     public Action onPlayerWalkNextToWall;
     
-    
-
-    
     public bool isFacingRight => transform.localScale.x > 0;
-
-    
     
     public float movementSpeed = 5f;
     public bool canControlMovement;

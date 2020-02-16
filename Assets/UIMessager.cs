@@ -7,21 +7,29 @@ public class UIMessager : MonoBehaviour
 {
     public List<PlayerPanel> playerPanels;
     // Start is called before the first frame update
-
-    private void Awake()
+    
+    private void Start()
     {
         PlayerCharacterSpawner.instance.onPlayerSpawnFinished += Setup;
+        
     }
 
 
     public void Setup()
     {
         List<PlayerCharacter> characters = PlayerCharacterSpawner.instance.charactersForPlayer;
-        
-        
-        for (int i = 0; i < playerPanels.Count; i++)
+        if (characters.Count == playerPanels.Count)
         {
-            
+            print(characters.Count);
+            for (int i = 0; i < characters.Count; i++)
+            {
+                playerPanels[i].player = characters[i];
+            }
+        }
+
+        foreach (PlayerPanel playerPanel in playerPanels)
+        {
+            playerPanel.onPlayerSetup?.Invoke();
         }
     }
 }

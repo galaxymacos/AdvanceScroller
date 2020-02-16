@@ -25,6 +25,7 @@
         <e p="AB_BatHero_Jump.cs" t="Include" />
         <e p="AB_BatHero_JumpAttack.cs" t="Include" />
         <e p="AB_BatHero_Transform.cs" t="Include" />
+        <e p="AB_PsychicHero_EyeBullet.cs" t="Include" />
         <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
         <e p="AB_SwordPrincess_Jump.cs" t="Include" />
         <e p="Axe Hero" t="Include">
@@ -72,6 +73,20 @@
           </e>
         </e>
         <e p="InstantKillContinuousAttack.cs" t="Include" />
+        <e p="KaiwenBackgroundDocument" t="Include">
+          <e p="UniverseBackground" t="Include">
+            <e p="ErbGameArt" t="Include">
+              <e p="Meteor rain" t="Include">
+                <e p="Shaders" t="Include">
+                  <e p="BlendDissolve.shader" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="Sprites" t="Include">
+              <e p="ParticleCollisionInstance.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="MainMenuButtonAnimationController.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
@@ -186,6 +201,7 @@
         <e p="Scripts" t="Include">
           <e p="AB_Dash_General.cs" t="Include" />
           <e p="AB_PsychicHero_Attack.cs" t="Include" />
+          <e p="AB_PsychicHero_Falldown.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AttackMessagingComponent.cs" t="Include" />
@@ -193,6 +209,7 @@
           <e p="BulletTimeComponent.cs" t="Include" />
           <e p="BulletTimeManager.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
+          <e p="CharacterEnergyComponent.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterGroundMovementComponent.cs" t="Include" />
           <e p="CharacterHealthComponent.cs" t="Include" />
@@ -205,9 +222,7 @@
           <e p="DashState.cs" t="Include" />
           <e p="die.cs" t="Include" />
           <e p="double_jump_psychic_hero.cs" t="Include" />
-          <e p="EnergyComponent.cs" t="Include" />
           <e p="EyeBullet.cs" t="Include" />
-          <e p="fall_down_psychic_hero.cs" t="Include" />
           <e p="FallDownState.cs" t="Include" />
           <e p="FlashYellowComponent.cs" t="Include" />
           <e p="FlipComponent.cs" t="Include" />
@@ -291,6 +306,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="UIMessager.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

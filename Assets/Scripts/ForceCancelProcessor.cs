@@ -20,8 +20,8 @@ public class ForceCancelProcessor : StateMachineBehaviour
         {
             if (animationName == animationAvailable)
             {
-                EnergyComponent energy = anim.GetComponent<EnergyComponent>();
-                if (energy.Consume(50))
+                CharacterEnergyComponent characterEnergy = anim.GetComponent<CharacterEnergyComponent>();
+                if (characterEnergy.Consume(50))
                 {
                     return animationName;
                 }

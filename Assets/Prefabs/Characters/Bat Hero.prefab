@@ -578,6 +578,7 @@ GameObject:
   - component: {fileID: 5286924651733753005}
   - component: {fileID: 5286924652371901397}
   - component: {fileID: 1595168072}
+  - component: {fileID: 6785101417832166327}
   m_Layer: 10
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -799,6 +800,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
@@ -888,6 +890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20c44992a9352499ea096b96dd5500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnergy: 0
   maxEnergy: 100
   recoverSpeed: 10
   onEnergyChanged:
@@ -1003,6 +1006,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6785101417832166327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c74036991f0ec5442bbbd30258d22d96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pushDirection: {x: 0, y: 0}
+  pushSpeed: 0
+  pushDistance: 0
+  checkRadius: 0.2
+  wallRightCheck: {fileID: 1897730937322419881}
+  isNextToWallRight: 0
+  wallLeftCheck: {fileID: 7010005044207920813}
+  isNextToWallLeft: 0
+  groundCheck: {fileID: 8906824144421585213}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 2048
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

@@ -426,6 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
+  currentHealth: 0
   playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
@@ -501,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae20c44992a9352499ea096b96dd5500, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentEnergy: 0
   maxEnergy: 100
   recoverSpeed: 10
   onEnergyChanged:
@@ -673,10 +675,10 @@ MonoBehaviour:
   isNextToWallRight: 0
   wallLeftCheck: {fileID: 6402863349760954494}
   isNextToWallLeft: 0
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 4758164499162478574}
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2048
 --- !u!114 &4556048856342974423
 MonoBehaviour:
   m_ObjectHideFlags: 0
