@@ -51,6 +51,8 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerStartDash;
     public Action onPlayerDodgeSucceed;
     public Action onPlayerWalkNextToWall;
+    public Action onPlayerStartWallSlide;
+    public Action onPlayerStopWallSlide;
     
     public bool isFacingRight => transform.localScale.x > 0;
     

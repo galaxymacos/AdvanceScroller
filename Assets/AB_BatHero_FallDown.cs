@@ -10,7 +10,7 @@ public class AB_BatHero_FallDown : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4","jump"});
+        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4","jump","skill1"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;

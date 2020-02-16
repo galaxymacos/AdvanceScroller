@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerParticleSpawnerProxy : MonoBehaviour
 {
     [SerializeField] private PlayerCharacter playerCharacter;
 
+    private bool spawnWallDust;
+    private float wallDustSpawnCounter;
+    public float wallDustSpawnInterval = 0.1f;
     private void Awake()
     {
         if (playerCharacter == null)
@@ -18,6 +22,27 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
         playerCharacter.onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerGrounded += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerDodgeSucceed += SpawnDodgeShadow;
+
+        playerCharacter.onPlayerStartWallSlide += StartSpawningWallSlideDust;
+        playerCharacter.onPlayerStopWallSlide += StopSpawningWallSlideDust;
+    }
+
+    private void Update()
+    {
+        if (spawnWallDust)
+        {
+            if (wallDustSpawnCounter > 0)
+            {
+                wallDustSpawnCounter -= Time.deltaTime;
+                if (wallDustSpawnCounter <= 0)
+                {
+                    var gameObject = Instantiate(ParticleSpawner.Instance.WallSlideDust, transform.position, Quaternion.identity);
+                    gameObject.transform.localScale = playerCharacter.transform.localScale;
+                    wallDustSpawnCounter = wallDustSpawnInterval;
+                }
+            }
+
+        }
     }
 
     public void SpawnGroundDustGroundLimited()
@@ -47,11 +72,21 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
 
     public void SpawnDodgeShadow()
     {
-        print("spawn dodge shadow");
         Transform currentTransform = transform;
         Sprite currentSprite = GetComponent<SpriteRenderer>().sprite;
         GameObject dodgeShadow = Instantiate(ParticleSpawner.Instance.DodgeShadow, currentTransform.position, currentTransform.rotation);
         dodgeShadow.transform.localScale = transform.localScale;
         dodgeShadow.GetComponent<SpriteRenderer>().sprite = currentSprite;
+    }
+
+    public void StartSpawningWallSlideDust()
+    {
+        wallDustSpawnCounter = wallDustSpawnInterval;
+        spawnWallDust = true;
+    }
+
+    public void StopSpawningWallSlideDust()
+    {
+        spawnWallDust = false;
     }
 }

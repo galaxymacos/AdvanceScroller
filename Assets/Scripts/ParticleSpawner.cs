@@ -14,6 +14,7 @@ public class ParticleSpawner : MonoBehaviour
     public GameObject BloodSplatDirectional2D;
     public GameObject BloodSplatCritcal2D;
     public GameObject DodgeShadow;
+    public GameObject WallSlideDust;
 
 
     public static ParticleSpawner Instance;
@@ -40,7 +41,7 @@ public class ParticleSpawner : MonoBehaviour
         }
         else
         {
-            GameObject newParticle = Instantiate(particle, player.transform.position, player.transform.rotation);
+            GameObject newParticle = Instantiate(particle, player.transform.position, Quaternion.identity);
             newParticle.GetComponent<ParticleFacingComponent>().Setup(player);
         }
         

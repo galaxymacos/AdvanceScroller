@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class AB_BatHero_Transform : CharacterStateMachineBehavior
 {
-
+    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerInput.skill1ButtonPressed = true;
+        rb = playerCharacter.GetComponent<Rigidbody2D>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        rb.velocity = Vector2.zero;
         if (playerInput.skill1ButtonPressed == false)
         {
             animator.SetTrigger("fall down");

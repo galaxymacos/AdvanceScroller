@@ -207,6 +207,7 @@
           <e p="AB_PsychicHero_Falldown.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
+          <e p="AB_WallSlide_General.cs" t="Include" />
           <e p="AttackMessagingComponent.cs" t="Include" />
           <e p="AttackState.cs" t="Include" />
           <e p="BulletTimeComponent.cs" t="Include" />
@@ -274,7 +275,6 @@
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
-          <e p="wallSlide.cs" t="Include" />
         </e>
         <e p="SMB_BatHero_Attack.cs" t="Include" />
         <e p="Sword Princess" t="Include">
