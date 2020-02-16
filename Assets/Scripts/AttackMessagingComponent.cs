@@ -9,7 +9,6 @@ public class AttackMessagingComponent : MonoBehaviour
 
     [SerializeField] private SingleAttackComponent singleAttackHitBox;
 
-    [SerializeField] private SingleAttackComponent jumpSingleAttackHitBox;
     [SerializeField] private ContinuousAttack pierceAttack;
     
     // Start is called before the first frame update
@@ -37,18 +36,6 @@ public class AttackMessagingComponent : MonoBehaviour
         else if (state == 0)
         {
             singleAttackHitBox.StopDetectTarget();
-        }
-    }
-
-    public void DetectJumpAttack(int state)
-    {
-        if (state == 1)
-        {
-            jumpSingleAttackHitBox.Execute();
-        }
-        else if (state == 0)
-        {
-            jumpSingleAttackHitBox.StopDetectTarget();
         }
     }
 

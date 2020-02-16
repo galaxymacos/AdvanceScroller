@@ -21,9 +21,12 @@
         <e p="AB_BatHero_BatFly.cs" t="Include" />
         <e p="AB_BatHero_DoubleJump.cs" t="Include" />
         <e p="AB_BatHero_FallDown.cs" t="Include" />
+        <e p="AB_BatHero_Idle.cs" t="Include" />
         <e p="AB_BatHero_Jump.cs" t="Include" />
         <e p="AB_BatHero_JumpAttack.cs" t="Include" />
         <e p="AB_BatHero_Transform.cs" t="Include" />
+        <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
+        <e p="AB_SwordPrincess_Jump.cs" t="Include" />
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -181,8 +184,10 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="Scripts" t="Include">
-          <e p="attack_psychic_hero.cs" t="Include" />
-          <e p="attack_sword_princess.cs" t="Include" />
+          <e p="AB_Dash_General.cs" t="Include" />
+          <e p="AB_PsychicHero_Attack.cs" t="Include" />
+          <e p="AB_PsychicHero_Skill3.cs" t="Include" />
+          <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AttackMessagingComponent.cs" t="Include" />
           <e p="AttackState.cs" t="Include" />
           <e p="BulletTimeComponent.cs" t="Include" />
@@ -197,7 +202,6 @@
           <e p="Cross.cs" t="Include" />
           <e p="DamageData.cs" t="Include" />
           <e p="DamageReceiver.cs" t="Include" />
-          <e p="dash.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
           <e p="die.cs" t="Include" />
           <e p="double_jump_psychic_hero.cs" t="Include" />
@@ -245,7 +249,6 @@
           <e p="skill1_psychic_hero.cs" t="Include" />
           <e p="skill1_sword_princess.cs" t="Include" />
           <e p="Skill1State.cs" t="Include" />
-          <e p="skill3_psychic_hero.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />

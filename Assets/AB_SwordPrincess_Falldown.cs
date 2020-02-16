@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AB_BatHero_FallDown : CharacterStateMachineBehavior
+public class AB_SwordPrincess_Falldown : CharacterStateMachineBehavior
 {
     private PlayerCharacter messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

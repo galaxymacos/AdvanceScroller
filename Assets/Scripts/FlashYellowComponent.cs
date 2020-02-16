@@ -25,12 +25,21 @@ public class FlashYellowComponent : MonoBehaviour
     
     public void FlashYellow(CharacterHealthComponent characterHealthComponent)
     {
+        print("flash yellow");
         isFlashing = true;
         spriteRenderer.sprite = yellowSprite;
         
-        Invoke(nameof(FlashBack), 0.15f);
+        // Invoke(nameof(FlashBack), 0.15f);
     }
-    
+
+    private void Update()
+    {
+        spriteRenderer.sprite = yellowSprite;
+        isFlashing = true;
+
+
+    }
+
     private void FlashBack()
     {
         isFlashing = false;

@@ -16,11 +16,11 @@ public class jump_attack_sword_princess : StateMachineBehaviour
     //    
     //}
 
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, stateInfo, layerIndex);
-        animator.GetComponent<AttackMessagingComponent>().DetectJumpAttack(0);
-    }
+    // public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    // {
+        // base.OnStateExit(animator, stateInfo, layerIndex);
+        // animator.GetComponent<AttackMessagingComponent>().DetectJumpAttack(0);
+    // }
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{

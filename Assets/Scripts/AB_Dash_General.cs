@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class dash : CharacterStateMachineBehavior
+public class AB_Dash_General : CharacterStateMachineBehavior
 {
     [SerializeField] private float dashSpeed = 8;
     private bool isDashReversed;

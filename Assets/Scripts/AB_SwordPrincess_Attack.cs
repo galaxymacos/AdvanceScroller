@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SMB_BatHero_Attack : CharacterStateMachineBehavior
+public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
 {
     [SerializeField] private AnimationClip groundAttack;
     [SerializeField] private AnimationClip jumpAttack;
@@ -11,7 +11,7 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump","dash"});     // TODO
+        RegisterInputToNextState(new List<string> {"skill1","skill2","skill3","jump","dash"});     // TODO
 
         if (playerCharacter.isGrounded)
         {
@@ -41,10 +41,10 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackFirstStrike.StopDetectTarget();
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackSecondStrike.StopDetectTarget();
+        playerCharacter.GetComponent<AttackMessagingComponent>().DetectAttack(0);
         playerCharacter.canControlMovement = true;
     }
+
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

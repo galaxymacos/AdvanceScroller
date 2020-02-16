@@ -9,6 +9,7 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     public GameObject axePrefab;
     public GameObject eyeBulletPrefab;
     public Transform spawnTransform;
+    public ContinuousAttack tornado;
 
     private void Awake()
     {
@@ -35,5 +36,14 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
         Projectile projectile = generatedCross.GetComponent<Projectile>();
         projectile.Setup(playerCharacter, 6, 0f);
     }
-    
+
+    public void ExecuteTornado()
+    {
+        tornado.Execute();
+    }
+
+    public void StopExecutingTornado()
+    {
+        tornado.StopDetectTarget();
+    }
 }

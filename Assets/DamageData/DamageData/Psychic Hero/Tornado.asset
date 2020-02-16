@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
   m_Name: Tornado
   m_EditorClassIdentifier: 
-  damage: 10
+  damage: 7
   pushPower: 0
+  pushDistance: 0
+  pushType: 0
+  damageType: 2
   offSetDegree: 0
   hitStunPower: 0.4
   launcherHorizontalForce: 0

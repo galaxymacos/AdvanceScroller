@@ -358,7 +358,7 @@ MonoBehaviour:
   checkRadius: 0.03
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 1280
+    m_Bits: 256
   wallLeftCheck: {fileID: 6402863349760954494}
   wallRightCheck: {fileID: 2577492763309506682}
   isNextToWallLeft: 0
@@ -371,7 +371,8 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
-  hasDoubleJump: 0
+  jumpTime: 0
+  maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
   isDead: 0
@@ -424,7 +425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02b0bc6c1ec0214899fc5f2a563da72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 100
   playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
@@ -440,6 +441,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageSource: {fileID: 0}
+  damageData: {fileID: 0}
 --- !u!114 &4758164498511340010
 MonoBehaviour:
   m_ObjectHideFlags: 0

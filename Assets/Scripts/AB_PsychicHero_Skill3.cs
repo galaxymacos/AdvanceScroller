@@ -2,29 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attack_sword_princess : CharacterStateMachineBehavior
+public class AB_PsychicHero_Skill3 : CharacterStateMachineBehavior
 {
+    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string>{"skill1","skill2","skill3","skill4","jump","dash"});
-        playerCharacter = _animator.GetComponent<PlayerCharacter>();
+        base.OnStateEnter(animator, stateInfo, layerIndex);
+        rb = animator.GetComponent<Rigidbody2D>();
+        playerCharacter.GetComponent<PsychicHeroAnimationEventContainer>().ExecuteTornado();
+        playerCharacter.canControlMovement = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
-
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        rb.velocity = new Vector2(rb.velocity.x, 0);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateExit(animator,stateInfo, layerIndex);
-        animator.GetComponent<AttackMessagingComponent>().DetectAttack(0);
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        playerCharacter.GetComponent<PsychicHeroAnimationEventContainer>().StopExecutingTornado();
+
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

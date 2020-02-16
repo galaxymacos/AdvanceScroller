@@ -94,7 +94,6 @@ public class PlayerCharacter : MonoBehaviour
         {
             dashInvincibleTimeCounter -= Time.deltaTime;
         }
-        print("Player has jumped "+jumpTime);
     }
 
     private void UpdateFacingDirection()

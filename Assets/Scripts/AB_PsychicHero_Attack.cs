@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SMB_BatHero_Attack : CharacterStateMachineBehavior
+public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
 {
+    
     [SerializeField] private AnimationClip groundAttack;
     [SerializeField] private AnimationClip jumpAttack;
     
@@ -11,7 +12,7 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump","dash"});     // TODO
+        RegisterInputToNextState(new List<string> {"skill1","skill2","skill3","jump","dash"});     // TODO
 
         if (playerCharacter.isGrounded)
         {
@@ -41,8 +42,6 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackFirstStrike.StopDetectTarget();
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackSecondStrike.StopDetectTarget();
         playerCharacter.canControlMovement = true;
     }
 
@@ -57,4 +56,6 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
+
+    
 }

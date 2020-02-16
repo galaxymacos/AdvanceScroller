@@ -11,7 +11,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
 {
     private bool running;
     
-    [SerializeField] protected float duration = 5f;
+    [SerializeField] protected float duration = 3f;
     [SerializeField] protected float tickInterval = 0.2f;
     [SerializeField] protected DamageData damageData;
     

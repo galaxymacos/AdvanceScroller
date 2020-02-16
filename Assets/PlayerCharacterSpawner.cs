@@ -57,6 +57,7 @@ public class PlayerCharacterSpawner : MonoBehaviour
                 if (i != j)
                 {
                     charactersForPlayer[i].whatIsEnemy |= 1<<charactersForPlayer[j].gameObject.layer;
+                    charactersForPlayer[i].whatIsGround |= 1 << charactersForPlayer[j].gameObject.layer;
                 }
             }
                 

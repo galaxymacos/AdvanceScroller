@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7862864406526074693}
   - component: {fileID: 6895560838892462545}
   - component: {fileID: 6811955420605573615}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Dagger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   deadParticle: {fileID: 7322871736219514346, guid: a5de7dfe75bb4d2458e26c4fe443b5a2,
     type: 3}
   damageData: {fileID: 11400000, guid: 20b7c39c482be23418e4016a4191b2b0, type: 2}
-  destroyedWhenHitPlayer: 0
+  destroyedWhenHitPlayer: 1
 --- !u!61 &7862864406526074693
 BoxCollider2D:
   m_ObjectHideFlags: 0

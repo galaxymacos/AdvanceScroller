@@ -744,7 +744,8 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
-  hasDoubleJump: 0
+  jumpTime: 0
+  maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
   isDead: 0

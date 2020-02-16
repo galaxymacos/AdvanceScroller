@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 3
-  tickInterval: 0.3
+  tickInterval: 0.2
   damageData: {fileID: 11400000, guid: 5a98f91c36d4b17459486749f7330a4d, type: 2}
   owner: {fileID: 891296965151884859}
 --- !u!50 &904546214
@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 1375383487}
   - component: {fileID: 1375383471}
   - component: {fileID: 5370246305263368930}
-  - component: {fileID: 48236528}
   - component: {fileID: -5606359923855577312}
   m_Layer: 12
   m_Name: Psychic Hero
@@ -366,7 +365,7 @@ MonoBehaviour:
   checkRadius: 0.03
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 256
   wallLeftCheck: {fileID: 6066818458530017753}
   wallRightCheck: {fileID: 1781532041058689586}
   isNextToWallLeft: 0
@@ -379,7 +378,8 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
-  hasDoubleJump: 0
+  jumpTime: 0
+  maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
   isDead: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02b0bc6c1ec0214899fc5f2a563da72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 100
   playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
@@ -448,6 +448,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  damageSource: {fileID: 0}
+  damageData: {fileID: 0}
 --- !u!114 &891296965151884998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -481,6 +483,7 @@ MonoBehaviour:
   eyeBulletPrefab: {fileID: 8064068707071226424, guid: b493108a7ff76be4bbe6f0751881cbb4,
     type: 3}
   spawnTransform: {fileID: 891296966238984182}
+  tornado: {fileID: 904546212}
 --- !u!114 &1588731322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,20 +623,6 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
---- !u!114 &48236528
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891296965151884848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09b767b4e2678b641bae52516dea06c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yellowSprite: {fileID: 21300000, guid: 37cef3b572809bd4fbeefd9632ff8539, type: 3}
-  isFlashing: 0
 --- !u!114 &-5606359923855577312
 MonoBehaviour:
   m_ObjectHideFlags: 0
