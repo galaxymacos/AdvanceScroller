@@ -54,3 +54,7 @@ MonoBehaviour:
   BloodSplatDirectional2D: {fileID: 125648, guid: 9fc1afc1190c21b459bff8bed1d9ec02,
     type: 3}
   BloodSplatCritcal2D: {fileID: 171432, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+  DodgeShadow: {fileID: 685054869924666405, guid: d169a1ff60631a24e962df054c75738b,
+    type: 3}
+  WallSlideDust: {fileID: 3950159421142995034, guid: 82dd64c8765f4bb489a418c748c977dc,
+    type: 3}
