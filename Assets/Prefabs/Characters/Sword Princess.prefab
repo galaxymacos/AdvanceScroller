@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 7225560470583709286}
   - component: {fileID: 1513319369006766254}
   - component: {fileID: 3263405227032971152}
+  - component: {fileID: 165736055725530837}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -722,6 +723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 3658480544048443884}
+  wallDustSpawnInterval: 0.1
 --- !u!114 &2202582281728647640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +830,24 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+--- !u!114 &165736055725530837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae20c44992a9352499ea096b96dd5500, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentEnergy: 0
+  maxEnergy: 100
+  recoverSpeed: 10
+  onEnergyChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

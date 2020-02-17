@@ -17,7 +17,7 @@ public class SkillCooldownManager : MonoBehaviour
     {
         foreach (Skill skill in skills)
         {
-            skill.coolDownCounter = 0;
+            skill.coolDownCounter = skill.coolDown;
         }
     }
 
@@ -28,6 +28,10 @@ public class SkillCooldownManager : MonoBehaviour
             if (skill.coolDownCounter > 0)
             {
                 skill.coolDownCounter -= Time.deltaTime;
+            }
+            else
+            {
+                skill.coolDownCounter = 0;
             }
         }
     }

@@ -9,15 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
-  m_Name: Attack Red
+  m_Script: {fileID: 11500000, guid: dbb7afaf2b7b9234691a74b617e4d97e, type: 3}
+  m_Name: Attack
   m_EditorClassIdentifier: 
-  damage: 20
-  pushPower: 2
-  pushDistance: 3
-  pushType: 1
-  damageType: 1
-  offSetDegree: 0
-  hitStunPower: 1
-  launcherHorizontalForce: 0
-  launcherVerticalForce: 0
+  skillName: attack
+  coolDown: 1
+  coolDownCounter: 6.216885

@@ -30,6 +30,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
         {
             Vector3 localScale = playerCharacter.transform.localScale;
             localScale.x = -1;
+            playerCharacter.onFacingDirectionChanged?.Invoke();
             playerCharacter.transform.localScale = localScale;
             
             isDashReversed = true;
@@ -38,6 +39,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
         {
             Vector3 localScale = playerCharacter.transform.localScale;
             localScale.x = 1;
+            playerCharacter.onFacingDirectionChanged?.Invoke();
             playerCharacter.transform.localScale = localScale;
             
             isDashReversed = true;

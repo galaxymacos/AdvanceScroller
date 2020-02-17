@@ -11,7 +11,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"skill1","skill2","skill3","jump","dash"});     // TODO
+        RegisterInputToNextState(new List<string> {"jump"});
 
         if (playerCharacter.isGrounded)
         {

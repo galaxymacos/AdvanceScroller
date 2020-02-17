@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationNameToTransfer:
   - dash
+  energyConsumePerUsage: 25
 --- !u!1101 &-8309044339967505343
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -313,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6d0aca71a0e40479edc764fa53db76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  forceCancelProcessor: {fileID: 3312402770574090335}
   groundAttack: {fileID: 7400000, guid: 2b95bdf2e046bbf45b0a5adb69d2e345, type: 2}
   jumpAttack: {fileID: 7400000, guid: c755d312054eac24faf1599fda4e4e00, type: 2}
 --- !u!114 &-538207133926197654
@@ -540,7 +541,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1102 &1102021424316495916
 AnimatorState:
   serializedVersion: 5
@@ -1015,7 +1016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceCancelProcessor: {fileID: 0}
-  jumpForce: 5
+  jumpForce: 6
   firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}
   secondJump: {fileID: 7400000, guid: 9c2ac3d9a9e7b9d40b895b205a2c9806, type: 2}
 --- !u!114 &3312402770574090335
@@ -1035,6 +1036,7 @@ MonoBehaviour:
   - skill2
   - skill3
   - dash
+  energyConsumePerUsage: 25
 --- !u!1101 &3892323244785178462
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
