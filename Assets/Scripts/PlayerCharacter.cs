@@ -51,6 +51,9 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerStartDash;
     public Action onPlayerDodgeSucceed;
     public Action onPlayerWalkNextToWall;
+    public Action onPlayerExitWall;
+    
+    // Animation event
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;
     
@@ -153,12 +156,20 @@ public class PlayerCharacter : MonoBehaviour
         {
             onPlayerWalkNextToWall?.Invoke();
         }
+        else if (wasNextToWallRight != isNextToWallRight && !isNextToWallRight && isFacingRight)
+        {
+            onPlayerExitWall?.Invoke();
+        }
         
         bool wasNextToWallLeft = isNextToWallLeft;
         isNextToWallLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsWall);
         if (wasNextToWallLeft != isNextToWallLeft && isNextToWallLeft && !isFacingRight)
         {
             onPlayerWalkNextToWall?.Invoke();
+        }
+        else if(wasNextToWallLeft != isNextToWallLeft && !isNextToWallLeft && !isFacingRight)
+        {
+            onPlayerExitWall?.Invoke();
         }
         
         atEnemyRight = Physics2D.OverlapCircle(wallLeftCheck.position, 0.2f, whatIsEnemy);

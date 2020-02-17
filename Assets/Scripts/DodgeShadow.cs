@@ -9,6 +9,7 @@ public class DodgeShadow : MonoBehaviour
     // private SpriteRenderer sr;
     public float disappearSpeed = 0.5f;
     private float fade = 1f;
+    public float delay = 0.5f;
 
     private Material material;
 
@@ -21,26 +22,24 @@ public class DodgeShadow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (sr.color.a > 0)
-        // {
-        //     var color = sr. color;
-        //     color = new Color(color.r, color.g, color.b, color.a-Time.deltaTime*disappearSpeed);
-        //     sr. color = color;
-        // }
-        // else
-        // {
-        //     Destroy(gameObject);
-        // }
-
-        if (fade > 0)
+        if (delay > 0)
         {
-            fade -= disappearSpeed * Time.deltaTime;
-            material.SetFloat("_Fade", fade);
+            delay -= Time.deltaTime;
         }
         else
         {
-            Destroy(gameObject);
+            if (fade > 0)
+            {
+                fade -= disappearSpeed * Time.deltaTime;
+                material.SetFloat("_Fade", fade);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
+
+        
         
         
     }

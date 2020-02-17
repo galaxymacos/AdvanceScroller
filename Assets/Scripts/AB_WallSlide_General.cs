@@ -14,6 +14,7 @@ public class AB_WallSlide_General : CharacterStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerCharacter.onPlayerStartWallSlide?.Invoke();
         RegisterInputToNextState(new List<string>{"skill3", "dash","jump"});
+        playerCharacter.onPlayerExitWall += PlayerLeavesWall;
         isRightWallSlide = playerCharacter.isNextToWallRight && playerCharacter.isFacingRight;
             
         rb = animator.GetComponent<Rigidbody2D>();
@@ -43,6 +44,12 @@ public class AB_WallSlide_General : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.onPlayerStopWallSlide?.Invoke();
+        playerCharacter.onPlayerExitWall -= PlayerLeavesWall;
+    }
+
+    public void PlayerLeavesWall()
+    {
+        characterAnimator.SetTrigger("idle");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

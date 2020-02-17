@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AB_BatHero_BatEnergy : CharacterStateMachineBehavior
+public class AB_BatHero_Throw : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
