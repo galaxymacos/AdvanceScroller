@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Attack Red
   m_EditorClassIdentifier: 
   damage: 20
-  pushPower: 2
-  pushDistance: 3
+  pushPower: 5
+  pushDistance: 2
   pushType: 1
   damageType: 1
   offSetDegree: 0

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Buff MySelf
   m_EditorClassIdentifier: 
   skillName: skill1
-  coolDown: 1
+  coolDown: 10
   coolDownCounter: 0
