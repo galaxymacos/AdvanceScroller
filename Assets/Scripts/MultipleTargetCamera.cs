@@ -20,13 +20,8 @@ public class MultipleTargetCamera : MonoBehaviour
 
     private void Awake()
     {
-        PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
-        
-    }
-
-    private void Start()
-    {
         targets = new List<Transform>();
+        PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
         
     }
 

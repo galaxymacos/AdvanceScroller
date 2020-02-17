@@ -1753,18 +1753,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5429380328779406207, guid: d70c2f284409e3546aaf9eef7704233d,
-        type: 3}
-      propertyPath: DodgeShadow
-      value: 
-      objectReference: {fileID: 685054869924666405, guid: d169a1ff60631a24e962df054c75738b,
-        type: 3}
-    - target: {fileID: 5429380328779406207, guid: d70c2f284409e3546aaf9eef7704233d,
-        type: 3}
-      propertyPath: WallSlideDust
-      value: 
-      objectReference: {fileID: 3950159421142995034, guid: 82dd64c8765f4bb489a418c748c977dc,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d70c2f284409e3546aaf9eef7704233d, type: 3}
 --- !u!1001 &6123412869865113351
@@ -1848,18 +1836,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerManager
       objectReference: {fileID: 0}
-    - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
-        type: 3}
-      propertyPath: selectedHeros.Array.data[0]
-      value: 
-      objectReference: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
-        type: 3}
-    - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
-        type: 3}
-      propertyPath: selectedHeros.Array.data[1]
-      value: 
-      objectReference: {fileID: 4758164498511340011, guid: 131012b09bddffd4594a266bbc843069,
-        type: 3}
     - target: {fileID: 6481704858091205022, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
       propertyPath: m_LocalPosition.x
