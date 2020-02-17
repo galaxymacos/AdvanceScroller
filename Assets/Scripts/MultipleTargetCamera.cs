@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class MultipleTargetCamera : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class MultipleTargetCamera : MonoBehaviour
     public float minZoom = 40f;
     public float maxZoom = 10f;
     public float zoomLimiter = 50f;
-    public Camera camera;
+    // public Camera camera;
+    public PixelPerfectCamera camera;
 
     
     private bool hasSetup;
@@ -37,8 +39,8 @@ public class MultipleTargetCamera : MonoBehaviour
 
     private void Zoom()
     {
-        float newZoom = Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance()/zoomLimiter);
-        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newZoom, Time.deltaTime);
+        float newZoom = (int)Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance()/zoomLimiter);
+        camera.assetsPPU = (int) Mathf.Lerp(camera.assetsPPU, newZoom, Time.deltaTime);
     }
 
     private float GetGreatestDistance()
