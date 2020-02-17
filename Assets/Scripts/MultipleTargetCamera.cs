@@ -24,7 +24,6 @@ public class MultipleTargetCamera : MonoBehaviour
     {
         targets = new List<Transform>();
         PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
-        
     }
 
     private void FixedUpdate()
@@ -39,8 +38,9 @@ public class MultipleTargetCamera : MonoBehaviour
 
     private void Zoom()
     {
-        float newZoom = (int)Mathf.Lerp(maxZoom, minZoom, GetGreatestDistance()/zoomLimiter);
-        camera.assetsPPU = (int) Mathf.Lerp(camera.assetsPPU, newZoom, Time.deltaTime);
+        float newZoom = (int)Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance()/zoomLimiter);
+        print(newZoom);
+        camera.assetsPPU = (int)newZoom;
     }
 
     private float GetGreatestDistance()
