@@ -10,6 +10,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AB_BatHero_Throw.cs" t="Include" />
+        <e p="AB_SwordPrincess_Cross.cs" t="Include" />
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -200,6 +201,7 @@
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
           <e p="AB_SwordPrincess_Jump.cs" t="Include" />
+          <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
           <e p="AttackMessagingComponent.cs" t="Include" />
           <e p="AttackState.cs" t="Include" />
@@ -269,7 +271,6 @@
           <e p="SingleAttackComponent.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
           <e p="skill1_psychic_hero.cs" t="Include" />
-          <e p="skill1_sword_princess.cs" t="Include" />
           <e p="Skill1State.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />

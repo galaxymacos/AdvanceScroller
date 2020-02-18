@@ -11,12 +11,12 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     protected PlayerInput playerInput;
     public ForceCancelProcessor forceCancelProcessor;
     protected PlayerCharacter playerCharacter;
-
+    
     // private Knockable knockable;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        this.characterAnimator = _animator;
+        characterAnimator = _animator;
         playerInput = _animator.GetComponent<PlayerInput>();
         animations = new Dictionary<string, bool>();
         foreach (AnimatorControllerParameter parameter in _animator.parameters)

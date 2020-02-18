@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class skill1_sword_princess : CharacterStateMachineBehavior
+public class AB_SwordPrincess_Wolf : CharacterStateMachineBehavior
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

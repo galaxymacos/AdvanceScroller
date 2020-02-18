@@ -530,7 +530,7 @@ MonoBehaviour:
   isNextToWallRight: 0
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2304
   atEnemyLeft: 0
   atEnemyRight: 0
   whatIsEnemy:

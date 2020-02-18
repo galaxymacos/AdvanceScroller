@@ -6,7 +6,11 @@ using UnityEngine;
 public class SwordPrincessParticleSpawner : MonoBehaviour
 {
     public GameObject wolf;
+    
+    
     public GameObject cross;
+    
+
     private PlayerCharacter playerCharacter;
 
     private void Awake()
@@ -18,14 +22,36 @@ public class SwordPrincessParticleSpawner : MonoBehaviour
     { 
         GameObject generatedWolf = Instantiate(wolf, transform.Find("SpawnLocations").Find("Wolf").position, transform.rotation);
         Projectile projectile = generatedWolf.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 13, 0);
+        if (GetComponent<PlayerInput>().verticalAxis > 0)
+        {
+            projectile.Setup(playerCharacter, 13, 45);
+        }
+        else if(GetComponent<PlayerInput>().verticalAxis < 0)
+        {
+            projectile.Setup(playerCharacter, 13, -45);
+        }
+        else
+        {
+            projectile.Setup(playerCharacter, 13, 0);
+        }
     }
     
     public void SpawnCross()
     { 
         GameObject generatedCross = Instantiate(cross, transform.Find("SpawnLocations").Find("Cross").position, transform.rotation);
         Projectile projectile = generatedCross.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 18, 0);
+        if (GetComponent<PlayerInput>().verticalAxis > 0)
+        {
+            projectile.Setup(playerCharacter, 18, 30);
+        }
+        else if(GetComponent<PlayerInput>().verticalAxis < 0)
+        {
+            projectile.Setup(playerCharacter, 18, -30);
+        }
+        else
+        {
+            projectile.Setup(playerCharacter, 18, 0);
+        }
     }
     
 }

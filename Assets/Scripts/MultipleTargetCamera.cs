@@ -9,13 +9,13 @@ public class MultipleTargetCamera : MonoBehaviour
     public List<Transform> targets;
     public Vector3 offset;
     public Vector3 velocity;
-    public float smoothTime = 0.5f;
+    public float smoothTime = 0.24f;
 
-    public float minZoom = 40f;
-    public float maxZoom = 10f;
-    public float zoomLimiter = 50f;
+    public float minZoom = 63;
+    public float maxZoom = 63f;
+    public float zoomLimiter = 10f;
     // public Camera camera;
-    public PixelPerfectCamera camera;
+    public PixelPerfectCamera ppCamera;
 
     
     private bool hasSetup;
@@ -39,8 +39,7 @@ public class MultipleTargetCamera : MonoBehaviour
     private void Zoom()
     {
         float newZoom = (int)Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance()/zoomLimiter);
-        print(newZoom);
-        camera.assetsPPU = (int)newZoom;
+        ppCamera.assetsPPU = (int)newZoom;
     }
 
     private float GetGreatestDistance()

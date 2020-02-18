@@ -7,7 +7,7 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
 
     private bool spawnWallDust;
     private float wallDustSpawnCounter;
-    public float wallDustSpawnInterval = 0.1f;
+    private float wallDustSpawnInterval = 0.13f;
     private void Awake()
     {
         if (playerCharacter == null)
