@@ -931,7 +931,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 8906824143711737653}
-  wallDustSpawnInterval: 0.1
 --- !u!114 &5286924652720532441
 MonoBehaviour:
   m_ObjectHideFlags: 0

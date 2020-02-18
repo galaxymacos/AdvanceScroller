@@ -61,10 +61,10 @@ public class Projectile : CollisionDetector
     // Update is called once per frame
     void Update()
     {
-        if (setupFinished)
-        {
+        // if (setupFinished)
+        // {
             // movementComponent.UpdateMovement();
-        }
+        // }
     }
 
     private void OnDestroy()
@@ -94,8 +94,8 @@ public class Projectile : CollisionDetector
             }
         }
     }
-    
-    public void ProcessDamageToReceiver(GameObject target)
+
+    private void ProcessDamageToReceiver(GameObject target)
     {
         var damageReceive = target.GetComponent<DamageReceiver>();
         if (damageReceive != null)

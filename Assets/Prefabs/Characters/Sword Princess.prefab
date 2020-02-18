@@ -530,7 +530,7 @@ MonoBehaviour:
   isNextToWallRight: 0
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 2304
+    m_Bits: 2048
   atEnemyLeft: 0
   atEnemyRight: 0
   whatIsEnemy:
@@ -723,7 +723,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 3658480544048443884}
-  wallDustSpawnInterval: 0.1
 --- !u!114 &2202582281728647640
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,17 +4,34 @@ using UnityEngine;
 
 public class skill1_psychic_hero : CharacterStateMachineBehavior
 {
+    public float maxChargedTime = 1.5f;
+
+    private float chargedTimeCounter;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerCharacter.canControlMovement = false;
+        playerInput.skill1ButtonPressed = true;
+        chargedTimeCounter = 0;
         // animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        chargedTimeCounter += Time.deltaTime;
+        if (!playerInput.skill1ButtonPressed)
+        {
+            if (chargedTimeCounter >= maxChargedTime)
+            {
+                animator.SetTrigger("throw axe charged");
+            }
+            else
+            {
+                animator.SetTrigger("idle");
+            }
+        }
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
