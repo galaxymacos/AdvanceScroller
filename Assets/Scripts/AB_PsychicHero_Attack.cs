@@ -63,7 +63,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
             }
             else
             {
-                animator.SetTrigger("idle");
+                animator.SetTrigger("throw dagger");
             }
         }
         base.OnStateUpdate(animator, stateInfo, layerIndex);

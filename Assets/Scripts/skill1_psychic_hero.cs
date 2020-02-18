@@ -29,7 +29,7 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
             }
             else
             {
-                animator.SetTrigger("idle");
+                animator.SetTrigger("throw axe");
             }
         }
         base.OnStateUpdate(animator, stateInfo, layerIndex);
