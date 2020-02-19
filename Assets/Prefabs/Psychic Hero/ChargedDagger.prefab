@@ -100,8 +100,9 @@ MonoBehaviour:
   owner: {fileID: 0}
   deadParticle: {fileID: 7322871736219514346, guid: a5de7dfe75bb4d2458e26c4fe443b5a2,
     type: 3}
-  damageData: {fileID: 11400000, guid: 20b7c39c482be23418e4016a4191b2b0, type: 2}
+  damageData: {fileID: 11400000, guid: 333703f722eb1c740a22dc1ecebdba8f, type: 2}
   destroyedWhenHitPlayer: 1
+  destroyWithoutDeadEffect: 0
 --- !u!61 &7159329995702851041
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -164,3 +165,4 @@ MonoBehaviour:
   growUpTime: 2
   rotateSpeed: 90
   hasGrownUp: 0
+  hasShoot: 0

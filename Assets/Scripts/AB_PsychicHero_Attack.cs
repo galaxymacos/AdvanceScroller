@@ -46,6 +46,8 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
             playerCharacter.canControlMovement = false;
         }
+
+        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -77,6 +79,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerCharacter.canControlMovement = true;
+        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

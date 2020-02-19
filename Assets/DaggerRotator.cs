@@ -19,6 +19,7 @@ public class DaggerRotator : MonoBehaviour
     private PlayerCharacter owner;
 
     private bool hasSetup;
+    private bool facingRight;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,16 @@ public class DaggerRotator : MonoBehaviour
     public void Setup(PlayerCharacter owner)
     {
         this.owner = owner;
+        if (owner.isFacingRight)
+        {
+            facingRight = true;
+        }
+        else
+        {
+            transform.localScale =
+                new Vector3(-transform.localScale.x, transform.localScale.y);
+            facingRight = false;
+        }
         hasSetup = true;
     }
 
@@ -59,7 +70,15 @@ public class DaggerRotator : MonoBehaviour
     {
         if (hasGrownUp && !hasShoot)
         {
-            transform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);
+            if (facingRight)
+            {
+                transform.Rotate(Vector3.forward, rotateSpeed * Time.deltaTime);
+            }
+            else
+            {
+                transform.Rotate(Vector3.forward, -rotateSpeed * Time.deltaTime);
+
+            }
         }
     }
 
@@ -78,7 +97,7 @@ public class DaggerRotator : MonoBehaviour
     public void Shoot()
     {
         hasShoot = true;
-        projectile.Setup(owner, 100, transform.rotation.eulerAngles.z, true);
+        projectile.Setup(owner, 100, facingRight?transform.rotation.eulerAngles.z:-transform.rotation.eulerAngles.z, true);
     }
     
     

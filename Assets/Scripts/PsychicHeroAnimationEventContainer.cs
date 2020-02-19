@@ -51,6 +51,7 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     public void SpawnChargedDagger()
     {
         GameObject chargedDagger = Instantiate(chargedDaggerPrefab, spawnTransform.position, transform.rotation);
+        
         var daggerRotator = chargedDagger.GetComponent<DaggerRotator>();
         daggerRotator.Setup(playerCharacter);
         playerCharacter.chargedDagger = chargedDagger;

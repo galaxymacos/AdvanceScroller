@@ -186,8 +186,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4758164498511339549}
   - component: {fileID: 4758164498511340002}
-  - component: {fileID: 4758164498511340003}
-  - component: {fileID: 4758164498511340000}
   - component: {fileID: 4758164498511340001}
   - component: {fileID: 4758164498511340006}
   - component: {fileID: 4758164498511340004}
@@ -205,6 +203,7 @@ GameObject:
   - component: {fileID: 4758164498511339797}
   - component: {fileID: 1340760059}
   - component: {fileID: 4556048856342974423}
+  - component: {fileID: 5623847722637158371}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -280,48 +279,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &4758164498511340003
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758164498511340011}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.1325168}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4487893, y: 0.4504937}
-  m_EdgeRadius: 0
---- !u!58 &4758164498511340000
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758164498511340011}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14}
-  serializedVersion: 2
-  m_Radius: 0.21237661
 --- !u!95 &4758164498511340001
 Animator:
   serializedVersion: 3
@@ -379,8 +336,7 @@ MonoBehaviour:
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:
-  - {fileID: 4758164498511340003}
-  - {fileID: 4758164498511340000}
+  - {fileID: 5623847722637158371}
   collidersDead:
   - {fileID: 8128414368569400566}
   - {fileID: 8128414368569400561}
@@ -392,6 +348,7 @@ MonoBehaviour:
     type: 3}
   movementSpeed: 5
   canControlMovement: 0
+  chargedDagger: {fileID: 0}
 --- !u!50 &4758164498511340004
 Rigidbody2D:
   serializedVersion: 4
@@ -544,7 +501,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerCharacter: {fileID: 4758164498511340006}
-  wallDustSpawnInterval: 0.1
 --- !u!114 &8128414368569400586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,6 +648,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &5623847722637158371
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.42, y: 0.71}
+  m_Direction: 0
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0

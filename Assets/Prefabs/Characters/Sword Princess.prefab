@@ -349,8 +349,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3658480544048443415}
   - component: {fileID: 3658480544048443880}
-  - component: {fileID: 3658480544048443881}
-  - component: {fileID: 3658480544048443882}
   - component: {fileID: 3658480544048443883}
   - component: {fileID: 3658480544048443884}
   - component: {fileID: 3658480544048443886}
@@ -370,6 +368,7 @@ GameObject:
   - component: {fileID: 1513319369006766254}
   - component: {fileID: 3263405227032971152}
   - component: {fileID: 165736055725530837}
+  - component: {fileID: 4741068551188603677}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -445,48 +444,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &3658480544048443881
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3658480544048443873}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.1325168}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.56, y: 2.56}
-    newSize: {x: 2.56, y: 2.56}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.4487893, y: 0.4504937}
-  m_EdgeRadius: 0
---- !u!58 &3658480544048443882
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3658480544048443873}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.14}
-  serializedVersion: 2
-  m_Radius: 0.21237661
 --- !u!95 &3658480544048443883
 Animator:
   serializedVersion: 3
@@ -544,8 +501,7 @@ MonoBehaviour:
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:
-  - {fileID: 3658480544048443881}
-  - {fileID: 3658480544048443882}
+  - {fileID: 4741068551188603677}
   collidersDead:
   - {fileID: 1086934268}
   - {fileID: 1086934267}
@@ -557,6 +513,7 @@ MonoBehaviour:
     type: 3}
   movementSpeed: 5
   canControlMovement: 0
+  chargedDagger: {fileID: 0}
 --- !u!50 &3658480544048443886
 Rigidbody2D:
   serializedVersion: 4
@@ -847,6 +804,22 @@ MonoBehaviour:
   onEnergyChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!70 &4741068551188603677
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03}
+  m_Size: {x: 0.43, y: 0.77}
+  m_Direction: 0
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

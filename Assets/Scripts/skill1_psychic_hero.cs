@@ -14,6 +14,7 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
         playerCharacter.canControlMovement = false;
         playerInput.skill1ButtonPressed = true;
         chargedTimeCounter = 0;
+        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
         // animator.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
@@ -38,10 +39,11 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    
-    //}
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
