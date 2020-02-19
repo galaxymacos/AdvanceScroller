@@ -243,6 +243,7 @@ AnimatorState:
   - {fileID: -2013873966230808014}
   m_StateMachineBehaviours:
   - {fileID: -1716410605822038411}
+  - {fileID: 8958971511757442781}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -355,6 +356,21 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-3136633683485110106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121b3d80cc9ee7b46a1797fb361c4572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationNameToTransfer:
+  - dash
+  energyConsumePerUsage: 25
 --- !u!1101 &-2964957670979459017
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -479,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0325e5015f682448ea53b53478149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  forceCancelProcessor: {fileID: 8958971511757442781}
 --- !u!114 &-1198551254192898727
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -760,6 +776,7 @@ AnimatorState:
   - {fileID: 4492919149942645315}
   m_StateMachineBehaviours:
   - {fileID: 8717670558830950129}
+  - {fileID: -3136633683485110106}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -786,7 +803,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0325e5015f682448ea53b53478149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  forceCancelProcessor: {fileID: 700836018898194535}
+--- !u!114 &700836018898194535
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121b3d80cc9ee7b46a1797fb361c4572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationNameToTransfer:
+  - dash
+  energyConsumePerUsage: 25
 --- !u!1101 &782467251722678945
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1346,6 +1378,7 @@ AnimatorState:
   - {fileID: 1809384572767464046}
   m_StateMachineBehaviours:
   - {fileID: 589422659953003706}
+  - {fileID: 700836018898194535}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1373,6 +1406,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   forceCancelProcessor: {fileID: 0}
+--- !u!114 &4422701130325349518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121b3d80cc9ee7b46a1797fb361c4572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationNameToTransfer:
+  - dash
+  energyConsumePerUsage: 25
 --- !u!114 &4478044105707405234
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1608,7 +1656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c0325e5015f682448ea53b53478149c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  forceCancelProcessor: {fileID: -3136633683485110106}
 --- !u!1102 &8958808012367767448
 AnimatorState:
   serializedVersion: 5
@@ -1623,6 +1671,7 @@ AnimatorState:
   - {fileID: -2655917996171270361}
   m_StateMachineBehaviours:
   - {fileID: -6189272058168930954}
+  - {fileID: 4422701130325349518}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1637,6 +1686,21 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &8958971511757442781
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121b3d80cc9ee7b46a1797fb361c4572, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animationNameToTransfer:
+  - dash
+  energyConsumePerUsage: 25
 --- !u!1102 &8962384916154376818
 AnimatorState:
   serializedVersion: 5

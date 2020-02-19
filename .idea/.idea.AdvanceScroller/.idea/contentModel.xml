@@ -266,9 +266,9 @@
           <e p="PlayerTwoInput.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
+          <e p="ProjectileReturnableComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
           <e p="PushComponent.cs" t="Include" />
-          <e p="ReturnableComponent.cs" t="Include" />
           <e p="run_psychic_hero.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />

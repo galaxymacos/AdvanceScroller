@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Collider2D))]
-public class ReturnableComponent: MonoBehaviour
+[RequireComponent(typeof(Collider2D), typeof(Projectile))]
+public class ProjectileReturnableComponent: MonoBehaviour
 {
     private PlayerCharacter owner;
     [SerializeField] private float maxReturnSpeed = 10;
@@ -22,25 +22,25 @@ public class ReturnableComponent: MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         onReturnToOwner += ResetProjectile;
     }
+    
+    
 
     private bool isReturningToOwner;
 
-    public void Setup(Projectile projectile)
+    public void Setup()
     {
-        this.projectile = projectile;
+        projectile = GetComponent<Projectile>();
         owner = projectile.owner;
-        hasSetup = true;
-    }
-
-    public void Setup(PlayerCharacter owner)
-    {
-        this.owner = owner;
         hasSetup = true;
     }
 
     private void Update()
     {
-
+        if (!hasSetup)
+        {
+            Setup();
+            return;
+        }
         if (Vector2.Distance(originalPosition, transform.position) >= maxDistanceToTravel && !isReturningToOwner)
         {
             isReturningToOwner = true;

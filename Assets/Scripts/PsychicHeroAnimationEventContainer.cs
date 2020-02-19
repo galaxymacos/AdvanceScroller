@@ -37,8 +37,8 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
         GameObject axe = Instantiate(chargedAxePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
         Projectile projectile = axe.GetComponent<Projectile>();
         projectile.Setup(playerCharacter, 20f, 0);
-        ReturnableComponent boomrang = axe.GetComponent<ReturnableComponent>();
-        boomrang.Setup(playerCharacter);
+        ProjectileReturnableComponent boomrang = axe.GetComponent<ProjectileReturnableComponent>();
+        boomrang.Setup();
     }
     
     public void SpawnEyeBullet()
