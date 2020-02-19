@@ -13,10 +13,11 @@ public class Projectile : CollisionDetector
     private Rigidbody2D rb;
     public DamageData damageData;
     public bool destroyedWhenHitPlayer;
+    public bool destroyWithoutDeadEffect;
 
     private bool setupFinished;
 
-    public void Setup(PlayerCharacter _owner, float movementSpeed = 100 , float angle = 0)
+    public void Setup(PlayerCharacter _owner, float movementSpeed = 100 , float angle = 0, bool customRotation = false)
     {
         owner = _owner;
         Vector2 ownerFacingDirection = owner.isFacingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
@@ -32,20 +33,24 @@ public class Projectile : CollisionDetector
         }
         rb.AddForce(moveDirection * (movementSpeed * 20));
 
-        
-        var projectileFacing = transform.localScale;
-        if (moveDirection.x < 0)
+        if (!customRotation)
         {
-            projectileFacing = new Vector3(-projectileFacing.x, projectileFacing.y, projectileFacing.z);
-            transform.localScale = projectileFacing;
-            transform.Rotate(0,0,-angle);
-        }
-        else
-        {
-            projectileFacing = new Vector3(projectileFacing.x, projectileFacing.y, projectileFacing.z);
-            transform.Rotate(0,0,angle);
+            var projectileFacing = transform.localScale;
+            if (moveDirection.x < 0)
+            {
+                projectileFacing = new Vector3(-projectileFacing.x, projectileFacing.y, projectileFacing.z);
+                transform.localScale = projectileFacing;
+                transform.Rotate(0,0,-angle);
+            }
+            else
+            {
+                projectileFacing = new Vector3(projectileFacing.x, projectileFacing.y, projectileFacing.z);
+                transform.Rotate(0,0,angle);
 
+            }
         }
+        
+        
         
         setupFinished = true;
     }
@@ -69,7 +74,7 @@ public class Projectile : CollisionDetector
 
     private void OnDestroy()
     {
-        if (deadParticle != null)
+        if (deadParticle != null && !destroyWithoutDeadEffect)
         {
             var swordDisappear = Instantiate(deadParticle, transform.position, Quaternion.identity);
             swordDisappear.transform.localScale = transform.localScale;
@@ -78,13 +83,15 @@ public class Projectile : CollisionDetector
         
     }
 
-    public void SelfDestroy()
+    public void DestroyWithoutEffect()
     {
+        destroyWithoutDeadEffect = true;
         Destroy(gameObject);
     }
 
     private void FilterOwn(GameObject objectCollided)
     {
+        if (owner == null) return;
         if (objectCollided != owner.gameObject)
         {
             if (!_objectsHasCollided.Contains(objectCollided))

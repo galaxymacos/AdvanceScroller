@@ -63,6 +63,8 @@ public class PlayerCharacter : MonoBehaviour
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipComponent;
+
+    [HideInInspector] public GameObject chargedDagger;
     
 
     private void Awake()
