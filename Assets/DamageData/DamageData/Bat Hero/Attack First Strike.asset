@@ -16,7 +16,8 @@ MonoBehaviour:
   pushPower: 0
   pushDistance: 0
   pushType: 0
+  damageType: 0
   offSetDegree: 0
-  hitStunPower: 0.2
+  hitStunPower: 0.35
   launcherHorizontalForce: 0
   launcherVerticalForce: 0

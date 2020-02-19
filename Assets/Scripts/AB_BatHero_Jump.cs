@@ -17,7 +17,6 @@ public class AB_BatHero_Jump : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        RegisterInputToNextState(new List<string> {"jump", "dash", "attack","skill3","skill2","skill4","skill1"});
         
         if (playerCharacter.jumpTime == 0)
         {

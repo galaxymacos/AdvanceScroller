@@ -13,7 +13,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 
     protected Animator characterAnimator;
     protected PlayerInput playerInput;
-    public ForceCancelProcessor forceCancelProcessor;
     protected PlayerCharacter playerCharacter;
     
     
@@ -29,12 +28,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         {
             animations.Add(parameter.name, false);
         }
-
-        if (forceCancelProcessor)
-        {
-            RegisterInputToNextState(forceCancelProcessor.animationNameToTransfer);
-        }
-
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
 
         RegisterInputToNextState(stateCanTransformTo);

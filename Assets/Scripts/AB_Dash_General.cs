@@ -94,6 +94,12 @@ public class AB_Dash_General : CharacterStateMachineBehavior
                 rb.velocity = -Vector2.right * (dashSpeed * (isDashReversed ? -1 : 1));
             }
         }
+
+        if (playerInput.dashButtonPressed)
+        {
+            playerInput.dashButtonPressed = false;
+            characterAnimator.SetTrigger("idle");
+        }
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

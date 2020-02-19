@@ -15,7 +15,6 @@ public class SMB_Push : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"attack", "run", "dash", "jump", "skill1", "skill2", "skill3", "skill4"});     // TODO
 
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         pushComponent = animator.GetComponent<PushComponent>();
