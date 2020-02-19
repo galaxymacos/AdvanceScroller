@@ -3,15 +3,21 @@ using UnityEngine;
 
 public class CharacterStateMachineBehavior : StateMachineBehaviour
 {
+    public List<string> stateCanTransformTo;
+    public List<string> stateCanForceTransformTo;
+    
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
     /// </summary>
     protected Dictionary<string, bool> animations;
+
     protected Animator characterAnimator;
     protected PlayerInput playerInput;
     public ForceCancelProcessor forceCancelProcessor;
     protected PlayerCharacter playerCharacter;
     
+    
+
     // private Knockable knockable;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -28,38 +34,58 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         {
             RegisterInputToNextState(forceCancelProcessor.animationNameToTransfer);
         }
+
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
 
+        RegisterInputToNextState(stateCanTransformTo);
+        RegisterInputToNextState(stateCanForceTransformTo);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         string animationName = InputFilter();
-        
-        if (forceCancelProcessor)
-        {
-            animationName = forceCancelProcessor.Process(animationName, _animator);
-        }
+        if (animationName != "")
+            playerCharacter.PrintString(animationName);
+        // if (forceCancelProcessor)
+        // {
+            // animationName = forceCancelProcessor.Process(animationName, _animator);
+        // }
 
-             
-        animationName = LimitUsageFilter(animationName); 
+        animationName = ForceAttackFilter(animationName);
+
+
+        animationName = LimitUsageFilter(animationName);
         animationName = CoolDownFilter(animationName);
 
         if (animationName != "")
         {
             _animator.SetTrigger(animationName);
         }
-        
-        
-        
+    }
+    
+    public string ForceAttackFilter(string animationName)
+    {
+        foreach (var animationAvailable in stateCanForceTransformTo)
+        {
+            if (animationName == animationAvailable)
+            {
+                CharacterEnergyComponent characterEnergy = characterAnimator.GetComponent<CharacterEnergyComponent>();
+                if (characterEnergy.Consume(30))
+                {
+                    return animationName;
+                }
+
+                return "";
+            }
+        }
+
+        return animationName;
     }
 
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
-        
-
     }
 
     public string LimitUsageFilter(string animationName)
@@ -115,8 +141,14 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                     case "run":
                         if (Mathf.Abs(playerInput.horizontalAxis) >= Mathf.Epsilon)
                         {
-
                             return "run";
+                        }
+
+                        break;
+                    case "stomp":
+                        if (playerInput.verticalAxis < 0)
+                        {
+                            return "stomp";
                         }
 
                         break;
@@ -125,16 +157,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         {
                             playerInput.jumpButtonPressed = false;
                             return "jump";
-                        }
-
-                    
-
-                        break;
-                    case "double jump":
-                        if (playerInput.jumpButtonPressed)
-                        {
-                            playerInput.jumpButtonPressed = false;
-                            return "double jump";
                         }
 
                         break;
@@ -233,7 +255,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             }
         }
     }
-    
+
     public void DeregisterInput(string input)
     {
         if (animations.ContainsKey(input))
@@ -241,11 +263,9 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             animations[input] = false;
         }
     }
-    
+
     protected void TransferToWallSlide()
     {
         characterAnimator.SetTrigger("wallslide");
     }
-
-   
 }

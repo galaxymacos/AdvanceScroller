@@ -12,6 +12,7 @@
         <e p="AB_BatHero_Throw.cs" t="Include" />
         <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
         <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
+        <e p="AB_Stomp_General.cs" t="Include" />
         <e p="AB_SwordPrincess_Cross.cs" t="Include" />
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />

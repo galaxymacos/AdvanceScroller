@@ -41,6 +41,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animationNameToTransfer:
   - dash
+  energyConsumePerUsage: 25
 --- !u!1101 &-8309044339967505343
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1081,6 +1082,7 @@ MonoBehaviour:
   - skill3
   - skill4
   - dash
+  energyConsumePerUsage: 25
 --- !u!114 &3871624673998019990
 MonoBehaviour:
   m_ObjectHideFlags: 1

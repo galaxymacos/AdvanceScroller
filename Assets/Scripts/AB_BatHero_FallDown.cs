@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class AB_BatHero_FallDown : CharacterStateMachineBehavior
 {
-    private PlayerCharacter messagingSystem;
+    
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4","jump","skill1"});
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
-        
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
 
     }
@@ -21,12 +18,10 @@ public class AB_BatHero_FallDown : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        if (playerCharacter.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             _animator.SetTrigger("idle");
         }
-        
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -41,6 +41,8 @@ public class PlayerCharacter : MonoBehaviour
     public GameObject groundDust;
     public GameObject deadParticle;
     public GameObject groundDustTwoWays;
+
+    public SingleAttackComponent impactWave;
     [Space(10)]
 
     public Action onFacingDirectionChanged;
@@ -182,6 +184,21 @@ public class PlayerCharacter : MonoBehaviour
     {
         jumpTime = 0;
         dashTimeCounter = 0;
+    }
+
+    public void SpawnImpactWave()
+    {
+        impactWave.Execute();
+    }
+    
+    public void StopImpactWave()
+    {
+        impactWave.StopDetectTarget();
+    }
+
+    public void PrintString(String str)
+    {
+        print(str);
     }
 }
 
