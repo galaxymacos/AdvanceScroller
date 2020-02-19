@@ -23,12 +23,6 @@ AnimationClip:
       value: {fileID: 21300000, guid: e5c337e279774744a8643a425e10b18c, type: 3}
     - time: 0.125
       value: {fileID: 21300000, guid: 17edf115d7dd2f943b258a8a10bdd8b5, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: ab89173a480379c44b535dbeb29b5419, type: 3}
-    - time: 0.375
-      value: {fileID: 21300000, guid: bbd2163de4bdacb47a7b71d7df892ccf, type: 3}
-    - time: 0.5
-      value: {fileID: 21300000, guid: 121422b0f124c854fb54c1081f7108a3, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -50,15 +44,12 @@ AnimationClip:
     pptrCurveMapping:
     - {fileID: 21300000, guid: e5c337e279774744a8643a425e10b18c, type: 3}
     - {fileID: 21300000, guid: 17edf115d7dd2f943b258a8a10bdd8b5, type: 3}
-    - {fileID: 21300000, guid: ab89173a480379c44b535dbeb29b5419, type: 3}
-    - {fileID: 21300000, guid: bbd2163de4bdacb47a7b71d7df892ccf, type: 3}
-    - {fileID: 21300000, guid: 121422b0f124c854fb54c1081f7108a3, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.625
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -78,7 +69,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.25
+  - time: 0.125
     functionName: SpawnChargedDagger
     data: 
     objectReferenceParameter: {fileID: 0}
