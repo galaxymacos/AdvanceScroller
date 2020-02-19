@@ -488,6 +488,8 @@ MonoBehaviour:
   tornado: {fileID: 904546212}
   chargedDaggerPrefab: {fileID: 5434344344378574279, guid: 6147f27263a1a2b47832eafc398b2f40,
     type: 3}
+  chargedAxePrefab: {fileID: 7635780407722689910, guid: 0309ad9fc16f5a141a02dc48749c1d0d,
+    type: 3}
 --- !u!114 &1588731322
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -63,15 +63,10 @@ public class Projectile : CollisionDetector
         onProjectileCollided += ProcessDamageToReceiver;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetAttack()
     {
-        // if (setupFinished)
-        // {
-            // movementComponent.UpdateMovement();
-        // }
+        _objectsHasCollided.Clear();
     }
-
     private void OnDestroy()
     {
         if (deadParticle != null && !destroyWithoutDeadEffect)

@@ -11,6 +11,7 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     public Transform spawnTransform;
     public ContinuousAttack tornado;
     public GameObject chargedDaggerPrefab;
+    public GameObject chargedAxePrefab;
 
     private void Awake()
     {
@@ -29,6 +30,15 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
         GameObject generatedCross = Instantiate(axePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
         Projectile projectile = generatedCross.GetComponent<Projectile>();
         projectile.Setup(playerCharacter, 20, 45f);
+    }
+    
+    public void SpawnChargedAxe()
+    { 
+        GameObject axe = Instantiate(chargedAxePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
+        Projectile projectile = axe.GetComponent<Projectile>();
+        projectile.Setup(playerCharacter, 20f, 0);
+        ReturnableComponent boomrang = axe.GetComponent<ReturnableComponent>();
+        boomrang.Setup(playerCharacter);
     }
     
     public void SpawnEyeBullet()
