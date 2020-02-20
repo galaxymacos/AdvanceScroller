@@ -77,7 +77,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af71801900dac8141baf86811305da49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
   dashSpeed: 10
   dashDuration: 0.3
 --- !u!1101 &-5991539849176375649
@@ -281,7 +282,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e814130c90517a4409e394f9d481e6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
 --- !u!114 &-1198551254192898727
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,7 +296,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad048b43104a4cf4f97b574a29f184cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo:
+  - attack
+  - dash
+  - jump
+  - skill1
+  - skill2
+  - skill3
+  - wallslide
+  - idle
+  stateCanForceTransformTo: []
 --- !u!1101 &-872338685152810975
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -329,7 +340,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b6d0aca71a0e40479edc764fa53db76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 3312402770574090335}
+  stateCanTransformTo:
+  - jump
+  stateCanForceTransformTo:
+  - dash
+  - skill2
+  - skill3
+  - skill1
   groundAttack: {fileID: 7400000, guid: 2b95bdf2e046bbf45b0a5adb69d2e345, type: 2}
   jumpAttack: {fileID: 7400000, guid: c755d312054eac24faf1599fda4e4e00, type: 2}
 --- !u!114 &-538207133926197654
@@ -344,7 +361,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c179170f8692104ebe45104a42d1df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo:
+  - attack
+  - dash
+  - skill1
+  - skill2
+  - skill3
+  - jump
+  stateCanForceTransformTo: []
 --- !u!1101 &-268435895032321983
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -506,7 +530,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa4623d9c390372469cd57c7197ba6a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
 --- !u!1101 &782467251722678945
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -596,7 +621,6 @@ AnimatorState:
   m_Transitions:
   - {fileID: 3892323244785178462}
   m_StateMachineBehaviours:
-  - {fileID: 3312402770574090335}
   - {fileID: -594233886155229317}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -761,7 +785,6 @@ AnimatorState:
   - {fileID: 8678649619971426230}
   m_StateMachineBehaviours:
   - {fileID: 1943573575191628102}
-  - {fileID: -3606007453468979376}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -817,7 +840,6 @@ AnimatorState:
   - {fileID: 6972074293088328017}
   m_StateMachineBehaviours:
   - {fileID: 4619125376308719912}
-  - {fileID: -8748594089166447549}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1006,7 +1028,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03e510a17fefdbf438c7b60b7d8058ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo: []
+  stateCanForceTransformTo:
+  - dash
 --- !u!114 &1943573575191628102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1019,7 +1043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36033b156964f314e83e787e487a03e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: -3606007453468979376}
+  stateCanTransformTo: []
+  stateCanForceTransformTo:
+  - dash
 --- !u!114 &1950352680183857104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1032,7 +1058,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0a41e09fdbc87c4eae8e4ccd37d8278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo:
+  - jump
+  - run
+  - dash
+  - skill1
+  - skill2
+  - skill3
+  - attack
+  stateCanForceTransformTo: []
 --- !u!114 &2154102597297588052
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1045,7 +1079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f926cf6abcb018049906476f4b5a6dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo:
+  - attack
+  - dash
+  stateCanForceTransformTo: []
   jumpForce: 6
   firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}
   secondJump: {fileID: 7400000, guid: 9c2ac3d9a9e7b9d40b895b205a2c9806, type: 2}
@@ -1126,7 +1163,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c2cc3ad18f4d5c47b27fd8fd219aa99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
 --- !u!114 &4619125376308719912
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1139,7 +1177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a3ebe1206850224bbc889b599068370, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: -8748594089166447549}
+  stateCanTransformTo: []
+  stateCanForceTransformTo:
+  - dash
 --- !u!114 &5596895217598118713
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1152,7 +1192,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c1d7c8e65c254d49b18aa73827f89b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forceCancelProcessor: {fileID: 0}
+  stateCanTransformTo:
+  - jump
+  stateCanForceTransformTo: []
   fallDownSpeed: 1
 --- !u!1102 &6120448863952360197
 AnimatorState:

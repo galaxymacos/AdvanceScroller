@@ -10,7 +10,6 @@ public class AB_SwordPrincess_Falldown : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
         playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4","jump"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
