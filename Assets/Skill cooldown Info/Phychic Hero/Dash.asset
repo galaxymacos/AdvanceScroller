@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   skillName: dash
-  coolDown: 2
-  coolDownCounter: -0.0027677976
+  coolDown: 1
+  coolDownCounter: 0.4688697
+  spriteInCooldownPanel: {fileID: 0}
