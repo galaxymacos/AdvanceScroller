@@ -121,7 +121,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 7
-  dashDuration: 0.5
+  dashDuration: 0.3
 --- !u!1101 &-5991539849176375649
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
