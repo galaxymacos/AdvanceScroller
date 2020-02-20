@@ -11,18 +11,42 @@ public class Knockable : MonoBehaviour
 
     public void KnockUp(float knockHorizontalForce, float knockVerticalForce, Transform knocker)
     {
+        
         Vector3 knockerLocation = knocker.position;
         Vector3 knockableLocation = transform.position;
 
+        print(knocker.name);
+
+        var projectileInKnocker = knocker.GetComponent<Projectile>();
+        
         Vector2 knockDirectionHorizontal;
-        if (knockerLocation.x - knockableLocation.x > 0)
+        
+        // Knocked by projectile
+        if (projectileInKnocker != null)
         {
-            knockDirectionHorizontal = Vector2.left;
+            knockDirectionHorizontal = projectileInKnocker.GetComponent<Rigidbody2D>().velocity.x > 0 ? Vector2.right : Vector2.left;
+        }
+        else // Knocked by character
+        {
+            if (knockerLocation.x - knockableLocation.x > 0)
+            {
+                knockDirectionHorizontal = Vector2.left;
+            }
+            else
+            {
+                knockDirectionHorizontal = Vector2.right;
+            }
+        }
+        
+        if(knockDirectionHorizontal == Vector2.left)
+        {
+           print("knock to left"); 
         }
         else
         {
-            knockDirectionHorizontal = Vector2.right;
+            print("knock to right");
         }
+        
 
         knockDirection = knockDirectionHorizontal * knockHorizontalForce+new Vector2(0,knockVerticalForce);
         GetComponent<Animator>().SetTrigger(knockupAnimationString);    

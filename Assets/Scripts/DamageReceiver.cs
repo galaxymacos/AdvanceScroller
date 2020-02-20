@@ -53,7 +53,7 @@ public class DamageReceiver : MonoBehaviour
         // Dealing with health reduction
         if (damageData.damage > 0)
         {
-            characterHealthComponent.TakeDamage(damageData,damageOwner,true);
+            characterHealthComponent.TakeDamage(damageData , damageOwner,true);
         }
 
         if (damageData.launcherHorizontalForce > 0 || damageData.launcherVerticalForce > 0)
