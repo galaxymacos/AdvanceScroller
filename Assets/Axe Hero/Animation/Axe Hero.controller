@@ -84,9 +84,11 @@ MonoBehaviour:
   - skill3
   - attack
   - dash
-  - skill1
   - skill2
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!114 &-7352065611281236955
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +107,9 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: 2e2696f0a5c97d94fae54c32bcdda957, type: 2}
   jumpAttack: {fileID: 7400000, guid: 146f0fd23b3f9384e9c1ed657002b44d, type: 2}
 --- !u!1102 &-7283774717918403776
@@ -153,6 +158,9 @@ MonoBehaviour:
   - skill3
   - skill2
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   jumpForce: 5
   firstJump: {fileID: 7400000, guid: 8cc6747acc8cf5d45854f62c55ffa9c5, type: 2}
   secondJump: {fileID: 7400000, guid: 8b133f40dad3238429de8462999d54d3, type: 2}
@@ -195,6 +203,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   dashSpeed: 10
   dashDuration: 0.3
 --- !u!1101 &-6798098813136283244
@@ -330,6 +341,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1102 &-3587578079110033460
 AnimatorState:
   serializedVersion: 5
@@ -423,6 +437,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!114 &-1198551254192898727
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -445,6 +462,9 @@ MonoBehaviour:
   - wallslide
   - idle
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1100,6 +1120,9 @@ MonoBehaviour:
   - skill2
   - skill3
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!114 &3312402770574090335
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1134,6 +1157,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: b92961de25408d94f9d095193329031e, type: 2}
   jumpForm: {fileID: 7400000, guid: 22dd92d6fdf10f94ab1ea15140e96e5e, type: 2}
 --- !u!1101 &3892323244785178462
@@ -1173,6 +1199,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: 4f279c7d9633bab469c9cadda56b5304, type: 2}
   jumpForm: {fileID: 7400000, guid: 6b8c51d4d3b9aa94194a9a3202aae18d, type: 2}
 --- !u!114 &5596895217598118713
@@ -1191,6 +1220,9 @@ MonoBehaviour:
   - jump
   - dash
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
   fallDownSpeed: 1
 --- !u!114 &5757607006515872798
 MonoBehaviour:
@@ -1206,6 +1238,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1101 &6972074293088328017
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1367,3 +1402,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
