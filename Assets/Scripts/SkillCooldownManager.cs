@@ -36,7 +36,30 @@ public class SkillCooldownManager : MonoBehaviour
         }
     }
 
+    // TODO can be optimized
     public bool Use(string skillName)
+    {
+        foreach (Skill skill in skills)
+        {
+            if (skill.skillName == skillName)
+            {
+                
+                if (CheckCooldown(skillName))
+                {
+                    skill.coolDownCounter = skill.coolDown;
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+    
+    public bool CheckCooldown(string skillName)
     {
         foreach (Skill skill in skills)
         {
@@ -45,7 +68,6 @@ public class SkillCooldownManager : MonoBehaviour
                 
                 if (skill.coolDownCounter <= 0)
                 {
-                    skill.coolDownCounter = skill.coolDown;
                     return true;
                 }
                 else

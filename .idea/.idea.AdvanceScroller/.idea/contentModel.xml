@@ -217,6 +217,7 @@
           <e p="BulletTimeComponent.cs" t="Include" />
           <e p="BulletTimeManager.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
+          <e p="CastSkillFilter.cs" t="Include" />
           <e p="CharacterEnergyComponent.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterGroundMovementComponent.cs" t="Include" />

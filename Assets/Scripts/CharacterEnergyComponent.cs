@@ -28,6 +28,11 @@ public class CharacterEnergyComponent : MonoBehaviour
         return true;
     }
 
+    public bool Check(float amount)
+    {
+        return !(currentEnergy - amount < 0);
+    }
+
     private void Update()
     {
         Recover();

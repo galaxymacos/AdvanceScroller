@@ -11,9 +11,9 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     /// </summary>
     protected Dictionary<string, bool> animations;
 
-    protected Animator characterAnimator;
-    protected PlayerInput playerInput;
-    protected PlayerCharacter playerCharacter;
+    [HideInInspector] public Animator characterAnimator;
+    [HideInInspector] public PlayerInput playerInput;
+    [HideInInspector] public PlayerCharacter playerCharacter;
     
     
 
@@ -37,7 +37,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        string animationName = InputFilter();
+        string animationName = GenerateAnimationByInput();
         if (animationName != "")
             playerCharacter.PrintString(animationName);
         // if (forceCancelProcessor)
@@ -46,8 +46,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         // }
 
         animationName = ForceAttackFilter(animationName);
-
-
         animationName = LimitUsageFilter(animationName);
         animationName = CoolDownFilter(animationName);
 
@@ -116,7 +114,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
     }
 
-    public string InputFilter()
+    public string GenerateAnimationByInput()
     {
         foreach (string animationsKey in animations.Keys)
         {
