@@ -14,7 +14,12 @@ public abstract class CastSkillFilter
 
     public bool FilterRecur()
     {
-        return (next == null || next.Filter()) && Filter() ;
+        if (next == null)
+        {
+            return Filter();
+        }
+
+        return next.FilterRecur() && Filter();
     }
 
     public void DealWithResultRecur()

@@ -59,6 +59,7 @@ public class SkillCooldownManager : MonoBehaviour
         return true;
     }
     
+    // TODO 
     public bool CheckCooldown(string skillName)
     {
         foreach (Skill skill in skills)
@@ -76,7 +77,9 @@ public class SkillCooldownManager : MonoBehaviour
                 }
             }
         }
-
+        
+        // if we don't find the current skill's cool down in the character's skill cooldown manager, then it means this skill has no cooldown, 
+        // so the function should return true to allow the character to use this skill
         return true;
     }
 }
