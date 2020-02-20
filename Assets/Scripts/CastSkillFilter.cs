@@ -9,6 +9,7 @@ public abstract class CastSkillFilter
     {
         this.skillName = skillName;
         csmb = characterStateMachineBehavior;
+        this.next = next;
     }
 
     public bool FilterRecur()
@@ -19,7 +20,7 @@ public abstract class CastSkillFilter
     public void DealWithResultRecur()
     {
         DealWithResult();
-        next?.DealWithResult();
+        next?.DealWithResultRecur();
     }
 
     public abstract void DealWithResult();
@@ -62,7 +63,6 @@ public class ForceAttackFilter: CastSkillFilter
             {
                 CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
                 characterEnergy.Consume(30);
-                return;
             }
         }
     }
@@ -71,13 +71,14 @@ public class ForceAttackFilter: CastSkillFilter
     {
         foreach (var forcableAnimation in csmb.stateCanForceTransformTo)
         {
-            if (skillName == forcableAnimation)
-            {
-                CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
-                return characterEnergy.Check(30);
-            }
+        if (skillName == forcableAnimation)
+        {
+        CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
+        return characterEnergy.Check(30);
         }
-        throw new System.NotImplementedException();
+        }
+
+        return true;
     }
 }
 
@@ -87,9 +88,10 @@ public class LimitedUsageFilter: CastSkillFilter
     {
     }
 
+
     public override void DealWithResult()
     {
-        next?.DealWithResult();
+        
     }
 
     protected override bool Filter()

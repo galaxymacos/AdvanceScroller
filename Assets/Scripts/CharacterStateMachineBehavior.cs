@@ -42,12 +42,15 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         if (animationName != "")
         {
             playerCharacter.PrintString(animationName);
+            
             var cooldownFilter = new CooldownFilter(animationName, this, null);
-            // var forceAttackFilter = new ForceAttackFilter(animationName, this, cooldownFilter);
-            var limitedUsageFilter = new LimitedUsageFilter(animationName, this, cooldownFilter);
+            var forceAttackFilter = new ForceAttackFilter(animationName, this, cooldownFilter);
+            var limitedUsageFilter = new LimitedUsageFilter(animationName, this, forceAttackFilter);
+            
         
             if (limitedUsageFilter.FilterRecur())
             {
+                playerCharacter.PrintString("player can use this skill");
                 limitedUsageFilter.DealWithResultRecur();
                 _animator.SetTrigger(animationName);
             }
@@ -64,56 +67,56 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         // }
     }
     
-    public string ForceAttackFilter(string animationName)
-    {
-        foreach (var animationAvailable in stateCanForceTransformTo)
-        {
-            if (animationName == animationAvailable)
-            {
-                CharacterEnergyComponent characterEnergy = characterAnimator.GetComponent<CharacterEnergyComponent>();
-                if (characterEnergy.Consume(30))
-                {
-                    return animationName;
-                }
-
-                return "";
-            }
-        }
-
-        return animationName;
-    }
+    // public string ForceAttackFilter(string animationName)
+    // {
+    //     foreach (var animationAvailable in stateCanForceTransformTo)
+    //     {
+    //         if (animationName == animationAvailable)
+    //         {
+    //             CharacterEnergyComponent characterEnergy = characterAnimator.GetComponent<CharacterEnergyComponent>();
+    //             if (characterEnergy.Consume(30))
+    //             {
+    //                 return animationName;
+    //             }
+    //
+    //             return "";
+    //         }
+    //     }
+    //
+    //     return animationName;
+    // }
 
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
     }
 
-    public string LimitUsageFilter(string animationName)
-    {
-        switch (animationName)
-        {
-            case "dash":
-                if (playerCharacter.dashTimeCounter < playerCharacter.maxDashTimeInAir)
-                {
-                    return "dash";
-                }
-                else
-                {
-                    return "";
-                }
-            case "jump":
-                if (playerCharacter.jumpTime < playerCharacter.maxJumpTime)
-                {
-                    return "jump";
-                }
-                else
-                {
-                    return "";
-                }
-        }
-
-        return animationName;
-    }
+    // public string LimitUsageFilter(string animationName)
+    // {
+    //     switch (animationName)
+    //     {
+    //         case "dash":
+    //             if (playerCharacter.dashTimeCounter < playerCharacter.maxDashTimeInAir)
+    //             {
+    //                 return "dash";
+    //             }
+    //             else
+    //             {
+    //                 return "";
+    //             }
+    //         case "jump":
+    //             if (playerCharacter.jumpTime < playerCharacter.maxJumpTime)
+    //             {
+    //                 return "jump";
+    //             }
+    //             else
+    //             {
+    //                 return "";
+    //             }
+    //     }
+    //
+    //     return animationName;
+    // }
 
     public void RegisterInputToNextState(List<string> inputs)
     {
@@ -225,16 +228,16 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         return "";
     }
 
-    public string CoolDownFilter(string skillName)
-    {
-        SkillCooldownManager playerSkillCooldownManager = playerCharacter.GetComponent<SkillCooldownManager>();
-        if (playerSkillCooldownManager.Use(skillName))
-        {
-            return skillName;
-        }
-
-        return "";
-    }
+    // public string CoolDownFilter(string skillName)
+    // {
+    //     SkillCooldownManager playerSkillCooldownManager = playerCharacter.GetComponent<SkillCooldownManager>();
+    //     if (playerSkillCooldownManager.Use(skillName))
+    //     {
+    //         return skillName;
+    //     }
+    //
+    //     return "";
+    // }
 
 
     public void RegisterInputToNextState(string input)
