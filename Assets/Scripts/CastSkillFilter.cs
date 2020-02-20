@@ -19,10 +19,10 @@ public abstract class CastSkillFilter
     public void DealWithResultRecur()
     {
         DealWithResult();
-        next.DealWithResult();
+        next?.DealWithResult();
     }
 
-    protected abstract void DealWithResult();
+    public abstract void DealWithResult();
 
     // Write filter logic here
     protected abstract bool Filter();
@@ -36,7 +36,7 @@ public class CooldownFilter : CastSkillFilter
         playerSkillCooldownManager = characterStateMachineBehavior.playerCharacter.GetComponent<SkillCooldownManager>();
     }
 
-    protected override void DealWithResult()
+    public override void DealWithResult()
     {
         playerSkillCooldownManager.Use(skillName);
     }
@@ -54,7 +54,7 @@ public class ForceAttackFilter: CastSkillFilter
     {
     }
 
-    protected override void DealWithResult()
+    public override void DealWithResult()
     {
         foreach (var animationAvailable in csmb.stateCanForceTransformTo)
         {
@@ -87,9 +87,9 @@ public class LimitedUsageFilter: CastSkillFilter
     {
     }
 
-    protected override void DealWithResult()
+    public override void DealWithResult()
     {
-        return;
+        next?.DealWithResult();
     }
 
     protected override bool Filter()

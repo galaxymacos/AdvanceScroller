@@ -38,21 +38,30 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         string animationName = GenerateAnimationByInput();
-        if (animationName != "")
-            playerCharacter.PrintString(animationName);
-        // if (forceCancelProcessor)
-        // {
-            // animationName = forceCancelProcessor.Process(animationName, _animator);
-        // }
-
-        animationName = ForceAttackFilter(animationName);
-        animationName = LimitUsageFilter(animationName);
-        animationName = CoolDownFilter(animationName);
-
+     
         if (animationName != "")
         {
-            _animator.SetTrigger(animationName);
+            playerCharacter.PrintString(animationName);
+            var cooldownFilter = new CooldownFilter(animationName, this, null);
+            // var forceAttackFilter = new ForceAttackFilter(animationName, this, cooldownFilter);
+            var limitedUsageFilter = new LimitedUsageFilter(animationName, this, cooldownFilter);
+        
+            if (limitedUsageFilter.FilterRecur())
+            {
+                limitedUsageFilter.DealWithResultRecur();
+                _animator.SetTrigger(animationName);
+            }
         }
+        
+
+        // animationName = ForceAttackFilter(animationName);
+        // animationName = LimitUsageFilter(animationName);
+        // animationName = CoolDownFilter(animationName);
+
+        // if (animationName != "")
+        // {
+            // _animator.SetTrigger(animationName);
+        // }
     }
     
     public string ForceAttackFilter(string animationName)
