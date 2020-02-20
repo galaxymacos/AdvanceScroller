@@ -11247,7 +11247,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedHeros.Array.data[0]
       value: 
-      objectReference: {fileID: 4758164498511340011, guid: 131012b09bddffd4594a266bbc843069,
+      objectReference: {fileID: 3658480544048443873, guid: bbbdbfdc8d7a216439bbd4925f47ab14,
         type: 3}
     - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
