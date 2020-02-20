@@ -67,7 +67,7 @@ public class ForceAttackFilter: CastSkillFilter
             if (skillName == animationAvailable)
             {
                 CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
-                characterEnergy.Consume(30);
+                characterEnergy.Consume(20);
             }
         }
     }
@@ -76,11 +76,11 @@ public class ForceAttackFilter: CastSkillFilter
     {
         foreach (var forcableAnimation in csmb.stateCanForceTransformTo)
         {
-        if (skillName == forcableAnimation)
-        {
-        CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
-        return characterEnergy.Check(30);
-        }
+            if (skillName == forcableAnimation)
+            {
+                CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
+                return characterEnergy.Check(20);
+            }
         }
 
         return true;
