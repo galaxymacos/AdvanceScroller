@@ -149,7 +149,7 @@ MonoBehaviour:
   stateCanTransformTo:
   - attack
   - dash
-  - attack
+  - jump
   - skill3
   - skill2
   stateCanForceTransformTo: []

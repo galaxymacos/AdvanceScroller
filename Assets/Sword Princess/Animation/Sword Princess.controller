@@ -1082,6 +1082,10 @@ MonoBehaviour:
   stateCanTransformTo:
   - attack
   - dash
+  - jump
+  - skill1
+  - skill2
+  - skill3
   stateCanForceTransformTo: []
   jumpForce: 6
   firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}

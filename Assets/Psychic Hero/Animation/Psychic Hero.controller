@@ -1593,6 +1593,7 @@ MonoBehaviour:
   - skill1
   - skill2
   - skill3
+  - jump
   stateCanForceTransformTo: []
   jumpForce: 6
   firstJump: {fileID: 7400000, guid: 99abb0259a16a5347b962ebadf0ce292, type: 2}
