@@ -8,6 +8,7 @@ public class Skill : ScriptableObject
     public string skillName;
     public float coolDown;
     public float coolDownCounter;
-    
-    
+    public Sprite spriteInCooldownPanel;
+
+
 }

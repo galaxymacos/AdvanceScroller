@@ -9,6 +9,7 @@ public class PlayerSkillPanel : MonoBehaviour
 {
     public PlayerCharacter owner;
     public List<Image> skillCooldownIndicators;
+    public List<Image> skillImageComponents;
     public List<Skill> skills;
     private bool hasSetup;
 
@@ -30,8 +31,10 @@ public class PlayerSkillPanel : MonoBehaviour
             switch (skill.skillName)
             {
                 case "skill1":
-                    
                     skills.Add(skill);
+                    GameObject skillComponent = Instantiate(UIFactory.instance.skillComponent, transform);
+                    skillImageComponents.Add(skillComponent.GetComponent<Image>());
+                    skillCooldownIndicators.Add(skillComponent.GetComponentsInChildren<Image>()[1]);
                     break;
                 
             }
@@ -42,8 +45,10 @@ public class PlayerSkillPanel : MonoBehaviour
             switch (skill.skillName)
             {
                 case "skill2":
-                    
                     skills.Add(skill);
+                    GameObject skillComponent = Instantiate(UIFactory.instance.skillComponent, transform);
+                    skillImageComponents.Add(skillComponent.GetComponent<Image>());
+                    skillCooldownIndicators.Add(skillComponent.GetComponentsInChildren<Image>()[1]);
                     break;
                 
             }
@@ -54,8 +59,10 @@ public class PlayerSkillPanel : MonoBehaviour
             switch (skill.skillName)
             {
                 case "skill3":
-                    
                     skills.Add(skill);
+                    GameObject skillComponent = Instantiate(UIFactory.instance.skillComponent, transform);
+                    skillImageComponents.Add(skillComponent.GetComponent<Image>());
+                    skillCooldownIndicators.Add(skillComponent.GetComponentsInChildren<Image>()[1]);
                     break;
                 
             }
@@ -66,8 +73,10 @@ public class PlayerSkillPanel : MonoBehaviour
             switch (skill.skillName)
             {
                 case "skill4":
-                    
                     skills.Add(skill);
+                    GameObject skillComponent = Instantiate(UIFactory.instance.skillComponent, transform);
+                    skillImageComponents.Add(skillComponent.GetComponent<Image>());
+                    skillCooldownIndicators.Add(skillComponent.GetComponentsInChildren<Image>()[1]);
                     break;
                 
             }
@@ -83,6 +92,7 @@ public class PlayerSkillPanel : MonoBehaviour
         for (int i = 0; i < skillCooldownIndicators.Count; i++)
         {
             skillCooldownIndicators[i].fillAmount = skills[i].coolDownCounter / skills[i].coolDown;
+            skillImageComponents[i].sprite = skills[i].spriteInCooldownPanel;
         }
     }
 }
