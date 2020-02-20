@@ -175,6 +175,7 @@
           <e p="pixel_snapping_README.txt" t="Include" />
         </e>
         <e p="PlayerInputActions.cs" t="Include" />
+        <e p="PlayerSkillPanel.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>

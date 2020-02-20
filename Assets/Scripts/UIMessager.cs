@@ -6,6 +6,7 @@ using UnityEngine;
 public class UIMessager : MonoBehaviour
 {
     public List<PlayerPanel> playerPanels;
+    public List<PlayerSkillPanel> playerSkillPanels;
     // Start is called before the first frame update
     
     private void Awake()
@@ -19,7 +20,6 @@ public class UIMessager : MonoBehaviour
         List<PlayerCharacter> characters = PlayerCharacterSpawner.instance.charactersForPlayer;
         if (characters.Count == playerPanels.Count)
         {
-            print(characters.Count);
             for (int i = 0; i < characters.Count; i++)
             {
                 playerPanels[i].player = characters[i];
@@ -29,6 +29,20 @@ public class UIMessager : MonoBehaviour
         foreach (PlayerPanel playerPanel in playerPanels)
         {
             playerPanel.onPlayerSetup?.Invoke();
+        }
+        
+        
+
+        if (characters.Count == playerSkillPanels.Count)
+        {
+            for (int i = 0; i < characters.Count; i++)
+            {
+                playerSkillPanels[i].owner = characters[i];
+            }
+        }
+        foreach (PlayerSkillPanel playerSkillPanel in playerSkillPanels)
+        {
+            playerSkillPanel.onPlayerSetup?.Invoke();
         }
     }
 }
