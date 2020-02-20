@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: skill1
   coolDown: 5
-  coolDownCounter: -0.0035410882
+  coolDownCounter: 0
+  spriteInCooldownPanel: {fileID: 21300000, guid: b8801f9012afb714a8f466102ce9cacc,
+    type: 3}

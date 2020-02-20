@@ -8,8 +8,9 @@ public class SMB_Push : CharacterStateMachineBehavior
     private PushComponent pushComponent;
     private bool groundedOnInitialization;
     private Vector3 originalPos;
-
     private bool hasHitCollision;
+
+    public DamageData bounceBackDamageData;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -24,6 +25,9 @@ public class SMB_Push : CharacterStateMachineBehavior
         groundedOnInitialization = playerCharacter.isGrounded;
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
+        
+        
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -54,18 +58,25 @@ public class SMB_Push : CharacterStateMachineBehavior
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
-            if (pushComponent.pushDirection.x > 0)
-            {
-                rb.velocity = new Vector2(-4, 5);
-            }
-            else
-            {
-                rb.velocity = new Vector2(4, 5);
-            }
+            // if (pushComponent.pushDirection.x > 0)
+            // {
+                // rb.velocity = new Vector2(-4, 5);
+            // }
+            // else
+            // {
+                // rb.velocity = new Vector2(4, 5);
+            // }
             hasHitCollision = true;
             pushComponent.onHitGround -= BounceFromGround;
             pushComponent.onHitWall -= BounceFromWall;
        
+            DamageData bounceFromWallDamageData = CreateInstance<DamageData>();
+            bounceFromWallDamageData.damage = 5;
+            bounceFromWallDamageData.damageType = DamageType.Explosion;
+            bounceFromWallDamageData.launcherVerticalForce = 5;
+            bounceFromWallDamageData.launcherHorizontalForce = pushComponent.pushDirection.x > 0 ? -4 : 4;
+            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            characterAnimator.SetTrigger("hurt");
     }
 
     private void BounceFromGround(Vector2 collisionPoint)
@@ -76,7 +87,22 @@ public class SMB_Push : CharacterStateMachineBehavior
             rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
             pushComponent.onHitWall -= BounceFromWall;
             pushComponent.onHitGround -= BounceFromGround;
+            
+            hasHitCollision = true;
+            pushComponent.onHitGround -= BounceFromGround;
+            pushComponent.onHitWall -= BounceFromWall;
+       
+            DamageData bounceFromWallDamageData = CreateInstance<DamageData>();
+            bounceFromWallDamageData.damage = 5;
+            bounceFromWallDamageData.damageType = DamageType.Explosion;
+            bounceFromWallDamageData.launcherVerticalForce = Mathf.Abs((pushComponent.pushDirection * pushComponent.pushSpeed).y);
+            bounceFromWallDamageData.launcherHorizontalForce =
+                (pushComponent.pushDirection * pushComponent.pushSpeed).x;
+            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            characterAnimator.SetTrigger("hurt");
         }
+        
+        
         
     }
 

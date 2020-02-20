@@ -12,7 +12,7 @@ public class DaggerRotator : MonoBehaviour
     private float growUpTimeCounter;
 
     public float rotateSpeed = 90f;
-    private float sizeIncreaseFactor = 0.5f;
+    public float sizeIncreaseFactor = 1f;
     public bool hasGrownUp;
     public bool hasShoot;
     private Projectile projectile;

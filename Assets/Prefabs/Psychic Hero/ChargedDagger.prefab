@@ -162,7 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ddca08a11ffb3a45b7aab0d06905cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growUpTime: 2
-  rotateSpeed: 90
+  growUpTime: 0.7
+  rotateSpeed: 270
+  sizeIncreaseFactor: 1.3
   hasGrownUp: 0
   hasShoot: 0

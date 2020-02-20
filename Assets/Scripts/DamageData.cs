@@ -3,6 +3,7 @@
 [CreateAssetMenu(fileName = "DamageData", menuName = "DamageData")]
 public class DamageData: ScriptableObject
 {
+
     public int damage;
     
     
