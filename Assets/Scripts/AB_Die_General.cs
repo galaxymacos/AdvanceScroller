@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class die : CharacterStateMachineBehavior
+public class AB_Die_General : CharacterStateMachineBehavior
 {
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         SwitchCollider(true);
+        playerCharacter.canControlMovement = false;
+        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     

@@ -12,6 +12,7 @@
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="AxeHeroAnimatorEvent.cs" t="Include" />
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -192,6 +193,7 @@
           <e p="AB_BatHero_Throw.cs" t="Include" />
           <e p="AB_BatHero_Transform.cs" t="Include" />
           <e p="AB_Dash_General.cs" t="Include" />
+          <e p="AB_Die_General.cs" t="Include" />
           <e p="AB_Hurt_General.cs" t="Include" />
           <e p="AB_PhychicHero_InstantKill.cs" t="Include" />
           <e p="AB_PsychicHero_Attack.cs" t="Include" />
@@ -229,7 +231,6 @@
           <e p="DamageData.cs" t="Include" />
           <e p="DamageReceiver.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
-          <e p="die.cs" t="Include" />
           <e p="DodgeShadow.cs" t="Include" />
           <e p="double_jump_psychic_hero.cs" t="Include" />
           <e p="EyeBullet.cs" t="Include" />
@@ -291,6 +292,7 @@
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>
+        <e p="ShaderProcessor.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>

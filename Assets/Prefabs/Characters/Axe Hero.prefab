@@ -100,7 +100,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758164498732494736}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829747677670258654
 GameObject:
@@ -174,7 +174,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758164498732494736}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4758164498511340011
 GameObject:
@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 1340760059}
   - component: {fileID: 4556048856342974423}
   - component: {fileID: 5623847722637158371}
+  - component: {fileID: 3904847156095916348}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -346,6 +347,7 @@ MonoBehaviour:
     type: 3}
   groundDustTwoWays: {fileID: 2507875056641089187, guid: b3fc23b6d0b53524e9dbaa130ba770fa,
     type: 3}
+  impactWave: {fileID: 0}
   movementSpeed: 5
   canControlMovement: 0
   chargedDagger: {fileID: 0}
@@ -664,6 +666,21 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.42, y: 0.71}
   m_Direction: 0
+--- !u!114 &3904847156095916348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4fd68b98b715de4583dcf8507885c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hugeSlashPrefab: {fileID: 6494076125343625711, guid: 1527d16065ef63746bd28ab85961c367,
+    type: 3}
+  particleSpawnTransform: {fileID: 7169799541249464455}
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,6 +712,7 @@ Transform:
   - {fileID: 4729163756725612619}
   - {fileID: 4367364928346544680}
   - {fileID: 4692480018011048631}
+  - {fileID: 7169799541249464455}
   - {fileID: 8104434483718321451}
   - {fileID: 9121151605460993206}
   - {fileID: 8128414369093063960}
@@ -731,6 +749,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4758164498511339549}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5468356380617267118
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7169799541249464455}
+  m_Layer: 0
+  m_Name: Huge Slash Particle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7169799541249464455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5468356380617267118}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.97, y: -0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4758164498732494736}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6578159128855613958
 GameObject:
@@ -906,7 +954,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758164498732494736}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8128414369093063963
 GameObject:
@@ -936,7 +984,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4758164498732494736}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9112555271806655845
 GameObject:

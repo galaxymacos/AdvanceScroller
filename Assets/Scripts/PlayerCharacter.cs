@@ -30,7 +30,7 @@ public class PlayerCharacter : MonoBehaviour
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
     public bool isDead;
-    public float dashInvincibleTime = 0.25f;
+    public float dashInvincibleTime = 0.3f;
     public float dashInvincibleTimeCounter;
     
     
