@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Buff MySelf
   m_EditorClassIdentifier: 
   skillName: skill1
-  coolDown: 10
-  coolDownCounter: 0.6414283
-  spriteInCooldownPanel: {fileID: 21300000, guid: 9763596badba85640bb3f1b049baaa42,
+  coolDown: 1
+  coolDownCounter: 0
+  spriteInCooldownPanel: {fileID: 21300000, guid: da1a814d555829d4a8da3db7b905f045,
     type: 3}

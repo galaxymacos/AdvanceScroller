@@ -1,28 +1,46 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class AB_Hurt_General : StateMachineBehaviour
+public class AB_Hurt_General : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
 
     private Knockable knockable;
-    private PlayerCharacter playerCharacter;
+    [Tooltip("Dash when getting hit in 0.05 seconds to get out of the hurt state and dash")]
+    public float dashStillAllowedLimit = 0.05f;
+    private float dashStillAlowedTimeCounter = 0;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateEnter(animator, stateInfo, layerIndex);
         rb = animator.GetComponent<Rigidbody2D>();
-        playerCharacter = animator.GetComponent<PlayerCharacter>();
         animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         knockable = animator.GetComponent<Knockable>();
         rb.velocity = knockable.knockDirection;
+        dashStillAlowedTimeCounter = dashStillAllowedLimit;
     }
  
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
+        if (dashStillAlowedTimeCounter > 0)
+        {
+            dashStillAlowedTimeCounter -= Time.deltaTime;
+            if (playerInput.dashButtonPressed)
+            {
+                playerInput.dashButtonPressed = false;
+                BulletTimeManager.instance.Register(0.3f);
+                // playerCharacter.PrintString("trying to dash");
+                animator.SetTrigger("dash");
+                playerCharacter.dashInvincibleTimeCounter = playerCharacter.dashInvincibleTime;
+            }
+        }
         if(playerCharacter.isGrounded && rb.velocity.y <= 0)
             animator.SetTrigger("idle");
+        
+        
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

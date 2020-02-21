@@ -9,12 +9,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AB_BatHero_Throw.cs" t="Include" />
-        <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
-        <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
-        <e p="AB_Stomp_General.cs" t="Include" />
-        <e p="AB_SwordPrincess_Cross.cs" t="Include" />
-        <e p="AnimatorEventHandler.cs" t="Include" />
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -176,7 +170,6 @@
           <e p="pixel_snapping_README.txt" t="Include" />
         </e>
         <e p="PlayerInputActions.cs" t="Include" />
-        <e p="PlayerSkillPanel.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -196,6 +189,7 @@
           <e p="AB_BatHero_Idle.cs" t="Include" />
           <e p="AB_BatHero_Jump.cs" t="Include" />
           <e p="AB_BatHero_JumpAttack.cs" t="Include" />
+          <e p="AB_BatHero_Throw.cs" t="Include" />
           <e p="AB_BatHero_Transform.cs" t="Include" />
           <e p="AB_Dash_General.cs" t="Include" />
           <e p="AB_Hurt_General.cs" t="Include" />
@@ -204,11 +198,16 @@
           <e p="AB_PsychicHero_EyeBullet.cs" t="Include" />
           <e p="AB_PsychicHero_Falldown.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
+          <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
+          <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
+          <e p="AB_Stomp_General.cs" t="Include" />
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
+          <e p="AB_SwordPrincess_Cross.cs" t="Include" />
           <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
           <e p="AB_SwordPrincess_Jump.cs" t="Include" />
           <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
+          <e p="AnimatorEventHandler.cs" t="Include" />
           <e p="AttackMessagingComponent.cs" t="Include" />
           <e p="AttackState.cs" t="Include" />
           <e p="AxeHeroAttackMessager.cs" t="Include" />
@@ -266,6 +265,7 @@
           <e p="PlayerOneInput.cs" t="Include" />
           <e p="PlayerPanel.cs" t="Include" />
           <e p="PlayerParticleSpawnerProxy.cs" t="Include" />
+          <e p="PlayerSkillPanel.cs" t="Include" />
           <e p="PlayerThreeInput.cs" t="Include" />
           <e p="PlayerTwoInput.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
@@ -286,6 +286,7 @@
           <e p="StunComponent.cs" t="Include" />
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
+          <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
@@ -321,7 +322,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="UIFactory.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
