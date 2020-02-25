@@ -225,6 +225,9 @@
           <e p="CharacterGroundMovementComponent.cs" t="Include" />
           <e p="CharacterHealthComponent.cs" t="Include" />
           <e p="CharacterStateMachineBehavior.cs" t="Include" />
+          <e p="ChargeDagger.cs" t="Include" />
+          <e p="ChargedSMB.cs" t="Include" />
+          <e p="ChargeSkill.cs" t="Include" />
           <e p="CollisionDetector.cs" t="Include" />
           <e p="ContinuousAttack.cs" t="Include" />
           <e p="Cross.cs" t="Include" />

@@ -25,9 +25,10 @@ public class SMB_Push : CharacterStateMachineBehavior
         groundedOnInitialization = playerCharacter.isGrounded;
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
-        
-        
-        
+        playerCharacter.canControlMovement = false;
+
+
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -113,6 +114,8 @@ public class SMB_Push : CharacterStateMachineBehavior
         pushComponent.onHitGround -= BounceFromGround;
         pushComponent.onHitWall -= BounceFromWall;
         hasHitCollision = false;
+
+        playerCharacter.canControlMovement = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

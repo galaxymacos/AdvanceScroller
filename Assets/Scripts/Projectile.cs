@@ -19,6 +19,7 @@ public class Projectile : CollisionDetector
 
     public void Setup(PlayerCharacter _owner, float movementSpeed = 100 , float angle = 0, bool customRotation = false)
     {
+        rb = GetComponent<Rigidbody2D>();
         owner = _owner;
         Vector2 ownerFacingDirection = owner.isFacingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
         Vector2 moveDirection;

@@ -92,7 +92,6 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Update()
     {
-        UpdateMovement();
 
         UpdateFacingDirection();
 
@@ -111,6 +110,7 @@ public class PlayerCharacter : MonoBehaviour
             onFacingDirectionChanged?.Invoke();
         }
     }
+
 
     private void UpdateMovement()
     {
@@ -139,13 +139,13 @@ public class PlayerCharacter : MonoBehaviour
 
     private void FixedUpdate()
     {
-        updateGrounded();
-
-        
+        UpdatePlayerMovementVariable();
     }
 
-    private void updateGrounded()
+    private void UpdatePlayerMovementVariable()
     {
+        UpdateMovement();
+
         bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
         if (wasGrounded != isGrounded && isGrounded)

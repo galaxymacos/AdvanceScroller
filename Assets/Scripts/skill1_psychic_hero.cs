@@ -57,3 +57,8 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
 }
+
+public enum ChargedButton
+{
+    attack ,skill1, skill2, skill3, skill4
+}

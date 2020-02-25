@@ -447,7 +447,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 6.4e-43, y: NaN, z: 6.4e-43, w: -1.2450421e+35}
+  m_BoundingSphereOverride: {x: 2.0044e-41, y: 1.04e-43, z: 6.91e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1060,7 +1060,7 @@ PrefabInstance:
         type: 3}
       propertyPath: selectedHeros.Array.data[0]
       value: 
-      objectReference: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
+      objectReference: {fileID: 891296965151884848, guid: 06baa5af61f7a0841a19e4d6ff096236,
         type: 3}
     - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
