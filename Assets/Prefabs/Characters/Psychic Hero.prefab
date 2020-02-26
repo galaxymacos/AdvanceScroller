@@ -328,9 +328,15 @@ MonoBehaviour:
   wallRightCheck: {fileID: 1781532041058689586}
   isNextToWallLeft: 0
   isNextToWallRight: 0
+  isTouchingLadderLeft: 0
+  isTouchingLadderRight: 0
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  whatIsLadder:
+    serializedVersion: 2
+    m_Bits: 16384
+  isOnLadderPosition: 0
   atEnemyLeft: 0
   atEnemyRight: 0
   whatIsEnemy:

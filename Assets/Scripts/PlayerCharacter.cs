@@ -17,7 +17,12 @@ public class PlayerCharacter : MonoBehaviour
     public Transform wallRightCheck;
     public bool isNextToWallLeft;
     public bool isNextToWallRight;
+    public bool isTouchingLadderLeft;
+    public bool isTouchingLadderRight;
     public LayerMask whatIsWall;
+    public LayerMask whatIsLadder;
+    public bool isOnLadderPosition;
+
     
     [HideInInspector] public bool atEnemyLeft;
     [HideInInspector] public bool atEnemyRight;
@@ -54,6 +59,7 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerDodgeSucceed;
     public Action onPlayerWalkNextToWall;
     public Action onPlayerExitWall;
+    public Action onPlayerExitLadder;
     
     // Animation event
     public Action onPlayerStartWallSlide;
@@ -67,7 +73,7 @@ public class PlayerCharacter : MonoBehaviour
     [HideInInspector] public CharacterFlipComponent flipComponent;
 
     [HideInInspector] public GameObject chargedDagger;
-    
+
 
     private void Awake()
     {
@@ -174,6 +180,24 @@ public class PlayerCharacter : MonoBehaviour
         else if(wasNextToWallLeft != isNextToWallLeft && !isNextToWallLeft && !isFacingRight)
         {
             onPlayerExitWall?.Invoke();
+        }
+        
+        bool wasTouchingLadderLeft = isTouchingLadderLeft;
+        bool wasTouchingLadderRight = isTouchingLadderRight;
+        isTouchingLadderRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsLadder);
+        isTouchingLadderLeft = Physics2D.OverlapCircle(wallLeftCheck.position, checkRadius, whatIsLadder);
+        if (isTouchingLadderLeft && isTouchingLadderRight)
+        {
+            isOnLadderPosition = true;
+        }
+        else
+        {
+            isOnLadderPosition = false;
+        }
+
+        if ((isTouchingLadderLeft && isTouchingLadderRight) == false && wasTouchingLadderLeft && wasTouchingLadderRight)
+        {
+            onPlayerExitLadder?.Invoke();
         }
         
         atEnemyRight = Physics2D.OverlapCircle(wallLeftCheck.position, 0.2f, whatIsEnemy);

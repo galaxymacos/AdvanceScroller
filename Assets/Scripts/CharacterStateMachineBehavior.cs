@@ -221,6 +221,13 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         }
 
                         break;
+                    case "climb":
+                        if (playerInput.verticalAxis > 0)
+                        {
+                            return "climb";
+                        }
+
+                        break;
                 }
             }
         }

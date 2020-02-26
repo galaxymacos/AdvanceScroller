@@ -118,6 +118,13 @@ public class LimitedUsageFilter: CastSkillFilter
                 }
 
                 return false;
+            case "climb":
+                if (csmb.playerCharacter.isTouchingLadderLeft && csmb.playerCharacter.isTouchingLadderRight)
+                {
+                    return true;
+                }
+
+                return false;
         }
 
         // The current skill is not limited 
