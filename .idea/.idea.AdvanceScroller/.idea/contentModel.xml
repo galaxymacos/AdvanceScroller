@@ -168,9 +168,6 @@
             </e>
           </e>
         </e>
-        <e p="Nature_pixel_art_assets" t="Include">
-          <e p="pixel_snapping_README.txt" t="Include" />
-        </e>
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
@@ -326,6 +323,11 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
+          </e>
+        </e>
+        <e p="TooCubeForest" t="Include">
+          <e p="demoScenes" t="Include">
+            <e p="Movement.cs" t="Include" />
           </e>
         </e>
       </e>

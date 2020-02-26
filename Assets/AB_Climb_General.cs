@@ -12,6 +12,8 @@ public class AB_Climb_General : CharacterStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerCharacter.onPlayerExitLadder += TransferToIdleState;
         playerCharacter.canControlMovement = false;
+        playerCharacter.onPlayerGrounded += TransferToIdleState;
+        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -42,12 +44,16 @@ public class AB_Climb_General : CharacterStateMachineBehavior
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
         playerCharacter.canControlMovement = true;
         playerCharacter.onPlayerExitLadder -= TransferToIdleState;
+        playerCharacter.onPlayerGrounded -= TransferToIdleState;
+
     }
 
     public void TransferToIdleState()
     {
         characterAnimator.SetTrigger("idle");
     }
+    
+    
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

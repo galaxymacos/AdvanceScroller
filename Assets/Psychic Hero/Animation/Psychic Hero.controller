@@ -1256,7 +1256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0123f1f3674cf864d94cdda8cd433622, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stateCanTransformTo: []
+  stateCanTransformTo:
+  - jump
   stateCanForceTransformTo: []
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
