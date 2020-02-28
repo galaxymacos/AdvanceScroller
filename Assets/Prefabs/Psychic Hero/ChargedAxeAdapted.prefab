@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669e0cc849dbe184fa8c8b161d880be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxChargedTime: 0
+  maxChargedTime: 1.5
   owner: {fileID: 0}
   isFacingRight: 0
   hasReleased: 0
