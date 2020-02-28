@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
-  m_Name: Instant Kill
+  m_Name: Instant Kill Last Strike
   m_EditorClassIdentifier: 
-  damage: 3
+  damage: 10
   pushPower: 0
   pushDistance: 0
   pushType: 0
   damageType: 2
   offSetDegree: 0
-  hitStunPower: 0.2
-  launcherHorizontalForce: 0
-  launcherVerticalForce: 0
+  hitStunPower: 0
+  launcherHorizontalForce: 4
+  launcherVerticalForce: 6

@@ -50,6 +50,5 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     {
         isRunning = false;
         
-        objectsHasProcessed.Clear();
     }
 }

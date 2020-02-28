@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public interface IAttackComponent
 {
@@ -12,10 +13,13 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     [SerializeField] protected float duration = 3f;
     [SerializeField] protected float tickInterval = 0.2f;
     [SerializeField] protected DamageData damageData;
+    [SerializeField] protected DamageData finalDamageData;
     
     [SerializeField] protected PlayerCharacter owner;
     private float runTime;
     private float lastTickTime;
+
+    public Action oneLastStrikeFinished;
 
 
     public void Execute()
@@ -47,6 +51,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
                 runTime += Time.deltaTime;
                 if (runTime > duration)
                 {
+                    OneLastStrike();
                     StopDetectTarget();
                 }
             }
@@ -54,6 +59,24 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
             
         }
         
+    }
+
+    public virtual void OneLastStrike()
+    {
+        oneLastStrikeFinished?.Invoke();
+        if (finalDamageData == null) return;
+
+        foreach (GameObject target in objectsInCollision)
+        {
+            if (target == null || target == owner.gameObject) continue;
+            var damageReceiver = target.GetComponent<DamageReceiver>();
+            if (damageReceiver != null)
+            {
+                print("one last strike");
+                damageReceiver.Analyze(finalDamageData, transform.root);
+            }
+            
+        }
     }
 
 
