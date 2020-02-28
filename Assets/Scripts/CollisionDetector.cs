@@ -32,9 +32,12 @@ public class CollisionDetector: MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (objectsInCollision.Contains(other.gameObject))
+        if (objectsInCollision != null)
         {
-            objectsInCollision.Remove(other.gameObject);
+            if (objectsInCollision.Contains(other.gameObject))
+            {
+                objectsInCollision.Remove(other.gameObject);
+            }
         }
     }
 }

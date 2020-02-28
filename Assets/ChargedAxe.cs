@@ -16,24 +16,22 @@ public class ChargedAxe : ChargeSkill
 
     public override void Tick()
     {
-        throw new System.NotImplementedException();
     }
 
     protected override void OnChargingFull()
     {
-        throw new System.NotImplementedException();
     }
 
     protected override void OnChargingStart()
     {
-        throw new System.NotImplementedException();
     }
 
     protected override void OnChargingCancel()
     {
+        print("throw small axe");
         GameObject axe = Instantiate(axePrefab, transform.position, Quaternion.identity);
         Projectile axeProjectile = axe.GetComponent<Projectile>();
-        axeProjectile.Setup(owner);
+        axeProjectile.Setup(owner,10,45);
         GetComponent<Projectile>().destroyWithoutDeadEffect = true;
         Destroy(gameObject);
     }
@@ -46,7 +44,7 @@ public class ChargedAxe : ChargeSkill
     protected override void OnChargingSuccess()
     {
         projectile = GetComponent<Projectile>();
-        projectile.Setup(owner, 100, 0);
+        projectile.Setup(owner, 13, 0);
         
         enabled = false;
     }
