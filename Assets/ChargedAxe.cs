@@ -6,6 +6,9 @@ using UnityEngine;
 public class ChargedAxe : ChargeSkill
 {
     [SerializeField] private Projectile projectile;
+    [SerializeField] private float ChargedAxeStartSpeed = 20f;
+    [SerializeField] private float axeThrowStartSpeed = 10f;
+    [SerializeField] private float axeThrowAngle = 45;
 
     public GameObject axePrefab;
 
@@ -31,7 +34,7 @@ public class ChargedAxe : ChargeSkill
         print("throw small axe");
         GameObject axe = Instantiate(axePrefab, transform.position, Quaternion.identity);
         Projectile axeProjectile = axe.GetComponent<Projectile>();
-        axeProjectile.Setup(owner,10,45);
+        axeProjectile.Setup(owner,axeThrowStartSpeed,axeThrowAngle);
         GetComponent<Projectile>().destroyWithoutDeadEffect = true;
         Destroy(gameObject);
     }
@@ -44,7 +47,7 @@ public class ChargedAxe : ChargeSkill
     protected override void OnChargingSuccess()
     {
         projectile = GetComponent<Projectile>();
-        projectile.Setup(owner, 13, 0);
+        projectile.Setup(owner, ChargedAxeStartSpeed, 0);
         
         enabled = false;
     }
