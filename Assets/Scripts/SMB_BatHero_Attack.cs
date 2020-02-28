@@ -22,7 +22,7 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            playerCharacter.canControlMovement = false;
+            
         }
         else
         {
@@ -42,7 +42,7 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     {
         playerCharacter.GetComponent<BatHeroAttackMessager>().attackFirstStrike.StopDetectTarget();
         playerCharacter.GetComponent<BatHeroAttackMessager>().attackSecondStrike.StopDetectTarget();
-        playerCharacter.canControlMovement = true;
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
