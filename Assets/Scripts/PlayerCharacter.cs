@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    private PlayerInput playerInput;
+    public PlayerInput playerInput;
     
     
     public Transform groundCheck;
@@ -81,7 +81,7 @@ public class PlayerCharacter : MonoBehaviour
         playerInput = GetComponent<PlayerInput>();
         
         
-        characterGroundMovementComponent = new CharacterGroundMovementComponent(movementSpeed, transform, playerInput);
+        characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipComponent = new CharacterFlipComponent(transform);
         
         GetComponent<CharacterHealthComponent>().onPlayerDie = PlayerDie;

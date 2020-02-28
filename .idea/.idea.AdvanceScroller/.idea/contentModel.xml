@@ -176,19 +176,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
-          <e p="AB_AxeHero_DoubleJump.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
-          <e p="AB_AxeHero_Idle.cs" t="Include" />
           <e p="AB_AxeHero_JumpAttack.cs" t="Include" />
           <e p="AB_AxeHero_Skill1.cs" t="Include" />
           <e p="AB_AxeHero_Skill2.cs" t="Include" />
           <e p="AB_AxeHero_Skill3.cs" t="Include" />
           <e p="AB_BatHero_BatEnergy.cs" t="Include" />
           <e p="AB_BatHero_BatFly.cs" t="Include" />
-          <e p="AB_BatHero_DoubleJump.cs" t="Include" />
           <e p="AB_BatHero_FallDown.cs" t="Include" />
-          <e p="AB_BatHero_Idle.cs" t="Include" />
-          <e p="AB_BatHero_Jump.cs" t="Include" />
           <e p="AB_BatHero_JumpAttack.cs" t="Include" />
           <e p="AB_BatHero_Throw.cs" t="Include" />
           <e p="AB_BatHero_Transform.cs" t="Include" />
@@ -205,7 +200,6 @@
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AB_SwordPrincess_Cross.cs" t="Include" />
           <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
-          <e p="AB_SwordPrincess_Jump.cs" t="Include" />
           <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
           <e p="AnimatorEventHandler.cs" t="Include" />
@@ -234,7 +228,6 @@
           <e p="DamageReceiver.cs" t="Include" />
           <e p="DashState.cs" t="Include" />
           <e p="DodgeShadow.cs" t="Include" />
-          <e p="double_jump_psychic_hero.cs" t="Include" />
           <e p="EyeBullet.cs" t="Include" />
           <e p="FallDownState.cs" t="Include" />
           <e p="FlashYellowComponent.cs" t="Include" />
@@ -245,7 +238,6 @@
           <e p="HeroineState.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
           <e p="HurtState.cs" t="Include" />
-          <e p="idle_physics_hero.cs" t="Include" />
           <e p="IdleState.cs" t="Include" />
           <e p="InstantKillContinuousAttack.cs" t="Include" />
           <e p="jump_attack_psychic_hero.cs" t="Include" />
@@ -284,6 +276,7 @@
           <e p="SkillCooldownManager.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
           <e p="SMB_Falldown_General.cs" t="Include" />
+          <e p="SMB_Idle_General.cs" t="Include" />
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />

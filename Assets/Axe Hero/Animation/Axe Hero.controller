@@ -141,32 +141,6 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
---- !u!114 &-7162406955896212917
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d097e5a51ddf9804c87ac5e38fc2470b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateCanTransformTo:
-  - attack
-  - dash
-  - jump
-  - skill3
-  - skill2
-  stateCanForceTransformTo: []
-  canControlHorizontalMovement: 1
-  characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
-  playerCharacter: {fileID: 0}
-  jumpForce: 5
-  firstJump: {fileID: 7400000, guid: 8cc6747acc8cf5d45854f62c55ffa9c5, type: 2}
-  secondJump: {fileID: 7400000, guid: 8b133f40dad3238429de8462999d54d3, type: 2}
 --- !u!1101 &-6925585801540077999
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -834,7 +808,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: -7162406955896212917}
+  - {fileID: 5062414211853295346}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1249,6 +1223,32 @@ MonoBehaviour:
   playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: 4f279c7d9633bab469c9cadda56b5304, type: 2}
   jumpForm: {fileID: 7400000, guid: 6b8c51d4d3b9aa94194a9a3202aae18d, type: 2}
+--- !u!114 &5062414211853295346
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac716832e7a668c4a9b895f6e070b1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo:
+  - attack
+  - dash
+  - jump
+  - skill2
+  - skill3
+  stateCanForceTransformTo: []
+  canControlHorizontalMovement: 1
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  jumpForce: 5
+  firstJump: {fileID: 7400000, guid: 8cc6747acc8cf5d45854f62c55ffa9c5, type: 2}
+  secondJump: {fileID: 7400000, guid: 8b133f40dad3238429de8462999d54d3, type: 2}
 --- !u!114 &5596895217598118713
 MonoBehaviour:
   m_ObjectHideFlags: 1

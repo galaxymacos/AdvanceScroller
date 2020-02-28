@@ -476,6 +476,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &-1051157308651589305
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9d56ce3b1dcc4c863015babefbe3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo:
+  - attack
+  - run
+  - dash
+  - jump
+  - skill1
+  - skill2
+  - skill3
+  - climb
+  stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1113,7 +1139,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 1950352680183857104}
+  - {fileID: -1051157308651589305}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1262,32 +1288,6 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!114 &1950352680183857104
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a41e09fdbc87c4eae8e4ccd37d8278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateCanTransformTo:
-  - attack
-  - run
-  - dash
-  - jump
-  - skill1
-  - skill2
-  - skill3
-  - climb
-  stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
-  characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
-  playerCharacter: {fileID: 0}
 --- !u!114 &2966903815011567899
 MonoBehaviour:
   m_ObjectHideFlags: 1

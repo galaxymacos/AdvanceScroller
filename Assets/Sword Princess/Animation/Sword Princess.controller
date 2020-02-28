@@ -182,6 +182,58 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!114 &-5780883388438539770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac716832e7a668c4a9b895f6e070b1b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo:
+  - attack
+  - dash
+  - jump
+  - skill1
+  - skill2
+  - skill3
+  stateCanForceTransformTo: []
+  canControlHorizontalMovement: 1
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  jumpForce: 6
+  firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}
+  secondJump: {fileID: 7400000, guid: 9c2ac3d9a9e7b9d40b895b205a2c9806, type: 2}
+--- !u!114 &-4025513680671681885
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ff9d56ce3b1dcc4c863015babefbe3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo:
+  - jump
+  - run
+  - dash
+  - skill1
+  - skill2
+  - skill3
+  - attack
+  stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
+  characterAnimator: {fileID: 0}
+  playerInput: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!114 &-3606007453468979376
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -727,7 +779,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 2154102597297588052}
+  - {fileID: -5780883388438539770}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -944,7 +996,7 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours:
-  - {fileID: 1950352680183857104}
+  - {fileID: -4025513680671681885}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1078,58 +1130,6 @@ MonoBehaviour:
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
---- !u!114 &1950352680183857104
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0a41e09fdbc87c4eae8e4ccd37d8278, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateCanTransformTo:
-  - jump
-  - run
-  - dash
-  - skill1
-  - skill2
-  - skill3
-  - attack
-  stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
-  characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
-  playerCharacter: {fileID: 0}
---- !u!114 &2154102597297588052
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f926cf6abcb018049906476f4b5a6dc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  stateCanTransformTo:
-  - attack
-  - dash
-  - jump
-  - skill1
-  - skill2
-  - skill3
-  stateCanForceTransformTo: []
-  canControlHorizontalMovement: 1
-  characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
-  playerCharacter: {fileID: 0}
-  jumpForce: 6
-  firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}
-  secondJump: {fileID: 7400000, guid: 9c2ac3d9a9e7b9d40b895b205a2c9806, type: 2}
 --- !u!114 &3312402770574090335
 MonoBehaviour:
   m_ObjectHideFlags: 1

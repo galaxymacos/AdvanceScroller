@@ -8,21 +8,19 @@ public class CharacterGroundMovementComponent: MovementComponent
     private float movementSpeed;
     private Rigidbody2D rb;
     private PlayerInput input;
-    private bool canMove;
     private PlayerCharacter _playerCharacter;
 
-    public CharacterGroundMovementComponent(float movementSpeed, Transform entity, PlayerInput input)
+    public CharacterGroundMovementComponent(PlayerCharacter playerCharacter)
     {
-        this.movementSpeed = movementSpeed;
-        rb = entity.GetComponent<Rigidbody2D>();
-        this.input = input;
-        _playerCharacter = entity.GetComponent<PlayerCharacter>();
+        _playerCharacter = playerCharacter;
+        movementSpeed = playerCharacter.movementSpeed;
+        rb = _playerCharacter.GetComponent<Rigidbody2D>();
+        input = playerCharacter.playerInput;
     }
 
     public override void UpdateMovement()
     {
-        canMove = _playerCharacter.canControlMovement;
-        if (canMove)
+        if (_playerCharacter.canControlMovement)
         {
             
             rb.velocity = new Vector2(movementSpeed * input.horizontalAxis, rb.velocity.y);
