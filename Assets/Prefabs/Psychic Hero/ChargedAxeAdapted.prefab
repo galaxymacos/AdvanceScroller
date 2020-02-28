@@ -152,7 +152,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 0.6
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -172,10 +172,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278dad11b2ae418fa61955ebdee97873, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   maxReturnSpeed: 10
   speedToGetMaxVelocity: 8
   maxDistanceToTravel: 10
-  projectile: {fileID: 7635780407722689896}
+  originalPosition: {x: 0, y: 0}
+  rb: {fileID: 0}
+  isReturningToOwner: 0
 --- !u!114 &4993596073746166647
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,5 +196,8 @@ MonoBehaviour:
   isFacingRight: 0
   hasReleased: 0
   projectile: {fileID: 7635780407722689896}
+  ChargedAxeStartSpeed: 25
+  axeThrowStartSpeed: 10
+  axeThrowAngle: 45
   axePrefab: {fileID: 1421687569583083984, guid: fd257c150393fab469a9956246179d3f,
     type: 3}
