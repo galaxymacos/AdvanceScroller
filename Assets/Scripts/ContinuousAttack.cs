@@ -44,21 +44,16 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
             
             if (duration > 0)
             {
-                StopIfTimeOver();
+                runTime += Time.deltaTime;
+                if (runTime > duration)
+                {
+                    StopDetectTarget();
+                }
             }
             
             
         }
         
-    }
-
-    private void StopIfTimeOver()
-    {
-        runTime += Time.deltaTime;
-        if (runTime > duration)
-        {
-            StopDetectTarget();
-        }
     }
 
 

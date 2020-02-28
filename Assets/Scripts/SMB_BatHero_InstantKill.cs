@@ -1,15 +1,16 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AB_PhychicHero_InstantKill : CharacterStateMachineBehavior
+public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        
+        playerCharacter.GetComponent<IUniqueSkill>().Use();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -25,7 +26,7 @@ public class AB_PhychicHero_InstantKill : CharacterStateMachineBehavior
        
         animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTarget();
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTarget();
-
+        playerCharacter.GetComponent<IUniqueSkill>().UniqueSkillEnd();
     }
 
     

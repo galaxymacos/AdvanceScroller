@@ -369,6 +369,7 @@ GameObject:
   - component: {fileID: 3263405227032971152}
   - component: {fileID: 165736055725530837}
   - component: {fileID: 4741068551188603677}
+  - component: {fileID: -6872933427141104953}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -475,6 +476,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4718823397561ad43975c87b6136942d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerInput: {fileID: 0}
   groundCheck: {fileID: 3658480544129214436}
   isGrounded: 0
   checkRadius: 0.03
@@ -827,6 +829,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0.03}
   m_Size: {x: 0.43, y: 0.77}
   m_Direction: 0
+--- !u!114 &-6872933427141104953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b8f7cd7813f2264294b89e5f2858816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

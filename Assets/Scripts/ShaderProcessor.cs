@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShaderProcessor : MonoBehaviour
@@ -20,7 +19,7 @@ public class ShaderProcessor : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    
     public void Blur(SpriteRenderer spriteRenderer)
     {
         print("Blurring character");
@@ -28,7 +27,7 @@ public class ShaderProcessor : MonoBehaviour
         StartCoroutine(BlurCoroutine());
     }
 
-    public IEnumerator BlurCoroutine()
+    private IEnumerator BlurCoroutine()
     {
         var currentBlurAmount = blurMaterial.GetFloat("_BlurAmount");
         while (currentBlurAmount < 5)
@@ -40,8 +39,8 @@ public class ShaderProcessor : MonoBehaviour
 
         StartCoroutine(ClearCoroutine());
     }
-    
-    public IEnumerator ClearCoroutine()
+
+    private IEnumerator ClearCoroutine()
     {
         var currentBlurAmount = blurMaterial.GetFloat("_BlurAmount");
         while (currentBlurAmount > 0)

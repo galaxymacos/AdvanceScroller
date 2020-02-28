@@ -71,15 +71,17 @@ public class PlayerCharacter : MonoBehaviour
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipComponent;
-
     [HideInInspector] public GameObject chargedDagger;
 
+    private IUniqueSkill uniqueSkill;
 
+
+    
     private void Awake()
     {
         // set up variable
         playerInput = GetComponent<PlayerInput>();
-        
+        uniqueSkill = GetComponent<IUniqueSkill>();
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipComponent = new CharacterFlipComponent(transform);
@@ -89,6 +91,7 @@ public class PlayerCharacter : MonoBehaviour
 
 
     }
+    
     
 
     private void PlayerDie()

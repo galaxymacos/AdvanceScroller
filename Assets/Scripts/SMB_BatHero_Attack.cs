@@ -22,7 +22,8 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            
+            playerCharacter.canControlMovement = false;
+
         }
         else
         {
@@ -33,6 +34,9 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
  
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
+            
+            
+            playerCharacter.canControlMovement = true;
         }
         
         
