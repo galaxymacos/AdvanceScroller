@@ -21,11 +21,9 @@ public class SMB_Push : CharacterStateMachineBehavior
         pushComponent = animator.GetComponent<PushComponent>();
         pushComponent.onHitWall += BounceFromWall;
         pushComponent.onHitGround += BounceFromGround;
-        playerCharacter.canControlMovement = false;
         groundedOnInitialization = playerCharacter.isGrounded;
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
-        playerCharacter.canControlMovement = false;
 
 
 
@@ -115,7 +113,6 @@ public class SMB_Push : CharacterStateMachineBehavior
         pushComponent.onHitWall -= BounceFromWall;
         hasHitCollision = false;
 
-        playerCharacter.canControlMovement = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

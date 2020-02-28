@@ -1,14 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class run_psychic_hero : CharacterStateMachineBehavior
+public class SMB_Run_General : CharacterStateMachineBehavior
 {
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
 
         if (!playerCharacter.isGrounded)
         {

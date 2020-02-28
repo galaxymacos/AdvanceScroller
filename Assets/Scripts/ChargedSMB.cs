@@ -14,18 +14,23 @@ public class ChargedSMB : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        var chargedDagger = Instantiate(chargeSkillPrefab,playerCharacter.transform.position, Quaternion.identity);
+        GameObject chargedDagger = Instantiate(chargeSkillPrefab,playerCharacter.transform.position, Quaternion.identity);
         chargeSkill = chargedDagger.GetComponent<ChargeSkill>();
         chargeSkill.Setup(playerCharacter);
         PressDetectedButton();
         chargeSkill.StartCharging();
         hasReleaseCharging = false;
-        playerCharacter.canControlMovement = false;
 
         if (ignoreGravity)
         {
             prevGravity = playerCharacter.GetComponent<Rigidbody2D>().gravityScale;
             playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
+        }
+
+        var chargeSkillMessager = playerCharacter.GetComponent<ChargeSkillMessager>();
+        if (chargeSkillMessager != null)
+        {
+            chargeSkillMessager.onFireChargeSkill?.Invoke(chargeSkill);
         }
     }
 
@@ -35,9 +40,9 @@ public class ChargedSMB : CharacterStateMachineBehavior
         isButtonPressed = GetDetectedButtonState();
         if (!isButtonPressed && !hasReleaseCharging)
         {
-            chargeSkill.ReleaseCharging();
+            // chargeSkill.ReleaseCharging();
             hasReleaseCharging = true;
-            _animator.SetTrigger("idle");
+            _animator.SetTrigger("charge finish");
         }
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
 
@@ -53,7 +58,6 @@ public class ChargedSMB : CharacterStateMachineBehavior
 
         ResetChargedButton();
 
-        playerCharacter.canControlMovement = true;
 
         if (ignoreGravity)
         {

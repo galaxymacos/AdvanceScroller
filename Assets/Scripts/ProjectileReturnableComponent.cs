@@ -22,23 +22,26 @@ public class ProjectileReturnableComponent: MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         onReturnToOwner += ResetProjectile;
     }
-    
-    
 
-    private bool isReturningToOwner;
-
-    public void Setup()
+    private void OnEnable()
     {
-        projectile = GetComponent<Projectile>();
+        GetComponent<Projectile>().onSetupFinished += Setup;
+    }
+
+    public void Setup(Projectile projectile)
+    {
+        this.projectile = projectile;
         owner = projectile.owner;
         hasSetup = true;
     }
+
+    private bool isReturningToOwner;
+
 
     private void Update()
     {
         if (!hasSetup)
         {
-            Setup();
             return;
         }
         if (Vector2.Distance(originalPosition, transform.position) >= maxDistanceToTravel && !isReturningToOwner)
@@ -69,12 +72,12 @@ public class ProjectileReturnableComponent: MonoBehaviour
         }
     }
 
-    public void hasReturnedToOwner()
+    private void hasReturnedToOwner()
     {
         Destroy(gameObject);
     }
 
-    public void ResetProjectile()
+    private void ResetProjectile()
     {
         GetComponent<Projectile>().ResetAttack();
     }

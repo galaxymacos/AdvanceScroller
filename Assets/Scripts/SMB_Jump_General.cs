@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class jump_psychic_hero : CharacterStateMachineBehavior
+public class SMB_Jump_General : CharacterStateMachineBehavior
 {
     [SerializeField] private float jumpForce = 5f;
 
@@ -16,7 +16,6 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump", "dash", "attack", "skill3", "skill2", "skill1"});
 
         if (playerCharacter.jumpTime == 0)
         {
@@ -53,7 +52,6 @@ public class jump_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
 
         _animator.GetComponent<PlayerCharacter>().characterGroundMovementComponent.UpdateMovement();
 

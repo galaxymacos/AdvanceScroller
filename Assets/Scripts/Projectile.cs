@@ -17,6 +17,8 @@ public class Projectile : CollisionDetector
 
     private bool setupFinished;
 
+    public Action<Projectile> onSetupFinished;
+
     public void Setup(PlayerCharacter _owner, float movementSpeed = 100 , float angle = 0, bool customRotation = false)
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,6 +56,7 @@ public class Projectile : CollisionDetector
         
         
         setupFinished = true;
+        onSetupFinished?.Invoke(this);
     }
 
     private void Awake()

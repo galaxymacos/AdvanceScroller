@@ -11,7 +11,6 @@ public class AB_PsychicHero_Skill3 : CharacterStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         rb = animator.GetComponent<Rigidbody2D>();
         playerCharacter.GetComponent<PsychicHeroAnimationEventContainer>().ExecuteTornado();
-        playerCharacter.canControlMovement = true;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

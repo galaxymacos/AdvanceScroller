@@ -11,7 +11,6 @@ public class AB_Climb_General : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerCharacter.onPlayerExitLadder += TransferToIdleState;
-        playerCharacter.canControlMovement = false;
         playerCharacter.onPlayerGrounded += TransferToIdleState;
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
@@ -42,7 +41,6 @@ public class AB_Climb_General : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
-        playerCharacter.canControlMovement = true;
         playerCharacter.onPlayerExitLadder -= TransferToIdleState;
         playerCharacter.onPlayerGrounded -= TransferToIdleState;
 

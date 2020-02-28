@@ -1,15 +1,16 @@
 using System;
 using UnityEngine;
 
-public abstract class ChargeSkill: MonoBehaviour
+public abstract class ChargeSkill : MonoBehaviour
 {
     public float maxChargedTime;
     private float chargedTimeCounter;
     protected bool isChargingFinished;
     public PlayerCharacter owner;
     public bool isFacingRight;
+    public bool hasReleased;
 
-    
+
     public void Setup(PlayerCharacter _owner)
     {
         owner = _owner;
@@ -19,7 +20,6 @@ public abstract class ChargeSkill: MonoBehaviour
     public void StartCharging()
     {
         OnChargingStart();
-        
     }
 
     public virtual void Update()
@@ -32,13 +32,16 @@ public abstract class ChargeSkill: MonoBehaviour
                 ChargeFull();
             }
         }
-        
-
+        Tick();
     }
+
+    public abstract void Tick();
 
 
     public void ReleaseCharging()
     {
+        if (hasReleased) return;
+        hasReleased = true;
         if (chargedTimeCounter >= maxChargedTime)
         {
             print("charging successes");
@@ -52,12 +55,11 @@ public abstract class ChargeSkill: MonoBehaviour
     }
 
 
-    
     public void InteruptCharging()
     {
         OnChargingInterupt();
     }
-    
+
     public void ChargingCancel()
     {
         OnChargingCancel();
@@ -65,7 +67,6 @@ public abstract class ChargeSkill: MonoBehaviour
 
     private void ChargingSuccess()
     {
-        
         OnChargingSuccess();
     }
 
@@ -81,5 +82,4 @@ public abstract class ChargeSkill: MonoBehaviour
     protected abstract void OnChargingCancel();
     protected abstract void OnChargingInterupt();
     protected abstract void OnChargingSuccess();
-    
 }

@@ -65,7 +65,6 @@ public class AB_Dash_General : CharacterStateMachineBehavior
             _animator.SetTrigger("idle");
         }
 
-        _animator.GetComponent<PlayerCharacter>().canControlMovement = false;
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();
 
         if (!isDashReversed)
@@ -105,6 +104,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        animator.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         animator.GetComponent<PlayerCharacter>().canControlMovement = true;
     }
 

@@ -17,6 +17,8 @@
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="ChargedAxe.cs" t="Include" />
+        <e p="ChargeSkillMessager.cs" t="Include" />
         <e p="DaggerRotator.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
@@ -196,7 +198,6 @@
           <e p="AB_PhychicHero_InstantKill.cs" t="Include" />
           <e p="AB_PsychicHero_Attack.cs" t="Include" />
           <e p="AB_PsychicHero_EyeBullet.cs" t="Include" />
-          <e p="AB_PsychicHero_Falldown.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
@@ -249,7 +250,6 @@
           <e p="InstantKillContinuousAttack.cs" t="Include" />
           <e p="jump_attack_psychic_hero.cs" t="Include" />
           <e p="jump_attack_sword_princess.cs" t="Include" />
-          <e p="jump_psychic_hero.cs" t="Include" />
           <e p="JumpAttackState.cs" t="Include" />
           <e p="JumpState.cs" t="Include" />
           <e p="Knockable.cs" t="Include" />
@@ -275,7 +275,6 @@
           <e p="ProjectileReturnableComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
           <e p="PushComponent.cs" t="Include" />
-          <e p="run_psychic_hero.cs" t="Include" />
           <e p="RunState.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
@@ -284,7 +283,10 @@
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
+          <e p="SMB_Falldown_General.cs" t="Include" />
+          <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
+          <e p="SMB_Run_General.cs" t="Include" />
           <e p="StunComponent.cs" t="Include" />
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />

@@ -14,9 +14,7 @@ public class ChargeDagger: ChargeSkill
         projectile = GetComponent<Projectile>();
     }
 
-    
-
-    public override void Update()
+    public override void Tick()
     {
         if (!setUpFacing && owner != null)
         {
@@ -35,7 +33,7 @@ public class ChargeDagger: ChargeSkill
 
             transform.position = owner.transform.Find("SpawnLocations").Find("ChargedSword").position;
         }
-        base.Update();
+        
         if (!isChargingFinished)
         {
             transform.localScale *= 1 + sizeIncreaseFactor * Time.deltaTime;

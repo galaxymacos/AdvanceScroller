@@ -519,7 +519,7 @@ MonoBehaviour:
     type: 3}
   impactWave: {fileID: 0}
   movementSpeed: 5
-  canControlMovement: 0
+  canControlMovement: 1
   chargedDagger: {fileID: 0}
 --- !u!50 &3658480544048443886
 Rigidbody2D:

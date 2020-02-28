@@ -35,6 +35,7 @@ public class AB_AxeHero_Attack : CharacterStateMachineBehavior
  
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
+            playerCharacter.canControlMovement = true;
         }
         
         

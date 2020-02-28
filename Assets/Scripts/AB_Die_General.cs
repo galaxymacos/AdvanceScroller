@@ -9,7 +9,6 @@ public class AB_Die_General : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         SwitchCollider(true);
-        playerCharacter.canControlMovement = false;
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
     }
 

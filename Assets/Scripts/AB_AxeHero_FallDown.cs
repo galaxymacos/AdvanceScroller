@@ -9,8 +9,6 @@ public class AB_AxeHero_FallDown : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        playerCharacter.canControlMovement = true;
-        RegisterInputToNextState(new List<string>{"attack", "skill3", "dash", "skill4","jump"});
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;

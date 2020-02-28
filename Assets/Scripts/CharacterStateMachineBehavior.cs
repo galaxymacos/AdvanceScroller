@@ -5,6 +5,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 {
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
+    [SerializeField] private bool canControlHorizontalMovement;
     
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
@@ -29,7 +30,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             animations.Add(parameter.name, false);
         }
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
-
+        playerCharacter.canControlMovement = canControlHorizontalMovement;
         RegisterInputToNextState(stateCanTransformTo);
         RegisterInputToNextState(stateCanForceTransformTo);
     }

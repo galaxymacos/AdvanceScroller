@@ -12,6 +12,8 @@ public class DamageReceiver : MonoBehaviour
     private Knockable knockableComponent;
     private PushComponent pushComponent;
 
+    public Action onPlayerTakeDamage;
+
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
@@ -60,5 +62,7 @@ public class DamageReceiver : MonoBehaviour
         {
             knockableComponent.KnockUp(damageData.launcherHorizontalForce, damageData.launcherVerticalForce, damageOwner);
         }
+        
+        onPlayerTakeDamage?.Invoke();
     }    
 }

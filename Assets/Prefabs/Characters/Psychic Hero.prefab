@@ -212,6 +212,7 @@ GameObject:
   - component: {fileID: 5370246305263368930}
   - component: {fileID: -5606359923855577312}
   - component: {fileID: 8767242694777629644}
+  - component: {fileID: -4683216809716156440}
   m_Layer: 12
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -362,7 +363,7 @@ MonoBehaviour:
     type: 3}
   impactWave: {fileID: 0}
   movementSpeed: 5
-  canControlMovement: 0
+  canControlMovement: 1
   chargedDagger: {fileID: 0}
 --- !u!50 &891296965151884856
 Rigidbody2D:
@@ -622,6 +623,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.42, y: 0.72}
   m_Direction: 0
+--- !u!114 &-4683216809716156440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24bee37575fc2f348a01f4618d518060, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0

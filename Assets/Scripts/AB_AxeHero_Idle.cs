@@ -19,8 +19,6 @@ public class AB_AxeHero_Idle : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         
-        playerCharacter.canControlMovement = false;
-        
         if (!playerCharacter.isGrounded)
         {
             _animator.SetTrigger("fall down");

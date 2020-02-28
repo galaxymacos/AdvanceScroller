@@ -8,8 +8,6 @@ public class AB_PsychicHero_EyeBullet : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
-        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

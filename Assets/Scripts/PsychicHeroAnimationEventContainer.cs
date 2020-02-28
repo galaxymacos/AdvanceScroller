@@ -32,14 +32,14 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
         projectile.Setup(playerCharacter, 20, 45f);
     }
     
-    public void SpawnChargedAxe()
-    { 
-        GameObject axe = Instantiate(chargedAxePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
-        Projectile projectile = axe.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 20f, 0);
-        ProjectileReturnableComponent boomrang = axe.GetComponent<ProjectileReturnableComponent>();
-        boomrang.Setup();
-    }
+    // public void SpawnChargedAxe()
+    // { 
+        // GameObject axe = Instantiate(chargedAxePrefab, transform.Find("SpawnLocations").Find("Axe").position, transform.rotation);
+        // Projectile projectile = axe.GetComponent<Projectile>();
+        // projectile.Setup(playerCharacter, 20f, 0);
+        // ProjectileReturnableComponent boomrang = axe.GetComponent<ProjectileReturnableComponent>();
+        // boomrang.Setup();
+    // }
     
     public void SpawnEyeBullet()
     { 

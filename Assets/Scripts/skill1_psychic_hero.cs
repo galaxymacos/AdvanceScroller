@@ -11,7 +11,6 @@ public class skill1_psychic_hero : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
         playerInput.skill1ButtonPressed = true;
         chargedTimeCounter = 0;
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
