@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -907,7 +907,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332791771}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1269,7 +1269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418714776}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: UpsideDownWoodenThorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1764,7 +1764,7 @@ GameObject:
   - component: {fileID: 586324270}
   - component: {fileID: 586324272}
   - component: {fileID: 586324271}
-  m_Layer: 15
+  m_Layer: 14
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1795,7 +1795,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.00430727, y: 0.0088098645}
@@ -1870,7 +1870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590814194}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Place1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9316,7 +9316,7 @@ GameObject:
   - component: {fileID: 863773188}
   - component: {fileID: 863773187}
   - component: {fileID: 863773186}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9572,7 +9572,7 @@ GameObject:
   - component: {fileID: 926518228}
   - component: {fileID: 926518227}
   - component: {fileID: 926518226}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9759,7 +9759,7 @@ GameObject:
   - component: {fileID: 964651788}
   - component: {fileID: 964651787}
   - component: {fileID: 964651786}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12340,7 +12340,7 @@ GameObject:
   - component: {fileID: 1161868378}
   - component: {fileID: 1161868377}
   - component: {fileID: 1161868376}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12929,7 +12929,8 @@ GameObject:
   - component: {fileID: 1280083075}
   - component: {fileID: 1280083076}
   - component: {fileID: 1280083077}
-  m_Layer: 16
+  - component: {fileID: 1280083078}
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13010,7 +13011,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.5}
@@ -13026,6 +13027,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3}
   m_EdgeRadius: 0
+--- !u!50 &1280083078
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280083074}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1284354011
 GameObject:
   m_ObjectHideFlags: 0
@@ -13037,7 +13059,8 @@ GameObject:
   - component: {fileID: 1284354012}
   - component: {fileID: 1284354013}
   - component: {fileID: 1284354014}
-  m_Layer: 16
+  - component: {fileID: 1284354015}
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13118,7 +13141,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.5}
@@ -13134,6 +13157,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3}
   m_EdgeRadius: 0
+--- !u!50 &1284354015
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284354011}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1291309421
 GameObject:
   m_ObjectHideFlags: 0
@@ -13257,7 +13301,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305696002}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Traps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13854,7 +13898,7 @@ GameObject:
   - component: {fileID: 1563560151}
   - component: {fileID: 1563560150}
   - component: {fileID: 1563560149}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14641,7 +14685,7 @@ GameObject:
   - component: {fileID: 1622611071}
   - component: {fileID: 1622611070}
   - component: {fileID: 1622611069}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14942,7 +14986,7 @@ GameObject:
   - component: {fileID: 1696607869}
   - component: {fileID: 1696607868}
   - component: {fileID: 1696607867}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15437,7 +15481,7 @@ GameObject:
   - component: {fileID: 1811871239}
   - component: {fileID: 1811871238}
   - component: {fileID: 1811871237}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15564,7 +15608,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1822812354}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Place2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15660,7 +15704,7 @@ GameObject:
   - component: {fileID: 1846814388}
   - component: {fileID: 1846814387}
   - component: {fileID: 1846814386}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15927,7 +15971,8 @@ GameObject:
   - component: {fileID: 1928996730}
   - component: {fileID: 1928996731}
   - component: {fileID: 1928996732}
-  m_Layer: 16
+  - component: {fileID: 1928996733}
+  m_Layer: 15
   m_Name: Forest_deco_woodenThorns_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16008,7 +16053,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.5}
@@ -16024,6 +16069,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4, y: 3}
   m_EdgeRadius: 0
+--- !u!50 &1928996733
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928996729}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &1938272549
 GameObject:
   m_ObjectHideFlags: 0
@@ -16033,7 +16099,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938272550}
-  m_Layer: 16
+  m_Layer: 15
   m_Name: UpsideWoodenThorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
