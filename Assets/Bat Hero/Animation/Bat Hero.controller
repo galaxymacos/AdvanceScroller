@@ -71,6 +71,7 @@ MonoBehaviour:
   - skill3
   - skill4
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -117,6 +118,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - skill4
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -284,6 +286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -408,6 +411,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -455,6 +459,7 @@ MonoBehaviour:
   - skill3
   - wallslide
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -495,6 +500,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -547,6 +553,7 @@ MonoBehaviour:
   - skill3
   stateCanForceTransformTo:
   - skill4
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -564,6 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -737,6 +745,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1253,6 +1262,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1296,6 +1306,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1314,6 +1325,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1382,6 +1394,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1402,6 +1415,7 @@ MonoBehaviour:
   - jump
   - skill3
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1468,6 +1482,7 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1487,6 +1502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1613,6 +1629,7 @@ MonoBehaviour:
   - skill2
   - skill3
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}

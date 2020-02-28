@@ -35,7 +35,7 @@ public class AB_AxeHero_Skill3 : CharacterStateMachineBehavior
         }
         
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        playerCharacter.canControlMovement = false;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

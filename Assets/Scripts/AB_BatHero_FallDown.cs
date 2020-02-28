@@ -9,7 +9,7 @@ public class AB_BatHero_FallDown : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        playerCharacter.canControlMovement = true;
+        
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
 
     }

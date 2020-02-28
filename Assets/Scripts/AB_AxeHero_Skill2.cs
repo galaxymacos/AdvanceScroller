@@ -32,7 +32,7 @@ public class AB_AxeHero_Skill2 : CharacterStateMachineBehavior
             animator.runtimeAnimatorController = aoc;
         }
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        playerCharacter.canControlMovement = false;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -45,7 +45,7 @@ public class AB_AxeHero_Skill2 : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -15,11 +15,11 @@ public class AB_BatHero_DoubleJump : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"jump attack","skill3","dash","skill4"});
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
+        
         rb = _animator.GetComponent<Rigidbody2D>();
 
         
-        messagingSystem.canControlMovement = true;
+        
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         playerCharacter.onPlayerStartDoubleJump?.Invoke();
         
@@ -32,7 +32,7 @@ public class AB_BatHero_DoubleJump : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded)
+        if (playerCharacter.isGrounded)
         {
             _animator.SetTrigger("idle");
         }

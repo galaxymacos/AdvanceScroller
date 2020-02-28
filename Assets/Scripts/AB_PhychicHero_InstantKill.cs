@@ -9,7 +9,7 @@ public class AB_PhychicHero_InstantKill : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +22,7 @@ public class AB_PhychicHero_InstantKill : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
+       
         animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTarget();
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTarget();
 

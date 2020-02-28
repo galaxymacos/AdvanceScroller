@@ -160,7 +160,7 @@ MonoBehaviour:
   - skill3
   - skill2
   stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -468,7 +468,7 @@ MonoBehaviour:
   - wallslide
   - idle
   stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1243,7 +1243,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1265,7 +1265,7 @@ MonoBehaviour:
   - jump
   - dash
   stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}

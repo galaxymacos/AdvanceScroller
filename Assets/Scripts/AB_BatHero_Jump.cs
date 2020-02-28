@@ -53,7 +53,7 @@ public class AB_BatHero_Jump : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
+        
 
         _animator.GetComponent<PlayerCharacter>().characterGroundMovementComponent.UpdateMovement();
 

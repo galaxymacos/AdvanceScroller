@@ -10,7 +10,7 @@ public class AB_BatHero_Throw : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         rb = animator.GetComponent<Rigidbody2D>();
-        playerCharacter.canControlMovement = false;
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -24,7 +24,7 @@ public class AB_BatHero_Throw : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
+        
 
     }
 

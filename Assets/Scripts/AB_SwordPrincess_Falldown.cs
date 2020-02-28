@@ -9,7 +9,7 @@ public class AB_SwordPrincess_Falldown : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        playerCharacter.canControlMovement = true;
+        
         messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;

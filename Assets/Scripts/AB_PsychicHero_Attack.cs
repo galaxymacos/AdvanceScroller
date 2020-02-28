@@ -32,7 +32,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            playerCharacter.canControlMovement = false;
+            
         }
         else
         {
@@ -44,7 +44,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            playerCharacter.canControlMovement = false;
+            
         }
 
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
@@ -78,7 +78,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.canControlMovement = true;
+        
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
     }
 

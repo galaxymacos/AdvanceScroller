@@ -105,7 +105,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        animator.GetComponent<PlayerCharacter>().canControlMovement = true;
+        
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

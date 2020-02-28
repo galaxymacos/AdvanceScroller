@@ -8,7 +8,7 @@ public class AB_AxeHero_Skill1 : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = false;
+  
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
     }
 
@@ -19,10 +19,7 @@ public class AB_AxeHero_Skill1 : CharacterStateMachineBehavior
     // }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        playerCharacter.canControlMovement = true;
-    }
+    
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

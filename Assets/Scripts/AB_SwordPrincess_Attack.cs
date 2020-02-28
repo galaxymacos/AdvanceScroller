@@ -23,7 +23,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            playerCharacter.canControlMovement = false;
+            
         }
         else
         {
@@ -42,7 +42,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerCharacter.GetComponent<AttackMessagingComponent>().DetectAttack(0);
-        playerCharacter.canControlMovement = true;
+       
     }
 
 

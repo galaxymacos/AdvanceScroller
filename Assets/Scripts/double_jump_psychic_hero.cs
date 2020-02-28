@@ -15,11 +15,11 @@ public class double_jump_psychic_hero : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         RegisterInputToNextState(new List<string> {"jump attack","skill3","dash"});
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
+        
         rb = _animator.GetComponent<Rigidbody2D>();
 
         
-        messagingSystem.canControlMovement = true;
+        
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         playerCharacter.onPlayerStartDoubleJump?.Invoke();
         

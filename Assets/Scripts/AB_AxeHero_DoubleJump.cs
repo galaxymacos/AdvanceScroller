@@ -15,7 +15,7 @@ public class AB_AxeHero_DoubleJump : CharacterStateMachineBehavior
         rb = _animator.GetComponent<Rigidbody2D>();
 
         
-        playerCharacter.canControlMovement = true;
+       
         rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         playerCharacter.onPlayerStartDoubleJump?.Invoke();
         

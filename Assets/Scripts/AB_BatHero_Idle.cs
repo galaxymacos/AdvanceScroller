@@ -12,7 +12,7 @@ public class AB_BatHero_Idle : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         
-        playerCharacter.canControlMovement = false;
+        
         
         if (!playerCharacter.isGrounded)
         {

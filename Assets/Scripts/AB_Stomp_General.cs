@@ -15,7 +15,7 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         rb = playerCharacter.GetComponent<Rigidbody2D>();
-        playerCharacter.canControlMovement = false;
+        
         rb.velocity = Vector2.down * stompSpeed;
         playerCharacter.onPlayerGrounded += SpawnImpactWave;
     }
@@ -39,7 +39,7 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = true;
+       
         playerCharacter.StopImpactWave();
         playerCharacter.onPlayerGrounded -= SpawnImpactWave;
     }

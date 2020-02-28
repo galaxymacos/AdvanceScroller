@@ -11,7 +11,7 @@ public class idle_physics_hero : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         
-        playerCharacter.canControlMovement = false;
+        
         
         if (!playerCharacter.isGrounded)
         {
