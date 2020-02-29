@@ -20,17 +20,18 @@ public class BatHeroAttackMessager : MonoBehaviour
     private Vector3 instantKillDirection;
     private float originalY;
 
+    public Action onBatHeroFinishTeleport;
+
     private void Awake()
     {
         playerCharacter = GetComponent<PlayerCharacter>();
         rb = GetComponent<Rigidbody2D>();
+        
+        onBatHeroFinishTeleport += ResetVelocityAfterTeleport;
     }
 
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
+
 
     private void RecordInstantKillVelocity()
     {
@@ -121,7 +122,16 @@ public class BatHeroAttackMessager : MonoBehaviour
             }
         }
         
+        onBatHeroFinishTeleport?.Invoke();
+        
     }
+
+    public void ResetVelocityAfterTeleport()
+    {
+        rb.velocity = Vector2.zero;
+    }
+    
+    
 
     public void AttackFirstHit()
     {

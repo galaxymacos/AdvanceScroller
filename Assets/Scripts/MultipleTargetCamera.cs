@@ -15,9 +15,9 @@ public class MultipleTargetCamera : MonoBehaviour
     public float maxZoom = 63f;
     public float zoomLimiter = 10f;
     // public Camera camera;
-    public PixelPerfectCamera ppCamera;
+    [SerializeField]
+    private Camera camera;
 
-    
     private bool hasSetup;
 
     private void Awake()
@@ -38,8 +38,8 @@ public class MultipleTargetCamera : MonoBehaviour
 
     private void Zoom()
     {
-        float newZoom = (int)Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance()/zoomLimiter);
-        ppCamera.assetsPPU = (int)newZoom;
+        float newZoom = Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance()/zoomLimiter);
+        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newZoom, Time.deltaTime);
     }
 
     private float GetGreatestDistance()

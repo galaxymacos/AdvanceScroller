@@ -11,6 +11,8 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         playerCharacter.GetComponent<UniqueSkillPauseComponent>().ShowOff();
+        rb = playerCharacter.GetComponent<Rigidbody2D>();
+        rb.gravityScale = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,6 +29,7 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
         animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTarget();
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTarget();
         playerCharacter.GetComponent<UniqueSkillPauseComponent>().UniqueSkillEnd();
+        rb.gravityScale = 1;
     }
 
     
