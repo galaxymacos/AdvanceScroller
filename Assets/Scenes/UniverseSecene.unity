@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -257,6 +257,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteor-self
       objectReference: {fileID: 0}
+    - target: {fileID: 8033293885666644335, guid: 608e3b372180d31429c94ee7aeb5d3e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 8033293886743644637, guid: 608e3b372180d31429c94ee7aeb5d3e8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10301, guid: 0000000000000000f000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 608e3b372180d31429c94ee7aeb5d3e8, type: 3}
 --- !u!1 &90927758
