@@ -83,7 +83,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         oneLastStrikeFinished?.Invoke();
         if (finalDamageData == null) return;
 
-        foreach (GameObject target in objectsInCollision)
+        foreach (GameObject target in ObjectsInCollision)
         {
             if (target == null || target == owner.gameObject) continue;
             var damageReceiver = target.GetComponent<DamageReceiver>();
@@ -99,7 +99,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
 
     public virtual void Tick()
     {
-        foreach (GameObject target in objectsInCollision)
+        foreach (GameObject target in ObjectsInCollision)
         {
             if (target == null || target == owner.gameObject) continue;
             var damageReceiver = target.GetComponent<DamageReceiver>();

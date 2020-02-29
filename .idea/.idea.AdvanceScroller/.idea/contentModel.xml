@@ -14,6 +14,7 @@
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="CatchComponent.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
@@ -167,6 +168,7 @@
           </e>
         </e>
         <e p="PlayerInputActions.cs" t="Include" />
+        <e p="PlayerThrowMessager.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -296,6 +298,8 @@
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>
+        <e p="SMb_AxeHero_Caught.cs" t="Include" />
+        <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>

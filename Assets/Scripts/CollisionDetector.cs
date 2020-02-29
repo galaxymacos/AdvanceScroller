@@ -8,10 +8,19 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class CollisionDetector: MonoBehaviour
 {
-    protected List<GameObject> objectsInCollision;
+    public List<GameObject> ObjectsInCollision => objectsInCollision;
     public Action<GameObject> onObjectCollided;
 
-    public void ResetCollision()
+    
+    private List<GameObject> objectsInCollision;
+    
+
+    private void OnDisable()
+    {
+        objectsInCollision = new List<GameObject>();
+    }
+
+    private void OnEnable()
     {
         objectsInCollision = new List<GameObject>();
     }

@@ -6,6 +6,8 @@ using UnityEngine.Events;
 
 public class AxeHeroAttackMessager : MonoBehaviour
 {
+    public CatchComponent catchComponent;
+
     public GameObject redAxeBuff;
     public GameObject greenAxeBuff;
     public GameObject axePrefab;
@@ -36,6 +38,17 @@ public class AxeHeroAttackMessager : MonoBehaviour
             buffType = AxeHeroBuff.Green;
         }
         
+    }
+
+    public void StartDetectingCatch()
+    {
+        catchComponent.Activate();
+    }
+
+    public void StopDetectingCatch()
+    {
+        catchComponent.DeActivate();
+
     }
 
     public void SummonAxeBuff()
