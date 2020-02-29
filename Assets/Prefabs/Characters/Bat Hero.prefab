@@ -662,7 +662,8 @@ GameObject:
   - component: {fileID: 1595168072}
   - component: {fileID: 6785101417832166327}
   - component: {fileID: 3994814941791640900}
-  - component: {fileID: 5085236281724287501}
+  - component: {fileID: -6786992813691897977}
+  - component: {fileID: -5806844467189447210}
   m_Layer: 10
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -1084,7 +1085,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.4, y: 0.71}
   m_Direction: 0
---- !u!114 &5085236281724287501
+--- !u!114 &-6786992813691897977
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1093,9 +1094,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 8906824143711737656}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5295d83a4fd2e46893948adbd57546, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b8f7cd7813f2264294b89e5f2858816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5806844467189447210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240a8d45742045448b753f1f0128dc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showOffTime: 1
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

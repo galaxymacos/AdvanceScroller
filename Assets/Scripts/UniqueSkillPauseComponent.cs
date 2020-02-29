@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
-public class InstantKill : MonoBehaviour, IUniqueSkill
+public class UniqueSkillPauseComponent : MonoBehaviour
 {
     private PlayerCharacter owner;
     [SerializeField] private float showOffTime = 1f;
@@ -51,4 +50,5 @@ public class InstantKill : MonoBehaviour, IUniqueSkill
         yield return new WaitForSeconds(showOffTime);
         Use();
     }
+
 }

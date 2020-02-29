@@ -8,6 +8,8 @@ public class ChargeDagger: ChargeSkill
     private Projectile projectile;
     public GameObject daggerPrefab;
     public bool setUpFacing;
+
+    
     private void Start()
     {
         print("spawn charge dagger");
@@ -59,11 +61,13 @@ public class ChargeDagger: ChargeSkill
 
     protected override void OnChargingStart()
     {
-        
+         
     }
 
     protected override void OnChargingCancel()
     {
+        
+        
         var dagger = Instantiate(daggerPrefab, transform.position, Quaternion.identity);
         var daggerProjectile = dagger.GetComponent<Projectile>();
         daggerProjectile.Setup(owner);
@@ -73,11 +77,15 @@ public class ChargeDagger: ChargeSkill
 
     protected override void OnChargingInterupt()
     {
+        
+        
         Destroy(gameObject);
     }
 
     protected override void OnChargingSuccess()
     {
+        
+        
         projectile = GetComponent<Projectile>();
         projectile.Setup(owner, 100, isFacingRight?transform.rotation.eulerAngles.z:-transform.rotation.eulerAngles.z, true);
         enabled = false;

@@ -9,6 +9,8 @@ public abstract class ChargeSkill : MonoBehaviour
     public PlayerCharacter owner;
     public bool isFacingRight;
     public bool hasReleased;
+    public GameObject chargeVFXPrefab;
+    private GameObject chargeVFX;
 
 
     public void Setup(PlayerCharacter _owner)
@@ -19,6 +21,7 @@ public abstract class ChargeSkill : MonoBehaviour
 
     public void StartCharging()
     {
+        chargeVFX = Instantiate(chargeVFXPrefab, owner.transform.position, Quaternion.identity);
         OnChargingStart();
     }
 
@@ -57,21 +60,38 @@ public abstract class ChargeSkill : MonoBehaviour
 
     public void InteruptCharging()
     {
+        if (chargeVFX != null)
+        {
+            Destroy(chargeVFX);
+        }
         OnChargingInterupt();
     }
 
     public void ChargingCancel()
     {
+        if (chargeVFX != null)
+        {
+            Destroy(chargeVFX);
+        }
+
         OnChargingCancel();
     }
 
     private void ChargingSuccess()
     {
+        if (chargeVFX != null)
+        {
+            Destroy(chargeVFX);
+        }
         OnChargingSuccess();
     }
 
     private void ChargeFull()
     {
+        if (chargeVFX != null)
+        {
+            Destroy(chargeVFX);
+        }
         isChargingFinished = true;
         OnChargingFull();
     }

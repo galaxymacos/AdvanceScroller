@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 5623847722637158371}
   - component: {fileID: 3904847156095916348}
   - component: {fileID: 2686227338673611719}
+  - component: {fileID: 3312172375856598659}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -699,6 +700,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b8f7cd7813f2264294b89e5f2858816, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3312172375856598659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cf78c46ad7cf1049bafda9018c98756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4758164498732494737
