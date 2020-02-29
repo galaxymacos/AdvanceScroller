@@ -60,6 +60,8 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerWalkNextToWall;
     public Action onPlayerExitWall;
     public Action onPlayerExitLadder;
+    public Action onUniqueSkillStart;
+    public Action onUniqueSkillEnd;
     
     // Animation event
     public Action onPlayerStartWallSlide;

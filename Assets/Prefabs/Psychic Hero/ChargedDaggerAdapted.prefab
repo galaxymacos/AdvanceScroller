@@ -165,7 +165,10 @@ MonoBehaviour:
   maxChargedTime: 1
   owner: {fileID: 0}
   isFacingRight: 1
+  hasReleased: 0
   sizeIncreaseFactor: 0.6
   rotateSpeed: 180
   daggerPrefab: {fileID: 4985245455587790691, guid: 51eb78a1a06df9d4da23e95d22f944ee,
     type: 3}
+  chargeVFXPrefab: {fileID: 119634, guid: 8d2980ba5e59f33419a0275c1ec29e38, type: 3}
+  setUpFacing: 0

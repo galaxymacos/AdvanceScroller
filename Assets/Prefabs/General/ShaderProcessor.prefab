@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7539027348047886358}
   - component: {fileID: 7539027348047886345}
+  - component: {fileID: 1100908627}
   m_Layer: 0
   m_Name: ShaderProcessor
   m_TagString: Untagged
@@ -44,3 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blurMaterial: {fileID: 2100000, guid: 3849fd416658a1a40aa5d3c5946caa75, type: 2}
+--- !u!114 &1100908627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539027348047886344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ff687f448d3450fb4019a02814b6152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tintMaterial: {fileID: 2100000, guid: a189c300b9d8168478c86169428ccc27, type: 2}

@@ -8,6 +8,9 @@ public class CharacterPauser : MonoBehaviour, IPauseable
 {
     private Rigidbody2D rb;
     private PlayerCharacter playerCharacter;
+    private bool isPausing;
+    private Vector3 velocityBeforePause;
+    
     private Animator animator;
 
     private void Awake()
@@ -19,16 +22,32 @@ public class CharacterPauser : MonoBehaviour, IPauseable
 
     public void Pause()
     {
-        print($"Pause {playerCharacter.gameObject.name}");
+        if (isPausing)
+        {
+            print("game object is already pausing");
+            return;
+        }
+        
         animator.speed = 0f;
+        velocityBeforePause = rb.velocity;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
+
+        isPausing = true;
     }
 
     public void UnPause()
     {
+        if (!isPausing)
+        {
+            print("object is not pausing, but trying to pause");
+            return;
+        }
+        
         animator.speed = 1f;
-        print("UnPause");
         rb.isKinematic = false;
+        rb.velocity = velocityBeforePause;
+
+        isPausing = false;
     }
 }

@@ -195,6 +195,7 @@ MonoBehaviour:
   owner: {fileID: 0}
   isFacingRight: 0
   hasReleased: 0
+  chargeVFXPrefab: {fileID: 162722, guid: 1fc71432c1bd537489e1be6246b56973, type: 3}
   projectile: {fileID: 7635780407722689896}
   ChargedAxeStartSpeed: 25
   axeThrowStartSpeed: 10

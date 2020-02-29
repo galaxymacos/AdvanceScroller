@@ -14,6 +14,7 @@
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="CharacterFuryBar.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -290,6 +291,7 @@
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
+          <e p="UniqueSKillPauseComponent.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>

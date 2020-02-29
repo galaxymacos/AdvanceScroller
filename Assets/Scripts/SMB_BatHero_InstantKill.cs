@@ -10,7 +10,7 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.GetComponent<IUniqueSkill>().Use();
+        playerCharacter.GetComponent<UniqueSkillPauseComponent>().ShowOff();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -26,7 +26,7 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
        
         animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTarget();
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTarget();
-        playerCharacter.GetComponent<IUniqueSkill>().UniqueSkillEnd();
+        playerCharacter.GetComponent<UniqueSkillPauseComponent>().UniqueSkillEnd();
     }
 
     
