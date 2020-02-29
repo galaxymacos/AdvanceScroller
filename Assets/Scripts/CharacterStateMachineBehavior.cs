@@ -42,7 +42,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
      
         if (animationName != "")
         {
-            playerCharacter.PrintString(animationName);
+            // playerCharacter.PrintString(animationName);
             
             var cooldownFilter = new CooldownFilter(animationName, this, null);
             var forceAttackFilter = new ForceAttackFilter(animationName, this, cooldownFilter);
@@ -51,7 +51,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         
             if (limitedUsageFilter.FilterRecur())
             {
-                playerCharacter.PrintString("player can use this skill");
+                // playerCharacter.PrintString("player can use this skill");
                 limitedUsageFilter.DealWithResultRecur();
                 _animator.SetTrigger(animationName);
             }

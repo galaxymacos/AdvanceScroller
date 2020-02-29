@@ -22,8 +22,8 @@ public class AB_BatHero_JumpAttack : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        attackManager.attackFirstStrike.StopDetectTarget();
-        attackManager.attackSecondStrike.StopDetectTarget();
+        attackManager.attackFirstStrike.StopDetectTargetManually();
+        attackManager.attackSecondStrike.StopDetectTargetManually();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

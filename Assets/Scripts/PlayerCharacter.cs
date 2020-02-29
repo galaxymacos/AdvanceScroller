@@ -222,7 +222,7 @@ public class PlayerCharacter : MonoBehaviour
     
     public void StopImpactWave()
     {
-        impactWave.StopDetectTarget();
+        impactWave.StopDetectTargetManually();
     }
 
     public void PrintString(String str)

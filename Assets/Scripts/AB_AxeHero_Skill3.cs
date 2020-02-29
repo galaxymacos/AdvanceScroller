@@ -48,7 +48,7 @@ public class AB_AxeHero_Skill3 : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        animator.GetComponent<AxeHeroAttackMessager>().hugeSlash.StopDetectTarget();
+        animator.GetComponent<AxeHeroAttackMessager>().hugeSlash.StopDetectTargetManually();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

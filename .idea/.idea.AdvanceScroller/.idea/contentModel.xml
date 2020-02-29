@@ -63,6 +63,7 @@
             </e>
           </e>
         </e>
+        <e p="LightingManager.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -291,7 +292,7 @@
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
-          <e p="UniqueSKillPauseComponent.cs" t="Include" />
+          <e p="UniqueSkillComponent.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>

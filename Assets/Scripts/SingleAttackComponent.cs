@@ -46,7 +46,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     
  
-    public void StopDetectTarget()
+    public void StopDetectTargetManually()
     {
         isRunning = false;
         

@@ -25,7 +25,7 @@ public class AB_AxeHero_JumpAttack : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        messagingSystem.attack.StopDetectTarget();
+        messagingSystem.attack.StopDetectTargetManually();
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -4,12 +4,13 @@ using UnityEngine;
 public interface IAttackComponent
 {
     void Execute();
-    void StopDetectTarget();
+    void StopDetectTargetManually();
 }
 public class ContinuousAttack : CollisionDetector, IAttackComponent
 {
     private bool running;
     
+    [Tooltip("The length of time that the duration skill will last if not stopping manually")]
     [SerializeField] protected float duration = 3f;
     [SerializeField] protected float tickInterval = 0.2f;
     [SerializeField] protected DamageData damageData;
@@ -21,19 +22,36 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
 
     public Action oneLastStrikeFinished;
 
+    public bool hasUsedOneLastStrike;
+
 
     public void Execute()
     {
+        hasUsedOneLastStrike = false;
         running = true;
         Tick();
     }
 
-    public void StopDetectTarget()
+    public void StopDetectTargetManually()
+    {
+        StopDetectTarget();
+    }
+
+    private void StopDetectTargetWhenDurationEnd()
+    {
+        StopDetectTarget();
+    }
+
+    private void StopDetectTarget()
     {
         running = false;
         runTime = 0;
         lastTickTime = 0;
-
+        if (!hasUsedOneLastStrike)
+        {
+            OneLastStrike();
+            hasUsedOneLastStrike = true;
+        }
     }
     
     private void Update()
@@ -51,8 +69,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
                 runTime += Time.deltaTime;
                 if (runTime > duration)
                 {
-                    OneLastStrike();
-                    StopDetectTarget();
+                    StopDetectTargetWhenDurationEnd();
                 }
             }
             

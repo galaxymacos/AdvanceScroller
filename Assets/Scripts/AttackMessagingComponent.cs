@@ -35,7 +35,7 @@ public class AttackMessagingComponent : MonoBehaviour
         }
         else if (state == 0)
         {
-            singleAttackHitBox.StopDetectTarget();
+            singleAttackHitBox.StopDetectTargetManually();
         }
     }
 
@@ -47,7 +47,7 @@ public class AttackMessagingComponent : MonoBehaviour
         }
         else if (state == 0)
         {
-            pierceAttack.StopDetectTarget();
+            pierceAttack.StopDetectTargetManually();
         }
 
     }

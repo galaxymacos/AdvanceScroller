@@ -61,6 +61,6 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
 
     public void StopExecutingTornado()
     {
-        tornado.StopDetectTarget();
+        tornado.StopDetectTargetManually();
     }
 }

@@ -634,6 +634,7 @@ MonoBehaviour:
   damageData: {fileID: 11400000, guid: cd37c68a8e5c8604d897dce4da1be7b2, type: 2}
   finalDamageData: {fileID: 11400000, guid: 9248793ea0b38c44ca7f974edcd21d08, type: 2}
   owner: {fileID: 8906824143711737653}
+  hasUsedOneLastStrike: 0
   SingleAttackComponent: {fileID: 8602365651466050991}
 --- !u!1 &8906824143711737656
 GameObject:
@@ -1110,7 +1111,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a8d45742045448b753f1f0128dc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showOffTime: 1
+  showOffTime: 0.7
+  uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
+    type: 3}
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

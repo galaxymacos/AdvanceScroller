@@ -10,6 +10,7 @@ public class InstantKillContinuousAttack : ContinuousAttack
     
     public override void OneLastStrike()
     {
+        print("One last strike");
         oneLastStrikeFinished?.Invoke();
         if (finalDamageData == null) return;
 
