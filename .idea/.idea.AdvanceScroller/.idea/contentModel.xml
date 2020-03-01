@@ -50,6 +50,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="IState.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="UniverseBackground" t="Include">
             <e p="ErbGameArt" t="Include">
@@ -64,6 +65,7 @@
             </e>
           </e>
         </e>
+        <e p="LayerMessager.cs" t="Include" />
         <e p="LightingManager.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
@@ -168,6 +170,7 @@
           </e>
         </e>
         <e p="ParticleSystemPauser.cs" t="Include" />
+        <e p="PausableSMB.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerThrowMessager.cs" t="Include" />
         <e p="Psychic Hero" t="Include">

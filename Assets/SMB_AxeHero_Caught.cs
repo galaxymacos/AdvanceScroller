@@ -13,14 +13,25 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
     private PlayerThrowMessager damageAnalyzer;
 
     private List<Collider2D> collidersIgnored;
-
+    
+    [SerializeField] private float swirlTime = 2f;
+    private float swirlTimeCounter;
+    
+    
     [SerializeField] private DamageData stunDamageData;
     [SerializeField] private DamageData pushDamageData;
+    
+    private PausableSMB pauseableSMB;
+    private bool hasUltimateEnd;
+
+    // private bool isPausing;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+        swirlTimeCounter = swirlTime;
+        // playerCharacter.GetComponent<UniqueSkillComponent>().ShowOff();
         shouldThrow = false;
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
@@ -35,6 +46,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
         playerToThrow.GetComponent<Rigidbody2D>().gravityScale = 0;
         playerToThrow.GetComponent<DamageReceiver>().Analyze(stunDamageData, playerCharacter.transform);
         playerToThrow.transform.localScale = new Vector3(playerToThrow.transform.localScale.x, -playerToThrow.transform.localScale.y, playerToThrow.transform.localScale.z);
+
 
 
         playerCharacter.GetComponent<Rigidbody2D>().freezeRotation = false;
@@ -60,12 +72,26 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
                 collider.enabled = false;
             }
         }
+        
+        pauseableSMB = new PausableSMB(this);
+        playerCharacter.GetComponent<UniqueSkillComponent>().ShowOff();
+        hasUltimateEnd = false;
+
     }
 
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (pauseableSMB.IsPausing) return;
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        
+
+        if (!hasUltimateEnd)
+        {
+            playerCharacter.GetComponent<UniqueSkillComponent>().End();
+            hasUltimateEnd = true;
+        }
+
+
+
         playerCharacter.transform.Rotate(Vector3.forward,720*Time.deltaTime);
         playerToThrow.transform.position = throwMessager.HeadTransform.position;
 
@@ -75,6 +101,13 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
             // var throwAngle = Vector3.Normalize(playerToThrow.transform.position - playerCharacter.transform.position);
             characterAnimator.SetTrigger("idle");
             shouldThrow = true;
+        }
+        
+        
+        swirlTimeCounter -= Time.deltaTime;
+        if (swirlTimeCounter <= 0)
+        {
+            characterAnimator.SetTrigger("idle");
         }
     }
 
@@ -102,9 +135,16 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
         if (shouldThrow)
         {
             playerToThrow.GetComponent<DamageReceiver>().Analyze(pushDamageData, playerCharacter.transform);
+
+            playerCharacter.GetComponent<LayerMessager>().TemporaryDisableLayer();
+            
+            
         }
 
     }
+
+    
+
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -117,4 +157,13 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
     //{
     //    // Implement code that sets up animation IK (inverse kinematics)
     //}
+    // public void Pause()
+    // {
+    //     isPausing = true;
+    // }
+    //
+    // public void UnPause()
+    // {
+    //     isPausing = false;
+    // }
 }

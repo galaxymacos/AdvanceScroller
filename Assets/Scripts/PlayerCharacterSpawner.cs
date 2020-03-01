@@ -57,11 +57,28 @@ public class PlayerCharacterSpawner : MonoBehaviour
                 if (i != j)
                 {
                     charactersForPlayer[i].whatIsEnemy |= 1<<charactersForPlayer[j].gameObject.layer;
+                    // charactersForPlayer[i].whatIsEnemy &= ~(1 << charactersForPlayer[j].gameObject.layer);
+
                     charactersForPlayer[i].whatIsGround |= 1 << charactersForPlayer[j].gameObject.layer;
+                    // charactersForPlayer[i].whatIsGround &= ~(1 << charactersForPlayer[j].gameObject.layer);
+
                 }
             }
                 
         }
+        
+        for (int i = 0; i < charactersForPlayer.Count; i++)
+        {
+            for (int j = 0; j < charactersForPlayer.Count; j++)
+            {
+                if (i != j)
+                {
+                }
+            }
+                
+        }
+        
+        
         onPlayerSpawnFinished?.Invoke();
         
     }
