@@ -106,6 +106,7 @@ MonoBehaviour:
   - dash
   - skill2
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -129,6 +130,7 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
+  - attack4
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
@@ -583,6 +585,7 @@ MonoBehaviour:
   - wallslide
   - idle
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -1514,6 +1517,7 @@ MonoBehaviour:
   - skill2
   - skill3
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
