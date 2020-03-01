@@ -9,7 +9,7 @@ public class Spike : MonoBehaviour
     [SerializeField] private DamageData damageData;
 
     [Tooltip("If the interval counter is greater than 0, then the spike does not hit player")] [SerializeField]
-    private float interval = 0.6f;
+    private float interval = 6f;
     public Dictionary<DamageReceiver, float> playersTakeDamage;
 
     private void Awake()
