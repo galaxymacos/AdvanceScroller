@@ -6,6 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(PlayerCharacter))]
 public class PlayerThrowMessager : MonoBehaviour
 {
+    
+    [SerializeField] private Transform headTransform;
+
+    public Transform HeadTransform => headTransform;
+
     private PlayerCharacter playerToThrow;
 
     public PlayerCharacter PlayerToThrow => playerToThrow;

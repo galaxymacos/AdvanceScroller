@@ -27,6 +27,7 @@ public class CatchComponent : MonoBehaviour
         
         if (target != null)
         {
+            playerCaught = target;
             owner.onCatchingSuccess?.Invoke();
         }
     }
@@ -42,16 +43,5 @@ public class CatchComponent : MonoBehaviour
         collisionDetector.enabled = false;
         isActivated = false;
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
