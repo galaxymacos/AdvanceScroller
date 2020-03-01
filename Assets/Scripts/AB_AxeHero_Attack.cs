@@ -12,7 +12,6 @@ public class AB_AxeHero_Attack : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        RegisterInputToNextState(new List<string> {"jump"});     // TODO
 
         if (playerCharacter.isGrounded)
         {

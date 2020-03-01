@@ -794,7 +794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a8d45742045448b753f1f0128dc1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  showOffTime: 1
+  showOffTime: 0.6
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
 --- !u!114 &3643377678005176056

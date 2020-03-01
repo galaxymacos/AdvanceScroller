@@ -6,6 +6,11 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class CharacterPauser : MonoBehaviour, IPauseable
 {
+
+    public Action onCharacterPaused;
+    public Action onCharacterResumed;
+
+
     private Rigidbody2D rb;
     private PlayerCharacter playerCharacter;
     private bool isPausing;
@@ -24,7 +29,6 @@ public class CharacterPauser : MonoBehaviour, IPauseable
     {
         if (isPausing)
         {
-            print("game object is already pausing");
             return;
         }
         
@@ -34,13 +38,13 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         rb.isKinematic = true;
 
         isPausing = true;
+        onCharacterPaused?.Invoke();
     }
 
     public void UnPause()
     {
-        if (!isPausing)
+        if (!isPausing)    
         {
-            print("object is not pausing, but trying to pause");
             return;
         }
         
@@ -49,5 +53,8 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         rb.velocity = velocityBeforePause;
 
         isPausing = false;
+        
+        onCharacterResumed?.Invoke();
+
     }
 }
