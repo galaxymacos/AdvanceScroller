@@ -6,7 +6,7 @@ public class ParticleSystemPauser : MonoBehaviour ,IPauseable
 {
     private bool isPausing;
     [SerializeField]
-    private ParticleSystem rainGenerator;
+    private ParticleSystem TargetParticleSystem;
     
 
     
@@ -19,7 +19,7 @@ public class ParticleSystemPauser : MonoBehaviour ,IPauseable
             print("rain wants to stop");
             return;
         }
-        rainGenerator.Pause();
+        TargetParticleSystem.Pause();
 
         isPausing = true;
     }
@@ -31,7 +31,7 @@ public class ParticleSystemPauser : MonoBehaviour ,IPauseable
             print("rain wants to rain");
             return;
         }
-        rainGenerator.Play();
+        TargetParticleSystem.Play();
 
         isPausing = false;
     }
