@@ -293,6 +293,7 @@
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
+          <e p="Spike.cs" t="Include" />
           <e p="StunComponent.cs" t="Include" />
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
@@ -304,7 +305,6 @@
         </e>
         <e p="SMb_AxeHero_Caught.cs" t="Include" />
         <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
-        <e p="Spike.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -341,7 +341,6 @@
             <e p="Movement.cs" t="Include" />
           </e>
         </e>
-        <e p="WoodenThrornsTrap.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

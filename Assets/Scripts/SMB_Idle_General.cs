@@ -5,11 +5,13 @@ using UnityEngine;
 public class SMB_Idle_General : CharacterStateMachineBehavior
 {
     private float horizontalMovement;
+    private Rigidbody2D rb;
 
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
-        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        rb = _animator.GetComponent<Rigidbody2D>();
+        rb.velocity.Set(0,rb.velocity.y);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
