@@ -7,6 +7,7 @@ public class SMB_Push : CharacterStateMachineBehavior
     private Rigidbody2D rb;
     private PushComponent pushComponent;
     private bool groundedOnInitialization;
+    private bool hitCeilingOnInitialization;
     private Vector3 originalPos;
     private bool hasHitCollision;
 
@@ -21,7 +22,9 @@ public class SMB_Push : CharacterStateMachineBehavior
         pushComponent = animator.GetComponent<PushComponent>();
         pushComponent.onHitWall += BounceFromWall;
         pushComponent.onHitGround += BounceFromGround;
+        pushComponent.onHitCeiling += BounceFromCeiling;
         groundedOnInitialization = playerCharacter.isGrounded;
+        hitCeilingOnInitialization = playerCharacter.isHitCeiling;
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
 
@@ -57,6 +60,7 @@ public class SMB_Push : CharacterStateMachineBehavior
 
     private void BounceFromWall(Vector2 collisionPoint)
     {
+        if (hasHitCollision) return;
             // if (pushComponent.pushDirection.x > 0)
             // {
                 // rb.velocity = new Vector2(-4, 5);
@@ -66,8 +70,7 @@ public class SMB_Push : CharacterStateMachineBehavior
                 // rb.velocity = new Vector2(4, 5);
             // }
             hasHitCollision = true;
-            pushComponent.onHitGround -= BounceFromGround;
-            pushComponent.onHitWall -= BounceFromWall;
+            
        
             DamageData bounceFromWallDamageData = CreateInstance<DamageData>();
             bounceFromWallDamageData.damage = 5;
@@ -80,16 +83,13 @@ public class SMB_Push : CharacterStateMachineBehavior
 
     private void BounceFromGround(Vector2 collisionPoint)
     {
-        if (groundedOnInitialization == false)
+        if (groundedOnInitialization == false && !hasHitCollision)
         {
             hasHitCollision = true;
             rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
-            pushComponent.onHitWall -= BounceFromWall;
-            pushComponent.onHitGround -= BounceFromGround;
             
-            hasHitCollision = true;
-            pushComponent.onHitGround -= BounceFromGround;
-            pushComponent.onHitWall -= BounceFromWall;
+           
+            
        
             DamageData bounceFromWallDamageData = CreateInstance<DamageData>();
             bounceFromWallDamageData.damage = 5;
@@ -100,10 +100,28 @@ public class SMB_Push : CharacterStateMachineBehavior
             playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
             characterAnimator.SetTrigger("hurt");
         }
-        
-        
-        
     }
+    
+    private void BounceFromCeiling(Vector2 collisionPoint)
+    {
+        if (hitCeilingOnInitialization == false && !hasHitCollision)
+        {
+            hasHitCollision = true;
+            rb.velocity = new Vector2((pushComponent.pushDirection*pushComponent.pushSpeed).x, -(pushComponent.pushDirection*pushComponent.pushSpeed).y);
+            
+
+            DamageData bounceFromWallDamageData = CreateInstance<DamageData>();
+            bounceFromWallDamageData.damage = 5;
+            bounceFromWallDamageData.damageType = DamageType.Explosion;
+            bounceFromWallDamageData.launcherVerticalForce = -Mathf.Abs((pushComponent.pushDirection * pushComponent.pushSpeed).y);
+            bounceFromWallDamageData.launcherHorizontalForce =
+                (pushComponent.pushDirection * pushComponent.pushSpeed).x;
+            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            characterAnimator.SetTrigger("hurt");
+        }
+    }
+    
+    
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -111,6 +129,9 @@ public class SMB_Push : CharacterStateMachineBehavior
         base.OnStateExit(animator, stateInfo, layerIndex);
         pushComponent.onHitGround -= BounceFromGround;
         pushComponent.onHitWall -= BounceFromWall;
+        pushComponent.onHitCeiling -= BounceFromCeiling;
+
+        
         hasHitCollision = false;
 
     }

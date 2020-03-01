@@ -66,6 +66,7 @@ MonoBehaviour:
   damageData: {fileID: 11400000, guid: 5a98f91c36d4b17459486749f7330a4d, type: 2}
   finalDamageData: {fileID: 0}
   owner: {fileID: 891296965151884859}
+  hasUsedOneLastStrike: 0
 --- !u!50 &904546214
 Rigidbody2D:
   serializedVersion: 4
@@ -147,6 +148,36 @@ Transform:
   m_Father: {fileID: 891296965063577104}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &297312888538279479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315139869101483004}
+  m_Layer: 0
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315139869101483004
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 297312888538279479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 891296965151884860}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891296965063577107
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +216,7 @@ Transform:
   - {fileID: 4893633886971932392}
   - {fileID: 1352531919}
   m_Father: {fileID: 891296965151884860}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891296965151884848
 GameObject:
@@ -223,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &891296965151884860
 Transform:
   m_ObjectHideFlags: 0
@@ -238,6 +269,7 @@ Transform:
   - {fileID: 891296965803389052}
   - {fileID: 6066818458530017753}
   - {fileID: 1781532041058689586}
+  - {fileID: 315139869101483004}
   - {fileID: 891296965063577104}
   - {fileID: 2680560958671751656}
   m_Father: {fileID: 0}
@@ -325,9 +357,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
+  checkRadius: 0.03
   groundCheck: {fileID: 891296965803389052}
   isGrounded: 0
-  checkRadius: 0.03
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -344,6 +376,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 16384
   isOnLadderPosition: 0
+  ceilingCheck: {fileID: 315139869101483004}
+  isHitCeiling: 0
   atEnemyLeft: 0
   atEnemyRight: 0
   whatIsEnemy:
@@ -1051,7 +1085,7 @@ PrefabInstance:
     - target: {fileID: 1454385700748742739, guid: 9cb5f7b86b3a84142a205c934af34d6e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1454385700748742739, guid: 9cb5f7b86b3a84142a205c934af34d6e,
         type: 3}

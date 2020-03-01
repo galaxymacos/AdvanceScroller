@@ -11,6 +11,7 @@ public class PushComponent : MonoBehaviour
     public float pushDistance;
     public Action<Vector2> onHitWall;
     public Action<Vector2> onHitGround;
+    public Action<Vector2> onHitCeiling;
 
     public float checkRadius = 0.05f;
     public Transform wallRightCheck;
@@ -20,6 +21,7 @@ public class PushComponent : MonoBehaviour
     public Transform groundCheck;
     private bool wasOnGrounded;
     public LayerMask whatIsWall;
+    private bool wasHitCeiling;
 
     private void Awake()
     {
@@ -90,7 +92,12 @@ public class PushComponent : MonoBehaviour
         {
             onHitGround?.Invoke(playerCharacter.groundCheck.position);
         }
-
         wasOnGrounded = playerCharacter.isGrounded;
+
+        if (playerCharacter.isHitCeiling && wasHitCeiling == false)
+        {
+            onHitCeiling?.Invoke(playerCharacter.ceilingCheck.position);
+        }
+        wasHitCeiling = playerCharacter.isHitCeiling;
     }
 }

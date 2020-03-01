@@ -7,12 +7,14 @@ public class PlayerCharacter : MonoBehaviour
 {
     public PlayerInput playerInput;
     
-    
+    public float checkRadius = 0.03f;
+
+    // Ground check
     public Transform groundCheck;
     public bool isGrounded;
-    public float checkRadius;
     public LayerMask whatIsGround;
-
+    
+    // Wall check
     public Transform wallLeftCheck;
     public Transform wallRightCheck;
     public bool isNextToWallLeft;
@@ -23,6 +25,10 @@ public class PlayerCharacter : MonoBehaviour
     public LayerMask whatIsLadder;
     public bool isOnLadderPosition;
 
+    // ceiling check
+    public Transform ceilingCheck;
+    public bool isHitCeiling;
+    
     
     [HideInInspector] public bool atEnemyLeft;
     [HideInInspector] public bool atEnemyRight;
@@ -63,6 +69,7 @@ public class PlayerCharacter : MonoBehaviour
     public Action onUniqueSkillStart;
     public Action onUniqueSkillEnd;
     public Action onCatchingSuccess;
+    public Action onPlayerHitCeiling;
     
     // Animation event
     public Action onPlayerStartWallSlide;
@@ -165,6 +172,14 @@ public class PlayerCharacter : MonoBehaviour
             onPlayerGrounded?.Invoke();
 
         }
+
+        bool wasHitCeiling = isHitCeiling;
+        isHitCeiling = Physics2D.OverlapCircle(ceilingCheck.position, checkRadius, whatIsGround);
+        if (wasHitCeiling != isHitCeiling && isHitCeiling)
+        {
+            onPlayerHitCeiling?.Invoke();
+        }
+        
 
         bool wasNextToWallRight = isNextToWallRight;
         isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
