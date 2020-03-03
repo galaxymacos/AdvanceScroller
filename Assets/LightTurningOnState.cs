@@ -27,13 +27,14 @@ public class LightTurningOnState:IState
 
         if (hasAllLightTurnOn)
         {
-            // Transfer to lightOnState
+            LightingManager.instance.hasLightFullyRecovered = true;
         }
     }
 
     public void OnEnter()
     {
         Debug.Log("Lighting turning on");
+        
         LightingManager.instance.lightOnTrigger = false;
         LightingManager.instance.lightOffTrigger = false;
     }

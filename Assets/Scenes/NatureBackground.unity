@@ -865,8 +865,9 @@ GameObject:
   - component: {fileID: 226692997}
   - component: {fileID: 226692996}
   - component: {fileID: 226692998}
+  - component: {fileID: 226692999}
   m_Layer: 0
-  m_Name: Freeform Light 2D
+  m_Name: Lighting Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -937,6 +938,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2238d8be322a4eb4296f50bb2f2e8b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightOffTrigger: 0
+  lightOnTrigger: 0
+--- !u!114 &226692999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 226692995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037f3b75c5a14f08b4429baa460740d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &251518112

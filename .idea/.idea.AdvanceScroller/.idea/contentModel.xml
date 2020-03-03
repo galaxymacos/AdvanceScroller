@@ -16,6 +16,7 @@
         </e>
         <e p="CatchComponent.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
+        <e p="EnvironmentGenerator.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">

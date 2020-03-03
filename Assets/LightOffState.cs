@@ -13,6 +13,8 @@ public class LightOffState:IState
     {
         LightingManager.instance.lightOnTrigger = false;
         LightingManager.instance.lightOffTrigger = false;
+        
+        LightingManager.instance.hasLightFullyRecovered = false;
     }
 
     public void OnExit()

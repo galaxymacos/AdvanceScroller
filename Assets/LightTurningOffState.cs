@@ -40,15 +40,25 @@ public class LightTurningOffState:IState
     {
         LightingManager.instance.lightOnTrigger = false;
         LightingManager.instance.lightOffTrigger = false;
-        
-        LightingManager.instance.lightsAndIntensity = new Dictionary<Light2D, float>();
         Light2D[] lights = Object.FindObjectsOfType<Light2D>();
+
+        if (LightingManager.instance.hasLightFullyRecovered)
+        {
+            LightingManager.instance.lightsAndIntensity = new Dictionary<Light2D, float>();
+            foreach (var light in lights)
+            {
+                LightingManager.instance.lightsAndIntensity.Add(light, light.intensity);
+            }
+            LightingManager.instance.hasLightFullyRecovered = false;
+        }
+        
         foreach (var light in lights)
         {
-            Debug.Log("add all lighting info to dictioanry");
-            LightingManager.instance.lightsAndIntensity.Add(light, light.intensity);
             light.intensity = 0;
         }
+
+        
+        
     }
 
     public void OnExit()
