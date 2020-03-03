@@ -30,7 +30,9 @@ public class UniqueSkillComponent : MonoBehaviour
     
     public void End()
     {
-        LightingManager.instance.TurnOnAllLights();
+        print("turn on all lighting");
+        // LightingManager.instance.TurnOnAllLights(); TODO add it back if new lighting state machine not working
+        LightingManager.instance.lightOnTrigger = true;
         var pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
         foreach (IPauseable pauseable in pauseables)
         {
@@ -73,7 +75,8 @@ public class UniqueSkillComponent : MonoBehaviour
 
     public void HandleLighting()
     {
-        LightingManager.instance.TurnOffAllLights();
+        // LightingManager.instance.TurnOffAllLights(); // TODO add it back if lighting state machine doesn't work
+        LightingManager.instance.lightOffTrigger = true;
         if (uniqueSkillFireParticlePrefab)
         {
             Instantiate(uniqueSkillFireParticlePrefab, owner.transform.position, Quaternion.identity);

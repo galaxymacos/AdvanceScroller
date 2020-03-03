@@ -16,8 +16,9 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
     
     [SerializeField] private float swirlTime = 2f;
     private float swirlTimeCounter;
-    
-    
+
+
+    [SerializeField] private float rotateAnglePerSecond = 720;
     [SerializeField] private DamageData stunDamageData;
     [SerializeField] private DamageData pushDamageData;
     
@@ -92,7 +93,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
 
 
 
-        playerCharacter.transform.Rotate(Vector3.forward,720*Time.deltaTime);
+        playerCharacter.transform.Rotate(Vector3.forward,rotateAnglePerSecond*Time.deltaTime);
         playerToThrow.transform.position = throwMessager.HeadTransform.position;
 
         if (playerInput.skill4ButtonPressed)
