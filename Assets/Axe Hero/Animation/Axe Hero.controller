@@ -19,6 +19,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   swirlTime: 2
+  rotateAnglePerSecond: 720
   stunDamageData: {fileID: 11400000, guid: b7db9a4222819ea44828a56c2cbaff76, type: 2}
   pushDamageData: {fileID: 11400000, guid: ffe6463442d59114d92685258011b6cf, type: 2}
 --- !u!1102 &-8951367812343234083
@@ -1446,7 +1447,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  canControlHorizontalMovement: 1
+  canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}

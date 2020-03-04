@@ -4,14 +4,10 @@ using UnityEngine.Experimental.Rendering.Universal;
 
 public class LightTurningOffState:IState
 {
+    public bool HasLightTurnedOff => hasLightTurnedOff;
+    private bool hasLightTurnedOff;
     public void Tick()
     {
-        // if (state == LightingManagerState.LightingOn)
-        // { 
-            
-        // }
-        
-        
         foreach (KeyValuePair<Light2D,float> lightAndIntensity in LightingManager.instance.lightsAndIntensity)
         {
             lightAndIntensity.Key.intensity = Mathf.Lerp(lightAndIntensity.Key.intensity, 0, 0.02f);
@@ -30,10 +26,7 @@ public class LightTurningOffState:IState
             }
         }
 
-        if (hasAllLightTurnOff)
-        {
-            // Transfer to lightOnState
-        }
+        hasLightTurnedOff = hasAllLightTurnOff;
     }
 
     public void OnEnter()
@@ -64,4 +57,5 @@ public class LightTurningOffState:IState
     public void OnExit()
     {
     }
+    
 }

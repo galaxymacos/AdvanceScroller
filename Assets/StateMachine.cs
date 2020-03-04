@@ -2,30 +2,23 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateTransition
-{
-    public readonly IState From;
-    public readonly IState To;
-    public readonly Func<bool> Condition;
-
-    public StateTransition(IState from, IState to, Func<bool> condition)
-    {
-        this.From = from;
-        this.To = to;
-        this.Condition = condition;
-    }
-}
-
 public class StateMachine
 {
     private Dictionary<IState, List<StateTransition>> _stateTransitions = new Dictionary<IState, List<StateTransition>>();
-    
+    private List<StateTransition> _anyStateTransitions = new List<StateTransition>();
+
     private List<IState> _states = new List<IState>();
     private IState _currentState;
 
     public void Add(IState state)
     {
         _states.Add(state);
+    }
+
+    public void AddAnyTransition(IState to, Func<bool> condition)
+    {
+        var stateTransition = new StateTransition(null, to, condition);
+        _anyStateTransitions.Add(stateTransition);
     }
 
     public void AddTransition(IState from, IState to, Func<bool> condition)
@@ -61,6 +54,14 @@ public class StateMachine
 
     private StateTransition CheckForTransition()
     {
+        foreach (var transition in _anyStateTransitions)
+        {
+            if (transition.Condition())
+            {
+                return transition;
+            }
+        }
+        
         if (_stateTransitions.ContainsKey(_currentState))
         {
             foreach (var transition in _stateTransitions[_currentState])

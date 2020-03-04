@@ -74,7 +74,6 @@ public class CharacterHealthComponent : MonoBehaviour
             BulletTimeManager.instance.Register(bulletTime);
         }
         
-
         onHealthChanged?.Invoke(currentHealth);
         onTakeDamage?.Invoke(this);
         

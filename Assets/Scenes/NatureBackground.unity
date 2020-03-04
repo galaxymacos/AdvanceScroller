@@ -940,6 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2238d8be322a4eb4296f50bb2f2e8b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasLightFullyRecovered: 1
   lightOffTrigger: 0
   lightOnTrigger: 0
 --- !u!114 &226692999

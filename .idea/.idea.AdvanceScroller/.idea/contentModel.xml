@@ -14,6 +14,7 @@
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="BlurMaterialController.cs" t="Include" />
         <e p="CatchComponent.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
         <e p="EnvironmentGenerator.cs" t="Include" />
@@ -51,6 +52,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="InjuryMaterialController.cs" t="Include" />
         <e p="IState.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="UniverseBackground" t="Include">
@@ -73,6 +75,7 @@
         <e p="LightOnState.cs" t="Include" />
         <e p="LightTurningOffState.cs" t="Include" />
         <e p="LightTurningOnState.cs" t="Include" />
+        <e p="MaterialController.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -223,7 +226,6 @@
           <e p="CameraShake.cs" t="Include" />
           <e p="CastSkillFilter.cs" t="Include" />
           <e p="CharacterEnergyComponent.cs" t="Include" />
-          <e p="characterFlashYellowComponent.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterGroundMovementComponent.cs" t="Include" />
           <e p="CharacterHealthComponent.cs" t="Include" />
@@ -309,9 +311,11 @@
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>
+        <e p="ShaderMaterialFactory.cs" t="Include" />
         <e p="SMb_AxeHero_Caught.cs" t="Include" />
         <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
         <e p="StateMachine.cs" t="Include" />
+        <e p="StateTransition.cs" t="Include" />
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
