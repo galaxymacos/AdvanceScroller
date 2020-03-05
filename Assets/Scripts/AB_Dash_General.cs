@@ -26,7 +26,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
         }
 
         dashRight = playerCharacter.isFacingRight;
-        if (playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis < 0)
+        if (playerCharacter.isFacingRight && playerInput.horizontalAxis < 0)
         {
             Vector3 localScale = playerCharacter.transform.localScale;
             localScale.x = -1;
@@ -35,7 +35,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
             
             isDashReversed = true;
         }
-        else if (!playerCharacter.isFacingRight && playerCharacter.GetComponent<PlayerInput>().horizontalAxis > 0)
+        else if (!playerCharacter.isFacingRight && playerInput.horizontalAxis > 0)
         {
             Vector3 localScale = playerCharacter.transform.localScale;
             localScale.x = 1;

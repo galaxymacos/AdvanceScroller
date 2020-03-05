@@ -123,7 +123,10 @@ public class PlayerCharacter : MonoBehaviour
     private void UpdateFacingDirection()
     {
         var wasFacingRight = isFacingRight;
-        flipComponent.Flip(playerInput.horizontalAxis);
+        if (playerInput != null)
+        {
+            flipComponent.Flip(playerInput.horizontalAxis);
+        }
         if (isFacingRight != wasFacingRight)
         {
             onFacingDirectionChanged?.Invoke();

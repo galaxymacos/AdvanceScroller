@@ -4,19 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class NewPlayerInput : MonoBehaviour
+public class NewPlayerInput : PlayerInput
 {
     public static int PlayerInputID = 0;
-
-    [HideInInspector] public float horizontalAxis;
-    [HideInInspector] public float verticalAxis;
-    [HideInInspector] public bool jumpButtonPressing;
-    [HideInInspector] public bool attackButtonPressing;
-    [HideInInspector] public bool dashButtonPressing;
-    [HideInInspector] public bool skill1ButtonPressing;
-    [HideInInspector] public bool skill2ButtonPressing;
-    [HideInInspector] public bool skill3ButtonPressing;
-    [HideInInspector] public bool skill4ButtonPressing;
+    
 
     private void Start()
     {
@@ -38,88 +29,91 @@ public class NewPlayerInput : MonoBehaviour
     public void OnJump()
     {
         print("test jump start");
-        jumpButtonPressing = true;
+        jumpButtonPressed = true;
     }
 
     public void OnJumpRelease()
     {
         print("test jump end");
-        jumpButtonPressing = false;
+        jumpButtonPressed = false;
     }
 
     public void OnAttack()
     {
         print("test attack start");
-        attackButtonPressing = true;
+        attackButtonPressed = true;
     }
 
     public void OnAttackRelease()
     {
         print("test attack release");
-        attackButtonPressing = false;
+        attackButtonPressed = false;
     }
 
     public void OnDash()
     {
         print("test dash");
-        dashButtonPressing = true;
+        dashButtonPressed = true;
     }
 
     public void OnDashRelease()
     {
         print("test dash release ");
-        dashButtonPressing = false;
+        dashButtonPressed = false;
     }
 
     public void OnSkill1()
     {
         print("test skill 1");
-        skill1ButtonPressing = true;
+        skill1ButtonPressed = true;
     }
 
     public void OnSkill1Release()
     {
         print("test skill 1 release");
-        skill1ButtonPressing = false;
+        skill1ButtonPressed = false;
     }
 
     public void OnSkill2()
     {
         print("test skill 2");
-        skill2ButtonPressing = true;
+        skill2ButtonPressed = true;
     }
 
     public void OnSkill2Release()
     {
         print("test skill 2 release");
-        skill2ButtonPressing = false;
+        skill2ButtonPressed = false;
     }
 
     public void OnSkill3()
     {
         print("test skill3 ");
-        skill3ButtonPressing = true;
+        skill3ButtonPressed = true;
     }
 
     public void OnSkill3Release()
     {
         print("test skill 3 release");
-        skill3ButtonPressing = false;
+        skill3ButtonPressed = false;
     }
 
     public void OnSkill4()
     {
         print("test skill 4");
-        skill4ButtonPressing = true;
+        skill4ButtonPressed = true;
     }
 
     public void OnSkill4Release()
     {
         print("test skill 4 release");
 
-        skill4ButtonPressing = false;
+        skill4ButtonPressed = false;
     }
-    
-    
-    
+
+
+    public override void BindValueToInput()
+    {
+        
+    }
 }

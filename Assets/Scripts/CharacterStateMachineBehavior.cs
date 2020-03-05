@@ -13,7 +13,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     protected Dictionary<string, bool> animations;
 
     [HideInInspector] public Animator characterAnimator;
-    [HideInInspector] public PlayerInput playerInput;
+    public PlayerInput playerInput => playerCharacter.playerInput;
     [HideInInspector] public PlayerCharacter playerCharacter;
     
     
@@ -23,7 +23,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         characterAnimator = _animator;
-        playerInput = _animator.GetComponent<PlayerInput>();
         animations = new Dictionary<string, bool>();
         foreach (AnimatorControllerParameter parameter in _animator.parameters)
         {
@@ -129,6 +128,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 
     public string GenerateAnimationByInput()
     {
+        if (playerCharacter.playerInput == null) return "";
         foreach (string animationsKey in animations.Keys)
         {
             if (animations[animationsKey])

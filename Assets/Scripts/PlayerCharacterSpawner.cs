@@ -7,7 +7,7 @@ using UnityEngine.Events;
 public class PlayerCharacterSpawner : MonoBehaviour
 {
 
-    public List<PlayerInput> playerInputs;
+    // public List<PlayerInput> playerInputs;
     public List<GameObject> selectedHeros;
 
     [SerializeField] private GameObject batHeroPrefab;
@@ -43,7 +43,7 @@ public class PlayerCharacterSpawner : MonoBehaviour
         for (int i = 0; i < selectedHeros.Count; i++)
         {
             GameObject hero = Instantiate(selectedHeros[i], new Vector2(0+i*4, 0), Quaternion.identity);
-            hero.AddComponent(playerInputs[i].GetType());
+            // hero.AddComponent(playerInputs[i].GetType());    // TODO add
             hero.layer = layermask_to_layer(whatIsPlayer[i]);
             hero.SetActive(true);
             charactersForPlayer.Add(hero.GetComponent<PlayerCharacter>());

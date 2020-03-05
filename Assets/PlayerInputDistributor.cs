@@ -21,21 +21,16 @@ public class PlayerInputDistributor : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     public void DistributeInput(NewPlayerInput input)
     {
+        if (_currentPlayerInputNum >= PlayerCharacterSpawner.instance.charactersForPlayer.Count)
+        {
+            print("No player for this controller to control");
+            return;
+        }
+        PlayerCharacterSpawner.instance.charactersForPlayer[_currentPlayerInputNum].playerInput = input;
         print("distribute the generated player input object to the player "+_currentPlayerInputNum);
         _currentPlayerInputNum++;
 

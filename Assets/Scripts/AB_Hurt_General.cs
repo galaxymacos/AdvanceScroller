@@ -27,7 +27,7 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
         if (dashStillAlowedTimeCounter > 0)
         {
             dashStillAlowedTimeCounter -= Time.deltaTime;
-            if (playerInput.dashButtonPressed)
+            if (playerInput!=null && playerInput.dashButtonPressed)
             {
                 playerInput.dashButtonPressed = false;
                 BulletTimeManager.instance.Register(0.15f);

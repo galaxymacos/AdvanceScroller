@@ -7,7 +7,6 @@ public class CharacterGroundMovementComponent: MovementComponent
 {
     private float movementSpeed;
     private Rigidbody2D rb;
-    private PlayerInput input;
     private PlayerCharacter _playerCharacter;
 
     public CharacterGroundMovementComponent(PlayerCharacter playerCharacter)
@@ -15,15 +14,13 @@ public class CharacterGroundMovementComponent: MovementComponent
         _playerCharacter = playerCharacter;
         movementSpeed = playerCharacter.movementSpeed;
         rb = _playerCharacter.GetComponent<Rigidbody2D>();
-        input = playerCharacter.playerInput;
     }
 
     public override void UpdateMovement()
     {
-        if (_playerCharacter.canControlMovement)
+        if (_playerCharacter.canControlMovement && _playerCharacter.playerInput!=null)
         {
-            
-            rb.velocity = new Vector2(movementSpeed * input.horizontalAxis, rb.velocity.y);
+            rb.velocity = new Vector2(movementSpeed * _playerCharacter.playerInput.horizontalAxis, rb.velocity.y);
         }
         
     }
