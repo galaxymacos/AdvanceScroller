@@ -34,11 +34,11 @@ public class EnvironmentGenerator : MonoBehaviour
         CountDownTimer.text = timeLeftInTimeCircle.ToString("F0");
         if (timeLeftInTimeCircle <= TimeCircle && timeLeftInTimeCircle >= TimeCircle / 2)
         {
-            vel.x = - 15; 
+            vel.x = - 10; 
         }
         else if (timeLeftInTimeCircle >0  && timeLeftInTimeCircle <= TimeCircle / 2)
         {
-            vel.x = 15;
+            vel.x = 10;
         }
         else 
         {
@@ -47,11 +47,4 @@ public class EnvironmentGenerator : MonoBehaviour
 
     }
 
-
-
-
-
-
-
-    
 }
