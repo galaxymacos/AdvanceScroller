@@ -52,7 +52,11 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="ForceCancelShaderControl.cs" t="Include" />
+        <e p="ForceCancelShadow.cs" t="Include" />
+        <e p="ForceShadowShaderComponent.cs" t="Include" />
         <e p="InjuryMaterialController.cs" t="Include" />
+        <e p="InjuryShaderComponent.cs" t="Include" />
         <e p="IState.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="UniverseBackground" t="Include">
@@ -75,6 +79,7 @@
         <e p="LightOnState.cs" t="Include" />
         <e p="LightTurningOffState.cs" t="Include" />
         <e p="LightTurningOnState.cs" t="Include" />
+        <e p="MaterialChangeComponent.cs" t="Include" />
         <e p="MaterialController.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
@@ -312,6 +317,7 @@
           <e p="WallCheck.cs" t="Include" />
         </e>
         <e p="ShaderMaterialFactory.cs" t="Include" />
+        <e p="ShadowFactory.cs" t="Include" />
         <e p="SMb_AxeHero_Caught.cs" t="Include" />
         <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
         <e p="StateMachine.cs" t="Include" />

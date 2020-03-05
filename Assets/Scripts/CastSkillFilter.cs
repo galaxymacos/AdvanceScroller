@@ -55,13 +55,19 @@ public class CooldownFilter : CastSkillFilter
 
 public class ForceAttackFilter: CastSkillFilter
 {
-    
+    public bool isForceUse;
     public ForceAttackFilter(string skillName, CharacterStateMachineBehavior characterStateMachineBehavior, CastSkillFilter next) : base(skillName, characterStateMachineBehavior, next)
     {
     }
 
     public override void DealWithResult()
     {
+        if (isForceUse)
+        {
+            ShadowFactory.instance.CreateForceCancelShadow(csmb.playerCharacter);    // TODO delete if it doesn't work
+        }
+
+
         foreach (var animationAvailable in csmb.stateCanForceTransformTo)
         {
             if (skillName == animationAvailable)
@@ -79,10 +85,12 @@ public class ForceAttackFilter: CastSkillFilter
             if (skillName == forcableAnimation)
             {
                 CharacterEnergyComponent characterEnergy = csmb.characterAnimator.GetComponent<CharacterEnergyComponent>();
+                isForceUse = true;
                 return characterEnergy.Check(20);
             }
         }
 
+        isForceUse = false;
         return true;
     }
 }

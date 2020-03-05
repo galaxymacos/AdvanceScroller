@@ -23,7 +23,8 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
             playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-            
+            playerCharacter.canControlMovement = false;
+
         }
         else
         {
@@ -34,27 +35,23 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
  
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
+            
+            playerCharacter.canControlMovement = true;
         }
         
         
     }
-    
+
+    public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateUpdate(_animator, stateInfo, layerIndex);
+        playerCharacter.canControlMovement = !playerCharacter.isGrounded;
+    }
+
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         playerCharacter.GetComponent<AttackMessagingComponent>().DetectAttack(0);
-       
     }
 
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
+    
 }
