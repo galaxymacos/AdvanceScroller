@@ -28,7 +28,6 @@ public class DamageReceiver : MonoBehaviour
         if (playerCharacter.dashInvincibleTimeCounter > 0)
         {
             playerCharacter.onPlayerDodgeSucceed?.Invoke();
-            BulletTimeManager.instance.Register(0.3f);    // TODO change it to an isolated class
             return;
         }
         

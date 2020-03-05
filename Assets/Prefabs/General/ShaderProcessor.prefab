@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7539027348047886358}
   - component: {fileID: 2576799822397012605}
   - component: {fileID: 9150751211351608087}
+  - component: {fileID: 1860387180}
   m_Layer: 0
   m_Name: ShaderProcessor
   m_TagString: Untagged
@@ -58,3 +59,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: eeab035535e97c745bfd80f6dc111fd3, type: 2}
+  shadowLastingTime: 0.07
+--- !u!114 &1860387180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7539027348047886344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70af0bd22fd348cf84d0b57949a9facc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 9128476adb731b648905c58b4b96390d, type: 2}
+  disappearSpeed: 0.5
+  delay: 0.5

@@ -23,12 +23,12 @@ public class ForceCancelShaderControl : MaterialController
     
     public override void Register()
     {
-        ForceCancelShadow.onForceCancelshadowCreated += RunBridge;
+        ForceCancelShadowCreationMessager.onForceCancelshadowCreated += RunBridge;
     }
 
-    public void RunBridge(ForceCancelShadow cancelShadow)
+    public void RunBridge(ForceCancelShadowCreationMessager cancelShadowCreationMessager)
     {
-        Run(cancelShadow.sr);
+        Run(cancelShadowCreationMessager.sr);
     }
     
     public override MaterialChangeComponent GetShaderComponent(SpriteRenderer sr, Material material)
@@ -36,4 +36,3 @@ public class ForceCancelShaderControl : MaterialController
         return new ForceShadowShaderComponent(sr, material, shadowLastingTime);
     }
 }
-

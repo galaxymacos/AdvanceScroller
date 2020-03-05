@@ -21,7 +21,7 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
         playerCharacter.onPlayerStartJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerStartDoubleJump += SpawnGroundDustTwoWays;
         playerCharacter.onPlayerGrounded += SpawnGroundDustTwoWays;
-        playerCharacter.onPlayerDodgeSucceed += SpawnDodgeShadow;
+        playerCharacter.onPlayerDodgeSucceed += () => ShadowFactory.instance.CreatedissolveShadow(playerCharacter);
 
         playerCharacter.onPlayerStartWallSlide += StartSpawningWallSlideDust;
         playerCharacter.onPlayerStopWallSlide += StopSpawningWallSlideDust;

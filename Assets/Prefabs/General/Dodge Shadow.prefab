@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 685054869924666403}
   - component: {fileID: 685054869924666402}
   - component: {fileID: 6347294722745378275}
+  - component: {fileID: 5626625224128821505}
   m_Layer: 0
   m_Name: Dodge Shadow
   m_TagString: Untagged
@@ -96,3 +97,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disappearSpeed: 1
   delay: 1
+--- !u!114 &5626625224128821505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685054869924666405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84b3f02fa6a347fb890d54922d7d0b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 0}

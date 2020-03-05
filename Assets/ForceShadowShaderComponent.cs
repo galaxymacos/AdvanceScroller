@@ -9,9 +9,13 @@ public class ForceShadowShaderComponent: MaterialChangeComponent
 
     public ForceShadowShaderComponent(SpriteRenderer renderer, Material material, float shadowLastingTime) : base(renderer, material)
     {
-        _shadowLastingTime = shadowLastingTime;
-        timeCounter = _shadowLastingTime;
-        SetMaterialColorToWhite();
+        if (SpriteRenderer != null)
+        {
+            _shadowLastingTime = shadowLastingTime;
+            timeCounter = _shadowLastingTime;
+            SetMaterialColorToWhite();
+        }
+        
     }
 
     private void SetMaterialColorToWhite()
@@ -23,8 +27,11 @@ public class ForceShadowShaderComponent: MaterialChangeComponent
     public override void ResetMaterial(Material material)
     {        
         timeCounter = _shadowLastingTime;
-        SpriteRenderer.material = material;
-        SetMaterialColorToWhite();
+        if (SpriteRenderer != null)
+        {
+            SpriteRenderer.material = material;
+            SetMaterialColorToWhite();
+        }
     }
 
     public override void Tick()
@@ -34,7 +41,10 @@ public class ForceShadowShaderComponent: MaterialChangeComponent
             timeCounter-=Time.deltaTime;
             if (timeCounter <= 0)
             {
-                Object.Destroy(SpriteRenderer.gameObject);
+                if (SpriteRenderer != null)
+                {
+                    Object.Destroy(SpriteRenderer.gameObject);
+                }
             }
         }
        
