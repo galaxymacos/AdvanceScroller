@@ -30,7 +30,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""817c3b2f-1cbc-4a70-bf50-7b3afee04ca8"",
-                    ""expectedControlType"": """",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
@@ -199,17 +199,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Skill4"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""559bcea7-3271-4ce8-a9d0-8bd80c95e41a"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""VerticalMovement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -470,6 +459,582 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""PlayerNew"",
+            ""id"": ""18183bd2-e48e-45ca-a792-7467f2810d44"",
+            ""actions"": [
+                {
+                    ""name"": ""Run"",
+                    ""type"": ""Button"",
+                    ""id"": ""8b987ae3-96b4-499b-97af-d9d8744be0d6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)""
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""99903109-689b-42ed-baca-8c3f77319d83"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""AttackRelease"",
+                    ""type"": ""Button"",
+                    ""id"": ""288ec4c9-b7c2-4e25-b42a-128938528c5e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""91bfa257-a4b3-483f-a599-dd3e58edd117"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Dash"",
+                    ""type"": ""Button"",
+                    ""id"": ""0a7baa22-fe3f-4d9f-91bb-65e8a93b4dfc"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""DashRelease"",
+                    ""type"": ""Button"",
+                    ""id"": ""8e2cbd46-8e76-46d7-9235-8f7bcad3c1f7"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Skill1"",
+                    ""type"": ""Button"",
+                    ""id"": ""ec8346d2-3ceb-49e3-8618-54f0c81efd5a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Skill1Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""ff2e6572-25c3-40f9-b1bd-f73dd32c7a54"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Skill2"",
+                    ""type"": ""Button"",
+                    ""id"": ""98244462-8769-40e0-91a5-1ab983cb0238"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Skill2Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""ef698740-914b-4219-9be9-b92294d88194"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Skill3"",
+                    ""type"": ""Button"",
+                    ""id"": ""43cc4348-958d-46ba-8757-a6ea08a8a899"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Skill3Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""33e1254c-bcd0-47e3-a454-6b4b8bb20343"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Skill4"",
+                    ""type"": ""Button"",
+                    ""id"": ""3d4ce1d0-61af-4deb-add0-92484eb750c5"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press""
+                },
+                {
+                    ""name"": ""Skill4Release"",
+                    ""type"": ""Button"",
+                    ""id"": ""22de61d8-68cd-4abc-95b1-0c41f6e890bd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""VerticalMovement"",
+                    ""type"": ""Button"",
+                    ""id"": ""febbdbe0-e260-4e78-b987-ec168c31cb51"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=2)""
+                },
+                {
+                    ""name"": ""JumpRelease"",
+                    ""type"": ""Button"",
+                    ""id"": ""53b92a0d-b452-4b3b-ab15-5a8eddb6ade1"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""Joystick"",
+                    ""id"": ""2a1273bf-ca69-4d68-8233-364809e8c858"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""098a2993-b450-43ed-b8a8-f51242dce068"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""68dee8b4-7e81-4c73-9471-70eeaaf3f881"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""ca89d141-5663-4857-9def-5f87c1bb26bf"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""99f7d1ae-e96b-446a-967e-ce2749250356"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""10b27c1f-d0d6-4dac-8a1c-d416f0f15841"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cb85266a-89fb-49a7-9f97-cc03f97b741c"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""556999c8-cefa-47bb-95da-8c6b231b80d8"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""659a6d15-3616-4ec3-9d95-4610b9579e6d"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e5f84abb-6c34-43b2-96d7-0e259fee83ff"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""786d816f-411f-423f-b173-888d8fbaa6bc"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9d61f52a-712c-4e4d-b948-be85a8ba8a7f"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Dash"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""968cf034-360e-4be8-9cca-7cd25d90202b"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""af9007b8-2acc-410f-91e6-008c08930e3c"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0fba75a0-8aa6-44ee-8e79-a32dc124b7db"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2978166f-8919-460e-8fe1-fa91055ea239"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5c52869-0168-4dcc-acaf-93298ebb4085"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e389647a-de73-453b-8a21-a3b4ab76ce9c"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b09af76e-e96f-4d37-a616-cf661ed20984"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3b6d7873-7325-4043-a419-ad938d2d5c2b"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Joystick"",
+                    ""id"": ""6961d38b-e157-4ab4-a1ff-508836db3847"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""2c614935-517d-476c-9b1d-2aae422ee5e3"",
+                    ""path"": ""<XInputController>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a3f8c3b2-441c-44d3-958b-f02d026b5fe7"",
+                    ""path"": ""<XInputController>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard"",
+                    ""id"": ""d1870cb8-8be8-43d2-9736-fb9ff8b81a8e"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""da3b2910-d632-47cf-9ed6-15a002738303"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""a925f06f-9ce4-43a7-9547-ff1416e69d89"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""VerticalMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""026ffd1f-33f9-42fe-8a9b-bff17358230d"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0ac4a319-7ac8-45dc-87d4-7cec5996b1b9"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""JumpRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3565831a-c2d5-4a73-82d5-ded8d1fae138"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DashRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""09e2b533-7d3e-44a3-8d72-dd60debe0351"",
+                    ""path"": ""<Keyboard>/c"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""DashRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""76e64cd2-7a0d-45db-87b1-b95338f6515d"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a9cd9b02-d2b2-4396-b8ef-72029cbed75a"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill1Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9ba55736-ad5b-44db-aa0d-8b2d35f01a34"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3c04545d-81db-43b5-9223-c4df9bc0dd39"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill2Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""33bffdb9-5b12-4f31-9c67-3f442ad9e9f6"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill3Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""06456e2f-6bf1-4723-9cf9-5ffc2046d4b9"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill3Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1e34b0eb-4c92-473d-ba10-e4eb8992c17e"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill4Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5ec77451-c0ce-4075-8f2b-69ba323e8c76"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skill4Release"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fdaabc43-7853-4ee1-bf8f-d29939adcb24"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""69f20a26-c3cf-409e-91a3-a9a25b8dfb2f"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""AttackRelease"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -496,6 +1061,24 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Player2_Skill3 = m_Player2.FindAction("Skill3", throwIfNotFound: true);
         m_Player2_Skill4 = m_Player2.FindAction("Skill4", throwIfNotFound: true);
         m_Player2_VerticalMovement = m_Player2.FindAction("VerticalMovement", throwIfNotFound: true);
+        // PlayerNew
+        m_PlayerNew = asset.FindActionMap("PlayerNew", throwIfNotFound: true);
+        m_PlayerNew_Run = m_PlayerNew.FindAction("Run", throwIfNotFound: true);
+        m_PlayerNew_Attack = m_PlayerNew.FindAction("Attack", throwIfNotFound: true);
+        m_PlayerNew_AttackRelease = m_PlayerNew.FindAction("AttackRelease", throwIfNotFound: true);
+        m_PlayerNew_Jump = m_PlayerNew.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerNew_Dash = m_PlayerNew.FindAction("Dash", throwIfNotFound: true);
+        m_PlayerNew_DashRelease = m_PlayerNew.FindAction("DashRelease", throwIfNotFound: true);
+        m_PlayerNew_Skill1 = m_PlayerNew.FindAction("Skill1", throwIfNotFound: true);
+        m_PlayerNew_Skill1Release = m_PlayerNew.FindAction("Skill1Release", throwIfNotFound: true);
+        m_PlayerNew_Skill2 = m_PlayerNew.FindAction("Skill2", throwIfNotFound: true);
+        m_PlayerNew_Skill2Release = m_PlayerNew.FindAction("Skill2Release", throwIfNotFound: true);
+        m_PlayerNew_Skill3 = m_PlayerNew.FindAction("Skill3", throwIfNotFound: true);
+        m_PlayerNew_Skill3Release = m_PlayerNew.FindAction("Skill3Release", throwIfNotFound: true);
+        m_PlayerNew_Skill4 = m_PlayerNew.FindAction("Skill4", throwIfNotFound: true);
+        m_PlayerNew_Skill4Release = m_PlayerNew.FindAction("Skill4Release", throwIfNotFound: true);
+        m_PlayerNew_VerticalMovement = m_PlayerNew.FindAction("VerticalMovement", throwIfNotFound: true);
+        m_PlayerNew_JumpRelease = m_PlayerNew.FindAction("JumpRelease", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -735,6 +1318,159 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         }
     }
     public Player2Actions @Player2 => new Player2Actions(this);
+
+    // PlayerNew
+    private readonly InputActionMap m_PlayerNew;
+    private IPlayerNewActions m_PlayerNewActionsCallbackInterface;
+    private readonly InputAction m_PlayerNew_Run;
+    private readonly InputAction m_PlayerNew_Attack;
+    private readonly InputAction m_PlayerNew_AttackRelease;
+    private readonly InputAction m_PlayerNew_Jump;
+    private readonly InputAction m_PlayerNew_Dash;
+    private readonly InputAction m_PlayerNew_DashRelease;
+    private readonly InputAction m_PlayerNew_Skill1;
+    private readonly InputAction m_PlayerNew_Skill1Release;
+    private readonly InputAction m_PlayerNew_Skill2;
+    private readonly InputAction m_PlayerNew_Skill2Release;
+    private readonly InputAction m_PlayerNew_Skill3;
+    private readonly InputAction m_PlayerNew_Skill3Release;
+    private readonly InputAction m_PlayerNew_Skill4;
+    private readonly InputAction m_PlayerNew_Skill4Release;
+    private readonly InputAction m_PlayerNew_VerticalMovement;
+    private readonly InputAction m_PlayerNew_JumpRelease;
+    public struct PlayerNewActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public PlayerNewActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Run => m_Wrapper.m_PlayerNew_Run;
+        public InputAction @Attack => m_Wrapper.m_PlayerNew_Attack;
+        public InputAction @AttackRelease => m_Wrapper.m_PlayerNew_AttackRelease;
+        public InputAction @Jump => m_Wrapper.m_PlayerNew_Jump;
+        public InputAction @Dash => m_Wrapper.m_PlayerNew_Dash;
+        public InputAction @DashRelease => m_Wrapper.m_PlayerNew_DashRelease;
+        public InputAction @Skill1 => m_Wrapper.m_PlayerNew_Skill1;
+        public InputAction @Skill1Release => m_Wrapper.m_PlayerNew_Skill1Release;
+        public InputAction @Skill2 => m_Wrapper.m_PlayerNew_Skill2;
+        public InputAction @Skill2Release => m_Wrapper.m_PlayerNew_Skill2Release;
+        public InputAction @Skill3 => m_Wrapper.m_PlayerNew_Skill3;
+        public InputAction @Skill3Release => m_Wrapper.m_PlayerNew_Skill3Release;
+        public InputAction @Skill4 => m_Wrapper.m_PlayerNew_Skill4;
+        public InputAction @Skill4Release => m_Wrapper.m_PlayerNew_Skill4Release;
+        public InputAction @VerticalMovement => m_Wrapper.m_PlayerNew_VerticalMovement;
+        public InputAction @JumpRelease => m_Wrapper.m_PlayerNew_JumpRelease;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerNew; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerNewActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerNewActions instance)
+        {
+            if (m_Wrapper.m_PlayerNewActionsCallbackInterface != null)
+            {
+                @Run.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                @Attack.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                @Attack.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                @Attack.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                @AttackRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                @AttackRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                @AttackRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                @Jump.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                @Dash.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                @Dash.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                @Dash.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                @DashRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                @DashRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                @DashRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                @Skill1.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                @Skill1.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                @Skill1.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                @Skill1Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                @Skill1Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                @Skill1Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                @Skill2.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                @Skill2.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                @Skill2.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                @Skill2Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                @Skill2Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                @Skill2Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                @Skill3.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                @Skill3.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                @Skill3.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                @Skill3Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                @Skill3Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                @Skill3Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                @Skill4.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                @Skill4.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                @Skill4.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                @Skill4Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                @Skill4Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                @Skill4Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                @VerticalMovement.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                @VerticalMovement.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                @JumpRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                @JumpRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                @JumpRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+            }
+            m_Wrapper.m_PlayerNewActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Run.started += instance.OnRun;
+                @Run.performed += instance.OnRun;
+                @Run.canceled += instance.OnRun;
+                @Attack.started += instance.OnAttack;
+                @Attack.performed += instance.OnAttack;
+                @Attack.canceled += instance.OnAttack;
+                @AttackRelease.started += instance.OnAttackRelease;
+                @AttackRelease.performed += instance.OnAttackRelease;
+                @AttackRelease.canceled += instance.OnAttackRelease;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @Dash.started += instance.OnDash;
+                @Dash.performed += instance.OnDash;
+                @Dash.canceled += instance.OnDash;
+                @DashRelease.started += instance.OnDashRelease;
+                @DashRelease.performed += instance.OnDashRelease;
+                @DashRelease.canceled += instance.OnDashRelease;
+                @Skill1.started += instance.OnSkill1;
+                @Skill1.performed += instance.OnSkill1;
+                @Skill1.canceled += instance.OnSkill1;
+                @Skill1Release.started += instance.OnSkill1Release;
+                @Skill1Release.performed += instance.OnSkill1Release;
+                @Skill1Release.canceled += instance.OnSkill1Release;
+                @Skill2.started += instance.OnSkill2;
+                @Skill2.performed += instance.OnSkill2;
+                @Skill2.canceled += instance.OnSkill2;
+                @Skill2Release.started += instance.OnSkill2Release;
+                @Skill2Release.performed += instance.OnSkill2Release;
+                @Skill2Release.canceled += instance.OnSkill2Release;
+                @Skill3.started += instance.OnSkill3;
+                @Skill3.performed += instance.OnSkill3;
+                @Skill3.canceled += instance.OnSkill3;
+                @Skill3Release.started += instance.OnSkill3Release;
+                @Skill3Release.performed += instance.OnSkill3Release;
+                @Skill3Release.canceled += instance.OnSkill3Release;
+                @Skill4.started += instance.OnSkill4;
+                @Skill4.performed += instance.OnSkill4;
+                @Skill4.canceled += instance.OnSkill4;
+                @Skill4Release.started += instance.OnSkill4Release;
+                @Skill4Release.performed += instance.OnSkill4Release;
+                @Skill4Release.canceled += instance.OnSkill4Release;
+                @VerticalMovement.started += instance.OnVerticalMovement;
+                @VerticalMovement.performed += instance.OnVerticalMovement;
+                @VerticalMovement.canceled += instance.OnVerticalMovement;
+                @JumpRelease.started += instance.OnJumpRelease;
+                @JumpRelease.performed += instance.OnJumpRelease;
+                @JumpRelease.canceled += instance.OnJumpRelease;
+            }
+        }
+    }
+    public PlayerNewActions @PlayerNew => new PlayerNewActions(this);
     public interface IPlayerActions
     {
         void OnRun(InputAction.CallbackContext context);
@@ -758,5 +1494,24 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSkill3(InputAction.CallbackContext context);
         void OnSkill4(InputAction.CallbackContext context);
         void OnVerticalMovement(InputAction.CallbackContext context);
+    }
+    public interface IPlayerNewActions
+    {
+        void OnRun(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnAttackRelease(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnDash(InputAction.CallbackContext context);
+        void OnDashRelease(InputAction.CallbackContext context);
+        void OnSkill1(InputAction.CallbackContext context);
+        void OnSkill1Release(InputAction.CallbackContext context);
+        void OnSkill2(InputAction.CallbackContext context);
+        void OnSkill2Release(InputAction.CallbackContext context);
+        void OnSkill3(InputAction.CallbackContext context);
+        void OnSkill3Release(InputAction.CallbackContext context);
+        void OnSkill4(InputAction.CallbackContext context);
+        void OnSkill4Release(InputAction.CallbackContext context);
+        void OnVerticalMovement(InputAction.CallbackContext context);
+        void OnJumpRelease(InputAction.CallbackContext context);
     }
 }

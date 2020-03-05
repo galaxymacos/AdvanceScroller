@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public abstract class PlayerInput: MonoBehaviour
 {
@@ -21,6 +22,7 @@ public abstract class PlayerInput: MonoBehaviour
     }
 
     public abstract void BindValueToInput();
+    
     private void OnEnable()
     {
         inputAction.Enable();
@@ -30,4 +32,6 @@ public abstract class PlayerInput: MonoBehaviour
     {
         inputAction.Disable();
     }
+
+    
 }

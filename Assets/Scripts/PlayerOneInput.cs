@@ -33,4 +33,5 @@ public class PlayerOneInput: PlayerInput
     {
         inputAction.Disable();
     }
+    
 }
