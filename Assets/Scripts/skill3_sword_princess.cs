@@ -8,6 +8,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     [SerializeField] private float startSpeed = 2f;
     [SerializeField] private float speedIncreaseFactor = 5f;
     private Vector2 startDirection;
+    private Vector2 idealVector;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -18,7 +19,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         rb.velocity = startDirection * startSpeed;
         playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(1);
         rb.gravityScale = 0f;
-        rb.freezeRotation = false;
+        // rb.freezeRotation = false;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,9 +31,8 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         if (Math.Abs(playerInput.verticalAxis) > Mathf.Epsilon)
         {
             rb.velocity += new Vector2(Vector3.Cross( shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).x, Vector3.Cross(shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).y) * Time.deltaTime * 5;
-
         }
-
+         
         float factorThisFrame = (speedIncreaseFactor * Time.deltaTime);
         var normal = rb.velocity.normalized;
         rb.velocity += normal * factorThisFrame;

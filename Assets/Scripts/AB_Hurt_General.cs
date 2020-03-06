@@ -31,7 +31,7 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
             {
                 playerInput.dashButtonPressed = false;
                 BulletTimeManager.instance.Register(0.15f);
-                ShaderProcessor.instance.Blur(playerCharacter.GetComponent<SpriteRenderer>());
+                // ShaderProcessor.instance.Blur(playerCharacter.GetComponent<SpriteRenderer>()); // TODO add blur
                 // playerCharacter.PrintString("trying to dash");
                 animator.SetTrigger("dash");
                 playerCharacter.dashInvincibleTimeCounter = playerCharacter.dashInvincibleTime;

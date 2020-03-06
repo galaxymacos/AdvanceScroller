@@ -5,6 +5,7 @@ using UnityEngine;
 public class AB_WallSlide_General : CharacterStateMachineBehavior
 {
     private bool isRightWallSlide;
+    private bool isPausing;
     [SerializeField] private float fallDownSpeed = 5f;
 
     private Rigidbody2D rb;
@@ -17,12 +18,16 @@ public class AB_WallSlide_General : CharacterStateMachineBehavior
         isRightWallSlide = playerCharacter.isNextToWallRight && playerCharacter.isFacingRight;
             
         rb = animator.GetComponent<Rigidbody2D>();
+
+        playerCharacter.GetComponent<CharacterPauser>().onCharacterPaused += OnPause;
+        playerCharacter.GetComponent<CharacterPauser>().onCharacterResumed += OnResume;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        if (isPausing) return;
         
         rb.velocity = Vector2.down * fallDownSpeed;
         
@@ -43,13 +48,26 @@ public class AB_WallSlide_General : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.onPlayerStopWallSlide?.Invoke();
+        
         playerCharacter.onPlayerExitWall -= PlayerLeavesWall;
+        playerCharacter.GetComponent<CharacterPauser>().onCharacterPaused -= OnPause;
+        playerCharacter.GetComponent<CharacterPauser>().onCharacterResumed -= OnResume;
     }
 
     public void PlayerLeavesWall()
     {
         characterAnimator.SetTrigger("idle");
     }
+
+    public void OnPause()
+    {
+        isPausing = true;
+    }
+    public void OnResume()
+    {
+        isPausing = false;
+    }
+
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -22,11 +22,11 @@ public class SwordPrincessParticleSpawner : MonoBehaviour
     { 
         GameObject generatedWolf = Instantiate(wolf, transform.Find("SpawnLocations").Find("Wolf").position, transform.rotation);
         Projectile projectile = generatedWolf.GetComponent<Projectile>();
-        if (GetComponent<PlayerInput>().verticalAxis > 0)
+        if (playerCharacter.playerInput.verticalAxis > 0)
         {
             projectile.Setup(playerCharacter, 13, 45);
         }
-        else if(GetComponent<PlayerInput>().verticalAxis < 0)
+        else if(playerCharacter.playerInput.verticalAxis < 0)
         {
             projectile.Setup(playerCharacter, 13, -45);
         }
@@ -40,11 +40,11 @@ public class SwordPrincessParticleSpawner : MonoBehaviour
     { 
         GameObject generatedCross = Instantiate(cross, transform.Find("SpawnLocations").Find("Cross").position, transform.rotation);
         Projectile projectile = generatedCross.GetComponent<Projectile>();
-        if (GetComponent<PlayerInput>().verticalAxis > 0)
+        if (playerCharacter.playerInput.verticalAxis > 0)
         {
             projectile.Setup(playerCharacter, 18, 30);
         }
-        else if(GetComponent<PlayerInput>().verticalAxis < 0)
+        else if(playerCharacter.playerInput.verticalAxis < 0)
         {
             projectile.Setup(playerCharacter, 18, -30);
         }

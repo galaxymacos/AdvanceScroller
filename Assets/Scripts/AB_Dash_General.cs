@@ -100,13 +100,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
             characterAnimator.SetTrigger("idle");
         }
     }
-
-    public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(_animator, stateInfo, layerIndex);
-        playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-    }
-
+    
     public void ActivateDodgeBulletTime()
     {
         if (!hasActivatedBulletTime)

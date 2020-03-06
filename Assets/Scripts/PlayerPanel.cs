@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Michsky.UI.ModernUIPack;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerPanel : MonoBehaviour
 { 
@@ -10,8 +11,10 @@ public class PlayerPanel : MonoBehaviour
 
     public ProgressBar hpBar; 
     public ProgressBar energyBar;
+    public Image ultimateBar;
     CharacterHealthComponent characterHealthComponent;
     CharacterEnergyComponent characterEnergyComponent;
+    CharacterUltimateComponent characterUltimateComponent;
 
     public bool setupFinished;
     public Action onPlayerSetup;
@@ -27,6 +30,7 @@ public class PlayerPanel : MonoBehaviour
     {
         characterHealthComponent = player.GetComponent<CharacterHealthComponent>();
         characterEnergyComponent = player.GetComponent<CharacterEnergyComponent>();
+        characterUltimateComponent = player.GetComponent<CharacterUltimateComponent>();
         setupFinished = true;
     }
 
@@ -35,8 +39,8 @@ public class PlayerPanel : MonoBehaviour
     {
         if (!setupFinished) return;
         
-        
         hpBar.currentPercent = (float)characterHealthComponent.currentHealth/characterHealthComponent.maxHealth*100;
         energyBar.currentPercent = characterEnergyComponent.currentEnergy / characterEnergyComponent.maxEnergy*100;
+        ultimateBar.fillAmount = characterUltimateComponent.GetRagePercentage;
     }
 }

@@ -241,6 +241,7 @@
           <e p="CharacterHealthComponent.cs" t="Include" />
           <e p="CharacterPauser.cs" t="Include" />
           <e p="CharacterStateMachineBehavior.cs" t="Include" />
+          <e p="CharacterUltimateComponent.cs" t="Include" />
           <e p="ChargeDagger.cs" t="Include" />
           <e p="ChargedAxe.cs" t="Include" />
           <e p="ChargedSMB.cs" t="Include" />
@@ -304,7 +305,7 @@
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
-          <e p="UniqueSkillComponent.cs" t="Include" />
+          <e p="UltimateEffectComponent.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>

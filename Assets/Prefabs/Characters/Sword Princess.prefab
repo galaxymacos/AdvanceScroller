@@ -371,6 +371,7 @@ GameObject:
   - component: {fileID: 165736055725530837}
   - component: {fileID: 4741068551188603677}
   - component: {fileID: -6872933427141104953}
+  - component: {fileID: 4643469235381257640}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -832,6 +833,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b8f7cd7813f2264294b89e5f2858816, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4643469235381257640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344184053ee84565a16411635b166340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRage: 100
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

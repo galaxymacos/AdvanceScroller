@@ -75,7 +75,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
         }
         
         pauseableSMB = new PausableSMB(this);
-        playerCharacter.GetComponent<UniqueSkillComponent>().ShowOff();
+        playerCharacter.GetComponent<UltimateEffectComponent>().ShowOff();
         hasUltimateEnd = false;
 
     }
@@ -87,7 +87,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
 
         if (!hasUltimateEnd)
         {
-            playerCharacter.GetComponent<UniqueSkillComponent>().End();
+            playerCharacter.GetComponent<UltimateEffectComponent>().End();
             hasUltimateEnd = true;
         }
 

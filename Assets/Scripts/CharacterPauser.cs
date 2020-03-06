@@ -24,16 +24,16 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         playerCharacter = GetComponent<PlayerCharacter>();
         animator = GetComponent<Animator>();
     }
-
     public void Pause()
     {
         if (isPausing)
         {
             return;
         }
-        
-        animator.speed = 0f;
+
         velocityBeforePause = rb.velocity;
+        print(velocityBeforePause);
+        animator.speed = 0f;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
 
@@ -43,6 +43,7 @@ public class CharacterPauser : MonoBehaviour, IPauseable
 
     public void UnPause()
     {
+        Debug.Log("un pause "+playerCharacter);
         if (!isPausing)    
         {
             return;

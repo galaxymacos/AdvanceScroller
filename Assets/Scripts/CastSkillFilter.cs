@@ -95,6 +95,36 @@ public class ForceAttackFilter: CastSkillFilter
     }
 }
 
+public class UltimateRageFilter : CastSkillFilter
+{
+    private bool isLastSkillUltimate;
+    private readonly CharacterUltimateComponent ultimateComponent;
+    public UltimateRageFilter(string skillName, CharacterStateMachineBehavior characterStateMachineBehavior, CastSkillFilter next) : base(skillName, characterStateMachineBehavior, next)
+    {
+        ultimateComponent = csmb.playerCharacter.GetComponent<CharacterUltimateComponent>();
+    }
+
+    public override void DealWithResult()
+    {
+        if (isLastSkillUltimate)
+        {
+            csmb.playerCharacter.onPlayerUseUltimate?.Invoke();
+        }
+    }
+
+    protected override bool Filter()
+    {
+        if (skillName != ultimateComponent.ultimateSkillName)
+        {
+            isLastSkillUltimate = false;
+            return true;
+        }
+
+        isLastSkillUltimate = true;
+        return ultimateComponent.canUseUltimate;
+    }
+}
+
 public class LimitedUsageFilter: CastSkillFilter
 {
     public LimitedUsageFilter(string skillName, CharacterStateMachineBehavior characterStateMachineBehavior, CastSkillFilter next) : base(skillName, characterStateMachineBehavior, next)

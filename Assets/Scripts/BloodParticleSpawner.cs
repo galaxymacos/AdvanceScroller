@@ -13,11 +13,11 @@ public class BloodParticleSpawner : MonoBehaviour
 
     public void SpawnBlood(CharacterHealthComponent characterHealthComponent)
     {
-        Transform damageSource = characterHealthComponent.damageSource;
+        Transform damageSource = characterHealthComponent.damageSourceFromLastAttack;
         Transform bloodOwner = characterHealthComponent.transform;
         Vector3 bloodStartRotation = Vector3.Normalize(bloodOwner.position - damageSource.position);
         GameObject bloodParticleSystem;
-        switch (characterHealthComponent.damageData.damageType)
+        switch (characterHealthComponent.damageDataFromLastAttack.damageType)
         {
             case DamageType.Penetration:
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatDirectional2D, transform.position+bloodStartRotation*bloodParticleOffset,

@@ -16,7 +16,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   swirlTime: 2
   rotateAnglePerSecond: 720
@@ -110,7 +109,6 @@ MonoBehaviour:
   - attack4
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: 2e2696f0a5c97d94fae54c32bcdda957, type: 2}
   jumpAttack: {fileID: 7400000, guid: 146f0fd23b3f9384e9c1ed657002b44d, type: 2}
@@ -182,7 +180,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 10
   dashDuration: 0.3
@@ -324,7 +321,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashForce: 15
   timeToCatch: 1
@@ -366,7 +362,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-4885081392774972643
 AnimatorStateTransition:
@@ -516,7 +511,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-1198551254192898727
 MonoBehaviour:
@@ -544,7 +538,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
 AnimatorStateTransition:
@@ -1222,7 +1215,7 @@ AnimatorStateMachine:
     m_Position: {x: 1000, y: 710, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2498537666644692364}
-    m_Position: {x: 1000, y: 630, z: 0}
+    m_Position: {x: 1000, y: 620, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7822035074739989602}
@@ -1265,7 +1258,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1305769864987952446
 AnimatorStateTransition:
@@ -1314,7 +1306,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1595160600775432836
 AnimatorStateTransition:
@@ -1406,7 +1397,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: b92961de25408d94f9d095193329031e, type: 2}
   jumpForm: {fileID: 7400000, guid: 22dd92d6fdf10f94ab1ea15140e96e5e, type: 2}
@@ -1449,7 +1439,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: 4f279c7d9633bab469c9cadda56b5304, type: 2}
   jumpForm: {fileID: 7400000, guid: 6b8c51d4d3b9aa94194a9a3202aae18d, type: 2}
@@ -1476,7 +1465,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 5
   firstJump: {fileID: 7400000, guid: 8cc6747acc8cf5d45854f62c55ffa9c5, type: 2}
@@ -1499,7 +1487,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2.5
 --- !u!114 &5596895217598118713
@@ -1520,7 +1507,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 1
 --- !u!114 &5757607006515872798
@@ -1539,7 +1525,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
 --- !u!1101 &6972074293088328017
@@ -1662,7 +1647,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &8880911836535309964
 AnimatorStateTransition:
@@ -1730,5 +1714,4 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}

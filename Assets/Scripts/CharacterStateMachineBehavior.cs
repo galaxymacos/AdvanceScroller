@@ -44,7 +44,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             // playerCharacter.PrintString(animationName);
             
             var cooldownFilter = new CooldownFilter(animationName, this, null);
-            var forceAttackFilter = new ForceAttackFilter(animationName, this, cooldownFilter);
+            var ultimateRageFilter = new UltimateRageFilter(animationName, this, cooldownFilter);
+            var forceAttackFilter = new ForceAttackFilter(animationName, this, ultimateRageFilter);
             var limitedUsageFilter = new LimitedUsageFilter(animationName, this, forceAttackFilter);
             
         

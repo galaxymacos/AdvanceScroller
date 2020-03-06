@@ -23,7 +23,6 @@ public class InjuryShaderComponent: MaterialChangeComponent
 
     public override void Tick()
     {
-        Debug.Log("tick");
         if (materialTintColor.a >= 0.01f)
         {
             materialTintColor.a = Mathf.Clamp01(materialTintColor.a - tintFadeSpeed * Time.deltaTime);

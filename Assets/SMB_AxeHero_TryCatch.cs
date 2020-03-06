@@ -29,7 +29,7 @@ public class SMB_AxeHero_TryCatch : CharacterStateMachineBehavior
         rb.gravityScale = 0;
         playerCharacter.onCatchingSuccess += TransferToThrowState;
         playerCharacter.GetComponent<AxeHeroAttackMessager>().StartDetectingCatch();
-        playerCharacter.GetComponent<UniqueSkillComponent>().ShowOff();
+        playerCharacter.GetComponent<UltimateEffectComponent>().ShowOff();
 
         
         timeToCatchCounter = timeToCatch;
@@ -65,7 +65,7 @@ public class SMB_AxeHero_TryCatch : CharacterStateMachineBehavior
         base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.GetComponent<AxeHeroAttackMessager>().StopDetectingCatch();
         playerCharacter.onCatchingSuccess -= TransferToThrowState;
-        playerCharacter.GetComponent<UniqueSkillComponent>().End();
+        playerCharacter.GetComponent<UltimateEffectComponent>().End();
         rb.gravityScale = 1;
     }
 

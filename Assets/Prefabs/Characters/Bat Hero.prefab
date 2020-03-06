@@ -681,7 +681,6 @@ GameObject:
   - component: {fileID: 8906824143711737655}
   - component: {fileID: 8906824143711737654}
   - component: {fileID: 8906824143711737657}
-  - component: {fileID: 5286924652215516632}
   - component: {fileID: 5286924652720532002}
   - component: {fileID: 5286924652720532005}
   - component: {fileID: 5286924652720532003}
@@ -695,6 +694,7 @@ GameObject:
   - component: {fileID: 3994814941791640900}
   - component: {fileID: -6786992813691897977}
   - component: {fileID: -5806844467189447210}
+  - component: {fileID: -6956731921203344667}
   m_Layer: 10
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -887,7 +887,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls:
@@ -902,8 +901,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  damageSource: {fileID: 0}
-  damageData: {fileID: 0}
+  damageSourceFromLastAttack: {fileID: 0}
+  damageDataFromLastAttack: {fileID: 0}
 --- !u!114 &8906824143711737657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -918,20 +917,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockupAnimationString: hurt
   knockDirection: {x: 0, y: 0}
---- !u!114 &5286924652215516632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8906824143711737656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29a1b6f9ed039294698e6191caafb4fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wolf: {fileID: 2548071627742475471, guid: 983f9395b7f12e34a93ed5fca4dfcd67, type: 3}
-  cross: {fileID: 7960474965279007119, guid: 8f85ad704ea06b24b8f39311dfe93578, type: 3}
 --- !u!58 &5286924652720532002
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1035,7 +1020,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f22a715bd5c511d4292333db418f910c, type: 2}
   - {fileID: 11400000, guid: a10b19d00182a9c42b102cfc17f41735, type: 2}
   - {fileID: 11400000, guid: 1ec6b3d314861a543a8610771f6d93a1, type: 2}
-  - {fileID: 11400000, guid: 29fdd19d9931ac5408c8e810967939a7, type: 2}
 --- !u!114 &5286924651733753005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1147,6 +1131,19 @@ MonoBehaviour:
   showOffTime: 0.7
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
+--- !u!114 &-6956731921203344667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 344184053ee84565a16411635b166340, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxRage: 100
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

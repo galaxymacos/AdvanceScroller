@@ -70,7 +70,8 @@ public class PlayerCharacter : MonoBehaviour
     public Action onUniqueSkillEnd;
     public Action onCatchingSuccess;
     public Action onPlayerHitCeiling;
-    
+    public Action onPlayerUseUltimate;
+
     // Animation event
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;
@@ -86,7 +87,6 @@ public class PlayerCharacter : MonoBehaviour
     private IUniqueSkill uniqueSkill;
 
 
-    
     private void Awake()
     {
         // set up variable

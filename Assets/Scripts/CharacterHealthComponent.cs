@@ -20,23 +20,22 @@ public class CharacterHealthComponent : MonoBehaviour
     private float bulletTime;
     private CameraShake cameraShake;
     public bool isPlayerDead => currentHealth <= 0;
-    public PlayerCharacter playerCharacter;
-    
-    
+
+
     public FloatAction onHealthChanged;
     public Action<CharacterHealthComponent> onTakeDamage;
     public Action onPlayerDie;
     
     // Store the information of the last attack
     
-    [HideInInspector] public Transform damageSource;
-    [HideInInspector] public DamageData damageData;
+    [HideInInspector] public Transform damageSourceFromLastAttack;
+    [HideInInspector] public DamageData damageDataFromLastAttack;
     
     private void Awake()
     {
         animator = GetComponent<Animator>();
         if (Camera.main != null) cameraShake = Camera.main.GetComponent<CameraShake>();
-        playerCharacter = GetComponent<PlayerCharacter>();
+        GetComponent<PlayerCharacter>();
         currentHealth = maxHealth;
     }
 
@@ -47,8 +46,8 @@ public class CharacterHealthComponent : MonoBehaviour
     // Start is called before the first frame update
     public void TakeDamage(DamageData _damageData, Transform _damageSource, bool canTimeFreezed)
     {
-        damageSource = _damageSource;
-        damageData = _damageData;
+        damageSourceFromLastAttack = _damageSource;
+        damageDataFromLastAttack = _damageData;
         
         // if (playerCharacter.dashInvincibleTimeCounter > 0)
         // {
