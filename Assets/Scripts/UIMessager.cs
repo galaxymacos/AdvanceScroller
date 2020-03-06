@@ -5,43 +5,30 @@ using UnityEngine;
 
 public class UIMessager : MonoBehaviour
 {
-    public List<PlayerPanel> playerPanels;
-    public List<PlayerSkillPanel> playerSkillPanels;
+    public List<GameObject> PlayerPanels;
+    
     // Start is called before the first frame update
     
     private void Awake()
     {
-        PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
+        PlayerCharacterSpawner.onPlayerSpawnFinished += SetupPlayerUi;
     }
 
+    
 
-    public void Setup()
+    public void SetupPlayerUi()
     {
         List<PlayerCharacter> characters = PlayerCharacterSpawner.instance.charactersForPlayer;
-        if (characters.Count == playerPanels.Count)
-        {
-            for (int i = 0; i < characters.Count; i++)
-            {
-                playerPanels[i].player = characters[i];
-            }
-        }
 
-        foreach (PlayerPanel playerPanel in playerPanels)
+
+        for (int i = 0; i < characters.Count; i++)
         {
+            PlayerPanels[i].SetActive(true);
+            PlayerPanel playerPanel = PlayerPanels[i].GetComponent<PlayerPanel>();
+            playerPanel.player = characters[i];
             playerPanel.onPlayerSetup?.Invoke();
-        }
-        
-        
-
-        if (characters.Count == playerSkillPanels.Count)
-        {
-            for (int i = 0; i < characters.Count; i++)
-            {
-                playerSkillPanels[i].owner = characters[i];
-            }
-        }
-        foreach (PlayerSkillPanel playerSkillPanel in playerSkillPanels)
-        {
+            PlayerSkillPanel playerSkillPanel = PlayerPanels[i].transform.GetComponentInChildren<PlayerSkillPanel>();
+            playerSkillPanel.owner = characters[i];
             playerSkillPanel.onPlayerSetup?.Invoke();
         }
     }

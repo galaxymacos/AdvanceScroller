@@ -25,6 +25,8 @@ public class CharacterUltimateComponent: MonoBehaviour
         player = GetComponent<PlayerCharacter>();
         player.onPlayerUseUltimate += ConsumeRage;
 
+        _currentRage = MaxRage;
+
     }
 
     // Take damage to increase rage
