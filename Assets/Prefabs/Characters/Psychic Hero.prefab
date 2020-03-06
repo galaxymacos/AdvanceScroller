@@ -254,7 +254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &891296965151884860
 Transform:
   m_ObjectHideFlags: 0
@@ -440,7 +440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  playerCharacter: {fileID: 0}
   onHealthChanged:
     m_PersistentCalls:
       m_Calls:
@@ -455,8 +454,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  damageSource: {fileID: 0}
-  damageData: {fileID: 0}
+  damageSourceFromLastAttack: {fileID: 0}
+  damageDataFromLastAttack: {fileID: 0}
 --- !u!114 &891296965151884998
 MonoBehaviour:
   m_ObjectHideFlags: 0

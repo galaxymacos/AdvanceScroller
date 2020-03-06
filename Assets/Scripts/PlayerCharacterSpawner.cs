@@ -24,6 +24,8 @@ public class PlayerCharacterSpawner : MonoBehaviour
 
     public static PlayerCharacterSpawner instance;
 
+    private MapPlayerSpawnData mapPlayerSpawnData;
+
     private void Awake()
     {
         if (instance == null)
@@ -34,6 +36,14 @@ public class PlayerCharacterSpawner : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        mapPlayerSpawnData = FindObjectOfType<MapPlayerSpawnData>();
+        if (mapPlayerSpawnData == null)
+        {
+            Debug.LogError("MapPlayerSpawnData not found");
+            Debug.LogError("You need to tell the player this class where to generate the players in the map by create a MapPlayerSpawnData class under your map");
+            
+        }
     }
 
     // Start is called before the first frame update
@@ -43,7 +53,7 @@ public class PlayerCharacterSpawner : MonoBehaviour
         for (int i = 0; i < selectedHeros.Count; i++)
         {
             GameObject hero = Instantiate(selectedHeros[i], new Vector2(0+i*4, 0), Quaternion.identity);
-            // hero.AddComponent(playerInputs[i].GetType());    // TODO add
+            hero.transform.position = mapPlayerSpawnData.PlayerSpawnPositions[i].position;
             hero.layer = layermask_to_layer(whatIsPlayer[i]);
             hero.SetActive(true);
             charactersForPlayer.Add(hero.GetComponent<PlayerCharacter>());
