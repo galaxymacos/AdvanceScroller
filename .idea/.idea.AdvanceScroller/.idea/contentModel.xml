@@ -201,6 +201,7 @@
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="SaveDataComposer.cs" t="Include" />
         <e p="SaveSystemTester.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
