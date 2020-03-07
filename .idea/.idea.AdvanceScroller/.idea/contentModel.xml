@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.-49859817.00" t="ExcludeRecursive" />
-    <e p="E:\Repo_Unreal\AdvanceScroller" t="IncludeRecursive">
+    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.883554470.00" t="ExcludeRecursive" />
+    <e p="G:\Unity\AdvanceScroller" t="IncludeRecursive">
       <e p="AdvanceScroller.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -15,6 +15,7 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="BlurMaterialController.cs" t="Include" />
+        <e p="BtnTransferToNext.cs" t="Include" />
         <e p="CatchComponent.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
         <e p="DisolveShadowShaderComponent.cs" t="Include" />
@@ -352,6 +353,7 @@
             <e p="Movement.cs" t="Include" />
           </e>
         </e>
+        <e p="UserInteractedPanel.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
