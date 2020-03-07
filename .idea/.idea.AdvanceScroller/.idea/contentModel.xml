@@ -18,6 +18,7 @@
         <e p="BtnTransferToNext.cs" t="Include" />
         <e p="CatchComponent.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
+        <e p="Command.cs" t="Include" />
         <e p="DisolveShadowShaderComponent.cs" t="Include" />
         <e p="DissolveShaderControl.cs" t="Include" />
         <e p="DissolveShadowCreationMessager.cs" t="Include" />
@@ -189,11 +190,13 @@
           </e>
         </e>
         <e p="NewPlayerInput.cs" t="Include" />
+        <e p="PanelPositionComponent.cs" t="Include" />
         <e p="ParticleSystemPauser.cs" t="Include" />
         <e p="PausableSMB.cs" t="Include" />
         <e p="PlayerDodgingEventRegister.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerInputDistributor.cs" t="Include" />
+        <e p="PlayerInputStorage.cs" t="Include" />
         <e p="PlayerThrowMessager.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
@@ -316,6 +319,8 @@
           <e p="WallCheck.cs" t="Include" />
         </e>
         <e p="SelectionPanelElement.cs" t="Include" />
+        <e p="SelectionPanelPointer.cs" t="Include" />
+        <e p="SelectionPanelPointerManager.cs" t="Include" />
         <e p="ShaderMaterialFactory.cs" t="Include" />
         <e p="ShadowFactory.cs" t="Include" />
         <e p="SMb_AxeHero_Caught.cs" t="Include" />

@@ -111,6 +111,14 @@ public class PlayerCharacterSpawner : MonoBehaviour
         //         }
         //     }
         // }
+
+        if (PlayerInputStorage.instance != null)
+        {
+            for (int i = 0; i < charactersForPlayer.Count; i++)
+            {
+                charactersForPlayer[i].playerInput = PlayerInputStorage.instance.playerInputs[i];
+            }
+        }
         
         
         onPlayerSpawnFinished?.Invoke();

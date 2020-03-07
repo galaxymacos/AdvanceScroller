@@ -18,7 +18,7 @@ public class CharacterGroundMovementComponent: MovementComponent
 
     public override void UpdateMovement()
     {
-        if (_playerCharacter.canControlMovement && _playerCharacter.playerInput!=null)
+        if (_playerCharacter.canControlMovement && _playerCharacter.playerInput!=null && !_playerCharacter.GetComponent<CharacterPauser>().IsPausing)
         {
             rb.velocity = new Vector2(movementSpeed * _playerCharacter.playerInput.horizontalAxis, rb.velocity.y);
         }

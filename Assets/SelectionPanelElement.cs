@@ -16,34 +16,6 @@ public class SelectionPanelElement : MonoBehaviour
     
 }
 
-/// <summary>
-/// This class is used to select the champion 
-/// </summary>
-public class HeroPointer
-{
-    public NewPlayerInput owner;
-    public SelectionPanelElement pointingElement;
-
-    public void OnPressed()
-    {
-        
-    }
-
-    public void Navigate()
-    {
-        // To left
-        if (pointingElement.leftElement != null)
-        {
-            pointingElement = pointingElement.leftElement;
-        }
-    }
-}
-
-public interface Command
-{
-    void Execute();
-}
-
 public class ChampionSelectionCommand : Command
 {
     public GameObject championToSelect;
@@ -62,13 +34,13 @@ public class ChampionSelectionCommand : Command
 public static class SaveDataComposer
 {
     private static readonly List<GameObject> champions = new List<GameObject>();
-    private static int mapIndex = -1;
+    private static int mapIndex = 2;
     
     
-    public static void AddChampion(GameObject champion)
-    {
-        champions.Add(champion);
-    }
+    // public static void AddChampion(GameObject champion)
+    // {
+        // champions.Add(champion);
+    // }
 
     public static void AddMap(int sceneIndex)
     {
@@ -78,14 +50,14 @@ public static class SaveDataComposer
     public static void Reset()
     {
         champions.Clear();
-        mapIndex = -1;
+        mapIndex = 2;
     }
 
     public static FightData ToFightData()
     {
         if(mapIndex == -1)
             Debug.LogError("map data hasn't been initialized");
-        FightData fightData = new FightData(champions, mapIndex);
+        FightData fightData = new FightData(PlayerInputStorage.instance.champions, mapIndex);
         return fightData;
     }
 }

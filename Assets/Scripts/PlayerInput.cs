@@ -14,8 +14,12 @@ public abstract class PlayerInput: MonoBehaviour
     [HideInInspector] public bool skill3ButtonPressed;
     [HideInInspector] public bool skill4ButtonPressed;
     
+    public bool acceptInput = true;
+
+    
     public virtual void Awake()
     {
+        DontDestroyOnLoad(gameObject);
         inputAction = new PlayerInputActions();
         BindValueToInput();
 

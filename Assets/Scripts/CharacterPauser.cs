@@ -14,6 +14,9 @@ public class CharacterPauser : MonoBehaviour, IPauseable
     private Rigidbody2D rb;
     private PlayerCharacter playerCharacter;
     private bool isPausing;
+
+    public bool IsPausing => isPausing;
+
     private Vector3 velocityBeforePause;
     
     private Animator animator;
@@ -36,8 +39,8 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         animator.speed = 0f;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
-
         isPausing = true;
+        playerCharacter.playerInput.acceptInput = false;
         onCharacterPaused?.Invoke();
     }
 
@@ -52,9 +55,9 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         animator.speed = 1f;
         rb.isKinematic = false;
         rb.velocity = velocityBeforePause;
-
         isPausing = false;
-        
+        playerCharacter.playerInput.acceptInput = true;
+
         onCharacterResumed?.Invoke();
 
     }

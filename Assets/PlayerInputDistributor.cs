@@ -8,6 +8,7 @@ public class PlayerInputDistributor : MonoBehaviour
     private static int _currentPlayerInputNum = 0;
 
     public static PlayerInputDistributor instance;
+    // [SerializeField] private List<NewPlayerInput> playerInputs;
     
     private void Awake()
     {
@@ -35,9 +36,13 @@ public class PlayerInputDistributor : MonoBehaviour
         _currentPlayerInputNum++;
 
     }
+    
 
-    public void DistributeINputToChampionSelectionUi(NewPlayerInput input)
+    public void DistributeInputToChampionSelectionUI(NewPlayerInput input)
     {
-        
+        // playerInputs.Add(input);
+        SelectionPanelPointerManager.instance.AssignNewPointerToPlayer(input);
     }
 }
+
+
