@@ -1,21 +1,24 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerCharacterSpawner : MonoBehaviour
 {
-    // public List<PlayerInput> playerInputs;
+    
+    [Tooltip("Spawn heroes manually by assigning it in the inspector")]
     public List<GameObject> selectedHeros;
+    
+    // Spawn heros from save file
+    private List<GameObject> herosFromSavedFile;
 
     [SerializeField] private GameObject batHeroPrefab;
     [SerializeField] private GameObject SwordPrincessPrefab;
     [SerializeField] private GameObject AxeHeroPrefab;
     [SerializeField] private GameObject PsychicHeroPrefab;
 
+    private List<GameObject> heroDatas;
 
     public List<LayerMask> whatIsPlayer;
 
@@ -45,6 +48,23 @@ public class PlayerCharacterSpawner : MonoBehaviour
             Debug.LogError(
                 "You need to tell the player this class where to generate the players in the map by create a MapPlayerSpawnData class under your map");
         }
+
+        FightData data = SaveSystem.LoadHeroSelectionData();
+        heroDatas = new List<GameObject>();
+        heroDatas.Add(batHeroPrefab);
+        heroDatas.Add(SwordPrincessPrefab);
+        heroDatas.Add(AxeHeroPrefab);
+        heroDatas.Add(PsychicHeroPrefab);
+        if (data != null)
+        {
+            herosFromSavedFile = new List<GameObject>();
+            foreach (var champion in data.champions)
+            {
+                
+                herosFromSavedFile.Add(champion);
+            }
+        }
+        
     }
 
 
@@ -52,14 +72,28 @@ public class PlayerCharacterSpawner : MonoBehaviour
     void Start()
     {
         charactersForPlayer = new List<PlayerCharacter>();
-        for (int i = 0; i < selectedHeros.Count; i++)
+        if (herosFromSavedFile != null)
         {
-            // GameObject hero = Instantiate(selectedHeros[i]);
-            // hero.transform.position = mapPlayerSpawnData.PlayerSpawnPositions[i].position;
-            // hero.layer = layermask_to_layer(whatIsPlayer[i]);
-            // charactersForPlayer.Add(hero.GetComponent<PlayerCharacter>());
+            for (int i = 0; i < herosFromSavedFile.Count; i++)
+            {
+                AddPlayer(herosFromSavedFile[i]);
+            }
             
-            AddPlayer(selectedHeros[i]);
+            print("Loaded champion data from save file");
+        }
+        else
+        {
+            for (int i = 0; i < selectedHeros.Count; i++)
+            {
+                // GameObject hero = Instantiate(selectedHeros[i]);
+                // hero.transform.position = mapPlayerSpawnData.PlayerSpawnPositions[i].position;
+                // hero.layer = layermask_to_layer(whatIsPlayer[i]);
+                // charactersForPlayer.Add(hero.GetComponent<PlayerCharacter>());
+            
+                AddPlayer(selectedHeros[i]);
+            }
+            
+            print("Loaded champion data from inspector");
         }
 
 
@@ -117,50 +151,5 @@ public class PlayerCharacterSpawner : MonoBehaviour
         }
 
         return layerNumber - 1;
-    }
-}
-
-public class ChampionSelectionData
-{
-    public List<GameObject> champions;
-    public int fightSceneIndex;
-
-    public ChampionSelectionData(List<GameObject> champions)
-    {
-        this.champions = champions;
-    }
-}
-
-public static class SaveSystem
-{
-    public static void SaveHeroSelectionData(ChampionSelectionData championSelectionData)
-    {
-        BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/player.fun";
-        FileStream stream = new FileStream(path, FileMode.Create);
-        
-        formatter.Serialize(stream,championSelectionData);
-        stream.Close();
-    }
-
-    public static ChampionSelectionData LoadHeroSelectionData()
-    {
-        string path = Application.persistentDataPath + "/player.fun";
-
-        if (File.Exists(path))
-        {
-            BinaryFormatter formatter = new BinaryFormatter();
-            FileStream stream = new FileStream(path, FileMode.Open);
-
-            ChampionSelectionData championSelectionData = formatter.Deserialize(stream) as ChampionSelectionData;
-            stream.Close();
-            
-            return championSelectionData;
-        }
-        else
-        {
-            Debug.LogError("Save file not found in " + path);
-            return null;
-        }
     }
 }

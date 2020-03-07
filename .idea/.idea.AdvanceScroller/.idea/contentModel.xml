@@ -198,6 +198,7 @@
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="SaveSystemTester.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -257,6 +258,7 @@
           <e p="DamageReceiver.cs" t="Include" />
           <e p="DodgeShadow.cs" t="Include" />
           <e p="EyeBullet.cs" t="Include" />
+          <e p="FightData.cs" t="Include" />
           <e p="FlipComponent.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
@@ -288,6 +290,8 @@
           <e p="ProjectileReturnableComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
           <e p="PushComponent.cs" t="Include" />
+          <e p="SaveSystem.cs" t="Include" />
+          <e p="SceneLoader.cs" t="Include" />
           <e p="ShaderProcessor.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
@@ -311,6 +315,7 @@
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>
+        <e p="SelectionPanelElement.cs" t="Include" />
         <e p="ShaderMaterialFactory.cs" t="Include" />
         <e p="ShadowFactory.cs" t="Include" />
         <e p="SMb_AxeHero_Caught.cs" t="Include" />

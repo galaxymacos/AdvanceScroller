@@ -11,7 +11,7 @@ public class NewPlayerInput : PlayerInput
 
     private void Start()
     {
-        PlayerInputDistributor.instance.DistributeInput(this);
+        PlayerInputDistributor.instance.DistributeInputToPlayerCharacter(this);
     }
 
     public void OnRun(InputValue inputValue)

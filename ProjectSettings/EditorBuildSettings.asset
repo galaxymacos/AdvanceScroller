@@ -4,7 +4,16 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1a0f8aabc0ff7b44ea5bbe74d852ccdd
+  - enabled: 1
+    path: Assets/Scenes/Hero Selection.unity
+    guid: 1eea40dd8243c1945bb20cbeadb1b81c
+  - enabled: 1
+    path: Assets/Scenes/NatureBackground.unity
+    guid: 6297fa03f8a71d84b9368a15f6f6f7c2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 788da60fc9647c64ea0f433ac9446879,
       type: 2}

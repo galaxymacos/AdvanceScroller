@@ -14404,7 +14404,7 @@ PrefabInstance:
     - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}
       propertyPath: selectedHeros.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6481704858091205021, guid: cb6bb87a49442b0458a4594372991a40,
         type: 3}

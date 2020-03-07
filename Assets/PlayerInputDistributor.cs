@@ -23,7 +23,7 @@ public class PlayerInputDistributor : MonoBehaviour
     }
     
 
-    public void DistributeInput(NewPlayerInput input)
+    public void DistributeInputToPlayerCharacter(NewPlayerInput input)
     {
         if (_currentPlayerInputNum >= PlayerCharacterSpawner.instance.charactersForPlayer.Count)
         {
@@ -34,5 +34,10 @@ public class PlayerInputDistributor : MonoBehaviour
         print("distribute the generated player input object to the player "+_currentPlayerInputNum);
         _currentPlayerInputNum++;
 
+    }
+
+    public void DistributeINputToChampionSelectionUi(NewPlayerInput input)
+    {
+        
     }
 }
