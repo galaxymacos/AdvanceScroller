@@ -1304,7 +1304,7 @@ MonoBehaviour:
   - climb
   - skill4
   stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1595160600775432836
