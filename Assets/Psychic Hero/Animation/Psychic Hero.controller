@@ -66,7 +66,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-6925585801540077999
 AnimatorStateTransition:
@@ -109,7 +108,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 8
   dashDuration: 0.5
@@ -158,7 +156,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-5933261811281282086
 AnimatorStateTransition:
@@ -299,7 +296,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   chargeSkillPrefab: {fileID: 7635780407722689910, guid: 333943eec190b004ba20b9975f1d3fac,
     type: 3}
@@ -447,7 +443,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-1194548053809989010
 AnimatorState:
@@ -498,9 +493,8 @@ MonoBehaviour:
   - skill3
   - climb
   stateCanForceTransformTo: []
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
 AnimatorStateTransition:
@@ -1263,7 +1257,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2
 --- !u!1101 &1624693844894864874
@@ -1304,7 +1297,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
 --- !u!1101 &3327446604467597942
@@ -1381,7 +1373,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &4422701130325349518
 MonoBehaviour:
@@ -1414,7 +1405,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &5440507376338412443
 AnimatorStateTransition:
@@ -1458,7 +1448,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &5877619086891016593
 AnimatorStateTransition:
@@ -1500,7 +1489,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 0.5
 --- !u!114 &5952434705145074776
@@ -1520,7 +1508,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &6570086216698376446
 AnimatorState:
@@ -1566,7 +1553,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   chargeSkillPrefab: {fileID: 3455592179296393097, guid: 98771aab7ec932b48b9c899f0e822af8,
     type: 3}
@@ -1595,7 +1581,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 6
   firstJump: {fileID: 7400000, guid: 99abb0259a16a5347b962ebadf0ce292, type: 2}
@@ -1616,7 +1601,6 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &7694561671157874728
 AnimatorState:
@@ -1662,7 +1646,6 @@ MonoBehaviour:
   - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
-  playerInput: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &7775195541467390745
 AnimatorStateTransition:

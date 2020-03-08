@@ -32,7 +32,8 @@ public class SelectionPanelPointerManager: MonoBehaviour
         currentActivePointerNumber++;
         PlayerInputStorage.instance.AddInput(input);
         selectionPanelPointers[pointerNumInGame].gameObject.SetActive(true);
-        selectionPanelPointers[pointerNumInGame].SetInput(input);
+        selectionPanelPointers[pointerNumInGame].BindToOwnerInput(input);
+        selectionPanelPointers[pointerNumInGame].pointingElement.onSelected.Invoke();
         pointerNumInGame++;
     }
 }
