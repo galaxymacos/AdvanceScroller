@@ -12,6 +12,7 @@ public class EnvironmentGenerator : MonoBehaviour
     Text CountDownTimer;
     private float timeLeftInTimeCircle = 0;
     [SerializeField] private float TimeCircle = 20;
+    
 
     // Start is called before the first frame update
     void Start()
