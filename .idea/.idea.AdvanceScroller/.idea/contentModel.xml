@@ -58,6 +58,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="FetchMapData.cs" t="Include" />
         <e p="ForceCancelShaderControl.cs" t="Include" />
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
         <e p="ForceShadowShaderComponent.cs" t="Include" />

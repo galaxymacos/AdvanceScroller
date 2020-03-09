@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map Scene/ArrowsMap.unity
     guid: 6ca69a74127246d42938c6cfa9242fc9
+  - enabled: 1
+    path: Assets/Scenes/AdditiveScene/Additive Scene.unity
+    guid: 5b0ec85b27b9f054498fb7903501df62
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 788da60fc9647c64ea0f433ac9446879,
       type: 2}
