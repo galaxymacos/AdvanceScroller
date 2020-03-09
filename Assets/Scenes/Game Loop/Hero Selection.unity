@@ -166,7 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad073f93dea423ea78f2c2cd5fb67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   pointingElement: {fileID: 1283887270}
+  enable: 1
 --- !u!212 &308658218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -347,7 +349,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad073f93dea423ea78f2c2cd5fb67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   pointingElement: {fileID: 1283887270}
+  enable: 1
 --- !u!212 &420755458
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -423,6 +427,7 @@ GameObject:
   - component: {fileID: 448441998}
   - component: {fileID: 448441999}
   - component: {fileID: 448442000}
+  - component: {fileID: 448442001}
   m_Layer: 0
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -510,8 +515,6 @@ MonoBehaviour:
   rightElement: {fileID: 817789395}
   topElement: {fileID: 0}
   downElement: {fileID: 0}
-  champion: {fileID: 4758164498511340011, guid: 131012b09bddffd4594a266bbc843069,
-    type: 3}
 --- !u!114 &448442000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,6 +529,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonSelected: {fileID: 21300000, guid: 0557640b9cffa6848a1ecc71765d2eca, type: 3}
   selected: {fileID: 21300000, guid: c4602dc319de98147b559e4303cbc748, type: 3}
+--- !u!114 &448442001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 448441996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a55cbb6143481aa4668a2c9090fd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  champion: {fileID: 4758164498511340011, guid: 131012b09bddffd4594a266bbc843069,
+    type: 3}
 --- !u!1 &511872363
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,6 +670,7 @@ GameObject:
   - component: {fileID: 817789394}
   - component: {fileID: 817789395}
   - component: {fileID: 817789396}
+  - component: {fileID: 817789397}
   m_Layer: 0
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -737,10 +755,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftElement: {fileID: 448441999}
-  rightElement: {fileID: 0}
+  rightElement: {fileID: 1283887270}
   topElement: {fileID: 0}
   downElement: {fileID: 0}
-  champion: {fileID: 891296965151884848, guid: 06baa5af61f7a0841a19e4d6ff096236, type: 3}
 --- !u!114 &817789396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -755,6 +772,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonSelected: {fileID: 21300000, guid: fd972058b6f39e243b1e5ccb1a5002aa, type: 3}
   selected: {fileID: 21300000, guid: 74164373a4e2a4148885ca1c8169f4b6, type: 3}
+--- !u!114 &817789397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817789392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a55cbb6143481aa4668a2c9090fd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  champion: {fileID: 891296965151884848, guid: 06baa5af61f7a0841a19e4d6ff096236, type: 3}
 --- !u!1 &982643649
 GameObject:
   m_ObjectHideFlags: 0
@@ -1064,6 +1094,7 @@ GameObject:
   - component: {fileID: 1283887271}
   - component: {fileID: 1283887270}
   - component: {fileID: 1283887272}
+  - component: {fileID: 1283887273}
   m_Layer: 0
   m_Name: SwordPrincess
   m_TagString: Untagged
@@ -1097,12 +1128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 0}
+  leftElement: {fileID: 817789395}
   rightElement: {fileID: 1313306663}
   topElement: {fileID: 0}
   downElement: {fileID: 0}
-  champion: {fileID: 3658480544048443873, guid: bbbdbfdc8d7a216439bbd4925f47ab14,
-    type: 3}
 --- !u!212 &1283887271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1167,6 +1196,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonSelected: {fileID: 21300000, guid: e5248b71484f09c4f8d294971c1361df, type: 3}
   selected: {fileID: 21300000, guid: 8ee2cf7bc588684418fdafec5e08295d, type: 3}
+--- !u!114 &1283887273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283887268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a55cbb6143481aa4668a2c9090fd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  champion: {fileID: 3658480544048443873, guid: bbbdbfdc8d7a216439bbd4925f47ab14,
+    type: 3}
 --- !u!1 &1313306660
 GameObject:
   m_ObjectHideFlags: 0
@@ -1179,6 +1222,7 @@ GameObject:
   - component: {fileID: 1313306662}
   - component: {fileID: 1313306663}
   - component: {fileID: 1313306664}
+  - component: {fileID: 1313306665}
   m_Layer: 0
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -1266,8 +1310,6 @@ MonoBehaviour:
   rightElement: {fileID: 448441999}
   topElement: {fileID: 0}
   downElement: {fileID: 0}
-  champion: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
-    type: 3}
 --- !u!114 &1313306664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1324,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nonSelected: {fileID: 21300000, guid: c1e968b992f88484eb2fe7270d4c156b, type: 3}
   selected: {fileID: 21300000, guid: 33b65ab7d2b303d43aaf224ddea4b21c, type: 3}
+--- !u!114 &1313306665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313306660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97a55cbb6143481aa4668a2c9090fd4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  champion: {fileID: 8906824143711737656, guid: e6750891bed24274dafecee240bfd1d4,
+    type: 3}
+--- !u!1 &1328595620
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1328595622}
+  - component: {fileID: 1328595621}
+  m_Layer: 0
+  m_Name: HeroSelectionMediator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1328595621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328595620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af4790bb4a43e9344bccc078619cefb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1328595622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328595620}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510217599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,7 +1426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad073f93dea423ea78f2c2cd5fb67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   pointingElement: {fileID: 1283887270}
+  enable: 1
 --- !u!212 &1510217602
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1422,7 +1523,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ad073f93dea423ea78f2c2cd5fb67e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   pointingElement: {fileID: 1283887270}
+  enable: 1
 --- !u!212 &1678958696
 SpriteRenderer:
   m_ObjectHideFlags: 0

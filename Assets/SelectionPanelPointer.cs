@@ -6,9 +6,9 @@ using UnityEngine;
 /// </summary>
 public class SelectionPanelPointer : MonoBehaviour
 {
-    private NewPlayerInput owner;
+    public NewPlayerInput owner;
     public SelectionPanelElement pointingElement;
-    
+    public bool enable = true;
 
     public void BindToOwnerInput(NewPlayerInput NewInput)
     {
@@ -23,7 +23,7 @@ public class SelectionPanelPointer : MonoBehaviour
     private void NavigateToLeft()
     {
         print("navigate to left");
-        if (pointingElement.leftElement != null)
+        if (pointingElement.leftElement != null && enable)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.leftElement;
@@ -35,7 +35,7 @@ public class SelectionPanelPointer : MonoBehaviour
     public void NavigateToRight()
     {
         print("navigate to right");
-        if (pointingElement.rightElement != null)
+        if (pointingElement.rightElement != null && enable)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.rightElement;
@@ -48,7 +48,7 @@ public class SelectionPanelPointer : MonoBehaviour
     private void NavigateToTop()
     {
         print("navigate to top");
-        if (pointingElement.topElement != null)
+        if (pointingElement.topElement != null && enable)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.topElement;
@@ -62,7 +62,7 @@ public class SelectionPanelPointer : MonoBehaviour
     private void NavigateToDown()
     {
         print("navigate to down");
-        if (pointingElement.downElement != null)
+        if (pointingElement.downElement != null && enable)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.downElement;
@@ -74,23 +74,22 @@ public class SelectionPanelPointer : MonoBehaviour
     public void SetTargetChampion()
     {
         if (!gameObject.activeSelf) return;
+        enable = false;    
         print("select target champion");
         // SaveDataComposer.AddChampion(pointingElement.champion);
-        PlayerInputStorage.instance.SetChampionForInput(owner, pointingElement.champion);
-        SelectionPanelPointerManager.currentActivePointerNumber--;
-        if (SelectionPanelPointerManager.currentActivePointerNumber == 0)
-        {
-            FightData fightData = SaveDataComposer.ToFightData();
-            SaveSystem.SaveHeroSelectionData(fightData.SaveToString());
-            SceneLoader.LoadFightingMapFromSavedData();
-        }
-        owner.onAttackButtonPressed -= SetTargetChampion;
-        gameObject.SetActive(false);
+        // pointingElement.OnBeingClick(this);
+        pointingElement.onBeingClicked?.Invoke(this);
+        // PlayerInputStorage.instance.SetChampionForInput(owner, pointingElement.champion);
+        // SelectionPanelPointerManager.currentActivePointerNumber--;
+        // if (SelectionPanelPointerManager.currentActivePointerNumber == 0)
+        // {
+        //     FightData fightData = SaveDataComposer.ToFightData();
+        //     SaveSystem.SaveHeroSelectionData(fightData.SaveToString());
+        //     SceneLoader.LoadFightingMapFromSavedData();
+        // }
+        // owner.onAttackButtonPressed -= SetTargetChampion;
+        // gameObject.SetActive(false);
     }
 
-    public void NavigationPointerToNearBySelectionPanelElement()
-    {
-        
-    }
 
 }

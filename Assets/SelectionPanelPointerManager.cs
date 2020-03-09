@@ -6,7 +6,7 @@ public class SelectionPanelPointerManager: MonoBehaviour
 {
     public static int currentActivePointerNumber;
     private int pointerNumInGame;
-    [SerializeField] private List<SelectionPanelPointer> selectionPanelPointers;
+    public List<SelectionPanelPointer> selectionPanelPointers;
 
     public static SelectionPanelPointerManager instance;
 

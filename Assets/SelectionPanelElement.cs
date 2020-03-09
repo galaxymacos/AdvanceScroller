@@ -9,11 +9,30 @@ public class SelectionPanelElement : MonoBehaviour
     public SelectionPanelElement topElement;
     public SelectionPanelElement downElement;
 
+    
+    
     public Action onSelected;
     public Action onDeselected;
 
-    [Tooltip("What champion does this sprite indicate")]
-    public GameObject champion;
+    public Action<SelectionPanelPointer> onBeingClicked;
+    
+
+    public void RebindSelectionPanelElement()
+    {
+        leftElement.rightElement = rightElement;
+        rightElement.leftElement = leftElement;
+
+        foreach (SelectionPanelPointer selectionPanelPointer in SelectionPanelPointerManager.instance
+            .selectionPanelPointers)
+        {
+            if (selectionPanelPointer.pointingElement == this)
+            {
+                selectionPanelPointer.NavigateToRight();
+            }
+        }
+    }
+
+  
 }
 
 

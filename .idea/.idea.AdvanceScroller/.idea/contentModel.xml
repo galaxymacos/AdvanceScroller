@@ -19,6 +19,7 @@
         <e p="CatchComponent.cs" t="Include" />
         <e p="ChampionPanelElement.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
+        <e p="ClickToSelectChampionComponent.cs" t="Include" />
         <e p="Command.cs" t="Include" />
         <e p="DisolveShadowShaderComponent.cs" t="Include" />
         <e p="DissolveShaderControl.cs" t="Include" />

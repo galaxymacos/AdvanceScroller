@@ -21,7 +21,12 @@ public class ChampionPanelElement : MonoBehaviour
         var selectionPanelElement = GetComponent<SelectionPanelElement>();
         selectionPanelElement.onSelected += OnSelected;
         selectionPanelElement.onDeselected += OnDeselected;
-        
+        GetComponent<ClickToSelectChampionComponent>().onChampionSelected += DisableIcon;
+    }
+
+    private void DisableIcon(ClickToSelectChampionComponent clickToSelectChampionComponent)
+    {
+        GetComponent<SpriteRenderer>().sprite = null;
     }
 
     private void OnSelected()
