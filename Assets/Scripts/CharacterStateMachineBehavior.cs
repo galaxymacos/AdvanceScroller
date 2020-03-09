@@ -10,10 +10,10 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
     /// </summary>
-    protected Dictionary<string, bool> animations;
+    private Dictionary<string, bool> animations;
 
     [HideInInspector] public Animator characterAnimator;
-    public PlayerInput playerInput => playerCharacter.playerInput;
+    protected PlayerInput playerInput => playerCharacter.playerInput;
     [HideInInspector] public PlayerCharacter playerCharacter;
     
     

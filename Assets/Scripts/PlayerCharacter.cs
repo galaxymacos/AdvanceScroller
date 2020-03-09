@@ -48,11 +48,6 @@ public class PlayerCharacter : MonoBehaviour
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
     
-    [Header("Particle")]
-    public GameObject groundDust;
-    public GameObject deadParticle;
-    public GameObject groundDustTwoWays;
-
     public SingleAttackComponent impactWave;
     [Space(10)]
 
