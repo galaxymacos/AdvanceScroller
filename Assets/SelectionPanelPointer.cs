@@ -8,6 +8,7 @@ public class SelectionPanelPointer : MonoBehaviour
 {
     private NewPlayerInput owner;
     public SelectionPanelElement pointingElement;
+    
 
     public void BindToOwnerInput(NewPlayerInput NewInput)
     {
@@ -87,5 +88,9 @@ public class SelectionPanelPointer : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    public void NavigationPointerToNearBySelectionPanelElement()
+    {
+        
+    }
 
 }

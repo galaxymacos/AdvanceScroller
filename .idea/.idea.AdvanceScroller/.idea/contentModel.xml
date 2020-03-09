@@ -62,7 +62,9 @@
         <e p="ForceCancelShaderControl.cs" t="Include" />
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
         <e p="ForceShadowShaderComponent.cs" t="Include" />
+        <e p="HealthBarShakeComponent.cs" t="Include" />
         <e p="HealthDecreaseComponent.cs" t="Include" />
+        <e p="HeroSelectionMediator.cs" t="Include" />
         <e p="InjuryMaterialController.cs" t="Include" />
         <e p="InjuryShaderComponent.cs" t="Include" />
         <e p="IState.cs" t="Include" />
