@@ -73,6 +73,7 @@ public class SelectionPanelPointer : MonoBehaviour
 
     public void SetTargetChampion()
     {
+        owner.attackButtonPressed = false;
         if (!gameObject.activeSelf) return;
         enable = false;    
         print("select target champion");
