@@ -8,8 +8,6 @@ public class SelectionPanelElement : UIControl
     public SelectionPanelElement rightElement;
     public SelectionPanelElement topElement;
     public SelectionPanelElement downElement;
-
-    
     
     public Action onSelected;
     public Action onDeselected;
@@ -25,7 +23,7 @@ public class SelectionPanelElement : UIControl
         foreach (SelectionPanelPointer selectionPanelPointer in SelectionPanelPointerManager.instance
             .selectionPanelPointers)
         {
-            if (selectionPanelPointer.pointingElement == this)
+            if (selectionPanelPointer!=null && selectionPanelPointer.pointingElement == this)
             {
                 selectionPanelPointer.NavigateToRight();
             }
