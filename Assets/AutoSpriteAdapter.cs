@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SelectionPanelElement))]
-public class ChampionPanelElement : UIControl
+[RequireComponent(typeof(SelectionPanelElement), typeof(SpriteRenderer))]
+public class AutoSpriteAdapter : UIControl
 {
-    // public List<SelectionPanelPointer> pointers = new List<SelectionPanelPointer>();
 
     private int pointerSelected = 0;
     public Sprite nonSelected;
@@ -17,17 +16,11 @@ public class ChampionPanelElement : UIControl
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        
         var selectionPanelElement = GetComponent<SelectionPanelElement>();
         selectionPanelElement.onSelected += OnSelected;
         selectionPanelElement.onDeselected += OnDeselected;
-        GetComponent<ClickToSelectChampionComponent>().onChampionSelected += DisableIcon;
     }
 
-    private void DisableIcon(ClickToSelectChampionComponent clickToSelectChampionComponent)
-    {
-        GetComponent<SpriteRenderer>().sprite = null;
-    }
 
     private void OnSelected()
     {
@@ -43,17 +36,4 @@ public class ChampionPanelElement : UIControl
             spriteRenderer.sprite = nonSelected;
         }
     }
-
-    public void ChangeToNonSelectedSprite()
-    {
-        spriteRenderer.sprite = nonSelected;
-
-    }
-    
-    public void ChangeToSelectedSprite()
-    {
-        spriteRenderer.sprite = selected;
-
-    }
-    
 }

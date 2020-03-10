@@ -3,14 +3,17 @@ using UnityEngine;
 /// <summary>
 /// This class is used to select the champion 
 /// </summary>
-public class SelectionPanelPointer : UIControl
+public class SelectionPointer : UIControl
 {
     public NewPlayerInput owner;
-    public SelectionPanelElement pointingElement;
-    public bool enable = true;
-    public bool choosen;
+    private SelectionPanelElement pointingElement;
 
-    public void BindToOwnerInput(NewPlayerInput NewInput)
+    public SelectionPanelElement PointingElement => pointingElement;
+
+    private bool isActivated = true;
+    public bool IsActivated => isActivated;
+
+    public void BindToInput(NewPlayerInput NewInput)
     {
         owner = NewInput;
         owner.onMoveUp += NavigateToTop;
@@ -23,7 +26,7 @@ public class SelectionPanelPointer : UIControl
     private void NavigateToLeft()
     {
         print("navigate to left");
-        if (pointingElement.leftElement != null && enable)
+        if (pointingElement.leftElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.leftElement;
@@ -35,7 +38,7 @@ public class SelectionPanelPointer : UIControl
     public void NavigateToRight()
     {
         print("navigate to right");
-        if (pointingElement.rightElement != null && enable)
+        if (pointingElement.rightElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.rightElement;
@@ -48,7 +51,7 @@ public class SelectionPanelPointer : UIControl
     private void NavigateToTop()
     {
         print("navigate to top");
-        if (pointingElement.topElement != null && enable)
+        if (pointingElement.topElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.topElement;
@@ -62,7 +65,7 @@ public class SelectionPanelPointer : UIControl
     private void NavigateToDown()
     {
         print("navigate to down");
-        if (pointingElement.downElement != null && enable)
+        if (pointingElement.downElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.downElement;
@@ -73,13 +76,38 @@ public class SelectionPanelPointer : UIControl
 
     public void SetTargetChampion()
     {
-        choosen = true;
-        
+        if (!IsActivated) return;
         owner.attackButtonPressed = false;
-        if (!gameObject.activeSelf) return;
-        enable = false;    
+        isActivated = false;    
         pointingElement.onBeingClicked?.Invoke(this);
 
     }
+
+    public void Deactivate()
+    {
+        isActivated = false;
+        gameObject.SetActive(false);
+    }
+
+    public void Activate()
+    {
+        isActivated = true;
+        gameObject.SetActive(true);
+        SetpointingElement(SelectionElementStorage.instance.FirstElement);
+    }
+
+    public void Setup(NewPlayerInput input)
+    {
+        BindToInput(input);
+        Activate();
+        // SetpointingElement(SelectionElementStorage.instance.FirstElement);
+    }
     
+    
+
+    public void SetpointingElement(SelectionPanelElement element)
+    {
+        pointingElement = element;
+        pointingElement.onSelected?.Invoke();
+    }
 }

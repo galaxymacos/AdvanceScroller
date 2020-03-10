@@ -8,7 +8,6 @@ public class ClickToSelectChampionComponent : MonoBehaviour
 
     private SelectionPanelElement selectionPanelElement;
 
-    public Action<ClickToSelectChampionComponent> onChampionSelected;
     
     private void Awake()
     {
@@ -16,20 +15,21 @@ public class ClickToSelectChampionComponent : MonoBehaviour
         selectionPanelElement.onBeingClicked += SelectChampion;
     }
 
-    private void SelectChampion(SelectionPanelPointer pointer)
+    /// <summary>
+    /// Event Function
+    /// </summary>
+    /// <param name="pointer"></param>
+    private void SelectChampion(SelectionPointer pointer)
     {
         PlayerInputStorage.instance.SetChampionForInput(pointer.owner, champion);
-        SelectionPanelPointerManager.currentActivePointerNumber--;
-        if (SelectionPanelPointerManager.currentActivePointerNumber == 0)
+        pointer.Deactivate();
+        if (PointerStorage.ActivatedPointerNumber == 0)
         {
-            FightData fightData = SaveDataComposer.ToFightData();
-            SaveSystem.SaveHeroSelectionData(fightData.SaveToString());
-            SceneLoader.LoadFightingMapFromSavedData();
+            MenuStateMachine.OnStateChange(MenuState.SelectMap);
+            // FightData fightData = SaveDataComposer.ToFightData();
+            // SaveSystem.SaveHeroSelectionData(fightData.SaveToString());
+            // SceneLoader.LoadFightingMapFromSavedData();
         }
-        pointer.owner.onAttackButtonPressed -= pointer.SetTargetChampion;
-        pointer.gameObject.SetActive(false);
-        
-        onChampionSelected?.Invoke(this);
-        selectionPanelElement.RebindSelectionPanelElement();
+        selectionPanelElement.DeleteFromLinkedList();
     }
 }

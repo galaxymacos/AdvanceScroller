@@ -12,18 +12,17 @@ public class SelectionPanelElement : UIControl
     public Action onSelected;
     public Action onDeselected;
 
-    public Action<SelectionPanelPointer> onBeingClicked;
+    public Action<SelectionPointer> onBeingClicked;
     
 
-    public void RebindSelectionPanelElement()
+    public void DeleteFromLinkedList()
     {
         leftElement.rightElement = rightElement;
         rightElement.leftElement = leftElement;
 
-        foreach (SelectionPanelPointer selectionPanelPointer in SelectionPanelPointerManager.instance
-            .selectionPanelPointers)
+        foreach (SelectionPointer selectionPanelPointer in PointerStorage.pointers)
         {
-            if (selectionPanelPointer!=null && selectionPanelPointer.pointingElement == this)
+            if (selectionPanelPointer!=null && selectionPanelPointer.PointingElement == this)
             {
                 selectionPanelPointer.NavigateToRight();
             }

@@ -3,15 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SelectionPanelPointer))]
+[RequireComponent(typeof(SelectionPointer))]
 public class PanelPositionComponent : MonoBehaviour
 {
     public Vector3 offset;
-    private SelectionPanelPointer selectionPanelPointer;
+    private SelectionPointer selectionPointer;
 
     private void Awake()
     {
-        selectionPanelPointer = GetComponent<SelectionPanelPointer>();
+        selectionPointer = GetComponent<SelectionPointer>();
     }
 
     // private void OnValidate()
@@ -21,7 +21,7 @@ public class PanelPositionComponent : MonoBehaviour
 
     private void Update()
     {
-        transform.position = selectionPanelPointer.pointingElement.transform.position + offset;
+        transform.position = selectionPointer.PointingElement.transform.position + offset;
 
     }
 }
