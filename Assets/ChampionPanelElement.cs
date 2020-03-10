@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SelectionPanelElement))]
-public class ChampionPanelElement : MonoBehaviour
+public class ChampionPanelElement : UIControl
 {
     // public List<SelectionPanelPointer> pointers = new List<SelectionPanelPointer>();
 
@@ -43,6 +43,17 @@ public class ChampionPanelElement : MonoBehaviour
             spriteRenderer.sprite = nonSelected;
         }
     }
+
+    public void ChangeToNonSelectedSprite()
+    {
+        spriteRenderer.sprite = nonSelected;
+
+    }
     
+    public void ChangeToSelectedSprite()
+    {
+        spriteRenderer.sprite = selected;
+
+    }
     
 }

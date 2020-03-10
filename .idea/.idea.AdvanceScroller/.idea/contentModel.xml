@@ -65,7 +65,7 @@
         <e p="ForceShadowShaderComponent.cs" t="Include" />
         <e p="HealthBarShakeComponent.cs" t="Include" />
         <e p="HealthDecreaseComponent.cs" t="Include" />
-        <e p="HeroSelectionMediator.cs" t="Include" />
+        <e p="HeroSelectionDialogBox.cs" t="Include" />
         <e p="InjuryMaterialController.cs" t="Include" />
         <e p="InjuryShaderComponent.cs" t="Include" />
         <e p="IState.cs" t="Include" />
@@ -372,6 +372,7 @@
             <e p="Movement.cs" t="Include" />
           </e>
         </e>
+        <e p="UIControl.cs" t="Include" />
         <e p="UserInteractedPanel.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

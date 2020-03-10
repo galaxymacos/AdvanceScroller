@@ -1,14 +1,14 @@
-using System;
 using UnityEngine;
 
 /// <summary>
 /// This class is used to select the champion 
 /// </summary>
-public class SelectionPanelPointer : MonoBehaviour
+public class SelectionPanelPointer : UIControl
 {
     public NewPlayerInput owner;
     public SelectionPanelElement pointingElement;
     public bool enable = true;
+    public bool choosen;
 
     public void BindToOwnerInput(NewPlayerInput NewInput)
     {
@@ -73,24 +73,13 @@ public class SelectionPanelPointer : MonoBehaviour
 
     public void SetTargetChampion()
     {
+        choosen = true;
+        
         owner.attackButtonPressed = false;
         if (!gameObject.activeSelf) return;
         enable = false;    
-        print("select target champion");
-        // SaveDataComposer.AddChampion(pointingElement.champion);
-        // pointingElement.OnBeingClick(this);
         pointingElement.onBeingClicked?.Invoke(this);
-        // PlayerInputStorage.instance.SetChampionForInput(owner, pointingElement.champion);
-        // SelectionPanelPointerManager.currentActivePointerNumber--;
-        // if (SelectionPanelPointerManager.currentActivePointerNumber == 0)
-        // {
-        //     FightData fightData = SaveDataComposer.ToFightData();
-        //     SaveSystem.SaveHeroSelectionData(fightData.SaveToString());
-        //     SceneLoader.LoadFightingMapFromSavedData();
-        // }
-        // owner.onAttackButtonPressed -= SetTargetChampion;
-        // gameObject.SetActive(false);
+
     }
-
-
+    
 }

@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class SelectionPanelElement : MonoBehaviour
+public class SelectionPanelElement : UIControl
 {
     public SelectionPanelElement leftElement;
     public SelectionPanelElement rightElement;
