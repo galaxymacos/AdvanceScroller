@@ -47,12 +47,15 @@ public class BloodParticleSpawner : MonoBehaviour
                 throw new ArgumentOutOfRangeException();
         }
 
-        if (characterHealthComponent.damageDataFromLastAttack.canBleed)
-        {
-            bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodDripping2D, transform);
-            Destroy(bloodParticleSystem, characterHealthComponent.damageDataFromLastAttack.bleedTime);
-        }
+        
 
         bloodParticleSystem.transform.rotation = Quaternion.LookRotation(bloodStartRotation);
+    }
+
+    public void SpawnBloodDrippingParticle(float duration)
+    {
+        GameObject bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodDripping2D, transform);
+        Destroy(bloodParticleSystem, duration);
+
     }
 }

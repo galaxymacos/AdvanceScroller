@@ -19,10 +19,6 @@ public class DamageData: ScriptableObject
     public float launcherHorizontalForce;
     public float launcherVerticalForce;
 
-    public bool canBleed;
-    public float bleedTime;
-    public float bleedAmountPerSecond;
-
     public List<ScriptableObject> attackEffects;
 
 

@@ -676,6 +676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4685914805920448753}
   - component: {fileID: 1252133129726397244}
+  - component: {fileID: 120514675294085045}
   m_Layer: 0
   m_Name: DamageEffectContainer
   m_TagString: Untagged
@@ -710,6 +711,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 8906824143711737654}
+--- !u!114 &120514675294085045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8212786844971420632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b7d3b3194d88824c9238dce0f1b9cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthComponent: {fileID: 8906824143711737654}
+  delay: 0.2
 --- !u!1 &8829037504463658737
 GameObject:
   m_ObjectHideFlags: 0

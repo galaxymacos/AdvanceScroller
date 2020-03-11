@@ -15,6 +15,7 @@ public class ParticleSpawner : MonoBehaviour
     public GameObject BloodSplatCritcal2D;
     public GameObject DodgeShadow;
     public GameObject WallSlideDust;
+    public GameObject ElectrificationEffect;
 
 
     public static ParticleSpawner Instance;

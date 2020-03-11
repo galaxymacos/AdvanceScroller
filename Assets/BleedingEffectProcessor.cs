@@ -7,12 +7,14 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
     private float bleedTimeCounter;
     private float bleedPerSecond;
 
+    private Action onStartBleeding;
     public bool isBleeding => bleedTimeCounter > 0;
 
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
         healthComponent.OnTakeHit += ProcessBridge;
+        onStartBleeding += SpawnBloodParticleBridge;
     }
 
     private void ProcessBridge(CharacterHealthComponent health)
@@ -23,12 +25,6 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
 
     public void Process(DamageData damageData)
     {
-        if (damageData.canBleed)
-        {
-            bleedTimeCounter = damageData.bleedTime;
-            bleedPerSecond = damageData.bleedAmountPerSecond;
-        }
-
         foreach (ScriptableObject attackEffect in damageData.attackEffects)
         {
             var bleedingEffect = attackEffect as BleedingEffect;
@@ -36,6 +32,7 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             {
                 bleedTimeCounter = bleedingEffect.bleedTime;
                 bleedPerSecond = bleedingEffect.bleedAmountPerSecond;
+                onStartBleeding?.Invoke();
             }
         }
     }
@@ -46,6 +43,15 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
         {
             bleedTimeCounter-=Time.deltaTime;
             healthComponent.DrainHealth(bleedPerSecond*Time.deltaTime);
+        }
+    }
+
+    private void SpawnBloodParticleBridge()
+    {
+        var bloodParticleSystem = GetComponentInParent<BloodParticleSpawner>();
+        if (bloodParticleSystem != null)
+        {
+            bloodParticleSystem.SpawnBloodDrippingParticle(bleedTimeCounter);
         }
     }
 }

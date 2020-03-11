@@ -16,7 +16,7 @@ public class SelectionPointer : UIControl
 
     public Action onSetUp;
 
-    public void BindToInput(NewPlayerInput NewInput)
+    private void BindToInput(NewPlayerInput NewInput)
     {
         owner = NewInput;
         owner.onMoveUp += NavigateToTop;
@@ -26,9 +26,17 @@ public class SelectionPointer : UIControl
         owner.onAttackButtonPressed += SetTargetChampion;
     }
 
+    private void OnDestroy()
+    {
+        owner.onMoveUp -= NavigateToTop;
+        owner.onMoveDown -= NavigateToDown;
+        owner.onMoveLeft -= NavigateToLeft;
+        owner.onMoveRight -= NavigateToRight;
+        owner.onAttackButtonPressed -= SetTargetChampion;
+    }
+
     private void NavigateToLeft()
     {
-        print("navigate to left");
         if (pointingElement.leftElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -40,7 +48,6 @@ public class SelectionPointer : UIControl
     
     public void NavigateToRight()
     {
-        print("navigate to right");
         if (pointingElement.rightElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -53,7 +60,6 @@ public class SelectionPointer : UIControl
 
     private void NavigateToTop()
     {
-        print("navigate to top");
         if (pointingElement.topElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -67,7 +73,7 @@ public class SelectionPointer : UIControl
 
     private void NavigateToDown()
     {
-        print("navigate to down");
+        print("Navigate to bottom");
         if (pointingElement.downElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();

@@ -21,3 +21,5 @@ MonoBehaviour:
   hitStunPower: 0
   launcherHorizontalForce: 4
   launcherVerticalForce: 4
+  attackEffects:
+  - {fileID: 11400000, guid: b773ea07cc51de74ab8d3294570a0a76, type: 2}

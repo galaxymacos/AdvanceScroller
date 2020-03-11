@@ -1,18 +1,22 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProcessor
 {
     public CharacterHealthComponent healthComponent;
-    public float duration;
-    public float odd;
+    private float duration;
+    private float odd;
+    [SerializeField] private float delay = 0.2f;
     public bool isElectrification => duration > 0;
 
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
         healthComponent.OnTakeHit += ProcessBridge;
+        healthComponent.OnTakeHit += ApplyElectricityDamage;
     }
 
     private void ProcessBridge(CharacterHealthComponent health)
@@ -34,8 +38,41 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
         }
     }
 
-    public void ApplyElectricityDamage()
+    private void ApplyElectricityDamage(CharacterHealthComponent characterHealthComponent)
     {
-        
+        if (isElectrification)
+        {
+            StartCoroutine(GanDian(delay));
+        }
+    }
+
+    private IEnumerator GanDian(float _delay)
+    {
+        yield return new WaitForSeconds(_delay);
+        ElectrificationTick();
+    }
+
+    private void Update()
+    {
+        if (duration > 0)
+        {
+            duration -= Time.deltaTime;
+        }
+    }
+
+
+    private void ElectrificationTick()
+    {
+        print("Electrification Effect tick");
+        bool success = Random.Range(0, 100) > odd * 100;
+        if (success)
+        {
+            print("Electrification effort");
+            healthComponent.DrainHealth(10);
+        }
+        else
+        {
+            print("miss electrification effect");
+        }
     }
 }

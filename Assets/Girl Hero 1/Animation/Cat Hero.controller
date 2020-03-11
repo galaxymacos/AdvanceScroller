@@ -1273,10 +1273,9 @@ MonoBehaviour:
   - attack
   - dash
   - jump
-  - skill2
+  - skill1
   - skill3
   - climb
-  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -1473,9 +1472,8 @@ MonoBehaviour:
   - skill3
   - attack
   - dash
-  - skill2
+  - skill1
   - climb
-  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}

@@ -34,7 +34,6 @@ public class HealthDecreaseComponent : MonoBehaviour
 
     private void UpdateUI(CharacterHealthComponent characterHealthComponent)
     {
-        print(slider.value + "     " + chc.currentHealth);
         if (chc.currentHealth > slider.value)
         {
             slider.value = chc.currentHealth;
