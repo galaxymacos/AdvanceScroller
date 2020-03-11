@@ -115,6 +115,7 @@
         <e p="NewPlayerInput.cs" t="Include" />
         <e p="PanelPositionComponent.cs" t="Include" />
         <e p="ParticleSystemPauser.cs" t="Include" />
+        <e p="ParticleSystemRecycler.cs" t="Include" />
         <e p="PausableSMB.cs" t="Include" />
         <e p="PlayerDodgingEventRegister.cs" t="Include" />
         <e p="PlayerHpBarComponent.cs" t="Include" />
@@ -258,6 +259,7 @@
         <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
         <e p="SpinCandidateData.cs" t="Include" />
         <e p="SpinCandidateStorage.cs" t="Include" />
+        <e p="SpriteEffectFactory.cs" t="Include" />
         <e p="StateMachine.cs" t="Include" />
         <e p="StateTransition.cs" t="Include" />
         <e p="Sword Princess" t="Include">

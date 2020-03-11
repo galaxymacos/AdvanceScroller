@@ -63,16 +63,18 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
 
     private void ElectrificationTick()
     {
-        print("Electrification Effect tick");
         bool success = Random.Range(0, 100) > odd * 100;
         if (success)
         {
-            print("Electrification effort");
-            healthComponent.DrainHealth(10);
-        }
-        else
-        {
-            print("miss electrification effect");
+            ElectricShot();
         }
     }
+
+    private void ElectricShot()
+    {
+        healthComponent.DrainHealth(10);
+        SpriteEffectFactory.instance.SpawnEffect("MetalHit2D", transform.root);
+        print("ElectricShot");
+    }
+    
 }
