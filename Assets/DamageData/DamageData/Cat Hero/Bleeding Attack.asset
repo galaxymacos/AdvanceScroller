@@ -24,3 +24,5 @@ MonoBehaviour:
   canBleed: 1
   bleedTime: 2.5
   bleedAmountPerSecond: 7
+  attackEffects:
+  - {fileID: 11400000, guid: 06f63c03d5bd5a34da372b7435aa9fb7, type: 2}

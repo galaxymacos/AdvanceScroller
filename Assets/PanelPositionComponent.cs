@@ -7,8 +7,8 @@ using UnityEngine;
 public class PanelPositionComponent : MonoBehaviour
 {
     public Vector3 offset;
-    private static readonly Vector3 baseOffset = new Vector3(0,-0.7f,0);
-    private static readonly Vector3 increaseOffset = new Vector3(0,-0.2f,0);
+    private static readonly Vector3 baseOffset = new Vector3(0,-0.8f,0);
+    private static readonly Vector3 increaseOffset = new Vector3(0,-0.4f,0);
     private static int layerOfIncrease = 0;
     private SelectionPointer selectionPointer;
 

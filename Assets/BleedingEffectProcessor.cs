@@ -28,6 +28,16 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             bleedTimeCounter = damageData.bleedTime;
             bleedPerSecond = damageData.bleedAmountPerSecond;
         }
+
+        foreach (ScriptableObject attackEffect in damageData.attackEffects)
+        {
+            var bleedingEffect = attackEffect as BleedingEffect;
+            if (bleedingEffect != null)
+            {
+                bleedTimeCounter = bleedingEffect.bleedTime;
+                bleedPerSecond = bleedingEffect.bleedAmountPerSecond;
+            }
+        }
     }
     
     public void Update()
