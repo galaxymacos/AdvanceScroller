@@ -48,11 +48,6 @@ public class PlayerCharacter : MonoBehaviour
     public List<Collider2D> collidersAlive;
     public List<Collider2D> collidersDead;
     
-    [Header("Particle")]
-    public GameObject groundDust;
-    public GameObject deadParticle;
-    public GameObject groundDustTwoWays;
-
     public SingleAttackComponent impactWave;
     [Space(10)]
 
@@ -81,20 +76,17 @@ public class PlayerCharacter : MonoBehaviour
     public float movementSpeed = 5f;
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
-    [HideInInspector] public CharacterFlipComponent flipComponent;
+    [HideInInspector] public CharacterFlipComponent flipByInputComponent;
     [HideInInspector] public GameObject chargedDagger;
-
-    private IUniqueSkill uniqueSkill;
 
 
     private void Awake()
     {
         // set up variable
         playerInput = GetComponent<PlayerInput>();
-        uniqueSkill = GetComponent<IUniqueSkill>();
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
-        flipComponent = new CharacterFlipComponent(transform);
+        flipByInputComponent = new CharacterFlipComponent(transform);
         
         GetComponent<CharacterHealthComponent>().onPlayerDie = PlayerDie;
         onPlayerGrounded += ResetJumpTime;
@@ -119,14 +111,21 @@ public class PlayerCharacter : MonoBehaviour
             dashInvincibleTimeCounter -= Time.deltaTime;
         }
     }
+    private void FixedUpdate()
+    {
+        UpdatePlayerMovementVariable();
+    }
 
     private void UpdateFacingDirection()
     {
         var wasFacingRight = isFacingRight;
-        if (playerInput != null)
+        
+        // Filp by input
+        if (playerInput != null && canControlMovement)
         {
-            flipComponent.Flip(playerInput.horizontalAxis);
+            flipByInputComponent.Flip(playerInput.horizontalAxis);
         }
+        
         if (isFacingRight != wasFacingRight)
         {
             onFacingDirectionChanged?.Invoke();
@@ -159,10 +158,7 @@ public class PlayerCharacter : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        UpdatePlayerMovementVariable();
-    }
+    
 
     private void UpdatePlayerMovementVariable()
     {
@@ -243,10 +239,6 @@ public class PlayerCharacter : MonoBehaviour
     {
         impactWave.StopDetectTargetManually();
     }
-
-    public void PrintString(String str)
-    {
-        print(str);
-    }
+    
 }
 

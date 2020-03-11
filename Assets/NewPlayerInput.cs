@@ -21,8 +21,7 @@ public class NewPlayerInput : PlayerInput
     {
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
-            print("distribute a player input to the ui");
-            PlayerInputDistributor.instance.DistributeInputToChampionSelectionUI(this);
+            PlayerInputStorage.onNewInputAdded?.Invoke(this);
         }
         else if (SceneManager.GetActiveScene().buildIndex == 2)
         {

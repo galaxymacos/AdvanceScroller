@@ -19,8 +19,6 @@ public class LightingManagerStateMachine : MonoBehaviour
         _stateMachine.Add(lightOn);
         _stateMachine.Add(lightOff);
         
-        // _stateMachine.AddTransition(lightOn, lightTurningOff, ()=>LightingManager.instance.lightOffTrigger);
-        // _stateMachine.AddTransition(lightOff, lightTurningOn, ()=>LightingManager.instance.lightOnTrigger);
         _stateMachine.AddAnyTransition(lightTurningOff,()=>LightingManager.instance.lightOffTrigger);
         _stateMachine.AddAnyTransition(lightTurningOn,()=>LightingManager.instance.lightOnTrigger);
         _stateMachine.AddTransition(lightTurningOn, lightOn, () => LightingManager.instance.hasLightFullyRecovered);

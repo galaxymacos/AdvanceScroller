@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AutoSpriteAdapter.cs" t="Include" />
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -17,8 +18,9 @@
         <e p="BlurMaterialController.cs" t="Include" />
         <e p="BtnTransferToNext.cs" t="Include" />
         <e p="CatchComponent.cs" t="Include" />
-        <e p="ChampionPanelElement.cs" t="Include" />
         <e p="CharacterFuryBar.cs" t="Include" />
+        <e p="ClickToSelectChampionComponent.cs" t="Include" />
+        <e p="ClickToSelectMapComponent.cs" t="Include" />
         <e p="Command.cs" t="Include" />
         <e p="DisolveShadowShaderComponent.cs" t="Include" />
         <e p="DissolveShaderControl.cs" t="Include" />
@@ -58,9 +60,13 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="FetchMapData.cs" t="Include" />
         <e p="ForceCancelShaderControl.cs" t="Include" />
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
         <e p="ForceShadowShaderComponent.cs" t="Include" />
+        <e p="HealthBarShakeComponent.cs" t="Include" />
+        <e p="HealthDecreaseComponent.cs" t="Include" />
+        <e p="HeroSelectionDialogBox.cs" t="Include" />
         <e p="InjuryMaterialController.cs" t="Include" />
         <e p="InjuryShaderComponent.cs" t="Include" />
         <e p="IState.cs" t="Include" />
@@ -85,9 +91,12 @@
         <e p="LightOnState.cs" t="Include" />
         <e p="LightTurningOffState.cs" t="Include" />
         <e p="LightTurningOnState.cs" t="Include" />
+        <e p="LuckySpin.cs" t="Include" />
         <e p="MapPlayerSpawnData.cs" t="Include" />
+        <e p="MapVoteTimer.cs" t="Include" />
         <e p="MaterialChangeComponent.cs" t="Include" />
         <e p="MaterialController.cs" t="Include" />
+        <e p="MenuStateMachine.cs" t="Include" />
         <e p="Modern UI Pack" t="Include">
           <e p="Editor" t="Include">
             <e p="ContextMenu.cs" t="Include" />
@@ -195,10 +204,14 @@
         <e p="ParticleSystemPauser.cs" t="Include" />
         <e p="PausableSMB.cs" t="Include" />
         <e p="PlayerDodgingEventRegister.cs" t="Include" />
+        <e p="PlayerHpBarComponent.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerInputDistributor.cs" t="Include" />
         <e p="PlayerInputStorage.cs" t="Include" />
+        <e p="PlayerMpBarComponent.cs" t="Include" />
         <e p="PlayerThrowMessager.cs" t="Include" />
+        <e p="PointerCreator.cs" t="Include" />
+        <e p="PointerStorage.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -320,13 +333,15 @@
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
         </e>
+        <e p="SelectionElementStorage.cs" t="Include" />
         <e p="SelectionPanelElement.cs" t="Include" />
-        <e p="SelectionPanelPointer.cs" t="Include" />
-        <e p="SelectionPanelPointerManager.cs" t="Include" />
+        <e p="SelectionPointer.cs" t="Include" />
         <e p="ShaderMaterialFactory.cs" t="Include" />
         <e p="ShadowFactory.cs" t="Include" />
         <e p="SMb_AxeHero_Caught.cs" t="Include" />
         <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
+        <e p="SpinCandidateData.cs" t="Include" />
+        <e p="SpinCandidateStorage.cs" t="Include" />
         <e p="StateMachine.cs" t="Include" />
         <e p="StateTransition.cs" t="Include" />
         <e p="Sword Princess" t="Include">
@@ -365,6 +380,7 @@
             <e p="Movement.cs" t="Include" />
           </e>
         </e>
+        <e p="UIControl.cs" t="Include" />
         <e p="UserInteractedPanel.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -3,23 +3,24 @@ using UnityEngine;
 
 public static class SaveDataComposer
 {
-    private static int mapIndex = 2;
-    
-    // public static void AddMap(int sceneIndex)
-    // {
-        // mapIndex = sceneIndex;
-    // }
+    private static int _mapIndex = -1;
+    public static int MapIndex => _mapIndex;
 
-    // public static void Reset()
-    // {
-        // mapIndex = 2;
-    // }
+    public static void SetMapIndex(int mapIndex)
+    {
+        _mapIndex = mapIndex;
+    }
+    
 
     public static FightData ToFightData()
     {
-        if(mapIndex == -1)
+        if (_mapIndex == -1)
+        {
             Debug.LogError("map data hasn't been initialized");
-        FightData fightData = new FightData(PlayerInputStorage.instance.champions, mapIndex);
+            return null;
+        }
+
+        FightData fightData = new FightData(PlayerInputStorage.instance.champions, _mapIndex);
         return fightData;
     }
 }

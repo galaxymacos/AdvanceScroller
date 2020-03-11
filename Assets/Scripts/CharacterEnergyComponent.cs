@@ -38,7 +38,7 @@ public class CharacterEnergyComponent : MonoBehaviour
         Recover();
     }
 
-    public void Recover()
+    private void Recover()
     {
         currentEnergy += recoverSpeed*Time.deltaTime;
         currentEnergy = Mathf.Clamp(currentEnergy, 0, 100);

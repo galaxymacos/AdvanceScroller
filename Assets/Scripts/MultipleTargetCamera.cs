@@ -11,12 +11,11 @@ public class MultipleTargetCamera : MonoBehaviour
     public Vector3 velocity;
     public float smoothTime = 0.24f;
 
-    public float minZoom = 63;
-    public float maxZoom = 63f;
+    public float minZoom = 5f;
+    public float maxZoom = 10f;
     public float zoomLimiter = 10f;
     // public Camera camera;
-    [SerializeField]
-    private Camera camera;
+    [SerializeField] private Camera myCamera;
 
     private bool hasSetup;
 
@@ -39,18 +38,19 @@ public class MultipleTargetCamera : MonoBehaviour
     private void Zoom()
     {
         float newZoom = Mathf.Lerp(minZoom, maxZoom, GetGreatestDistance()/zoomLimiter);
-        camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, newZoom, Time.deltaTime);
+        myCamera.orthographicSize = Mathf.Lerp(myCamera.orthographicSize, newZoom, Time.deltaTime);
     }
 
     private float GetGreatestDistance()
     {
         var bounds = new Bounds(targets[0].position, Vector3.zero);
-        for (int i = 0; i < targets.Count; i++)
+        for (int i = 1; i < targets.Count; i++)
         {
             bounds.Encapsulate(targets[i].position);
         }
 
-        return bounds.size.x;
+        
+        return Mathf.Max(bounds.size.x, bounds.size.y)  ;
     }
 
     private void Move()

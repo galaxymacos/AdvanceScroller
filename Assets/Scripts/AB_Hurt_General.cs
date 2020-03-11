@@ -40,7 +40,7 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
         if(playerCharacter.isGrounded && rb.velocity.y <= 0)
             animator.SetTrigger("idle");
         
-        
+        Debug.Log("Can control horizontal movement: "+playerCharacter.canControlMovement);
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

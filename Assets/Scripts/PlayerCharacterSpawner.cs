@@ -13,10 +13,10 @@ public class PlayerCharacterSpawner : MonoBehaviour
     // Spawn heros from save file
     private List<GameObject> herosFromSavedFile;
 
-    [SerializeField] private GameObject batHeroPrefab;
-    [SerializeField] private GameObject SwordPrincessPrefab;
-    [SerializeField] private GameObject AxeHeroPrefab;
-    [SerializeField] private GameObject PsychicHeroPrefab;
+    // [SerializeField] private GameObject batHeroPrefab;
+    // [SerializeField] private GameObject SwordPrincessPrefab;
+    // [SerializeField] private GameObject AxeHeroPrefab;
+    // [SerializeField] private GameObject PsychicHeroPrefab;
 
     private List<GameObject> heroDatas;
 
@@ -50,11 +50,11 @@ public class PlayerCharacterSpawner : MonoBehaviour
         }
 
         FightData data = SaveSystem.LoadHeroSelectionData();
-        heroDatas = new List<GameObject>();
-        heroDatas.Add(batHeroPrefab);
-        heroDatas.Add(SwordPrincessPrefab);
-        heroDatas.Add(AxeHeroPrefab);
-        heroDatas.Add(PsychicHeroPrefab);
+        // heroDatas = new List<GameObject>();
+        // heroDatas.Add(batHeroPrefab);
+        // heroDatas.Add(SwordPrincessPrefab);
+        // heroDatas.Add(AxeHeroPrefab);
+        // heroDatas.Add(PsychicHeroPrefab);
         if (data != null)
         {
             herosFromSavedFile = new List<GameObject>();

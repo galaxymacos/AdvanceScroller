@@ -8,8 +8,7 @@ public class PlayerInputDistributor : MonoBehaviour
     private static int _currentPlayerInputNum = 0;
 
     public static PlayerInputDistributor instance;
-    // [SerializeField] private List<NewPlayerInput> playerInputs;
-    
+
     private void Awake()
     {
         if (instance == null)
@@ -35,13 +34,6 @@ public class PlayerInputDistributor : MonoBehaviour
         print("distribute the generated player input object to the player "+_currentPlayerInputNum);
         _currentPlayerInputNum++;
 
-    }
-    
-
-    public void DistributeInputToChampionSelectionUI(NewPlayerInput input)
-    {
-        // playerInputs.Add(input);
-        SelectionPanelPointerManager.instance.AssignNewPointerToPlayer(input);
     }
 }
 
