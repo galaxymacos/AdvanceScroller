@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.883554470.00" t="ExcludeRecursive" />
-    <e p="G:\Unity\AdvanceScroller" t="IncludeRecursive">
+    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.-49859817.00" t="ExcludeRecursive" />
+    <e p="E:\Repo_Unreal\AdvanceScroller" t="IncludeRecursive">
       <e p="AdvanceScroller.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -79,6 +79,13 @@
         <e p="InjuryShaderComponent.cs" t="Include" />
         <e p="IState.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
+          <e p="SlideMap" t="Include">
+            <e p="TooCubeForest" t="Include">
+              <e p="demoScenes" t="Include">
+                <e p="Movement.cs" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="UniverseBackground" t="Include">
             <e p="ErbGameArt" t="Include">
               <e p="Meteor rain" t="Include">
@@ -223,6 +230,7 @@
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="RandomColorComponent.cs" t="Include" />
         <e p="SaveDataComposer.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
@@ -382,11 +390,6 @@
           </e>
           <e p="Sprites" t="Include">
             <e p="EmojiOne Attribution.txt" t="Include" />
-          </e>
-        </e>
-        <e p="TooCubeForest" t="Include">
-          <e p="demoScenes" t="Include">
-            <e p="Movement.cs" t="Include" />
           </e>
         </e>
         <e p="UIControl.cs" t="Include" />

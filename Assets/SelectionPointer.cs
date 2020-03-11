@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -12,6 +13,8 @@ public class SelectionPointer : UIControl
 
     private bool isActivated = true;
     public bool IsActivated => isActivated;
+
+    public Action onSetUp;
 
     public void BindToInput(NewPlayerInput NewInput)
     {
@@ -100,6 +103,7 @@ public class SelectionPointer : UIControl
     {
         BindToInput(input);
         Activate();
+        onSetUp?.Invoke();
         // SetpointingElement(SelectionElementStorage.instance.FirstElement);
     }
     
