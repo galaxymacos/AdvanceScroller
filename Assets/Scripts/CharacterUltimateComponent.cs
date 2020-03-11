@@ -21,7 +21,7 @@ public class CharacterUltimateComponent: MonoBehaviour
     private void Awake()
     {
         health = GetComponent<CharacterHealthComponent>();
-        health.onTakeDamage += IncreaseRageFromTakingDamage;
+        health.OnTakeHit += IncreaseRageFromTakingDamage;
         player = GetComponent<PlayerCharacter>();
         player.onPlayerUseUltimate += ConsumeRage;
 

@@ -44,8 +44,6 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackFirstStrike.StopDetectTargetManually();
-        playerCharacter.GetComponent<BatHeroAttackMessager>().attackSecondStrike.StopDetectTargetManually();
         
     }
 

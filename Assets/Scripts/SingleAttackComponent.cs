@@ -20,6 +20,11 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         {
             DealDamageToSingleTarget(objectCollided);
         }
+
+        if (isRunning)
+        {
+            isRunning = false;
+        }
     }
 
     private void DealDamageToSingleTarget(GameObject gameObjectCollided)
@@ -44,11 +49,12 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         isRunning = true;
     }
 
-    
  
-    public void StopDetectTargetManually()
-    {
-        isRunning = false;
+
+
+    // public void StopDetectTargetManually()
+    // {
+        // isRunning = false;
         
-    }
+    // }
 }

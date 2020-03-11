@@ -78,6 +78,8 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
         dodgeShadow.transform.localScale = transform.localScale;
         dodgeShadow.GetComponent<SpriteRenderer>().sprite = currentSprite;
     }
+    
+   
 
     public void StartSpawningWallSlideDust()
     {

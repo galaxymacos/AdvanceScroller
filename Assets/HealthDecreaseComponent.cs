@@ -28,7 +28,8 @@ public class HealthDecreaseComponent : MonoBehaviour
         chc = owner.GetComponent<CharacterHealthComponent>();
         slider.maxValue = chc.maxHealth;
         slider.value = chc.currentHealth;
-        chc.onTakeDamage += UpdateUI;
+        chc.OnTakeHit += UpdateUI;
+        chc.onLoseHealth += UpdateUI;
     }
 
     private void UpdateUI(CharacterHealthComponent characterHealthComponent)

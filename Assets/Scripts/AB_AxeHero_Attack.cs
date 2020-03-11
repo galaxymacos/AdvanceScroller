@@ -48,11 +48,5 @@ public class AB_AxeHero_Attack : CharacterStateMachineBehavior
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         playerCharacter.canControlMovement = !playerCharacter.isGrounded;
     }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        playerCharacter.GetComponent<AxeHeroAttackMessager>().attack.StopDetectTargetManually();
-        
-    }
+    
 }

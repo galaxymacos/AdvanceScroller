@@ -37,6 +37,10 @@ public class AxeHeroAttackMessager : MonoBehaviour
         {
             buffType = AxeHeroBuff.Green;
         }
+        else
+        {
+            GetComponent<CharacterHealthComponent>().Heal(30);
+        }
         
     }
 
@@ -78,15 +82,13 @@ public class AxeHeroAttackMessager : MonoBehaviour
         projectile.Setup(playerCharacter, 10, 60);
     }
 
-    public void Attack()
+    public void ActivateAttackHitBox()
     {
-        print("attack");
         attack.Execute();
     }
 
     public void HugeSlash()
     {
-        print("huge slash");
         hugeSlash.Execute();
     }
 }

@@ -235,10 +235,5 @@ public class PlayerCharacter : MonoBehaviour
         impactWave.Execute();
     }
     
-    public void StopImpactWave()
-    {
-        impactWave.StopDetectTargetManually();
-    }
-    
 }
 

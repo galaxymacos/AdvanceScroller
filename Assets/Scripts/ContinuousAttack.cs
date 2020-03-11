@@ -4,7 +4,6 @@ using UnityEngine;
 public interface IAttackComponent
 {
     void Execute();
-    void StopDetectTargetManually();
 }
 public class ContinuousAttack : CollisionDetector, IAttackComponent
 {

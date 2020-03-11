@@ -33,10 +33,7 @@ public class AttackMessagingComponent : MonoBehaviour
         {
             singleAttackHitBox.Execute();
         }
-        else if (state == 0)
-        {
-            singleAttackHitBox.StopDetectTargetManually();
-        }
+        
     }
 
     public void DetectPierceAttack(int state)

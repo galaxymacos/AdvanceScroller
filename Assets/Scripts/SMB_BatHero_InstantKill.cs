@@ -20,7 +20,6 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
        
-        animator.GetComponent<BatHeroAttackMessager>().closeYourEyes.StopDetectTargetManually();
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTargetManually();
         playerCharacter.GetComponent<UltimateEffectComponent>().End();
         rb.gravityScale = 1;

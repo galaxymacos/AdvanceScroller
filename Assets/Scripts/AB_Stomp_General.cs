@@ -40,7 +40,6 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
        
-        playerCharacter.StopImpactWave();
         playerCharacter.onPlayerGrounded -= SpawnImpactWave;
     }
 

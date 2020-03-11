@@ -6,9 +6,10 @@ using UnityEngine;
 public class BloodParticleSpawner : MonoBehaviour
 {
     private float bloodParticleOffset = 0.5f;
+
     private void Awake()
     {
-        GetComponent<CharacterHealthComponent>().onTakeDamage += SpawnBlood;
+        GetComponent<CharacterHealthComponent>().OnTakeHit += SpawnBlood;
     }
 
     public void SpawnBlood(CharacterHealthComponent characterHealthComponent)
@@ -20,11 +21,13 @@ public class BloodParticleSpawner : MonoBehaviour
         switch (characterHealthComponent.damageDataFromLastAttack.damageType)
         {
             case DamageType.Penetration:
-                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatDirectional2D, transform.position+bloodStartRotation*bloodParticleOffset,
+                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatDirectional2D,
+                    transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
                 break;
             case DamageType.ShotGun:
-                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatCritcal2D, transform.position+bloodStartRotation*bloodParticleOffset,
+                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatCritcal2D,
+                    transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
                 break;
             case DamageType.Explosion:
@@ -36,11 +39,18 @@ public class BloodParticleSpawner : MonoBehaviour
                     Quaternion.identity);
                 break;
             case DamageType.HorizontalDripping:
-                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodShowerLoop2D, transform.position+bloodStartRotation*bloodParticleOffset,
+                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodShowerLoop2D,
+                    transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
+        }
+
+        if (characterHealthComponent.damageDataFromLastAttack.canBleed)
+        {
+            bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodDripping2D, transform);
+            Destroy(bloodParticleSystem, characterHealthComponent.damageDataFromLastAttack.bleedTime);
         }
 
         bloodParticleSystem.transform.rotation = Quaternion.LookRotation(bloodStartRotation);
