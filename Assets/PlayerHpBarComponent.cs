@@ -11,6 +11,7 @@ public class PlayerHpBarComponent : MonoBehaviour
     private Slider slider;
 
     private CharacterHealthComponent chc;
+    
 
     void Awake()
     {

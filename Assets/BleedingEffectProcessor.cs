@@ -7,8 +7,10 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
     private float bleedTimeCounter;
     private float bleedPerSecond;
 
-    private Action onStartBleeding;
+    public Action onStartBleeding;
+    public Action onEndBleeding;
     public bool isBleeding => bleedTimeCounter > 0;
+    private bool wasBleeding;
 
     private void Awake()
     {
@@ -32,7 +34,6 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             {
                 bleedTimeCounter = bleedingEffect.bleedTime;
                 bleedPerSecond = bleedingEffect.bleedAmountPerSecond;
-                onStartBleeding?.Invoke();
             }
         }
     }
@@ -44,6 +45,22 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             bleedTimeCounter-=Time.deltaTime;
             healthComponent.DrainHealth(bleedPerSecond*Time.deltaTime);
         }
+
+        FireEvent();
+    }
+
+    private void FireEvent()
+    {
+        if (isBleeding && !wasBleeding)
+        {
+            onStartBleeding?.Invoke();
+        }
+        else if (!isBleeding && wasBleeding)
+        {
+            onEndBleeding?.Invoke();
+        }
+
+        wasBleeding = isBleeding;
     }
 
     private void SpawnBloodParticleBridge()

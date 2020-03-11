@@ -16,6 +16,7 @@
           <e p="Read Me.txt" t="Include" />
         </e>
         <e p="BleedingEffectProcessor.cs" t="Include" />
+        <e p="BleedingHpBarColorModifier.cs" t="Include" />
         <e p="BlurMaterialController.cs" t="Include" />
         <e p="BtnTransferToNext.cs" t="Include" />
         <e p="CatchComponent.cs" t="Include" />
