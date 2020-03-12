@@ -9,6 +9,7 @@ public class CharacterHealthComponent : MonoBehaviour
 {
     public float maxHealth = 100;
     [HideInInspector] public float currentHealth;
+    private float healthWas;
 
     private Animator animator;
     private static readonly int Die = Animator.StringToHash("die");
@@ -24,6 +25,7 @@ public class CharacterHealthComponent : MonoBehaviour
 
     public Action<CharacterHealthComponent> OnTakeHit;
     public Action<CharacterHealthComponent> onLoseHealth;
+    public Action<CharacterHealthComponent> onHealthChanged;
     public Action onPlayerDie;
 
     // private CharacterBleedingComponent bleedingComponent;
@@ -39,13 +41,25 @@ public class CharacterHealthComponent : MonoBehaviour
         if (Camera.main != null) cameraShake = Camera.main.GetComponent<CameraShake>();
         GetComponent<PlayerCharacter>();
         currentHealth = maxHealth;
+        healthWas = currentHealth;
         // bleedingComponent = new CharacterBleedingComponent(this);
     }
 
-    // private void Update()
-    // {
-    //     bleedingComponent.Update();
-    // }
+    private void Update()
+    {
+        if (Math.Abs(currentHealth - healthWas) > Mathf.Epsilon)
+        {
+            onHealthChanged?.Invoke(this);
+        }
+        if (Math.Abs(currentHealth - healthWas) < -Mathf.Epsilon)
+        {
+            onLoseHealth?.Invoke(this);
+        }
+        
+        
+        healthWas = currentHealth;
+
+    }
 
     // Start is called before the first frame update
     public void TakeDamage(DamageData _damageData, Transform _damageSource, bool canTimeFreezed)
@@ -81,12 +95,10 @@ public class CharacterHealthComponent : MonoBehaviour
     {
         
         currentHealth = Mathf.Clamp(currentHealth-drain, 0, 100);
-        if (currentHealth == 0)
+        if (Math.Abs(currentHealth) <=0)
         {
             onPlayerDie?.Invoke();
         }
-        
-        onLoseHealth?.Invoke(this);
 
     }
 
@@ -97,9 +109,9 @@ public class CharacterHealthComponent : MonoBehaviour
         isTimeFreezed = true;
     }
     
-    public void Heal(int amount)
+    public void Heal(float amount)
     {
-        currentHealth = Mathf.Clamp(currentHealth+amount, 0, 100);
+        currentHealth = Mathf.Clamp(currentHealth+amount, 0, maxHealth);
     }
 
     

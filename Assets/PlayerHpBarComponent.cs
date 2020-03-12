@@ -27,7 +27,7 @@ public class PlayerHpBarComponent : MonoBehaviour
         slider.maxValue = chc.maxHealth;
         slider.value = chc.currentHealth;
         chc.OnTakeHit += UpdateUI;
-        chc.onLoseHealth += UpdateUI;
+        chc.onHealthChanged += UpdateUI;
     }
 
     private void UpdateUI(CharacterHealthComponent characterHealthComponent)

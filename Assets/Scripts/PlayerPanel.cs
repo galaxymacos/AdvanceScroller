@@ -8,7 +8,7 @@ public class PlayerPanel : MonoBehaviour
 { 
     public PlayerCharacter player;
     public Image ultimateBar;
-    CharacterUltimateComponent characterUltimateComponent;
+    RageComponent rageComponent;
 
     public bool setupFinished;
     public Action onPlayerSetup;
@@ -23,7 +23,7 @@ public class PlayerPanel : MonoBehaviour
 
     private void SetUp()
     {
-        characterUltimateComponent = player.GetComponent<CharacterUltimateComponent>();
+        rageComponent = player.GetComponent<RageComponent>();
         setupFinished = true;
         onPlayerSetupFinish?.Invoke();
     }
@@ -33,6 +33,6 @@ public class PlayerPanel : MonoBehaviour
     {
         if (!setupFinished) return;
         
-        ultimateBar.fillAmount = characterUltimateComponent.GetRagePercentage;
+        ultimateBar.fillAmount = rageComponent.GetRagePercentage;
     }
 }

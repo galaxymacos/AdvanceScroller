@@ -6,12 +6,12 @@ using UnityEngine;
 /// <summary>
 /// Control the behavior when the player uses unique skill
 /// </summary>
-public class UltimateEffectComponent : MonoBehaviour
+public class UltimateComponent : MonoBehaviour
 {
     private PlayerCharacter owner;
     [SerializeField] private float showOffTime = 1f;
     [SerializeField] private GameObject uniqueSkillFireParticlePrefab;
-
+    public Sprite ultimateIcon; 
     public Action onStartShowOff;
 
     private void Awake()

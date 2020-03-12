@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class CharacterUltimateComponent: MonoBehaviour
+public class RageComponent: MonoBehaviour
 {
     [SerializeField] private int _maxRage = 100;
 

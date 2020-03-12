@@ -98,10 +98,10 @@ public class ForceAttackFilter: CastSkillFilter
 public class UltimateRageFilter : CastSkillFilter
 {
     private bool isLastSkillUltimate;
-    private readonly CharacterUltimateComponent ultimateComponent;
+    private readonly RageComponent ultimateComponent;
     public UltimateRageFilter(string skillName, CharacterStateMachineBehavior characterStateMachineBehavior, CastSkillFilter next) : base(skillName, characterStateMachineBehavior, next)
     {
-        ultimateComponent = csmb.playerCharacter.GetComponent<CharacterUltimateComponent>();
+        ultimateComponent = csmb.playerCharacter.GetComponent<RageComponent>();
     }
 
     public override void DealWithResult()
@@ -134,7 +134,11 @@ public class LimitedUsageFilter: CastSkillFilter
 
     public override void DealWithResult()
     {
-        
+        if (skillName == "acquire")
+        {
+            csmb.playerCharacter.GetComponentInChildren<ItemPickupComponent>().PickUpRandomItem();
+        }
+
     }
 
     protected override bool Filter()
@@ -163,6 +167,10 @@ public class LimitedUsageFilter: CastSkillFilter
                 }
 
                 return false;
+            case "acquire":
+                var itemPickupComponent = csmb.playerCharacter.GetComponentInChildren<ItemPickupComponent>();
+                if (itemPickupComponent == null || !itemPickupComponent.HasItemNearBy) return false;
+                return true;
         }
 
         // The current skill is not limited 

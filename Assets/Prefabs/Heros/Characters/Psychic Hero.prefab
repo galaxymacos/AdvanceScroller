@@ -304,9 +304,9 @@ GameObject:
   - component: {fileID: -5606359923855577312}
   - component: {fileID: 8767242694777629644}
   - component: {fileID: -4683216809716156440}
-  - component: {fileID: 5657861194069404678}
   - component: {fileID: 249194176879845235}
   - component: {fileID: 1225255116830130641}
+  - component: {fileID: 5781193199059490347}
   m_Layer: 12
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -711,19 +711,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24bee37575fc2f348a01f4618d518060, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5657861194069404678
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 891296965151884848}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab5295d83a4fd2e46893948adbd57546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  showOffTime: 1
 --- !u!114 &249194176879845235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -749,6 +736,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxRage: 100
+--- !u!114 &5781193199059490347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240a8d45742045448b753f1f0128dc1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showOffTime: 1
+  uniqueSkillFireParticlePrefab: {fileID: 0}
+  ultimateIcon: {fileID: 0}
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0

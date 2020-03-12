@@ -814,36 +814,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Panel P1
       objectReference: {fileID: 0}
-    - target: {fileID: 6066631343731538689, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066631343777595867, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066631344088907939, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066631344088907939, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066631344896672325, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6066631344896672325, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd8c302de7a0f0a4db2cd31bc4fa7c8f, type: 3}
 --- !u!1 &3534414409700184850 stripped

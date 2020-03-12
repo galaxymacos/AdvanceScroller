@@ -228,8 +228,14 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         {
                             return "climb";
                         }
-
                         break;
+                    case "acquire":
+                        if (playerInput.verticalAxis < 0)
+                        {
+                            return "acquire";
+                        }
+                        break;
+                    
                 }
             }
         }

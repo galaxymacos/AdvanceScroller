@@ -10,7 +10,7 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        playerCharacter.GetComponent<UltimateEffectComponent>().ShowOff();
+        playerCharacter.GetComponent<UltimateComponent>().ShowOff();
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
@@ -21,7 +21,7 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
         base.OnStateExit(animator, stateInfo, layerIndex);
        
         animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTargetManually();
-        playerCharacter.GetComponent<UltimateEffectComponent>().End();
+        playerCharacter.GetComponent<UltimateComponent>().End();
         rb.gravityScale = 1;
     }
 
