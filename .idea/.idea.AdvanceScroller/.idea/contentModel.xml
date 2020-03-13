@@ -69,6 +69,7 @@
         <e p="ForceCancelShaderControl.cs" t="Include" />
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
         <e p="ForceShadowShaderComponent.cs" t="Include" />
+        <e p="GameEndDetector.cs" t="Include" />
         <e p="Girl Hero 1" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -301,6 +302,8 @@
         </e>
         <e p="UIControl.cs" t="Include" />
         <e p="UltimateIconComponent.cs" t="Include" />
+        <e p="UltimatePotion.cs" t="Include" />
+        <e p="UnknownPotion.cs" t="Include" />
         <e p="UserInteractedPanel.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />

@@ -88,7 +88,7 @@ public class PlayerCharacter : MonoBehaviour
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipByInputComponent = new CharacterFlipComponent(transform);
         
-        GetComponent<CharacterHealthComponent>().onPlayerDie = PlayerDie;
+        GetComponent<CharacterHealthComponent>().onPlayerDie += PlayerDie;
         onPlayerGrounded += ResetJumpTime;
 
 

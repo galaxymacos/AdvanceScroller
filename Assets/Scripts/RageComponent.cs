@@ -10,14 +10,17 @@ public class RageComponent: MonoBehaviour
 
     public readonly string ultimateSkillName = "skill4";
     
-    public int MaxRage => _maxRage;
+    public float MaxRage => _maxRage;
 
-    public int CurrentRage => _currentRage;
+    public float CurrentRage => _currentRage;
 
-    private int _currentRage;
-    public bool canUseUltimate => _currentRage == _maxRage;
-    public float GetRagePercentage => (float) _currentRage / _maxRage;
+    private float _currentRage;
+    public bool canUseUltimate => Math.Abs(_currentRage - _maxRage) < Mathf.Epsilon;
+    public float GetRagePercentage => _currentRage / _maxRage;
 
+    public Action onRageChanged;
+    private float rageWas;
+    
     private void Awake()
     {
         health = GetComponent<CharacterHealthComponent>();
@@ -27,6 +30,17 @@ public class RageComponent: MonoBehaviour
 
         _currentRage = MaxRage;
 
+        
+    }
+
+    private void Update()
+    {
+        if (Math.Abs(_currentRage - rageWas) > Mathf.Epsilon)
+        {
+            onRageChanged?.Invoke();
+        }
+        
+        rageWas = _currentRage;
     }
 
     // Take damage to increase rage
@@ -37,9 +51,12 @@ public class RageComponent: MonoBehaviour
             _currentRage = Mathf.Clamp(_currentRage + characterHealthComponent.damageDataFromLastAttack.damage * 2, 0, _maxRage);
         } 
     }
-    
-    
-    
+
+
+    public void RecoverRage(float amount)
+    {
+        _currentRage = Mathf.Clamp(_currentRage + amount, 0, _maxRage);
+    }
     public void ConsumeRage()
     {
         _currentRage = 0;
