@@ -42,7 +42,6 @@ public class GameEndDetector : MonoBehaviour
     {
         if (CheckGameEnd())
         {
-            print("Game Ends because of less than 2 player in the scene");
             onGameEnd?.Invoke();
         }
     }

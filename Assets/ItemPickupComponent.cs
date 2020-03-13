@@ -22,9 +22,20 @@ public class ItemPickupComponent : MonoBehaviour
         {
             return false;
         }
-        var randomItem = listOfItems[Random.Range(0, listOfItems.Count)];
+        Item randomItem = listOfItems[Random.Range(0, listOfItems.Count)];
         randomItem.Pickup(GetComponentInParent<PlayerCharacter>());
+
+        foreach (var item in collisionDetector.ObjectsInCollision)
+        {
+            if (item.GetComponent<Item>() == randomItem)
+            { 
+                collisionDetector.ObjectsInCollision.Remove(item);
+                break;
+            }
+        }
         return true;
+        
+        
     }
     
     
