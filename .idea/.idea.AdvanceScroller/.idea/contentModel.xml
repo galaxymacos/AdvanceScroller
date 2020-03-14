@@ -70,6 +70,7 @@
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
         <e p="ForceShadowShaderComponent.cs" t="Include" />
         <e p="GameEndDetector.cs" t="Include" />
+        <e p="GameStateMachine.cs" t="Include" />
         <e p="Girl Hero 1" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>

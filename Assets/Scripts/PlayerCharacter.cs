@@ -66,6 +66,9 @@ public class PlayerCharacter : MonoBehaviour
     public Action onCatchingSuccess;
     public Action onPlayerHitCeiling;
     public Action onPlayerUseUltimate;
+    public Action onPlayerBeingPushed;
+    public Action onPlayerBeingHurted;
+    public Action onPlayerBeingStunned;
 
     // Animation event
     public Action onPlayerStartWallSlide;
