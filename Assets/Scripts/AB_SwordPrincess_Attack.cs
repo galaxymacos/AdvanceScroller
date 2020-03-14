@@ -13,7 +13,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         
 
-        if (playerCharacter.isGrounded)
+        if (playerCharacter.IsGrounded)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
@@ -45,7 +45,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        playerCharacter.canControlMovement = !playerCharacter.isGrounded;
+        playerCharacter.canControlMovement = !playerCharacter.IsGrounded;
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

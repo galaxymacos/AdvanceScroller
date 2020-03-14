@@ -26,7 +26,7 @@ public class SMB_Push : CharacterStateMachineBehavior
         pushComponent.onHitWall += BounceFromWall;
         pushComponent.onHitGround += BounceFromGround;
         pushComponent.onHitCeiling += BounceFromCeiling;
-        groundedOnInitialization = playerCharacter.isGrounded;
+        groundedOnInitialization = playerCharacter.IsGrounded;
         hitCeilingOnInitialization = playerCharacter.isHitCeiling;
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
@@ -51,7 +51,7 @@ public class SMB_Push : CharacterStateMachineBehavior
             // rb.velocity = vectorAfterBounce;
         // }
 
-        if (hasHitCollision && playerCharacter.isGrounded && rb.velocity.y <=0)
+        if (hasHitCollision && playerCharacter.IsGrounded && rb.velocity.y <=0)
         {
             animator.SetTrigger("idle");
         }

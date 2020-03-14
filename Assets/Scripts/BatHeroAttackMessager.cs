@@ -56,7 +56,7 @@ public class BatHeroAttackMessager : MonoBehaviour
         RaycastHit2D hitInfoWall = Physics2D.Raycast(playerCharacter.transform.position,
             Vector3.Normalize(teleportDirection), teleportDirection.magnitude, playerCharacter.whatIsWall);
         
-        if (playerCharacter.isGrounded)
+        if (playerCharacter.IsGrounded)
         {
             if (playerCharacter.isFacingRight)
             {

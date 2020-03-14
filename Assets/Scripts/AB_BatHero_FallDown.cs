@@ -18,9 +18,15 @@ public class AB_BatHero_FallDown : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (playerCharacter.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+
+        if (playerCharacter.IsGrounded)
         {
-            _animator.SetTrigger("idle");
+            Debug.Log(1);
+            if (characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+            {
+                Debug.Log(2);
+                _animator.SetTrigger("idle");
+            }
         }
     }
 

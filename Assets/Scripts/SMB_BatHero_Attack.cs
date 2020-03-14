@@ -12,7 +12,7 @@ public class SMB_BatHero_Attack : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
 
-        if (playerCharacter.isGrounded)
+        if (playerCharacter.IsGrounded)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();

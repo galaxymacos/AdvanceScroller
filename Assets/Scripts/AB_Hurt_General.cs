@@ -37,7 +37,7 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
                 playerCharacter.dashInvincibleTimeCounter = playerCharacter.dashInvincibleTime;
             }
         }
-        if(playerCharacter.isGrounded && rb.velocity.y <= 0)
+        if(playerCharacter.IsGrounded && rb.velocity.y <= 0)
             animator.SetTrigger("idle");
         
     }

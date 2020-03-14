@@ -20,7 +20,7 @@ public class AB_SwordPrincess_Falldown : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        if (messagingSystem.IsGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             _animator.SetTrigger("idle");
         }

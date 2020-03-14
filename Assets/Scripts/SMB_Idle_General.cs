@@ -8,7 +8,7 @@ public class SMB_Idle_General : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
 
-        if (!playerCharacter.isGrounded)
+        if (!playerCharacter.IsGrounded)
         {
             _animator.SetTrigger("fall down");
         }

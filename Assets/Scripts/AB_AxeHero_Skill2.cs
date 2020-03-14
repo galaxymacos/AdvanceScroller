@@ -11,7 +11,7 @@ public class AB_AxeHero_Skill2 : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
-        if (!playerCharacter.isGrounded)
+        if (!playerCharacter.IsGrounded)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();

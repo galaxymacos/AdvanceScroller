@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class AB_AxeHero_FallDown : CharacterStateMachineBehavior
 {
-    private PlayerCharacter messagingSystem;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        messagingSystem = _animator.GetComponent<PlayerCharacter>();
         
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
 
@@ -19,7 +17,7 @@ public class AB_AxeHero_FallDown : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (messagingSystem.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        if (playerCharacter.IsGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             _animator.SetTrigger("idle");
         }

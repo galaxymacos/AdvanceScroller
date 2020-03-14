@@ -20,7 +20,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
         hitEnemy = false;
         hasActivatedBulletTime = false;
         dashTimeCounter = dashDuration;
-        if (!playerCharacter.isGrounded)
+        if (!playerCharacter.IsGrounded)
         {
             playerCharacter.dashTimeCounter++;
         }

@@ -22,7 +22,7 @@ public class AB_PsychicHero_Attack : CharacterStateMachineBehavior
         chargedTimeCounter = 0;
 
 
-        if (playerCharacter.isGrounded)
+        if (playerCharacter.IsGrounded)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();

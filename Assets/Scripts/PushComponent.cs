@@ -48,7 +48,7 @@ public class PushComponent : MonoBehaviour
     public void Push(Transform damageSource, float speed, float angleOffset, float pushDistance)
     {
 
-        if (angleOffset < 0 && playerCharacter.isGrounded)
+        if (angleOffset < 0 && playerCharacter.IsGrounded)
         {
             return;
         }
@@ -88,11 +88,11 @@ public class PushComponent : MonoBehaviour
             onHitWall?.Invoke(wallLeftCheck.position);
         }
 
-        if (playerCharacter.isGrounded && wasOnGrounded == false)
+        if (playerCharacter.IsGrounded && wasOnGrounded == false)
         {
             onHitGround?.Invoke(playerCharacter.groundCheck.position);
         }
-        wasOnGrounded = playerCharacter.isGrounded;
+        wasOnGrounded = playerCharacter.IsGrounded;
 
         if (playerCharacter.isHitCeiling && wasHitCeiling == false)
         {

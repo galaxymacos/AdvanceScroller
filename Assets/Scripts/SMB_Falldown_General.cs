@@ -17,7 +17,7 @@ public class SMB_Falldown_General : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        if (playerCharacter.isGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
+        if (playerCharacter.IsGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
         {
             _animator.SetTrigger("idle");
         }

@@ -47,7 +47,7 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
 
     public void SpawnGroundDustGroundLimited()
     {
-        if (playerCharacter.isGrounded)
+        if (playerCharacter.IsGrounded)
         {
             SpawnGroundDust();
         }

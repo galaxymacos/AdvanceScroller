@@ -21,9 +21,9 @@ public class SMB_Jump_General : CharacterStateMachineBehavior
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
+        
             anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(secondJump, firstJump));
-
+        
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
         }
@@ -31,9 +31,9 @@ public class SMB_Jump_General : CharacterStateMachineBehavior
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(_animator.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
-
+        
             anims.Add(new KeyValuePair<AnimationClip, AnimationClip>(firstJump, secondJump));
-
+        
             aoc.ApplyOverrides(anims);
             _animator.runtimeAnimatorController = aoc;
         }
