@@ -15062,6 +15062,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1497755076}
+  - component: {fileID: 1497755078}
   - component: {fileID: 1497755077}
   m_Layer: 0
   m_Name: GameStateMachine
@@ -15093,9 +15094,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1497755075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5eecb045cb4457940a3b97f7911776f4, type: 3}
+  m_Script: {fileID: 11500000, guid: dabe45164b8b4709aa28a0aa850b46b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1497755078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497755075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e0ad3dd45488af498b4059f3afa27db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  messager: {fileID: 1497755077}
 --- !u!1 &1524678024
 GameObject:
   m_ObjectHideFlags: 0

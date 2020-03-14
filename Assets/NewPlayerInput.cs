@@ -14,6 +14,7 @@ public class NewPlayerInput : PlayerInput
     public Action onMoveUp;
     public Action onMoveDown;
     public Action onAttackButtonPressed;
+    public Action onPauseButtonPressed;
 
 
     
@@ -193,6 +194,12 @@ public class NewPlayerInput : PlayerInput
         if (!acceptInput) return;
 
         skill4ButtonPressed = false;
+    }
+
+    public void OnPause()
+    {
+        print("on pause");
+        onPauseButtonPressed?.Invoke();
     }
     
     

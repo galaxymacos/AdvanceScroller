@@ -591,6 +591,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=1)""
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""2ff9f64d-065c-4010-8a75-fc80f791d808"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press(behavior=1)""
                 }
             ],
             ""bindings"": [
@@ -1033,6 +1041,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""AttackRelease"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f208e1c0-de8a-47db-af7e-0ba3063e4578"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""11b88dd1-0a01-4f10-b207-d60abec690dc"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -1079,6 +1109,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerNew_Skill4Release = m_PlayerNew.FindAction("Skill4Release", throwIfNotFound: true);
         m_PlayerNew_VerticalMovement = m_PlayerNew.FindAction("VerticalMovement", throwIfNotFound: true);
         m_PlayerNew_JumpRelease = m_PlayerNew.FindAction("JumpRelease", throwIfNotFound: true);
+        m_PlayerNew_Pause = m_PlayerNew.FindAction("Pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -1338,6 +1369,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerNew_Skill4Release;
     private readonly InputAction m_PlayerNew_VerticalMovement;
     private readonly InputAction m_PlayerNew_JumpRelease;
+    private readonly InputAction m_PlayerNew_Pause;
     public struct PlayerNewActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -1358,6 +1390,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Skill4Release => m_Wrapper.m_PlayerNew_Skill4Release;
         public InputAction @VerticalMovement => m_Wrapper.m_PlayerNew_VerticalMovement;
         public InputAction @JumpRelease => m_Wrapper.m_PlayerNew_JumpRelease;
+        public InputAction @Pause => m_Wrapper.m_PlayerNew_Pause;
         public InputActionMap Get() { return m_Wrapper.m_PlayerNew; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -1415,6 +1448,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @JumpRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
                 @JumpRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
                 @JumpRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                @Pause.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerNewActionsCallbackInterface = instance;
             if (instance != null)
@@ -1467,6 +1503,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @JumpRelease.started += instance.OnJumpRelease;
                 @JumpRelease.performed += instance.OnJumpRelease;
                 @JumpRelease.canceled += instance.OnJumpRelease;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
             }
         }
     }
@@ -1513,5 +1552,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnSkill4Release(InputAction.CallbackContext context);
         void OnVerticalMovement(InputAction.CallbackContext context);
         void OnJumpRelease(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
