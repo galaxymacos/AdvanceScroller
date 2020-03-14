@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 203539754}
   - component: {fileID: 203539755}
   m_Layer: 0
-  m_Name: Iceworld_Background_Ocean1
+  m_Name: Iceworld_Background_OceanMidLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,8 +390,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 203539753}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.4008417, y: 1.0484766, z: 252.39453}
-  m_LocalScale: {x: 2.4, y: 1.5, z: 1}
+  m_LocalPosition: {x: 6, y: 3.4, z: 252.39453}
+  m_LocalScale: {x: 2.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1475475234}
   m_RootOrder: 2
@@ -608,87 +608,6 @@ Transform:
   m_Father: {fileID: 909264980}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &273610588
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 273610589}
-  - component: {fileID: 273610590}
-  m_Layer: 0
-  m_Name: Iceworld_Background_0001 (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &273610589
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273610588}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -24.959156, y: 9.218476, z: 252.39453}
-  m_LocalScale: {x: 2.4, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1475475234}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &273610590
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 273610588}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: -16
-  m_Sprite: {fileID: 21300000, guid: c376948577663234f942e90523f4af7e, type: 3}
-  m_Color: {r: 0.7686275, g: 0.7686275, b: 0.7686275, a: 0.5882353}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 8, y: 4}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &283013183
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,7 +619,7 @@ GameObject:
   - component: {fileID: 283013184}
   - component: {fileID: 283013185}
   m_Layer: 0
-  m_Name: Iceworld_Background_0002
+  m_Name: Iceworld_Background_0002Down
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,8 +633,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283013183}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 16.013842, y: -1.6905235, z: 252.39453}
-  m_LocalScale: {x: 4.8023844, y: 0.702468, z: 1}
+  m_LocalPosition: {x: 16, y: -1, z: 252.39453}
+  m_LocalScale: {x: 5, y: 1.017, z: 1}
   m_Children: []
   m_Father: {fileID: 1475475234}
   m_RootOrder: 1
@@ -965,7 +884,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.75, y: 0.01953125, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -981,6 +900,24 @@ Tilemap:
   m_GameObject: {fileID: 372156216}
   m_Enabled: 1
   m_Tiles:
+  - first: {x: -12, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: 26, y: -4, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   - first: {x: -11, y: -3, z: 0}
     second:
       serializedVersion: 2
@@ -1043,6 +980,8 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 297f910ab5f3bea41b729bcdd2f49d65, type: 2}
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 365f9b984348b2047ba4e57744221c8e, type: 2}
+  - m_RefCount: 2
+    m_Data: {fileID: 11400000, guid: f57fa9885d041894b82f1d6f25e3d1ee, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 2
     m_Data: {fileID: 21300028, guid: 5afbff6f96636d34d801464d3179b7d2, type: 3}
@@ -1050,8 +989,10 @@ Tilemap:
     m_Data: {fileID: 21300016, guid: 5afbff6f96636d34d801464d3179b7d2, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300038, guid: 5afbff6f96636d34d801464d3179b7d2, type: 3}
+  - m_RefCount: 2
+    m_Data: {fileID: 21300028, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 6
+  - m_RefCount: 8
     m_Data:
       e00: 1
       e01: 0
@@ -1070,13 +1011,13 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 6
+  - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -11, y: -3, z: 0}
-  m_Size: {x: 37, y: 3, z: 1}
+  m_Origin: {x: -12, y: -4, z: 0}
+  m_Size: {x: 39, y: 4, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3447,24 +3388,6 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
-  - first: {x: -12, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
-  - first: {x: -11, y: 4, z: 0}
-    second:
-      serializedVersion: 2
-      m_TileIndex: 9
-      m_TileSpriteIndex: 9
-      m_TileMatrixIndex: 0
-      m_TileColorIndex: 0
-      m_TileObjectToInstantiateIndex: 65535
-      m_AllTileFlags: 1073741825
   - first: {x: 14, y: 4, z: 0}
     second:
       serializedVersion: 2
@@ -3519,6 +3442,24 @@ Tilemap:
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
       m_AllTileFlags: 1073741825
+  - first: {x: -12, y: 7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
+  - first: {x: -10, y: 7, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 3
+      m_TileSpriteIndex: 3
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 4
@@ -3527,7 +3468,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 6af085aa5171958488c31746da6a89ef, type: 2}
   - m_RefCount: 40
     m_Data: {fileID: 11400000, guid: f57fa9885d041894b82f1d6f25e3d1ee, type: 2}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: 11400000, guid: 14fe95966c6d9ca4d80c7cbdb1b1bd0a, type: 2}
   - m_RefCount: 16
     m_Data: {fileID: 11400000, guid: 20a44402a1a05414b905e2a327d8aa4c, type: 2}
@@ -3539,7 +3480,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: e625ac8ad7409b7449a6062e5c216777, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: f22d6a6f3f3beac4b97152fd234eceba, type: 2}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: b098a143d5925654096ad5a13baf8688, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 44e65a356a2b09a4ba3ad947e94f272a, type: 2}
@@ -3552,7 +3493,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 40
     m_Data: {fileID: 21300028, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 4
     m_Data: {fileID: 21300026, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
   - m_RefCount: 16
     m_Data: {fileID: 21300014, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
@@ -3564,7 +3505,7 @@ Tilemap:
     m_Data: {fileID: 21300006, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300020, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
-  - m_RefCount: 5
+  - m_RefCount: 3
     m_Data: {fileID: 21300012, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 21300004, guid: 99e0832f2e8efae4ba10b757f5e03873, type: 3}
@@ -3598,7 +3539,7 @@ Tilemap:
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -12, y: -4, z: 0}
-  m_Size: {x: 40, y: 9, z: 1}
+  m_Size: {x: 40, y: 13, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -3629,7 +3570,7 @@ GameObject:
   - component: {fileID: 1369088560}
   - component: {fileID: 1369088561}
   m_Layer: 0
-  m_Name: Iceworld_Background_Ocean1 (1)
+  m_Name: Iceworld_Background_Ocean1MidRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3643,8 +3584,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369088559}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.600842, y: 1.0484766, z: 252.39453}
-  m_LocalScale: {x: 2.4, y: 1.5, z: 1}
+  m_LocalPosition: {x: 25.98, y: 3.4, z: 252.39453}
+  m_LocalScale: {x: 2.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1475475234}
   m_RootOrder: 3
@@ -3774,7 +3715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400978320}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.073, y: 5.355, z: 26.50586}
+  m_LocalPosition: {x: -8.71, y: 8.35, z: 26.50586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 716905424}
@@ -3873,7 +3814,7 @@ GameObject:
   - component: {fileID: 1425285535}
   - component: {fileID: 1425285536}
   m_Layer: 0
-  m_Name: Iceworld_Background_0001 (2)
+  m_Name: Iceworld_Background_0001TopRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3887,11 +3828,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425285534}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.600842, y: 3.6284766, z: 252.39453}
-  m_LocalScale: {x: 2.4, y: 1, z: 1}
+  m_LocalPosition: {x: 25.96, y: 8.15, z: 252.39453}
+  m_LocalScale: {x: 2.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1475475234}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1425285536
 SpriteRenderer:
@@ -3974,7 +3915,6 @@ Transform:
   - {fileID: 283013184}
   - {fileID: 203539754}
   - {fileID: 1369088560}
-  - {fileID: 273610589}
   - {fileID: 1425285535}
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -4420,7 +4360,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1661030397}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.659875, y: 2.1298609, z: 0.609375}
+  m_LocalPosition: {x: -6.659875, y: 5.12, z: 0.609375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 909264980}
@@ -4568,7 +4508,7 @@ GameObject:
   - component: {fileID: 1749289815}
   - component: {fileID: 1749289816}
   m_Layer: 0
-  m_Name: Iceworld_Background_0001
+  m_Name: Iceworld_Background_0001Topleft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4582,8 +4522,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1749289814}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.4008417, y: 3.5984764, z: 252.39453}
-  m_LocalScale: {x: 2.4, y: 1, z: 1}
+  m_LocalPosition: {x: 6, y: 8.15, z: 252.39453}
+  m_LocalScale: {x: 2.5, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1475475234}
   m_RootOrder: 0
