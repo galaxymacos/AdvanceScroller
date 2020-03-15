@@ -5,8 +5,6 @@ using UnityEngine.Animations;
 
 public class SignRoationAnimControl : MonoBehaviour
 {
-
-    [SerializeField] GameObject[] RotatedSigns;
     Animator animator;
     bool signIsTouched;
     void Start()
