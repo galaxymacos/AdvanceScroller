@@ -15,6 +15,12 @@ public class ClickToSelectChampionComponent : MonoBehaviour
         selectionPanelElement.onBeingClicked += SelectChampion;
     }
 
+    private void OnDestroy()
+    {
+        selectionPanelElement.onBeingClicked -= SelectChampion;
+
+    }
+
     /// <summary>
     /// Event Function
     /// </summary>

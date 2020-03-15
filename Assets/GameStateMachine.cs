@@ -55,9 +55,9 @@ public class End : IState
 
 public class Play : IState
 {
+    public static event Action OnGameStart;
     public void Tick()
     {
-        Debug.Log("play ticking");
     }
 
     public void OnEnter()

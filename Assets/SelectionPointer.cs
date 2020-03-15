@@ -7,7 +7,7 @@ using UnityEngine;
 public class SelectionPointer : UIControl
 {
     public NewPlayerInput owner;
-    private SelectionPanelElement pointingElement;
+    [SerializeField] private SelectionPanelElement pointingElement;
 
     public SelectionPanelElement PointingElement => pointingElement;
 
@@ -15,6 +15,7 @@ public class SelectionPointer : UIControl
     public bool IsActivated => isActivated;
 
     public Action onSetUp;
+
 
     private void BindToInput(NewPlayerInput NewInput)
     {
@@ -37,6 +38,8 @@ public class SelectionPointer : UIControl
 
     private void NavigateToLeft()
     {
+        if (gameObject.activeSelf == false) return;
+        print("navigate to left");
         if (pointingElement.leftElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -48,6 +51,8 @@ public class SelectionPointer : UIControl
     
     public void NavigateToRight()
     {
+        if (gameObject.activeSelf == false) return;
+        print("navigate to right");
         if (pointingElement.rightElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -60,6 +65,8 @@ public class SelectionPointer : UIControl
 
     private void NavigateToTop()
     {
+        if (gameObject.activeSelf == false) return;
+        print("navigate to top");
         if (pointingElement.topElement != null && isActivated)
         {
             pointingElement.onDeselected?.Invoke();
@@ -73,6 +80,7 @@ public class SelectionPointer : UIControl
 
     private void NavigateToDown()
     {
+        if (gameObject.activeSelf == false) return;
         print("Navigate to bottom");
         if (pointingElement.downElement != null && isActivated)
         {
@@ -108,8 +116,10 @@ public class SelectionPointer : UIControl
     public void Setup(NewPlayerInput input)
     {
         BindToInput(input);
+        PointerStorage.pointers.Add(this);
         Activate();
         onSetUp?.Invoke();
+        
         // SetpointingElement(SelectionElementStorage.instance.FirstElement);
     }
     

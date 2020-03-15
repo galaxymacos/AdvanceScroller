@@ -24,6 +24,12 @@ public class LuckySpin : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnDestroy()
+    {
+        MenuStateMachine.onStateChangedToMapVote -= StartSpinning;
+        MenuStateMachine.onStateChangedToMapVote -= StartCounting;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -47,8 +53,8 @@ public class LuckySpin : MonoBehaviour
 
     public void SwitchToRandomCandidate()
     {
-        currentSpinCandidate = SpinCandidateStorage.GetNextSpinCandidate(currentSpinCandidate);
-        spriteRenderer.sprite = currentSpinCandidate.sprite;
+        currentSpinCandidate = SpinCandidateStorage.instance.GetNextSpinCandidate(currentSpinCandidate);
+        GetComponent<SpriteRenderer>().sprite = currentSpinCandidate.sprite;
     }
     
 

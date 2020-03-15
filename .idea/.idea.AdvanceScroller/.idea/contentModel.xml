@@ -13,6 +13,7 @@
         <e p="Axe Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
+        <e p="BackToMenuPanelElement.cs" t="Include" />
         <e p="Bat Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
         </e>
@@ -30,6 +31,7 @@
         <e p="DissolveShaderControl.cs" t="Include" />
         <e p="DissolveShadowCreationMessager.cs" t="Include" />
         <e p="ElectrificationEffectProcessor.cs" t="Include" />
+        <e p="EndScreen.cs" t="Include" />
         <e p="EnvironmentGenerator.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
@@ -65,6 +67,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="ExitPanel.cs" t="Include" />
         <e p="FetchMapData.cs" t="Include" />
         <e p="ForceCancelShaderControl.cs" t="Include" />
         <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
@@ -82,6 +85,7 @@
         <e p="IAttackEffectProcessor.cs" t="Include" />
         <e p="InjuryMaterialController.cs" t="Include" />
         <e p="InjuryShaderComponent.cs" t="Include" />
+        <e p="InputDeactivateTester.cs" t="Include" />
         <e p="IState.cs" t="Include" />
         <e p="Item.cs" t="Include" />
         <e p="ItemPickupComponent.cs" t="Include" />
@@ -120,8 +124,8 @@
         <e p="MaterialChangeComponent.cs" t="Include" />
         <e p="MaterialController.cs" t="Include" />
         <e p="MenuStateMachine.cs" t="Include" />
+        <e p="MenuStateMachineMessager.cs" t="Include" />
         <e p="NewPlayerInput.cs" t="Include" />
-        <e p="PanelPositionComponent.cs" t="Include" />
         <e p="ParticleSystemPauser.cs" t="Include" />
         <e p="ParticleSystemRecycler.cs" t="Include" />
         <e p="PausableSMB.cs" t="Include" />
@@ -132,7 +136,9 @@
         <e p="PlayerInputStorage.cs" t="Include" />
         <e p="PlayerMpBarComponent.cs" t="Include" />
         <e p="PlayerThrowMessager.cs" t="Include" />
+        <e p="PointerCounter.cs" t="Include" />
         <e p="PointerCreator.cs" t="Include" />
+        <e p="PointerPositionComponent.cs" t="Include" />
         <e p="PointerStorage.cs" t="Include" />
         <e p="Psychic Hero" t="Include">
           <e p="Read Me.txt" t="Include" />
@@ -140,6 +146,7 @@
         <e p="RandomColorAssigner.cs" t="Include" />
         <e p="RandomColorComponent.cs" t="Include" />
         <e p="RandomEventFactory.cs" t="Include" />
+        <e p="ReplayCurrentLevelButton.cs" t="Include" />
         <e p="SaveDataComposer.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
@@ -307,6 +314,7 @@
         <e p="UltimatePotion.cs" t="Include" />
         <e p="UnknownPotion.cs" t="Include" />
         <e p="UserInteractedPanel.cs" t="Include" />
+        <e p="ZoomAccordingToFov.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

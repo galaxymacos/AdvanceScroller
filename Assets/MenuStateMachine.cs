@@ -7,12 +7,14 @@ public class MenuStateMachine : MonoBehaviour
 {
     public static MenuState state;
 
+    public static Action onSelectionChangeToSelectHero;
     public static Action onStateChangingToMap;
     public static Action onStateChangedToMap;
     public static Action onStateChangedToMapVote;
     private void Awake()
     {
         state = MenuState.SelectHero;
+        onSelectionChangeToSelectHero?.Invoke();
     }
 
     public static void OnStateChange(MenuState newState)

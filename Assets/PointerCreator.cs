@@ -5,9 +5,17 @@ using UnityEngine;
 public class PointerCreator : MonoBehaviour
 {
     public GameObject pointerPrefab;
+
+    public static PointerCreator instance;
     private void Awake()
     {
         PlayerInputStorage.onNewInputAdded += CreatePointerForInput;
+
+        DontDestroyOnLoad(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+        }
     }
 
     /// <summary>
@@ -18,13 +26,15 @@ public class PointerCreator : MonoBehaviour
     {
         if (pointerPrefab != null)
         {
+            
             GameObject pointer = Instantiate(pointerPrefab, transform);
             pointer.GetComponent<SelectionPointer>().Setup(input);
-            PointerStorage.pointers.Add(pointer.GetComponent<SelectionPointer>());
         }
         else
         {
             Debug.LogError("Have not assigned pointer for input");
         }
     }
+    
+    
 }

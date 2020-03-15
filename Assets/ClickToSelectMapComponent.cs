@@ -16,6 +16,11 @@ public class ClickToSelectMapComponent : MonoBehaviour
         selectionPanelElement.onBeingClicked += SelectMap;
     }
 
+    private void OnDestroy()
+    {
+        selectionPanelElement.onBeingClicked -= SelectMap;
+    }
+
     /// <summary>
     /// Event Function
     /// </summary>

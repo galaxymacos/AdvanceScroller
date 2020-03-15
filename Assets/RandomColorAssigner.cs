@@ -32,7 +32,6 @@ public class RandomColorAssigner: MonoBehaviour
     /// </summary>
     public Color GenerateRandomColorNonRepet()
     {
-        print("generate random color non repet");
         if (oneTimeColors.Count == 0)
         {
             Debug.LogError("Not enough color left");

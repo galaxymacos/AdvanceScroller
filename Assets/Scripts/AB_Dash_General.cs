@@ -94,7 +94,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
             }
         }    
 
-        if (playerInput.dashButtonPressed)
+        if (playerInput != null && playerInput.dashButtonPressed)
         {
             playerInput.dashButtonPressed = false;
             characterAnimator.SetTrigger("idle");

@@ -27,6 +27,7 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
 
     public void Process(DamageData damageData)
     {
+        if (damageData.attackEffects == null) return;
         foreach (ScriptableObject attackEffect in damageData.attackEffects)
         {
             var bleedingEffect = attackEffect as BleedingEffect;

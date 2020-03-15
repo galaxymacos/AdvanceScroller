@@ -173,7 +173,6 @@ public class PlayerCharacter : MonoBehaviour
 
         bool wasGrounded = isGrounded;
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
-        print("is grounded = "+isGrounded);
         if (wasGrounded != isGrounded && isGrounded)
         {
             onPlayerGrounded?.Invoke();

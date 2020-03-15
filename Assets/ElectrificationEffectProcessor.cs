@@ -27,6 +27,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
 
     public void Process(DamageData damageData)
     {
+        if (damageData.attackEffects == null) return;
         foreach (ScriptableObject attackEffect in damageData.attackEffects)
         {
             var electrificationEffect = attackEffect as ElectrificationEffect;

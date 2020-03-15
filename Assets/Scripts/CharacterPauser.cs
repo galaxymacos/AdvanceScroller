@@ -40,7 +40,12 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
         isPausing = true;
-        playerCharacter.playerInput.acceptInput = false;
+        
+        if (playerCharacter.playerInput != null)
+        {
+            playerCharacter.playerInput.acceptInput = false;
+        }
+        
         onCharacterPaused?.Invoke();
     }
 

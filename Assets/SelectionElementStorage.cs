@@ -21,12 +21,18 @@ public class SelectionElementStorage : MonoBehaviour
         firstElement = FirstElementMap;
         foreach (var championElement in championUI)
         {
-            championElement.gameObject.SetActive(false);
+            if (championElement != null)
+            {
+                championElement.gameObject.SetActive(false);
+            }
         }
 
         foreach (var mapElement in mapUI)
         {
-            mapElement.gameObject.SetActive(true);
+            if (mapElement != null)
+            {
+                mapElement.gameObject.SetActive(true);
+            }
         }
     }
 

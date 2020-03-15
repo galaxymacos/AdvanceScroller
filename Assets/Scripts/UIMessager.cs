@@ -14,7 +14,11 @@ public class UIMessager : MonoBehaviour
         PlayerCharacterSpawner.onPlayerSpawnFinished += SetupPlayerUi;
     }
 
-    
+    private void OnDestroy()
+    {
+        PlayerCharacterSpawner.onPlayerSpawnFinished -= SetupPlayerUi;
+    }
+
 
     public void SetupPlayerUi()
     {

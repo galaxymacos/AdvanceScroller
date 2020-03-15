@@ -51,12 +51,10 @@ public class NewPlayerInput : PlayerInput
 
         if (Math.Abs(horizontalAxis - 1) < Mathf.Epsilon && previousHorizontalAxis < 1)
         {
-            print("move right");
             onMoveRight?.Invoke();
         }
         else if (Math.Abs(horizontalAxis + 1) < Mathf.Epsilon && previousHorizontalAxis > -1)
         {
-            print("move left");
             onMoveLeft?.Invoke();
         }
         

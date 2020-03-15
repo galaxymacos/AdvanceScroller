@@ -16,23 +16,21 @@ public class PointerStorage : MonoBehaviour
 
     private static int CurrentActivatedPointerNumber()
     {
-        int count = 0;
-        foreach (SelectionPointer pointer in pointers)
-        {
-            if (pointer.IsActivated)
-            {
-                count++;
-            }
-        }
 
+        int count = 0;
+        foreach (var selectionPointer in FindObjectsOfType<SelectionPointer>())
+        {
+            count++;
+        }
         return count;
     }
 
     private static void ActivateAllPointers()
     {
-        foreach (SelectionPointer pointer in pointers)
+        foreach (Transform pointer in PointerCreator.instance.transform)
         {
-            pointer.Activate();
+            pointer.gameObject.SetActive(true);
+            pointer.GetComponent<SelectionPointer>().Activate();
         }
     }
 }
