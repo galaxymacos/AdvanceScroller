@@ -73,7 +73,6 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerBeingPushed;
     public Action onPlayerBeingHurted;
     public Action onPlayerBeingStunned;
-
     // Animation event
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;
@@ -85,6 +84,8 @@ public class PlayerCharacter : MonoBehaviour
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipByInputComponent;
     [HideInInspector] public GameObject chargedDagger;
+
+    public Sprite winPose;
 
 
     private void Awake()

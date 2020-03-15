@@ -6,24 +6,30 @@ using UnityEngine;
 public class EndScreen : MonoBehaviour
 {
     public GameObject optionMenu;
+    public GameObject statisticsPanel;
     public GameObject pointerPrefab;
 
+    public static Action onEndScreenActivate;
     private void Awake()
     {
-        End.OnGameEnd += ActivateOptionMenu;
+        End.OnGameEnd += ActivateEndMenuElement;
+        onEndScreenActivate+=AssignPointerToMenuElement;
+
     }
 
     private void OnDestroy()
     {
-        End.OnGameEnd -= ActivateOptionMenu;
+        End.OnGameEnd -= ActivateEndMenuElement;
+        onEndScreenActivate-=AssignPointerToMenuElement;
     }
 
 
 
-    private void ActivateOptionMenu()
+    private void ActivateEndMenuElement()
     {
         optionMenu.SetActive(true);
-        AssignPointerToMenuElement();
+        statisticsPanel.SetActive(true);
+        onEndScreenActivate?.Invoke();
     }
 
     private void AssignPointerToMenuElement()

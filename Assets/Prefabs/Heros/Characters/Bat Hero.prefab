@@ -937,6 +937,7 @@ MonoBehaviour:
   movementSpeed: 5
   canControlMovement: 1
   chargedDagger: {fileID: 0}
+  winPose: {fileID: 21300000, guid: 33b65ab7d2b303d43aaf224ddea4b21c, type: 3}
 --- !u!50 &8906824143711737655
 Rigidbody2D:
   serializedVersion: 4

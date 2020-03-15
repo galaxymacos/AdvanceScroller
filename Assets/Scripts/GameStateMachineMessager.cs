@@ -74,4 +74,9 @@ public class GameStateMachineMessager: MonoBehaviour
             Destroy(selectionPointer.gameObject);
         }
     }
+
+    public bool ShouldTransferToGameEnd()
+    {
+        return EndSlowMotion.slowMotionTimeCounter <= 0;
+    }
 }
