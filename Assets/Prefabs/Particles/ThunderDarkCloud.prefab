@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 43759360617082901}
   - component: {fileID: 43759360617082898}
   - component: {fileID: 43759360617082899}
+  - component: {fileID: 1866953992}
   m_Layer: 0
   m_Name: DarkCloud
   m_TagString: Untagged
@@ -62,7 +63,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 3.35}
   m_LocalScale: {x: 1, y: 1, z: 0.1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1848238400}
   m_Father: {fileID: 43759360508699303}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -149,7 +151,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 9
+      scalar: 10
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -256,7 +258,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.3962264, g: 0.3962264, b: 0.3962264, a: 0.8156863}
+      maxColor: {r: 0.24528301, g: 0.244126, b: 0.244126, a: 0.9490196}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -701,7 +703,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 30, y: 1, z: 1}
+    m_Scale: {x: 100, y: 1, z: 1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -899,7 +901,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 30
+      scalar: 35
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4788,6 +4790,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1866953992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43759360617082896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44c886e54d0ac345b34a4fb69df5fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetParticleSystem: {fileID: 43759360617082898}
 --- !u!1 &43759362231567070
 GameObject:
   m_ObjectHideFlags: 0
@@ -4831,7 +4846,7 @@ ParticleSystemForceField:
     m_Shape: 2
     m_StartRange: 1.5
     m_EndRange: 3
-    m_Length: 30
+    m_Length: 40
     m_GravityFocus: 0
     m_RotationRandomness: {x: 0, y: 0}
     m_DirectionCurveX:
@@ -4996,7 +5011,7 @@ ParticleSystemForceField:
     m_GravityCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5102,7 +5117,7 @@ ParticleSystemForceField:
     m_RotationAttractionCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5155,7 +5170,7 @@ ParticleSystemForceField:
     m_DragCurve:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 50
+      scalar: 10
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5314,6 +5329,32 @@ ParticleSystemForceField:
         m_RotationOrder: 4
     m_MultiplyDragByParticleSize: 1
     m_MultiplyDragByParticleVelocity: 1
+--- !u!114 &1163894496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752181522591645455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44c886e54d0ac345b34a4fb69df5fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetParticleSystem: {fileID: 5752181522591645449}
+--- !u!114 &1009349710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752181522687301038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f44c886e54d0ac345b34a4fb69df5fb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetParticleSystem: {fileID: 5752181522687301032}
 --- !u!1001 &43759361300828103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5324,12 +5365,12 @@ PrefabInstance:
     - target: {fileID: 5713005750399070408, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: m_Name
-      value: ThunderGenerator 1 (1)
+      value: ThunderGeneratorRight
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5394,7 +5435,7 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5404,22 +5445,22 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.06
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.09
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5429,13 +5470,45 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: NoiseModule.frequency
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: NoiseModule.octaveScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d494f68b41448940abdd3289c18706b, type: 3}
+--- !u!1 &5752181522591645455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5713005750399070408, guid: 8d494f68b41448940abdd3289c18706b,
+    type: 3}
+  m_PrefabInstance: {fileID: 43759361300828103}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5752181522591645450 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
+    type: 3}
+  m_PrefabInstance: {fileID: 43759361300828103}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5752181522591645449 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
     type: 3}
   m_PrefabInstance: {fileID: 43759361300828103}
   m_PrefabAsset: {fileID: 0}
@@ -5449,12 +5522,12 @@ PrefabInstance:
     - target: {fileID: 5713005750399070408, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: m_Name
-      value: ThunderGenerator 1
+      value: ThunderGeneratorLeft
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -20
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5519,7 +5592,7 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: NoiseModule.strength.minScalar
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5529,22 +5602,22 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startLifetime.scalar
-      value: 0.7
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.06
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.09
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
@@ -5554,13 +5627,120 @@ PrefabInstance:
     - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
         type: 3}
       propertyPath: NoiseModule.frequency
-      value: 20
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: NoiseModule.strength.scalar
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+        type: 3}
+      propertyPath: NoiseModule.octaveScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d494f68b41448940abdd3289c18706b, type: 3}
+--- !u!1 &5752181522687301038 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5713005750399070408, guid: 8d494f68b41448940abdd3289c18706b,
+    type: 3}
+  m_PrefabInstance: {fileID: 43759361387619686}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5752181522687301035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5713005750399070413, guid: 8d494f68b41448940abdd3289c18706b,
     type: 3}
   m_PrefabInstance: {fileID: 43759361387619686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5752181522687301032 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5713005750399070414, guid: 8d494f68b41448940abdd3289c18706b,
+    type: 3}
+  m_PrefabInstance: {fileID: 43759361387619686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5590596179860262158
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 43759360617082901}
+    m_Modifications:
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0018336788
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99999833
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.21000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5590596178280705105, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+        type: 3}
+      propertyPath: m_Name
+      value: RainGenerator
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c6b248a4a0f5b147b6fc0c74c961412, type: 3}
+--- !u!4 &1848238400 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5590596178280705102, guid: 2c6b248a4a0f5b147b6fc0c74c961412,
+    type: 3}
+  m_PrefabInstance: {fileID: 5590596179860262158}
   m_PrefabAsset: {fileID: 0}
