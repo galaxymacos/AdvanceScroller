@@ -9,6 +9,7 @@ public class SpikeGenerator : MonoBehaviour
     private float timeLeftForSpikeGeneration;
     [SerializeField] private float timeCircleForSpike = 20;
     [SerializeField] Transform iceSpike;
+    
 
     private void Start()
     {
@@ -36,5 +37,5 @@ public class SpikeGenerator : MonoBehaviour
         
     }
 
-
+    
 }
