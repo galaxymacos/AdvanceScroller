@@ -13,7 +13,7 @@ public class ExitPanel : MonoBehaviour
 
     private void ExitGame(SelectionPointer selectionPointer)
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        // UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
 }

@@ -20,6 +20,7 @@ public class GameStateMachineMessager: MonoBehaviour
         }
 
         End.OnGameEnd += DeRegisterInputFromPlayer;
+        End.OnGameEnd += UnPauseAll;
         Play.OnGameStart += ClearInput;
     }
 
@@ -78,5 +79,20 @@ public class GameStateMachineMessager: MonoBehaviour
     public bool ShouldTransferToGameEnd()
     {
         return EndSlowMotion.slowMotionTimeCounter <= 0;
+    }
+
+    private void UnPauseAll()
+    {
+        var pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
+        foreach (IPauseable pauseable in pauseables)
+        {
+            pauseable.UnPause();
+        }
+        
+        var characters = FindObjectsOfType<PlayerCharacter>();
+        foreach (var character in characters)
+        {
+            character.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        }
     }
 }

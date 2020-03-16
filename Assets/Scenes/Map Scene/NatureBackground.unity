@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -18482,7 +18482,71 @@ PrefabInstance:
     - target: {fileID: 1382913880067124349, guid: 17629d64b1a7ee14c8683e878cad10c1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534414409776213627, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f922002032136c4687b8dced9bc624c,
+        type: 3}
+    - target: {fileID: 3534414409776213627, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3534414409776213627, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200539626679442, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fb75a98aad5d42149bf398e0bed37729,
+        type: 3}
+    - target: {fileID: 7295200539626679442, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200539626679442, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200539902700103, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 137adc4b5a4bdb84587af37f8855a33b,
+        type: 3}
+    - target: {fileID: 7295200539902700103, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200539902700103, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200540659280677, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: df5153fca31c9bf47b2d36359b5dd373,
+        type: 3}
+    - target: {fileID: 7295200540659280677, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7295200540659280677, guid: 17629d64b1a7ee14c8683e878cad10c1,
+        type: 3}
+      propertyPath: m_FillMethod
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 17629d64b1a7ee14c8683e878cad10c1, type: 3}

@@ -44,8 +44,7 @@ public class CharacterMover : MonoBehaviour
         playerCharacter.GetComponent<Rigidbody2D>().isKinematic = true;
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
-        playerCharacter.transform.Find("Character Point Light 2D").GetComponent<Light2D>().intensity *= 5;
-        LightingManager.instance.GetComponent<Light2D>().intensity /= 3;
+        playerCharacter.transform.Find("Character Point Light 2D").GetComponent<Light2D>().intensity *= 2;
         foreach (var playerCollider in playerCharacter.GetComponents<Collider>())
         {
             playerCollider.enabled = false;

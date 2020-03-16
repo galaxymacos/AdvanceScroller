@@ -25,6 +25,17 @@ public class CollisionDetector: MonoBehaviour
         objectsInCollision = new List<GameObject>();
     }
 
+    private void Update()
+    {
+        for (int i = 0; i < objectsInCollision.Count; i++)
+        {
+            if (objectsInCollision[i] == null)
+            {
+                ObjectsInCollision.RemoveAt(i);
+            }
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (objectsInCollision == null)

@@ -29,18 +29,25 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     private void DealDamageToSingleTarget(GameObject gameObjectCollided)
     {
-        
+        bool hitTarget = false;
         if (gameObjectCollided != transform.gameObject && gameObjectCollided != null)
         {
             if (gameObjectCollided.GetComponent<PlayerCharacter>() != null)
             {
                 if (!objectsHasProcessed.Contains(gameObjectCollided))
                 {
-                    gameObjectCollided.GetComponent<DamageReceiver>()?.Analyze(damageData, transform.root);
-                    objectsHasProcessed.Add(gameObjectCollided);
+                    DamageReceiver damageReceiver = gameObjectCollided.GetComponent<DamageReceiver>(); 
+                    if ( damageReceiver != null)
+                    {
+                        hitTarget = true;
+                        damageReceiver.Analyze(damageData, transform.root);
+                        objectsHasProcessed.Add(gameObjectCollided);
+                    }
                 }
             }
         }
+
+        
     }
 
     public void Execute()

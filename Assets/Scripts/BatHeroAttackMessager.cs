@@ -126,7 +126,7 @@ public class BatHeroAttackMessager : MonoBehaviour
         
     }
 
-    public void ResetVelocityAfterTeleport()
+    private void ResetVelocityAfterTeleport()
     {
         rb.velocity = Vector2.zero;
     }

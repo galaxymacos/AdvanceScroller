@@ -6,8 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(SelectionPointer))]
 public class PointerPositionComponent : MonoBehaviour
 {
-    public Vector3 offset;
-    private static readonly Vector3 baseOffset = new Vector3(0,-0.8f,0);
+    [SerializeField] private Vector3 baseOffset = new Vector3(0,-0.8f,0);
     [SerializeField] private Vector3 increaseOffset = new Vector3(0,-0.4f,0);
     
     private static int layerOfIncrease = 0;

@@ -1203,7 +1203,7 @@ MonoBehaviour:
   showOffTime: 0.7
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
-  ultimateIcon: {fileID: 0}
+  ultimateIcon: {fileID: 21300000, guid: 137adc4b5a4bdb84587af37f8855a33b, type: 3}
 --- !u!114 &-6956731921203344667
 MonoBehaviour:
   m_ObjectHideFlags: 0

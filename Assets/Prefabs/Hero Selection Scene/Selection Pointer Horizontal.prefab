@@ -110,8 +110,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38bf05a3ceea0b5419437e424dd41c00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: {x: 1, y: 0.1, z: 0}
-  increaseOffset: {x: 0, y: -0.2, z: 0}
+  baseOffset: {x: 1, y: 0.6, z: 0}
+  increaseOffset: {x: 0, y: -0.6, z: 0}
 --- !u!114 &2959545912895322593
 MonoBehaviour:
   m_ObjectHideFlags: 0

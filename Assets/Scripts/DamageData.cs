@@ -21,6 +21,8 @@ public class DamageData: ScriptableObject
 
     public List<ScriptableObject> attackEffects;
 
+    public AudioClip hitSound;
+
 
 }
 

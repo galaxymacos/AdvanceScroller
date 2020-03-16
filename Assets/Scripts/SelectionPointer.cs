@@ -93,7 +93,7 @@ public class SelectionPointer : UIControl
 
     public void SetTargetChampion()
     {
-        if (!IsActivated) return;
+        if (!IsActivated || PointerCounter.PointerNum <= 1) return;
         owner.attackButtonPressed = false;
         isActivated = false;    
         pointingElement.onBeingClicked?.Invoke(this);

@@ -61,6 +61,7 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         rb.isKinematic = false;
         rb.velocity = velocityBeforePause;
         isPausing = false;
+        
         if (playerCharacter.playerInput != null)
         {
             playerCharacter.playerInput.acceptInput = true;
