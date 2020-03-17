@@ -74,7 +74,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
     private void ElectricShot()
     {
         healthComponent.DrainHealth(10);
-        SpriteEffectFactory.instance.SpawnEffect("MetalHit2D", transform.root);
+        SpriteEffectFactory.instance.SpawnEffect("Electricity Explosion", transform.root);
         print("ElectricShot");
     }
     
