@@ -18,6 +18,11 @@ public class PointerCreator : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        PlayerInputStorage.onNewInputAdded -= CreatePointerForInput;
+    }
+
     /// <summary>
     /// Call by event to assign a pointer to every player input
     /// </summary>
@@ -35,6 +40,8 @@ public class PointerCreator : MonoBehaviour
             Debug.LogError("Have not assigned pointer for input");
         }
     }
+    
+    
     
     
 }

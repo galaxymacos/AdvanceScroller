@@ -11,7 +11,12 @@ public class PointerStorage : MonoBehaviour
     private void Awake()
     {
         pointers = new List<SelectionPointer>();
-        MenuStateMachine.onStateChangedToMap += ActivateAllPointers;
+        MenuStateMachine.onStateChangedToMap += PointerUtil.ActivateAllPointers;
+    }
+
+    private void OnDestroy()
+    {
+        MenuStateMachine.onStateChangedToMap -= PointerUtil.ActivateAllPointers;
     }
 
     private static int CurrentActivatedPointerNumber()
@@ -25,12 +30,4 @@ public class PointerStorage : MonoBehaviour
         return count;
     }
 
-    private static void ActivateAllPointers()
-    {
-        foreach (Transform pointer in PointerCreator.instance.transform)
-        {
-            pointer.gameObject.SetActive(true);
-            pointer.GetComponent<SelectionPointer>().Activate();
-        }
-    }
 }

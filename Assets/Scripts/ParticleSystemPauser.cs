@@ -16,7 +16,6 @@ public class ParticleSystemPauser : MonoBehaviour ,IPauseable
     {
         if (isPausing)
         {
-            print("rain wants to stop");
             return;
         }
         TargetParticleSystem.Pause();
@@ -28,7 +27,6 @@ public class ParticleSystemPauser : MonoBehaviour ,IPauseable
     {
         if (!isPausing)
         {
-            print("rain wants to rain");
             return;
         }
         TargetParticleSystem.Play();

@@ -10,4 +10,6 @@ public class AxeHeroAnimatorEvent : MonoBehaviour
     {
         Instantiate(hugeSlashPrefab, particleSpawnTransform.position, particleSpawnTransform.rotation);
     }
+    
+    
 }

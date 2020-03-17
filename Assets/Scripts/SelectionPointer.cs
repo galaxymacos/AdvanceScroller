@@ -110,6 +110,7 @@ public class SelectionPointer : UIControl
     {
         isActivated = true;
         gameObject.SetActive(true);
+        print("Pointer has been activated and pointed to the first element, which is "+ SelectionElementStorage.instance.FirstElement.gameObject. name);
         SetpointingElement(SelectionElementStorage.instance.FirstElement);
     }
 

@@ -52,6 +52,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     public void Execute()
     {
+        print("running ");
         objectsHasProcessed = new List<GameObject>();
         isRunning = true;
     }

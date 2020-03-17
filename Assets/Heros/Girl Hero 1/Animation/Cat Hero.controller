@@ -873,7 +873,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -5991539849176375649}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 1353860879152448392}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -1238,6 +1239,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  canControlHorizontalMovement: 0
+  characterAnimator: {fileID: 0}
+  playerCharacter: {fileID: 0}
+--- !u!114 &1353860879152448392
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b9984c139baa95438b6221a185c34dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo: []
+  stateCanForceTransformTo:
+  - dash
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}

@@ -65,7 +65,6 @@ GameObject:
   - component: {fileID: 5724016293209041878}
   - component: {fileID: 8094547661665500154}
   - component: {fileID: 100242236868056014}
-  - component: {fileID: 8745717458769620241}
   - component: {fileID: 7649557437535148010}
   - component: {fileID: 7104702498524691118}
   - component: {fileID: 9103004191731880685}
@@ -439,21 +438,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.42, y: 0.71}
   m_Direction: 0
---- !u!114 &8745717458769620241
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965933177036805574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4fd68b98b715de4583dcf8507885c87, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hugeSlashPrefab: {fileID: 6494076125343625711, guid: 1527d16065ef63746bd28ab85961c367,
-    type: 3}
-  particleSpawnTransform: {fileID: 0}
 --- !u!114 &7649557437535148010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +508,9 @@ MonoBehaviour:
   attackSecondStrike: {fileID: 3352755199626831379}
   bleedingAttack: {fileID: 3459767135313448309}
   lightningAttack: {fileID: 8425318585358249017}
+  catPrefab: {fileID: 3222097676526244191, guid: 371d7492c3c095146803b83da1e2d207,
+    type: 3}
+  catSpawnLocation: {fileID: 8355361752509574661}
 --- !u!1 &965933177369232322
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,7 +808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3004795231724724656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.69, y: -0.14, z: 0}
+  m_LocalPosition: {x: 0.6, y: -0.14, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 965933176725478333}
