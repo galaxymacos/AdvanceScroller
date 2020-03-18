@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2366351535322247071}
   - component: {fileID: -6311842081053559217}
   - component: {fileID: 8478374141996344984}
-  - component: {fileID: 6294679790708050409}
   m_Layer: 0
   m_Name: IceSpike
   m_TagString: Untagged
@@ -54,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -125,6 +124,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 12
+  DamageData: {fileID: 11400000, guid: 4d61b06b4a90fff438116178204dee9f, type: 2}
 --- !u!114 &-6311842081053559217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,16 +149,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170bcdf4e01941a4a8c207502bc22b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6294679790708050409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2797761629412786303}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8230ebcf46fef48458bf024fbd293756, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DamageData: {fileID: 11400000, guid: 4d61b06b4a90fff438116178204dee9f, type: 2}
+  gameobject: {fileID: 0}

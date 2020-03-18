@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class TrapPauser : MonoBehaviour , IPauseable
 {
-    // SpikeFalling spike;
+    [SerializeField] IceSpike gameobject;
+    private float speedBeforePause;
     public void Pause()
     {
-        // spike.speed = 0;
+        gameobject.speed = 0;
     }
 
     public void UnPause()
     {
-        // spike.speed = 12;
+        gameobject.speed = speedBeforePause;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        speedBeforePause = gameobject.speed;
     }
 
     // Update is called once per frame

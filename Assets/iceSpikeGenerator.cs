@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeGenerator : MonoBehaviour
+public class iceSpikeGenerator : MonoBehaviour
 {
 
     [SerializeField] Transform[] spikePositions;
@@ -18,24 +18,24 @@ public class SpikeGenerator : MonoBehaviour
 
     private void Update()
     {  
-        spikeGenerator();
+        Generator();
     }
 
 
-    void spikeGenerator()
+    void Generator()
     {
         timeLeftForSpikeGeneration += -1 * Time.deltaTime;
-        int Rn = Random.Range(1, spikePositions.Length);
+        int Rn = Random.Range(0, spikePositions.Length);
         if (timeLeftForSpikeGeneration <= 0)
         {
             Transform newSpike =  Instantiate(iceSpike, spikePositions[Rn].transform.position, spikePositions[Rn].transform.rotation);
-
+            
             print("I am generated");
             timeLeftForSpikeGeneration = timeCircleForSpike;
         }
        
         
     }
-
     
+
 }
