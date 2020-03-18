@@ -26,6 +26,25 @@ public class AudioController : MonoBehaviour
         public AudioObject[] audio;
     }
 
+    private class AudioJob
+    {
+        public AudioAction action;
+        public AudioType type;
+
+        public AudioJob(AudioAction action, AudioType type)
+        {
+            this.action = action;
+            this.type = type;
+        }
+    }
+
+    private enum AudioAction
+    {
+        START,
+        STOP, 
+        RESTART
+    }
+
     #region Unity Functions
 
     private void Awake()
@@ -49,17 +68,18 @@ public class AudioController : MonoBehaviour
 
     public void PlayAudio(AudioType _type)
     {
-        
+        Addjob(new AudioJob(AudioAction.START, _type));
     }
 
     public void StopAudio(AudioType _type)
     {
-        
+        Addjob(new AudioJob(AudioAction.STOP, _type));
     }
 
     public void RestartAudio(AudioType _type)
     {
-        
+        Addjob(new AudioJob(AudioAction.RESTART, _type));
+
     }
 
     #endregion
@@ -92,6 +112,11 @@ public class AudioController : MonoBehaviour
     private void LogWarning(string _msg)
     {
         if (!debug) return;
+    }
+
+    private void Addjob(AudioJob _job)
+    {
+        
     }
 
     #endregion

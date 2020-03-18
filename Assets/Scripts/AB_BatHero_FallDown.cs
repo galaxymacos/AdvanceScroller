@@ -37,4 +37,5 @@ public class AB_BatHero_FallDown : CharacterStateMachineBehavior
         playerCharacter.onPlayerWalkNextToWall -= TransferToWallSlide;
 
     }
+    
 }

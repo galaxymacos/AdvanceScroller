@@ -48,7 +48,6 @@ public class EndSlowMotion: IState
         {
             slowMotionTimeCounter -= Time.unscaledDeltaTime;
         }
-        Debug.Log(slowMotionTimeCounter);
     }
 
     public void OnEnter()

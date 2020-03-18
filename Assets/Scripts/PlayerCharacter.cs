@@ -12,7 +12,7 @@ public class PlayerCharacter : MonoBehaviour
     // Ground check
     public Transform groundCheck;
     
-    private bool isGrounded;
+    public bool isGrounded;
 
     public bool IsGrounded => isGrounded;
 
@@ -76,7 +76,8 @@ public class PlayerCharacter : MonoBehaviour
     // Animation event
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;
-    
+
+    private Rigidbody2D rb;
     public bool isFacingRight => transform.localScale.x > 0;
     
     public float movementSpeed = 5f;
@@ -99,6 +100,8 @@ public class PlayerCharacter : MonoBehaviour
         GetComponent<CharacterHealthComponent>().onPlayerDie += PlayerDie;
         onPlayerGrounded += ResetJumpTime;
 
+        rb = GetComponent<Rigidbody2D>();
+
 
     }
     
@@ -111,13 +114,13 @@ public class PlayerCharacter : MonoBehaviour
 
     private void Update()
     {
-
         UpdateFacingDirection();
 
         if (dashInvincibleTimeCounter > 0)
         {
             dashInvincibleTimeCounter -= Time.deltaTime;
         }
+
     }
     private void FixedUpdate()
     {

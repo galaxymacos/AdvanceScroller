@@ -15,11 +15,11 @@ public class SMB_Run_General : CharacterStateMachineBehavior
         }
         
     }
-
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-    }
+    //
+    // // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    // public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    // {
+    // }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

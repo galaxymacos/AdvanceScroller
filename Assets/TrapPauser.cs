@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class TrapPauser : MonoBehaviour , IPauseable
 {
-    SpikeFalling spike;
+    // SpikeFalling spike;
     public void Pause()
     {
-        spike.speed = 0;
+        // spike.speed = 0;
     }
 
     public void UnPause()
     {
-        spike.speed = 12;
+        // spike.speed = 12;
     }
 
     // Start is called before the first frame update

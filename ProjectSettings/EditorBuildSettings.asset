@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/ArrowsMap.unity
     guid: 6ca69a74127246d42938c6cfa9242fc9
   - enabled: 1
-    path: Assets/Scenes/Map Scene/IceBorneMap.unity
-    guid: 9645efc4e830bed43b4f7715fff72d1b
+    path: Assets/Scenes/Test Scene/IceMap.unity
+    guid: c8c386b3c74020043a325aebf53f37ce
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 788da60fc9647c64ea0f433ac9446879,
       type: 2}

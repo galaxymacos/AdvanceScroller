@@ -35,7 +35,6 @@ public class CharacterPauser : MonoBehaviour, IPauseable
         }
 
         velocityBeforePause = rb.velocity;
-        print(velocityBeforePause);
         animator.speed = 0f;
         rb.velocity = Vector2.zero;
         rb.isKinematic = true;
