@@ -180,6 +180,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   checkRadius: 0.03
   groundCheck: {fileID: 965933177369232323}
+  isGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -371,9 +372,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   skills:
-  - {fileID: 11400000, guid: 25af4d0cfe812724f8aa8de5dcb69718, type: 2}
-  - {fileID: 11400000, guid: e27714221bfd21947a3ef93a87e9daae, type: 2}
-  - {fileID: 11400000, guid: 613836845ff15a840b55b79173b2a72e, type: 2}
+  - {fileID: 11400000, guid: c5f2ec2f00dc18c49accd9e8e19abb01, type: 2}
+  - {fileID: 11400000, guid: c34725b3b7c91034ba63deb62d4690e8, type: 2}
+  - {fileID: 11400000, guid: 08bec2974460ac04abdabda3e37a51aa, type: 2}
 --- !u!114 &4585271009633640019
 MonoBehaviour:
   m_ObjectHideFlags: 0
