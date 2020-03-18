@@ -4,30 +4,31 @@ using UnityEngine;
 
 public class SingleAttackComponent : CollisionDetector, IAttackComponent
 {
-    private bool hasDealDamaged;
-    private bool isRunning;
+    // private bool hasDealDamaged;
+    // private bool isRunning;
     public DamageData damageData;
+    
 
     public List<GameObject> objectsHasProcessed = new List<GameObject>();
 
     private void Update()
     {
-        if (!isRunning) return;
-        if (ObjectsInCollision == null) return;
+        // if (!isRunning) return;
+        // if (ObjectsInCollision == null) return;
         
         
-        foreach (GameObject objectCollided in ObjectsInCollision)
-        {
-            DealDamageToSingleTarget(objectCollided);
-        }
-
-        if (isRunning)
-        {
-            isRunning = false;
-        }
+        // foreach (GameObject objectCollided in ObjectsInCollision)
+        // {
+        //     DealDamageToSingleTarget(objectCollided);
+        // }
+        //
+        // if (isRunning)
+        // {
+        //     isRunning = false;
+        // }
     }
 
-    private void DealDamageToSingleTarget(GameObject gameObjectCollided)
+    private bool DealDamageToSingleTarget(GameObject gameObjectCollided)
     {
         bool hitTarget = false;
         if (gameObjectCollided != transform.gameObject && gameObjectCollided != null)
@@ -47,16 +48,30 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
             }
         }
 
-        
+        if (hitTarget)
+        {
+            AudioController.instance.PlayAudio(damageData.hitSound);
+        }
+        return hitTarget;
     }
 
-    public void Execute()
+    public bool Execute()
     {
         objectsHasProcessed = new List<GameObject>();
-        isRunning = true;
+        // isRunning = true;
+        bool hitTarget = false;
+        foreach (GameObject objectCollided in ObjectsInCollision)
+        {
+            if (DealDamageToSingleTarget(objectCollided))
+            {
+                hitTarget = true;
+            }
+        }
+
+        return hitTarget;
     }
 
- 
+
 
 
     // public void StopDetectTargetManually()

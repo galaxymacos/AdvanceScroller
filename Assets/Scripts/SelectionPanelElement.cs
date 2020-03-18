@@ -16,7 +16,14 @@ public class SelectionPanelElement : UIControl
 
     private void Awake()
     {
-        onBeingClicked += MapBeingClick;
+        onBeingClicked += PlaySound;
+        onSelected += () => AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+    }
+
+    private void OnDestroy()
+    {
+        onBeingClicked -= PlaySound;
+        onSelected -= () => AudioController.instance.PlayAudio(AudioType.Pointer_Move);
     }
 
     public void DeleteFromLinkedList()
@@ -33,9 +40,9 @@ public class SelectionPanelElement : UIControl
         }
     }
 
-    private void MapBeingClick(SelectionPointer selectionPointer)
+    private void PlaySound(SelectionPointer selectionPointer)
     {
-        print(gameObject.name);
+        AudioController.instance.PlayAudio(AudioType.Pointer_Confirm);
     }
 
   

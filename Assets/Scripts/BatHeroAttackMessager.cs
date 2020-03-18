@@ -136,6 +136,7 @@ public class BatHeroAttackMessager : MonoBehaviour
     public void AttackFirstHit()
     {
         attackFirstStrike.Execute();
+
     }
 
     public void AttackSecondHit()

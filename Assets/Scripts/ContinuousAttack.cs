@@ -3,7 +3,7 @@ using UnityEngine;
 
 public interface IAttackComponent
 {
-    void Execute();
+    bool Execute();
 }
 public class ContinuousAttack : CollisionDetector, IAttackComponent
 {
@@ -24,11 +24,13 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     public bool hasUsedOneLastStrike;
 
 
-    public void Execute()
+    public bool Execute()
     {
         hasUsedOneLastStrike = false;
         running = true;
         Tick();
+
+        return false;    // TODO add the logic for continous attack to return if it hits the enemy or not
     }
 
     public void StopDetectTargetManually()

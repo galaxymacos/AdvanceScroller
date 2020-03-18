@@ -65,6 +65,7 @@
           </e>
         </e>
         <e p="IceSpike.cs" t="Include" />
+        <e p="iceSpikeGenerator.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
             <e p="TooCubeForest" t="Include">
@@ -296,8 +297,6 @@
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
         <e p="SignRoationAnimControl.cs" t="Include" />
-        <e p="SpikeFalling.cs" t="Include" />
-        <e p="SpikeGenerator.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="HealthBarShakeComponent.cs" t="Include" />
           <e p="HealthDecreaseComponent.cs" t="Include" />
