@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbb7afaf2b7b9234691a74b617e4d97e, type: 3}
-  m_Name: Buff MySelf
+  m_Name: Bleeding Claw
   m_EditorClassIdentifier: 
-  skillName: skill1
-  coolDown: 15
+  skillName: skill3
+  coolDown: 5
   coolDownCounter: 0
-  spriteInCooldownPanel: {fileID: 21300000, guid: da1a814d555829d4a8da3db7b905f045,
+  spriteInCooldownPanel: {fileID: 21300000, guid: 420bf93edd9f0db4fb20c2def70cb0eb,
     type: 3}

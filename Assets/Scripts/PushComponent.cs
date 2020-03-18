@@ -30,8 +30,12 @@ public class PushComponent : MonoBehaviour
 
     public void Push(Transform damageSource, float speed, float pushDistance)
     {
+        print(gameObject.name+" is being pushed");
+
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
+            print(gameObject.name+" is being pushed ++++");
+
             pushDirection = Vector3.Normalize(transform.position - damageSource.position);
             pushSpeed = speed;
             this.pushDistance = pushDistance;
@@ -47,28 +51,38 @@ public class PushComponent : MonoBehaviour
     /// <param name="angleOffset"></param>
     public void Push(Transform damageSource, float speed, float angleOffset, float pushDistance)
     {
+        print(gameObject.name+" is being pushed");
 
         if (angleOffset < 0 && playerCharacter.IsGrounded)
         {
             return;
         }
+
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
+            
+            print(gameObject.name+" is being pushed ++++++");
+
             Vector2 relativePositionBetweenActors = (damageSource.position.x - playerCharacter.transform.position.x) < 0
                 ? new Vector2(1, 0)
                 : new Vector2(-1, 0);
             if (damageSource.GetComponent<PlayerCharacter>().isFacingRight)
             {
                 pushDirection = Quaternion.AngleAxis(angleOffset, Vector3.forward) * relativePositionBetweenActors;
+                print("push to right");
             }
             else
             {
                 pushDirection = Quaternion.AngleAxis(-angleOffset, Vector3.forward) * relativePositionBetweenActors;
+                print("push to left");
             }
 
             pushSpeed = speed;
             this.pushDistance = pushDistance;
             GetComponent<Animator>().SetTrigger("push");
+            GetComponent<Animator>().SetBool("Test", true);
+            print("Set push animation parameter");
+
         }
     }
 
