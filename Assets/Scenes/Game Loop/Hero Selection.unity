@@ -580,13 +580,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 358398773}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -939,13 +939,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 404044983}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -1887,7 +1887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioObjects:
-  - type: 50
+  - typeInString: 
     clip: {fileID: 8300000, guid: cab7de2aab07dfb418df72a574e0e5f7, type: 3}
 --- !u!4 &881622803
 Transform:
@@ -2516,13 +2516,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1016037452}
-    characterCount: 49
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3527,13 +3527,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1726954616}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3971,38 +3971,22 @@ MonoBehaviour:
   debug: 1
   tracks:
   - source: {fileID: 1458272365}
-    audio:
-    - type: 1
-      clip: {fileID: 8300000, guid: a7bc3b3d0cae56c49a365025679347bc, type: 3}
-    - type: 2
-      clip: {fileID: 8300000, guid: a7bc3b3d0cae56c49a365025679347bc, type: 3}
+    audio: []
   - source: {fileID: 1011333973}
     audio: []
   - source: {fileID: 981339384}
     audio: []
   - source: {fileID: 969774941}
-    audio:
-    - type: 36
-      clip: {fileID: 8300000, guid: 250c692d57b20cc40920bd3da4498633, type: 3}
-    - type: 28
-      clip: {fileID: 8300000, guid: f12ff94f0169be0419ddd54e76574222, type: 3}
+    audio: []
   - source: {fileID: 364014557}
-    audio:
-    - type: 3
-      clip: {fileID: 8300000, guid: 81c578d0d4912cd4eb20fc1762e30567, type: 3}
-    - type: 4
-      clip: {fileID: 8300000, guid: 4a37827696d799a4b8085a57420e31d7, type: 3}
-    - type: 5
-      clip: {fileID: 8300000, guid: f9dd10c176a073346a523f4bd1448ebd, type: 3}
+    audio: []
   - source: {fileID: 471400958}
-    audio:
-    - type: 49
-      clip: {fileID: 8300000, guid: c5978a69148717d49a717f7a567834fd, type: 3}
+    audio: []
   - source: {fileID: 1758985126}
     audio:
-    - type: 6
+    - typeInString: Pointer_Move
       clip: {fileID: 8300000, guid: 81c578d0d4912cd4eb20fc1762e30567, type: 3}
-    - type: 7
+    - typeInString: Pointer_Confirm
       clip: {fileID: 8300000, guid: 81c578d0d4912cd4eb20fc1762e30567, type: 3}
 --- !u!4 &1827578961
 Transform:
@@ -4186,13 +4170,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1893303169}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
