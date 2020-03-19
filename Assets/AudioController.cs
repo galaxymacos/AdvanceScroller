@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioController : MonoBehaviour
@@ -9,8 +10,8 @@ public class AudioController : MonoBehaviour
     public bool debug;
     public AudioTrack[] tracks;
 
-    private Hashtable m_AudioTable; // relationshiop between audio types (key) and audio tracks (value)
-    private Hashtable m_JobTable; // relationship between audio types (key) and jobs (value) (Coroutine, IEnumnerator)
+    private Dictionary<AudioType, AudioTrack> m_AudioTable; // relationshiop between audio types (key) and audio tracks (value)
+    private Dictionary<AudioType, IEnumerator> m_JobTable; // relationship between audio types (key) and jobs (value) (Coroutine, IEnumnerator)
 
     
 
@@ -93,8 +94,8 @@ public class AudioController : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(gameObject);
-        m_AudioTable = new Hashtable();
-        m_JobTable = new Hashtable();
+        m_AudioTable = new Dictionary<AudioType, AudioTrack>();
+        m_JobTable = new Dictionary<AudioType, IEnumerator>();
         GenerateAudioTable();
     }
     private void Dispose()
@@ -104,10 +105,9 @@ public class AudioController : MonoBehaviour
             Log("Currently there is no sound job in the table. Terminating...");
             return;
         }
-        foreach (DictionaryEntry _entry in m_JobTable)
+        foreach (var _entry in m_JobTable.Keys)
         {
-            IEnumerator _job = (IEnumerator)_entry.Value;
-            StopCoroutine(_job);
+            StopCoroutine(m_JobTable[_entry]);
         }
     }
 
@@ -157,7 +157,7 @@ public class AudioController : MonoBehaviour
     {
         yield return new WaitForSeconds(_job.delay);
         
-        AudioTrack _track = (AudioTrack) m_AudioTable[_job.type];
+        AudioTrack _track = m_AudioTable[_job.type];
         _track.source.clip = GetAudioClipFromAudioTrack(_job.type, _track);
 
         switch (_job.action)
@@ -224,11 +224,11 @@ public class AudioController : MonoBehaviour
         }
 
         AudioType _conflictingAudio = AudioType.None;
-        foreach (DictionaryEntry _entry in m_JobTable)
+        foreach (var _entry in m_JobTable.Keys)
         {
-            AudioType _audioType = (AudioType) _entry.Key;
-            AudioTrack _audioTrackInUse = (AudioTrack) m_AudioTable[_audioType];
-            AudioTrack _audioTrackNeeded = (AudioTrack) m_AudioTable[_type];
+            AudioType _audioType = _entry;
+            AudioTrack _audioTrackInUse = m_AudioTable[_audioType];
+            AudioTrack _audioTrackNeeded = m_AudioTable[_type];
             if (_audioTrackNeeded.source == _audioTrackInUse.source)
             {
                 // Conflict
@@ -250,7 +250,7 @@ public class AudioController : MonoBehaviour
             return;
         }
 
-        IEnumerator _runningJob = (IEnumerator) m_JobTable[_type];
+        IEnumerator _runningJob = m_JobTable[_type];
         StopCoroutine(_runningJob);
         m_JobTable.Remove(_type);
     }
