@@ -27,7 +27,7 @@ public class InjuryMaterialController : MaterialController
         IEnumerable<CharacterHealthComponent> healthComponent = FindObjectsOfType<MonoBehaviour>().OfType<CharacterHealthComponent>();
         foreach (CharacterHealthComponent characterHealthComponent in healthComponent)
         {
-            characterHealthComponent.OnTakeHit += RunBridge;
+            characterHealthComponent.onTakeHit += RunBridge;
         }
     }
 

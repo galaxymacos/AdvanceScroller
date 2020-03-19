@@ -50,7 +50,10 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
         if (hitTarget)
         {
-            AudioController.instance.PlayAudio(damageData.hitSound);
+            if (damageData.hitSound != AudioType.None)
+            {
+                AudioController.instance.PlayAudio(damageData.hitSound);
+            }
         }
         return hitTarget;
     }

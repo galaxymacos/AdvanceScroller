@@ -9,7 +9,7 @@ public class BloodParticleSpawner : MonoBehaviour
 
     private void Awake()
     {
-        GetComponent<CharacterHealthComponent>().OnTakeHit += SpawnBlood;
+        GetComponent<CharacterHealthComponent>().onTakeHit += SpawnBlood;
     }
 
     public void SpawnBlood(CharacterHealthComponent characterHealthComponent)
@@ -46,6 +46,7 @@ public class BloodParticleSpawner : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
+        InfiniteSoundPlayer.instance.PlaySound(AudioType.BloodExplosion);
 
         
 

@@ -16,6 +16,7 @@ public class CharacterMover : MonoBehaviour
     private void OnDestroy()
     {
         EndScreen.onEndScreenActivate -= MoveCharacter;
+
     }
 
     private void MoveCharacter()
@@ -40,7 +41,8 @@ public class CharacterMover : MonoBehaviour
     
     private void WinPose(PlayerCharacter playerCharacter)
     {
-        playerCharacter.GetComponent<Animator>().enabled = false;
+        playerCharacter.GetComponent<Animator>().SetTrigger("win pose");
+        print("set idle to "+playerCharacter.gameObject.name);
         playerCharacter.GetComponent<Rigidbody2D>().isKinematic = true;
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector3.zero;

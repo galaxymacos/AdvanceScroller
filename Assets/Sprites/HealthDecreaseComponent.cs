@@ -1,57 +1,75 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthDecreaseComponent : MonoBehaviour
+namespace Sprites
 {
-    private PlayerCharacter owner;
-
-    private PlayerPanel playerPanel;
-    private Slider slider;
-
-    private CharacterHealthComponent chc;
-
-    [SerializeField] private float decreaseSpeed = 0.05f;
-
-    void Awake()
+    public class HealthDecreaseComponent : MonoBehaviour
     {
-        playerPanel = GetComponentInParent<PlayerPanel>();
-        playerPanel.onPlayerSetupFinish += SetUp;
-        slider = GetComponent<Slider>();
-    }
+        private PlayerCharacter owner;
 
-    private void SetUp()
-    {
-        owner = playerPanel.player;
-        chc = owner.GetComponent<CharacterHealthComponent>();
-        slider.maxValue = chc.maxHealth;
-        slider.value = chc.currentHealth;
-        chc.OnTakeHit += UpdateUI;
-        chc.onLoseHealth += UpdateUI;
-    }
+        private PlayerPanel playerPanel;
+        private Slider slider;
 
-    private void UpdateUI(CharacterHealthComponent characterHealthComponent)
-    {
-        if (chc.currentHealth > slider.value)
+        private CharacterHealthComponent chc;
+        private bool hasSetUp;
+        [SerializeField] private float decreaseSpeed = 0.05f;
+
+        void Awake()
         {
+            playerPanel = GetComponentInParent<PlayerPanel>();
+            playerPanel.onPlayerSetupFinish += SetUp;
+            slider = GetComponent<Slider>();
+        }
+
+        private void SetUp()
+        {
+            owner = playerPanel.player;
+            chc = owner.GetComponent<CharacterHealthComponent>();
+            slider.maxValue = chc.maxHealth;
             slider.value = chc.currentHealth;
-            StopCoroutine(Drain());
+            chc.onTakeHit += UpdateUI;
+            chc.onLoseHealth += UpdateUI;
+            hasSetUp = true;
         }
-        else
-        {
-            StopCoroutine(Drain());
-            StartCoroutine(Drain());
-        }
-    }
 
-    private IEnumerator Drain()
-    {
-        while (slider.value - chc.currentHealth > Mathf.Epsilon)
+        private void OnDestroy()
         {
-            slider.value -= slider.maxValue * decreaseSpeed * Time.deltaTime;
-            yield return null;
+            if (hasSetUp)
+            {
+                chc.onTakeHit -= UpdateUI;
+                chc.onLoseHealth -= UpdateUI;
+            }
+            
+        }
+
+
+        private void UpdateUI(CharacterHealthComponent characterHealthComponent)
+        {
+            if (chc.currentHealth > slider.value)
+            {
+                slider.value = chc.currentHealth;
+                StopCoroutine(Drain());
+            }
+            else
+            {
+                StopCoroutine(Drain());
+                if (gameObject.activeSelf)
+                {
+                    StartCoroutine(Drain());
+                    
+                }
+            }
+        }
+
+        private IEnumerator Drain()
+        {
+            while (slider.value - chc.currentHealth > Mathf.Epsilon)
+            {
+                slider.value -= slider.maxValue * decreaseSpeed * Time.deltaTime;
+                yield return null;
+            }
         }
     }
 }

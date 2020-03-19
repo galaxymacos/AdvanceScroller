@@ -12,22 +12,22 @@ public class UIMessager : MonoBehaviour
     private void Awake()
     {
         PlayerCharacterSpawner.onPlayerSpawnFinished += SetupPlayerUi;
-        End.OnGameEnd += DisableAllPanel;
+        // End.OnGameEnd += DisableAllPanel;
     }
 
     private void OnDestroy()
     {
         PlayerCharacterSpawner.onPlayerSpawnFinished -= SetupPlayerUi;
-        End.OnGameEnd -= DisableAllPanel;
+        // End.OnGameEnd -= DisableAllPanel;
     }
 
-    private void DisableAllPanel()
-    {
-        foreach (var panel in PlayerPanels)
-        {
-            panel.SetActive(false);
-        }
-    }
+    // private void DisableAllPanel()
+    // {
+    //     foreach (var panel in PlayerPanels)
+    //     {
+    //         panel.SetActive(false);
+    //     }
+    // }
 
     private void SetupPlayerUi()
     {

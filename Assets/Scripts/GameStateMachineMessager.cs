@@ -6,6 +6,7 @@ using UnityEngine;
 public class GameStateMachineMessager: MonoBehaviour
 {
     private List<PlayerCharacter> playerCharacters;
+    private List<UltimateComponent> ultimateComponents;
     private bool isPausing;
 
     public bool IsPausing => isPausing;
@@ -27,6 +28,7 @@ public class GameStateMachineMessager: MonoBehaviour
     public void InitializePlayers()
     {
         playerCharacters = FindObjectsOfType<PlayerCharacter>().ToList();
+        ultimateComponents = FindObjectsOfType<UltimateComponent>().ToList();
     }
 
     private void OnDestroy()
@@ -36,6 +38,7 @@ public class GameStateMachineMessager: MonoBehaviour
             newPlayerInput.onPauseButtonPressed -= PauseButtonPress;
         }
         End.OnGameEnd -=DeRegisterInputFromPlayer;
+        End.OnGameEnd -= UnPauseAll;
         PlayerCharacterSpawner.onPlayerSpawnFinished -= InitializePlayers;
     }
 
@@ -65,6 +68,7 @@ public class GameStateMachineMessager: MonoBehaviour
         {
             playerCharacter.playerInput = null;
         }
+        
     }
 
     private void ClearInput()
@@ -78,7 +82,15 @@ public class GameStateMachineMessager: MonoBehaviour
 
     public bool ShouldTransferToGameEnd()
     {
-        return EndSlowMotion.slowMotionTimeCounter <= 0;
+        bool allUltimateOver = true;
+        foreach (var ultimateComponent in ultimateComponents)
+        {
+            if (ultimateComponent.isPlayingUltimate)
+            {
+                allUltimateOver = false;
+            }
+        }
+        return EndSlowMotion.slowMotionTimeCounter <= 0 && allUltimateOver;
     }
 
     private void UnPauseAll()
@@ -95,4 +107,6 @@ public class GameStateMachineMessager: MonoBehaviour
             character.GetComponent<Rigidbody2D>().velocity = Vector3.zero;
         }
     }
+    
+        
 }

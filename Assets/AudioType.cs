@@ -45,6 +45,9 @@ public enum AudioType
     PsychicHero_ChargedAxeHit,
     PsychicHero_Tornado,
     PsychicHero_TornadoHit,
+
+    #region Sword Princess
+
     SwordPrincess_NormalAttack,
     SwordPrincess_NormalAttackHit,
     SwordPrincess_ShootCross,
@@ -52,6 +55,12 @@ public enum AudioType
     SwordPrincess_ShootWolf,
     SwordPrincess_WolfHit,
     SwordPrincess_SwordDrill,
-    
 
+    #endregion
+
+    #region Infinite Sound
+    
+    BloodExplosion
+
+    #endregion
 }

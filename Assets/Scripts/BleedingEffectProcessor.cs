@@ -15,7 +15,7 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
-        healthComponent.OnTakeHit += ProcessBridge;
+        healthComponent.onTakeHit += ProcessBridge;
         onStartBleeding += SpawnBloodParticleBridge;
     }
 

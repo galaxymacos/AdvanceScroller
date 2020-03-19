@@ -15,8 +15,8 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
-        healthComponent.OnTakeHit += ProcessBridge;
-        healthComponent.OnTakeHit += ApplyElectricityDamage;
+        healthComponent.onTakeHit += ProcessBridge;
+        healthComponent.onTakeHit += ApplyElectricityDamage;
     }
 
     private void ProcessBridge(CharacterHealthComponent health)

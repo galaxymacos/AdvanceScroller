@@ -117,6 +117,11 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (playerCharacter.GetComponent<UltimateComponent>().isPlayingUltimate)
+        {
+            playerCharacter.GetComponent<UltimateComponent>().End();
+        }
+        
         playerToThrow.canControlMovement = true;
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
         playerToThrow.GetComponent<Rigidbody2D>().gravityScale = 1;

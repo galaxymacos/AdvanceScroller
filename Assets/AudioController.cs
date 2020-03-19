@@ -12,18 +12,7 @@ public class AudioController : MonoBehaviour
     private Hashtable m_AudioTable; // relationshiop between audio types (key) and audio tracks (value)
     private Hashtable m_JobTable; // relationship between audio types (key) and jobs (value) (Coroutine, IEnumnerator)
 
-    [Serializable]
-    public class AudioObject
-    {
-        public string audioTypeInString;
-
-        public AudioObject()
-        {
-            
-        }
-        public AudioType type;
-        public AudioClip clip;
-    }
+    
 
     [Serializable]
     public class AudioTrack
@@ -38,13 +27,15 @@ public class AudioController : MonoBehaviour
         public readonly AudioType type;
         public readonly bool fade;
         public readonly float delay;
+        public readonly bool loop;
 
-        public AudioJob(AudioAction action, AudioType type, bool _fade, float _delay)
+        public AudioJob(AudioAction action, AudioType type, bool _fade, float _delay, bool loop)
         {
             this.action = action;
             this.type = type;
             this.fade = _fade;
             this.delay = _delay;
+            this.loop = loop;
         }
     }
 
@@ -59,8 +50,9 @@ public class AudioController : MonoBehaviour
 
     private void Awake()
     {
-        if (!instance)
+        if (instance == null)
         {
+            DontDestroyOnLoad(gameObject);
             Configure();
         }
     }
@@ -76,19 +68,19 @@ public class AudioController : MonoBehaviour
 
     #region Public Functions
 
-    public void PlayAudio(AudioType _type, bool _fade = false, float _delay = 0.0f)
+    public void PlayAudio(AudioType _type, bool _fade = false, float _delay = 0.0f, bool _loop = false)
     {
-        Addjob(new AudioJob(AudioAction.START, _type, _fade, _delay));
+        Addjob(new AudioJob(AudioAction.START, _type, _fade, _delay, _loop));
     }
 
     public void StopAudio(AudioType _type, bool _fade = false, float _delay = 0.0f)
     {
-        Addjob(new AudioJob(AudioAction.STOP, _type, _fade, _delay));
+        Addjob(new AudioJob(AudioAction.STOP, _type, _fade, _delay, false));
     }
 
     public void RestartAudio(AudioType _type, bool _fade = false, float _delay = 0.0f)
     {
-        Addjob(new AudioJob(AudioAction.RESTART, _type, _fade, _delay));
+        Addjob(new AudioJob(AudioAction.RESTART, _type, _fade, _delay, false));
 
     }
 
@@ -107,6 +99,11 @@ public class AudioController : MonoBehaviour
     }
     private void Dispose()
     {
+        if (m_JobTable == null)
+        {
+            Log("Currently there is no sound job in the table. Terminating...");
+            return;
+        }
         foreach (DictionaryEntry _entry in m_JobTable)
         {
             IEnumerator _job = (IEnumerator)_entry.Value;
@@ -167,6 +164,7 @@ public class AudioController : MonoBehaviour
         {
             case AudioAction.START: 
                 _track.source.Play();
+                _track.source.loop = _job.loop;
                 break;
             
             case AudioAction.STOP:

@@ -23,7 +23,7 @@ public class CharacterHealthComponent : MonoBehaviour
     public bool isPlayerDead => currentHealth <= 0;
 
 
-    public Action<CharacterHealthComponent> OnTakeHit;
+    public Action<CharacterHealthComponent> onTakeHit;
     public Action<CharacterHealthComponent> onLoseHealth;
     public Action<CharacterHealthComponent> onHealthChanged;
     public Action onPlayerDie;
@@ -87,7 +87,7 @@ public class CharacterHealthComponent : MonoBehaviour
             BulletTimeManager.instance.Register(bulletTime);
         }
         
-        OnTakeHit?.Invoke(this);
+        onTakeHit?.Invoke(this);
         
     }
 

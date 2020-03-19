@@ -25,8 +25,9 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Vector3 previousVelocity = rb.velocity;
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
+        if (playerInput == null) return;
+        Vector3 previousVelocity = rb.velocity;
         bool shouldRotationReveresd = playerInput.verticalAxis < 0 ^ playerCharacter.isFacingRight;
         if (Math.Abs(playerInput.verticalAxis) > Mathf.Epsilon)
         {

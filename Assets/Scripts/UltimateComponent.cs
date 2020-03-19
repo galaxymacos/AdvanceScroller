@@ -13,6 +13,7 @@ public class UltimateComponent : MonoBehaviour
     [SerializeField] private GameObject uniqueSkillFireParticlePrefab;
     public Sprite ultimateIcon; 
     public Action onStartShowOff;
+    public bool isPlayingUltimate;
 
     private void Awake()
     {
@@ -24,12 +25,16 @@ public class UltimateComponent : MonoBehaviour
 
     public void ShowOff()
     {
+        isPlayingUltimate = true;
+
         onStartShowOff?.Invoke();
         StartCoroutine(ShowOffCoroutine());
     }
     
     public void End()
     {
+        isPlayingUltimate = false;
+
         print("turn on all lighting");
         // LightingManager.instance.TurnOnAllLights(); TODO add it back if new lighting state machine not working
         LightingManager.instance.lightOnTrigger = true;
