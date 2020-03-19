@@ -42,6 +42,9 @@ public class GameStateMachine : MonoBehaviour
     }
 }
 
+
+
+// Game State
 public class EndSlowMotion: IState
 {
     private static readonly float slowMotionTime = 3;
@@ -67,7 +70,6 @@ public class EndSlowMotion: IState
         Time.timeScale = 1f;
     }
 }
-
 public class End : IState
 {
     public static event Action OnGameEnd;
@@ -86,7 +88,6 @@ public class End : IState
     {
     }
 }
-
 public class Play : IState
 {
     public static event Action OnGameStart;
@@ -102,7 +103,6 @@ public class Play : IState
     {
     }
 }
-
 public class Pause : IState
 {
     public void Tick()

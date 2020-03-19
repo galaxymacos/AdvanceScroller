@@ -3,20 +3,40 @@ using UnityEngine;
 public enum AudioType
 {
     None,
+
+    #region Sound Track
+
     ST_Grassland,
     ST_IceMap,
+
+    #endregion
+
+    #region Menu
+
     Pointer_Move,
     Pointer_Confirm,
-    Character_Jump,
-    Character_DoubleJump,
-    Character_Dash,
-    Character_Move,
+
+    #endregion
+
+    #region Axe Hero
+
+    AxeHero_Jump,
+    AxeHero_DoubleJump,
+    AxeHero_Dash,
     AxeHero_Attack,
     AxeHero_ThrowAxe,
     AxeHero_HugeSlash,
     AxeHero_UltimateStart,
     AxeHero_UltimateCatchSuccess,
     AxeHero_UltimateThrow,
+
+    #endregion
+
+    #region Bat Hero
+
+    BatHero_Jump,
+    BatHero_DoubleJump,
+    BatHero_Dash,
     BatHero_Punch01,
     BatHero_Punch02,
     BatHero_ThrowShuriki,
@@ -25,6 +45,14 @@ public enum AudioType
     BatHero_InstantKillStart,
     BatHero_InstantKillHit,
     BatHero_InstantKillExplode,
+
+    #endregion
+
+    #region Cat Hero
+
+    CatHero_Jump,
+    CatHero_DoubleJump,
+    CatHero_Dash,
     CatHero_Claw01,
     CatHero_Claw02,
     CatHero_Claw01Hit,
@@ -34,6 +62,14 @@ public enum AudioType
     CatHero_CatJump,
     CatHero_CatExplode,
     CatHero_BleedingClaw,
+
+    #endregion
+
+    #region Psychic Hero
+    
+    PsychicHero_Jump,
+    PsychicHero_DoubleJump,
+    PsychicHero_Dash,
     PsychicHero_ChargeSound,
     PsychicHero_ShootSmallDagger,
     PsychicHero_SmallDaggerHit,
@@ -46,8 +82,13 @@ public enum AudioType
     PsychicHero_Tornado,
     PsychicHero_TornadoHit,
 
+    #endregion
+    
     #region Sword Princess
 
+    SwordPrincess_Dash,
+    SwordPrincess_Jump,
+    SwordPrincess_DoubleJump,
     SwordPrincess_NormalAttack,
     SwordPrincess_NormalAttackHit,
     SwordPrincess_ShootCross,
