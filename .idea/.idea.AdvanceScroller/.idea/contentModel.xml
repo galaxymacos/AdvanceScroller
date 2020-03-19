@@ -343,6 +343,7 @@
           </e>
         </e>
         <e p="TrapPauser.cs" t="Include" />
+        <e p="WelcomeText.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
