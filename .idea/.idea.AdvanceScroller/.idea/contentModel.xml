@@ -185,6 +185,7 @@
           <e p="GameEndDetector.cs" t="Include" />
           <e p="GameStateMachine.cs" t="Include" />
           <e p="GameStateMachineMessager.cs" t="Include" />
+          <e p="GeneratePotionEvent.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
           <e p="IAttackEffect.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
@@ -206,6 +207,7 @@
           <e p="LightTurningOnState.cs" t="Include" />
           <e p="LuckySpin.cs" t="Include" />
           <e p="MainMenuButtonAnimationController.cs" t="Include" />
+          <e p="MapInfo.cs" t="Include" />
           <e p="MapPlayerSpawnData.cs" t="Include" />
           <e p="MapVoteTimer.cs" t="Include" />
           <e p="MaterialChangeComponent.cs" t="Include" />

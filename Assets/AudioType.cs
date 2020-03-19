@@ -99,9 +99,16 @@ public enum AudioType
 
     #endregion
 
-    #region Infinite Sound
+    #region Battle
     
-    BloodExplosion
+    BloodExplosion,
+    
+    #endregion
+    
+    #region SceneSound
+    
+    Thunder,
+    Lightning,
 
     #endregion
 }
