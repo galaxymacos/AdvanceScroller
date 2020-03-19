@@ -17,13 +17,13 @@ public class SelectionPanelElement : UIControl
     private void Awake()
     {
         onBeingClicked += PlaySound;
-        onSelected += () => AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+        
     }
 
     private void OnDestroy()
     {
         onBeingClicked -= PlaySound;
-        onSelected -= () => AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+        
     }
 
     public void DeleteFromLinkedList()

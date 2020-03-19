@@ -308,7 +308,7 @@
           <e p="IAttackEffectProcessor.cs" t="Include" />
           <e p="InjuryMaterialController.cs" t="Include" />
           <e p="InjuryShaderComponent.cs" t="Include" />
-          <e p="Tests.cs" t="Include" />
+          <e p="OnePlayerTest.cs" t="Include" />
         </e>
         <e p="Sword Princess" t="Include">
           <e p="Read Me.txt" t="Include" />

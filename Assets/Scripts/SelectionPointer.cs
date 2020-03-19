@@ -1,4 +1,5 @@
 using System;
+using Sprites;
 using UnityEngine;
 
 /// <summary>
@@ -45,6 +46,8 @@ public class SelectionPointer : UIControl
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.leftElement;
             pointingElement.onSelected?.Invoke();
+            AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+
         }
         
     }
@@ -58,6 +61,8 @@ public class SelectionPointer : UIControl
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.rightElement;
             pointingElement.onSelected?.Invoke();
+            AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+
         }
         
 
@@ -72,6 +77,8 @@ public class SelectionPointer : UIControl
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.topElement;
             pointingElement.onSelected?.Invoke();
+            AudioController.instance.PlayAudio(AudioType.Pointer_Move);
+
         }
         
 
@@ -87,13 +94,18 @@ public class SelectionPointer : UIControl
             pointingElement.onDeselected?.Invoke();
             pointingElement = pointingElement.downElement;
             pointingElement.onSelected?.Invoke();
+            AudioController.instance.PlayAudio(AudioType.Pointer_Move);
 
         }
     }
 
     public void SetTargetChampion()
     {
-        if (!IsActivated || PointerCounter.PointerNum <= 1) return;
+
+        if (!OnePlayerTest.IsInDebugMode)
+        {
+            if (!IsActivated || PointerCounter.PointerNum <= 1) return;
+        }
         owner.attackButtonPressed = false;
         isActivated = false;    
         pointingElement.onBeingClicked?.Invoke(this);

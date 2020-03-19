@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Sprites;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -25,8 +26,12 @@ public class GameStateMachine : MonoBehaviour
         
         _stateMachine.SetState(play);
         // _stateMachine.AddTransition(play,end, messager.GameEndConditionMeets);
-        _stateMachine.AddTransition(play,endSlowMotion, messager.GameEndConditionMeets);
-        _stateMachine.AddTransition(endSlowMotion,end, messager.ShouldTransferToGameEnd);
+        if (!OnePlayerTest.IsInDebugMode)
+        {
+            _stateMachine.AddTransition(play,endSlowMotion, messager.GameEndConditionMeets);
+            _stateMachine.AddTransition(endSlowMotion,end, messager.ShouldTransferToGameEnd);
+        }
+        
         _stateMachine.AddTransition(play,pause, ()=>messager.IsPausing);
         _stateMachine.AddTransition(pause,play, ()=>!messager.IsPausing);
     }
