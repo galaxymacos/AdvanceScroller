@@ -3,35 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackMessagingComponent : MonoBehaviour
+public class SwordPrincessAttackMessagingComponent : MonoBehaviour
 {
-    private PlayerCharacter playerCharacter;
-
     [SerializeField] private SingleAttackComponent singleAttackHitBox;
 
     [SerializeField] private ContinuousAttack pierceAttack;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    private UltimateBuffTimer ultimateBuffTimer;
+    public static event Action onBuffedAttack;
+
+    private void Awake()
     {
-        
+        ultimateBuffTimer = GetComponent<UltimateBuffTimer>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    /// <param name="state"></param>
     public void DetectAttack(int state)
     {
         if (state == 1)
         {
+            if (ultimateBuffTimer.IsEnrage)
+            {
+                onBuffedAttack?.Invoke();
+            }
             singleAttackHitBox.Execute();
+            
         }
         
     }

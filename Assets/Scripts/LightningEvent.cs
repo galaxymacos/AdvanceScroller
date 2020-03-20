@@ -30,9 +30,12 @@ public class LightningEvent : RandomEvent
         delayCounter = delay;
         onThunderHappened?.Invoke();
     }
+    
 
-    private void Update()
+
+    protected override void Update()
     {
+        base.Update();
         if (delayCounter > 0)
         {
             delayCounter -= Time.deltaTime;

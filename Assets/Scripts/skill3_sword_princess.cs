@@ -17,7 +17,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         startDirection = playerCharacter.isFacingRight ? Vector2.right : Vector2.left;
         rb = _animator.GetComponent<Rigidbody2D>();
         rb.velocity = startDirection * startSpeed;
-        playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(1);
+        playerCharacter.GetComponent<SwordPrincessAttackMessagingComponent>().DetectPierceAttack(1);
         rb.gravityScale = 0f;
         // rb.freezeRotation = false;
     }
@@ -58,7 +58,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         rb.gravityScale = 1f;
         rb.freezeRotation = true;
         playerCharacter.transform.rotation = Quaternion.Euler(playerCharacter.transform.rotation.x,playerCharacter.transform.rotation.y,0);
-        playerCharacter.GetComponent<AttackMessagingComponent>().DetectPierceAttack(0);
+        playerCharacter.GetComponent<SwordPrincessAttackMessagingComponent>().DetectPierceAttack(0);
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

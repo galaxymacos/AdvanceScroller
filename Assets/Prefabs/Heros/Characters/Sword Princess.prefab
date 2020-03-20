@@ -373,6 +373,8 @@ GameObject:
   - component: {fileID: -6872933427141104953}
   - component: {fileID: 4643469235381257640}
   - component: {fileID: 3328439134502869565}
+  - component: {fileID: 6898839907061179683}
+  - component: {fileID: 4376296493840871899}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -483,6 +485,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   checkRadius: 0.03
   groundCheck: {fileID: 3658480544129214436}
+  isGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -838,8 +841,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   showOffTime: 1
-  uniqueSkillFireParticlePrefab: {fileID: 0}
-  ultimateIcon: {fileID: 0}
+  uniqueSkillFireParticlePrefab: {fileID: 4274011969504508610, guid: 6b1522fe59ca0674cbdafc59ee410f45,
+    type: 3}
+  ultimateIcon: {fileID: 21300000, guid: 97c79c876a1dc694e9ef6dd428d5f582, type: 3}
+  isPlayingUltimate: 0
+--- !u!114 &6898839907061179683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a43b0d96736382438699ef971cb52c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enrageTimer: 5
+  enrageTimerCounter: 0
+--- !u!114 &4376296493840871899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c62cd3071280e34a97eccfffda45e42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

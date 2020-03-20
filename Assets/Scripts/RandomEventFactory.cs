@@ -7,29 +7,7 @@ using Random = UnityEngine.Random;
 public class RandomEventFactory : MonoBehaviour
 {
     [SerializeField] private List<RandomEvent> randomEvents;
-
-    public float spawnEventInterval = 2f;
-    private float spawnEventCounter;
     
-    private void Start()
-    {
-        spawnEventCounter = spawnEventInterval;
-    }
-
-    private void Update()
-    {
-        if (spawnEventCounter > 0)
-        {
-            spawnEventCounter -= Time.deltaTime;
-            if (spawnEventCounter <= 0)
-            {
-                SpawnRandomEvent();
-                spawnEventCounter = spawnEventInterval;
-            }
-        }
-    }
-
-
     public void SpawnRandomEvent()
     {
         var randomEvent = randomEvents[Random.Range(0, randomEvents.Count)];
@@ -39,5 +17,25 @@ public class RandomEventFactory : MonoBehaviour
 
 public abstract class RandomEvent: MonoBehaviour
 {
+    public float spawnEventInterval = 2f;
+    private float spawnEventCounter;
+    private void Start()
+    {
+        spawnEventCounter = spawnEventInterval;
+    }
+
+    protected virtual void Update()
+    {
+        if (spawnEventCounter > 0)
+        {
+            spawnEventCounter -= Time.deltaTime;
+            if (spawnEventCounter <= 0)
+            {
+                Execute();
+                spawnEventCounter = spawnEventInterval;
+            }
+        }
+    }
+
     public abstract void Execute();
 }

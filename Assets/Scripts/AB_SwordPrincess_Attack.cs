@@ -50,7 +50,7 @@ public class AB_SwordPrincess_Attack : CharacterStateMachineBehavior
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        playerCharacter.GetComponent<AttackMessagingComponent>().DetectAttack(0);
+        playerCharacter.GetComponent<SwordPrincessAttackMessagingComponent>().DetectAttack(0);
     }
 
     
