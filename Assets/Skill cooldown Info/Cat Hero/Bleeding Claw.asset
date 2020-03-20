@@ -15,5 +15,5 @@ MonoBehaviour:
   skillName: skill3
   coolDown: 5
   coolDownCounter: 0
-  spriteInCooldownPanel: {fileID: 21300000, guid: 420bf93edd9f0db4fb20c2def70cb0eb,
+  spriteInCooldownPanel: {fileID: 21300000, guid: fb07ca7144aa5c24e9ff76a62133d247,
     type: 3}
