@@ -23,6 +23,7 @@ public class CollisionDetector: MonoBehaviour
     private void OnEnable()
     {
         objectsInCollision = new List<GameObject>();
+        
     }
 
     private void Update()

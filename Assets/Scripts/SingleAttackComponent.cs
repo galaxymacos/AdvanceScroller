@@ -11,22 +11,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
     public List<GameObject> objectsHasProcessed = new List<GameObject>();
 
-    private void Update()
-    {
-        // if (!isRunning) return;
-        // if (ObjectsInCollision == null) return;
-        
-        
-        // foreach (GameObject objectCollided in ObjectsInCollision)
-        // {
-        //     DealDamageToSingleTarget(objectCollided);
-        // }
-        //
-        // if (isRunning)
-        // {
-        //     isRunning = false;
-        // }
-    }
+
 
     private bool DealDamageToSingleTarget(GameObject gameObjectCollided)
     {

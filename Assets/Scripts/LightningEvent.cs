@@ -5,7 +5,7 @@ public class LightningEvent : RandomEvent
 {
     public GameObject lightning;
 
-    public event Action onThunderHappened;
+    public static event Action onThunderHappened;
     public event Action onLightingHappened;
     
     [Tooltip("The interval between thunder and lightning")]
@@ -45,16 +45,16 @@ public class LightningEvent : RandomEvent
 
     private void SpawnLightning()
     {
+
         Vector3 spawnPosition =
-            (MapInfo.instance.topLeftBoundary.position + MapInfo.instance.topRightBoundary.position) / 2;
+            MapInfo.instance.RandomLouTianPosition();
         Instantiate(lightning, spawnPosition, Quaternion.identity);
-        AudioController.instance.PlayAudio(AudioType.Lightning);
 
     }
 
     private void ThunderSound()
     {
-        AudioController.instance.PlayAudio(AudioType.Thunder);
+        InfiniteSoundPlayer.instance.PlaySound(AudioType.Thunder);
     }
     
 }

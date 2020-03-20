@@ -156,7 +156,12 @@ public class AudioController : MonoBehaviour
     private IEnumerator RunAudioJob(AudioJob _job)
     {
         yield return new WaitForSeconds(_job.delay);
-        
+
+        if (!m_AudioTable.ContainsKey(_job.type))
+        {
+            print($"The audio job doesn't contain the type {_job.type.ToString()}");
+            
+        }
         AudioTrack _track = m_AudioTable[_job.type];
         _track.source.clip = GetAudioClipFromAudioTrack(_job.type, _track);
 

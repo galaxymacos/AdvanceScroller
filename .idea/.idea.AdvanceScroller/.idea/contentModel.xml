@@ -89,11 +89,15 @@
             </e>
           </e>
         </e>
+        <e p="Lightning.cs" t="Include" />
         <e p="LoadHeroSelectionScene.cs" t="Include" />
         <e p="ParticleTimeSkipper.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerJoinText.cs" t="Include" />
         <e p="PointerRecreator.cs" t="Include" />
+        <e p="SceneDealDamageComponent.cs" t="Include" />
+        <e p="SceneDealDamageComponentMultiple.cs" t="Include" />
+        <e p="SceneEventSystem.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -197,10 +201,11 @@
           <e p="IUniqueSkill.cs" t="Include" />
           <e p="jump_attack_sword_princess.cs" t="Include" />
           <e p="Knockable.cs" t="Include" />
+          <e p="LayerInfo.cs" t="Include" />
           <e p="LayerMessager.cs" t="Include" />
           <e p="LightingManager.cs" t="Include" />
           <e p="LightingManagerStateMachine.cs" t="Include" />
-          <e p="Lightning.cs" t="Include" />
+          <e p="LightningEvent.cs" t="Include" />
           <e p="LightOffState.cs" t="Include" />
           <e p="LightOnState.cs" t="Include" />
           <e p="LightTurningOffState.cs" t="Include" />
