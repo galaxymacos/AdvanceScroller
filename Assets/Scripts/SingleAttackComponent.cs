@@ -35,9 +35,9 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 
         if (hitTarget)
         {
-            if (damageData.hitSound != AudioType.None)
+            if (!string.IsNullOrEmpty(damageData.hitSound))
             {
-                AudioController.instance.PlayAudio(damageData.hitSound);
+                AudioController.instance.PlayAudio(AudioTypeConverter.ToAudioType(damageData.hitSound));
             }
         }
         return hitTarget;
@@ -67,4 +67,18 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         // isRunning = false;
         
     // }
+}
+
+public static class AudioTypeConverter
+{
+    public static AudioType ToAudioType(string audioInString)
+    {
+        bool parseResult = Enum.TryParse(audioInString, true, out AudioType result);
+        if (!parseResult)
+        {
+            Debug.LogError($"Can't find the audio type with the name {audioInString}");
+        }
+        return result;
+    }
+   
 }

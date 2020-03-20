@@ -21,7 +21,8 @@ public class DamageData: ScriptableObject
 
     public List<ScriptableObject> attackEffects;
 
-    public AudioType hitSound;
+    [Tooltip("Check the sound type in the sound manager")]
+    public string hitSound;
 
 
 }
