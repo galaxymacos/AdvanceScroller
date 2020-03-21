@@ -11,6 +11,7 @@
         <e p="AB_Cat_Jump.cs" t="Include" />
         <e p="AB_Cat_Run.cs" t="Include" />
         <e p="AB_CatHero_SummonCat.cs" t="Include" />
+        <e p="AB_PsychicHero_Ultimate.cs" t="Include" />
         <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
         <e p="AudioController.cs" t="Include" />
         <e p="AudioObject.cs" t="Include" />
@@ -66,6 +67,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="GalaxyAxeStation.cs" t="Include" />
         <e p="GameAssets.cs" t="Include" />
         <e p="Heros" t="Include">
           <e p="Axe Hero" t="Include">
@@ -109,9 +111,11 @@
           </e>
         </e>
         <e p="Lightning.cs" t="Include" />
+        <e p="LightningRodComponent.cs" t="Include" />
         <e p="LightningSword.cs" t="Include" />
         <e p="LoadHeroSelectionScene.cs" t="Include" />
         <e p="MovingPlatform.cs" t="Include" />
+        <e p="NewProjectileSticker.cs" t="Include" />
         <e p="ParticleTimeSkipper.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="PlayerJoinText.cs" t="Include" />
@@ -243,6 +247,8 @@
           <e p="MovementComponent.cs" t="Include" />
           <e p="MultipleTargetCamera.cs" t="Include" />
           <e p="NewPlayerInput.cs" t="Include" />
+          <e p="NewProjectile.cs" t="Include" />
+          <e p="NewProjectileDamageComponent.cs" t="Include" />
           <e p="OptionMenuAnimatorController.cs" t="Include" />
           <e p="ParticleDisposer.cs" t="Include" />
           <e p="ParticleFacingComponent.cs" t="Include" />
@@ -368,6 +374,7 @@
           </e>
         </e>
         <e p="TrapPauser.cs" t="Include" />
+        <e p="UltimateAxe.cs" t="Include" />
         <e p="UltimateBuffTimer.cs" t="Include" />
         <e p="WelcomeText.cs" t="Include" />
       </e>

@@ -12,6 +12,7 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     public ContinuousAttack tornado;
     public GameObject chargedDaggerPrefab;
     public GameObject chargedAxePrefab;
+    public UltimateAxe ultimateAxe;
 
     private void Awake()
     {
@@ -62,5 +63,10 @@ public class PsychicHeroAnimationEventContainer : MonoBehaviour
     public void StopExecutingTornado()
     {
         tornado.StopDetectTargetManually();
+    }
+
+    public void SpawnGalaxyAxe()
+    {
+        
     }
 }

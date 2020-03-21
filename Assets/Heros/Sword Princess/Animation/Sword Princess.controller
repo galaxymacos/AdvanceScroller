@@ -293,6 +293,7 @@ MonoBehaviour:
   - skill2
   - skill3
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -556,6 +557,7 @@ MonoBehaviour:
   - wallslide
   - idle
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -643,6 +645,7 @@ MonoBehaviour:
   - skill3
   - jump
   - climb
+  - skill4
   stateCanForceTransformTo: []
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
@@ -1344,7 +1347,7 @@ AnimatorStateMachine:
     m_Position: {x: 990, y: 590, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6277682720828293759}
-    m_Position: {x: 990, y: 650, z: 0}
+    m_Position: {x: 990, y: 640, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 7822035074739989602}
