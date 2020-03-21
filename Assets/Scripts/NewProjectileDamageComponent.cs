@@ -1,6 +1,6 @@
+using System;
 using UnityEngine;
 
-[RequireComponent(typeof(NewProjectile))]
 public class NewProjectileDamageComponent: MonoBehaviour
 {
     public CollisionDetector collisionDetector;
@@ -10,19 +10,33 @@ public class NewProjectileDamageComponent: MonoBehaviour
 
     public bool isSingleDamage;
     private bool hasDealtDamage = false;
-
+    public event Action onDamageDealt;
     private bool hasSetuped;
     
     private void Awake()
     {
-        GetComponent<NewProjectile>().onProjectileSetupFinished += Setup;
+        if (GetComponent<NewProjectile>() != null)
+        {
+            GetComponent<NewProjectile>().onProjectileSetupFinished += Setup;
+        }
         collisionDetector.onObjectCollided += DealDamageToCharacter;
     }
 
     private void Setup(NewProjectile.ProjectileArgument obj)
     {
+        if (hasSetuped) return;
+        
         print("set up projectile damage component");
         owner = obj.owner;
+        hasSetuped = true;
+    }
+    
+    
+    public void Setup(PlayerCharacter _owner)
+    {
+        if (hasSetuped) return;
+        print("set up projectile damage component");
+        this.owner = _owner;
         hasSetuped = true;
     }
 
@@ -38,6 +52,7 @@ public class NewProjectileDamageComponent: MonoBehaviour
             {
                 print("take damage");
                 playerCharacter.GetComponent<DamageReceiver>().Analyze(damageData, transform);
+                onDamageDealt?.Invoke();
                 
                 if (isSingleDamage)
                 {

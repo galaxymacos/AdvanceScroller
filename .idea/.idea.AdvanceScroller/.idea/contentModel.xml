@@ -123,6 +123,7 @@
         <e p="SceneDealDamageComponent.cs" t="Include" />
         <e p="SceneDealDamageComponentMultiple.cs" t="Include" />
         <e p="SceneEventSystem.cs" t="Include" />
+        <e p="SceneObjectDestroyOnContactComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />

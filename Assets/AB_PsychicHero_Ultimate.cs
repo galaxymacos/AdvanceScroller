@@ -26,7 +26,6 @@ public class AB_PsychicHero_Ultimate : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
 
-        animator.GetComponent<BatHeroAttackMessager>().instantKill.StopDetectTargetManually();
         rb.gravityScale = 1;
         animator.GetComponent<UltimateComponent>().End();
         playerInput.horizontalAxis = 0;
