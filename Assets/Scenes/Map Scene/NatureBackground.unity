@@ -1275,7 +1275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332791771}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1604,7 +1604,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 418714776}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: UpsideDownWoodenThorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2234,7 +2234,7 @@ GameObject:
   - component: {fileID: 586324270}
   - component: {fileID: 586324272}
   - component: {fileID: 586324271}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2340,7 +2340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 590814194}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Place1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10239,7 +10239,7 @@ GameObject:
   - component: {fileID: 863773187}
   - component: {fileID: 863773186}
   - component: {fileID: 863773189}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10491,7 +10491,7 @@ GameObject:
   - component: {fileID: 926518227}
   - component: {fileID: 926518226}
   - component: {fileID: 926518229}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10855,7 +10855,7 @@ GameObject:
   - component: {fileID: 964651787}
   - component: {fileID: 964651786}
   - component: {fileID: 964651789}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13419,7 +13419,7 @@ GameObject:
   - component: {fileID: 1161868377}
   - component: {fileID: 1161868376}
   - component: {fileID: 1161868379}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13789,7 +13789,7 @@ GameObject:
   - component: {fileID: 1280083077}
   - component: {fileID: 1280083078}
   - component: {fileID: 1280083079}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: woodenThorns_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14015,7 +14015,7 @@ GameObject:
   - component: {fileID: 1284354014}
   - component: {fileID: 1284354015}
   - component: {fileID: 1284354016}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: woodenThorns_1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14310,7 +14310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1305696002}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Traps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15143,7 +15143,7 @@ GameObject:
   - component: {fileID: 1563560150}
   - component: {fileID: 1563560149}
   - component: {fileID: 1563560152}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15913,7 +15913,7 @@ GameObject:
   - component: {fileID: 1622611070}
   - component: {fileID: 1622611069}
   - component: {fileID: 1622611072}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16417,7 +16417,7 @@ GameObject:
   - component: {fileID: 1696607868}
   - component: {fileID: 1696607867}
   - component: {fileID: 1696607870}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16947,7 +16947,7 @@ GameObject:
   - component: {fileID: 1811871238}
   - component: {fileID: 1811871237}
   - component: {fileID: 1811871240}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17088,7 +17088,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1822812354}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Place2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17251,7 +17251,7 @@ GameObject:
   - component: {fileID: 1846814387}
   - component: {fileID: 1846814386}
   - component: {fileID: 1846814389}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: Forest_deco_woodenThorns_2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17534,7 +17534,7 @@ GameObject:
   - component: {fileID: 1928996732}
   - component: {fileID: 1928996733}
   - component: {fileID: 1928996734}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: woodenThorns_1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17675,7 +17675,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1938272550}
-  m_Layer: 15
+  m_Layer: 0
   m_Name: UpsideWoodenThorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}

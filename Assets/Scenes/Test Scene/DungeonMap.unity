@@ -670,8 +670,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 34225249}
-  m_Layer: 0
-  m_Name: ForShortPlatform
+  m_Layer: 11
+  m_Name: ShortPlatformWallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -697,6 +697,7 @@ Transform:
   - {fileID: 393936419}
   - {fileID: 1210970478}
   - {fileID: 784684057}
+  - {fileID: 1382501280}
   m_Father: {fileID: 1346490155}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1120,7 +1121,7 @@ GameObject:
   - component: {fileID: 62744610}
   - component: {fileID: 62744611}
   m_Layer: 8
-  m_Name: GameObject (5)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1149,7 +1150,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 62744609}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1249,7 +1250,7 @@ GameObject:
   - component: {fileID: 74683651}
   - component: {fileID: 74683652}
   m_Layer: 11
-  m_Name: GameObject (3)
+  m_Name: SquareWallCollider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1278,7 +1279,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 74683650}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1773,7 +1774,7 @@ GameObject:
   - component: {fileID: 131958626}
   - component: {fileID: 131958627}
   m_Layer: 8
-  m_Name: GameObject (4)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1802,7 +1803,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 131958625}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -1818,7 +1819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 133531444}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1851,8 +1852,8 @@ GameObject:
   m_Component:
   - component: {fileID: 138937837}
   - component: {fileID: 138937838}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1881,7 +1882,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 138937836}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2174,8 +2175,8 @@ GameObject:
   m_Component:
   - component: {fileID: 183030790}
   - component: {fileID: 183030791}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2204,7 +2205,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 183030789}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -2875,7 +2876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 201398748}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3072,8 +3073,8 @@ GameObject:
   m_Component:
   - component: {fileID: 210436113}
   - component: {fileID: 210436114}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3102,7 +3103,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 210436112}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -3530,7 +3531,7 @@ GameObject:
   - component: {fileID: 241903723}
   - component: {fileID: 241903724}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3559,7 +3560,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 241903722}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4029,8 +4030,8 @@ GameObject:
   m_Component:
   - component: {fileID: 281344083}
   - component: {fileID: 281344084}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4059,7 +4060,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 281344082}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4240,8 +4241,8 @@ GameObject:
   m_Component:
   - component: {fileID: 295366860}
   - component: {fileID: 295366861}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4270,7 +4271,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 295366859}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4533,7 +4534,7 @@ GameObject:
   m_Component:
   - component: {fileID: 311370057}
   m_Layer: 0
-  m_Name: Other
+  m_Name: WooldenPlatfromColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4812,8 +4813,8 @@ GameObject:
   m_Component:
   - component: {fileID: 320227964}
   - component: {fileID: 320227965}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4842,7 +4843,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 320227963}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -4941,8 +4942,8 @@ GameObject:
   m_Component:
   - component: {fileID: 327539978}
   - component: {fileID: 327539979}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4971,7 +4972,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 327539977}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5872,7 +5873,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 393936419}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5905,8 +5906,8 @@ GameObject:
   m_Component:
   - component: {fileID: 395258261}
   - component: {fileID: 395258262}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5935,7 +5936,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 395258260}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -5951,7 +5952,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 397962318}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6462,8 +6463,8 @@ GameObject:
   m_Component:
   - component: {fileID: 421503571}
   - component: {fileID: 421503572}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6492,7 +6493,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 421503570}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -6658,7 +6659,7 @@ GameObject:
   - component: {fileID: 450716045}
   - component: {fileID: 450716046}
   m_Layer: 8
-  m_Name: GameObject (1)
+  m_Name: LongPlatformCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6687,7 +6688,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 450716044}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7067,7 +7068,7 @@ GameObject:
   - component: {fileID: 483983804}
   - component: {fileID: 483983805}
   m_Layer: 8
-  m_Name: GameObject (7)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7096,7 +7097,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 483983803}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7195,7 +7196,7 @@ GameObject:
   m_Component:
   - component: {fileID: 495250221}
   m_Layer: 0
-  m_Name: ShortColliders
+  m_Name: ShortWallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7399,7 +7400,7 @@ GameObject:
   - component: {fileID: 510701229}
   - component: {fileID: 510701230}
   m_Layer: 8
-  m_Name: GameObject (2)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7428,7 +7429,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 510701228}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -7795,7 +7796,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 546432925}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -8851,6 +8852,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &613450842
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 613450843}
+  - component: {fileID: 613450844}
+  m_Layer: 11
+  m_Name: WooldenPlatformWallCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &613450843
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613450842}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.0688, y: -0.2455, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1382501280}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &613450844
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 613450842}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.245
 --- !u!1 &620657319
 GameObject:
   m_ObjectHideFlags: 0
@@ -10206,7 +10254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 684304312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10523,7 +10571,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 707394112}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10966,8 +11014,8 @@ GameObject:
   m_Component:
   - component: {fileID: 729307774}
   - component: {fileID: 729307775}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10996,7 +11044,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 729307773}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11014,7 +11062,7 @@ GameObject:
   - component: {fileID: 730303630}
   - component: {fileID: 730303631}
   m_Layer: 8
-  m_Name: GameObject (4)
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11043,7 +11091,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 730303629}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11316,8 +11364,8 @@ GameObject:
   m_Component:
   - component: {fileID: 763697415}
   - component: {fileID: 763697416}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11346,7 +11394,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 763697414}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11401,7 +11449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 784684057}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11517,7 +11565,7 @@ GameObject:
   - component: {fileID: 802049665}
   - component: {fileID: 802049666}
   m_Layer: 8
-  m_Name: GameObject (2)
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11546,7 +11594,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 802049664}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11769,7 +11817,7 @@ GameObject:
   - component: {fileID: 809394778}
   - component: {fileID: 809394779}
   m_Layer: 8
-  m_Name: GameObject (3)
+  m_Name: LongPlatformCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11798,7 +11846,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 809394777}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11897,8 +11945,8 @@ GameObject:
   m_Component:
   - component: {fileID: 812895722}
   - component: {fileID: 812895723}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11927,7 +11975,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 812895721}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -11943,8 +11991,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 814263107}
-  m_Layer: 0
-  m_Name: SquareColliders
+  m_Layer: 11
+  m_Name: SquareWallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12671,7 +12719,7 @@ GameObject:
   - component: {fileID: 863134466}
   - component: {fileID: 863134467}
   m_Layer: 8
-  m_Name: GameObject (3)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12700,7 +12748,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 863134465}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -12800,7 +12848,7 @@ GameObject:
   - component: {fileID: 870157461}
   - component: {fileID: 870157462}
   m_Layer: 8
-  m_Name: GameObject (3)
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12829,7 +12877,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 870157460}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -13684,8 +13732,8 @@ GameObject:
   m_Component:
   - component: {fileID: 966651358}
   - component: {fileID: 966651359}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13714,7 +13762,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 966651357}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -13732,7 +13780,7 @@ GameObject:
   - component: {fileID: 967520817}
   - component: {fileID: 967520818}
   m_Layer: 8
-  m_Name: GameObject (1)
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13761,7 +13809,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 967520816}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -13871,7 +13919,7 @@ GameObject:
   - component: {fileID: 990023001}
   - component: {fileID: 990023002}
   m_Layer: 8
-  m_Name: GameObject (5)
+  m_Name: ThickWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13900,7 +13948,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 990023000}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -14254,7 +14302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1033537833}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14522,6 +14570,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1043419407
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1043419408}
+  - component: {fileID: 1043419409}
+  m_Layer: 11
+  m_Name: WooldenPlatformWallCollider (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1043419408
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043419407}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.706, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1925240581}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1043419409
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043419407}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.245
 --- !u!1 &1046189768
 GameObject:
   m_ObjectHideFlags: 0
@@ -14613,8 +14708,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1046710771}
   - component: {fileID: 1046710772}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14643,7 +14738,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1046710770}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16037,8 +16132,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1130134847}
   - component: {fileID: 1130134848}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16067,7 +16162,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1130134846}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16576,8 +16671,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1162099949}
   - component: {fileID: 1162099950}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16606,7 +16701,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1162099948}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -16622,7 +16717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168395582}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17627,7 +17722,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1210970478}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18475,8 +18570,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1264557003}
   - component: {fileID: 1264557004}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18505,7 +18600,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1264557002}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -19621,7 +19716,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1346490155}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: CircleColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19653,7 +19748,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1356045923}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19893,7 +19988,7 @@ GameObject:
   - component: {fileID: 1378109635}
   - component: {fileID: 1378109636}
   m_Layer: 11
-  m_Name: GameObject
+  m_Name: SquareWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19922,7 +20017,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1378109634}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -19939,6 +20034,37 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.16024745, y: 1.0524974}
   m_EdgeRadius: 0
+--- !u!1 &1382501279
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382501280}
+  m_Layer: 11
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1382501280
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382501279}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.64, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 613450843}
+  m_Father: {fileID: 34225249}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383967574
 GameObject:
   m_ObjectHideFlags: 0
@@ -19950,7 +20076,7 @@ GameObject:
   - component: {fileID: 1383967575}
   - component: {fileID: 1383967576}
   m_Layer: 8
-  m_Name: GameObject (6)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19979,7 +20105,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1383967574}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20241,8 +20367,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1403598239}
   - component: {fileID: 1403598240}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20271,7 +20397,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1403598238}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20288,8 +20414,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1412544142}
   - component: {fileID: 1412544143}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20318,7 +20444,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1412544141}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -20825,7 +20951,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1422224958}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21596,8 +21722,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1460535233}
   - component: {fileID: 1460535234}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21626,7 +21752,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1460535232}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -22283,7 +22409,7 @@ GameObject:
   - component: {fileID: 1519796863}
   - component: {fileID: 1519796864}
   m_Layer: 11
-  m_Name: GameObject (1)
+  m_Name: SquareWallCollider (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22312,7 +22438,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1519796862}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -22502,7 +22628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1527901760}
   m_Layer: 0
-  m_Name: LongColliders
+  m_Name: LongPlatformColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24187,8 +24313,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1617081408}
-  m_Layer: 0
-  m_Name: Collider
+  m_Layer: 11
+  m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24794,8 +24920,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1664043521}
   - component: {fileID: 1664043522}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24824,7 +24950,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1664043520}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -24841,8 +24967,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1667077090}
   - component: {fileID: 1667077091}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24871,7 +24997,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1667077089}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -25381,7 +25507,7 @@ GameObject:
   - component: {fileID: 1691805421}
   - component: {fileID: 1691805422}
   m_Layer: 8
-  m_Name: GameObject (2)
+  m_Name: LongPlatformCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25410,7 +25536,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1691805420}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -25509,7 +25635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1697453546}
   m_Layer: 0
-  m_Name: ThickColliders
+  m_Name: ThickWallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26364,8 +26490,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1781677260}
-  m_Layer: 0
-  m_Name: ForLongPlatform
+  m_Layer: 11
+  m_Name: LongPlatformWallColliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27218,7 +27344,7 @@ GameObject:
   - component: {fileID: 1842346154}
   - component: {fileID: 1842346155}
   m_Layer: 8
-  m_Name: GameObject (1)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27247,7 +27373,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1842346153}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -27713,8 +27839,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1858073275}
   - component: {fileID: 1858073276}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27743,7 +27869,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1858073274}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -28782,7 +28908,7 @@ GameObject:
   - component: {fileID: 1898001302}
   - component: {fileID: 1898001303}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28811,7 +28937,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1898001301}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -28858,7 +28984,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1900833362}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29132,7 +29258,7 @@ GameObject:
   - component: {fileID: 1910679782}
   - component: {fileID: 1910679783}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: LongPlatformCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29161,7 +29287,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 1910679781}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29342,8 +29468,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1923300901}
   - component: {fileID: 1923300902}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29372,7 +29498,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1923300900}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -29390,7 +29516,7 @@ GameObject:
   - component: {fileID: 1925240581}
   - component: {fileID: 1925240582}
   m_Layer: 8
-  m_Name: GameObject (1)
+  m_Name: WooldenPlatfromCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29404,9 +29530,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1925240580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.2, y: -3.098, z: 0}
+  m_LocalPosition: {x: 8.2, y: -3.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1043419408}
   m_Father: {fileID: 311370057}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -29423,8 +29550,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8067447, y: -0.24305263}
-  m_Size: {x: 2.1469622, y: 0.46204692}
+  m_Offset: {x: 0.7387163, y: 0.0022571103}
+  m_Size: {x: 2.423659, y: 0.49299294}
   m_Direction: 1
 --- !u!1 &1929877595
 GameObject:
@@ -29519,7 +29646,7 @@ GameObject:
   - component: {fileID: 1940573464}
   - component: {fileID: 1940573465}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: WooldenPlatfromCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29552,8 +29679,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8067447, y: -0.24305263}
-  m_Size: {x: 2.1469622, y: 0.46204692}
+  m_Offset: {x: 0.74494237, y: -0.24405208}
+  m_Size: {x: 2.1123557, y: 0.4946015}
   m_Direction: 1
 --- !u!1 &1942306667
 GameObject:
@@ -29598,8 +29725,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1943925701}
   - component: {fileID: 1943925702}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: LongWallCircleCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29628,7 +29755,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1943925700}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -30404,7 +30531,7 @@ GameObject:
   - component: {fileID: 2001124680}
   - component: {fileID: 2001124681}
   m_Layer: 8
-  m_Name: GameObject (8)
+  m_Name: ShortWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30433,7 +30560,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 2001124679}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -30450,8 +30577,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2003855872}
   - component: {fileID: 2003855873}
-  m_Layer: 0
-  m_Name: Gameobject
+  m_Layer: 11
+  m_Name: ShortPlatformWallCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30480,7 +30607,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 2003855871}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -30498,7 +30625,7 @@ GameObject:
   - component: {fileID: 2006540485}
   - component: {fileID: 2006540486}
   m_Layer: 11
-  m_Name: GameObject (2)
+  m_Name: SquareWallCollider (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30527,7 +30654,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2006540484}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 0004f8304f9ec2e43a7ea6ff814e8ae6, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -31982,7 +32109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2133945011}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Collider (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

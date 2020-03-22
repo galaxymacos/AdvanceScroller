@@ -299,7 +299,7 @@ MonoBehaviour:
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
-  jumpForce: 6
+  jumpForce: 6.5
   firstJump: {fileID: 7400000, guid: 66dd326b9366d5444af69437ca8bfb88, type: 2}
   secondJump: {fileID: 7400000, guid: 9c2ac3d9a9e7b9d40b895b205a2c9806, type: 2}
 --- !u!1101 &-4898466345151381657

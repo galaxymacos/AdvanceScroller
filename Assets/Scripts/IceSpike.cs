@@ -3,7 +3,7 @@
 public class IceSpike : MonoBehaviour, IPauseable
 {
     [SerializeField] private float speed;
-    [SerializeField] private DamageData DamageData;
+    //[SerializeField] private DamageData DamageData;
     private float speedBeforePause;
 
     private void Awake()
@@ -20,15 +20,15 @@ public class IceSpike : MonoBehaviour, IPauseable
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        var damageReceiver = other.GetComponent<DamageReceiver>();
-        if (damageReceiver != null)
-        {
-            damageReceiver.Analyze(DamageData, transform);
+    //private void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    var damageReceiver = other.GetComponent<DamageReceiver>();
+    //    if (damageReceiver != null)
+    //    {
+    //        damageReceiver.Analyze(DamageData, transform);
 
-        }
-    }
+    //    }
+    //}
     
     public void Pause()
     {

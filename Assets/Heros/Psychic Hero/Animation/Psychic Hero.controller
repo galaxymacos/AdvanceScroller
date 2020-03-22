@@ -1640,6 +1640,7 @@ MonoBehaviour:
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 10
+  multipleStomp: 0
 --- !u!1101 &5280482230053558830
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1842,7 +1843,7 @@ MonoBehaviour:
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
-  jumpForce: 6
+  jumpForce: 7
   firstJump: {fileID: 7400000, guid: 99abb0259a16a5347b962ebadf0ce292, type: 2}
   secondJump: {fileID: 7400000, guid: 085ab422ede5d3e429f983bddd55ab6c, type: 2}
 --- !u!1101 &7374287070677506639
