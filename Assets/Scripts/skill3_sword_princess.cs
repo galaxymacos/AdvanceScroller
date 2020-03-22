@@ -10,6 +10,11 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     private Vector2 startDirection;
     private Vector2 idealVector;
 
+    private Quaternion newCurrentRotation;
+    private float newCurrentSpeed = 5f;
+    private bool shouldRotationReversed;
+
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -20,6 +25,9 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         playerCharacter.GetComponent<SwordPrincessAttackMessagingComponent>().DetectPierceAttack(1);
         rb.gravityScale = 0f;
         // rb.freezeRotation = false;
+
+        newCurrentRotation = playerCharacter.transform.rotation;
+        shouldRotationReversed = !playerCharacter.isFacingRight;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -27,29 +35,41 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         if (playerInput == null) return;
-        Vector3 previousVelocity = rb.velocity;
-        bool shouldRotationReveresd = playerInput.verticalAxis < 0 ^ playerCharacter.isFacingRight;
+        // Vector3 previousVelocity = rb.velocity;
+        // bool shouldRotationReveresd = playerInput.verticalAxis < 0 ^ playerCharacter.isFacingRight;
+        // if (Math.Abs(playerInput.verticalAxis) > Mathf.Epsilon)
+        // {
+        //     rb.velocity += new Vector2(Vector3.Cross( shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).x, Vector3.Cross(shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).y) * Time.deltaTime * 5;
+        //     
+        //     
+        // }
+        //  
+        // float factorThisFrame = (speedIncreaseFactor * Time.deltaTime);
+        // var normal = rb.velocity.normalized;
+        // rb.velocity += normal * factorThisFrame;
+        // playerCharacter.transform.rotation = Quaternion.FromToRotation(previousVelocity,rb.velocity) * playerCharacter.transform.rotation;
+        
         if (Math.Abs(playerInput.verticalAxis) > Mathf.Epsilon)
         {
-            rb.velocity += new Vector2(Vector3.Cross( shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).x, Vector3.Cross(shouldRotationReveresd?Vector3.forward : Vector3.back, rb.velocity).y) * Time.deltaTime * 5;
+            if (!shouldRotationReversed)
+            {
+                Debug.Log("Rotation Reversed ? false");
+                playerCharacter.transform.Rotate(Vector3.forward, 180*Time.deltaTime * playerInput.verticalAxis>0?1:-1);
+            }
+            else
+            {
+                Debug.Log("Rotation Reversed ? true");
+                playerCharacter.transform.Rotate(Vector3.forward, 180*Time.deltaTime * playerInput.verticalAxis>0?-1:1);
+            }
+            
         }
-         
-        float factorThisFrame = (speedIncreaseFactor * Time.deltaTime);
-        var normal = rb.velocity.normalized;
-        rb.velocity += normal * factorThisFrame;
-        // if (playerInput.verticalAxis > 0)
-        // {
-        // }
-        // else if(playerInput.verticalAxis < 0)
-        // {
-        //     Debug.Log("climbing down ");
-        //     rb.velocity +=
-        //         new Vector2(Vector3.Cross(Vector3.back, rb.velocity).x, Vector3.Cross(Vector3.back, rb.velocity).y) *
-        //         Time.deltaTime * 5;
-        //
-        // }
-        // playerCharacter.transform.rotation = Quaternion.LookRotation(rb.velocity);
-        playerCharacter.transform.rotation = Quaternion.FromToRotation(previousVelocity,rb.velocity) * playerCharacter.transform.rotation;
+
+        Vector3 currentForwardVector = shouldRotationReversed?-playerCharacter.transform.right: playerCharacter.transform.right;
+        rb.velocity = currentForwardVector * newCurrentSpeed;
+
+
+
+
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -160,7 +160,6 @@
           <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
           <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
-          <e p="AnimationEventDirector.cs" t="Include" />
           <e p="AnimatorEventHandler.cs" t="Include" />
           <e p="AudioController.cs" t="Include" />
           <e p="AudioObject.cs" t="Include" />
@@ -178,7 +177,6 @@
           <e p="BlurMaterialController.cs" t="Include" />
           <e p="BtnTransferToNext.cs" t="Include" />
           <e p="BuffedAttackProcessor.cs" t="Include" />
-          <e p="BulletTimeComponent.cs" t="Include" />
           <e p="BulletTimeManager.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
           <e p="CastSkillFilter.cs" t="Include" />
@@ -235,6 +233,7 @@
           <e p="IAttackEffect.cs" t="Include" />
           <e p="IceSpike.cs" t="Include" />
           <e p="iceSpikeGenerator.cs" t="Include" />
+          <e p="IceSpikePauser.cs" t="Include" />
           <e p="InfiniteSoundPlayer.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
           <e p="InstantKillContinuousAttack.cs" t="Include" />
@@ -326,8 +325,6 @@
           <e p="SelectionPanelElement.cs" t="Include" />
           <e p="SelectionPointer.cs" t="Include" />
           <e p="ShaderController.cs" t="Include" />
-          <e p="ShaderMaterialFactory.cs" t="Include" />
-          <e p="ShaderProcessor.cs" t="Include" />
           <e p="ShadowFactory.cs" t="Include" />
           <e p="SignRoationAnimControl.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
@@ -356,8 +353,6 @@
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessAttackMessagingComponent.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
-          <e p="TestAudio.cs" t="Include" />
-          <e p="TrapPauser.cs" t="Include" />
           <e p="UIControl.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />

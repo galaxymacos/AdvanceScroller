@@ -135,7 +135,7 @@ MonoBehaviour:
   duration: 5
   tickInterval: 0.2
   damageData: {fileID: 11400000, guid: 7cf42af038feb5c4db7732aa7a51c0cd, type: 2}
-  finalDamageData: {fileID: 0}
+  finalDamageData: {fileID: 11400000, guid: ccfee6d6dad06d04baae5fc2058028f0, type: 2}
   owner: {fileID: 3658480544048443884}
   hasUsedOneLastStrike: 0
 --- !u!1 &1643300113
@@ -464,7 +464,6 @@ GameObject:
   - component: {fileID: 1086934267}
   - component: {fileID: 1086934268}
   - component: {fileID: 1086934266}
-  - component: {fileID: 1086934255}
   - component: {fileID: 1086934270}
   - component: {fileID: 2202582281728647640}
   - component: {fileID: 1086934272}
@@ -758,18 +757,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1086934255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3658480544048443873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ff7e565631fa4c40bb003450e48cefe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1086934270
 MonoBehaviour:
   m_ObjectHideFlags: 0
