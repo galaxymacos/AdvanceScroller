@@ -51,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9128476adb731b648905c58b4b96390d, type: 2}
+  - {fileID: 2100000, guid: c9fdade81bc49c740a3fbf796c46147a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -72,15 +72,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49411765}
+  m_Sprite: {fileID: 21300000, guid: cfaaa557a31421f4c9b779569c8e86dd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.56, y: 2.56}
+  m_Size: {x: 20.48, y: 20.48}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &6347294722745378275
@@ -95,8 +95,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 974c5bd053f064048bcfbd24e7993abc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  disappearSpeed: 1
-  delay: 1
+  fadeSpeed: 60
+  pixelateSizeInFloat: 180
 --- !u!114 &5626625224128821505
 MonoBehaviour:
   m_ObjectHideFlags: 0

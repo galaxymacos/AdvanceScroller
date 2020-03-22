@@ -73,6 +73,10 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerBeingPushed;
     public Action onPlayerBeingHurted;
     public Action onPlayerBeingStunned;
+    
+    // Call this when the player successfully dash out from the hurt state
+    public Action onDashOutFromHurt;
+    
     // Animation event
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;

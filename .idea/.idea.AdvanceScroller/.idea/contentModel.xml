@@ -5,6 +5,7 @@
     <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.883554470.00" t="ExcludeRecursive" />
     <e p="G:\Unity\AdvanceScroller" t="IncludeRecursive">
       <e p="AdvanceScroller.sln" t="IncludeFlat" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AB_Cat_Explode.cs" t="Include" />
@@ -13,12 +14,43 @@
         <e p="AB_CatHero_SummonCat.cs" t="Include" />
         <e p="AB_PsychicHero_Ultimate.cs" t="Include" />
         <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
+        <e p="AllIn1SpriteShader" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Scripts" t="Include">
+              <e p="All1ShaderDemoController.cs" t="Include" />
+              <e p="Demo2AutoScroll.cs" t="Include" />
+              <e p="DemoCamera.cs" t="Include" />
+              <e p="DemoCircleExpositor.cs" t="Include" />
+              <e p="DemoItem.cs" t="Include" />
+              <e p="DemoRandomColorSwap.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Editor" t="Include">
+            <e p="AllIn1ShaderScriptEditor.cs" t="Include" />
+            <e p="AllIn1SpriteShader.cs" t="Include" />
+            <e p="AllIn1SpriteShaderLight.cs" t="Include" />
+            <e p="AllIn1SpriteShaderStencil.cs" t="Include" />
+          </e>
+          <e p="Resources" t="Include">
+            <e p="AllIn1OneShaderFunctions.cginc" t="Include" />
+            <e p="AllIn1SpriteShader.shader" t="Include" />
+            <e p="AllIn1SpriteShaderLight.shader" t="Include" />
+            <e p="AllIn1SpriteShaderScrollView.shader" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="AllIn1Shader.cs" t="Include" />
+            <e p="AllIn1ShaderWindow.cs" t="Include" />
+            <e p="RandomSeed.cs" t="Include" />
+            <e p="SetAtlasUvs.cs" t="Include" />
+          </e>
+        </e>
         <e p="AudioController.cs" t="Include" />
         <e p="AudioObject.cs" t="Include" />
         <e p="AudioType.cs" t="Include" />
         <e p="BuffedAttackProcessor.cs" t="Include" />
         <e p="Cat.cs" t="Include" />
         <e p="CatStateMachineBahavior.cs" t="Include" />
+        <e p="CharacterShaderRegister.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="Modules" t="Include">
@@ -333,6 +365,7 @@
           <e p="WallCheck.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="ShaderController.cs" t="Include" />
         <e p="SignRoationAnimControl.cs" t="Include" />
         <e p="SoundTrackPlayer.cs" t="Include" />
         <e p="Sprites" t="Include">

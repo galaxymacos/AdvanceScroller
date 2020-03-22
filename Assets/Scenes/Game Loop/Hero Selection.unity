@@ -1939,9 +1939,9 @@ MonoBehaviour:
   - typeInString: BloodExplosion
     clip: {fileID: 8300000, guid: cab7de2aab07dfb418df72a574e0e5f7, type: 3}
   - typeInString: Lightning
-    clip: {fileID: 8300000, guid: 26d30ff0128655f4a9169c07e29d33c7, type: 3}
+    clip: {fileID: 8300000, guid: a76596d341f190044b7d43461545e06f, type: 3}
   - typeInString: Thunder
-    clip: {fileID: 8300000, guid: e9df7de908921564eb691fdc4b00d8c8, type: 3}
+    clip: {fileID: 8300000, guid: 7eed53b633cf3b74ca203b461bba0b40, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
@@ -2994,7 +2994,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: a6044581b6848f348a9e574e0596f085, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

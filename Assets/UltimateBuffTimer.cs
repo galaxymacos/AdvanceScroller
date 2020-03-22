@@ -9,9 +9,24 @@ public class UltimateBuffTimer : MonoBehaviour
     public float enrageTimerCounter;
     public bool IsEnrage => enrageTimerCounter > 0;
 
+    private Material originalMaterial;
+
+    public event Action onEnrageStart;
+    public event Action onEnrageEnd;
+
+    /// <summary>
+    /// Change the material system
+    /// </summary>
+    private void Awake()
+    {
+        originalMaterial = GetComponent<SpriteRenderer>().material;
+    }
+
     public void Enrage()
     {
         enrageTimerCounter = enrageTimer;
+        onEnrageStart?.Invoke();
+        
     }
 
     private void Update()
@@ -19,6 +34,11 @@ public class UltimateBuffTimer : MonoBehaviour
         if (enrageTimerCounter > 0)
         {
             enrageTimerCounter -= Time.deltaTime;
+            if (enrageTimerCounter <= 0)
+            {
+                GetComponent<SpriteRenderer>().material = originalMaterial;
+                onEnrageEnd?.Invoke();
+            }
         }
     }
 }

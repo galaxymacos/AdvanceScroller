@@ -406,6 +406,8 @@ GameObject:
   - component: {fileID: 3328439134502869565}
   - component: {fileID: 6898839907061179683}
   - component: {fileID: 4376296493840871899}
+  - component: {fileID: 801415136011525211}
+  - component: {fileID: 614550979399928041}
   m_Layer: 13
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -450,7 +452,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15c25006e189d8c498cdcad2c1330e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -905,6 +907,32 @@ MonoBehaviour:
   lightningSwordSpawnPosition: {fileID: 2423811552216721809}
   lightningSwordPrefab: {fileID: 8574430990985921708, guid: 4abada691922a1f4bbf1f7e97b4ac1e6,
     type: 3}
+--- !u!114 &801415136011525211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d287cb009a8ce4985ca62585452132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growDecreaseSpeed: 40
+  pixelateRecoverSpeed: 20
+--- !u!114 &614550979399928041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

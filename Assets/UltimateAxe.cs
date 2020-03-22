@@ -10,6 +10,7 @@ public class UltimateAxe : MonoBehaviour
 
     public void SpawnUltimateAxe()
     {
+        print("Spawn Ultimate Axe");
         GameObject galaxyAxeStation = Instantiate(galaxyAxeStationPrefab, transform);
         galaxyAxeStation.GetComponent<GalaxyAxeStation>().Setup(transform);
     }

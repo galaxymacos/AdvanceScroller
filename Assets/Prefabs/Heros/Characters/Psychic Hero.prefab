@@ -308,6 +308,8 @@ GameObject:
   - component: {fileID: 1225255116830130641}
   - component: {fileID: 5781193199059490347}
   - component: {fileID: 7162633781246874512}
+  - component: {fileID: 5189535313785367442}
+  - component: {fileID: 3428059067044204878}
   m_Layer: 12
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -352,7 +354,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15c25006e189d8c498cdcad2c1330e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -771,6 +773,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   galaxyAxeStationPrefab: {fileID: 3205019172587492998, guid: 95a462695f7afa84eaec1faed8bef2d7,
     type: 3}
+--- !u!114 &5189535313785367442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d287cb009a8ce4985ca62585452132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growDecreaseSpeed: 40
+  ChromaticAbberationFadeSpeed: 40
+--- !u!114 &3428059067044204878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0

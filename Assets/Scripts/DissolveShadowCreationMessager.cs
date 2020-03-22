@@ -14,12 +14,13 @@ public class DissolveShadowCreationMessager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        onDissolveShadowCreated?.Invoke(this);
+        // onDissolveShadowCreated?.Invoke(this);
     }
 
 
     public void Setup(SpriteRenderer spriteCopyToShadow)
     {
+        print("set up ");
         transform.localScale = spriteCopyToShadow.transform.localScale;
         GetComponent<SpriteRenderer>().sprite = spriteCopyToShadow.sprite;
     }

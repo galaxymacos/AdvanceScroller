@@ -9,10 +9,12 @@ public class AB_PsychicHero_Ultimate : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        
-        playerCharacter.GetComponent<UltimateComponent>().ShowOff();
         rb = playerCharacter.GetComponent<Rigidbody2D>();
-        rb.gravityScale = 0;   
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0;
+
+        playerCharacter.GetComponent<UltimateComponent>().ShowOff();
+        playerInput.horizontalAxis = 0;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

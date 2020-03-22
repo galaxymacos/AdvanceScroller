@@ -8,16 +8,26 @@ public class ForceCancelShadowCreationMessager : MonoBehaviour
 { 
     [HideInInspector] public SpriteRenderer sr;
     public static Action<ForceCancelShadowCreationMessager> onForceCancelshadowCreated;
+    public float lastTime = 2f;
+    public float lastTimeCounter;
 
     private void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        lastTimeCounter = lastTime;
     }
 
-    // Start is called before the first frame update
-    void Start()
+
+    private void Update()
     {
-        onForceCancelshadowCreated?.Invoke(this);
+        if (lastTimeCounter > 0)
+        {
+            lastTimeCounter -= Time.deltaTime;
+            if (lastTimeCounter <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }
     }
 
 

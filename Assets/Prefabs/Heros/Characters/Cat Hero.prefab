@@ -70,6 +70,8 @@ GameObject:
   - component: {fileID: 9103004191731880685}
   - component: {fileID: 7061681660935062770}
   - component: {fileID: 5533487366866381223}
+  - component: {fileID: 129144528791331115}
+  - component: {fileID: 8755737772395986013}
   m_Layer: 9
   m_Name: Cat Hero
   m_TagString: Untagged
@@ -114,7 +116,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15c25006e189d8c498cdcad2c1330e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -480,6 +482,7 @@ MonoBehaviour:
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
   ultimateIcon: {fileID: 0}
+  isPlayingUltimate: 0
 --- !u!114 &7061681660935062770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,6 +515,32 @@ MonoBehaviour:
   catPrefab: {fileID: 3222097676526244191, guid: 371d7492c3c095146803b83da1e2d207,
     type: 3}
   catSpawnLocation: {fileID: 8355361752509574661}
+--- !u!114 &129144528791331115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d287cb009a8ce4985ca62585452132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growDecreaseSpeed: 40
+  ChromaticAbberationFadeSpeed: 40
+--- !u!114 &8755737772395986013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &965933177369232322
 GameObject:
   m_ObjectHideFlags: 0

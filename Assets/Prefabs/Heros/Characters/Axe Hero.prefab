@@ -364,6 +364,8 @@ GameObject:
   - component: {fileID: 3643377678005176056}
   - component: {fileID: 9129344128754959467}
   - component: {fileID: 3274091039006355679}
+  - component: {fileID: 4759906915498089044}
+  - component: {fileID: 7604878484297629234}
   m_Layer: 9
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -408,7 +410,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 15c25006e189d8c498cdcad2c1330e5e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +476,7 @@ MonoBehaviour:
   playerInput: {fileID: 0}
   checkRadius: 0.03
   groundCheck: {fileID: 4758164499162478574}
+  isGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -871,6 +874,7 @@ MonoBehaviour:
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
   ultimateIcon: {fileID: 21300000, guid: 2c041a4276078564d94a19dbbda2f0f8, type: 3}
+  isPlayingUltimate: 0
 --- !u!114 &3643377678005176056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,6 +914,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _maxRage: 100
+--- !u!114 &4759906915498089044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d287cb009a8ce4985ca62585452132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  growDecreaseSpeed: 40
+  ChromaticAbberationFadeSpeed: 40
+--- !u!114 &7604878484297629234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0
