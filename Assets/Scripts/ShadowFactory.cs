@@ -7,6 +7,7 @@ public class ShadowFactory : MonoBehaviour
 {
     [SerializeField] private GameObject forceCancelShadow;
     [SerializeField] private GameObject dissolveShadow;
+    [SerializeField] private GameObject falsePositionShadow;
     
 
     public static ShadowFactory instance;

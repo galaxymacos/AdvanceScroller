@@ -6,8 +6,8 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
     private Rigidbody2D rb;
 
     private Knockable knockable;
-    [Tooltip("Dash when getting hit in 0.05 seconds to get out of the hurt state and dash")]
-    private float dashStillAllowedLimit = 0.15f;
+    [Tooltip("Dash when getting hit in 0.1 seconds to get out of the hurt state and dash")]
+    private float dashStillAllowedLimit = 0.1f;
     private float dashStillAlowedTimeCounter = 0;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -30,11 +30,11 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
             if (playerInput!=null && playerInput.dashButtonPressed)
             {
                 playerInput.dashButtonPressed = false;
-                BulletTimeManager.instance.Register(0.15f);
-                animator.SetTrigger("dash");
+                BulletTimeManager.instance.Register(0.3f);
                 playerCharacter.dashInvincibleTimeCounter = playerCharacter.dashInvincibleTime;
-                
                 playerCharacter.onDashOutFromHurt?.Invoke();
+                animator.SetTrigger("dash");
+                
 
             }
         }

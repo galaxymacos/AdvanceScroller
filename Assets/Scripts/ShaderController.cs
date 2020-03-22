@@ -7,7 +7,7 @@ public class ShaderController : MonoBehaviour
 {
     private Material mat;
     private float growDecreaseSpeed = 50;
-    private int ChromaticAbberationFadeSpeed = 40;
+    private float ChromaticAbberationFadeSpeed = 0.6f;
     private void Awake()
     {
         mat = GetComponent<Renderer>().material;
@@ -54,9 +54,9 @@ public class ShaderController : MonoBehaviour
         while (mat.GetFloat("_ChromAberrAmount") >= 0)
         {
             mat.SetFloat("_ChromAberrAmount", Mathf.Max(0,mat.GetFloat("_ChromAberrAmount")-ChromaticAbberationFadeSpeed*Time.deltaTime));
+            print("chronmatic fade");
             yield return null;
         }
-        yield return null;
     }
     
     

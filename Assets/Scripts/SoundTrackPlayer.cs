@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class SoundTrackPlayer : MonoBehaviour
 {
@@ -15,8 +16,9 @@ public class SoundTrackPlayer : MonoBehaviour
     public class SoundTrackObject
     {
         public int sceneIndex;
-        public AudioType audioType;
+        public List<string> audioTypeInString;
     }
+    
 
     private void Awake()
     {
@@ -46,11 +48,15 @@ public class SoundTrackPlayer : MonoBehaviour
         {
             if (soundTrackObject.sceneIndex == newSceneIndex)
             {
-                newAudioType = soundTrackObject.audioType;
+                bool parseResult = Enum.TryParse(soundTrackObject.audioTypeInString[Random.Range(0, soundTrackObject.audioTypeInString.Count)], true, out AudioType bgmAudioType);
+                if(!parseResult) Debug.LogError("can't find the bgm with the name ");
+                newAudioType = bgmAudioType;
             }
             if (soundTrackObject.sceneIndex == oldSceneIndex)
             {
-                oldAudioType = soundTrackObject.audioType;
+                bool parseResult = Enum.TryParse(soundTrackObject.audioTypeInString[Random.Range(0, soundTrackObject.audioTypeInString.Count)], true, out AudioType bgmAudioType);
+                if(!parseResult) Debug.LogError("can't find the bgm with the name ");
+                oldAudioType = bgmAudioType;
             }
         }
 
@@ -63,6 +69,7 @@ public class SoundTrackPlayer : MonoBehaviour
         {
             AudioController.instance.PlayAudio(newAudioType, true, 0, true);
         }
+        
         
     }
 }

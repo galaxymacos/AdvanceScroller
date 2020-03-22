@@ -50,7 +50,6 @@ public class CharacterPauser : MonoBehaviour, IPauseable
 
     public void UnPause()
     {
-        Debug.Log("un pause "+playerCharacter);
         if (!isPausing)    
         {
             return;

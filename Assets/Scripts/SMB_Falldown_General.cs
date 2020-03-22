@@ -9,7 +9,6 @@ public class SMB_Falldown_General : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(_animator, stateInfo,layerIndex);
-        playerCharacter.onPlayerGrounded += TransferToIdleState;
         playerCharacter.onPlayerWalkNextToWall += TransferToWallSlide;
 
     }
@@ -18,10 +17,10 @@ public class SMB_Falldown_General : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
       base.OnStateUpdate(_animator, stateInfo, layerIndex);
-        // if (playerCharacter.IsGrounded && characterAnimator.GetComponent<Rigidbody2D>().velocity.y <= 0)
-        // {
-            // _animator.SetTrigger("idle");
-        // }
+        if (playerCharacter.IsGrounded)
+        {
+            _animator.SetTrigger("idle");
+        }
         
 
     }
@@ -31,22 +30,10 @@ public class SMB_Falldown_General : CharacterStateMachineBehavior
     {
         base.OnStateExit(animator, stateInfo,layerIndex);
         playerCharacter.onPlayerWalkNextToWall -= TransferToWallSlide;
-        playerCharacter.onPlayerGrounded -= TransferToIdleState;
 
     }
 
-    private void TransferToIdleState()
-    {
-        if (Math.Abs(playerCharacter.GetComponent<Rigidbody2D>().velocity.x) > Mathf.Epsilon)
-        {
-            characterAnimator.SetTrigger("run");
-        }
-        else
-        {
-            characterAnimator.SetTrigger("idle");
-        }
-
-    }
+   
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

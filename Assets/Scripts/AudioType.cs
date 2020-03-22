@@ -6,8 +6,18 @@ public enum AudioType
 
     #region Sound Track
 
-    ST_Grassland,
-    ST_IceMap,
+    ST_Grassland1,
+    ST_Grassland2,
+    ST_Grassland3,
+    ST_Grassland4,
+    ST_IceMap1,
+    ST_IceMap2,
+    ST_IceMap3,
+    ST_IceMap4,
+    ST_Dungeon1,
+    ST_Dungeon2,
+    ST_Dungeon3,
+    ST_Dungeon4,
 
     #endregion
 
