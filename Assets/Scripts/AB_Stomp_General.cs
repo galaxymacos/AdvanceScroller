@@ -10,12 +10,15 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
 
     private float postSkillTime = 0.5f;
     private float postSkillTimeCounter;
+
+    [SerializeField] private bool multipleStomp;
+    private bool hasStomped;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         rb = playerCharacter.GetComponent<Rigidbody2D>();
-        
+        hasStomped = false;
         rb.velocity = Vector2.down * stompSpeed;
         playerCharacter.onPlayerGrounded += SpawnImpactWave;
     }
@@ -43,10 +46,13 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
         playerCharacter.onPlayerGrounded -= SpawnImpactWave;
     }
 
-    public void SpawnImpactWave()
+    private void SpawnImpactWave()
     {
+        if (!multipleStomp && hasStomped) return;
+        
         playerCharacter.SpawnImpactWave();
         postSkillTimeCounter = postSkillTime;
+        hasStomped = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

@@ -31,7 +31,10 @@ public class SMB_Push : CharacterStateMachineBehavior
         hasHitCollision = false;
         originalPos = playerCharacter.transform.position;
 
-
+        if (playerCharacter.isGrounded)
+        {
+            BounceFromGround(playerCharacter.groundCheck.position);
+        }
 
     }
 
@@ -66,14 +69,7 @@ public class SMB_Push : CharacterStateMachineBehavior
     private void BounceFromWall(Vector2 collisionPoint)
     {
         if (hasHitCollision) return;
-            // if (pushComponent.pushDirection.x > 0)
-            // {
-                // rb.velocity = new Vector2(-4, 5);
-            // }
-            // else
-            // {
-                // rb.velocity = new Vector2(4, 5);
-            // }
+
             hasHitCollision = true;
             
        
