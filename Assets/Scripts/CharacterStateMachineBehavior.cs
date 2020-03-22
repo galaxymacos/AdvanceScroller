@@ -5,6 +5,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 {
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
+    public string soundInString;
     [SerializeField] private bool canControlHorizontalMovement;
     
     /// <summary>
@@ -32,6 +33,10 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         playerCharacter.canControlMovement = canControlHorizontalMovement;
         RegisterInputToNextState(stateCanTransformTo);
         RegisterInputToNextState(stateCanForceTransformTo);
+        if (!string.IsNullOrEmpty(soundInString))
+        {
+            AudioController.instance.PlayAudio(soundInString.GetAudioType());
+        }
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

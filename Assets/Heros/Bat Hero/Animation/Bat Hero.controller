@@ -22,6 +22,7 @@ MonoBehaviour:
   - climb
   - stomp
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -42,6 +43,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -164,6 +166,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - skill4
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -353,6 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -433,6 +437,7 @@ MonoBehaviour:
   - climb
   - acquire
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -554,6 +559,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -602,6 +608,7 @@ MonoBehaviour:
   - wallslide
   - climb
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -642,6 +649,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -686,6 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -883,6 +892,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1405,6 +1415,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1473,10 +1484,12 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 10
+  multipleStomp: 1
 --- !u!114 &2850891163551372276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1491,6 +1504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1559,6 +1573,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1579,6 +1594,7 @@ MonoBehaviour:
   - jump
   - skill3
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1645,6 +1661,7 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1664,6 +1681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
+  soundInString: 
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1792,6 +1810,7 @@ MonoBehaviour:
   - climb
   stateCanForceTransformTo:
   - skill4
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1864,6 +1883,7 @@ MonoBehaviour:
   - jump
   stateCanForceTransformTo:
   - dash
+  soundInString: 
   canControlHorizontalMovement: 1
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}

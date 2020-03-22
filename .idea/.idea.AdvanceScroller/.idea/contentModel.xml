@@ -52,6 +52,7 @@
             <e p="readme.txt" t="Include" />
           </e>
         </e>
+        <e p="DrippingBlood.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -164,6 +165,7 @@
           <e p="AudioController.cs" t="Include" />
           <e p="AudioObject.cs" t="Include" />
           <e p="AudioType.cs" t="Include" />
+          <e p="AutoDestroyBlood.cs" t="Include" />
           <e p="AutoSpriteAdapter.cs" t="Include" />
           <e p="AxeHeroAnimatorEvent.cs" t="Include" />
           <e p="AxeHeroAttackMessager.cs" t="Include" />
@@ -231,6 +233,7 @@
           <e p="GeneratePotionEvent.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
           <e p="IAttackEffect.cs" t="Include" />
+          <e p="IBloodType.cs" t="Include" />
           <e p="IceSpike.cs" t="Include" />
           <e p="iceSpikeGenerator.cs" t="Include" />
           <e p="IceSpikePauser.cs" t="Include" />
@@ -270,10 +273,12 @@
           <e p="MovementComponent.cs" t="Include" />
           <e p="MovingPlatform.cs" t="Include" />
           <e p="MultipleTargetCamera.cs" t="Include" />
+          <e p="myExtensions.cs" t="Include" />
           <e p="NewPlayerInput.cs" t="Include" />
           <e p="NewProjectile.cs" t="Include" />
           <e p="NewProjectileDamageComponent.cs" t="Include" />
           <e p="NewProjectileSticker.cs" t="Include" />
+          <e p="NormalBlood.cs" t="Include" />
           <e p="OptionMenuAnimatorController.cs" t="Include" />
           <e p="ParticleDisposer.cs" t="Include" />
           <e p="ParticleFacingComponent.cs" t="Include" />
@@ -345,6 +350,7 @@
           <e p="Spike.cs" t="Include" />
           <e p="SpinCandidateData.cs" t="Include" />
           <e p="SpinCandidateStorage.cs" t="Include" />
+          <e p="SplashBlood.cs" t="Include" />
           <e p="SpriteAnimationDisposer.cs" t="Include" />
           <e p="SpriteEffectFactory.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />

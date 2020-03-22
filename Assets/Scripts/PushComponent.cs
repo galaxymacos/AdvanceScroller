@@ -37,10 +37,40 @@ public class PushComponent : MonoBehaviour
             print(gameObject.name+" is being pushed ++++");
 
             pushDirection = Vector3.Normalize(transform.position - damageSource.position);
+            
+            
+            if (PushTowardsEdge()) return;
+
+
             pushSpeed = speed;
             this.pushDistance = pushDistance;
             GetComponent<Animator>().SetTrigger("push");
         }
+    }
+
+    private bool PushTowardsEdge()
+    {
+        if (pushDirection.y < 0 && playerCharacter.isGrounded)
+        {
+            return true;
+        }
+
+        if (pushDirection.y > 0 && playerCharacter.isHitCeiling)
+        {
+            return true;
+        }
+
+        if (pushDirection.x > 0 && playerCharacter.isNextToWallRight)
+        {
+            return true;
+        }
+
+        if (pushDirection.x < 0 && playerCharacter.isNextToWallLeft)
+        {
+            return true;
+        }
+
+        return false;
     }
 
     /// <summary>

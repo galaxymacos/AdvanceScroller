@@ -48,13 +48,18 @@ MonoBehaviour:
     type: 3}
   GroundDustTwoWays: {fileID: 2507875056641089187, guid: b3fc23b6d0b53524e9dbaa130ba770fa,
     type: 3}
-  BloodExplosion2D: {fileID: 149344, guid: 617378de28fbaa64c96485d5b0d9169b, type: 3}
-  BloodDripping2D: {fileID: 127866, guid: 70b26805973318349bb2c60f8b37c8c3, type: 3}
-  BloodShowerLoop2D: {fileID: 134142, guid: 83c18340a7ab40841ab1bd9102120990, type: 3}
-  BloodSplatDirectional2D: {fileID: 125648, guid: 9fc1afc1190c21b459bff8bed1d9ec02,
+  BloodExplosion2D: {fileID: 610938637136827521, guid: 8b6e1a5f112a0b54787927de8cb1996d,
     type: 3}
-  BloodSplatCritcal2D: {fileID: 171432, guid: 0ebcd60dd020022408e53f535d12f313, type: 3}
+  BloodDripping2D: {fileID: 132133111832997506, guid: fa13587dba46b884daaf332f9cc3e7fb,
+    type: 3}
+  BloodShowerLoop2D: {fileID: 3380087517055269685, guid: 6f07e33e006531541b394450bc37fab3,
+    type: 3}
+  BloodSplatDirectional2D: {fileID: 906410857415745209, guid: 4f54357ff5e6fb14c92b65e180ea5555,
+    type: 3}
+  BloodSplatCritcal2D: {fileID: 954627846910681691, guid: acf69949e34c98749bfac3a34aef7ce2,
+    type: 3}
   DodgeShadow: {fileID: 685054869924666405, guid: d169a1ff60631a24e962df054c75738b,
     type: 3}
   WallSlideDust: {fileID: 3950159421142995034, guid: 82dd64c8765f4bb489a418c748c977dc,
     type: 3}
+  ElectrificationEffect: {fileID: 0}

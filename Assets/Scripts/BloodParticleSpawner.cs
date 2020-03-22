@@ -34,10 +34,6 @@ public class BloodParticleSpawner : MonoBehaviour
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodExplosion2D, transform.position,
                     Quaternion.identity);
                 break;
-            case DamageType.Dripping:
-                bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodDripping2D, transform.position,
-                    Quaternion.identity);
-                break;
             case DamageType.HorizontalDripping:
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodShowerLoop2D,
                     transform.position + bloodStartRotation * bloodParticleOffset,
@@ -46,11 +42,10 @@ public class BloodParticleSpawner : MonoBehaviour
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        InfiniteSoundPlayer.instance.PlaySound(AudioType.BloodExplosion);
-
+        bloodParticleSystem.GetComponent<IBloodType>()?.Setup(damageSource, bloodOwner);
         
 
-        bloodParticleSystem.transform.rotation = Quaternion.LookRotation(bloodStartRotation);
+        // bloodParticleSystem.transform.rotation = Quaternion.LookRotation(bloodStartRotation);
     }
 
     public void SpawnBloodDrippingParticle(float duration)
@@ -59,4 +54,8 @@ public class BloodParticleSpawner : MonoBehaviour
         Destroy(bloodParticleSystem, duration);
 
     }
+
+    
+
+
 }

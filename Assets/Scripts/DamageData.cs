@@ -34,5 +34,5 @@ public enum PushType
 
 public enum DamageType
 {
-    Penetration, ShotGun, Explosion, Dripping, HorizontalDripping
+    Penetration, ShotGun, Explosion, HorizontalDripping
 }

@@ -442,6 +442,7 @@ Transform:
   - {fileID: 1643300114}
   - {fileID: 6721710590424157336}
   - {fileID: 2947305055112542987}
+  - {fileID: 2056482993910867630}
   m_Father: {fileID: 3658480544048443415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -480,7 +481,7 @@ GameObject:
   - component: {fileID: 4376296493840871899}
   - component: {fileID: 801415136011525211}
   - component: {fileID: 614550979399928041}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Sword Princess
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1278,6 +1279,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 3658480544048443887}
   delay: 0.2
+--- !u!1001 &2116540360081018202
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3658480543698845594}
+    m_Modifications:
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 132133111832997506, guid: fa13587dba46b884daaf332f9cc3e7fb,
+        type: 3}
+      propertyPath: m_Name
+      value: Dripping
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa13587dba46b884daaf332f9cc3e7fb, type: 3}
+--- !u!4 &2056482993910867630 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 132133111832538100, guid: fa13587dba46b884daaf332f9cc3e7fb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2116540360081018202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7756708461336243490
 PrefabInstance:
   m_ObjectHideFlags: 0
