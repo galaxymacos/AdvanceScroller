@@ -8,12 +8,6 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AB_Cat_Explode.cs" t="Include" />
-        <e p="AB_Cat_Jump.cs" t="Include" />
-        <e p="AB_Cat_Run.cs" t="Include" />
-        <e p="AB_CatHero_SummonCat.cs" t="Include" />
-        <e p="AB_PsychicHero_Ultimate.cs" t="Include" />
-        <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
         <e p="AllIn1SpriteShader" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -44,13 +38,6 @@
             <e p="SetAtlasUvs.cs" t="Include" />
           </e>
         </e>
-        <e p="AudioController.cs" t="Include" />
-        <e p="AudioObject.cs" t="Include" />
-        <e p="AudioType.cs" t="Include" />
-        <e p="BuffedAttackProcessor.cs" t="Include" />
-        <e p="Cat.cs" t="Include" />
-        <e p="CatStateMachineBahavior.cs" t="Include" />
-        <e p="CharacterShaderRegister.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DOTween" t="Include">
             <e p="Modules" t="Include">
@@ -99,8 +86,6 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
-        <e p="GalaxyAxeStation.cs" t="Include" />
-        <e p="GameAssets.cs" t="Include" />
         <e p="Heros" t="Include">
           <e p="Axe Hero" t="Include">
             <e p="Read Me.txt" t="Include" />
@@ -118,9 +103,6 @@
             <e p="Read Me.txt" t="Include" />
           </e>
         </e>
-        <e p="IceSpike.cs" t="Include" />
-        <e p="iceSpikeGenerator.cs" t="Include" />
-        <e p="InfiniteSoundPlayer.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
             <e p="TooCubeForest" t="Include">
@@ -142,20 +124,7 @@
             </e>
           </e>
         </e>
-        <e p="Lightning.cs" t="Include" />
-        <e p="LightningRodComponent.cs" t="Include" />
-        <e p="LightningSword.cs" t="Include" />
-        <e p="LoadHeroSelectionScene.cs" t="Include" />
-        <e p="MovingPlatform.cs" t="Include" />
-        <e p="NewProjectileSticker.cs" t="Include" />
-        <e p="ParticleTimeSkipper.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
-        <e p="PlayerJoinText.cs" t="Include" />
-        <e p="PointerRecreator.cs" t="Include" />
-        <e p="SceneDealDamageComponent.cs" t="Include" />
-        <e p="SceneDealDamageComponentMultiple.cs" t="Include" />
-        <e p="SceneEventSystem.cs" t="Include" />
-        <e p="SceneObjectDestroyOnContactComponent.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -168,7 +137,11 @@
           <e p="AB_BatHero_JumpAttack.cs" t="Include" />
           <e p="AB_BatHero_Throw.cs" t="Include" />
           <e p="AB_BatHero_Transform.cs" t="Include" />
+          <e p="AB_Cat_Explode.cs" t="Include" />
+          <e p="AB_Cat_Jump.cs" t="Include" />
+          <e p="AB_Cat_Run.cs" t="Include" />
           <e p="AB_CatHero_Skill1.cs" t="Include" />
+          <e p="AB_CatHero_SummonCat.cs" t="Include" />
           <e p="AB_Climb_General.cs" t="Include" />
           <e p="AB_Dash_General.cs" t="Include" />
           <e p="AB_Die_General.cs" t="Include" />
@@ -179,14 +152,19 @@
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
+          <e p="AB_PsychicHero_Ultimate.cs" t="Include" />
           <e p="AB_Stomp_General.cs" t="Include" />
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AB_SwordPrincess_Cross.cs" t="Include" />
           <e p="AB_SwordPrincess_Falldown.cs" t="Include" />
+          <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
           <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
           <e p="AnimationEventDirector.cs" t="Include" />
           <e p="AnimatorEventHandler.cs" t="Include" />
+          <e p="AudioController.cs" t="Include" />
+          <e p="AudioObject.cs" t="Include" />
+          <e p="AudioType.cs" t="Include" />
           <e p="AutoSpriteAdapter.cs" t="Include" />
           <e p="AxeHeroAnimatorEvent.cs" t="Include" />
           <e p="AxeHeroAttackMessager.cs" t="Include" />
@@ -199,12 +177,15 @@
           <e p="BloodParticleSpawner.cs" t="Include" />
           <e p="BlurMaterialController.cs" t="Include" />
           <e p="BtnTransferToNext.cs" t="Include" />
+          <e p="BuffedAttackProcessor.cs" t="Include" />
           <e p="BulletTimeComponent.cs" t="Include" />
           <e p="BulletTimeManager.cs" t="Include" />
           <e p="CameraShake.cs" t="Include" />
           <e p="CastSkillFilter.cs" t="Include" />
+          <e p="Cat.cs" t="Include" />
           <e p="CatchComponent.cs" t="Include" />
           <e p="CatHeroAnimatorEventHandler.cs" t="Include" />
+          <e p="CatStateMachineBahavior.cs" t="Include" />
           <e p="CharacterEnergyComponent.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterFuryBar.cs" t="Include" />
@@ -212,6 +193,7 @@
           <e p="CharacterHealthComponent.cs" t="Include" />
           <e p="CharacterMover.cs" t="Include" />
           <e p="CharacterPauser.cs" t="Include" />
+          <e p="CharacterShaderRegister.cs" t="Include" />
           <e p="CharacterStateMachineBehavior.cs" t="Include" />
           <e p="ChargeDagger.cs" t="Include" />
           <e p="ChargedAxe.cs" t="Include" />
@@ -243,12 +225,17 @@
           <e p="ForceCancelShaderControl.cs" t="Include" />
           <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
           <e p="ForceShadowShaderComponent.cs" t="Include" />
+          <e p="GalaxyAxeStation.cs" t="Include" />
+          <e p="GameAssets.cs" t="Include" />
           <e p="GameEndDetector.cs" t="Include" />
           <e p="GameStateMachine.cs" t="Include" />
           <e p="GameStateMachineMessager.cs" t="Include" />
           <e p="GeneratePotionEvent.cs" t="Include" />
           <e p="hitstun.cs" t="Include" />
           <e p="IAttackEffect.cs" t="Include" />
+          <e p="IceSpike.cs" t="Include" />
+          <e p="iceSpikeGenerator.cs" t="Include" />
+          <e p="InfiniteSoundPlayer.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
           <e p="InstantKillContinuousAttack.cs" t="Include" />
           <e p="IPauseable.cs" t="Include" />
@@ -262,11 +249,15 @@
           <e p="LayerMessager.cs" t="Include" />
           <e p="LightingManager.cs" t="Include" />
           <e p="LightingManagerStateMachine.cs" t="Include" />
+          <e p="Lightning.cs" t="Include" />
           <e p="LightningEvent.cs" t="Include" />
+          <e p="LightningRodComponent.cs" t="Include" />
+          <e p="LightningSword.cs" t="Include" />
           <e p="LightOffState.cs" t="Include" />
           <e p="LightOnState.cs" t="Include" />
           <e p="LightTurningOffState.cs" t="Include" />
           <e p="LightTurningOnState.cs" t="Include" />
+          <e p="LoadHeroSelectionScene.cs" t="Include" />
           <e p="LuckySpin.cs" t="Include" />
           <e p="MainMenuButtonAnimationController.cs" t="Include" />
           <e p="MapInfo.cs" t="Include" />
@@ -278,16 +269,19 @@
           <e p="MenuStateMachine.cs" t="Include" />
           <e p="MenuStateMachineMessager.cs" t="Include" />
           <e p="MovementComponent.cs" t="Include" />
+          <e p="MovingPlatform.cs" t="Include" />
           <e p="MultipleTargetCamera.cs" t="Include" />
           <e p="NewPlayerInput.cs" t="Include" />
           <e p="NewProjectile.cs" t="Include" />
           <e p="NewProjectileDamageComponent.cs" t="Include" />
+          <e p="NewProjectileSticker.cs" t="Include" />
           <e p="OptionMenuAnimatorController.cs" t="Include" />
           <e p="ParticleDisposer.cs" t="Include" />
           <e p="ParticleFacingComponent.cs" t="Include" />
           <e p="ParticleSpawner.cs" t="Include" />
           <e p="ParticleSystemPauser.cs" t="Include" />
           <e p="ParticleSystemRecycler.cs" t="Include" />
+          <e p="ParticleTimeSkipper.cs" t="Include" />
           <e p="PausableSMB.cs" t="Include" />
           <e p="PlayerCharacter.cs" t="Include" />
           <e p="PlayerCharacterSpawner.cs" t="Include" />
@@ -296,6 +290,7 @@
           <e p="PlayerInput.cs" t="Include" />
           <e p="PlayerInputDistributor.cs" t="Include" />
           <e p="PlayerInputStorage.cs" t="Include" />
+          <e p="PlayerJoinText.cs" t="Include" />
           <e p="PlayerMpBarComponent.cs" t="Include" />
           <e p="PlayerOneInput.cs" t="Include" />
           <e p="PlayerPanel.cs" t="Include" />
@@ -307,6 +302,7 @@
           <e p="PointerCounter.cs" t="Include" />
           <e p="PointerCreator.cs" t="Include" />
           <e p="PointerPositionComponent.cs" t="Include" />
+          <e p="PointerRecreator.cs" t="Include" />
           <e p="PointerStorage.cs" t="Include" />
           <e p="PointerUtil.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
@@ -321,13 +317,19 @@
           <e p="ReplayCurrentLevelButton.cs" t="Include" />
           <e p="SaveDataComposer.cs" t="Include" />
           <e p="SaveSystem.cs" t="Include" />
+          <e p="SceneDealDamageComponent.cs" t="Include" />
+          <e p="SceneDealDamageComponentMultiple.cs" t="Include" />
+          <e p="SceneEventSystem.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
+          <e p="SceneObjectDestroyOnContactComponent.cs" t="Include" />
           <e p="SelectionElementStorage.cs" t="Include" />
           <e p="SelectionPanelElement.cs" t="Include" />
           <e p="SelectionPointer.cs" t="Include" />
+          <e p="ShaderController.cs" t="Include" />
           <e p="ShaderMaterialFactory.cs" t="Include" />
           <e p="ShaderProcessor.cs" t="Include" />
           <e p="ShadowFactory.cs" t="Include" />
+          <e p="SignRoationAnimControl.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
           <e p="skill1_psychic_hero.cs" t="Include" />
@@ -342,6 +344,7 @@
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
+          <e p="SoundTrackPlayer.cs" t="Include" />
           <e p="Spike.cs" t="Include" />
           <e p="SpinCandidateData.cs" t="Include" />
           <e p="SpinCandidateStorage.cs" t="Include" />
@@ -353,9 +356,13 @@
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessAttackMessagingComponent.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
+          <e p="TestAudio.cs" t="Include" />
+          <e p="TrapPauser.cs" t="Include" />
           <e p="UIControl.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
+          <e p="UltimateAxe.cs" t="Include" />
+          <e p="UltimateBuffTimer.cs" t="Include" />
           <e p="UltimateComponent.cs" t="Include" />
           <e p="UltimateIconComponent.cs" t="Include" />
           <e p="UltimatePotion.cs" t="Include" />
@@ -363,11 +370,9 @@
           <e p="UserInteractedPanel.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
+          <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
-        <e p="ShaderController.cs" t="Include" />
-        <e p="SignRoationAnimControl.cs" t="Include" />
-        <e p="SoundTrackPlayer.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="HealthBarShakeComponent.cs" t="Include" />
           <e p="HealthDecreaseComponent.cs" t="Include" />
@@ -378,7 +383,6 @@
           <e p="InjuryShaderComponent.cs" t="Include" />
           <e p="OnePlayerTest.cs" t="Include" />
         </e>
-        <e p="TestAudio.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -407,10 +411,6 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="TrapPauser.cs" t="Include" />
-        <e p="UltimateAxe.cs" t="Include" />
-        <e p="UltimateBuffTimer.cs" t="Include" />
-        <e p="WelcomeText.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

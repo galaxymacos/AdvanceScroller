@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Impact Wave
   m_EditorClassIdentifier: 
   damage: 3
-  pushPower: 0
-  pushDistance: 0
-  pushType: 0
+  pushPower: 10
+  pushDistance: 10
+  pushType: 1
   damageType: 3
-  offSetDegree: 0
+  offSetDegree: 90
   hitStunPower: 0
-  launcherHorizontalForce: 2
-  launcherVerticalForce: 6
+  launcherHorizontalForce: 0
+  launcherVerticalForce: 0
+  attackEffects: []
+  hitSound: 
