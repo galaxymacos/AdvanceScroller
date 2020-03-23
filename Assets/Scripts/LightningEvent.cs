@@ -57,7 +57,7 @@ public class LightningEvent : RandomEvent
 
     private void ThunderSound()
     {
-        InfiniteSoundPlayer.instance.PlaySound(AudioType.Thunder);
+        InfiniteSoundPlayer.instance.PlayAudio(AudioType.Thunder);
     }
     
 }

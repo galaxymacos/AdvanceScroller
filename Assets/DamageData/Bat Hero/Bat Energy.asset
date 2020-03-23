@@ -21,3 +21,5 @@ MonoBehaviour:
   hitStunPower: 0
   launcherHorizontalForce: 5
   launcherVerticalForce: 5
+  attackEffects: []
+  hitSound: 

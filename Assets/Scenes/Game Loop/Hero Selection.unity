@@ -1950,12 +1950,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioObjects:
-  - typeInString: BloodExplosion
-    clip: {fileID: 8300000, guid: cab7de2aab07dfb418df72a574e0e5f7, type: 3}
   - typeInString: Lightning
     clip: {fileID: 8300000, guid: a76596d341f190044b7d43461545e06f, type: 3}
   - typeInString: Thunder
     clip: {fileID: 8300000, guid: 7eed53b633cf3b74ca203b461bba0b40, type: 3}
+  - typeInString: HitSoundGeneral
+    clip: {fileID: 8300000, guid: cab7de2aab07dfb418df72a574e0e5f7, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0

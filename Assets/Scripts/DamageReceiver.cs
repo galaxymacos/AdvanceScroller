@@ -30,6 +30,15 @@ public class DamageReceiver : MonoBehaviour
             playerCharacter.onPlayerDodgeSucceed?.Invoke();
             return;
         }
+
+        if (!string.IsNullOrEmpty(damageData.hitSound) && damageData.hitSound.GetAudioType() != AudioType.None)
+        {
+            InfiniteSoundPlayer.instance.PlayAudio(damageData.hitSound.GetAudioType());
+        }
+        else
+        {
+            InfiniteSoundPlayer.instance.PlayAudio(AudioType.HitSoundGeneral);
+        }
         
         
         // Dealing with push
@@ -63,5 +72,7 @@ public class DamageReceiver : MonoBehaviour
         }
         
         onPlayerTakeDamage?.Invoke();
-    }    
+    }
+    
+    
 }

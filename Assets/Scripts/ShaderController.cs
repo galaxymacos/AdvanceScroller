@@ -7,7 +7,7 @@ public class ShaderController : MonoBehaviour
 {
     private Material mat;
     private float growDecreaseSpeed = 50;
-    private float ChromaticAbberationFadeSpeed = 0.6f;
+    private float ChromaticAbberationFadeSpeed = 0.4f;
     private void Awake()
     {
         mat = GetComponent<Renderer>().material;
@@ -37,7 +37,7 @@ public class ShaderController : MonoBehaviour
     {
         while (mat.GetFloat("_Glow") > 0f)
         {
-            mat.SetFloat("_Glow", mat.GetFloat("_Glow")-growDecreaseSpeed*Time.deltaTime);
+            mat.SetFloat("_Glow", Math.Max(0, mat.GetFloat("_Glow") - growDecreaseSpeed * Time.deltaTime));
             yield return null;
         }
     }
@@ -57,6 +57,18 @@ public class ShaderController : MonoBehaviour
             print("chronmatic fade");
             yield return null;
         }
+    }
+
+    public void SkillOnCooldownEffect()
+    {
+        mat.SetFloat("_ShakeUvSpeed", 4);
+        StartCoroutine(RecoverFromShake());
+    }
+
+    private IEnumerator RecoverFromShake()
+    {
+        yield return new WaitForSeconds(0.2f);
+        mat.SetFloat("_ShakeUvSpeed", 0);
     }
     
     

@@ -4,7 +4,8 @@ using UnityEngine;
 public class AB_Hurt_General : CharacterStateMachineBehavior
 {
     private Rigidbody2D rb;
-
+    private AudioType dashAttemptSucceeded;
+    private AudioType dashAttemptFailed;
     private Knockable knockable;
     [Tooltip("Dash when getting hit in 0.1 seconds to get out of the hurt state and dash")]
     private float dashStillAllowedLimit = 0.1f;
@@ -27,8 +28,10 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
         if (dashStillAlowedTimeCounter > 0)
         {
             dashStillAlowedTimeCounter -= Time.deltaTime;
-            if (playerInput!=null && playerInput.dashButtonPressed)
+            var energyComponent = playerCharacter.GetComponent<CharacterEnergyComponent>();
+            if (playerInput!=null && playerInput.dashButtonPressed && energyComponent.IsFull)
             {
+                energyComponent.Consume(energyComponent.currentEnergy);
                 playerInput.dashButtonPressed = false;
                 BulletTimeManager.instance.Register(0.3f);
                 playerCharacter.dashInvincibleTimeCounter = playerCharacter.dashInvincibleTime;

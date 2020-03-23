@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public abstract class CastSkillFilter
 {
     public CastSkillFilter next;
@@ -49,7 +51,12 @@ public class CooldownFilter : CastSkillFilter
 
     protected override bool Filter()
     {
-        return playerSkillCooldownManager.CheckCooldown(skillName);
+        bool result = playerSkillCooldownManager.CheckCooldown(skillName);
+        if (result == false)
+        {
+            csmb.playerCharacter.GetComponent<ShaderController>().SkillOnCooldownEffect();
+        }
+        return result;
     }
 }
 
@@ -178,4 +185,8 @@ public class LimitedUsageFilter: CastSkillFilter
     }
 }
 
+public class CharacterEventSystem : MonoBehaviour
+{
+    
+}
 

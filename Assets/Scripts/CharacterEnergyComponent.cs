@@ -8,6 +8,7 @@ public class CharacterEnergyComponent : MonoBehaviour
     [HideInInspector] public float currentEnergy;
     public float maxEnergy = 100;
     public float recoverSpeed = 10;
+    public bool IsFull => Math.Abs(maxEnergy - currentEnergy) < Mathf.Epsilon;
 
     public FloatAction onEnergyChanged;
 

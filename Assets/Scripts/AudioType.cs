@@ -111,7 +111,7 @@ public enum AudioType
 
     #region Battle
     
-    BloodExplosion,
+    HitSoundGeneral,
     
     #endregion
     

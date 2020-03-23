@@ -18,7 +18,7 @@ public class InfiniteSoundPlayer : MonoBehaviour
         }
     }
 
-    public void PlaySound(AudioType type)
+    public void PlayAudio(AudioType type)
     {
         print("play infinite sound");
         AudioSource audioSource = gameObject.AddComponent<AudioSource>();

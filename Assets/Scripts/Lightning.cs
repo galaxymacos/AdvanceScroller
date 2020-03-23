@@ -29,7 +29,7 @@ public class Lightning : MonoBehaviour
 
     private void Start()
     {
-        InfiniteSoundPlayer.instance.PlaySound(AudioType.Lightning);
+        InfiniteSoundPlayer.instance.PlayAudio(AudioType.Lightning);
     }
 
     private void SpawnLightningAfterEffect()
