@@ -7,27 +7,39 @@ public class Lightning : MonoBehaviour
 {
     // Spawn effect
     public GameObject explosion;
-    public GameObject fire;
+    private float explosionDelay = 0.4f;
     public ParticleDisposer lightningParticleDisposer;
 
 
     public Transform explosionSpawnTransform;
-    public Transform fireSpawnTransform;
+    
 
-
-    private void Awake()
+    private void Update()
     {
-        lightningParticleDisposer.onParticleDistroy += SpawnExplosion;
+        if (explosionDelay > 0)
+        {
+            explosionDelay -= Time.deltaTime;
+            if (explosionDelay <= 0)
+            {
+                SpawnLightningAfterEffect();
+            }
+        }
     }
+
 
     private void Start()
     {
         InfiniteSoundPlayer.instance.PlaySound(AudioType.Lightning);
     }
 
-    private void SpawnExplosion()
+    private void SpawnLightningAfterEffect()
     {
         Instantiate(explosion, explosionSpawnTransform.position, Quaternion.identity);
-        Instantiate(fire, fireSpawnTransform.position, Quaternion.identity);
+        
+        lightningParticleDisposer.onParticleDistroy -= SpawnLightningAfterEffect;
+
     }
+
+
+   
 }

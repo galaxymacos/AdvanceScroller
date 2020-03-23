@@ -14,6 +14,7 @@ public class ParticleDisposer : MonoBehaviour
 
     private void OnDestroy()
     {
+        print("destroy lightning");
         onParticleDistroy?.Invoke();
     }
 }
