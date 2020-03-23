@@ -1464,11 +1464,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f7e036a42526e4da07fbb8de2dea30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IceChannel:
+  teleport:
   - {fileID: 9208814282732372764}
   - {fileID: 9208814283482894841}
   - {fileID: 9208814282662812906}
-  - {fileID: 9208814283084752735}
   - {fileID: 9208814283046616435}
   - {fileID: 9208814283597344460}
   - {fileID: 9208814282807880158}
@@ -7107,6 +7106,7 @@ GameObject:
   - component: {fileID: 9208814282662812905}
   - component: {fileID: 9208814282662812904}
   - component: {fileID: 9208814282662812908}
+  - component: {fileID: 9208814282662812909}
   m_Layer: 0
   m_Name: IceChannel4
   m_TagString: Untagged
@@ -7126,6 +7126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9208814282662812909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814282662812907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!4 &9208814282723316064
 Transform:
   m_ObjectHideFlags: 0
@@ -7309,6 +7322,7 @@ GameObject:
   - component: {fileID: 9208814282732372765}
   - component: {fileID: 9208814282732372755}
   - component: {fileID: 9208814282732372767}
+  - component: {fileID: 9208814282732372768}
   m_Layer: 0
   m_Name: IceChannel2
   m_TagString: Untagged
@@ -7328,6 +7342,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9208814282732372768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814282732372766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!4 &9208814282737192004
 Transform:
   m_ObjectHideFlags: 0
@@ -7754,6 +7781,7 @@ GameObject:
   - component: {fileID: 9208814282807880157}
   - component: {fileID: 9208814282807880156}
   - component: {fileID: 9208814282807880160}
+  - component: {fileID: 9208814282807880161}
   m_Layer: 0
   m_Name: IceChannel8
   m_TagString: Untagged
@@ -7773,6 +7801,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9208814282807880161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814282807880159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!212 &9208814282850077960
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8486,6 +8527,7 @@ GameObject:
   - component: {fileID: 9208814283046616444}
   - component: {fileID: 9208814283046616434}
   - component: {fileID: 9208814283046616446}
+  - component: {fileID: 9208814283046616447}
   m_Layer: 0
   m_Name: IceChannel6
   m_TagString: Untagged
@@ -8505,6 +8547,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9208814283046616447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814283046616445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!4 &9208814283056875544
 Transform:
   m_ObjectHideFlags: 0
@@ -8667,32 +8722,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!61 &9208814283067524507
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9208814283067529830}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &9208814283067529828
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8767,8 +8796,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9208814283067529829}
   - component: {fileID: 9208814283067529828}
-  - component: {fileID: 9208814283067524507}
-  - component: {fileID: 9208814283067529831}
   m_Layer: 0
   m_Name: IceChannel1
   m_TagString: Untagged
@@ -8776,18 +8803,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9208814283067529831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9208814283067529830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9208814283084752728
 GameObject:
   m_ObjectHideFlags: 0
@@ -8798,8 +8813,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9208814283084752735}
   - component: {fileID: 9208814283084752734}
-  - component: {fileID: 9208814283084752733}
-  - component: {fileID: 9208814283084752729}
   m_Layer: 0
   m_Name: IceChannel5
   m_TagString: Untagged
@@ -8807,44 +8820,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &9208814283084752729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9208814283084752728}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &9208814283084752733
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9208814283084752728}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
 --- !u!212 &9208814283084752734
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11004,6 +10979,7 @@ GameObject:
   - component: {fileID: 9208814283482894841}
   - component: {fileID: 9208814283482894842}
   - component: {fileID: 9208814283482894840}
+  - component: {fileID: 9208814283482894844}
   m_Layer: 0
   m_Name: IceChannel3
   m_TagString: Untagged
@@ -11011,6 +10987,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9208814283482894844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814283482894843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!70 &9208814283491557569
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -11647,6 +11636,7 @@ GameObject:
   - component: {fileID: 9208814283597344461}
   - component: {fileID: 9208814283597344451}
   - component: {fileID: 9208814283597344463}
+  - component: {fileID: 9208814283597344464}
   m_Layer: 0
   m_Name: IceChannel7
   m_TagString: Untagged
@@ -11666,6 +11656,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9208814283597344464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9208814283597344462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f506cb0d8fdc24f9563fc6087d3716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IceChannel: {fileID: 9208814281812581833}
 --- !u!70 &9208814283614877315
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
