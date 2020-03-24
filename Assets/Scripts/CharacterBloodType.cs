@@ -1,8 +1,10 @@
 using UnityEngine;
 
-public class AutoDestroyBlood : CharacterBloodType
+public abstract class CharacterBloodType : MonoBehaviour
 {
-    public override void Setup(Transform damageSource, Transform bloodOwner)
+    [SerializeField] protected float duration = 2f;
+
+    public virtual void Setup(Transform damageSource, Transform bloodOwner)
     {
         var bloodParticleSystems = GetComponentsInChildren<ParticleSystem>();
         foreach (var bps in bloodParticleSystems)
@@ -13,6 +15,11 @@ public class AutoDestroyBlood : CharacterBloodType
             collision.collidesWith = ~((1 << layerToIgnore) | (1 << gameObject.layer));
 
         }
+        Vector3 bloodDirection = Vector3.Normalize(bloodOwner.position - damageSource.position);
+        print("Normal blood: " + bloodDirection);
+
+        transform.rotation = Quaternion.LookRotation(bloodDirection);
+        
         Destroy(gameObject, duration);
     }
 }

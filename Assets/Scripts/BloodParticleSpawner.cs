@@ -24,28 +24,32 @@ public class BloodParticleSpawner : MonoBehaviour
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatDirectional2D,
                     transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
+                
                 break;
             case DamageType.ShotGun:
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodSplatCritcal2D,
                     transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
+                
                 break;
             case DamageType.Explosion:
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodExplosion2D, transform.position,
                     Quaternion.identity);
+                
                 break;
             case DamageType.HorizontalDripping:
                 bloodParticleSystem = Instantiate(ParticleSpawner.Instance.BloodShowerLoop2D,
                     transform.position + bloodStartRotation * bloodParticleOffset,
                     Quaternion.identity);
+                
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
         }
-        bloodParticleSystem.GetComponent<IBloodType>()?.Setup(damageSource, bloodOwner);
-        
 
-        // bloodParticleSystem.transform.rotation = Quaternion.LookRotation(bloodStartRotation);
+
+        bloodParticleSystem.GetComponent<CharacterBloodType>()?.Setup(damageSource, bloodOwner);
+
     }
 
     public void SpawnBloodDrippingParticle(float duration)
