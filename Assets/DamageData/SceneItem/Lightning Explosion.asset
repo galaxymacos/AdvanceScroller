@@ -16,10 +16,10 @@ MonoBehaviour:
   pushPower: 0
   pushDistance: 0
   pushType: 0
-  damageType: 2
+  damageType: 1
   offSetDegree: 0
   hitStunPower: 0
-  launcherHorizontalForce: 5
-  launcherVerticalForce: 5
+  launcherHorizontalForce: 6
+  launcherVerticalForce: 6
   attackEffects: []
   hitSound: 0

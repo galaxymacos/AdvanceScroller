@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: edc35067215f40cd99fe9b55d6ce31f1, type: 3}
-  m_Name: ElectrificationEffect
+  m_Name: Lightning Electrification Effect
   m_EditorClassIdentifier: 
   duration: 5
-  ElectrificationOdd: 0.5
-  damagePerTick: 8
+  ElectrificationOdd: 0.3
+  damagePerTick: 5

@@ -18,8 +18,9 @@ MonoBehaviour:
   pushType: 0
   damageType: 2
   offSetDegree: 0
-  hitStunPower: 0
+  hitStunPower: 0.5
   launcherHorizontalForce: 0
   launcherVerticalForce: 0
-  attackEffects: []
+  attackEffects:
+  - {fileID: 11400000, guid: ed19cebb06388b641af54631f4e10ea7, type: 2}
   hitSound: 

@@ -10,6 +10,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
     private float duration;
     private float odd;
     [SerializeField] private float delay = 0.2f;
+    private float damagePerTick = 0;
     public bool isElectrification => duration > 0;
 
     private void Awake()
@@ -35,6 +36,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
             {
                 duration = electrificationEffect.duration;
                 odd = electrificationEffect.ElectrificationOdd;
+                damagePerTick = electrificationEffect.damagePerTick;
             }
         }
     }
@@ -73,7 +75,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
 
     private void ElectricShot()
     {
-        healthComponent.DrainHealth(10);
+        healthComponent.DrainHealth(damagePerTick);
         SpriteEffectFactory.instance.SpawnEffect("Electricity Explosion", transform.root);
         print("ElectricShot");
     }
