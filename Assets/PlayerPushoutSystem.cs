@@ -23,19 +23,6 @@ public class PlayerPushoutSystem : MonoBehaviour
 
     }
 
-    public bool TwoChannelsAvailable()
-    {
-        int channalAvailable = 0;
-        foreach (Channel channel in channelRuntimeDictionary.Keys)
-        {
-            if (channelRuntimeDictionary[channel] <= 0)
-            {
-                channalAvailable++;
-            }
-        }
-
-        return channalAvailable >= 2;
-    }
 
     private void OnDestroy()
     {
@@ -58,10 +45,23 @@ public class PlayerPushoutSystem : MonoBehaviour
             }
         }
     }
+    
+    private bool IsTwoChannelsAvailable()
+    {
+        int channalAvailable = 0;
+        foreach (Channel channel in channelRuntimeDictionary.Keys)
+        {
+            if (channelRuntimeDictionary[channel] <= 0)
+            {
+                channalAvailable++;
+            }
+        }
 
+        return channalAvailable >= 2;
+    }
     private void DistributePlayerToChannel(Channel channel, PlayerCharacter playerCharacter)
     {
-        if (!TwoChannelsAvailable())
+        if (!IsTwoChannelsAvailable())
         {
             return;
         }

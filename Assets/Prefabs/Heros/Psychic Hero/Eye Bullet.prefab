@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1826708399
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: dfb3448c4629c994186aa3cd5beb1806, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -164,11 +164,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 096e93fd9e94ad8409df5c93a5af9d10, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectsInCollision: []
   owner: {fileID: 0}
   deadParticle: {fileID: 0}
   damageData: {fileID: 11400000, guid: 14e8d8c21b79f4a4081fb2890e87ae5d, type: 2}
   destroyedWhenHitPlayer: 0
+  destroyWithoutDeadEffect: 0
 --- !u!114 &230173151685336011
 MonoBehaviour:
   m_ObjectHideFlags: 0

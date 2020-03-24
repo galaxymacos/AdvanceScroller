@@ -59,7 +59,7 @@ public class GalaxyAxeStation : MonoBehaviour
 
     private void BindToOwner()
     {
-        GetComponent<SpringJoint2D>().connectedBody = owner.GetComponent<Rigidbody2D>();
+        GetComponent<SpringJoint2D>().connectedBody = owner.Find("GalaxyAxeStationBinder").GetComponent<Rigidbody2D>();
         
         var spriteJoint = GetComponent<SpringJoint2D>();
         spriteJoint.autoConfigureDistance = false;

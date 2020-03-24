@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Missile
   layers:
   - Default
   - TransparentFX
@@ -41,16 +42,19 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: PlayerBack
-    uniqueID: 1261829911
+  - name: Scene
+    uniqueID: 1237671335
     locked: 0
-  - name: PlayerFront
-    uniqueID: 1090928561
+  - name: Scene VFX
+    uniqueID: 2989046961
     locked: 0
-  - name: PlayerProjectile
+  - name: Player
+    uniqueID: 3291141175
+    locked: 0
+  - name: Projectile
     uniqueID: 2468258897
     locked: 0
-  - name: VFX
+  - name: Player VFX
     uniqueID: 3226184423
     locked: 0
   - name: UI

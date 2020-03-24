@@ -38,6 +38,7 @@
             <e p="SetAtlasUvs.cs" t="Include" />
           </e>
         </e>
+        <e p="AutoLightingAdapter.cs" t="Include" />
         <e p="BloodDebugger.cs" t="Include" />
         <e p="Channel.cs" t="Include" />
         <e p="ChannelErrorPlacer.cs" t="Include" />
