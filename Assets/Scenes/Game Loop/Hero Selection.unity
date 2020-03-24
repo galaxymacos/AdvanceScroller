@@ -2390,10 +2390,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4056,7 +4056,23 @@ MonoBehaviour:
     - typeInString: ST_IceMap4
       clip: {fileID: 8300000, guid: 3e1ac29b8221ef745ba0bd1c18ad4014, type: 3}
   - source: {fileID: 1011333973}
-    audio: []
+    audio:
+    - typeInString: BatHero_Punch01
+      clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
+    - typeInString: BatHero_Punch02
+      clip: {fileID: 8300000, guid: b4c92c48201071a43b01eb5b68bfeab8, type: 3}
+    - typeInString: BatHero_BatEnergy
+      clip: {fileID: 8300000, guid: 63e1a737f0f697c44a11a2fd16100bbe, type: 3}
+    - typeInString: BatHero_ThrowShuriki
+      clip: {fileID: 8300000, guid: 30a083dda058b764588838d5534af594, type: 3}
+    - typeInString: BatHero_Fly
+      clip: {fileID: 8300000, guid: d28997a6445dd6340b99566a1bcad842, type: 3}
+    - typeInString: BatHero_InstantKillStart
+      clip: {fileID: 8300000, guid: 08f0d52bd17bac548ab0829ef310fb62, type: 3}
+    - typeInString: BatHero_InstantKillHit
+      clip: {fileID: 8300000, guid: a14fb783ce49e614fa8d7269232d350e, type: 3}
+    - typeInString: BatHero_InstantKillExplode
+      clip: {fileID: 8300000, guid: b08957523617a4247827ba63ed6e7a9e, type: 3}
   - source: {fileID: 981339384}
     audio: []
   - source: {fileID: 969774941}
