@@ -8,7 +8,7 @@ public class IceSlideDissemableComponent : MonoBehaviour
     {
         IceSlideEventSystem.onIceSlideFinish += Shrink;
         IceSlideEventSystem.onIceSlideShrinkFinish += AutoDestroy;
-        transform.localScale = Vector3.zero;
+        transform.localScale = new Vector3(0.01f,0.01f,0.01f);
         Enlarge();
     }
 
@@ -23,12 +23,12 @@ public class IceSlideDissemableComponent : MonoBehaviour
     private void Shrink()
     {
         Debug.Log("Cloud Destroy");
-        transform.DOScale(Vector3.zero, 2).SetEase(Ease.InQuad).OnComplete(IceSlideEventSystem.instance.IceSlideShrinkFinish);
+        transform.DOScale(new Vector3(0.01f,0.01f,0.01f), 1).SetEase(Ease.InQuad).OnComplete(IceSlideEventSystem.instance.IceSlideShrinkFinish);
     }
 
     private void Enlarge()
     {
-        transform.DOScale(Vector3.one, 2).SetEase(Ease.InQuad).OnComplete(IceSlideEventSystem.instance.IceSlideEnlargeFinish);
+        transform.DOScale(Vector3.one, 1.5f).SetEase(Ease.InQuad).OnComplete(IceSlideEventSystem.instance.IceSlideEnlargeFinish);
     }
 
     private void AutoDestroy()

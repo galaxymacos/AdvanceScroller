@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01f99c4b69cba2c4daa4b0c1b16ed676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloud: {fileID: 0}
+  cloud: {fileID: 6115262525830399688, guid: 88ae4f0765dbbfb49822048c97849717, type: 3}
   cloudSpawnPoint: {fileID: 0}
 --- !u!1 &7710822272697818295
 GameObject:
