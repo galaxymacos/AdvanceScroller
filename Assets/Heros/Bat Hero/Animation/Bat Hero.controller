@@ -892,7 +892,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: BatEnergy
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1415,7 +1415,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: BatHero_Fly
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1573,7 +1573,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: BatHero_ThrowShuriki
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
