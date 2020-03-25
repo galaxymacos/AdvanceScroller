@@ -694,7 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: 
+  soundInString: BatHero_InstantKillStart
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -892,7 +892,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: BatEnergy
+  soundInString: BatHero_BatEnergy
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1661,7 +1661,7 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
-  soundInString: 
+  soundInString: BatHero_Punch01
   canControlHorizontalMovement: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}

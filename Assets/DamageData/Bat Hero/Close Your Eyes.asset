@@ -21,3 +21,5 @@ MonoBehaviour:
   hitStunPower: 1
   launcherHorizontalForce: 0
   launcherVerticalForce: 0
+  attackEffects: []
+  hitSound: UltraSkill

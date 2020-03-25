@@ -22,4 +22,4 @@ MonoBehaviour:
   launcherHorizontalForce: 4
   launcherVerticalForce: 6
   attackEffects: []
-  hitSound: BatHero_InstantKillExplode
+  hitSound: BatHero_InstantKillStrike
