@@ -43,7 +43,16 @@
         <e p="Channel.cs" t="Include" />
         <e p="ChannelErrorPlacer.cs" t="Include" />
         <e p="ChannelEventSystem.cs" t="Include" />
+        <e p="CloudFactory.cs" t="Include" />
         <e p="Demigiant" t="Include">
+          <e p="DemiLib" t="Include">
+            <e p="Core" t="Include">
+              <e p="DemiLib.xml" t="Include" />
+              <e p="Editor" t="Include">
+                <e p="DemiEditor.xml" t="Include" />
+              </e>
+            </e>
+          </e>
           <e p="DOTween" t="Include">
             <e p="Modules" t="Include">
               <e p="DOTweenModuleAudio.cs" t="Include" />
@@ -56,8 +65,21 @@
             </e>
             <e p="readme.txt" t="Include" />
           </e>
+          <e p="DOTweenPro" t="Include">
+            <e p="DOTweenAnimation.cs" t="Include" />
+            <e p="DOTweenProShortcuts.cs" t="Include" />
+            <e p="DOTweenTextMeshPro.cs" t="Include" />
+            <e p="DOTweenTk2d.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="DOTweenAnimationInspector.cs" t="Include" />
+              <e p="DOTweenPreviewManager.cs" t="Include" />
+            </e>
+            <e p="readme.txt" t="Include" />
+          </e>
+          <e p="readme_DOTweenPro.txt" t="Include" />
         </e>
         <e p="DrippingBlood.cs" t="Include" />
+        <e p="DropSnowballComponent.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -109,6 +131,9 @@
             <e p="Read Me.txt" t="Include" />
           </e>
         </e>
+        <e p="IceSlideDissemableComponent.cs" t="Include" />
+        <e p="IceSlideEventSystem.cs" t="Include" />
+        <e p="IceSlideTrigger.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
             <e p="TooCubeForest" t="Include">
@@ -131,7 +156,6 @@
           </e>
         </e>
         <e p="PlayerInputActions.cs" t="Include" />
-        <e p="PlayerPushoutSystem.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -294,6 +318,7 @@
           <e p="ParticleSystemRecycler.cs" t="Include" />
           <e p="ParticleTimeSkipper.cs" t="Include" />
           <e p="PausableSMB.cs" t="Include" />
+          <e p="PlatformStickComponent.cs" t="Include" />
           <e p="PlayerCharacter.cs" t="Include" />
           <e p="PlayerCharacterSpawner.cs" t="Include" />
           <e p="PlayerDodgingEventRegister.cs" t="Include" />
@@ -420,6 +445,8 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="TunnelTeleporter.cs" t="Include" />
+        <e p="WayPointSlideComponent.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

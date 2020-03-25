@@ -7,14 +7,16 @@ public class PlayerCharacter : MonoBehaviour
 {
     public PlayerInput playerInput;
     
-    public float checkRadius = 0.03f;
+    private float checkRadius = 0.03f;
 
     // Ground check
     public Transform groundCheck;
     
     public bool isGrounded;
 
-    public bool IsGrounded => isGrounded;
+    [HideInInspector] public bool isGroundedOverride;
+    [HideInInspector] public bool overrideGrounded;
+    public bool IsGrounded => isGroundedOverride?overrideGrounded:isGrounded;
 
     public LayerMask whatIsGround;
     

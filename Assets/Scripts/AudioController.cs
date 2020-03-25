@@ -71,16 +71,19 @@ public class AudioController : MonoBehaviour
 
     public void PlayAudio(AudioType _type, bool _fade = false, float _delay = 0.0f, bool _loop = false)
     {
+        if (_type == AudioType.None) return;
         Addjob(new AudioJob(AudioAction.START, _type, _fade, _delay, _loop));
     }
 
     public void StopAudio(AudioType _type, bool _fade = false, float _delay = 0.0f)
     {
+        if (_type == AudioType.None) return;
         Addjob(new AudioJob(AudioAction.STOP, _type, _fade, _delay, false));
     }
 
     public void RestartAudio(AudioType _type, bool _fade = false, float _delay = 0.0f)
     {
+        if (_type == AudioType.None) return;
         Addjob(new AudioJob(AudioAction.RESTART, _type, _fade, _delay, false));
 
     }

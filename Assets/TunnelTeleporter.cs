@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class PlayerPushoutSystem : MonoBehaviour
+public class TunnelTeleporter : MonoBehaviour
 {
     [SerializeField] private List<Channel> channels;
     public Dictionary<Channel, float> channelRuntimeDictionary;
