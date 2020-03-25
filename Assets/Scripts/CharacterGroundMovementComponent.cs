@@ -12,7 +12,7 @@ public class CharacterGroundMovementComponent: MovementComponent
     public CharacterGroundMovementComponent(PlayerCharacter playerCharacter)
     {
         _playerCharacter = playerCharacter;
-        movementSpeed = playerCharacter.movementSpeed;
+        movementSpeed = playerCharacter.MovementSpeed;
         rb = _playerCharacter.GetComponent<Rigidbody2D>();
     }
 

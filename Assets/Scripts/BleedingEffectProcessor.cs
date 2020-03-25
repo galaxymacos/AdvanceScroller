@@ -15,14 +15,14 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
-        healthComponent.onTakeHit += ProcessBridge;
+        // healthComponent.onTakeHit += ProcessBridge;
         onStartBleeding += SpawnBloodParticleBridge;
     }
 
-    private void ProcessBridge(CharacterHealthComponent health)
-    {
-        Process(health.damageDataFromLastAttack);
-    }
+    // private void ProcessBridge(CharacterHealthComponent health)
+    // {
+    //     Process(health.damageDataFromLastAttack);
+    // }
 
 
     public void Process(DamageData damageData)
@@ -47,10 +47,10 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             healthComponent.DrainHealth(bleedPerSecond*Time.deltaTime);
         }
 
-        FireEvent();
+        UpdateEvent();
     }
 
-    private void FireEvent()
+    private void UpdateEvent()
     {
         if (isBleeding && !wasBleeding)
         {

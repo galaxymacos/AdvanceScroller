@@ -544,7 +544,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1003826121
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: e5248b71484f09c4f8d294971c1361df, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -589,9 +589,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
-  checkRadius: 0.03
   groundCheck: {fileID: 3658480544129214436}
   isGrounded: 0
+  isGroundedOverride: 0
+  overrideGrounded: 0
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -628,7 +629,9 @@ MonoBehaviour:
   - {fileID: 1086934268}
   - {fileID: 1086934267}
   impactWave: {fileID: 4136297010379293390}
-  movementSpeed: 5
+  MovementSpeedOriginal: 5
+  IsMoveSpeedOverriden: 0
+  OverridenMovementSpeed: 0
   canControlMovement: 1
   chargedDagger: {fileID: 0}
   winPose: {fileID: 21300000, guid: 8ee2cf7bc588684418fdafec5e08295d, type: 3}
@@ -1231,6 +1234,8 @@ GameObject:
   - component: {fileID: 6481471676235685002}
   - component: {fileID: 2717417514044972656}
   - component: {fileID: 7367344247296856948}
+  - component: {fileID: 6035081916541423273}
+  - component: {fileID: 5475958560472553198}
   m_Layer: 0
   m_Name: DamageEffectContainer
   m_TagString: Untagged
@@ -1279,6 +1284,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthComponent: {fileID: 3658480544048443887}
   delay: 0.2
+--- !u!114 &6035081916541423273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596299238993443564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe35e1d2fbd4c6b8a2f3c15066838c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5475958560472553198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596299238993443564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b24d0ee3204e4183a48c11d0b772c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2116540360081018202
 PrefabInstance:
   m_ObjectHideFlags: 0

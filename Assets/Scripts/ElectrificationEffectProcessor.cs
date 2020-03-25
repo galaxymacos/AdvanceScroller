@@ -16,18 +16,19 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
-        healthComponent.onTakeHit += ProcessBridge;
+        // healthComponent.onTakeHit += ProcessBridge;
         healthComponent.onTakeHit += ApplyElectricityDamage;
     }
 
-    private void ProcessBridge(CharacterHealthComponent health)
-    {
-        Process(health.damageDataFromLastAttack);
-    }
+    // private void ProcessBridge(CharacterHealthComponent health)
+    // {
+    //     Process(health.damageDataFromLastAttack);
+    // }
 
 
     public void Process(DamageData damageData)
     {
+        print("Process ElectrificationEffect");
         if (damageData.attackEffects == null) return;
         foreach (ScriptableObject attackEffect in damageData.attackEffects)
         {

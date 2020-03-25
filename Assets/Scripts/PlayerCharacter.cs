@@ -86,7 +86,11 @@ public class PlayerCharacter : MonoBehaviour
     private Rigidbody2D rb;
     public bool isFacingRight => transform.localScale.x > 0;
     
-    public float movementSpeed = 5f;
+    public float MovementSpeed => IsMoveSpeedOverriden? OverridenMovementSpeed : MovementSpeedOriginal;
+    public float MovementSpeedOriginal = 5f;
+    public bool IsMoveSpeedOverriden;
+    public float OverridenMovementSpeed;
+    
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipByInputComponent;

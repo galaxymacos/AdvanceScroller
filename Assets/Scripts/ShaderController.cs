@@ -70,6 +70,21 @@ public class ShaderController : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
         mat.SetFloat("_ShakeUvSpeed", 0);
     }
+
+    public void FreezeEffectToggle(bool isActive)
+    {
+        if (isActive)
+        {
+            mat.EnableKeyword("GREYSCALE_ON");
+        }
+        else
+        {
+            mat.DisableKeyword("GREYSCALE_ON");
+        }
+    }
+    
+    
+    
     
     
 }

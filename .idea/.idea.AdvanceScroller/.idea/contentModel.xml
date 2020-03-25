@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AB_Frozen_General.cs" t="Include" />
         <e p="AllIn1SpriteShader" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -256,6 +257,8 @@
           <e p="ForceCancelShaderControl.cs" t="Include" />
           <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
           <e p="ForceShadowShaderComponent.cs" t="Include" />
+          <e p="FrozenEffect.cs" t="Include" />
+          <e p="FrozenEffectProcessor.cs" t="Include" />
           <e p="GalaxyAxeStation.cs" t="Include" />
           <e p="GameAssets.cs" t="Include" />
           <e p="GameEndDetector.cs" t="Include" />
@@ -370,7 +373,10 @@
           <e p="skill1_psychic_hero.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />
+          <e p="SlowEffect.cs" t="Include" />
+          <e p="SlowEffectProcessor.cs" t="Include" />
           <e p="SmallSnowballDamageReceiver.cs" t="Include" />
+          <e p="SmallSnowballEventSystem.cs" t="Include" />
           <e p="SMb_AxeHero_Caught.cs" t="Include" />
           <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
@@ -381,6 +387,7 @@
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
           <e p="SnowballDamageReceiver.cs" t="Include" />
+          <e p="SnowBallTryHitEnemyComponent.cs" t="Include" />
           <e p="SoundTrackPlayer.cs" t="Include" />
           <e p="Spike.cs" t="Include" />
           <e p="SpinCandidateData.cs" t="Include" />

@@ -6,6 +6,18 @@ public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
 
     [SerializeField] private float flySpeedGainPerDamage = 3f;
 
+    public class DamageReceiverArgs
+    {
+        public readonly DamageData damageData;
+        public readonly Transform damageOwner;
+
+        public DamageReceiverArgs(DamageData damageData, Transform damageOwner)
+        {
+            this.damageData = damageData;
+            this.damageOwner = damageOwner;
+        }
+    }
+    
     public void Analyze(DamageData damageData, Transform damageOwner)
     {
         print("analyze damage data");
@@ -20,3 +32,5 @@ public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
         rb.AddForce(flyDirection);
     }
 }
+
+// this is a local event system

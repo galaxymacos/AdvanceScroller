@@ -88,6 +88,11 @@ public class CharacterHealthComponent : MonoBehaviour
         }
         
         onTakeHit?.Invoke(this);
+
+        foreach (var aep in GetComponentsInChildren<IAttackEffectProcessor>())
+        {
+            aep.Process(_damageData);
+        }
         
     }
 

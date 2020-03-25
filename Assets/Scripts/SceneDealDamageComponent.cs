@@ -10,23 +10,43 @@ public class SceneDealDamageComponent : MonoBehaviour
     public DamageData damageData;
     private List<GameObject> objectsDealtDamageTo;
     public event Action onDamageDealt;
-    
+    public bool activateInAwake;
+    private bool isActive;
+    private PlayerCharacter owner;
+
+    public void SetOwner(PlayerCharacter _owner)
+    {
+        owner = _owner;
+    }
     private void Awake()
     {
         objectsDealtDamageTo = new List<GameObject>();
+        if (activateInAwake)
+        {
+            isActive = true;
+        }
+    }
+
+    public void SetActive(bool _isActive)
+    {
+        isActive = _isActive;
     }
 
     private void Update()
     {
-        foreach (var objInCollision in collisionDetector.ObjectsInCollision)
+        if (isActive)
         {
-            var healthComponent = objInCollision.GetComponent<CharacterHealthComponent>();
-            if (healthComponent != null && !objectsDealtDamageTo.Contains(objInCollision))
+            foreach (var objInCollision in collisionDetector.ObjectsInCollision)
             {
-                healthComponent.TakeDamage(damageData, transform, true);
-                onDamageDealt?.Invoke();
-                objectsDealtDamageTo.Add(objInCollision);
+                var healthComponent = objInCollision.GetComponent<CharacterHealthComponent>();
+                if (healthComponent != null && !objectsDealtDamageTo.Contains(objInCollision))
+                {
+                    healthComponent.TakeDamage(damageData, transform, true);
+                    onDamageDealt?.Invoke();
+                    objectsDealtDamageTo.Add(objInCollision);
+                }
             }
         }
+        
     }
 }

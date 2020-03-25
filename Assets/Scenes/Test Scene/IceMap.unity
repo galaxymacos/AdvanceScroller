@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -227,8 +227,10 @@ GameObject:
   - component: {fileID: 179848590}
   - component: {fileID: 179848591}
   - component: {fileID: 179848594}
+  - component: {fileID: 179848593}
+  - component: {fileID: 179848592}
   m_Layer: 14
-  m_Name: Snowball
+  m_Name: Snowball Big
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -351,6 +353,33 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.00000023841858}
   serializedVersion: 2
   m_Radius: 0.39749694
+--- !u!114 &179848592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179848586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abee9d7899f15334686170182b741219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionDetector: {fileID: 179848593}
+  damageData: {fileID: 11400000, guid: 8cfaf02e1c3d6ad40a7c5d5e88fa1425, type: 2}
+  activateInAwake: 0
+--- !u!114 &179848593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 179848586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &179848594
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,8 +616,10 @@ GameObject:
   - component: {fileID: 504131369}
   - component: {fileID: 504131368}
   - component: {fileID: 504131367}
+  - component: {fileID: 504131374}
+  - component: {fileID: 504131373}
   m_Layer: 14
-  m_Name: SmallSnowball
+  m_Name: Snowball Small
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -725,6 +756,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504131373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504131366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abee9d7899f15334686170182b741219, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collisionDetector: {fileID: 504131374}
+  damageData: {fileID: 11400000, guid: afc49ceb67f786349a22746598478279, type: 2}
+  activateInAwake: 0
+--- !u!114 &504131374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504131366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1022324789
 PrefabInstance:
   m_ObjectHideFlags: 0
