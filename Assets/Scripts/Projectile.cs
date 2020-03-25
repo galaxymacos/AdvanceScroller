@@ -103,7 +103,7 @@ public class Projectile : CollisionDetector
 
     private void ProcessDamageToReceiver(GameObject target)
     {
-        var damageReceive = target.GetComponent<DamageReceiver>();
+        var damageReceive = target.GetComponent<CharacterDamageReceiver>();
         if (damageReceive != null)
         {
             damageReceive.Analyze(damageData, transform);

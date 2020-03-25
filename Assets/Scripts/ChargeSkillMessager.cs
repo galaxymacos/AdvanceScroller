@@ -9,27 +9,27 @@ public class ChargeSkillMessager : MonoBehaviour
     
     private ChargeSkill currentChargeSkill;
     private PlayerCharacter playerCharacter;
-    private DamageReceiver damageReceiver;
+    private CharacterDamageReceiver characterDamageReceiver;
     private bool hasChargeSkillReleased;
 
 
     private void Awake()
     {
-        damageReceiver = GetComponent<DamageReceiver>();
+        characterDamageReceiver = GetComponent<CharacterDamageReceiver>();
         playerCharacter = GetComponent<PlayerCharacter>();
     }
 
     private void OnEnable()
     {
         onFireChargeSkill += SetCurrentChargeSkill;
-        damageReceiver.onPlayerTakeDamage += InterruptCurrentChargeSkill;
+        characterDamageReceiver.onPlayerTakeDamage += InterruptCurrentChargeSkill;
         playerCharacter.onPlayerStartDash += InterruptCurrentChargeSkill;
     }
 
     private void OnDisable()
     {
         onFireChargeSkill -= SetCurrentChargeSkill;
-        damageReceiver.onPlayerTakeDamage -= InterruptCurrentChargeSkill;
+        characterDamageReceiver.onPlayerTakeDamage -= InterruptCurrentChargeSkill;
         playerCharacter.onPlayerStartDash -= InterruptCurrentChargeSkill;
 
     }

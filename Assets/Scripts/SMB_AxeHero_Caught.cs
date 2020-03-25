@@ -45,7 +45,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
         playerToThrow.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
         playerToThrow.GetComponent<Rigidbody2D>().gravityScale = 0;
-        playerToThrow.GetComponent<DamageReceiver>().Analyze(stunDamageData, playerCharacter.transform);
+        playerToThrow.GetComponent<IDamageReceiver>().Analyze(stunDamageData, playerCharacter.transform);
         playerToThrow.transform.localScale = new Vector3(playerToThrow.transform.localScale.x, -playerToThrow.transform.localScale.y, playerToThrow.transform.localScale.z);
 
 
@@ -140,7 +140,7 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
 
         if (shouldThrow)
         {
-            playerToThrow.GetComponent<DamageReceiver>().Analyze(pushDamageData, playerCharacter.transform);
+            playerToThrow.GetComponent<IDamageReceiver>().Analyze(pushDamageData, playerCharacter.transform);
 
             playerCharacter.GetComponent<LayerMessager>().TemporaryDisableLayer();
             

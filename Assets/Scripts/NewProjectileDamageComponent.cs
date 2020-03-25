@@ -51,7 +51,7 @@ public class NewProjectileDamageComponent: MonoBehaviour
             if ((isSingleDamage && !hasDealtDamage) || !isSingleDamage)
             {
                 print("take damage");
-                playerCharacter.GetComponent<DamageReceiver>().Analyze(damageData, transform);
+                playerCharacter.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
                 onDamageDealt?.Invoke();
                 
                 if (isSingleDamage)

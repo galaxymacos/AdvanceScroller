@@ -7,10 +7,9 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     // private bool hasDealDamaged;
     // private bool isRunning;
     public DamageData damageData;
-    
+
 
     public List<GameObject> objectsHasProcessed = new List<GameObject>();
-
 
 
     private bool DealDamageToSingleTarget(GameObject gameObjectCollided)
@@ -18,18 +17,15 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         bool hitTarget = false;
         if (gameObjectCollided != transform.gameObject && gameObjectCollided != null)
         {
-            if (gameObjectCollided.GetComponent<PlayerCharacter>() != null)
+            if (!objectsHasProcessed.Contains(gameObjectCollided))
             {
-                if (!objectsHasProcessed.Contains(gameObjectCollided))
+                IDamageReceiver damageReceiver = gameObjectCollided.GetComponent<IDamageReceiver>();
+                if (damageReceiver != null)
                 {
-                    DamageReceiver damageReceiver = gameObjectCollided.GetComponent<DamageReceiver>(); 
-                    if ( damageReceiver != null)
-                    {
-                        hitTarget = true;
-                        print("deal damage to player ");
-                        damageReceiver.Analyze(damageData, transform.root);
-                        objectsHasProcessed.Add(gameObjectCollided);
-                    }
+                    hitTarget = true;
+                    print("deal damage to player ");
+                    damageReceiver.Analyze(damageData, transform.root);
+                    objectsHasProcessed.Add(gameObjectCollided);
                 }
             }
         }
@@ -41,6 +37,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
                 AudioController.instance.PlayAudio(AudioTypeConverter.ToAudioType(damageData.hitSound));
             }
         }
+
         return hitTarget;
     }
 
@@ -61,12 +58,10 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     }
 
 
-
-
     // public void StopDetectTargetManually()
     // {
-        // isRunning = false;
-        
+    // isRunning = false;
+
     // }
 }
 
@@ -79,7 +74,7 @@ public static class AudioTypeConverter
         {
             Debug.LogError($"Can't find the audio type with the name {audioInString}");
         }
+
         return result;
     }
-   
 }

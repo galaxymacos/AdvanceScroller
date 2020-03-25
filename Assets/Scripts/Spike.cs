@@ -10,17 +10,17 @@ public class Spike : MonoBehaviour
 
     [Tooltip("If the interval counter is greater than 0, then the spike does not hit player")] [SerializeField]
     private float interval = 6f;
-    public Dictionary<DamageReceiver, float> playersTakeDamage;
+    public Dictionary<IDamageReceiver, float> playersTakeDamage;
 
     private void Awake()
     {
-        playersTakeDamage = new Dictionary<DamageReceiver, float>();
+        playersTakeDamage = new Dictionary<IDamageReceiver, float>();
     }
 
     private void Update()
     {
-        List<DamageReceiver> keys = new List<DamageReceiver>(playersTakeDamage.Keys);
-        foreach (DamageReceiver damageReceiver in keys)
+        List<IDamageReceiver> keys = new List<IDamageReceiver>(playersTakeDamage.Keys);
+        foreach (IDamageReceiver damageReceiver in keys)
         {
             if (playersTakeDamage[damageReceiver] > 0)
             {
@@ -36,7 +36,7 @@ public class Spike : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        var damageReceiver = other.GetComponent<DamageReceiver>();
+        var damageReceiver = other.GetComponent<IDamageReceiver>();
         if (damageReceiver != null)
         {
             if (!playersTakeDamage.ContainsKey(damageReceiver))

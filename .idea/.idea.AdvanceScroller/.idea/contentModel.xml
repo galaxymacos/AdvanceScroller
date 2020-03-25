@@ -217,6 +217,7 @@
           <e p="CatHeroAnimatorEventHandler.cs" t="Include" />
           <e p="CatStateMachineBahavior.cs" t="Include" />
           <e p="CharacterBloodType.cs" t="Include" />
+          <e p="CharacterDamageReceiver.cs" t="Include" />
           <e p="CharacterEnergyComponent.cs" t="Include" />
           <e p="CharacterFlipComponent.cs" t="Include" />
           <e p="CharacterFuryBar.cs" t="Include" />
@@ -239,7 +240,6 @@
           <e p="Cross.cs" t="Include" />
           <e p="DaggerRotator.cs" t="Include" />
           <e p="DamageData.cs" t="Include" />
-          <e p="DamageReceiver.cs" t="Include" />
           <e p="DisolveShadowShaderComponent.cs" t="Include" />
           <e p="DissolveShaderControl.cs" t="Include" />
           <e p="DissolveShadowCreationMessager.cs" t="Include" />
@@ -268,6 +268,7 @@
           <e p="IceSpike.cs" t="Include" />
           <e p="iceSpikeGenerator.cs" t="Include" />
           <e p="IceSpikePauser.cs" t="Include" />
+          <e p="IDamageReceiver.cs" t="Include" />
           <e p="InfiniteSoundPlayer.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
           <e p="InstantKillContinuousAttack.cs" t="Include" />
@@ -369,6 +370,7 @@
           <e p="skill1_psychic_hero.cs" t="Include" />
           <e p="skill3_sword_princess.cs" t="Include" />
           <e p="SkillCooldownManager.cs" t="Include" />
+          <e p="SmallSnowballDamageReceiver.cs" t="Include" />
           <e p="SMb_AxeHero_Caught.cs" t="Include" />
           <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
@@ -378,6 +380,7 @@
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
+          <e p="SnowballDamageReceiver.cs" t="Include" />
           <e p="SoundTrackPlayer.cs" t="Include" />
           <e p="Spike.cs" t="Include" />
           <e p="SpinCandidateData.cs" t="Include" />

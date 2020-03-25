@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerCharacter))]
-public class DamageReceiver : MonoBehaviour
+public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
 {
     private PlayerCharacter playerCharacter;
     private StunComponent stunComponent;

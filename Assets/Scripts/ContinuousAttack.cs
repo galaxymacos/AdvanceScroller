@@ -87,7 +87,7 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         foreach (GameObject target in ObjectsInCollision)
         {
             if (target == null || target == owner.gameObject) continue;
-            var damageReceiver = target.GetComponent<DamageReceiver>();
+            var damageReceiver = target.GetComponent<IDamageReceiver>();
             if (damageReceiver != null)
             {
                 print("one last strike");
@@ -103,12 +103,9 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         foreach (GameObject target in ObjectsInCollision)
         {
             if (target == null || target == owner.gameObject) continue;
-            var damageReceiver = target.GetComponent<DamageReceiver>();
-            if (damageReceiver != null)
-            {
-                damageReceiver.Analyze(damageData, transform.root);
-            }
-            
+            var damageReceiver = target.GetComponent<IDamageReceiver>();
+            damageReceiver?.Analyze(damageData, transform.root);
+
         }
     }
     

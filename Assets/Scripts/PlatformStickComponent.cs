@@ -17,7 +17,7 @@ public class PlatformStickComponent : MonoBehaviour
 
     private void OnDestroy()
     {
-        IceSlideEventSystem.onIceSlideFinish += ClearAttachingGameObject;
+        IceSlideEventSystem.onIceSlideFinish -= ClearAttachingGameObject;
     }
 
     private void OnCollisionEnter2D(Collision2D other)

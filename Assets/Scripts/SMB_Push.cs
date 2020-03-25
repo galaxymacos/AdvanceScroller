@@ -78,7 +78,7 @@ public class SMB_Push : CharacterStateMachineBehavior
             bounceFromWallDamageData.damageType = DamageType.Explosion;
             bounceFromWallDamageData.launcherVerticalForce = 5;
             bounceFromWallDamageData.launcherHorizontalForce = pushComponent.pushDirection.x > 0 ? -4 : 4;
-            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            playerCharacter.GetComponent<IDamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
             characterAnimator.SetTrigger("hurt");
     }
 
@@ -98,7 +98,7 @@ public class SMB_Push : CharacterStateMachineBehavior
             bounceFromWallDamageData.launcherVerticalForce = Mathf.Abs((pushComponent.pushDirection * pushComponent.pushSpeed).y);
             bounceFromWallDamageData.launcherHorizontalForce =
                 (pushComponent.pushDirection * pushComponent.pushSpeed).x;
-            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            playerCharacter.GetComponent<IDamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
             characterAnimator.SetTrigger("hurt");
         }
     }
@@ -117,7 +117,7 @@ public class SMB_Push : CharacterStateMachineBehavior
             bounceFromWallDamageData.launcherVerticalForce = -Mathf.Abs((pushComponent.pushDirection * pushComponent.pushSpeed).y);
             bounceFromWallDamageData.launcherHorizontalForce =
                 (pushComponent.pushDirection * pushComponent.pushSpeed).x;
-            playerCharacter.GetComponent<DamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
+            playerCharacter.GetComponent<IDamageReceiver>().Analyze(bounceFromWallDamageData, playerCharacter.transform);    // The second param has no meaning
             characterAnimator.SetTrigger("hurt");
         }
     }

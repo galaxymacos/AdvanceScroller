@@ -13,6 +13,7 @@ public class SignRoationAnimControl : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
+
         PlayerCharacter playerCharacter = other.GetComponent<PlayerCharacter>();
         if (playerCharacter != null)
         {

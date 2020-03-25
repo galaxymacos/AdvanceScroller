@@ -17,7 +17,7 @@ public class InstantKillContinuousAttack : ContinuousAttack
         foreach (GameObject target in SingleAttackComponent.objectsHasProcessed)
         {
             if (target == null || target == owner.gameObject) continue;
-            var damageReceiver = target.GetComponent<DamageReceiver>();
+            var damageReceiver = target.GetComponent<CharacterDamageReceiver>();
             if (damageReceiver != null)
             {
                 damageReceiver.GetComponent<CharacterPauser>().UnPause();
@@ -33,7 +33,7 @@ public class InstantKillContinuousAttack : ContinuousAttack
         foreach (GameObject target in SingleAttackComponent.objectsHasProcessed)
         {
             if (target == null || target == owner.gameObject) continue;
-            var damageReceiver = target.GetComponent<DamageReceiver>();
+            var damageReceiver = target.GetComponent<IDamageReceiver>();
             if (damageReceiver != null)
             {
                 print("Instant kill tick");
