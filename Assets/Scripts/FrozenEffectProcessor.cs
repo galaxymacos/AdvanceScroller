@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FrozenEffectProcessor : MonoBehaviour, IAttackEffectProcessor
@@ -22,6 +23,12 @@ public class FrozenEffectProcessor : MonoBehaviour, IAttackEffectProcessor
             }
         }
     }
-    
-    
+
+    private void Update()
+    {
+        if (frozenTime > 0)
+        {
+            frozenTime-=Time.deltaTime;
+        }
+    }
 }

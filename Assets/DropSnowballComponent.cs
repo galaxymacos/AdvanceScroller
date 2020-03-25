@@ -1,11 +1,14 @@
 using System;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class DropSnowballComponent : MonoBehaviour
 {
     [SerializeField] private float spawnInterval = 2f;
+    [Tooltip("If the value is 0.5f, then the item will be spawned in an interval of (spawnInterval-0.5, spawnInterval+0.5)")]
+    [SerializeField] private float spawnIntervalVariedRange = 1f;
     private float spawnTimeCounter;
-    [SerializeField] private GameObject snowBallPrefab;
+    [SerializeField] private GameObject[] itemsToDrop;
     [SerializeField] private Transform dropPoint;
 
     private bool isRunning;
@@ -25,7 +28,12 @@ public class DropSnowballComponent : MonoBehaviour
     private void SetRunning()
     {
         isRunning = true;
-        spawnTimeCounter = spawnInterval;
+        ResetSpawnTimeCounter();
+    }
+
+    private void ResetSpawnTimeCounter()
+    {
+        spawnTimeCounter = Random.Range(spawnInterval-spawnIntervalVariedRange, spawnInterval + spawnIntervalVariedRange);
     }
 
     private void StopRunning()
@@ -43,9 +51,8 @@ public class DropSnowballComponent : MonoBehaviour
                 spawnTimeCounter -= Time.deltaTime;
                 if (spawnTimeCounter <= 0)
                 {
-                    var snowBall = Instantiate(snowBallPrefab, dropPoint.position, Quaternion.identity);
-                    spawnTimeCounter = spawnInterval;
-                
+                    var item = Instantiate(itemsToDrop[Random.Range(0, itemsToDrop.Length)], dropPoint.position, Quaternion.identity);
+                    ResetSpawnTimeCounter();
                 }
             }
         }

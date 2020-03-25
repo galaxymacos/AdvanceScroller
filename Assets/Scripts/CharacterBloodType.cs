@@ -16,7 +16,6 @@ public abstract class CharacterBloodType : MonoBehaviour
 
         }
         Vector3 bloodDirection = Vector3.Normalize(bloodOwner.position - damageSource.position);
-        print("Normal blood: " + bloodDirection);
 
         transform.rotation = Quaternion.LookRotation(bloodDirection);
         

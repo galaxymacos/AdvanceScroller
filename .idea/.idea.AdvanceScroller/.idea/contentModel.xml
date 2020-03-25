@@ -241,6 +241,7 @@
           <e p="Cross.cs" t="Include" />
           <e p="DaggerRotator.cs" t="Include" />
           <e p="DamageData.cs" t="Include" />
+          <e p="DestroyOnDamageComponnet.cs" t="Include" />
           <e p="DisolveShadowShaderComponent.cs" t="Include" />
           <e p="DissolveShaderControl.cs" t="Include" />
           <e p="DissolveShadowCreationMessager.cs" t="Include" />
@@ -375,8 +376,6 @@
           <e p="SkillCooldownManager.cs" t="Include" />
           <e p="SlowEffect.cs" t="Include" />
           <e p="SlowEffectProcessor.cs" t="Include" />
-          <e p="SmallSnowballDamageReceiver.cs" t="Include" />
-          <e p="SmallSnowballEventSystem.cs" t="Include" />
           <e p="SMb_AxeHero_Caught.cs" t="Include" />
           <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
@@ -387,6 +386,7 @@
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
           <e p="SnowballDamageReceiver.cs" t="Include" />
+          <e p="SnowballEventSystem.cs" t="Include" />
           <e p="SnowBallTryHitEnemyComponent.cs" t="Include" />
           <e p="SoundTrackPlayer.cs" t="Include" />
           <e p="Spike.cs" t="Include" />
@@ -416,6 +416,7 @@
           <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="SnowBallResetComponent.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="HealthBarShakeComponent.cs" t="Include" />

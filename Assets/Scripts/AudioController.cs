@@ -127,7 +127,6 @@ public class AudioController : MonoBehaviour
                 else
                 {
                     m_AudioTable.Add(_obj.type, _track);
-                    Log($"Registering audio {_obj.type}.");
                 }
             }
         }
@@ -136,7 +135,6 @@ public class AudioController : MonoBehaviour
     private void Log(string _msg)
     {
         if (!debug) return;
-        Debug.Log("[Audio Controller]: " + _msg);
     }
 
     private void LogWarning(string _msg)

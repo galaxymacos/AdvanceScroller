@@ -89,10 +89,7 @@ public class CharacterHealthComponent : MonoBehaviour
         
         onTakeHit?.Invoke(this);
 
-        foreach (var aep in GetComponentsInChildren<IAttackEffectProcessor>())
-        {
-            aep.Process(_damageData);
-        }
+        
         
     }
 
@@ -108,11 +105,11 @@ public class CharacterHealthComponent : MonoBehaviour
     }
 
 
-    public void HitFreeze()
-    {
-        Time.timeScale = 0.01f;
-        isTimeFreezed = true;
-    }
+    // public void HitFreeze()
+    // {
+    //     Time.timeScale = 0.01f;
+    //     isTimeFreezed = true;
+    // }
     
     public void Heal(float amount)
     {

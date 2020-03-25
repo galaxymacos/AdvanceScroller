@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
 {
-    public CharacterHealthComponent healthComponent;
+    private CharacterHealthComponent healthComponent;
     private float bleedTimeCounter;
     private float bleedPerSecond;
 

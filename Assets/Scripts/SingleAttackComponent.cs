@@ -23,7 +23,6 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
                 if (damageReceiver != null)
                 {
                     hitTarget = true;
-                    print("deal damage to player ");
                     damageReceiver.Analyze(damageData, transform.root);
                     objectsHasProcessed.Add(gameObjectCollided);
                 }

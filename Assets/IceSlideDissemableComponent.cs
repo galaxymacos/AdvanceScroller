@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using UnityEngine;
 
 public class IceSlideDissemableComponent : MonoBehaviour
@@ -9,6 +10,10 @@ public class IceSlideDissemableComponent : MonoBehaviour
         IceSlideEventSystem.onIceSlideFinish += Shrink;
         IceSlideEventSystem.onIceSlideShrinkFinish += AutoDestroy;
         transform.localScale = new Vector3(0.01f,0.01f,0.01f);
+    }
+
+    private void Start()
+    {
         Enlarge();
     }
 

@@ -30,6 +30,11 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
             playerCharacter.onPlayerDodgeSucceed?.Invoke();
             return;
         }
+        
+        foreach (var aep in GetComponentsInChildren<IAttackEffectProcessor>())
+        {
+            aep.Process(damageData);
+        }
 
         if (!string.IsNullOrEmpty(damageData.hitSound) && damageData.hitSound.GetAudioType() != AudioType.None)
         {

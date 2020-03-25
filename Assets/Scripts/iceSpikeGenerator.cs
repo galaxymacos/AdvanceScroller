@@ -30,7 +30,6 @@ public class iceSpikeGenerator : MonoBehaviour
         {
             Transform newSpike =  Instantiate(iceSpike, spikePositions[Rn].transform.position, spikePositions[Rn].transform.rotation);
             
-            print("I am generated");
             timeLeftForSpikeGeneration = timeCircleForSpike;
         }
        

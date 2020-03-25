@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
@@ -5,6 +6,12 @@ public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
     [SerializeField] private Vector3 flyDirection = new Vector3(10f, 5f, 0.0f);
 
     [SerializeField] private float flySpeedGainPerDamage = 3f;
+    private SnowballEventSystem snowballEventSystem;
+
+    private void Awake()
+    {
+        snowballEventSystem = GetComponent<SnowballEventSystem>();
+    }
 
     public class DamageReceiverArgs
     {
@@ -20,7 +27,6 @@ public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
     
     public void Analyze(DamageData damageData, Transform damageOwner)
     {
-        print("analyze damage data");
 
         var facingleft = damageOwner.position.x - transform.position.x > 0;
         flyDirection = facingleft
@@ -30,6 +36,7 @@ public class SnowballDamageReceiver: MonoBehaviour, IDamageReceiver
         var rb = GetComponent<Rigidbody2D>();
         rb.isKinematic = false;
         rb.AddForce(flyDirection);
+        snowballEventSystem.SnowballTakeDamage(new DamageReceiverArgs(damageData, damageOwner));
     }
 }
 

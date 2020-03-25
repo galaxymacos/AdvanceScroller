@@ -25,6 +25,8 @@ public class SceneDealDamageComponent : MonoBehaviour
         {
             isActive = true;
         }
+
+        collisionDetector.onObjectCollided += TryDealDamage;
     }
 
     public void SetActive(bool _isActive)
@@ -32,21 +34,16 @@ public class SceneDealDamageComponent : MonoBehaviour
         isActive = _isActive;
     }
 
-    private void Update()
+    private void TryDealDamage(GameObject objToCollided)
     {
-        if (isActive)
+        if (!isActive) return;
+        print("Try deal damage to "+objToCollided.name);
+        var targetDamageReceiver = objToCollided.GetComponent<CharacterDamageReceiver>();
+        if (targetDamageReceiver != null && !objectsDealtDamageTo.Contains(objToCollided) && targetDamageReceiver.GetComponent<PlayerCharacter>() != owner)
         {
-            foreach (var objInCollision in collisionDetector.ObjectsInCollision)
-            {
-                var healthComponent = objInCollision.GetComponent<CharacterHealthComponent>();
-                if (healthComponent != null && !objectsDealtDamageTo.Contains(objInCollision))
-                {
-                    healthComponent.TakeDamage(damageData, transform, true);
-                    onDamageDealt?.Invoke();
-                    objectsDealtDamageTo.Add(objInCollision);
-                }
-            }
+            targetDamageReceiver.Analyze(damageData, transform);
+            objectsDealtDamageTo.Add(objToCollided);
+            onDamageDealt?.Invoke();
         }
-        
     }
 }

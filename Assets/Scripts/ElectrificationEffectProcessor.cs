@@ -6,10 +6,10 @@ using Random = UnityEngine.Random;
 
 public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProcessor
 {
-    public CharacterHealthComponent healthComponent;
+    private CharacterHealthComponent healthComponent;
     private float duration;
     private float odd;
-    [SerializeField] private float delay = 0.2f;
+    private float delay = 0.2f;
     private float damagePerTick = 0;
     public bool isElectrification => duration > 0;
 
@@ -28,7 +28,6 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
 
     public void Process(DamageData damageData)
     {
-        print("Process ElectrificationEffect");
         if (damageData.attackEffects == null) return;
         foreach (ScriptableObject attackEffect in damageData.attackEffects)
         {
