@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(SceneDealDamageComponent))]
@@ -8,6 +9,11 @@ public class DestroyOnDamageComponnet: MonoBehaviour
     {
         sceneDealDamageComponent = GetComponent<SceneDealDamageComponent>();
         sceneDealDamageComponent.onDamageDealt += DestroyGameObject;
+    }
+
+    private void OnDestroy()
+    {
+        sceneDealDamageComponent.onDamageDealt -= DestroyGameObject;
     }
 
     private void DestroyGameObject()

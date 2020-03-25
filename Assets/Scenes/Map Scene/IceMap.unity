@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1490,33 +1490,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6115262525830399728, guid: 88ae4f0765dbbfb49822048c97849717,
-        type: 3}
-      propertyPath: itemsToDrop.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6115262525830399728, guid: 88ae4f0765dbbfb49822048c97849717,
-        type: 3}
-      propertyPath: itemsToDrop.Array.data[0]
-      value: 
-      objectReference: {fileID: 4070862123855447980, guid: 2e3e27d39be46f04f84f89e4ae3a6c41,
-        type: 3}
-    - target: {fileID: 6115262525830399728, guid: 88ae4f0765dbbfb49822048c97849717,
-        type: 3}
-      propertyPath: itemsToDrop.Array.data[1]
-      value: 
-      objectReference: {fileID: 3724331226251301760, guid: b8cb7753581009c42841d284b91d0f6e,
-        type: 3}
-    - target: {fileID: 6115262525830399728, guid: 88ae4f0765dbbfb49822048c97849717,
-        type: 3}
-      propertyPath: spawnInterval
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6115262525830399728, guid: 88ae4f0765dbbfb49822048c97849717,
-        type: 3}
-      propertyPath: spawnIntervalVariedRange
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88ae4f0765dbbfb49822048c97849717, type: 3}

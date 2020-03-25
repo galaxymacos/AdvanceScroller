@@ -10,6 +10,7 @@ public class SnowBallResetComponent : MonoBehaviour
     private SnowballEventSystem eventSystem;
     private float resetCounter;
     private bool isCounting;
+    
     private Rigidbody2D rb;
 
     private void Awake()
@@ -18,17 +19,13 @@ public class SnowBallResetComponent : MonoBehaviour
         eventSystem = GetComponent<SnowballEventSystem>();
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Math.Abs(rb.velocity.magnitude) < Mathf.Epsilon && !isCounting)
+        if (Math.Abs(rb.velocity.magnitude) < 2 && !isCounting)
         {
+            
             isCounting = true;
             resetCounter = resetTime;
         }
@@ -39,6 +36,7 @@ public class SnowBallResetComponent : MonoBehaviour
             if (rb.velocity.magnitude > 0)
             {
                 resetCounter = resetTime;
+                isCounting = false;
             }
             
             if (resetCounter > Mathf.Epsilon)

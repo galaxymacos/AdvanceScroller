@@ -417,6 +417,7 @@
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
         <e p="SnowBallResetComponent.cs" t="Include" />
+        <e p="SnowBallSetuper.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="HealthBarShakeComponent.cs" t="Include" />

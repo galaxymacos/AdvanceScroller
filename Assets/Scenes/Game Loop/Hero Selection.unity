@@ -3154,7 +3154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 817789395}
+  leftElement: {fileID: 729884635}
   rightElement: {fileID: 1313306663}
   topElement: {fileID: 0}
   downElement: {fileID: 0}
@@ -4222,7 +4222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e215a5dafdab644934abdfa26b6d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inDebugMode: 1
+  inDebugMode: 0
 --- !u!4 &1767372506
 Transform:
   m_ObjectHideFlags: 0

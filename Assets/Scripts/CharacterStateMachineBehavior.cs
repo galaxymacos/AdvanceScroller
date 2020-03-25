@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStateMachineBehavior : StateMachineBehaviour
+public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
 {
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
     public string soundInString;
     [SerializeField] private bool canControlHorizontalMovement;
+    protected bool isPaused;
     
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
@@ -290,5 +291,15 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     protected void TransferToWallSlide()
     {
         characterAnimator.SetTrigger("wallslide");
+    }
+
+    public void Pause()
+    {
+        isPaused = true;
+    }
+
+    public void UnPause()
+    {
+        isPaused = false;
     }
 }

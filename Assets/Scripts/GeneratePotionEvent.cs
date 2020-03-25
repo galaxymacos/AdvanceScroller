@@ -4,6 +4,7 @@ using UnityEngine;
 public class GeneratePotionEvent : RandomEvent
 {
     public List<GameObject> potions;
+    public Transform[] potionSpawnLocations;
     public override void Execute()
     {
         GenerateRandomPotion();
@@ -12,8 +13,11 @@ public class GeneratePotionEvent : RandomEvent
     private void GenerateRandomPotion()
     {
         GameObject potion = potions[Random.Range(0,potions.Count)];
+        
         Transform generatedPosition =
-            MapInfo.instance.itemGeneratedPositions[Random.Range(0, MapInfo.instance.itemGeneratedPositions.Count)];
+            potionSpawnLocations[Random.Range(0, potionSpawnLocations.Length)];
+        
+        
         Instantiate(potion, generatedPosition.transform.position, Quaternion.identity);
     }
 }

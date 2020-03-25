@@ -4,8 +4,6 @@ using UnityEngine;
 public class MapInfo: MonoBehaviour
 {
     public static MapInfo instance;
-    public List<Transform> itemGeneratedPositions;
-
     
     public Transform topLeftBoundary;
     public Transform topRightBoundary;
@@ -29,8 +27,7 @@ public class MapInfo: MonoBehaviour
     {
         Vector3 startPosition = new Vector3(topLeftBoundary.position.x + (topRightBoundary.position.x - topLeftBoundary.position.x)*Random.Range(0f,1f), (topRightBoundary.position.y + topLeftBoundary.position.y)/2,0);
         print(startPosition);
-        RaycastHit2D result;
-        result = Physics2D.Raycast(startPosition, Vector3.down, 200, LayerInfo.WhatIsGround);
+        var result = Physics2D.Raycast(startPosition, Vector3.down, 200, LayerInfo.WhatIsGround);
 
         if (result.collider == null)
         {

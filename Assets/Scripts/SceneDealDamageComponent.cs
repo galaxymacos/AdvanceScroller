@@ -29,6 +29,11 @@ public class SceneDealDamageComponent : MonoBehaviour
         collisionDetector.onObjectCollided += TryDealDamage;
     }
 
+    private void OnDestroy()
+    {
+        collisionDetector.onObjectCollided -= TryDealDamage;
+    }
+
     public void SetActive(bool _isActive)
     {
         isActive = _isActive;

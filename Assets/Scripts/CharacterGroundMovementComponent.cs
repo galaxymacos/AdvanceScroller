@@ -5,8 +5,8 @@
 /// </summary>
 public class CharacterGroundMovementComponent: MovementComponent
 {
-    private Rigidbody2D rb;
-    private PlayerCharacter _playerCharacter;
+    private readonly Rigidbody2D rb;
+    private readonly PlayerCharacter _playerCharacter;
 
     public CharacterGroundMovementComponent(PlayerCharacter playerCharacter)
     {

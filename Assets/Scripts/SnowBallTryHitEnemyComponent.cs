@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 [RequireComponent(typeof(SceneDealDamageComponent))]
@@ -9,6 +10,13 @@ public class SnowBallTryHitEnemyComponent : MonoBehaviour
         GetComponent<SnowballEventSystem>().onSnowballTakeDamage += Setup;
         GetComponent<SnowballEventSystem>().onSnowballReset += Reset;
         sceneDealDamageComponent = GetComponent<SceneDealDamageComponent>();
+    }
+
+    private void OnDestroy()
+    {        
+        GetComponent<SnowballEventSystem>().onSnowballTakeDamage -= Setup;
+        GetComponent<SnowballEventSystem>().onSnowballReset -= Reset;
+
     }
 
     private void Setup(SnowballDamageReceiver.DamageReceiverArgs damageReceiverArgs)

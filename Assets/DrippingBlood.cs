@@ -20,6 +20,7 @@ public class DrippingBlood : MonoBehaviour
 
     private void OnDestroy()
     {
+        PlayerCharacterSpawner.onPlayerSpawnFinished-=Setup;
         bep.onStartBleeding -= TurnOn;
         bep.onEndBleeding -= TurnOff;
     }
@@ -27,11 +28,11 @@ public class DrippingBlood : MonoBehaviour
 
     private void Setup()
     {
-        var collision = ps.collision;
+        var collision = GetComponent<ParticleSystem>().collision;
         collision.collidesWith = ~0;
         var layerToIgnore = transform.root.gameObject.layer;
         collision.collidesWith = ~(1<<layerToIgnore);
-        ps.Stop();
+        GetComponent<ParticleSystem>().Stop();
 
 
     }

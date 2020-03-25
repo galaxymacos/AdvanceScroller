@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 6115262525830399728}
   - component: {fileID: 6115262525830399729}
   - component: {fileID: 6115262527509971412}
+  - component: {fileID: 1405891055}
   m_Layer: 8
   m_Name: Cloud
   m_TagString: Untagged
@@ -369,9 +370,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56207baed02b43589b51ec42c260bba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnInterval: 2
-  snowBallPrefab: {fileID: 2236802782080076388, guid: 06e8bdb6a4bf78045a784c4a65f9a940,
-    type: 3}
+  spawnInterval: 1
+  spawnIntervalVariedRange: 0.5
+  itemsToDrop:
+  - {fileID: 4070862123855447980, guid: 2e3e27d39be46f04f84f89e4ae3a6c41, type: 3}
+  - {fileID: 3724331226251301760, guid: b8cb7753581009c42841d284b91d0f6e, type: 3}
   dropPoint: {fileID: 6115262525874814321}
 --- !u!114 &6115262525830399729
 MonoBehaviour:
@@ -406,6 +409,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1405891055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6115262525830399688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe6ff4ba69033c447a151adcd0f81808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6115262525874814320
 GameObject:
   m_ObjectHideFlags: 0

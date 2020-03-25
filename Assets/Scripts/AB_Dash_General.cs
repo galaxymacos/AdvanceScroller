@@ -16,7 +16,14 @@ public class AB_Dash_General : CharacterStateMachineBehavior
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (isPaused)
+        {
+            return;
+        }
+        
         base.OnStateEnter(_animator, stateInfo, layerIndex);
+        
+
         hitEnemy = false;
         hasActivatedBulletTime = false;
         dashTimeCounter = dashDuration;
@@ -58,6 +65,7 @@ public class AB_Dash_General : CharacterStateMachineBehavior
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         dashTimeCounter -= Time.deltaTime;
         if (dashTimeCounter <= 0)
@@ -109,4 +117,6 @@ public class AB_Dash_General : CharacterStateMachineBehavior
             hasActivatedBulletTime = true;
         }
     }
+
+   
 }

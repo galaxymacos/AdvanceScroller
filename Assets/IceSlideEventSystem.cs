@@ -12,6 +12,7 @@ public class IceSlideEventSystem : MonoBehaviour
     public static event Action onIceSlideShrinkFinish;
     public static event Action onIceSlideEnlargeFinish;
     public static event Action onIceSlideDestroy;
+    public static event Action<GameObject> onGameObjectDropped;
     private void Awake()
     {
         if (instance == null)
@@ -44,6 +45,11 @@ public class IceSlideEventSystem : MonoBehaviour
     public void IceSlideEnlargeFinish()
     {
         onIceSlideEnlargeFinish?.Invoke();
+    }
+
+    public void IceSlideDropItem(GameObject item)
+    {
+        onGameObjectDropped?.Invoke(item);
     }
 
 
