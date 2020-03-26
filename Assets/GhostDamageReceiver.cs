@@ -14,6 +14,10 @@ public class GhostDamageReceiver : MonoBehaviour, IDamageReceiver
 
     public void Analyze(DamageData damageData, Transform damageOwner)
     {
-        if(ghostStats.)
+        ghostStats.health -= damageData.damage;
+        if (ghostStats.health <= 0)
+        {
+            GetComponent<GhostEventSystem>().GhostDie();
+        }
     }
 }

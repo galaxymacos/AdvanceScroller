@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GhostStateMachineBehavior : StateMachineBehaviour
@@ -7,6 +8,7 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
     protected GhostStats ghostStats;
     protected GhostFacingComponent ghostFacingComponent;
     protected GhostScoreSystem ghostScoreSystem;
+    protected GhostEventSystem ghostEventSystem;
 
 
     protected Animator anim;
@@ -19,5 +21,18 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
         rigidbody = animator.GetComponent<Rigidbody2D>();
         ghostFacingComponent = animator.GetComponent<GhostFacingComponent>();
         ghostScoreSystem = animator.GetComponent<GhostScoreSystem>();
+        ghostEventSystem.onGhostDie += PlayDieAnimation;
+    }
+
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        base.OnStateExit(animator, stateInfo, layerIndex);
+        ghostEventSystem.onGhostDie -= PlayDieAnimation;
+    }
+
+
+    public void PlayDieAnimation()
+    {
+        anim.SetTrigger("die");
     }
 }

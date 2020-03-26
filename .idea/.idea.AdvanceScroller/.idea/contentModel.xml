@@ -428,6 +428,7 @@
         </e>
         <e p="SMB_Ghost_Attack.cs" t="Include" />
         <e p="SMB_Ghost_Chase.cs" t="Include" />
+        <e p="SMB_Ghost_Die.cs" t="Include" />
         <e p="SMB_Ghost_Wander.cs" t="Include" />
         <e p="SnowBallResetComponent.cs" t="Include" />
         <e p="SnowBallSetuper.cs" t="Include" />
