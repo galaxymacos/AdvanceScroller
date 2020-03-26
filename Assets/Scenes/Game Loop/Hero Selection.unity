@@ -4351,7 +4351,19 @@ MonoBehaviour:
     - typeInString: BatHero_InstantKillStart
       clip: {fileID: 8300000, guid: 819f9d27041ecb8499f09a8174685464, type: 3}
   - source: {fileID: 981339384}
-    audio: []
+    audio:
+    - typeInString: AxeHero_Attack
+      clip: {fileID: 8300000, guid: 6f2cf5f4b5e89b04889a5ac1f689f18a, type: 3}
+    - typeInString: AxeHero_AttackStrengthen
+      clip: {fileID: 8300000, guid: 4ebf4f1f22c758741a5c4931fba942b8, type: 3}
+    - typeInString: AxeHero_ThrowAxe
+      clip: {fileID: 8300000, guid: a163e0d4132114840a87dea28a701dec, type: 3}
+    - typeInString: AxeHero_HugeSlash
+      clip: {fileID: 8300000, guid: f1d88ab85d175934d9e28eb385b06797, type: 3}
+    - typeInString: AxeHero_UltimateStart
+      clip: {fileID: 8300000, guid: 98882212b3faa274f8b84ab0e7088829, type: 3}
+    - typeInString: AxeHero_UltimateCatchSuccess
+      clip: {fileID: 8300000, guid: eab68865a28a2fb418bf469880c27f11, type: 3}
   - source: {fileID: 969774941}
     audio: []
   - source: {fileID: 364014557}

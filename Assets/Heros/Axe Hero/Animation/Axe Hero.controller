@@ -16,6 +16,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: AxeHero_UltimateCatchSuccess
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   swirlTime: 2
@@ -108,8 +109,9 @@ MonoBehaviour:
   - skill2
   - skill3
   - attack4
-  soundInString: 
+  soundInString: AxeHero_Attack
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: 2e2696f0a5c97d94fae54c32bcdda957, type: 2}
@@ -182,6 +184,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 10
@@ -349,6 +352,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: AxeHero_UltimateStart
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashForce: 15
@@ -391,6 +395,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-4885081392774972643
@@ -489,6 +494,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-2378889201263372188
@@ -581,6 +587,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-1198551254192898727
@@ -609,6 +616,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-1099883395309424794
@@ -628,6 +636,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 12
@@ -1420,6 +1429,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1305769864987952446
@@ -1470,6 +1480,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1595160600775432836
@@ -1538,6 +1549,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &2498537666644692364
@@ -1632,6 +1644,7 @@ MonoBehaviour:
   - dash
   soundInString: AxeHero_HugeSlash
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: b92961de25408d94f9d095193329031e, type: 2}
@@ -1673,8 +1686,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: AxeHero_ThrowAxe
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundForm: {fileID: 7400000, guid: 4f279c7d9633bab469c9cadda56b5304, type: 2}
@@ -1703,6 +1717,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 6
@@ -1726,6 +1741,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2.5
@@ -1747,6 +1763,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 1
@@ -1766,6 +1783,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
@@ -1992,6 +2010,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &8880911836535309964
@@ -2058,7 +2077,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: 
+  soundInString: AxeHero_AttackStrengthen
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}

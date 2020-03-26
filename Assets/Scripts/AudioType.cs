@@ -34,6 +34,7 @@ public enum AudioType
     AxeHero_DoubleJump,
     AxeHero_Dash,
     AxeHero_Attack,
+    AxeHero_AttackStrengthen,
     AxeHero_ThrowAxe,
     AxeHero_HugeSlash,
     AxeHero_UltimateStart,
