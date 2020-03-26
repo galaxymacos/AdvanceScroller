@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AB_PsychicHero_Ultimate : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

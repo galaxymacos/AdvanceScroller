@@ -6,7 +6,6 @@ public class AB_Stomp_General : CharacterStateMachineBehavior
 {
     public float stompSpeed = 12f;
 
-    private Rigidbody2D rb;
 
     private float postSkillTime = 0.5f;
     private float postSkillTimeCounter;

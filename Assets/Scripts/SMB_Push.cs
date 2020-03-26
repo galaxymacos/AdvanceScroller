@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SMB_Push : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     private PushComponent pushComponent;
     private bool groundedOnInitialization;
     private bool hitCeilingOnInitialization;

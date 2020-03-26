@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AB_SwordPrincess_Ultimate : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
 
     private UltimateComponent ultimateComponent;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -13,7 +12,6 @@ public class AB_SwordPrincess_Ultimate : CharacterStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         ultimateComponent = animator.GetComponent<UltimateComponent>();
         ultimateComponent.ShowOff();
-        rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
 

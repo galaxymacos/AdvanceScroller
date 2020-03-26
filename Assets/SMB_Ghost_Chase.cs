@@ -8,6 +8,9 @@ public class SMB_Ghost_Chase : GhostStateMachineBehavior
     private float timeToLoseInterestCounter;
     public bool isLoseInterest => timeToLoseInterest <= 0f;
     public float rangeToLoseInterest = 15;
+    
+    private float wanderDistractIntervalCounter;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -15,6 +18,9 @@ public class SMB_Ghost_Chase : GhostStateMachineBehavior
         base.OnStateEnter(animator, stateInfo, layerIndex);
         timeToLoseInterestCounter = timeToLoseInterest;
         ghostFacingComponent.SetFacingDelegate(GhostFacingComponent.FacingCondition.FaceByRelativePosition);
+        
+        wanderDistractIntervalCounter = ghostStats.wanderDistractInterval;
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -31,10 +37,20 @@ public class SMB_Ghost_Chase : GhostStateMachineBehavior
         }
 
         Chase();
-        AttackIfCloseToAttackRange();
+        PlayNextActionWhenCloseToAttackRange();
         if (PassDistanceLimit())
         {
             animator.SetTrigger(ghostScoreSystem.GetNextAction());
+        }
+
+        if (wanderDistractIntervalCounter > 0)
+        {
+            wanderDistractIntervalCounter-=Time.deltaTime;
+            if (wanderDistractIntervalCounter <= 0)
+            {
+                wanderDistractIntervalCounter = ghostStats.wanderDistractInterval;
+                animator.SetTrigger(ghostScoreSystem.GetNextAction());
+            }
         }
         
         
@@ -49,8 +65,9 @@ public class SMB_Ghost_Chase : GhostStateMachineBehavior
         rigidbody.velocity = direction * ghostStats.chaseSpeed;
     }
 
-    private void AttackIfCloseToAttackRange()
+    private void PlayNextActionWhenCloseToAttackRange()
     {
+        
         if (Vector3.Distance(ghostStats.playerToChase.transform.position, transform.position) <= ghostStats.attackRange)
         {
             anim.SetTrigger(ghostScoreSystem.GetNextAction());

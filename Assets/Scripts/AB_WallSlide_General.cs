@@ -8,7 +8,6 @@ public class AB_WallSlide_General : CharacterStateMachineBehavior
     private bool isPausing;
     [SerializeField] private float fallDownSpeed = 5f;
 
-    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

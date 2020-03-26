@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class SMB_AxeHero_TryCatch : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     [SerializeField] private float dashForce;
     private float dashForceCounter;
     [SerializeField] private float timeToCatch = 1f;

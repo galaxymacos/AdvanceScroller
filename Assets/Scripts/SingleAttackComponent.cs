@@ -8,7 +8,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
     // private bool isRunning;
     public DamageData damageData;
 
-
+    public event Action onAttackSucceed;
     public List<GameObject> objectsHasProcessed = new List<GameObject>();
 
 
@@ -35,6 +35,8 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
             {
                 AudioController.instance.PlayAudio(AudioTypeConverter.ToAudioType(damageData.hitSound));
             }
+            onAttackSucceed?.Invoke();
+            
         }
 
         return hitTarget;

@@ -116,9 +116,12 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="GhostAnimationMessager.cs" t="Include" />
+        <e p="GhostAttackCounter.cs" t="Include" />
         <e p="GhostDamageReceiver.cs" t="Include" />
         <e p="GhostEventSystem.cs" t="Include" />
         <e p="GhostFacingComponent.cs" t="Include" />
+        <e p="GhostHealthComponent.cs" t="Include" />
         <e p="GhostScoreSystem.cs" t="Include" />
         <e p="GhostStateMachineBehavior.cs" t="Include" />
         <e p="GhostStats.cs" t="Include" />

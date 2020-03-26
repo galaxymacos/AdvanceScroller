@@ -9,7 +9,6 @@ public class SMB_Jump_General : CharacterStateMachineBehavior
     [SerializeField] private AnimationClip firstJump;
     [SerializeField] private AnimationClip secondJump;
 
-    private Rigidbody2D rb;
 
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state

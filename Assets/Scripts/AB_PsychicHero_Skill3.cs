@@ -4,12 +4,10 @@ using UnityEngine;
 
 public class AB_PsychicHero_Skill3 : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        rb = animator.GetComponent<Rigidbody2D>();
         playerCharacter.GetComponent<PsychicHeroAnimationEventContainer>().ExecuteTornado();
     }
 

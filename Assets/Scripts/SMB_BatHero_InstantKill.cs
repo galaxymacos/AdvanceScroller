@@ -5,14 +5,12 @@ using UnityEngine;
 
 public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         
         playerCharacter.GetComponent<UltimateComponent>().ShowOff();
-        rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
     }
     

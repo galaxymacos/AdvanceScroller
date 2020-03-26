@@ -8,7 +8,6 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
 
     private PlayerThrowMessager throwMessager;
     private PlayerCharacter playerToThrow;
-    private Rigidbody2D rb;
 
     private PlayerThrowMessager damageAnalyzer;
 
@@ -34,7 +33,6 @@ public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
         swirlTimeCounter = swirlTime;
         // playerCharacter.GetComponent<UniqueSkillComponent>().ShowOff();
         shouldThrow = false;
-        rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.velocity = Vector2.zero;
         
         // Get the player who should be thrown

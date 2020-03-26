@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class skill3_sword_princess : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     [SerializeField] private float startSpeed = 2f;
     [SerializeField] private float speedIncreaseFactor = 5f;
     private Vector2 startDirection;
@@ -20,7 +19,6 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     {
         base.OnStateEnter(_animator, stateInfo, layerIndex);
         startDirection = playerCharacter.isFacingRight ? Vector2.right : Vector2.left;
-        rb = _animator.GetComponent<Rigidbody2D>();
         rb.velocity = startDirection * startSpeed;
         playerCharacter.GetComponent<SwordPrincessAttackMessagingComponent>().DetectPierceAttack(1);
         rb.gravityScale = 0f;

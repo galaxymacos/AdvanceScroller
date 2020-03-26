@@ -5,22 +5,19 @@ using UnityEngine;
 
 public class SMB_Ghost_Wander : GhostStateMachineBehavior
 {
-    [SerializeField] private float idleTime = 2f;
 
     private bool isIdling => stateIndex == 0;
     private bool isWandering => stateIndex == 1;
     // 0 is idle, 1 is wander
     private int stateIndex;
     private float idleTimeCounter;
-    [SerializeField] private float moveSpeed = 5f;
-    public float detectPlayerRange;
     private Vector3 randomPointInMap;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        idleTimeCounter = idleTime;
+        idleTimeCounter = ghostStats.idleTime;    
         rigidbody = animator.GetComponent<Rigidbody2D>();
         transform = animator.GetComponent<Transform>();
         anim = animator;
@@ -41,15 +38,17 @@ public class SMB_Ghost_Wander : GhostStateMachineBehavior
                 if (idleTimeCounter <= 0)
                 {
                     stateIndex = 1;
-                    GetRandomWanderingPoint();
+                    RandomWander();
+                    DetectPlayer();
                 }
             }
         }
         else if (isWandering)
         {
-            DetectPlayer();
             StopIfNearDestination();
         }
+        
+        
         
         
         
@@ -59,19 +58,17 @@ public class SMB_Ghost_Wander : GhostStateMachineBehavior
     {
         if (Vector3.Distance(transform.position, randomPointInMap) < 3)
         {
-            idleTimeCounter = idleTime;
+            idleTimeCounter = ghostStats.idleTime;
             stateIndex = 0;
         }
     }
 
     private void DetectPlayer()
     {
-        Collider2D[] players =new Collider2D[20];
-        var numberOfCollider = Physics2D.OverlapCircleNonAlloc(transform.position, detectPlayerRange, players, LayerInfo.WhatIsPlayer);
-        if (numberOfCollider > 0)
+        var collider2D = Physics2D.OverlapCircleAll(transform.position, ghostStats.detectPlayerRange, LayerInfo.WhatIsPlayer);
+        if (collider2D.Length > 0)
         {
-            Debug.Log("playing is found");
-            var randomPlayer = players[Random.Range(0, numberOfCollider)].gameObject.GetComponent<PlayerCharacter>();
+            var randomPlayer = collider2D[Random.Range(0, collider2D.Length)].gameObject.GetComponent<PlayerCharacter>();
             if (randomPlayer != null)
             {
                 transform.GetComponent<GhostStats>().playerToChase = randomPlayer;
@@ -80,10 +77,10 @@ public class SMB_Ghost_Wander : GhostStateMachineBehavior
         }
     }
 
-    public void GetRandomWanderingPoint()
+    public void RandomWander()
     {
         randomPointInMap = MapInfo.instance.Inquirer.RandomPointInMap();
-        rigidbody.velocity = Vector3.Normalize(randomPointInMap - transform.position) * moveSpeed;
+        rigidbody.velocity = Vector3.Normalize(randomPointInMap - transform.position) * ghostStats.moveSpeed;
     }
     
     

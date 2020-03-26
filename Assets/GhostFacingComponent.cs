@@ -7,6 +7,7 @@ public class GhostFacingComponent : MonoBehaviour
 {
     public Action facingDelegate;
 
+    public bool IsFacingRight => transform.localScale.x > 0;
     public event Action<ChangeFacingTo> onFacingChanged;
 
     private Rigidbody2D rb;
