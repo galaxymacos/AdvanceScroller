@@ -6,6 +6,8 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
     protected Rigidbody2D rigidbody;
     protected GhostStats ghostStats;
     protected GhostFacingComponent ghostFacingComponent;
+    protected GhostScoreSystem ghostScoreSystem;
+
 
     protected Animator anim;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -16,5 +18,6 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
         transform = animator.transform;
         rigidbody = animator.GetComponent<Rigidbody2D>();
         ghostFacingComponent = animator.GetComponent<GhostFacingComponent>();
+        ghostScoreSystem = animator.GetComponent<GhostScoreSystem>();
     }
 }

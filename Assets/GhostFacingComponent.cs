@@ -73,18 +73,20 @@ public class GhostFacingComponent : MonoBehaviour
 
     }
 
-    private bool wasPlayerRight;
+    private bool PlayerAtRightLastFrame;
     private void FacingByRelativePosition()
     {
-        if (wasPlayerRight && ghostStats.playerToChase.transform.position.x - transform.position.x < 0)
+        if (PlayerAtRightLastFrame && ghostStats.playerToChase.transform.position.x - transform.position.x < 0)
         {
+            print("change facing to left");
             onFacingChanged(ChangeFacingTo.ChangeToLeft);
         }
-        if (!wasPlayerRight && ghostStats.playerToChase.transform.position.x - transform.position.x > 0)
+        if (!PlayerAtRightLastFrame && ghostStats.playerToChase.transform.position.x - transform.position.x > 0)
         {
+            print("change facing to right");
             onFacingChanged(ChangeFacingTo.ChangeToRight);
         }
-        wasPlayerRight = ghostStats.playerToChase.transform.position.x - transform.position.x > 0;
+        PlayerAtRightLastFrame = ghostStats.playerToChase.transform.position.x - transform.position.x > 0;
     }
 
     private void CheckFacing(ChangeFacingTo changeFacingTo)

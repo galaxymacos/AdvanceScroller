@@ -70,10 +70,12 @@ public class SMB_Ghost_Wander : GhostStateMachineBehavior
         var numberOfCollider = Physics2D.OverlapCircleNonAlloc(transform.position, detectPlayerRange, players, LayerInfo.WhatIsPlayer);
         if (numberOfCollider > 0)
         {
+            Debug.Log("playing is found");
             var randomPlayer = players[Random.Range(0, numberOfCollider)].gameObject.GetComponent<PlayerCharacter>();
             if (randomPlayer != null)
             {
                 transform.GetComponent<GhostStats>().playerToChase = randomPlayer;
+                anim.SetTrigger(ghostScoreSystem.GetNextAction());
             }
         }
     }

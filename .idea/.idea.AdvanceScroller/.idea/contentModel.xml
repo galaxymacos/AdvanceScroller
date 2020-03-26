@@ -119,6 +119,7 @@
         <e p="GhostDamageReceiver.cs" t="Include" />
         <e p="GhostEventSystem.cs" t="Include" />
         <e p="GhostFacingComponent.cs" t="Include" />
+        <e p="GhostScoreSystem.cs" t="Include" />
         <e p="GhostStateMachineBehavior.cs" t="Include" />
         <e p="GhostStats.cs" t="Include" />
         <e p="Heros" t="Include">
@@ -422,6 +423,7 @@
           <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="SMB_Ghost_Attack.cs" t="Include" />
         <e p="SMB_Ghost_Chase.cs" t="Include" />
         <e p="SMB_Ghost_Wander.cs" t="Include" />
         <e p="SnowBallResetComponent.cs" t="Include" />

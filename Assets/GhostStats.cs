@@ -1,19 +1,14 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostStats : MonoBehaviour
 {
-    public PlayerCharacter playerToChase;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [HideInInspector] public PlayerCharacter playerToChase;
+    
+    public float chaseSpeed = 5f;
+    public float moveSpeed = 6f;
+    public float attackRange = 5f;
+    public float detectPlayerRange = 20f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 }

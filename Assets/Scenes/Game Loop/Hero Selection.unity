@@ -354,6 +354,9 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 13824
 --- !u!4 &240791859
 Transform:
   m_ObjectHideFlags: 0

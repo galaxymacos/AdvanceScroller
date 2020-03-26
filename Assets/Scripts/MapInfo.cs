@@ -39,6 +39,11 @@ public class MapInfo: MonoBehaviour
             float randomY = mapInfo.bottomLeftBoundary.position.y + Random.Range(0, GetHeight);
             return new Vector2(randomX, randomY);
         }
+
+        public float GetLongestDistance()
+        {
+            return Vector3.Magnitude(mapInfo.topLeftBoundary.position - mapInfo.bottomRightBoundary.position);
+        }
     } 
 
     private void OnDestroy()
