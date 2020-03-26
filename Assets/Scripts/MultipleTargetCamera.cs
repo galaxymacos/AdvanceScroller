@@ -23,6 +23,7 @@ public class MultipleTargetCamera : MonoBehaviour
     {
         targets = new List<Transform>();
         PlayerCharacterSpawner.onPlayerSpawnFinished += Setup;
+        CharacterHealthComponent.onPlayerDie += DeletePlayer;
     }
 
     private void FixedUpdate()
@@ -84,5 +85,13 @@ public class MultipleTargetCamera : MonoBehaviour
         }
 
         return bounds.center;
+    }
+
+    private void DeletePlayer(CharacterHealthComponent characterHealthComponent)
+    {
+        var playerCharacter = characterHealthComponent.transform;
+        print("not tracking player because "+playerCharacter.gameObject.name+" is dead");
+
+        targets.Remove(playerCharacter);
     }
 }

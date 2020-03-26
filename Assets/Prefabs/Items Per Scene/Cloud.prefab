@@ -373,7 +373,7 @@ MonoBehaviour:
   spawnInterval: 1
   spawnIntervalVariedRange: 0.5
   itemsToDrop:
-  - {fileID: 4070862123855447980, guid: 2e3e27d39be46f04f84f89e4ae3a6c41, type: 3}
+  - {fileID: 6663834885125392891, guid: 6fee370f0473e2a479364b88c990b6e7, type: 3}
   - {fileID: 3724331226251301760, guid: b8cb7753581009c42841d284b91d0f6e, type: 3}
   dropPoint: {fileID: 6115262525874814321}
 --- !u!114 &6115262525830399729

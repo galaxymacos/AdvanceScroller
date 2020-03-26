@@ -64,7 +64,7 @@ MonoBehaviour:
   duration: 3
   tickInterval: 0.2
   damageData: {fileID: 11400000, guid: 5a98f91c36d4b17459486749f7330a4d, type: 2}
-  finalDamageData: {fileID: 0}
+  finalDamageData: {fileID: 11400000, guid: b5620a56b18f03646a5d68c06796dab9, type: 2}
   owner: {fileID: 891296965151884859}
   hasUsedOneLastStrike: 0
 --- !u!50 &904546214

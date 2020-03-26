@@ -174,8 +174,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   owner: {fileID: 0}
   maxReturnSpeed: 10
-  speedToGetMaxVelocity: 8
-  maxDistanceToTravel: 10
+  speedToGetMaxVelocity: 15
+  maxDistanceToTravel: 100
   originalPosition: {x: 0, y: 0}
   rb: {fileID: 0}
   isReturningToOwner: 0
@@ -191,13 +191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 669e0cc849dbe184fa8c8b161d880be8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxChargedTime: 1.5
+  maxChargedTime: 1
   owner: {fileID: 0}
   isFacingRight: 0
   hasReleased: 0
   chargeVFXPrefab: {fileID: 162722, guid: 1fc71432c1bd537489e1be6246b56973, type: 3}
   projectile: {fileID: 7635780407722689896}
-  ChargedAxeStartSpeed: 25
+  ChargedAxeStartSpeed: 50
   axeThrowStartSpeed: 10
   axeThrowAngle: 45
   axePrefab: {fileID: 1421687569583083984, guid: fd257c150393fab469a9956246179d3f,

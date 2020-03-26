@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
 {
+    protected Rigidbody2D rb;
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
     public string soundInString;
     [SerializeField] private bool canControlHorizontalMovement;
+    [SerializeField] private bool canFloatInAir;
     protected bool isPaused;
     
     /// <summary>
@@ -38,6 +40,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
         {
             AudioController.instance.PlayAudio(soundInString.GetAudioType());
         }
+        rb = _animator.GetComponent<Rigidbody2D>();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

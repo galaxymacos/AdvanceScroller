@@ -46,7 +46,7 @@ public class PlayerCharacter : MonoBehaviour
     
     public int maxDashTimeInAir = 1;
     public int dashTimeCounter;
-    public bool isDead;
+    public bool isDead=>characterHealthComponent.isPlayerDead;
     public float dashInvincibleTime = 0.3f;
     public float dashInvincibleTimeCounter;
     
@@ -97,7 +97,7 @@ public class PlayerCharacter : MonoBehaviour
     [HideInInspector] public GameObject chargedDagger;
 
     public Sprite winPose;
-
+    private CharacterHealthComponent characterHealthComponent;
 
     private void Awake()
     {
@@ -106,8 +106,7 @@ public class PlayerCharacter : MonoBehaviour
         
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipByInputComponent = new CharacterFlipComponent(transform);
-        
-        GetComponent<CharacterHealthComponent>().onPlayerDie += PlayerDie;
+        characterHealthComponent = GetComponent<CharacterHealthComponent>();
         onPlayerGrounded += ResetJumpTime;
 
         rb = GetComponent<Rigidbody2D>();
@@ -115,12 +114,6 @@ public class PlayerCharacter : MonoBehaviour
 
     }
     
-    
-
-    private void PlayerDie()
-    {
-        isDead = true;
-    }
 
     private void Update()
     {

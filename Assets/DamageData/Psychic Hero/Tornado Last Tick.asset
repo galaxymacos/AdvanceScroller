@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 810f7b126db8496d99800aee4c640348, type: 3}
-  m_Name: Tornado
+  m_Name: Tornado Last Tick
   m_EditorClassIdentifier: 
-  damage: 2
+  damage: 5
   pushPower: 0
   pushDistance: 0
   pushType: 0
   damageType: 2
   offSetDegree: 0
-  hitStunPower: 0.4
+  hitStunPower: 0
   launcherHorizontalForce: 0
-  launcherVerticalForce: 0
+  launcherVerticalForce: 10
   attackEffects: []
   hitSound: 

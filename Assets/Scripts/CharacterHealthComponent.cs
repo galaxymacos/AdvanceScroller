@@ -14,9 +14,7 @@ public class CharacterHealthComponent : MonoBehaviour
     private Animator animator;
     private static readonly int Die = Animator.StringToHash("die");
 
-    
-    private bool isTimeFreezed;
-    private float freezeTimeCounter;
+
     private float maxBulletTime = 0.4f;
     private float bulletTime;
     private CameraShake cameraShake;
@@ -26,7 +24,7 @@ public class CharacterHealthComponent : MonoBehaviour
     public event Action<CharacterHealthComponent> onTakeHit;
     public Action<CharacterHealthComponent> onLoseHealth;
     public Action<CharacterHealthComponent> onHealthChanged;
-    public Action onPlayerDie;
+    public static event Action<CharacterHealthComponent> onPlayerDie;
 
     // private CharacterBleedingComponent bleedingComponent;
     
@@ -99,7 +97,7 @@ public class CharacterHealthComponent : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth-drain, 0, 100);
         if (Math.Abs(currentHealth) <=0)
         {
-            onPlayerDie?.Invoke();
+            onPlayerDie?.Invoke(this);
         }
 
     }
