@@ -52,6 +52,7 @@ public class DropSnowballComponent : MonoBehaviour
                 if (spawnTimeCounter <= 0)
                 {
                     var item = Instantiate(itemsToDrop[Random.Range(0, itemsToDrop.Length)], dropPoint.position, Quaternion.identity);
+                    IceSlideEventSystem.instance.IceSlideDropItem(item);
                     ResetSpawnTimeCounter();
                 }
             }

@@ -116,6 +116,11 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="GhostDamageReceiver.cs" t="Include" />
+        <e p="GhostEventSystem.cs" t="Include" />
+        <e p="GhostFacingComponent.cs" t="Include" />
+        <e p="GhostStateMachineBehavior.cs" t="Include" />
+        <e p="GhostStats.cs" t="Include" />
         <e p="Heros" t="Include">
           <e p="Axe Hero" t="Include">
             <e p="Read Me.txt" t="Include" />
@@ -417,6 +422,8 @@
           <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="SMB_Ghost_Chase.cs" t="Include" />
+        <e p="SMB_Ghost_Wander.cs" t="Include" />
         <e p="SnowBallResetComponent.cs" t="Include" />
         <e p="SnowBallSetuper.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />

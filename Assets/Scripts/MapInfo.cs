@@ -4,11 +4,13 @@ using UnityEngine;
 public class MapInfo: MonoBehaviour
 {
     public static MapInfo instance;
-    
+
     public Transform topLeftBoundary;
     public Transform topRightBoundary;
     public Transform bottomLeftBoundary;
     public Transform bottomRightBoundary;
+
+    public MapInfoInquirer Inquirer; 
 
     private void Awake()
     {
@@ -16,7 +18,28 @@ public class MapInfo: MonoBehaviour
         {
             instance = this;
         }
+        Inquirer = new MapInfoInquirer(this);
     }
+
+    public class MapInfoInquirer
+    {
+        private readonly MapInfo mapInfo;
+
+        public MapInfoInquirer(MapInfo mapInfo)
+        {
+            this.mapInfo = mapInfo;
+        }
+
+        public float GetWeight => mapInfo.topRightBoundary.position.x - mapInfo.topLeftBoundary.position.x;
+        public float GetHeight => mapInfo.topLeftBoundary.position.y - mapInfo.bottomLeftBoundary.position.y;
+
+        public Vector2 RandomPointInMap()
+        {
+            float randomX = mapInfo.topLeftBoundary.position.x + Random.Range(0, GetWeight);
+            float randomY = mapInfo.bottomLeftBoundary.position.y + Random.Range(0, GetHeight);
+            return new Vector2(randomX, randomY);
+        }
+    } 
 
     private void OnDestroy()
     {

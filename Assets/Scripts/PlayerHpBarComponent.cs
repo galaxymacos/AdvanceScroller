@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ public class PlayerHpBarComponent : MonoBehaviour
     private Slider slider;
 
     private CharacterHealthComponent chc;
+
+    private bool hasSetup;
     
 
     void Awake()
@@ -26,8 +29,17 @@ public class PlayerHpBarComponent : MonoBehaviour
         chc = owner.GetComponent<CharacterHealthComponent>();
         slider.maxValue = chc.maxHealth;
         slider.value = chc.currentHealth;
-        chc.onTakeHit += UpdateUI;
         chc.onHealthChanged += UpdateUI;
+        
+        hasSetup = true;
+    }
+
+    private void OnDestroy()
+    {
+        if (hasSetup)
+        {
+            chc.onHealthChanged -= UpdateUI;
+        }
     }
 
     private void UpdateUI(CharacterHealthComponent characterHealthComponent)

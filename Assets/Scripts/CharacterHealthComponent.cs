@@ -11,8 +11,6 @@ public class CharacterHealthComponent : MonoBehaviour
     [HideInInspector] public float currentHealth;
     private float healthWas;
 
-    private Animator animator;
-    private static readonly int Die = Animator.StringToHash("die");
 
 
     private float maxBulletTime = 0.4f;
@@ -21,9 +19,9 @@ public class CharacterHealthComponent : MonoBehaviour
     public bool isPlayerDead => currentHealth <= 0;
 
 
-    public event Action<CharacterHealthComponent> onTakeHit;
-    public Action<CharacterHealthComponent> onLoseHealth;
-    public Action<CharacterHealthComponent> onHealthChanged;
+    public event Action<CharacterHealthComponent> onTakeHit; // Call if the 
+    public event Action<CharacterHealthComponent> onLoseHealth;    // Call if the health value decreases
+    public event Action<CharacterHealthComponent> onHealthChanged;    // Call if the health value change
     public static event Action<CharacterHealthComponent> onPlayerDie;
 
     // private CharacterBleedingComponent bleedingComponent;
@@ -35,7 +33,6 @@ public class CharacterHealthComponent : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
         if (Camera.main != null) cameraShake = Camera.main.GetComponent<CameraShake>();
         GetComponent<PlayerCharacter>();
         currentHealth = maxHealth;
@@ -49,7 +46,7 @@ public class CharacterHealthComponent : MonoBehaviour
         {
             onHealthChanged?.Invoke(this);
         }
-        if (Math.Abs(currentHealth - healthWas) < -Mathf.Epsilon)
+        if (currentHealth - healthWas < -Mathf.Epsilon)
         {
             onLoseHealth?.Invoke(this);
         }
@@ -72,7 +69,7 @@ public class CharacterHealthComponent : MonoBehaviour
         
         DrainHealth(_damageData.damage);
 
-        float percentage = (float) _damageData.damage / maxHealth;
+        float percentage = _damageData.damage / maxHealth;
 
         float strength = Mathf.Clamp01(percentage);
 
@@ -102,13 +99,6 @@ public class CharacterHealthComponent : MonoBehaviour
 
     }
 
-
-    // public void HitFreeze()
-    // {
-    //     Time.timeScale = 0.01f;
-    //     isTimeFreezed = true;
-    // }
-    
     public void Heal(float amount)
     {
         currentHealth = Mathf.Clamp(currentHealth+amount, 0, maxHealth);
@@ -116,37 +106,6 @@ public class CharacterHealthComponent : MonoBehaviour
 
     
 }
-
-// public class CharacterBleedingComponent
-// {
-//     private readonly CharacterHealthComponent healthComponent;
-//     private float bleedTimeCounter;
-//     private float bleedPerSecond;
-//     public bool isBleeding => bleedTimeCounter > 0;
-//
-//     public CharacterBleedingComponent(CharacterHealthComponent healthComponent)
-//     {
-//         this.healthComponent = healthComponent;
-//     }
-//
-//     public void CheckBleed(DamageData damageData)
-//     {
-//         if (damageData.canBleed)
-//         {
-//             bleedTimeCounter = damageData.bleedTime;
-//             bleedPerSecond = damageData.bleedAmountPerSecond;
-//         }
-//     }
-//     
-//     public void Update()
-//     {
-//         if (isBleeding)
-//         {
-//             bleedTimeCounter-=Time.deltaTime;
-//             healthComponent.DrainHealth(bleedPerSecond*Time.deltaTime);
-//         }
-//     }
-// }
 
 
 [Serializable]

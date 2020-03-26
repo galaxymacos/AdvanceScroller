@@ -2,29 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AB_BatHero_Throw : CharacterStateMachineBehavior
+public class SMB_Ghost_Chase : GhostStateMachineBehavior
 {
+    public float timeToLoseInterest = 5f;
+    public float timeToLoseInterestCounter;
+    public bool isLoseInterest => timeToLoseInterest <= 0f;
+    public float rangeToLoseInterest = 15;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        
+        timeToLoseInterestCounter = timeToLoseInterest;
+        ghostFacingComponent.SetFacingDelegate(GhostFacingComponent.FacingCondition.FaceByRelativePosition);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        base.OnStateUpdate(animator, stateInfo, layerIndex);
-        rb.velocity = Vector2.zero;
+        
+        if (timeToLoseInterestCounter > 0)
+        {
+            timeToLoseInterestCounter -= Time.deltaTime;
+        }
+
+        if (PassDistanceLimit())
+        {
+            animator.SetTrigger("wander");
+        }
+        
+        
+    }
+
+    private bool PassDistanceLimit()
+    {
+        return Vector3.Distance(ghostStats.playerToChase.transform.position, transform.position) > rangeToLoseInterest;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, stateInfo, layerIndex);
-        
-
-    }
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

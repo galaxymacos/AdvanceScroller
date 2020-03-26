@@ -9,7 +9,8 @@ public class SnowBallResetComponent : MonoBehaviour
     private float resetTime = 0.2f;
     private SnowballEventSystem eventSystem;
     private float resetCounter;
-    private bool isCounting;
+    private bool isCounting=>resetCounter>0;
+    private float resetCountStartVelocity = 1;
     
     private Rigidbody2D rb;
 
@@ -23,27 +24,25 @@ public class SnowBallResetComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Math.Abs(rb.velocity.magnitude) < 2 && !isCounting)
+        if (Math.Abs(rb.velocity.magnitude) < resetCountStartVelocity && !isCounting)
         {
-            
-            isCounting = true;
             resetCounter = resetTime;
         }
         
 
         if (isCounting)
         {
-            if (rb.velocity.magnitude > 0)
+            if (rb.velocity.magnitude > resetCountStartVelocity)
             {
                 resetCounter = resetTime;
-                isCounting = false;
             }
             
             if (resetCounter > Mathf.Epsilon)
             {
                 resetCounter -= Time.deltaTime;
-                if (resetCounter <= 0)
-                {
+                if (resetCounter <= Mathf.Epsilon)
+                {   
+                    print("resetting the owner");
                     eventSystem.SnowballReset();
                 }
             }

@@ -12,6 +12,7 @@ public class LayerInfo: MonoBehaviour
             instance = this;
             WhatIsGround = whatIsGround;
             WhatIsWall = whatIsWall;
+            WhatIsPlayer = whatIsPlayer;
         }
         else
         {
@@ -21,8 +22,9 @@ public class LayerInfo: MonoBehaviour
 
     public static LayerMask WhatIsGround;
     public static LayerMask WhatIsWall;
+    public static LayerMask WhatIsPlayer;
     
     [SerializeField] private LayerMask whatIsGround;
     [SerializeField] private LayerMask whatIsWall;
-    
+    [SerializeField] private LayerMask whatIsPlayer;
 }
