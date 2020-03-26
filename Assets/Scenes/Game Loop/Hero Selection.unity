@@ -2125,6 +2125,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: a14fb783ce49e614fa8d7269232d350e, type: 3}
   - typeInString: BatHero_InstantKillExplode
     clip: {fileID: 8300000, guid: b08957523617a4247827ba63ed6e7a9e, type: 3}
+  - typeInString: SwordPrincess_WolfBite
+    clip: {fileID: 8300000, guid: b08957523617a4247827ba63ed6e7a9e, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
@@ -4338,12 +4340,10 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 8dd229e2cc0dfb04da18f171f4e7d3d7, type: 3}
   - source: {fileID: 1011333973}
     audio:
-    - typeInString: BatHero_Punch01
-      clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
-    - typeInString: BatHero_Punch02
-      clip: {fileID: 8300000, guid: b4c92c48201071a43b01eb5b68bfeab8, type: 3}
+    - typeInString: BatHero_Punch
+      clip: {fileID: 8300000, guid: efbea937dc9d15e4aa37619e7f4eccff, type: 3}
     - typeInString: BatHero_BatEnergy
-      clip: {fileID: 8300000, guid: ec1d1b998b6c6bd44a0f043fded7e74b, type: 3}
+      clip: {fileID: 8300000, guid: 223a2c54815221b4b9c275241d941998, type: 3}
     - typeInString: BatHero_ThrowShuriki
       clip: {fileID: 8300000, guid: 30a083dda058b764588838d5534af594, type: 3}
     - typeInString: BatHero_Fly
@@ -4383,7 +4383,7 @@ MonoBehaviour:
   - source: {fileID: 1758985126}
     audio:
     - typeInString: Pointer_Move
-      clip: {fileID: 8300000, guid: 29d3c51a6effb7a4385d862e83b87db7, type: 3}
+      clip: {fileID: 8300000, guid: 784ba45ced682f543bdc86bffd1653fd, type: 3}
     - typeInString: Pointer_Confirm
       clip: {fileID: 8300000, guid: 2152a76da57b97a43b571989740f5fd6, type: 3}
 --- !u!4 &1827578961

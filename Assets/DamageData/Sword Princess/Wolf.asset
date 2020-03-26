@@ -22,4 +22,4 @@ MonoBehaviour:
   launcherHorizontalForce: 2
   launcherVerticalForce: 4
   attackEffects: []
-  hitSound: 
+  hitSound: SwordPrincess_WolfBite

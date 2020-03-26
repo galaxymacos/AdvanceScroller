@@ -48,8 +48,7 @@ public enum AudioType
     BatHero_Jump,
     BatHero_DoubleJump,
     BatHero_Dash,
-    BatHero_Punch01,
-    BatHero_Punch02,
+    BatHero_Punch,
     BatHero_ThrowShuriki,
     BatHero_BatEnergy,
     BatHero_Fly,
@@ -108,6 +107,7 @@ public enum AudioType
     SwordPrincess_WolfHit,
     SwordPrincess_SwordDrill,
     SwordPrincess_InstantKillStart,
+    SwordPrincess_WolfBite,
 
 
     #endregion

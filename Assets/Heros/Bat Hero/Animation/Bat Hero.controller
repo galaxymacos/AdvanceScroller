@@ -24,6 +24,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 8
@@ -45,6 +46,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-8309044339967505343
@@ -168,6 +170,7 @@ MonoBehaviour:
   - skill4
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 7
@@ -358,6 +361,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-4350256221638122297
@@ -431,6 +435,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-2511476601013948839
@@ -484,6 +489,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-2287738160059250976
@@ -606,6 +612,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-1364731353476767577
@@ -655,6 +662,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
@@ -696,6 +704,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-723125634246525737
@@ -741,6 +750,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: AxeHero_UltimateStart
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-268435895032321983
@@ -945,6 +955,7 @@ MonoBehaviour:
   - dash
   soundInString: BatHero_BatEnergy
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &46915893345278678
@@ -1472,6 +1483,7 @@ MonoBehaviour:
   - dash
   soundInString: BatHero_Fly
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &1506643783569999593
@@ -1541,6 +1553,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 10
@@ -1561,6 +1574,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
@@ -1630,6 +1644,7 @@ MonoBehaviour:
   - dash
   soundInString: BatHero_ThrowShuriki
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &5596895217598118713
@@ -1651,6 +1666,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 1
@@ -1716,8 +1732,9 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
-  soundInString: AxeHero_Attack
+  soundInString: BatHero_Punch01
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: 9a41dbd1754bd7e44be7d1130e4ff67c, type: 2}
@@ -1738,6 +1755,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &7822035074739989602
@@ -1867,6 +1885,7 @@ MonoBehaviour:
   - skill4
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &8405158569501232039
@@ -1965,6 +1984,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2
