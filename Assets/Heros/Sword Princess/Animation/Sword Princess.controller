@@ -56,6 +56,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-6925585801540077999
@@ -99,6 +100,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 10
@@ -327,6 +329,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 6.5
@@ -380,6 +383,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-3836131586767459270
@@ -541,6 +545,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-1385640694791104081
@@ -594,6 +599,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-884393478931315365
@@ -610,8 +616,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: 
+  soundInString: SwordPrincess_InstantKillStart
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
@@ -655,8 +662,9 @@ MonoBehaviour:
   - skill2
   - skill3
   - skill1
-  soundInString: 
+  soundInString: SwordPrincess_NormalAttack
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: 2b95bdf2e046bbf45b0a5adb69d2e345, type: 2}
@@ -725,133 +733,133 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: run
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: fall down
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: double jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jump attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hurt
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill3
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill4
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hit stun
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: wallslide
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: push
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: climb
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: acquire
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: win pose
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: stomp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: frozen
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -881,6 +889,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &276299180376040358
@@ -901,6 +910,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2
@@ -1452,6 +1462,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &1922684265557562899
@@ -1469,8 +1480,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: SwordPrincess_ShootCross
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &1943573575191628102
@@ -1488,8 +1500,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: SwordPrincess_ShootWolf
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &3312402770574090335
@@ -1535,6 +1548,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &3892323244785178462
@@ -1601,6 +1615,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 10
@@ -1621,6 +1636,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
@@ -1639,8 +1655,9 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: SwordPrincess_SwordDrill
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   startSpeed: 2
@@ -1662,6 +1679,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 1
@@ -1807,6 +1825,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &7822035074739989602

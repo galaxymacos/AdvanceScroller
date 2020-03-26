@@ -4369,13 +4369,23 @@ MonoBehaviour:
   - source: {fileID: 364014557}
     audio: []
   - source: {fileID: 471400958}
-    audio: []
+    audio:
+    - typeInString: SwordPrincess_NormalAttack
+      clip: {fileID: 8300000, guid: 9439ce4b4d938f443b9eb51282444b46, type: 3}
+    - typeInString: SwordPrincess_ShootWolf
+      clip: {fileID: 8300000, guid: 2ca9aa970f626604ab954a311cfe35c7, type: 3}
+    - typeInString: SwordPrincess_ShootCross
+      clip: {fileID: 8300000, guid: e96e208d61d321342a23a5603f88d001, type: 3}
+    - typeInString: SwordPrincess_InstantKillStart
+      clip: {fileID: 8300000, guid: 2174e64aac8f9aa4196961b8b7361777, type: 3}
+    - typeInString: SwordPrincess_SwordDrill
+      clip: {fileID: 8300000, guid: 2856e220bac9856438735cf6c9ab233d, type: 3}
   - source: {fileID: 1758985126}
     audio:
     - typeInString: Pointer_Move
-      clip: {fileID: 8300000, guid: 81c578d0d4912cd4eb20fc1762e30567, type: 3}
+      clip: {fileID: 8300000, guid: 29d3c51a6effb7a4385d862e83b87db7, type: 3}
     - typeInString: Pointer_Confirm
-      clip: {fileID: 8300000, guid: 81c578d0d4912cd4eb20fc1762e30567, type: 3}
+      clip: {fileID: 8300000, guid: 2152a76da57b97a43b571989740f5fd6, type: 3}
 --- !u!4 &1827578961
 Transform:
   m_ObjectHideFlags: 0
