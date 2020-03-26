@@ -107,11 +107,13 @@ public enum AudioType
     SwordPrincess_ShootWolf,
     SwordPrincess_WolfHit,
     SwordPrincess_SwordDrill,
+    SwordPrincess_InstantKillStart,
+
 
     #endregion
 
     #region Battle
-    
+
     HitSoundGeneral,
     
     #endregion
