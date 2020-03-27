@@ -123,6 +123,7 @@
         <e p="GhostFacingComponent.cs" t="Include" />
         <e p="GhostHealthComponent.cs" t="Include" />
         <e p="GhostScoreSystem.cs" t="Include" />
+        <e p="GhostShaderRegister.cs" t="Include" />
         <e p="GhostStateMachineBehavior.cs" t="Include" />
         <e p="GhostStats.cs" t="Include" />
         <e p="Heros" t="Include">

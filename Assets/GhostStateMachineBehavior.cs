@@ -21,6 +21,7 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
         rigidbody = animator.GetComponent<Rigidbody2D>();
         ghostFacingComponent = animator.GetComponent<GhostFacingComponent>();
         ghostScoreSystem = animator.GetComponent<GhostScoreSystem>();
+        ghostEventSystem = animator.GetComponent<GhostEventSystem>();
         ghostEventSystem.onGhostDie += PlayDieAnimation;
     }
 
