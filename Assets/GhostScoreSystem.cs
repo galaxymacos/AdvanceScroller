@@ -16,8 +16,8 @@ public class GhostScoreSystem : MonoBehaviour
 
     private void Awake()
     {
-        listOfActions = new List<string> {"chase", "attack", "wander"};
-        ActionScoreCalculators = new List<Func<int>> {ToChaseCondition, ToAttackCondition, ToWanderCondition};
+        listOfActions = new List<string> {"chase", "attack", "wander","celebrate"};
+        ActionScoreCalculators = new List<Func<int>> {ToChaseCondition, ToAttackCondition, ToWanderCondition, ToCelebrateCondition};
         stats = GetComponent<GhostStats>();
         anim = GetComponent<Animator>();
     }
@@ -78,7 +78,7 @@ public class GhostScoreSystem : MonoBehaviour
 
             if (stats.interestPointInChasingCounter <= 0)
             {
-                Debug.LogError("ghost loses interest to player");
+                // Debug.LogError("ghost loses interest to player");
                 return 0;
             }
 
@@ -105,6 +105,11 @@ public class GhostScoreSystem : MonoBehaviour
             return 0;
         }
 
+        if (stats.lastAnimationState.IsName("attack"))
+        {
+            return 100;
+        }
+
         if (Vector3.Distance(stats.playerToChase.transform.position, transform.position) <= stats.attackRange)
         {
             if (Time.time < stats.lastAttackTime+stats.attackCooldown)
@@ -119,22 +124,52 @@ public class GhostScoreSystem : MonoBehaviour
     }
     private int ToWanderCondition()
     {
-        
         if (!stats.playerToChase)
         {
             return 100;
         }
-        else if(Vector3.Distance(stats.playerToChase.transform.position, transform.position) <= stats.attackRange)
+
+        int point = 0;
+
+        if(Vector3.Distance(stats.playerToChase.transform.position, transform.position) <= stats.attackRange)
         {
-            return 0;
+            point += 0;
         }
-        else if (Vector3.Distance(stats.playerToChase.transform.position, transform.position) <=
+        else
+        {
+            point += 20;
+        }
+        if (Vector3.Distance(stats.playerToChase.transform.position, transform.position) <=
                  stats.detectPlayerRange)
         {
-            return 10;
+            point += 10;
+        }
+        else
+        {
+            point += 30;
         }
 
-        return 70;
+        if (Time.time > stats.lastHitTime + 3f)
+        {
+            point += 0;
+        }
+        else
+        {
+            point += 30;
+        }
+
+        return point;
+
+    }
+
+    private int ToCelebrateCondition()
+    {
+        if (stats.lastAnimationState.IsName("attack"))
+        {
+            return Mathf.Clamp(stats.attackSucceedNum * stats.scoreToCelebratePerAttack, 0, 100);
+        }
+
+        return 0;
     }
 
     #endregion

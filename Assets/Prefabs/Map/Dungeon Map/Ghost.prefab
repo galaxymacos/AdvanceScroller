@@ -151,7 +151,8 @@ MonoBehaviour:
   maxInterestPointInChasing: 100
   interestPointToLoseInChasingPerSec: 20
   interestPointInChasingCounter: 0
-  attackSucceedToCelebrate: 0
+  scoreToCelebratePerAttack: 20
+  attackSucceedNum: 0
   lastAttackTime: 0
   attackCooldown: 1
 --- !u!50 &2515901577015938430
@@ -237,7 +238,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39501e3d74c51aa45b127c8de8522551, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackComponents: []
+  attackComponents:
+  - {fileID: 4786587121914002417}
+  ghostStats: {fileID: 0}
 --- !u!61 &5875890042562867121
 BoxCollider2D:
   m_ObjectHideFlags: 0

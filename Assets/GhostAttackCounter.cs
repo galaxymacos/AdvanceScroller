@@ -1,19 +1,26 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GhostAttackCounter : MonoBehaviour
 {
     public List<SingleAttackComponent> attackComponents;
-    // Start is called before the first frame update
-    void Start()
+    public GhostStats ghostStats;
+    private void Awake()
     {
-        
+        ghostStats = GetComponent<GhostStats>();
+        foreach (var attackComponent in attackComponents)
+        {
+            attackComponent.onAttackSucceed += IncreaseCounter;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void IncreaseCounter()
     {
-        
+        ghostStats.attackSucceedNum++;
+        ghostStats.lastHitTime = Time.time;
     }
+
+    
 }

@@ -2,40 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SMB_Ghost_Attack : GhostStateMachineBehavior
+public class SMB_Ghost_Celebrate : GhostStateMachineBehavior
 {
-
-    private Vector3 direction;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        ghostStats.lastAttackTime = Time.time;
-        Vector3 direction = Vector3.Normalize(ghostStats.playerToChase.transform.position - transform.position);
-        rigidbody.velocity = direction * ghostStats.attackDashSpeed;
-        ghostFacingComponent.SetFacingDelegate(GhostFacingComponent.FacingCondition.FaceByRelativePosition);
-        
-
-    }
-
-    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateUpdate(animator, stateInfo, layerIndex);
-        ghostFacingComponent.SetFacingDelegate(GhostFacingComponent.FacingCondition.FaceByVelocity);
-    }
-
-    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-        base.OnStateExit(animator, stateInfo, layerIndex);
+        ghostStats.attackSucceedNum = 0;
         rigidbody.velocity = Vector2.zero;
-        animator.SetTrigger(ghostScoreSystem.GetNextAction());
     }
 
-    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
+    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     //{
     //    
     //}
+
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    {
+        animator.SetTrigger(ghostScoreSystem.GetNextAction());
+    }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
     //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

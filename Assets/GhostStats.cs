@@ -6,6 +6,7 @@ public class GhostStats : MonoBehaviour
 {
     
     public PlayerCharacter playerToChase;
+    public AnimatorStateInfo lastAnimationState;
 
     // data
     public float health = 250f;
@@ -28,9 +29,12 @@ public class GhostStats : MonoBehaviour
     
 
     // Attack Value
-    public int attackSucceedToCelebrate;
+    public int scoreToCelebratePerAttack = 50;
+    public int attackSucceedNum;
     public float lastAttackTime;
+    public float lastHitTime;
     public float attackCooldown = 1f;
+    public float attackDashSpeed = 10f;
 
     private void Awake()
     {

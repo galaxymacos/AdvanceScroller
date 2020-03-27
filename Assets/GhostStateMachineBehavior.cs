@@ -23,6 +23,7 @@ public class GhostStateMachineBehavior : StateMachineBehaviour
         ghostScoreSystem = animator.GetComponent<GhostScoreSystem>();
         ghostEventSystem = animator.GetComponent<GhostEventSystem>();
         ghostEventSystem.onGhostDie += PlayDieAnimation;
+        ghostStats.lastAnimationState = animator.GetCurrentAnimatorStateInfo(0);
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

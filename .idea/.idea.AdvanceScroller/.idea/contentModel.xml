@@ -8,6 +8,7 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="AB_CatHero_Skill3.cs" t="Include" />
         <e p="AB_Frozen_General.cs" t="Include" />
         <e p="AB_PsychicHero_ChargingDagger.cs" t="Include" />
         <e p="AllIn1SpriteShader" t="Include">
@@ -428,6 +429,7 @@
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
         <e p="SMB_Ghost_Attack.cs" t="Include" />
+        <e p="SMB_Ghost_Celebrate.cs" t="Include" />
         <e p="SMB_Ghost_Chase.cs" t="Include" />
         <e p="SMB_Ghost_Die.cs" t="Include" />
         <e p="SMB_Ghost_Wander.cs" t="Include" />
