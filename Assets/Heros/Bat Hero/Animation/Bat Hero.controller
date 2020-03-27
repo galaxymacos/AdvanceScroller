@@ -1643,7 +1643,7 @@ MonoBehaviour:
   stateCanForceTransformTo:
   - dash
   soundInString: BatHero_ThrowShuriki
-  canControlHorizontalMovement: 0
+  canControlHorizontalMovement: 1
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
@@ -1732,7 +1732,7 @@ MonoBehaviour:
   - dash
   - skill2
   - skill3
-  soundInString: BatHero_Punch01
+  soundInString: BatHero_Punch
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}

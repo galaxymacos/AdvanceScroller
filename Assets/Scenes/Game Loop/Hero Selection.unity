@@ -4365,7 +4365,13 @@ MonoBehaviour:
     - typeInString: AxeHero_UltimateCatchSuccess
       clip: {fileID: 8300000, guid: eab68865a28a2fb418bf469880c27f11, type: 3}
   - source: {fileID: 969774941}
-    audio: []
+    audio:
+    - typeInString: CatHero_Claw
+      clip: {fileID: 8300000, guid: 741cac8bff0ab1c4aa0e55846dd6efbb, type: 3}
+    - typeInString: CatHero_SendCat
+      clip: {fileID: 8300000, guid: fc8e2de0b8687374d91bd146b5d6bbea, type: 3}
+    - typeInString: CatHero_Claw2
+      clip: {fileID: 8300000, guid: a62488bd3b3adb54c8c698837066b548, type: 3}
   - source: {fileID: 364014557}
     audio: []
   - source: {fileID: 471400958}
