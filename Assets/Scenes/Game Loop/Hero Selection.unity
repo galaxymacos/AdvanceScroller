@@ -4359,7 +4359,7 @@ MonoBehaviour:
     - typeInString: AxeHero_ThrowAxe
       clip: {fileID: 8300000, guid: a163e0d4132114840a87dea28a701dec, type: 3}
     - typeInString: AxeHero_HugeSlash
-      clip: {fileID: 8300000, guid: f1d88ab85d175934d9e28eb385b06797, type: 3}
+      clip: {fileID: 8300000, guid: 19dcbaf46bf8f3346bb368f5af64c3c4, type: 3}
     - typeInString: AxeHero_UltimateStart
       clip: {fileID: 8300000, guid: 98882212b3faa274f8b84ab0e7088829, type: 3}
     - typeInString: AxeHero_UltimateCatchSuccess
@@ -4370,8 +4370,10 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 741cac8bff0ab1c4aa0e55846dd6efbb, type: 3}
     - typeInString: CatHero_SendCat
       clip: {fileID: 8300000, guid: fc8e2de0b8687374d91bd146b5d6bbea, type: 3}
-    - typeInString: CatHero_Claw2
+    - typeInString: CatHero_BleedingClaw
       clip: {fileID: 8300000, guid: a62488bd3b3adb54c8c698837066b548, type: 3}
+    - typeInString: CatHero_LightingShield
+      clip: {fileID: 8300000, guid: fac0fb6a06479e44bb24182feb6646c4, type: 3}
   - source: {fileID: 364014557}
     audio: []
   - source: {fileID: 471400958}

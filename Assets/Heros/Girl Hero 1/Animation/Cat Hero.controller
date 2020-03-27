@@ -414,7 +414,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: CatHero_Claw2
+  soundInString: CatHero_BleedingClaw
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -1844,7 +1844,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: 
+  soundInString: CatHero_LightingShield
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
