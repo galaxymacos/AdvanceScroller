@@ -12,7 +12,7 @@ public class NewProjectileSticker : MonoBehaviour
     private NewProjectile newProjectile;
     [SerializeField] private float stickDelay = 0.03f;
     private float stickDelayCounter;
-    private PlayerCharacter owner;
+    private GameObject owner;
     public LayerMask layerToStick;
     
     private GameObject objectToStickTo;
@@ -50,13 +50,14 @@ public class NewProjectileSticker : MonoBehaviour
         
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         GetComponent<Rigidbody2D>().isKinematic = true;
+        
         transform.parent = objectToStickTo.transform;
         
         onStickToObject?.Invoke();
 
     }
 
-    public void ReadyToStick()
+    private void ReadyToStick()
     {
         print("Ready to stick");
         stickDelayCounter = stickDelay;

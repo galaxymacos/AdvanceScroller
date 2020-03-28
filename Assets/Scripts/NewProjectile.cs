@@ -5,27 +5,41 @@ using UnityEngine;
 public class NewProjectile: MonoBehaviour
 {
     // public float movementSpeed = 5f;
-    public PlayerCharacter owner;
+    public GameObject owner;
     private Rigidbody2D rb;
+    private IDamageReceiver ownerDamageReceiver;
 
     public class ProjectileArgument
     {
-        public ProjectileArgument(PlayerCharacter owner)
+        public ProjectileArgument(GameObject owner)
         {
             this.owner = owner;
         }
-        public PlayerCharacter owner;
+        public GameObject owner;
     }
 
     public event Action<ProjectileArgument> onProjectileSetupFinished;
 
-    public void Setup(PlayerCharacter _owner, float movementSpeed = 100 , float angle = 0, bool customRotation = false)
+    public void Setup(GameObject _owner, float movementSpeed = 100 , float angle = 0, bool customRotation = false)
     {
-        rb = GetComponent<Rigidbody2D>();
         owner = _owner;
-        Vector2 ownerFacingDirection = owner.isFacingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
+
+        ownerDamageReceiver = _owner.GetComponent<IDamageReceiver>();
+        rb = GetComponent<Rigidbody2D>();
+        
+        Vector2 ownerFacingDirection;
+        if (owner.GetComponent<PlayerCharacter>())
+        {
+            ownerFacingDirection = owner.GetComponent<PlayerCharacter>().isFacingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
+        }
+        else
+        {
+            print("Tennis ball owner: "+_owner);
+            ownerFacingDirection = owner.GetComponent<FacingComponent2D>().IsFacingRight ? new Vector2(1, 0) : new Vector2(-1, 0);
+        }
+        
         Vector2 moveDirection;
-        if (owner.isFacingRight)
+        if (owner.GetComponent<PlayerCharacter>())
         {
             moveDirection = Quaternion.AngleAxis(angle, Vector3.forward) * ownerFacingDirection;
         }
@@ -34,6 +48,7 @@ public class NewProjectile: MonoBehaviour
             moveDirection = Quaternion.AngleAxis(-angle, Vector3.forward) * ownerFacingDirection;
 
         }
+        
         rb.AddForce(moveDirection * (movementSpeed * 20));
 
         if (!customRotation)
@@ -53,8 +68,9 @@ public class NewProjectile: MonoBehaviour
             }
         }
         
-        
         onProjectileSetupFinished?.Invoke(new ProjectileArgument(_owner));
+
+
 
     }
 

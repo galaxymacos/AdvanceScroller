@@ -21,9 +21,8 @@ public class SMB_Bandit_Idle : SMB_Bandit
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (data.alertTimeCounter>0)
+        if (data.targetPlayer!=null)
         {
-            Debug.Log("Find player");
             AnimatorOverrideController aoc = new AnimatorOverrideController(anim.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
  
@@ -35,7 +34,6 @@ public class SMB_Bandit_Idle : SMB_Bandit
         }
         else
         {
-            Debug.Log("Doesn't find player");
             AnimatorOverrideController aoc = new AnimatorOverrideController(anim.runtimeAnimatorController);
             var anims = new List<KeyValuePair<AnimationClip, AnimationClip>>();
  

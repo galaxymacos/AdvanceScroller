@@ -6,9 +6,9 @@ public class NewProjectileDamageComponent: MonoBehaviour
     public CollisionDetector collisionDetector;
 
     public DamageData damageData;
-    private PlayerCharacter owner;
+    public GameObject owner;
 
-    public bool isSingleDamage;
+    public bool isSingleDamage;  
     private bool hasDealtDamage = false;
     public event Action onDamageDealt;
     private bool hasSetuped;
@@ -19,39 +19,49 @@ public class NewProjectileDamageComponent: MonoBehaviour
         {
             GetComponent<NewProjectile>().onProjectileSetupFinished += Setup;
         }
-        collisionDetector.onObjectCollided += DealDamageToCharacter;
+    }
+
+    private void OnDestroy()
+    {
+        if (GetComponent<NewProjectile>() != null)
+        {
+            GetComponent<NewProjectile>().onProjectileSetupFinished -= Setup;
+        }
     }
 
     private void Setup(NewProjectile.ProjectileArgument obj)
     {
         if (hasSetuped) return;
         
-        print("set up projectile damage component");
         owner = obj.owner;
         hasSetuped = true;
     }
     
     
-    public void Setup(PlayerCharacter _owner)
+    public void Setup(GameObject _owner)
     {
         if (hasSetuped) return;
         print("set up projectile damage component");
-        this.owner = _owner;
+        owner = _owner;
         hasSetuped = true;
     }
 
-    private void DealDamageToCharacter(GameObject playerCharacter)
+
+
+    
+
+    public void OnTriggerEnter2D(Collider2D other)
     {
         if (!hasSetuped) return;
         
         
-        if (playerCharacter.GetComponent<CharacterHealthComponent>() != null &&
-            playerCharacter.GetComponent<PlayerCharacter>() != owner)
+        if (other.GetComponent<IDamageReceiver>() != null &&
+            other.gameObject != owner)
         {
             if ((isSingleDamage && !hasDealtDamage) || !isSingleDamage)
             {
                 print("take damage");
-                playerCharacter.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
+                other.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
                 onDamageDealt?.Invoke();
                 
                 if (isSingleDamage)

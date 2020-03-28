@@ -44,10 +44,10 @@ public class CollisionDetector: MonoBehaviour
             objectsInCollision = new List<GameObject>();
         }
 
-        if (!objectsInCollision.Contains(other.gameObject))
+        if (!objectsInCollision.Contains(other.transform.gameObject) && other.transform.GetComponent<IDamageReceiver>()!=null)
         {
-            objectsInCollision.Add(other.gameObject);
-            onObjectCollided?.Invoke(other.gameObject);
+            objectsInCollision.Add(other.transform.gameObject);
+            onObjectCollided?.Invoke(other.transform.gameObject);
         }
     }
 
@@ -55,9 +55,9 @@ public class CollisionDetector: MonoBehaviour
     {
         if (objectsInCollision != null)
         {
-            if (objectsInCollision.Contains(other.gameObject))
+            if (objectsInCollision.Contains(other.transform.root.gameObject) && other.transform.GetComponent<IDamageReceiver>()!=null)
             {
-                objectsInCollision.Remove(other.gameObject);
+                objectsInCollision.Remove(other.transform.root.gameObject);
             }
         }
     }

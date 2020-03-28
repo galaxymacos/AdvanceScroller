@@ -3745,8 +3745,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinInterval: 0.04
   spinIntervalIncreaseTimePerTick: 0.01
-  waitTime: 3
-  confirmMapTime: 1.5
+  waitTime: 0
+  confirmMapTime: 0
 --- !u!1 &1726954614
 GameObject:
   m_ObjectHideFlags: 0

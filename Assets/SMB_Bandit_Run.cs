@@ -41,6 +41,10 @@ public class SMB_Bandit_Run : SMB_Bandit
                 {
                     animator.SetTrigger("Idle");
                 }
+                else if (actionLimiter.CanGoToAnimation("Jump"))
+                {
+                    animator.SetTrigger("Jump");
+                }
             }
         }
 

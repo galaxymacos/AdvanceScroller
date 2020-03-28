@@ -49,6 +49,7 @@
         <e p="BanditData.cs" t="Include" />
         <e p="BanditEdgeDetector.cs" t="Include" />
         <e p="BanditEventSystem.cs" t="Include" />
+        <e p="BanditIdleLimiter.cs" t="Include" />
         <e p="BanditPlayerDetector.cs" t="Include" />
         <e p="Bandits - Pixel Art" t="Include">
           <e p="Demo" t="Include">
@@ -445,6 +446,7 @@
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
         <e p="SMB_Bandit_Attack.cs" t="Include" />
+        <e p="SMB_Bandit_DashStrike.cs" t="Include" />
         <e p="SMB_Bandit_Idle.cs" t="Include" />
         <e p="SMB_Bandit_Jump.cs" t="Include" />
         <e p="SMB_Bandit_Run.cs" t="Include" />
@@ -466,6 +468,10 @@
           <e p="InjuryShaderComponent.cs" t="Include" />
           <e p="OnePlayerTest.cs" t="Include" />
         </e>
+        <e p="TennisBallBlinkingAndDisappear.cs" t="Include" />
+        <e p="TennisBallDamageReceiver.cs" t="Include" />
+        <e p="TennisBallOnFire.cs" t="Include" />
+        <e p="TennisBallResetComponent.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

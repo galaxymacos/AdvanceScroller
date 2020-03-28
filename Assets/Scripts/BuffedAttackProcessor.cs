@@ -17,6 +17,6 @@ public class BuffedAttackProcessor : MonoBehaviour
         print("Shoot lightning sword");
         var lightningSword = Instantiate(lightningSwordPrefab, lightningSwordSpawnPosition.position, Quaternion.identity);
         var newProjectileComponent = lightningSword.GetComponent<NewProjectile>();
-        newProjectileComponent.Setup(playerCharacter,20);
+        newProjectileComponent.Setup(playerCharacter.gameObject,20);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BanditPlayerDetector : MonoBehaviour
 {
@@ -40,6 +41,15 @@ public class BanditPlayerDetector : MonoBehaviour
         {
             banditData.alertTimeCounter = banditData.alertTime;
         }
+        
+        if (banditData.alertTimeCounter > 0)
+        {
+            banditData.alertTimeCounter -= Time.deltaTime;
+            if (banditData.alertTimeCounter <= 0)
+            {
+                banditData.targetPlayer = null;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -49,6 +59,7 @@ public class BanditPlayerDetector : MonoBehaviour
         {
             banditEventSystem.PlayerEnterDetectRange(playerCharacter);
             playersInRange.Add(playerCharacter);
+            banditData.targetPlayer = playersInRange[Random.Range(0, playersInRange.Count)];
         }
     }
 
@@ -59,6 +70,7 @@ public class BanditPlayerDetector : MonoBehaviour
         {
             banditEventSystem.PlayerExitDetectRange(playerCharacter);
             playersInRange.Remove(playerCharacter);
+            
         }
 
     }

@@ -42,7 +42,7 @@ public class GalaxyAxeStation : MonoBehaviour
         {
             var galaxyAxe = Instantiate(galaxyAxePrefab, transform.position, Quaternion.identity);
             galaxyAxe.layer = owner.gameObject.layer;
-            galaxyAxe.GetComponent<NewProjectileDamageComponent>().Setup(GetComponent<PlayerCharacter>());
+            galaxyAxe.GetComponent<NewProjectileDamageComponent>().Setup(transform.root.gameObject);
             galaxyAxe.GetComponent<SpriteRenderer>().sprite = axeSprites[i];
             Vector3 movementVector = Quaternion.AngleAxis(-45*i, Vector3.forward) * Vector2.up * armLength;
             Vector3 targetVector = movementVector + transform.position;

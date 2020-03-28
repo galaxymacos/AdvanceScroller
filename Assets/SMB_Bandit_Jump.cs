@@ -13,13 +13,26 @@ public class SMB_Bandit_Jump : SMB_Bandit
         colliders = animator.GetComponents<Collider>();
         foreach (Collider collider in colliders)
         {
-            collider.enabled = false;
+            if (!collider.isTrigger)
+            {
+                collider.enabled = false;
+            }
         }
         Vector2 jumpPointLocation = FindClosestJumpingPointToPlayer();
         rigidbody.gravityScale = 0f;
         
         data.jumpingTimeCounter--;
         animator.transform.DOJump(jumpPointLocation, 4, 1, 1).OnComplete(NextAction);
+            if (jumpPointLocation.x > animator.transform.position.x &&
+                !facingComponent.IsFacingRight)
+            {
+                facingComponent.ChangeFacing();
+            }
+            else if (jumpPointLocation.x < animator.transform.position.x &&
+                     facingComponent.IsFacingRight)
+            {
+                facingComponent.ChangeFacing();
+            }
     }
 
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -30,7 +43,17 @@ public class SMB_Bandit_Jump : SMB_Bandit
 
     private Vector2 FindClosestJumpingPointToPlayer()
     {
-        Transform[] jumpingPoints = data.jumpingPoints;
+        Transform[] jumpingPoints;
+        if (data.targetPlayer != null)
+        {
+            Debug.Log("Jumping point near player");
+            jumpingPoints = data.dataInquirer.NearJumpingPointsToPosition(data.targetPlayer.transform.position,data.jumpingPoints, 2);
+        }
+        else
+        {
+            Debug.Log("Jumping point random");
+            jumpingPoints = data.jumpingPoints.ToArray();
+        }
         Transform randomJumpingPoints = jumpingPoints[Random.Range(0, jumpingPoints.Length)];
         return randomJumpingPoints.position;
     }
@@ -40,14 +63,17 @@ public class SMB_Bandit_Jump : SMB_Bandit
         
         foreach (Collider collider in colliders)
         {
-            collider.enabled = true;
+            if (!collider.isTrigger)
+            {
+                collider.enabled = true;
+            }
         }
         
         if (data.jumpingTimeCounter <= 0)
         {
             if (actionLimiter.CanGoToAnimation("DashStrike"))
             {
-                data.jumpingTimeCounter = data.maxJumpingTime;
+                data.jumpingTimeCounter = Random.Range(1,data.maxJumpingTime+1);
                 anim.SetTrigger("DashStrike");
             }
         }
