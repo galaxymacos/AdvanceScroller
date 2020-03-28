@@ -4375,7 +4375,9 @@ MonoBehaviour:
     - typeInString: CatHero_LightingShield
       clip: {fileID: 8300000, guid: fac0fb6a06479e44bb24182feb6646c4, type: 3}
   - source: {fileID: 364014557}
-    audio: []
+    audio:
+    - typeInString: PsychicHero_ChargeSound
+      clip: {fileID: 0}
   - source: {fileID: 471400958}
     audio:
     - typeInString: SwordPrincess_NormalAttack
