@@ -11,6 +11,7 @@
         <e p="AB_CatHero_Skill3.cs" t="Include" />
         <e p="AB_Frozen_General.cs" t="Include" />
         <e p="AB_PsychicHero_ChargingDagger.cs" t="Include" />
+        <e p="ActionLimiter.cs" t="Include" />
         <e p="AllIn1SpriteShader" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -42,6 +43,20 @@
           </e>
         </e>
         <e p="AutoLightingAdapter.cs" t="Include" />
+        <e p="BanditAnimationEvents.cs" t="Include" />
+        <e p="BanditAttackLimiter.cs" t="Include" />
+        <e p="BanditAttackRangeDetector.cs" t="Include" />
+        <e p="BanditData.cs" t="Include" />
+        <e p="BanditEdgeDetector.cs" t="Include" />
+        <e p="BanditEventSystem.cs" t="Include" />
+        <e p="BanditPlayerDetector.cs" t="Include" />
+        <e p="Bandits - Pixel Art" t="Include">
+          <e p="Demo" t="Include">
+            <e p="Bandit.cs" t="Include" />
+            <e p="CharacterSelector_Bandit.cs" t="Include" />
+            <e p="Sensor_Bandit.cs" t="Include" />
+          </e>
+        </e>
         <e p="BloodDebugger.cs" t="Include" />
         <e p="Channel.cs" t="Include" />
         <e p="ChannelErrorPlacer.cs" t="Include" />
@@ -117,6 +132,7 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
+        <e p="FacingComponent2D.cs" t="Include" />
         <e p="GhostAnimationMessager.cs" t="Include" />
         <e p="GhostAttackCounter.cs" t="Include" />
         <e p="GhostDamageReceiver.cs" t="Include" />
@@ -428,6 +444,10 @@
           <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="SMB_Bandit_Attack.cs" t="Include" />
+        <e p="SMB_Bandit_Idle.cs" t="Include" />
+        <e p="SMB_Bandit_Jump.cs" t="Include" />
+        <e p="SMB_Bandit_Run.cs" t="Include" />
         <e p="SMB_Ghost_Attack.cs" t="Include" />
         <e p="SMB_Ghost_Celebrate.cs" t="Include" />
         <e p="SMB_Ghost_Chase.cs" t="Include" />
