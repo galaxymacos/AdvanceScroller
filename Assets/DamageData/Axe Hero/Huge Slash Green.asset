@@ -21,3 +21,5 @@ MonoBehaviour:
   hitStunPower: 0
   launcherHorizontalForce: 0
   launcherVerticalForce: 0
+  attackEffects: []
+  hitSound: AxeHero_AxeHit

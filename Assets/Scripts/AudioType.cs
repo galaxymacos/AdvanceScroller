@@ -80,20 +80,23 @@ public enum AudioType
     PsychicHero_Jump,
     PsychicHero_DoubleJump,
     PsychicHero_Dash,
-    PsychicHero_ChargeSound,
     PsychicHero_ShootSmallDagger,
-    PsychicHero_SmallDaggerHit,
+    PsychicHero_ChargeSound,
     PsychicHero_ShootChargedDagger,
-    PsychicHero_ChargedDaggerHit,
     PsychicHero_ThrowAxe,
-    PsychicHero_AxeHit,
     PsychicHero_ThrowChargedAxe,
-    PsychicHero_ChargedAxeHit,
     PsychicHero_Tornado,
+    PsychicHero_Beam,
+    PsychicHero_InstantKillStart,
+
+    PsychicHero_SmallDaggerHit,
+    PsychicHero_ChargedDaggerHit,
+    PsychicHero_AxeHit,
+    PsychicHero_ChargedAxeHit,
     PsychicHero_TornadoHit,
 
     #endregion
-    
+
     #region Sword Princess
 
     SwordPrincess_Dash,
