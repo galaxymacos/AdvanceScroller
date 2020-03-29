@@ -2127,6 +2127,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: b08957523617a4247827ba63ed6e7a9e, type: 3}
   - typeInString: SwordPrincess_WolfBite
     clip: {fileID: 8300000, guid: b08957523617a4247827ba63ed6e7a9e, type: 3}
+  - typeInString: AxeHero_AxeHit
+    clip: {fileID: 8300000, guid: e8b180517ac90e244856632d0a428e27, type: 3}
+  - typeInString: AxeHero_UltimateThrow
+    clip: {fileID: 8300000, guid: 55519262438543146aef3cb9a4e010af, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
@@ -4376,8 +4380,22 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: fac0fb6a06479e44bb24182feb6646c4, type: 3}
   - source: {fileID: 364014557}
     audio:
+    - typeInString: PsychicHero_ShootSmallDagger
+      clip: {fileID: 8300000, guid: 4581fa9c9b8fa0e40b87920adeb5ff83, type: 3}
     - typeInString: PsychicHero_ChargeSound
       clip: {fileID: 8300000, guid: 32d43e4756c97414d87981666221af0a, type: 3}
+    - typeInString: PsychicHero_ShootChargedDagger
+      clip: {fileID: 8300000, guid: 4581fa9c9b8fa0e40b87920adeb5ff83, type: 3}
+    - typeInString: PsychicHero_ThrowAxe
+      clip: {fileID: 8300000, guid: 8cf94959339b1164188514751a0cb24e, type: 3}
+    - typeInString: PsychicHero_ThrowChargedAxe
+      clip: {fileID: 8300000, guid: 8cf94959339b1164188514751a0cb24e, type: 3}
+    - typeInString: PsychicHero_Tornado
+      clip: {fileID: 8300000, guid: 1a28fc6e5e042f4448886da3dfdb89a5, type: 3}
+    - typeInString: PsychicHero_Beam
+      clip: {fileID: 8300000, guid: b3449b82675bbf84888a37bad88dda8b, type: 3}
+    - typeInString: PsychicHero_InstantKillStart
+      clip: {fileID: 8300000, guid: 8420b5c56c7d65444950993093a38379, type: 3}
   - source: {fileID: 471400958}
     audio:
     - typeInString: SwordPrincess_NormalAttack
