@@ -4,22 +4,28 @@ using UnityEngine;
 public class TennisBallBlinkingAndDisappear : MonoBehaviour
 {
     private SpriteRenderer sr;
+
+    private bool isDisappearing = false;
     // Start is called before the first frame update
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
         GetComponent<NewProjectileDamageComponent>().onDamageDealt += Blink;
+        GetComponent<TennisBallTimer>().onTimeOut += Blink;
     }
 
     private void OnDestroy()
     {
         GetComponent<NewProjectileDamageComponent>().onDamageDealt -= Blink;
+        GetComponent<TennisBallTimer>().onTimeOut -= Blink;
     }
 
     private void Blink()
     {
+        if (isDisappearing) return;
         StartBlinkingEffect();
         StartCoroutine(Blinking());
+        isDisappearing = true; 
     }
 
     private void StartBlinkingEffect()

@@ -119,6 +119,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-7052348202290972039
@@ -184,6 +185,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 8
@@ -233,6 +235,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-6024715653627390360
@@ -396,6 +399,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   chargeSkillPrefab: {fileID: 7635780407722689910, guid: 333943eec190b004ba20b9975f1d3fac,
@@ -461,7 +465,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 1
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -535,6 +539,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-1198551254192898727
@@ -563,6 +568,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &-1194548053809989010
@@ -618,6 +624,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &-872338685152810975
@@ -753,169 +760,169 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: run
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: double jump
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: fall down
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: jump attack
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hurt
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill1
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill2
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill3
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: skill4
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: dash
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: die
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: hit stun
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: push
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: wallslide
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: bounce back
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: throw axe charged
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: throw dagger charged
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: throw dagger
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: throw axe
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: climb
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: charge finish
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: acquire
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: win pose
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: stomp
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: frozen
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -945,6 +952,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &177126408605353649
@@ -1398,7 +1406,7 @@ AnimatorStateMachine:
     m_Position: {x: 990, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102551825971456428}
-    m_Position: {x: -420, y: 740, z: 0}
+    m_Position: {x: -450, y: 710, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102213681745356920}
     m_Position: {x: 990, y: 420, z: 0}
@@ -1425,7 +1433,7 @@ AnimatorStateMachine:
     m_Position: {x: 990, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6570086216698376446}
-    m_Position: {x: -640, y: 530, z: 0}
+    m_Position: {x: -640, y: 560, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6231076259539704601}
     m_Position: {x: -410, y: 800, z: 0}
@@ -1489,6 +1497,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 2
@@ -1530,6 +1539,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   bounceBackDamageData: {fileID: 0}
@@ -1574,6 +1584,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &3870682560698088131
@@ -1653,6 +1664,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &4422701130325349518
@@ -1686,6 +1698,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &4702335362364227828
@@ -1705,6 +1718,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   stompSpeed: 10
@@ -1776,6 +1790,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &5877619086891016593
@@ -1818,6 +1833,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 0.5
@@ -1838,6 +1854,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &6570086216698376446
@@ -1884,6 +1901,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   chargeSkillPrefab: {fileID: 3455592179296393097, guid: 98771aab7ec932b48b9c899f0e822af8,
@@ -1914,6 +1932,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 1
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   jumpForce: 7
@@ -1960,6 +1979,7 @@ MonoBehaviour:
   stateCanForceTransformTo: []
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &7694561671157874728
@@ -2006,6 +2026,7 @@ MonoBehaviour:
   - dash
   soundInString: 
   canControlHorizontalMovement: 0
+  canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &7775195541467390745
@@ -2049,7 +2070,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 1
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

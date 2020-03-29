@@ -16,7 +16,7 @@ public class NewProjectileSticker : MonoBehaviour
     public LayerMask layerToStick;
     
     private GameObject objectToStickTo;
-
+    private bool hasStickedToObject;
     public UnityEvent onStickToObject;
 
     private void Awake()
@@ -46,6 +46,8 @@ public class NewProjectileSticker : MonoBehaviour
 
     public void StickToObject()
     {
+        if (hasStickedToObject) return;
+        hasStickedToObject = true;
         print("stick to object");
         
         GetComponent<Rigidbody2D>().velocity = Vector2.zero;

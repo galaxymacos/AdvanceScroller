@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6321796695721986460}
   - component: {fileID: 6321796695721986450}
   - component: {fileID: 6321796695721986461}
-  - component: {fileID: 6321796695721986448}
   - component: {fileID: 6321796695721986451}
   - component: {fileID: 3356604998471648616}
   - component: {fileID: 8443650082024946772}
@@ -115,25 +114,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d63db7199bc44bc483201dbac6abce9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionDetector: {fileID: 6321796695721986451}
   damageData: {fileID: 11400000, guid: 869c8fa1f8240ea48badfcbcea44a25b, type: 2}
   owner: {fileID: 0}
   isSingleDamage: 1
---- !u!58 &6321796695721986448
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6321796695721986462}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.3
+  detectionMethod: 1
 --- !u!114 &6321796695721986451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4f15f78aa9f7d4499fa30a51d2e5b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 5
+  tennisBallDamageReceiver: {fileID: -3275884802066325115}
 --- !u!114 &1051524020260797199
 MonoBehaviour:
   m_ObjectHideFlags: 0

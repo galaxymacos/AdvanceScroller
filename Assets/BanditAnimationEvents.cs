@@ -19,7 +19,6 @@ public class BanditAnimationEvents : MonoBehaviour
 
     public void SpawnTennisBall()
     {
-        var tb = Instantiate(tennisBall, tennisBallSpawnLocation.position, Quaternion.identity);
-        tb.GetComponent<NewProjectileDamageComponent>().Setup(gameObject);
+        Instantiate(tennisBall, tennisBallSpawnLocation.position, Quaternion.identity);
     }
 }

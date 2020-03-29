@@ -10,9 +10,13 @@ public class NewProjectileDamageComponent: MonoBehaviour
 
     public bool isSingleDamage;  
     private bool hasDealtDamage = false;
+    public bool Expired { get; set; }
+
     public event Action onDamageDealt;
     private bool hasSetuped;
-    
+    public DetectionMethod detectionMethod;
+    public enum DetectionMethod {Trigger,Collision}
+
     private void Awake()
     {
         if (GetComponent<NewProjectile>() != null)
@@ -31,8 +35,8 @@ public class NewProjectileDamageComponent: MonoBehaviour
 
     private void Setup(NewProjectile.ProjectileArgument obj)
     {
-        if (hasSetuped) return;
-        
+        if(hasSetuped) 
+        print("setup damage component");
         owner = obj.owner;
         hasSetuped = true;
     }
@@ -40,8 +44,7 @@ public class NewProjectileDamageComponent: MonoBehaviour
     
     public void Setup(GameObject _owner)
     {
-        if (hasSetuped) return;
-        print("set up projectile damage component");
+        print("setup damage component");
         owner = _owner;
         hasSetuped = true;
     }
@@ -50,27 +53,61 @@ public class NewProjectileDamageComponent: MonoBehaviour
 
     
 
-    public void OnTriggerEnter2D(Collider2D other)
+    public void OnCollisionEnter2D(Collision2D other)
     {
-        if (!hasSetuped) return;
-        
-        
-        if (other.GetComponent<IDamageReceiver>() != null &&
-            other.gameObject != owner)
+        if (detectionMethod == DetectionMethod.Collision)
         {
-            if ((isSingleDamage && !hasDealtDamage) || !isSingleDamage)
+            if (!hasSetuped || Expired) return;
+            print("Collide with "+other.gameObject.name);
+
+
+            if (other.gameObject.GetComponent<IDamageReceiver>() != null &&
+                other.gameObject != owner)
             {
-                print("take damage");
-                other.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
-                onDamageDealt?.Invoke();
-                
-                if (isSingleDamage)
+                if (isSingleDamage && !hasDealtDamage || !isSingleDamage)
                 {
-                    hasDealtDamage = true;
+                    print("take damage");
+                    other.gameObject.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
+                    onDamageDealt?.Invoke();
+                
+                    if (isSingleDamage)
+                    {
+                        hasDealtDamage = true;
+                    }
+
                 }
 
             }
-
         }
+        
+    }
+    
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (detectionMethod == DetectionMethod.Trigger)
+        {
+            if (!hasSetuped || Expired) return;
+            print("Collide with "+other.gameObject.name);
+
+
+            if (other.gameObject.GetComponent<IDamageReceiver>() != null &&
+                other.gameObject != owner)
+            {
+                if (isSingleDamage && !hasDealtDamage || !isSingleDamage)
+                {
+                    print("take damage");
+                    other.gameObject.GetComponent<IDamageReceiver>().Analyze(damageData, transform);
+                    onDamageDealt?.Invoke();
+                
+                    if (isSingleDamage)
+                    {
+                        hasDealtDamage = true;
+                    }
+
+                }
+
+            }
+        }
+        
     }
 }
