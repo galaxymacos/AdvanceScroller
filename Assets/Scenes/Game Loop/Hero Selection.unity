@@ -4377,7 +4377,7 @@ MonoBehaviour:
   - source: {fileID: 364014557}
     audio:
     - typeInString: PsychicHero_ChargeSound
-      clip: {fileID: 0}
+      clip: {fileID: 8300000, guid: 32d43e4756c97414d87981666221af0a, type: 3}
   - source: {fileID: 471400958}
     audio:
     - typeInString: SwordPrincess_NormalAttack
