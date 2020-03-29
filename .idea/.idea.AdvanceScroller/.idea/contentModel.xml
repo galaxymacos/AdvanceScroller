@@ -9,6 +9,7 @@
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="AB_CatHero_Skill3.cs" t="Include" />
+        <e p="AB_CatHero_Ultimate.cs" t="Include" />
         <e p="AB_Frozen_General.cs" t="Include" />
         <e p="AB_PsychicHero_ChargingDagger.cs" t="Include" />
         <e p="ActionLimiter.cs" t="Include" />
@@ -59,6 +60,7 @@
           </e>
         </e>
         <e p="BloodDebugger.cs" t="Include" />
+        <e p="CatHeroUltimateShadow.cs" t="Include" />
         <e p="Channel.cs" t="Include" />
         <e p="ChannelErrorPlacer.cs" t="Include" />
         <e p="ChannelEventSystem.cs" t="Include" />
@@ -445,6 +447,7 @@
           <e p="WelcomeText.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
+        <e p="ShadowSpritesStorer.cs" t="Include" />
         <e p="SMB_Bandit_Attack.cs" t="Include" />
         <e p="SMB_Bandit_DashStrike.cs" t="Include" />
         <e p="SMB_Bandit_Idle.cs" t="Include" />

@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class UltimateBuffTimer : MonoBehaviour
 {
-    public float enrageTimer;
-    public float enrageTimerCounter;
-    public bool IsEnrage => enrageTimerCounter > 0;
+    public float ultimateTimer = 5;
+    public float UltimateTimerCounter;
+    public bool InUltimateStage => UltimateTimerCounter > 0;
 
     private Material originalMaterial;
 
-    public event Action onEnrageStart;
-    public event Action onEnrageEnd;
+    public event Action onUltimateStart;
+    public event Action onUltimateEnd;
 
     /// <summary>
     /// Change the material system
@@ -24,20 +24,20 @@ public class UltimateBuffTimer : MonoBehaviour
 
     public void Enrage()
     {
-        enrageTimerCounter = enrageTimer;
-        onEnrageStart?.Invoke();
+        UltimateTimerCounter = ultimateTimer;
+        onUltimateStart?.Invoke();
         
     }
 
     private void Update()
     {
-        if (enrageTimerCounter > 0)
+        if (UltimateTimerCounter > 0)
         {
-            enrageTimerCounter -= Time.deltaTime;
-            if (enrageTimerCounter <= 0)
+            UltimateTimerCounter -= Time.deltaTime;
+            if (UltimateTimerCounter <= 0)
             {
                 GetComponent<SpriteRenderer>().material = originalMaterial;
-                onEnrageEnd?.Invoke();
+                onUltimateEnd?.Invoke();
             }
         }
     }

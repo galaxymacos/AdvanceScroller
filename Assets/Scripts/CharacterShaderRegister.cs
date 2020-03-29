@@ -15,8 +15,8 @@ public class CharacterShaderRegister : MonoBehaviour
 
         if (GetComponent<UltimateBuffTimer>() != null)
         {
-            GetComponent<UltimateBuffTimer>().onEnrageStart += shaderController.EnableOutline;
-            GetComponent<UltimateBuffTimer>().onEnrageEnd += shaderController.DisableOutline;
+            GetComponent<UltimateBuffTimer>().onUltimateStart += shaderController.EnableOutline;
+            GetComponent<UltimateBuffTimer>().onUltimateEnd += shaderController.DisableOutline;
 
         }
     }
@@ -27,8 +27,8 @@ public class CharacterShaderRegister : MonoBehaviour
         GetComponent<PlayerCharacter>().onDashOutFromHurt -= shaderController.AttackMissEffect;
         if (GetComponent<UltimateBuffTimer>() != null)
         {
-            GetComponent<UltimateBuffTimer>().onEnrageStart -= shaderController.EnableOutline;
-            GetComponent<UltimateBuffTimer>().onEnrageEnd -= shaderController.DisableOutline;
+            GetComponent<UltimateBuffTimer>().onUltimateStart -= shaderController.EnableOutline;
+            GetComponent<UltimateBuffTimer>().onUltimateEnd -= shaderController.DisableOutline;
 
         }
     }

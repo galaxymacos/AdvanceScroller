@@ -74,6 +74,9 @@ GameObject:
   - component: {fileID: 5533487366866381223}
   - component: {fileID: 129144528791331115}
   - component: {fileID: 8755737772395986013}
+  - component: {fileID: 8288820795110748534}
+  - component: {fileID: 7241189913646409413}
+  - component: {fileID: 1718323873806538583}
   m_Layer: 0
   m_Name: Cat Hero
   m_TagString: Untagged
@@ -246,7 +249,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &965933177036805576
 MonoBehaviour:
@@ -485,7 +488,7 @@ MonoBehaviour:
   showOffTime: 0.6
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
-  ultimateIcon: {fileID: 0}
+  ultimateIcon: {fileID: 21300000, guid: e379a73d995292243ba7716eba92a7b8, type: 3}
   isPlayingUltimate: 0
 --- !u!114 &7061681660935062770
 MonoBehaviour:
@@ -519,6 +522,7 @@ MonoBehaviour:
   catPrefab: {fileID: 3222097676526244191, guid: 371d7492c3c095146803b83da1e2d207,
     type: 3}
   catSpawnLocation: {fileID: 8355361752509574661}
+  shadowDamageData: {fileID: 11400000, guid: 9f85cb4e814f82048ac314737ac3d06d, type: 2}
 --- !u!114 &129144528791331115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -543,6 +547,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8288820795110748534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a43b0d96736382438699ef971cb52c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ultimateTimer: 11
+  UltimateTimerCounter: 0
+--- !u!114 &7241189913646409413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6568d1952b7fe469f7d5e9fae36be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRecord: 0.09
+  sr: {fileID: 965933177036805583}
+  ultimateShadowPrefab: {fileID: 7232748920872137860, guid: f4086b8cf094d3148919b25168ffc2a5,
+    type: 3}
+  ultimateBuffTimer: {fileID: 8288820795110748534}
+--- !u!114 &1718323873806538583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb6568d1952b7fe469f7d5e9fae36be2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeToRecord: 0.18
+  sr: {fileID: 965933177036805583}
+  ultimateShadowPrefab: {fileID: 7232748920872137860, guid: f4086b8cf094d3148919b25168ffc2a5,
+    type: 3}
+  ultimateBuffTimer: {fileID: 8288820795110748534}
 --- !u!1 &965933177369232322
 GameObject:
   m_ObjectHideFlags: 0

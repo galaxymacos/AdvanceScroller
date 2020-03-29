@@ -19,6 +19,7 @@ public class BatHeroAttackMessager : MonoBehaviour
     private Rigidbody2D rb;
     private Vector3 instantKillDirection;
     private float originalY;
+    [SerializeField] private float BatEnergySpeed = 40;
 
     public Action onBatHeroFinishTeleport;
 
@@ -149,7 +150,7 @@ public class BatHeroAttackMessager : MonoBehaviour
         GameObject blueball = Instantiate(blueballPrefab, transform.Find("SpawnLocations").Find("BlueBall").position,
             transform.rotation);
         var projectile = blueball.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 20, 0);
+        projectile.Setup(playerCharacter, BatEnergySpeed, 0);
     }
 
     public void SpawnKunai()
@@ -157,7 +158,7 @@ public class BatHeroAttackMessager : MonoBehaviour
         GameObject kunai = Instantiate(kunaiPrefab, transform.Find("SpawnLocations").Find("Kunai").position,
             transform.rotation);
         var projectile = kunai.GetComponent<Projectile>();
-        projectile.Setup(playerCharacter, 15, 0);
+        projectile.Setup(playerCharacter, 30, 0);
     }
 
     public void InstantKill()

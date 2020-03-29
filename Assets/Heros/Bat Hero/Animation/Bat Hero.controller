@@ -1643,7 +1643,7 @@ MonoBehaviour:
   stateCanForceTransformTo:
   - dash
   soundInString: BatHero_ThrowShuriki
-  canControlHorizontalMovement: 1
+  canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}

@@ -21,7 +21,7 @@ public class SwordPrincessAttackMessagingComponent : MonoBehaviour
     {
         if (state == 1)
         {
-            if (ultimateBuffTimer.IsEnrage)
+            if (ultimateBuffTimer.InUltimateStage)
             {
                 onBuffedAttack?.Invoke();
             }
