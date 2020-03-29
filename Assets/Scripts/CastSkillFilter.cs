@@ -176,7 +176,13 @@ public class LimitedUsageFilter: CastSkillFilter
                 return false;
             case "acquire":
                 var itemPickupComponent = csmb.playerCharacter.GetComponentInChildren<ItemPickupComponent>();
-                if (itemPickupComponent == null || !itemPickupComponent.HasItemNearBy) return false;
+                if (itemPickupComponent == null || !itemPickupComponent.HasItemNearBy)
+                {
+                    Debug.Log("Cant acquire");
+
+                    return false;
+                }
+                Debug.Log("Can acquire");
                 return true;
         }
 

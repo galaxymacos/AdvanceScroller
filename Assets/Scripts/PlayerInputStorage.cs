@@ -26,6 +26,11 @@ public class PlayerInputStorage : MonoBehaviour
         onNewInputAdded += StoreInput;
     }
 
+    private void OnDestroy()
+    {
+        onNewInputAdded -= StoreInput;
+    }
+
     /// <summary>
     /// driven by event
     /// </summary>

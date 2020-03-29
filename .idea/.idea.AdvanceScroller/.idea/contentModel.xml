@@ -470,8 +470,8 @@
         </e>
         <e p="TennisBallBlinkingAndDisappear.cs" t="Include" />
         <e p="TennisBallDamageReceiver.cs" t="Include" />
-        <e p="TennisBallOnFire.cs" t="Include" />
         <e p="TennisBallResetComponent.cs" t="Include" />
+        <e p="TennisBallTimer.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />

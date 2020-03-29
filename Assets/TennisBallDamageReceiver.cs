@@ -8,6 +8,7 @@ public class TennisBallDamageReceiver : MonoBehaviour, IDamageReceiver
     public NewProjectile tennisProjectile;
 
     public bool hasTakenDamage;
+    public event Action onTennisBallTakeDamage;
 
     public void Analyze(DamageData damageData, Transform damageOwner)
     {
@@ -16,6 +17,7 @@ public class TennisBallDamageReceiver : MonoBehaviour, IDamageReceiver
 
             tennisProjectile.Setup(damageOwner.gameObject, 50);
             hasTakenDamage = true;
+            onTennisBallTakeDamage?.Invoke();
         }
     }
 }

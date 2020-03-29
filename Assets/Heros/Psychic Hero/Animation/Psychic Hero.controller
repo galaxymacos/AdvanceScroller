@@ -233,7 +233,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: PsychicHero_Beam
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -397,7 +397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: PsychicHero_ChargeSound
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -465,7 +465,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 1
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -690,7 +690,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_ExitTime: 0.5
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -950,7 +950,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: PsychicHero_InstantKillStart
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -1406,7 +1406,7 @@ AnimatorStateMachine:
     m_Position: {x: 990, y: 20, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102551825971456428}
-    m_Position: {x: -420, y: 740, z: 0}
+    m_Position: {x: -450, y: 710, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102213681745356920}
     m_Position: {x: 990, y: 420, z: 0}
@@ -1433,10 +1433,10 @@ AnimatorStateMachine:
     m_Position: {x: 990, y: -80, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6570086216698376446}
-    m_Position: {x: -630, y: 620, z: 0}
+    m_Position: {x: -640, y: 560, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -6231076259539704601}
-    m_Position: {x: -430, y: 880, z: 0}
+    m_Position: {x: -410, y: 800, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9137713465252109569}
     m_Position: {x: 990, y: 520, z: 0}
@@ -1788,7 +1788,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: PsychicHero_ShootSmallDagger
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -1852,7 +1852,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: PsychicHero_Tornado
+  soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -1899,7 +1899,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: PsychicHero_ChargeSound
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -2024,7 +2024,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
-  soundInString: PsychicHero_ThrowAxe
+  soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
@@ -2070,7 +2070,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0
   m_TransitionOffset: 0
-  m_ExitTime: 0.75
+  m_ExitTime: 1
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0

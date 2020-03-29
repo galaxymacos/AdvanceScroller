@@ -23,7 +23,7 @@ public class LightningRodComponent : MonoBehaviour
             if (delayCounter <= 0)
             {
                 Instantiate(lightning, transform.position, Quaternion.identity);
-                Destroy(gameObject,0.3f);
+                Destroy(gameObject);
             }
         }
         
@@ -31,6 +31,6 @@ public class LightningRodComponent : MonoBehaviour
 
     public void CountdownStart()
     {
-        delayCounter+=delay;
+        delayCounter=delay;
     }
 }

@@ -731,6 +731,7 @@ GameObject:
   - component: {fileID: -6956731921203344667}
   - component: {fileID: 1734809702679375277}
   - component: {fileID: 2450774587293041543}
+  - component: {fileID: 1995621643411847428}
   m_Layer: 0
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -870,7 +871,6 @@ MonoBehaviour:
   maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
-  isDead: 0
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:
@@ -1189,6 +1189,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!70 &1995621643411847428
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.4, y: 0.71}
+  m_Direction: 0
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0
