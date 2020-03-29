@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - component: {fileID: 23452491}
   - component: {fileID: 23452492}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50692985}
   - component: {fileID: 50692986}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -580,7 +580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 188237091}
   - component: {fileID: 188237092}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1275,7 +1275,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332791771}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1721,7 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 468990813}
   - component: {fileID: 468990814}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2174,7 +2174,7 @@ GameObject:
   - component: {fileID: 586324270}
   - component: {fileID: 586324272}
   - component: {fileID: 586324271}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2574,7 +2574,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 706845143}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: WoodenLadder2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9863,7 +9863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772786098}
   - component: {fileID: 772786099}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10008,7 +10008,7 @@ GameObject:
   m_Component:
   - component: {fileID: 785534012}
   - component: {fileID: 785534013}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13001,7 +13001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074282794}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: WoodenLadder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13506,7 +13506,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1223046926}
   - component: {fileID: 1223046927}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14419,7 +14419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1371688131}
   - component: {fileID: 1371688132}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14889,7 +14889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1524678025}
   - component: {fileID: 1524678026}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16389,7 +16389,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1702116139}
   - component: {fileID: 1702116140}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16693,7 +16693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1799821297}
   - component: {fileID: 1799821298}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17253,7 +17253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1918473531}
   - component: {fileID: 1918473532}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: Forest_deco_woodenWalls_platforms_0 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
