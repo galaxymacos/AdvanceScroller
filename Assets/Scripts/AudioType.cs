@@ -59,8 +59,7 @@ public enum AudioType
     BatHero_InstantKillStart,
     BatHero_InstantKillHit,
     BatHero_InstantKillExplode,
-    BatHero_PunchHit01,
-    BatHero_PunchHit02,
+    BatHero_PunchHit,
     BatHero_ShurikiHit,
     BatHero_BatEnergyHit,
 

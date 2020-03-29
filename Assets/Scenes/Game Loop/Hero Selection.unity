@@ -2134,14 +2134,12 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e8b180517ac90e244856632d0a428e27, type: 3}
   - typeInString: AxeHero_UltimateThrow
     clip: {fileID: 8300000, guid: 55519262438543146aef3cb9a4e010af, type: 3}
-  - typeInString: BatHero_PunchHit01
+  - typeInString: BatHero_PunchHit
     clip: {fileID: 8300000, guid: 32ae155bfeff35840a7a819c9c51cd07, type: 3}
-  - typeInString: BatHero_PunchHit02
-    clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
-  - typeInString: BatHero_BatEnergyHit
-    clip: {fileID: 8300000, guid: 37f841f5031454e4e8b017ab2c98f339, type: 3}
   - typeInString: BatHero_ShurikiHit
     clip: {fileID: 8300000, guid: cc0bd6fbd7a72e142aa5248308befae8, type: 3}
+  - typeInString: BatHero_BatEnergyHit
+    clip: {fileID: 8300000, guid: 37f841f5031454e4e8b017ab2c98f339, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
