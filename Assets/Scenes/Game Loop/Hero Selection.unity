@@ -2131,6 +2131,14 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: e8b180517ac90e244856632d0a428e27, type: 3}
   - typeInString: AxeHero_UltimateThrow
     clip: {fileID: 8300000, guid: 55519262438543146aef3cb9a4e010af, type: 3}
+  - typeInString: BatHero_PunchHit
+    clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
+  - typeInString: BatHero_PunchHit
+    clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
+  - typeInString: BatHero_BatEnergyHit
+    clip: {fileID: 8300000, guid: 37f841f5031454e4e8b017ab2c98f339, type: 3}
+  - typeInString: BatHero_ShurikiHit
+    clip: {fileID: 8300000, guid: cc0bd6fbd7a72e142aa5248308befae8, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
@@ -4350,10 +4358,12 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 223a2c54815221b4b9c275241d941998, type: 3}
     - typeInString: BatHero_ThrowShuriki
       clip: {fileID: 8300000, guid: 30a083dda058b764588838d5534af594, type: 3}
-    - typeInString: BatHero_Fly
+    - typeInString: BatHero_BatTransform
       clip: {fileID: 8300000, guid: d28997a6445dd6340b99566a1bcad842, type: 3}
     - typeInString: BatHero_InstantKillStart
       clip: {fileID: 8300000, guid: 819f9d27041ecb8499f09a8174685464, type: 3}
+    - typeInString: BatHero_Dash
+      clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
   - source: {fileID: 981339384}
     audio:
     - typeInString: AxeHero_Attack
@@ -4368,6 +4378,8 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 98882212b3faa274f8b84ab0e7088829, type: 3}
     - typeInString: AxeHero_UltimateCatchSuccess
       clip: {fileID: 8300000, guid: eab68865a28a2fb418bf469880c27f11, type: 3}
+    - typeInString: AxeHero_Dash
+      clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
   - source: {fileID: 969774941}
     audio:
     - typeInString: CatHero_Claw
@@ -4378,6 +4390,8 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: a62488bd3b3adb54c8c698837066b548, type: 3}
     - typeInString: CatHero_LightingShield
       clip: {fileID: 8300000, guid: fac0fb6a06479e44bb24182feb6646c4, type: 3}
+    - typeInString: CatHero_Dash
+      clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
   - source: {fileID: 364014557}
     audio:
     - typeInString: PsychicHero_ShootSmallDagger
@@ -4396,6 +4410,8 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: b3449b82675bbf84888a37bad88dda8b, type: 3}
     - typeInString: PsychicHero_InstantKillStart
       clip: {fileID: 8300000, guid: 8420b5c56c7d65444950993093a38379, type: 3}
+    - typeInString: PsychicHero_Dash
+      clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
   - source: {fileID: 471400958}
     audio:
     - typeInString: SwordPrincess_NormalAttack
@@ -4408,6 +4424,8 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 2174e64aac8f9aa4196961b8b7361777, type: 3}
     - typeInString: SwordPrincess_SwordDrill
       clip: {fileID: 8300000, guid: 2856e220bac9856438735cf6c9ab233d, type: 3}
+    - typeInString: SwordPrincess_Dash
+      clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
   - source: {fileID: 1758985126}
     audio:
     - typeInString: Pointer_Move

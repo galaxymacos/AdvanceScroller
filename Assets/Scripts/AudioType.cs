@@ -32,6 +32,7 @@ public enum AudioType
 
     AxeHero_Jump,
     AxeHero_DoubleJump,
+    AxeHero_Run,
     AxeHero_Dash,
     AxeHero_Attack,
     AxeHero_AttackStrengthen,
@@ -40,6 +41,7 @@ public enum AudioType
     AxeHero_UltimateStart,
     AxeHero_UltimateCatchSuccess,
     AxeHero_UltimateThrow,
+    AxeHero_AxeHit,
 
     #endregion
 
@@ -47,14 +49,20 @@ public enum AudioType
 
     BatHero_Jump,
     BatHero_DoubleJump,
+    BatHero_Run,
     BatHero_Dash,
     BatHero_Punch,
     BatHero_ThrowShuriki,
     BatHero_BatEnergy,
-    BatHero_Fly,
+    BatHero_BatTransform,
+    BatHero_HumanTransform,
     BatHero_InstantKillStart,
     BatHero_InstantKillHit,
     BatHero_InstantKillExplode,
+    BatHero_PunchHit,
+    BatHero_ShurikiHit,
+    BatHero_BatEnergyHit,
+
 
     #endregion
 
@@ -62,6 +70,7 @@ public enum AudioType
 
     CatHero_Jump,
     CatHero_DoubleJump,
+    CatHero_Run,
     CatHero_Dash,
     CatHero_Claw,
     CatHero_Claw2,
@@ -79,6 +88,7 @@ public enum AudioType
     
     PsychicHero_Jump,
     PsychicHero_DoubleJump,
+    PsychicHero_Run,
     PsychicHero_Dash,
     PsychicHero_ShootSmallDagger,
     PsychicHero_ChargeSound,
@@ -102,6 +112,7 @@ public enum AudioType
     SwordPrincess_Dash,
     SwordPrincess_Jump,
     SwordPrincess_DoubleJump,
+    SwordPrincess_Run,
     SwordPrincess_NormalAttack,
     SwordPrincess_NormalAttackHit,
     SwordPrincess_ShootCross,

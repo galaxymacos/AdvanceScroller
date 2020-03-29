@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: 
+  soundInString: CatHero_Dash
   canControlHorizontalMovement: 0
   canFloatInAir: 0
   characterAnimator: {fileID: 0}

@@ -22,4 +22,4 @@ MonoBehaviour:
   launcherHorizontalForce: 5
   launcherVerticalForce: 5
   attackEffects: []
-  hitSound: 
+  hitSound: BatHero_BatEnergyHit
