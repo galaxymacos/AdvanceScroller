@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 20638944200515048}
   - component: {fileID: 20638944200515051}
   - component: {fileID: 20638944200515050}
-  m_Layer: 14
+  m_Layer: 0
   m_Name: UltimatePotion
   m_TagString: Untagged
   m_Icon: {fileID: 0}

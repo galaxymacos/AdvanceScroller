@@ -607,7 +607,7 @@ MonoBehaviour:
     m_Bits: 2048
   whatIsLadder:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 262144
   isOnLadderPosition: 0
   ceilingCheck: {fileID: 8259688905376702849}
   isHitCeiling: 0
@@ -620,7 +620,6 @@ MonoBehaviour:
   maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
-  isDead: 0
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:
@@ -968,6 +967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c62cd3071280e34a97eccfffda45e42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightningSwordSpeed: 40
   lightningSwordSpawnPosition: {fileID: 2423811552216721809}
   lightningSwordPrefab: {fileID: 8574430990985921708, guid: 4abada691922a1f4bbf1f7e97b4ac1e6,
     type: 3}

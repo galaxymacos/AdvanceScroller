@@ -432,7 +432,7 @@ MonoBehaviour:
     m_Bits: 2048
   whatIsLadder:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 262144
   isOnLadderPosition: 0
   ceilingCheck: {fileID: 3313232578001002742}
   isHitCeiling: 0
@@ -445,7 +445,6 @@ MonoBehaviour:
   maxJumpTime: 2
   maxDashTimeInAir: 1
   dashTimeCounter: 0
-  isDead: 0
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:

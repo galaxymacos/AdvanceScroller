@@ -3,6 +3,7 @@
 public class BuffedAttackProcessor : MonoBehaviour
 {
     private PlayerCharacter playerCharacter;
+    [SerializeField] private float lightningSwordSpeed = 40f;
 
     private void Awake()
     {
@@ -17,6 +18,6 @@ public class BuffedAttackProcessor : MonoBehaviour
         print("Shoot lightning sword");
         var lightningSword = Instantiate(lightningSwordPrefab, lightningSwordSpawnPosition.position, Quaternion.identity);
         var newProjectileComponent = lightningSword.GetComponent<NewProjectile>();
-        newProjectileComponent.Setup(playerCharacter.gameObject,20);
+        newProjectileComponent.Setup(playerCharacter.gameObject,lightningSwordSpeed);
     }
 }

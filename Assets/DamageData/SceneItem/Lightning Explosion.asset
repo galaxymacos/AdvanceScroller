@@ -22,4 +22,4 @@ MonoBehaviour:
   launcherHorizontalForce: 6
   launcherVerticalForce: 6
   attackEffects: []
-  hitSound: 0
+  hitSound: 

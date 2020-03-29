@@ -858,7 +858,7 @@ MonoBehaviour:
     m_Bits: 2048
   whatIsLadder:
     serializedVersion: 2
-    m_Bits: 16384
+    m_Bits: 262144
   isOnLadderPosition: 0
   ceilingCheck: {fileID: 407726982727766094}
   isHitCeiling: 0
