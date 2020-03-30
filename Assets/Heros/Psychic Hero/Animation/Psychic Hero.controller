@@ -1852,6 +1852,7 @@ MonoBehaviour:
   stateCanTransformTo: []
   stateCanForceTransformTo:
   - dash
+  - skill4
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0

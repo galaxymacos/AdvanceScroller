@@ -33,7 +33,7 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
         {
             if (!string.IsNullOrEmpty(damageData.hitSound))
             {
-                AudioController.instance.PlayAudio(AudioTypeConverter.ToAudioType(damageData.hitSound));
+                InfiniteSoundPlayer.instance.PlayAudio(AudioTypeConverter.ToAudioType(damageData.hitSound));
             }
             onAttackSucceed?.Invoke();
             

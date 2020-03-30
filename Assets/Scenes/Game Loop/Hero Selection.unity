@@ -2135,7 +2135,7 @@ MonoBehaviour:
   - typeInString: AxeHero_UltimateThrow
     clip: {fileID: 8300000, guid: 55519262438543146aef3cb9a4e010af, type: 3}
   - typeInString: BatHero_PunchHit
-    clip: {fileID: 8300000, guid: 32ae155bfeff35840a7a819c9c51cd07, type: 3}
+    clip: {fileID: 8300000, guid: fd61a969332235b4e9a2d8fb0abcb586, type: 3}
   - typeInString: BatHero_ShurikiHit
     clip: {fileID: 8300000, guid: cc0bd6fbd7a72e142aa5248308befae8, type: 3}
   - typeInString: BatHero_BatEnergyHit

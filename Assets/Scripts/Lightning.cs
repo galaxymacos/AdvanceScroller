@@ -12,7 +12,8 @@ public class Lightning : MonoBehaviour
  
     private void Start()
     {
-        InfiniteSoundPlayer.instance.PlayAudio(AudioType.Lightning);
+        string lightningSound = "Lightning";
+        InfiniteSoundPlayer.instance.PlayAudio(lightningSound.GetAudioType());
     }
     
     // Animation event

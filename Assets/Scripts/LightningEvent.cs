@@ -57,7 +57,9 @@ public class LightningEvent : RandomEvent
 
     private void ThunderSound()
     {
-        InfiniteSoundPlayer.instance.PlayAudio(AudioType.Thunder);
+        string thunderSoundInString = "Thunder";
+        AudioType audioType = thunderSoundInString.GetAudioType();
+        InfiniteSoundPlayer.instance.PlayAudio(audioType);
     }
     
 }
