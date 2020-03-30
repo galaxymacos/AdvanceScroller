@@ -55,9 +55,8 @@ public class PlayerCharacter : MonoBehaviour
     public List<Collider2D> collidersDead;
     
     public SingleAttackComponent impactWave;
-    [Space(10)]
 
-    public Action onFacingDirectionChanged;
+    public event Action onFacingDirectionChanged;
     public Action onPlayerStartMove;
     public Action onPlayerStartDoubleJump;
     public Action onPlayerStartJump;

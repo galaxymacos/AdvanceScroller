@@ -10,6 +10,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
     [SerializeField] private bool canControlHorizontalMovement;
     [SerializeField] private bool canFloatInAir;
     protected bool isPaused;
+    private Vector3 velocityBeforePause;
     
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
@@ -46,6 +47,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (isPaused) return;
+        
         string animationName = GenerateAnimationByInput();
      
         if (animationName != "")
@@ -296,13 +299,15 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
         characterAnimator.SetTrigger("wallslide");
     }
 
-    public void Pause()
+    public virtual void Pause()
     {
         isPaused = true;
+        velocityBeforePause = rb.velocity;
     }
 
-    public void UnPause()
+    public virtual void UnPause()
     {
         isPaused = false;
+        rb.velocity = velocityBeforePause;
     }
 }

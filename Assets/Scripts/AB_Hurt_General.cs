@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class AB_Hurt_General : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
     private AudioType dashAttemptSucceeded;
     private AudioType dashAttemptFailed;
     private Knockable knockable;
@@ -15,7 +14,6 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        rb = animator.GetComponent<Rigidbody2D>();
         knockable = animator.GetComponent<Knockable>();
         rb.velocity = knockable.knockDirection;
         dashStillAlowedTimeCounter = dashStillAllowedLimit;
@@ -46,4 +44,5 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
         
     }
 
+    
 }

@@ -462,6 +462,7 @@
         <e p="SnowBallSetuper.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />
         <e p="Sprites" t="Include">
+          <e p="GhostCapeBuff.cs" t="Include" />
           <e p="HealthBarShakeComponent.cs" t="Include" />
           <e p="HealthDecreaseComponent.cs" t="Include" />
           <e p="HealthPotion.cs" t="Include" />
@@ -469,7 +470,9 @@
           <e p="IAttackEffectProcessor.cs" t="Include" />
           <e p="InjuryMaterialController.cs" t="Include" />
           <e p="InjuryShaderComponent.cs" t="Include" />
+          <e p="IPlayerBuff.cs" t="Include" />
           <e p="OnePlayerTest.cs" t="Include" />
+          <e p="PlayerBuffItem.cs" t="Include" />
         </e>
         <e p="TennisBallBlinkingAndDisappear.cs" t="Include" />
         <e p="TennisBallDamageReceiver.cs" t="Include" />

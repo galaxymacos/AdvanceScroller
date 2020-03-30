@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PushComponent : MonoBehaviour
+public class PushComponent : MonoBehaviour, IPauseable
 {
     private PlayerCharacter playerCharacter;
     public Vector2 pushDirection;
@@ -22,6 +22,9 @@ public class PushComponent : MonoBehaviour
     private bool wasOnGrounded;
     public LayerMask whatIsWall;
     private bool wasHitCeiling;
+
+    public bool isPausing;
+    public Vector2 velocityBeforePausing;
 
     private void Awake()
     {
@@ -118,6 +121,10 @@ public class PushComponent : MonoBehaviour
 
     private void Update()
     {
+        if (isPausing)
+        {
+            return;
+        }
         bool wasNextToWallRight = isNextToWallRight;
         isNextToWallRight = Physics2D.OverlapCircle(wallRightCheck.position, checkRadius, whatIsWall);
         if (wasNextToWallRight != isNextToWallRight && isNextToWallRight)
@@ -143,5 +150,14 @@ public class PushComponent : MonoBehaviour
             onHitCeiling?.Invoke(playerCharacter.ceilingCheck.position);
         }
         wasHitCeiling = playerCharacter.isHitCeiling;
+    }
+
+    public void Pause()
+    {
+        
+    }
+
+    public void UnPause()
+    {
     }
 }

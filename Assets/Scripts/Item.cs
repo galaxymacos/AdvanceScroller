@@ -1,4 +1,6 @@
+using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 
 public abstract class Item : MonoBehaviour
@@ -9,6 +11,13 @@ public abstract class Item : MonoBehaviour
     protected float disappearTime = 0.5f;
     protected bool hasBeenPickedUp;
     private PlayerCharacter holder;
+    
+
+    private void Start()
+    {
+        GetComponent<Rigidbody2D>().AddTorque(50);
+        GetComponent<Rigidbody2D>().AddForce(new Vector3(0,300,0));
+    }
 
     public void Pickup(PlayerCharacter player)
     {
@@ -17,6 +26,8 @@ public abstract class Item : MonoBehaviour
         holder = player;
         ChangeToPickupLocation(player);
         GetComponent<Rigidbody2D>().isKinematic = true;
+        GetComponent<Rigidbody2D>().velocity = Vector3.zero;
+        GetComponent<Rigidbody2D>().freezeRotation = true;
 
         player.onPlayerBeingHurted += Drop;
         player.onPlayerBeingPushed += Drop;
@@ -29,6 +40,7 @@ public abstract class Item : MonoBehaviour
     {
         hasBeenPickedUp = false;
         GetComponent<Rigidbody2D>().isKinematic = false;
+        GetComponent<Rigidbody2D>().freezeRotation = false;
         StopAllCoroutines();
     }
 
@@ -36,9 +48,9 @@ public abstract class Item : MonoBehaviour
     {
         yield return new WaitForSeconds(disappearTime);
         onBeingPickup(player);
-        player.onPlayerBeingHurted += Drop;
-        player.onPlayerBeingPushed += Drop;
-        player.onPlayerBeingStunned += Drop;
+        player.onPlayerBeingHurted -= Drop;
+        player.onPlayerBeingPushed -= Drop;
+        player.onPlayerBeingStunned -= Drop;
         Destroy(gameObject);
     }
     

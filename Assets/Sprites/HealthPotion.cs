@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class HealthPotion : Item
@@ -13,12 +14,4 @@ public class HealthPotion : Item
 
     
 
-}
-
-public class ThunderPotion : Item
-{
-    public override void onBeingPickup(PlayerCharacter player)
-    {
-        
-    }
 }
