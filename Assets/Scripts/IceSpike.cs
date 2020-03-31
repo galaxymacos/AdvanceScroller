@@ -5,7 +5,7 @@ public class IceSpike : MonoBehaviour, IPauseable
 {
     [SerializeField] private float speed;
     [SerializeField] private DamageData DamageData;
-    [SerializeField] private Transform IceSpikeExplosion;
+    [SerializeField] private ParticleSystem IceSpikeExplosion;
 
     private float speedBeforePause;
 
@@ -33,8 +33,11 @@ public class IceSpike : MonoBehaviour, IPauseable
             Destroy(gameObject);
             Vector3 vector3 = new Vector3(0f, 1f, 0f);
             IceSpikeExplosion = Instantiate(IceSpikeExplosion, 
-                other.transform.position + vector3, Quaternion.identity); 
+                other.transform.position + vector3, Quaternion.identity);
+            Destroy(IceSpikeExplosion , 2.0f);
             
+
+
         }
     }
 

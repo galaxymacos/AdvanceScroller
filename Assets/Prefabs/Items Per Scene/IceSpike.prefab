@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 12
   DamageData: {fileID: 11400000, guid: 4d61b06b4a90fff438116178204dee9f, type: 2}
-  IceSpikeExplosion: {fileID: 1797723371261446165, guid: 1349723cfe139294c89270b309cfe988,
+  IceSpikeExplosion: {fileID: 1797723371261446162, guid: 1349723cfe139294c89270b309cfe988,
     type: 3}
 --- !u!114 &-6311842081053559217
 MonoBehaviour:

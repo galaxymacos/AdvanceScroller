@@ -32,6 +32,7 @@ public class iceSpikeGenerator : MonoBehaviour
         {
             Transform newIceSpike =  Instantiate(iceSpike, spikePositions[Rn].transform.position,
                 spikePositions[Rn].transform.rotation);
+            DestroyObject(newIceSpike);
             TimesControl();
         }
  
