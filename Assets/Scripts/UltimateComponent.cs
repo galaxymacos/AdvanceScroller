@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -48,7 +49,10 @@ public class UltimateComponent : MonoBehaviour
     
     private void Use()
     {
-        owner.GetComponent<IPauseable>().UnPause();
+        foreach (var iPausable in owner.GetComponents<IPauseable>())
+        {
+            iPausable.UnPause();
+        }
     }
 
     private IEnumerator ShowOffCoroutine()
@@ -59,11 +63,12 @@ public class UltimateComponent : MonoBehaviour
 
     private void PauseAll()
     {
-        var pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
+        IEnumerable<IPauseable> pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
         foreach (IPauseable pauseable in pauseables)
         {
             pauseable.Pause();
         }
+
     }
 
     private PlayerCharacter GetOwner()

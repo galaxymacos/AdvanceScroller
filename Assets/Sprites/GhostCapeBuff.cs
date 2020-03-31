@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
@@ -18,13 +19,15 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
         playerToBuff = player;
         playerMat = player.GetComponent<SpriteRenderer>().material;
         playerToBuff.onFacingDirectionChanged += ActivateGhosting;
-        
+        playerToBuff.GetComponent<CharacterDamageReceiver>().invincibleConditions.Add(isGhosting);
 
     }
 
     private void OnDestroy()
     {
         playerToBuff.onFacingDirectionChanged -= ActivateGhosting;
+        playerToBuff.GetComponent<CharacterDamageReceiver>().invincibleConditions.Remove(isGhosting);
+
 
     }
 
@@ -33,10 +36,16 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
         if (!canGhost) return;
         invincibleIntervalCounter = invincibleInterval;
         invincibleDurationCounter = invincibleDuration;
+        onGhostingStart?.Invoke();
         
     }
 
-    private bool isGhosting => invincibleDurationCounter > 0;
+    public event Action onGhostingStart;
+    public event Action onGhostingEnd;
+    
+    
+
+    private bool isGhosting() => invincibleDurationCounter > 0;
     private bool canGhost => invincibleIntervalCounter <= 0;
 
     private void Update()
@@ -61,14 +70,14 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
 
         if (invincibleDurationCounter > 0)
         {
-            durationCounter -= Time.deltaTime;
-            if (durationCounter <= 0)
+            invincibleDurationCounter -= Time.deltaTime;
+            if (invincibleDurationCounter <= 0)
             {
-                // player loses ghosting effect
+                onGhostingEnd?.Invoke();
             }
         }
 
-        if (isGhosting)
+        if (isGhosting())
         {
             print("is ghosting");
             playerMat.SetFloat("_Alpha", 0.5f);

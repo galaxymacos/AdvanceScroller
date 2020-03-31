@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(PlayerCharacter))]
@@ -13,23 +14,44 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
     private PushComponent pushComponent;
 
     public Action onPlayerTakeDamage;
+    public event Action onTakeDamageWhenInvincible;
 
+    public List<Func<bool>> invincibleConditions;
+
+    public bool isInvincible => invincibleConditions.Any(condition => condition());
+    public event Action fe;
     private void Awake()
     {
+        
         playerCharacter = GetComponent<PlayerCharacter>();
         stunComponent = GetComponent<StunComponent>();
         characterHealthComponent = GetComponent<CharacterHealthComponent>();
         knockableComponent = GetComponent<Knockable>();
         pushComponent = GetComponent<PushComponent>();
+        invincibleConditions = new List<Func<bool>>();
+        invincibleConditions.Add(DashInvincibleCondition);
     }
 
-    public void Analyze(DamageData damageData, Transform damageOwner)
+    private bool DashInvincibleCondition()
     {
         if (playerCharacter.dashInvincibleTimeCounter > 0)
         {
             playerCharacter.onPlayerDodgeSucceed?.Invoke();
+            return true;
+        }
+
+        return false;
+
+    }
+
+    public void Analyze(DamageData damageData, Transform damageOwner)
+    {
+        if (isInvincible)
+        {
+            onTakeDamageWhenInvincible?.Invoke();
             return;
         }
+        
         
         foreach (var aep in GetComponentsInChildren<IAttackEffectProcessor>())
         {

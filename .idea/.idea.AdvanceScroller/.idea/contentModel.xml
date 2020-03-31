@@ -286,6 +286,7 @@
           <e p="FetchMapData.cs" t="Include" />
           <e p="FightData.cs" t="Include" />
           <e p="FlipComponent.cs" t="Include" />
+          <e p="FloatingTextSpawner.cs" t="Include" />
           <e p="ForceCancelShaderControl.cs" t="Include" />
           <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
           <e p="ForceShadowShaderComponent.cs" t="Include" />

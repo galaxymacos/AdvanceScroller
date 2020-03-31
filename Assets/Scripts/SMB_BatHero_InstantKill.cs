@@ -14,6 +14,8 @@ public class SMB_BatHero_InstantKill : CharacterStateMachineBehavior
         rb.gravityScale = 0;
     }
     
+    
+
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

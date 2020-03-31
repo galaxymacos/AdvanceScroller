@@ -13,6 +13,7 @@ public class AB_Climb_General : CharacterStateMachineBehavior
         playerCharacter.onPlayerExitLadder += TransferToIdleState;
         playerCharacter.onPlayerGrounded += TransferToIdleState;
         playerCharacter.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
         playerInput.horizontalAxis = 0;
     }
 
@@ -36,7 +37,6 @@ public class AB_Climb_General : CharacterStateMachineBehavior
             animator.speed = 0;
         }
 
-        playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 0;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

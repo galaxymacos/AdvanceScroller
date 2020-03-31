@@ -27,6 +27,20 @@ public class PlayerParticleSpawnerProxy : MonoBehaviour
         playerCharacter.onPlayerStopWallSlide += StopSpawningWallSlideDust;
     }
 
+    private void OnDestroy()
+    {
+        playerCharacter.onFacingDirectionChanged -= SpawnGroundDustGroundLimited;
+        playerCharacter.onPlayerStartDash -= SpawnGroundDust;
+        playerCharacter.onPlayerStartMove -= SpawnGroundDustGroundLimited;
+        playerCharacter.onPlayerStartJump -= SpawnGroundDustTwoWays;
+        playerCharacter.onPlayerStartDoubleJump -= SpawnGroundDustTwoWays;
+        playerCharacter.onPlayerGrounded -= SpawnGroundDustTwoWays;
+        playerCharacter.onPlayerDodgeSucceed -= () => ShadowFactory.instance.CreatedissolveShadow(playerCharacter);
+
+        playerCharacter.onPlayerStartWallSlide -= StartSpawningWallSlideDust;
+        playerCharacter.onPlayerStopWallSlide -= StopSpawningWallSlideDust;
+    }
+
     private void Update()
     {
         if (spawnWallDust)
