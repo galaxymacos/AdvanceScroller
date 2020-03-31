@@ -65,6 +65,8 @@
         <e p="ChannelErrorPlacer.cs" t="Include" />
         <e p="ChannelEventSystem.cs" t="Include" />
         <e p="CloudFactory.cs" t="Include" />
+        <e p="ComboGauge.cs" t="Include" />
+        <e p="ComboGaugeUI.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DemiLib" t="Include">
             <e p="Core" t="Include">

@@ -15,6 +15,8 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
     [SerializeField] protected DamageData damageData;
     [SerializeField] protected DamageData finalDamageData;
     
+    public event Action onContinueAttackSuccess;
+
     [SerializeField] protected PlayerCharacter owner;
     private float runTime;
     private float lastTickTime;
@@ -103,7 +105,12 @@ public class ContinuousAttack : CollisionDetector, IAttackComponent
         foreach (GameObject target in ObjectsInCollision)
         {
             if (target == null || target == owner.gameObject) continue;
+            
             var damageReceiver = target.GetComponent<IDamageReceiver>();
+            if (damageReceiver != null)
+            {
+                onContinueAttackSuccess?.Invoke();
+            }
             damageReceiver?.Analyze(damageData, transform.root);
 
         }

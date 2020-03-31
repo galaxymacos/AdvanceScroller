@@ -762,6 +762,7 @@ GameObject:
   - component: {fileID: 1734809702679375277}
   - component: {fileID: 2450774587293041543}
   - component: {fileID: 3450194129707769929}
+  - component: {fileID: 8332927406458193317}
   m_Layer: 0
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -1082,6 +1083,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8332927406458193317}
+        m_MethodName: BreakComboBecauseOfTakingDamage
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5286924652371901397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1233,6 +1248,26 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5116346, y: 0.72}
   m_EdgeRadius: 0
+--- !u!114 &8332927406458193317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b3b5dcca47d8c439d3a14be1c983b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentComboNum: 0
+  onComboAdded:
+    m_PersistentCalls:
+      m_Calls: []
+  onComboBreak:
+    m_PersistentCalls:
+      m_Calls: []
+  timeBeforeComboBreak: 5
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ using UnityEngine;
 public class InstantKillContinuousAttack : ContinuousAttack
 {
     [SerializeField] private SingleAttackComponent SingleAttackComponent;
-    
-    
+
+    public event Action onContinueAttackSuccess;
     public override void OneLastStrike()
     {
         print("One last strike");
@@ -36,7 +36,7 @@ public class InstantKillContinuousAttack : ContinuousAttack
             var damageReceiver = target.GetComponent<IDamageReceiver>();
             if (damageReceiver != null)
             {
-                print("Instant kill tick");
+                onContinueAttackSuccess?.Invoke();
                 damageReceiver.Analyze(damageData, transform.root);
             }
             

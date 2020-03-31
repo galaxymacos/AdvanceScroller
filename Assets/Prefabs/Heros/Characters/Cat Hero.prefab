@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 7241189913646409413}
   - component: {fileID: 1718323873806538583}
   - component: {fileID: 677368695594173681}
+  - component: {fileID: -6555880040638625304}
   m_Layer: 0
   m_Name: Cat Hero
   m_TagString: Untagged
@@ -397,6 +398,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5724016293209041878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -608,6 +612,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57, y: 0.72}
   m_EdgeRadius: 0
+--- !u!114 &-6555880040638625304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965933177036805574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b3b5dcca47d8c439d3a14be1c983b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentComboNum: 0
+  timeBeforeComboBreak: 5
 --- !u!1 &965933177369232322
 GameObject:
   m_ObjectHideFlags: 0
@@ -784,6 +802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: 2d284c955bf2d4e43b6ff237030a4d1d, type: 2}
   objectsHasProcessed: []
 --- !u!1 &2125398102848957560
@@ -1085,6 +1104,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: c575369c13c213d4ab6f0b80d5787142, type: 2}
   objectsHasProcessed: []
 --- !u!1 &5532287196487242721
@@ -1157,6 +1177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: fd19ae87e3209aa419591ca2313c0230, type: 2}
   objectsHasProcessed: []
 --- !u!1 &6185875388208058085
@@ -1333,6 +1354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: c97d7a70541bdc34e9411b775202b0d9, type: 2}
   objectsHasProcessed: []
 --- !u!1 &8429329528734628452

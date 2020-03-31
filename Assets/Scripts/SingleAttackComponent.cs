@@ -6,11 +6,17 @@ public class SingleAttackComponent : CollisionDetector, IAttackComponent
 {
     // private bool hasDealDamaged;
     // private bool isRunning;
+    public PlayerCharacter owner;
     public DamageData damageData;
 
     public event Action onAttackSucceed;
     public List<GameObject> objectsHasProcessed = new List<GameObject>();
+    
 
+    private void Awake()
+    {
+        owner = GetComponentInParent<PlayerCharacter>();
+    }
 
     private bool DealDamageToSingleTarget(GameObject gameObjectCollided)
     {

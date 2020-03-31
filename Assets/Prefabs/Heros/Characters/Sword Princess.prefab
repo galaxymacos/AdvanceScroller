@@ -60,6 +60,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: 6e799ec1cb837e64795e7fa8f5ab4cf3, type: 2}
   objectsHasProcessed: []
 --- !u!1 &1094605603
@@ -432,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: 2d284c955bf2d4e43b6ff237030a4d1d, type: 2}
   objectsHasProcessed: []
 --- !u!1 &3658480543698845595
@@ -511,6 +513,7 @@ GameObject:
   - component: {fileID: 801415136011525211}
   - component: {fileID: 614550979399928041}
   - component: {fileID: 1145254932104757342}
+  - component: {fileID: 2138507576583483554}
   m_Layer: 0
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -860,6 +863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &7225560470583709286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1044,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.52237964, y: 0.72}
   m_EdgeRadius: 0
+--- !u!114 &2138507576583483554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b3b5dcca47d8c439d3a14be1c983b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentComboNum: 0
+  timeBeforeComboBreak: 5
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0

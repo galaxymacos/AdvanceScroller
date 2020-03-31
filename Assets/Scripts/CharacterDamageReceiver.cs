@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(PlayerCharacter))]
 public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
@@ -14,12 +15,12 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
     private PushComponent pushComponent;
 
     public Action onPlayerTakeDamage;
+    public UnityEvent onTakeDamage;
     public event Action onTakeDamageWhenInvincible;
 
     public List<Func<bool>> invincibleConditions;
 
     public bool isInvincible => invincibleConditions.Any(condition => condition());
-    public event Action fe;
     private void Awake()
     {
         
@@ -98,7 +99,11 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
             knockableComponent.KnockUp(damageData.launcherHorizontalForce, damageData.launcherVerticalForce, damageOwner);
         }
         
+        damageOwner.GetComponent<ComboGauge>()?.AddComboNum();
+        damageOwner.GetComponent<Projectile>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
+        damageOwner.GetComponent<NewProjectileDamageComponent>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
         onPlayerTakeDamage?.Invoke();
+        onTakeDamage?.Invoke();
     }
     
     
