@@ -207,6 +207,7 @@ Transform:
   - {fileID: 6402863349760954494}
   - {fileID: 2577492763309506682}
   - {fileID: 3313232578001002742}
+  - {fileID: 2292188696543635255}
   m_Father: {fileID: 4758164498511339549}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -296,7 +297,6 @@ GameObject:
   - component: {fileID: 4758164498511339797}
   - component: {fileID: 1340760059}
   - component: {fileID: 4556048856342974423}
-  - component: {fileID: 5623847722637158371}
   - component: {fileID: 3904847156095916348}
   - component: {fileID: 2686227338673611719}
   - component: {fileID: 3312172375856598659}
@@ -306,6 +306,7 @@ GameObject:
   - component: {fileID: 3274091039006355679}
   - component: {fileID: 4759906915498089044}
   - component: {fileID: 7604878484297629234}
+  - component: {fileID: 565024863171573216}
   m_Layer: 0
   m_Name: Axe Hero
   m_TagString: Untagged
@@ -414,7 +415,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerInput: {fileID: 0}
-  groundCheck: {fileID: 4758164499162478574}
+  groundCheckLeft: {fileID: 4758164499162478574}
+  groundCheckRight: {fileID: 2292188696543635255}
   isGrounded: 0
   isGroundedOverride: 0
   overrideGrounded: 0
@@ -448,7 +450,7 @@ MonoBehaviour:
   dashInvincibleTime: 0.25
   dashInvincibleTimeCounter: 0
   collidersAlive:
-  - {fileID: 5623847722637158371}
+  - {fileID: 565024863171573216}
   collidersDead:
   - {fileID: 8128414368569400566}
   - {fileID: 8128414368569400561}
@@ -720,6 +722,8 @@ MonoBehaviour:
   whatIsWall:
     serializedVersion: 2
     m_Bits: 2048
+  isPausing: 0
+  velocityBeforePausing: {x: 0, y: 0}
 --- !u!114 &4556048856342974423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,22 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8d61d25e5a7a1645b83724a2b12fbcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!70 &5623847722637158371
-CapsuleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4758164498511340011}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.42, y: 0.71}
-  m_Direction: 0
 --- !u!114 &3904847156095916348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -868,6 +856,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42c13d5279fb4cdbbdce395ec19afdaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &565024863171573216
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4758164498511340011}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.03, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.57, y: 0.72}
+  m_EdgeRadius: 0
 --- !u!1 &4758164498732494737
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4758164499162478574}
   m_Layer: 0
-  m_Name: GroundCheck
+  m_Name: Ground Check Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -935,7 +949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4758164499162478575}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.359, z: 0}
+  m_LocalPosition: {x: -0.335, y: -0.359, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966109100616860237}
@@ -1332,6 +1346,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageData: {fileID: 11400000, guid: 2d284c955bf2d4e43b6ff237030a4d1d, type: 2}
   objectsHasProcessed: []
+--- !u!1 &8938369776191673445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2292188696543635255}
+  m_Layer: 0
+  m_Name: Ground Check Right
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2292188696543635255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938369776191673445}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.267, y: -0.359, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 966109100616860237}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9112555271806655845
 GameObject:
   m_ObjectHideFlags: 0

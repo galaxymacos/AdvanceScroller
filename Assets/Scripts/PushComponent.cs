@@ -141,7 +141,7 @@ public class PushComponent : MonoBehaviour, IPauseable
 
         if (playerCharacter.IsGrounded && wasOnGrounded == false)
         {
-            onHitGround?.Invoke(playerCharacter.groundCheck.position);
+            onHitGround?.Invoke((playerCharacter.groundCheckLeft.position+playerCharacter.groundCheckRight.position)/2);
         }
         wasOnGrounded = playerCharacter.IsGrounded;
 

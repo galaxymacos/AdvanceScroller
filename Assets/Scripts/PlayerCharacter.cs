@@ -10,7 +10,8 @@ public class PlayerCharacter : MonoBehaviour
     private float checkRadius = 0.03f;
 
     // Ground check
-    public Transform groundCheck;
+    public Transform groundCheckLeft;
+    public Transform groundCheckRight;
     
     public bool isGrounded;
 
@@ -178,7 +179,9 @@ public class PlayerCharacter : MonoBehaviour
         UpdateMovement();
 
         bool wasGrounded = isGrounded;
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, checkRadius, whatIsGround);
+        bool isGroundedLeft = Physics2D.OverlapCircle(groundCheckLeft.position, checkRadius, whatIsGround);
+        bool isGroundedRight = Physics2D.OverlapCircle(groundCheckRight.position, checkRadius, whatIsGround);
+        isGrounded = isGroundedLeft || isGroundedRight;
         if (wasGrounded != isGrounded && isGrounded)
         {
             onPlayerGrounded?.Invoke();

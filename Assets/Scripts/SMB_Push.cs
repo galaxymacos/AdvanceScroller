@@ -32,7 +32,7 @@ public class SMB_Push : CharacterStateMachineBehavior
 
         if (playerCharacter.isGrounded)
         {
-            BounceFromGround(playerCharacter.groundCheck.position);
+            BounceFromGround((playerCharacter.groundCheckLeft.position+playerCharacter.groundCheckRight.position)/2);
         }
 
     }
