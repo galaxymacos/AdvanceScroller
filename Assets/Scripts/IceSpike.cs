@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
+
 public class IceSpike : MonoBehaviour, IPauseable
 {
     [SerializeField] private float speed;
-    //[SerializeField] private DamageData DamageData;
+    [SerializeField] private DamageData DamageData;
+    [SerializeField] private Transform IceSpikeExplosion;
+
     private float speedBeforePause;
 
     private void Awake()
@@ -20,16 +23,21 @@ public class IceSpike : MonoBehaviour, IPauseable
         }
     }
 
-    //private void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    var damageReceiver = other.GetComponent<DamageReceiver>();
-    //    if (damageReceiver != null)
-    //    {
-    //        damageReceiver.Analyze(DamageData, transform);
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        var damageReceiver = other.GetComponent<IDamageReceiver>();
 
-    //    }
-    //}
-    
+        if (damageReceiver != null)
+        {
+            damageReceiver.Analyze(DamageData, transform);
+            Destroy(gameObject);
+            Vector3 vector3 = new Vector3(0f, 1f, 0f);
+            IceSpikeExplosion = Instantiate(IceSpikeExplosion, 
+                other.transform.position + vector3, Quaternion.identity); 
+            
+        }
+    }
+
     public void Pause()
     {
         speed = 0;

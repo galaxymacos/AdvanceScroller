@@ -37,6 +37,7 @@ public class Spike : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         var damageReceiver = other.GetComponent<IDamageReceiver>();
+  
         if (damageReceiver != null)
         {
             if (!playersTakeDamage.ContainsKey(damageReceiver))

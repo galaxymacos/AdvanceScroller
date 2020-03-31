@@ -1512,6 +1512,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 4d61b06b4a90fff438116178204dee9f,
         type: 2}
+    - target: {fileID: 2901502614120776090, guid: d621f52419d919845b41830f80adad81,
+        type: 3}
+      propertyPath: timeCircleForSpike
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2901502614404403469, guid: d621f52419d919845b41830f80adad81,
         type: 3}
       propertyPath: m_Name
