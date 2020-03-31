@@ -139,6 +139,7 @@
         <e p="GhostAnimationMessager.cs" t="Include" />
         <e p="GhostAttackCounter.cs" t="Include" />
         <e p="GhostDamageReceiver.cs" t="Include" />
+        <e p="GhostDieBehaviour.cs" t="Include" />
         <e p="GhostEventSystem.cs" t="Include" />
         <e p="GhostFacingComponent.cs" t="Include" />
         <e p="GhostHealthComponent.cs" t="Include" />
@@ -188,6 +189,7 @@
           </e>
         </e>
         <e p="PlayerInputActions.cs" t="Include" />
+        <e p="ResetByVelocity.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -462,6 +464,7 @@
         <e p="SnowBallResetComponent.cs" t="Include" />
         <e p="SnowBallSetuper.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />
+        <e p="SpawnObjectOnTrigger.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="GhostCapeBuff.cs" t="Include" />
           <e p="HealthBarShakeComponent.cs" t="Include" />

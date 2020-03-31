@@ -2,11 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GhostEventSystem : MonoBehaviour
 {
     public event Action<PlayerCharacter> onPlayerFound;
-    public event Action onGhostDie;
+    public UnityEvent onGhostDie;
     public event Action<DamageData> onGhostTakeDamage;
 
     public void FindPlayer(PlayerCharacter playerCharacter)
@@ -23,4 +24,5 @@ public class GhostEventSystem : MonoBehaviour
     {
         onGhostTakeDamage?.Invoke(damageData);
     }
+
 }

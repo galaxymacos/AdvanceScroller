@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerDodgingEventRegister : MonoBehaviour
 {
-
+    private float dodgingBulletTime = 0.1f;
     private void Awake()
     {
         PlayerCharacterSpawner.onPlayerSpawnFinished += ActivateDodgingBulletTime;
@@ -17,7 +17,7 @@ public class PlayerDodgingEventRegister : MonoBehaviour
         PlayerCharacter[] players = FindObjectsOfType<PlayerCharacter>();
         foreach (PlayerCharacter player in players)
         {
-            player.onPlayerDodgeSucceed += ()=>BulletTimeManager.instance.Register(0.3f);   
+            player.onPlayerDodgeSucceed += ()=>BulletTimeManager.instance.Register(dodgingBulletTime);   
         }
         
     }

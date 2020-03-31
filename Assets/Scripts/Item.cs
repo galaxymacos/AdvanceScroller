@@ -11,7 +11,8 @@ public abstract class Item : MonoBehaviour
     protected float disappearTime = 0.5f;
     protected bool hasBeenPickedUp;
     private PlayerCharacter holder;
-    
+
+    public bool canBePickedUp;
 
     private void Start()
     {
@@ -34,6 +35,11 @@ public abstract class Item : MonoBehaviour
         player.onPlayerBeingStunned += Drop;
         
         StartCoroutine(Consume(player));
+    }
+
+    public void SetItemToBePickedUp()
+    {
+        canBePickedUp = true;
     }
 
     private void Drop()

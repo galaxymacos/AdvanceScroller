@@ -7,8 +7,8 @@ using UnityEngine;
 public class DodgeShadow : MonoBehaviour
 {
     private Material mat;
-    [SerializeField] private float fadeSpeed = 20;
-    [SerializeField] private float pixelateSizeInFloat = 350f;
+    [SerializeField] private float fadeSpeed = 80;
+    [SerializeField] private float pixelateSizeInFloat = 160;
     private void Awake()
     {
         print("dodge shadow is created");

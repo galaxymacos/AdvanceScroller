@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemSprite: {fileID: 0}
+  canBePickedUp: 1
   items:
   - {fileID: 2236802782080076393, guid: 06e8bdb6a4bf78045a784c4a65f9a940, type: 3}
   - {fileID: 20638944200515050, guid: afa8fb5aaf5fee543863565c9fcc5608, type: 3}

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
+public class GhostCapeBuff : MonoBehaviour, IPlayerBuff
 {
     [SerializeField] private float duration = 10;
     private float durationCounter;
@@ -12,7 +12,13 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
     private float invincibleIntervalCounter;
     private PlayerCharacter playerToBuff;
 
+    public event Action onGhostingStart;
+    public event Action onGhostingEnd;
+
     private Material playerMat;
+
+    private bool hasSetup;
+
     public void Setup(PlayerCharacter player)
     {
         durationCounter = duration;
@@ -20,15 +26,18 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
         playerMat = player.GetComponent<SpriteRenderer>().material;
         playerToBuff.onFacingDirectionChanged += ActivateGhosting;
         playerToBuff.GetComponent<CharacterDamageReceiver>().invincibleConditions.Add(isGhosting);
-
+        hasSetup = true;
+        onGhostingEnd += SetOpaque;
     }
 
     private void OnDestroy()
     {
         playerToBuff.onFacingDirectionChanged -= ActivateGhosting;
         playerToBuff.GetComponent<CharacterDamageReceiver>().invincibleConditions.Remove(isGhosting);
-
-
+        if (hasSetup)
+        {
+            onGhostingEnd -= SetOpaque;
+        }
     }
 
     private void ActivateGhosting()
@@ -37,13 +46,8 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
         invincibleIntervalCounter = invincibleInterval;
         invincibleDurationCounter = invincibleDuration;
         onGhostingStart?.Invoke();
-        
     }
 
-    public event Action onGhostingStart;
-    public event Action onGhostingEnd;
-    
-    
 
     private bool isGhosting() => invincibleDurationCounter > 0;
     private bool canGhost => invincibleIntervalCounter <= 0;
@@ -79,13 +83,22 @@ public class GhostCapeBuff: MonoBehaviour, IPlayerBuff
 
         if (isGhosting())
         {
-            print("is ghosting");
-            playerMat.SetFloat("_Alpha", 0.5f);
+            SetTransparent();
         }
         else
         {
-            print("is not ghosting");
-            playerMat.SetFloat("_Alpha", 1f);
+            SetOpaque();
+
         }
+    }
+
+    private void SetTransparent()
+    {
+        playerMat.SetFloat("_Alpha", 0.5f);
+    }
+
+    private void SetOpaque()
+    {
+        playerMat.SetFloat("_Alpha", 1f);
     }
 }

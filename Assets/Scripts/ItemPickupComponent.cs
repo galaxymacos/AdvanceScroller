@@ -39,6 +39,8 @@ public class ItemPickupComponent : MonoBehaviour
         }
 
         Item randomItem = items[Random.Range(0, items.Count)];
+        if (!randomItem.canBePickedUp) return false;
+
         items.Remove(items[Random.Range(0, items.Count)]);
         randomItem.Pickup(GetComponentInParent<PlayerCharacter>());
         return true;
