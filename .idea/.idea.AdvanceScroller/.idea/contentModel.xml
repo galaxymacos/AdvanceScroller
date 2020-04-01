@@ -101,6 +101,7 @@
           </e>
           <e p="readme_DOTweenPro.txt" t="Include" />
         </e>
+        <e p="DestroyOnTrigger.cs" t="Include" />
         <e p="DrippingBlood.cs" t="Include" />
         <e p="DropSnowballComponent.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
@@ -169,6 +170,7 @@
         <e p="IceSlideDissemableComponent.cs" t="Include" />
         <e p="IceSlideEventSystem.cs" t="Include" />
         <e p="IceSlideTrigger.cs" t="Include" />
+        <e p="JumpEffectOnStart.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
             <e p="TooCubeForest" t="Include">
@@ -512,8 +514,10 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="Timer.cs" t="Include" />
         <e p="TunnelTeleporter.cs" t="Include" />
         <e p="WayPointSlideComponent.cs" t="Include" />
+        <e p="WorldTextIndicator.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

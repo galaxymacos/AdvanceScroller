@@ -217,6 +217,7 @@ Transform:
   - {fileID: 1352531919}
   - {fileID: 4876975041337674405}
   - {fileID: 8548234607265379045}
+  - {fileID: 5695623257856925639}
   m_Father: {fileID: 891296965151884860}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -254,6 +255,7 @@ GameObject:
   - component: {fileID: 3428059067044204878}
   - component: {fileID: 8924699005597699368}
   - component: {fileID: -7293832827639334907}
+  - component: {fileID: 1743450340035528067}
   m_Layer: 0
   m_Name: Psychic Hero
   m_TagString: Untagged
@@ -601,7 +603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTakeDamage:
+  onTakeDamageWhenInvincible:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &5370246305263368930
@@ -773,7 +775,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentComboNum: 0
-  timeBeforeComboBreak: 5
+--- !u!114 &1743450340035528067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891296965151884848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdf98850e97476429d5445cb20f38c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpawnTransformInWorld: {fileID: 5695623257856925639}
 --- !u!1 &891296965803389055
 GameObject:
   m_ObjectHideFlags: 0
@@ -863,6 +877,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 891296965063577104}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4064604716986992121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5695623257856925639}
+  m_Layer: 0
+  m_Name: World Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5695623257856925639
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064604716986992121}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.013, y: 0.512, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 891296965063577104}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4517281739427291355
 GameObject:

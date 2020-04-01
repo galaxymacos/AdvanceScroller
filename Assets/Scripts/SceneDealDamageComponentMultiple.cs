@@ -32,11 +32,8 @@ public class SceneDealDamageComponentMultiple : MonoBehaviour
     {
         foreach (var objInCollision in collisionDetector.ObjectsInCollision)
         {
-            var healthComponent = objInCollision.GetComponent<CharacterHealthComponent>();
-            if (healthComponent != null)
-            {
-                healthComponent.TakeDamage(damageDataPerTick, transform, true);
-            }
+            var healthComponent = objInCollision.GetComponent<IDamageReceiver>();
+            healthComponent?.Analyze(damageDataPerTick,transform);
         }
     }
 }

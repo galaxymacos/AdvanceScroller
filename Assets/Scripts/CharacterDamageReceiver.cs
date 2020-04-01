@@ -15,10 +15,11 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
     private PushComponent pushComponent;
 
     public Action onPlayerTakeDamage;
-    public UnityEvent onTakeDamage;
-    public event Action onTakeDamageWhenInvincible;
+    public event Action<int> onTakeDamage;
+    public UnityEvent onTakeDamageWhenInvincible;
 
     public List<Func<bool>> invincibleConditions;
+    
 
     public bool isInvincible => invincibleConditions.Any(condition => condition());
     private void Awake()
@@ -98,12 +99,34 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
         {
             knockableComponent.KnockUp(damageData.launcherHorizontalForce, damageData.launcherVerticalForce, damageOwner);
         }
-        
-        damageOwner.GetComponent<ComboGauge>()?.AddComboNum();
-        damageOwner.GetComponent<Projectile>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
-        damageOwner.GetComponent<NewProjectileDamageComponent>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
+
+
+        if (damageOwner.GetComponent<ComboGauge>() != null)
+        {
+            damageOwner.GetComponent<ComboGauge>().AddComboNum();
+            lastDamageOwner = damageOwner.GetComponent<PlayerCharacter>();
+        }
+
+        if (damageOwner.GetComponent<Projectile>() != null)
+        {
+            lastDamageOwner = damageOwner.GetComponent<Projectile>().owner;
+            damageOwner.GetComponent<Projectile>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
+        }
+
+        if (damageOwner.GetComponent<NewProjectileDamageComponent>() != null)
+        {
+            lastDamageOwner = damageOwner.GetComponent<NewProjectileDamageComponent>()?.owner.GetComponent<PlayerCharacter>();
+            damageOwner.GetComponent<NewProjectileDamageComponent>()?.owner.GetComponent<ComboGauge>()?.AddComboNum();
+        }
         onPlayerTakeDamage?.Invoke();
-        onTakeDamage?.Invoke();
+        onTakeDamage?.Invoke(damageData.damage);
+    }
+
+    private PlayerCharacter lastDamageOwner;
+
+    public void Analyze(DamageData damageData)
+    {
+        Analyze(damageData,lastDamageOwner.transform);
     }
     
     

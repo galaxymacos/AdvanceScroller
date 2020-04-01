@@ -475,6 +475,7 @@ Transform:
   - {fileID: 6721710590424157336}
   - {fileID: 2947305055112542987}
   - {fileID: 2056482993910867630}
+  - {fileID: 1409101660471368956}
   m_Father: {fileID: 3658480544048443415}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,6 +515,7 @@ GameObject:
   - component: {fileID: 614550979399928041}
   - component: {fileID: 1145254932104757342}
   - component: {fileID: 2138507576583483554}
+  - component: {fileID: 5128869460549372259}
   m_Layer: 0
   m_Name: Sword Princess
   m_TagString: Untagged
@@ -863,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTakeDamage:
+  onTakeDamageWhenInvincible:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &7225560470583709286
@@ -1057,7 +1059,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentComboNum: 0
-  timeBeforeComboBreak: 5
+--- !u!114 &5128869460549372259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658480544048443873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdf98850e97476429d5445cb20f38c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpawnTransformInWorld: {fileID: 1409101660471368956}
 --- !u!1 &3658480544129214437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,6 +1196,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7446429968664745867}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7287886604831517458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1409101660471368956}
+  m_Layer: 0
+  m_Name: World Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1409101660471368956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7287886604831517458}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.01, y: 0.71, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3658480543698845594}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7332634409057297763
 GameObject:

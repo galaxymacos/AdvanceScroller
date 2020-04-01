@@ -4359,7 +4359,7 @@ MonoBehaviour:
       clip: {fileID: 8300000, guid: 223a2c54815221b4b9c275241d941998, type: 3}
     - typeInString: BatHero_ThrowShuriki
       clip: {fileID: 8300000, guid: 30a083dda058b764588838d5534af594, type: 3}
-    - typeInString: BatHero_BatTransform
+    - typeInString: BatHero_HumanTransform
       clip: {fileID: 8300000, guid: d28997a6445dd6340b99566a1bcad842, type: 3}
     - typeInString: BatHero_InstantKillStart
       clip: {fileID: 8300000, guid: 819f9d27041ecb8499f09a8174685464, type: 3}

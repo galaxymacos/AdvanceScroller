@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: e51fb70bc37c04748b15402a24a1ea03, type: 2}
   objectsHasProcessed: []
 --- !u!1 &1783869971129779690
@@ -172,6 +173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: 2d284c955bf2d4e43b6ff237030a4d1d, type: 2}
   objectsHasProcessed: []
 --- !u!1 &2375527758413070605
@@ -408,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: d4c873afa9d89b74382a3fc2cac51e9b, type: 2}
   objectsHasProcessed: []
 --- !u!1 &4475374484920390170
@@ -675,6 +678,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: cf74dc6498b309d4caaed0b1ef1eb946, type: 2}
   objectsHasProcessed: []
 --- !u!114 &3028136784199849831
@@ -696,6 +700,36 @@ MonoBehaviour:
   owner: {fileID: 8906824143711737653}
   hasUsedOneLastStrike: 0
   SingleAttackComponent: {fileID: 8602365651466050991}
+--- !u!1 &7894484072008941084
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6604641623207643234}
+  m_Layer: 0
+  m_Name: Floating Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6604641623207643234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894484072008941084}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.651, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8906824144062519619}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8829037504463658737
 GameObject:
   m_ObjectHideFlags: 0
@@ -763,6 +797,7 @@ GameObject:
   - component: {fileID: 2450774587293041543}
   - component: {fileID: 3450194129707769929}
   - component: {fileID: 8332927406458193317}
+  - component: {fileID: 5985892848430702507}
   m_Layer: 0
   m_Name: Bat Hero
   m_TagString: Untagged
@@ -1083,11 +1118,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce795750dfaa8a0489a9a3058e668148, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onTakeDamage:
+  onTakeDamageWhenInvincible:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8332927406458193317}
-        m_MethodName: BreakComboBecauseOfTakingDamage
+      - m_Target: {fileID: 5985892848430702507}
+        m_MethodName: SpawnMissText
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1261,13 +1296,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentComboNum: 0
-  onComboAdded:
-    m_PersistentCalls:
-      m_Calls: []
-  onComboBreak:
-    m_PersistentCalls:
-      m_Calls: []
-  timeBeforeComboBreak: 5
+--- !u!114 &5985892848430702507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8906824143711737656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cdf98850e97476429d5445cb20f38c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textSpawnTransformInWorld: {fileID: 6604641623207643234}
 --- !u!1 &8906824144062519618
 GameObject:
   m_ObjectHideFlags: 0
@@ -1308,6 +1349,7 @@ Transform:
   - {fileID: 1583450337618005939}
   - {fileID: 1757423511467940453}
   - {fileID: 3320034967421330393}
+  - {fileID: 6604641623207643234}
   m_Father: {fileID: 8906824143711737550}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
