@@ -27,9 +27,3 @@ public class FloatingTextSpawner : MonoBehaviour
         Debug.Log("Spawn text");
     }
 }
-
-[RequireComponent(typeof(CharacterDamageReceiver))]
-public class SpawnMissTextWhenInvincible: MonoBehaviour
-{
-    
-}

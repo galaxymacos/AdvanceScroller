@@ -10,6 +10,7 @@ public class LoadSceneOnTrigger : MonoBehaviour
     [SerializeField] private bool loadCurrentScene;
     public void Trigger()
     {
+        print("load scene trigger");
         if (loadCurrentScene)
         {
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);

@@ -103,7 +103,6 @@ GameObject:
   - component: {fileID: 3222097676526244162}
   - component: {fileID: 3222097676526244160}
   - component: {fileID: 3222097676526244166}
-  - component: {fileID: 3222097676526244161}
   - component: {fileID: 6535968591296001502}
   m_Layer: 15
   m_Name: Cat
@@ -233,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488f326713bb82f4a9dc3d0af53cadc0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collisionDetector: {fileID: 3222097676526244161}
+  collisionDetector: {fileID: 1976516703254290685}
   damageData: {fileID: 11400000, guid: bf4e207601930d44599c767fc4e75e1b, type: 2}
   whatIsGround:
     serializedVersion: 2
@@ -247,18 +246,6 @@ MonoBehaviour:
   edgeDetector: {fileID: 3222097675675246300}
   wallDetector: {fileID: 2746105035219522211}
   owner: {fileID: 0}
---- !u!114 &3222097676526244161
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3222097676526244191}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!70 &6535968591296001502
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -285,6 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3222097676762609337}
   - component: {fileID: 3222097676762609342}
+  - component: {fileID: 1976516703254290685}
   m_Layer: 0
   m_Name: CatCollider
   m_TagString: Untagged
@@ -319,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011763126, y: -0.12351334}
+  m_Offset: {x: 0.00627473, y: -0.1162982}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -330,8 +318,20 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.715367, y: 0.39776087}
+  m_Size: {x: 0.83802456, y: 0.54206395}
   m_EdgeRadius: 0
+--- !u!114 &1976516703254290685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3222097676762609336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e6f7d46c7a74a9cb1e0bf56560a433c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7998792559524665985
 GameObject:
   m_ObjectHideFlags: 0

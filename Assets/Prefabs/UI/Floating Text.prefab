@@ -209,4 +209,5 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  time: 2
+  timeToCountdown: 1
+  awakeLater: 0

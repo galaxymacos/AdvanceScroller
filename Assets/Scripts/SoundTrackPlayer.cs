@@ -10,6 +10,7 @@ public class SoundTrackPlayer : MonoBehaviour
 
     [SerializeField] private List<SoundTrackObject> soundTrackObjects;
 
+    private int oldSceneIndex = -1;
     public static SoundTrackPlayer instance;
     
     [Serializable]
@@ -24,23 +25,27 @@ public class SoundTrackPlayer : MonoBehaviour
     {
         if (instance == null)
         {
-            DontDestroyOnLoad(gameObject);
             instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.activeSceneChanged += ChangeBgm;
         }
         else
         {
             Destroy(gameObject);
         }
         
-        
-        SceneManager.activeSceneChanged += ChangeBgm;
     }
-    
+
+    private void OnDestroy()
+    {
+        print("change bgm deRegistered");
+        SceneManager.activeSceneChanged -= ChangeBgm;
+    }
+
     private void ChangeBgm(Scene oldScene, Scene newScene)
     {
-        print($"Load new scene with index {newScene.buildIndex}");
         int newSceneIndex = newScene.buildIndex;
-        int oldSceneIndex = oldScene.buildIndex;
+       
 
         AudioType oldAudioType = AudioType.None;
         AudioType newAudioType = AudioType.None;
@@ -59,7 +64,7 @@ public class SoundTrackPlayer : MonoBehaviour
                 oldAudioType = bgmAudioType;
             }
         }
-
+        
         if (oldAudioType != AudioType.None)
         {
             AudioController.instance.StopAudio(oldAudioType);
@@ -69,7 +74,8 @@ public class SoundTrackPlayer : MonoBehaviour
         {
             AudioController.instance.PlayAudio(newAudioType, true, 0, true);
         }
-        
-        
+
+        oldSceneIndex = newSceneIndex;
+
     }
 }

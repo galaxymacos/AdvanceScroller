@@ -9,7 +9,6 @@ public static class PointerCounter
         get => pointerNum;
         set
         {
-            Debug.Log("There are "+value+" pointers in the scene now");
             pointerNum = value;
         }
     }

@@ -57,7 +57,6 @@ public class ComboGaugeUI : MonoBehaviour
         
         if (alphaInFloat > 0)
         {
-            print("alpha in float: "+alphaInFloat);
             alphaInFloat -= Time.deltaTime * comboGaugeDecreaseSpeed;
         }
         

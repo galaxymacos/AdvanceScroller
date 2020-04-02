@@ -44,6 +44,7 @@ public class Knockable : MonoBehaviour, IPauseable
             return; // TODO store force
         }
         
+        print("Knock up");
         Vector3 knockerLocation = knocker.position;
         Vector3 knockableLocation = transform.position;
 
