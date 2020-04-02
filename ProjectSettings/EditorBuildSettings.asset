@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Game Loop/MainMenu.unity
+    path: Assets/Scenes/Game Loop/Splash Screen.unity
     guid: 1a0f8aabc0ff7b44ea5bbe74d852ccdd
   - enabled: 1
     path: Assets/Scenes/Game Loop/Hero Selection.unity
@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Map Scene/DungeonMap.unity
     guid: ee897c2366757bf40bb7fcc9e6bc2ce1
+  - enabled: 1
+    path: Assets/Scenes/Game Loop/Main Menu.unity
+    guid: 8b06244a25bd0fb4c94c1d4768cb4e24
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 788da60fc9647c64ea0f433ac9446879,
       type: 2}

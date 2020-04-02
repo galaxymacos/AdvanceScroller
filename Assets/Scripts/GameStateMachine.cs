@@ -7,14 +7,18 @@ using Object = UnityEngine.Object;
 public class GameStateMachine : MonoBehaviour
 {
     private StateMachine _stateMachine;
+    private static GameStateMachine instance;
 
     [SerializeField] private GameStateMachineMessager messager;
     
     private void Awake()
     {
         _stateMachine = new StateMachine();
+        if (instance == null)
+        {
+            instance = this;
+        }
 
-        
     }
 
     private void Start()
@@ -72,15 +76,14 @@ public class EndSlowMotion: IState
 }
 public class End : IState
 {
-    public static event Action OnGameEnd;
+    public static event Action onGameEnd;
     public void Tick()
     {
     }
 
     public void OnEnter()
     {
-        Debug.Log("Game over");
-        OnGameEnd?.Invoke();
+        onGameEnd?.Invoke();
     }
 
 
@@ -105,31 +108,35 @@ public class Play : IState
 }
 public class Pause : IState
 {
+    public static event Action onPause;
+    public static event Action onUnpause;
     public void Tick()
     {
     }
 
     public void OnEnter()
     {
-        var scripts = Object.FindObjectsOfType<MonoBehaviour>();
-        foreach (var script in scripts)
-        {
-            if (script is IPauseable pauseable)
-            {
-                pauseable.Pause();
-            }
-        }
+        onPause?.Invoke();
+        // var scripts = Object.FindObjectsOfType<MonoBehaviour>();
+        // foreach (var script in scripts)
+        // {
+        //     if (script is IPauseable pauseable)
+        //     {
+        //         pauseable.Pause();
+        //     }
+        // }
     }
 
     public void OnExit()
     {
-        var scripts = Object.FindObjectsOfType<MonoBehaviour>();
-        foreach (var script in scripts)
-        {
-            if (script is IPauseable pauseable)
-            {
-                pauseable.UnPause();
-            }
-        }
+        onUnpause?.Invoke();
+        // var scripts = Object.FindObjectsOfType<MonoBehaviour>();
+        // foreach (var script in scripts)
+        // {
+        //     if (script is IPauseable pauseable)
+        //     {
+        //         pauseable.UnPause();
+        //     }
+        // }
     }
 }

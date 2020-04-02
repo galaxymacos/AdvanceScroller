@@ -8,20 +8,28 @@ public class GameStateMachineMessager: MonoBehaviour
     private List<PlayerCharacter> playerCharacters;
     private List<UltimateComponent> ultimateComponents;
     private bool isPausing;
+    
+    
 
     public bool IsPausing => isPausing;
 
-
+    public static GameStateMachineMessager instance;
+    
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        
         PlayerCharacterSpawner.onPlayerSpawnFinished += InitializePlayers;
         foreach (NewPlayerInput newPlayerInput in FindObjectsOfType<NewPlayerInput>())
         {
             newPlayerInput.onPauseButtonPressed += PauseButtonPress;
         }
 
-        End.OnGameEnd += DeRegisterInputFromPlayer;
-        End.OnGameEnd += UnPauseAll;
+        End.onGameEnd += DeRegisterInputFromPlayer;
+        End.onGameEnd += UnPauseAll;
         Play.OnGameStart += ClearInput;
     }
 
@@ -37,8 +45,8 @@ public class GameStateMachineMessager: MonoBehaviour
         {
             newPlayerInput.onPauseButtonPressed -= PauseButtonPress;
         }
-        End.OnGameEnd -=DeRegisterInputFromPlayer;
-        End.OnGameEnd -= UnPauseAll;
+        End.onGameEnd -=DeRegisterInputFromPlayer;
+        End.onGameEnd -= UnPauseAll;
         PlayerCharacterSpawner.onPlayerSpawnFinished -= InitializePlayers;
     }
 
@@ -57,7 +65,7 @@ public class GameStateMachineMessager: MonoBehaviour
         return playerAliveCount <= 1;
     }
 
-    private void PauseButtonPress()
+    public void PauseButtonPress()
     {
         isPausing = !isPausing;
     }

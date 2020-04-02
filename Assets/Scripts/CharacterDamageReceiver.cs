@@ -126,7 +126,7 @@ public class CharacterDamageReceiver : MonoBehaviour, IDamageReceiver
 
     public void Analyze(DamageData damageData)
     {
-        Analyze(damageData,lastDamageOwner.transform);
+        Analyze(damageData,lastDamageOwner.transform);    // TODO  Fix bug
     }
     
     

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3758,8 +3758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spinInterval: 0.04
   spinIntervalIncreaseTimePerTick: 0.01
-  waitTime: 0
-  confirmMapTime: 0
+  waitTime: 2
+  confirmMapTime: 1
 --- !u!1 &1726954614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4240,7 +4240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e215a5dafdab644934abdfa26b6d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inDebugMode: 1
+  inDebugMode: 0
 --- !u!4 &1767372506
 Transform:
   m_ObjectHideFlags: 0

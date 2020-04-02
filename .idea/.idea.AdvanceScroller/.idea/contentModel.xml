@@ -139,6 +139,10 @@
           </e>
         </e>
         <e p="FacingComponent2D.cs" t="Include" />
+        <e p="FontColorChanger.cs" t="Include" />
+        <e p="FontPingPongEffect.cs" t="Include" />
+        <e p="FontSizeChanger.cs" t="Include" />
+        <e p="GameOverScreen.cs" t="Include" />
         <e p="GhostAnimationMessager.cs" t="Include" />
         <e p="GhostAttackCounter.cs" t="Include" />
         <e p="GhostDamageReceiver.cs" t="Include" />
@@ -170,6 +174,7 @@
         <e p="IceSlideDissemableComponent.cs" t="Include" />
         <e p="IceSlideEventSystem.cs" t="Include" />
         <e p="IceSlideTrigger.cs" t="Include" />
+        <e p="ImageTransparencyChanger.cs" t="Include" />
         <e p="JumpEffectOnStart.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
@@ -192,6 +197,10 @@
             </e>
           </e>
         </e>
+        <e p="MenuNavigationSystem.cs" t="Include" />
+        <e p="PauseControl.cs" t="Include" />
+        <e p="PauseScreen.cs" t="Include" />
+        <e p="PlayAnimationOnTrigger.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
         <e p="ResetByVelocity.cs" t="Include" />
         <e p="Scripts" t="Include">
@@ -333,7 +342,7 @@
           <e p="LightOnState.cs" t="Include" />
           <e p="LightTurningOffState.cs" t="Include" />
           <e p="LightTurningOnState.cs" t="Include" />
-          <e p="LoadHeroSelectionScene.cs" t="Include" />
+          <e p="LoadSceneOnTrigger.cs" t="Include" />
           <e p="LuckySpin.cs" t="Include" />
           <e p="MainMenuButtonAnimationController.cs" t="Include" />
           <e p="MapInfo.cs" t="Include" />
@@ -469,6 +478,7 @@
         <e p="SnowBallSetuper.cs" t="Include" />
         <e p="SpawnFire.cs" t="Include" />
         <e p="SpawnObjectOnTrigger.cs" t="Include" />
+        <e p="SplashScreenAnimation.cs" t="Include" />
         <e p="Sprites" t="Include">
           <e p="GhostCapeBuff.cs" t="Include" />
           <e p="HealthBarShakeComponent.cs" t="Include" />
@@ -515,6 +525,7 @@
           </e>
         </e>
         <e p="Timer.cs" t="Include" />
+        <e p="TriggerToUnpause.cs" t="Include" />
         <e p="TunnelTeleporter.cs" t="Include" />
         <e p="WayPointSlideComponent.cs" t="Include" />
         <e p="WorldTextIndicator.cs" t="Include" />

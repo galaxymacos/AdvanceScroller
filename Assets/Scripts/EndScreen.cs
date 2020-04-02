@@ -12,14 +12,14 @@ public class EndScreen : MonoBehaviour
     public static Action onEndScreenActivate;
     private void Awake()
     {
-        End.OnGameEnd += ActivateEndMenuElement;
+        End.onGameEnd += ActivateEndMenuElement;
         onEndScreenActivate+=AssignPointerToMenuElement;
 
     }
 
     private void OnDestroy()
     {
-        End.OnGameEnd -= ActivateEndMenuElement;
+        End.onGameEnd -= ActivateEndMenuElement;
         onEndScreenActivate-=AssignPointerToMenuElement;
     }
 
