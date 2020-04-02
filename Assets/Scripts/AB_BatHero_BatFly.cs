@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class AB_BatHero_BatFly : CharacterStateMachineBehavior
 {
-    private Rigidbody2D rb;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        rb = animator.GetComponent<Rigidbody2D>();
         playerInput.skill1ButtonPressed = true;
     }
 
@@ -31,15 +29,4 @@ public class AB_BatHero_BatFly : CharacterStateMachineBehavior
     //    
     //}
 
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }

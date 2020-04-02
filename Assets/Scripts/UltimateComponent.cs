@@ -24,6 +24,12 @@ public class UltimateComponent : MonoBehaviour
 
     }
 
+    private void OnDestroy()
+    {
+        onStartShowOff -= PauseAll;
+        onStartShowOff -= HandleLighting;
+    }
+
     public void ShowOff()
     {
         isPlayingUltimate = true;

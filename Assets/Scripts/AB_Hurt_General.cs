@@ -15,7 +15,7 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         knockable = animator.GetComponent<Knockable>();
-        rb.velocity = knockable.knockDirection;
+         rb.velocity = knockable.knockDirection;
         dashStillAlowedTimeCounter = dashStillAllowedLimit;
     }
  

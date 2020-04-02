@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BuffedAttackProcessor : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class BuffedAttackProcessor : MonoBehaviour
     {
         playerCharacter = GetComponent<PlayerCharacter>();
         SwordPrincessAttackMessagingComponent.onBuffedAttack += ShootLightningSword;
+    }
+
+    private void OnDestroy()
+    {
+        SwordPrincessAttackMessagingComponent.onBuffedAttack -= ShootLightningSword;
     }
 
     public Transform lightningSwordSpawnPosition;

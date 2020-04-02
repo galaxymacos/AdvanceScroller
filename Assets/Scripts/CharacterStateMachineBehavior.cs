@@ -303,6 +303,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
     {
         isPaused = true;
         velocityBeforePause = rb.velocity;
+        rb.velocity = Vector2.zero;
     }
 
     public virtual void UnPause()

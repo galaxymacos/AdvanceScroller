@@ -84,17 +84,20 @@ public class PushComponent : MonoBehaviour, IPauseable
     /// <param name="angleOffset"></param>
     public void Push(Transform damageSource, float speed, float angleOffset, float pushDistance)
     {
-        print(gameObject.name+" is being pushed");
-
+        print("pausing:"+isPausing);
         if (angleOffset < 0 && playerCharacter.IsGrounded)
         {
             return;
         }
 
+        if (isPausing)
+        {
+            return;    // TODO store the pushing force
+        }
+
         if (!playerCharacter.isNextToWallRight && !playerCharacter.isNextToWallLeft)
         {
             
-            print(gameObject.name+" is being pushed ++++++");
 
             Vector2 relativePositionBetweenActors = (damageSource.position.x - playerCharacter.transform.position.x) < 0
                 ? new Vector2(1, 0)
@@ -154,10 +157,11 @@ public class PushComponent : MonoBehaviour, IPauseable
 
     public void Pause()
     {
-        
+        isPausing = true;
     }
 
     public void UnPause()
     {
+        isPausing = false;
     }
 }

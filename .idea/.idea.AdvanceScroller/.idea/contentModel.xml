@@ -313,7 +313,6 @@
           <e p="GameStateMachine.cs" t="Include" />
           <e p="GameStateMachineMessager.cs" t="Include" />
           <e p="GeneratePotionEvent.cs" t="Include" />
-          <e p="hitstun.cs" t="Include" />
           <e p="IAttackEffect.cs" t="Include" />
           <e p="IBloodType.cs" t="Include" />
           <e p="IceSpike.cs" t="Include" />
@@ -428,6 +427,7 @@
           <e p="SMB_BatHero_Attack.cs" t="Include" />
           <e p="SMB_BatHero_InstantKill.cs" t="Include" />
           <e p="SMB_Falldown_General.cs" t="Include" />
+          <e p="SMB_Hitstun_General.cs" t="Include" />
           <e p="SMB_Idle_General.cs" t="Include" />
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
