@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: eaf34ce7b54879247b437f688bd79739
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: JMH CRYPT
+  fontNames:
+  - JMH CRYPT
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 16827d9aca6411341b1246464536057d, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
