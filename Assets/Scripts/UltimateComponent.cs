@@ -36,20 +36,27 @@ public class UltimateComponent : MonoBehaviour
 
         onStartShowOff?.Invoke();
         StartCoroutine(ShowOffCoroutine());
+        
     }
     
     public void End()
     {
         isPlayingUltimate = false;
 
+        print("player stop using ultimate");
+        
         print("turn on all lighting");
         // LightingManager.instance.TurnOnAllLights(); TODO add it back if new lighting state machine not working
         LightingManager.instance.lightOnTrigger = true;
-        var pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
-        foreach (IPauseable pauseable in pauseables)
-        {
-            pauseable.UnPause();
-        }
+
+        GameStateMachine.gameIsPause = false;
+        
+        // var pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
+        // foreach (IPauseable pauseable in pauseables)
+        // {
+            // pauseable.UnPause();
+        // }
+     
 
     }
     
@@ -69,11 +76,9 @@ public class UltimateComponent : MonoBehaviour
 
     private void PauseAll()
     {
-        IEnumerable<IPauseable> pauseables = FindObjectsOfType<MonoBehaviour>().OfType<IPauseable>();
-        foreach (IPauseable pauseable in pauseables)
-        {
-            pauseable.Pause();
-        }
+        GameStateMachine.gameIsPause = true;
+        print("player Start using ultimate");
+
 
     }
 
@@ -99,3 +104,4 @@ public class UltimateComponent : MonoBehaviour
         }
     }
 }
+

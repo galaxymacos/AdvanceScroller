@@ -33,6 +33,12 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     {
         base.OnStateUpdate(_animator, stateInfo, layerIndex);
         if (playerInput == null) return;
+
+        if (isPaused)
+        {
+            return;
+        }
+        
         // Vector3 previousVelocity = rb.velocity;
         // bool shouldRotationReveresd = playerInput.verticalAxis < 0 ^ playerCharacter.isFacingRight;
         // if (Math.Abs(playerInput.verticalAxis) > Mathf.Epsilon)
@@ -63,7 +69,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
         }
 
         Vector3 currentForwardVector = shouldRotationReversed?-playerCharacter.transform.right: playerCharacter.transform.right;
-        rb.velocity = currentForwardVector * newCurrentSpeed;
+            rb.velocity = currentForwardVector * newCurrentSpeed;
 
 
 
@@ -73,6 +79,7 @@ public class skill3_sword_princess : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateExit(animator, stateInfo, layerIndex);
         rb.gravityScale = 1f;
         rb.freezeRotation = true;
         playerCharacter.transform.rotation = Quaternion.Euler(playerCharacter.transform.rotation.x,playerCharacter.transform.rotation.y,0);

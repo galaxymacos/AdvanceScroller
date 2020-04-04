@@ -10,12 +10,14 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
     private float dashStillAllowedLimit = 0.1f;
     private float dashStillAlowedTimeCounter = 0;
 
+    private bool hasSetuped;
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         knockable = animator.GetComponent<Knockable>();
-         rb.velocity = knockable.knockDirection;
+        hasSetuped = false;
         dashStillAlowedTimeCounter = dashStillAllowedLimit;
     }
  
@@ -23,6 +25,16 @@ public class AB_Hurt_General : CharacterStateMachineBehavior
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+        if (isPaused)
+        {
+            return;
+        }
+
+        if (!hasSetuped)
+        {
+            rb.velocity = knockable.knockDirection;
+            hasSetuped = true;
+        }
         if (dashStillAlowedTimeCounter > 0)
         {
             dashStillAlowedTimeCounter -= Time.deltaTime;

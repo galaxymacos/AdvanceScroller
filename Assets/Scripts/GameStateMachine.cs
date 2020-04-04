@@ -9,6 +9,12 @@ public class GameStateMachine : MonoBehaviour
     private StateMachine _stateMachine;
     private static GameStateMachine instance;
 
+    public static bool gameIsPause;
+    private static bool gameWasPause;
+    public static event Action gamePause;
+    public static event Action gameUnPause;
+    
+
     [SerializeField] private GameStateMachineMessager messager;
     
     private void Awake()
@@ -42,7 +48,31 @@ public class GameStateMachine : MonoBehaviour
 
     private void Update()
     {
+        UpdateGamePause();
+
         _stateMachine.Tick();
+    }
+    
+    
+
+    private static void UpdateGamePause()
+    {
+        if (gameWasPause)
+        {
+            if (!gameIsPause)
+            {
+                gameUnPause?.Invoke();
+            }
+        }
+        else if (!gameWasPause)
+        {
+            if (gameIsPause)
+            {
+                gamePause?.Invoke();
+            }
+        }
+
+        gameWasPause = gameIsPause;
     }
 }
 

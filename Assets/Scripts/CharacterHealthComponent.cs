@@ -7,8 +7,8 @@ using UnityEngine.Events;
 [RequireComponent(typeof(PlayerCharacter))]
 public class CharacterHealthComponent : MonoBehaviour
 {
-    public float maxHealth = 100;
-    [HideInInspector] public float currentHealth;
+    public float maxHealth = 260;
+    public float currentHealth;
     private float healthWas;
 
 
@@ -91,7 +91,7 @@ public class CharacterHealthComponent : MonoBehaviour
     public void DrainHealth(float drain)
     {
         
-        currentHealth = Mathf.Clamp(currentHealth-drain, 0, 100);
+        currentHealth = Mathf.Clamp(currentHealth-drain, 0, maxHealth);
         if (Math.Abs(currentHealth) <=0)
         {
             onPlayerDie?.Invoke(this);

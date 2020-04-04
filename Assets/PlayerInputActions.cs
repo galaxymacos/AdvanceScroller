@@ -1,15 +1,14 @@
 // GENERATED AUTOMATICALLY FROM 'Assets/PlayerInputActions.inputactions'
 
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
 
-public class @PlayerInputActions : IInputActionCollection, IDisposable
+public class PlayerInputActions : IInputActionCollection
 {
-    public InputActionAsset asset { get; }
-    public @PlayerInputActions()
+    private InputActionAsset asset;
+    public PlayerInputActions()
     {
         asset = InputActionAsset.FromJson(@"{
     ""name"": ""PlayerInputActions"",
@@ -1112,7 +1111,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_PlayerNew_Pause = m_PlayerNew.FindAction("Pause", throwIfNotFound: true);
     }
 
-    public void Dispose()
+    ~PlayerInputActions()
     {
         UnityEngine.Object.Destroy(asset);
     }
@@ -1170,8 +1169,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_VerticalMovement;
     public struct PlayerActions
     {
-        private @PlayerInputActions m_Wrapper;
-        public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        private PlayerInputActions m_Wrapper;
+        public PlayerActions(PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @Attack => m_Wrapper.m_Player_Attack;
@@ -1190,64 +1189,64 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Run.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
-                @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
-                @Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
-                @Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
-                @Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
-                @Skill1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
-                @Skill1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
-                @Skill1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
-                @Skill2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
-                @Skill2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
-                @Skill2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
-                @Skill3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
-                @Skill3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
-                @Skill3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
-                @Skill4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
-                @Skill4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
-                @Skill4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
-                @VerticalMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
+                Run.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                Run.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                Run.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
+                Attack.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                Attack.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                Attack.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAttack;
+                Dash.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                Dash.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                Dash.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDash;
+                Skill1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
+                Skill1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
+                Skill1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill1;
+                Skill2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
+                Skill2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
+                Skill2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill2;
+                Skill3.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
+                Skill3.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
+                Skill3.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill3;
+                Skill4.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
+                Skill4.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
+                Skill4.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnSkill4;
+                VerticalMovement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnVerticalMovement;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Run.started += instance.OnRun;
-                @Run.performed += instance.OnRun;
-                @Run.canceled += instance.OnRun;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
-                @Dash.started += instance.OnDash;
-                @Dash.performed += instance.OnDash;
-                @Dash.canceled += instance.OnDash;
-                @Skill1.started += instance.OnSkill1;
-                @Skill1.performed += instance.OnSkill1;
-                @Skill1.canceled += instance.OnSkill1;
-                @Skill2.started += instance.OnSkill2;
-                @Skill2.performed += instance.OnSkill2;
-                @Skill2.canceled += instance.OnSkill2;
-                @Skill3.started += instance.OnSkill3;
-                @Skill3.performed += instance.OnSkill3;
-                @Skill3.canceled += instance.OnSkill3;
-                @Skill4.started += instance.OnSkill4;
-                @Skill4.performed += instance.OnSkill4;
-                @Skill4.canceled += instance.OnSkill4;
-                @VerticalMovement.started += instance.OnVerticalMovement;
-                @VerticalMovement.performed += instance.OnVerticalMovement;
-                @VerticalMovement.canceled += instance.OnVerticalMovement;
+                Run.started += instance.OnRun;
+                Run.performed += instance.OnRun;
+                Run.canceled += instance.OnRun;
+                Jump.started += instance.OnJump;
+                Jump.performed += instance.OnJump;
+                Jump.canceled += instance.OnJump;
+                Attack.started += instance.OnAttack;
+                Attack.performed += instance.OnAttack;
+                Attack.canceled += instance.OnAttack;
+                Dash.started += instance.OnDash;
+                Dash.performed += instance.OnDash;
+                Dash.canceled += instance.OnDash;
+                Skill1.started += instance.OnSkill1;
+                Skill1.performed += instance.OnSkill1;
+                Skill1.canceled += instance.OnSkill1;
+                Skill2.started += instance.OnSkill2;
+                Skill2.performed += instance.OnSkill2;
+                Skill2.canceled += instance.OnSkill2;
+                Skill3.started += instance.OnSkill3;
+                Skill3.performed += instance.OnSkill3;
+                Skill3.canceled += instance.OnSkill3;
+                Skill4.started += instance.OnSkill4;
+                Skill4.performed += instance.OnSkill4;
+                Skill4.canceled += instance.OnSkill4;
+                VerticalMovement.started += instance.OnVerticalMovement;
+                VerticalMovement.performed += instance.OnVerticalMovement;
+                VerticalMovement.canceled += instance.OnVerticalMovement;
             }
         }
     }
@@ -1267,8 +1266,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Player2_VerticalMovement;
     public struct Player2Actions
     {
-        private @PlayerInputActions m_Wrapper;
-        public Player2Actions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        private PlayerInputActions m_Wrapper;
+        public Player2Actions(PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Run => m_Wrapper.m_Player2_Run;
         public InputAction @Attack => m_Wrapper.m_Player2_Attack;
         public InputAction @Jump => m_Wrapper.m_Player2_Jump;
@@ -1287,64 +1286,64 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_Player2ActionsCallbackInterface != null)
             {
-                @Run.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
-                @Attack.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
-                @Jump.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
-                @Dash.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
-                @Dash.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
-                @Dash.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
-                @Skill1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
-                @Skill1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
-                @Skill1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
-                @Skill2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
-                @Skill2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
-                @Skill2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
-                @Skill3.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
-                @Skill3.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
-                @Skill3.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
-                @Skill4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
-                @Skill4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
-                @Skill4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
-                @VerticalMovement.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
+                Run.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
+                Run.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
+                Run.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnRun;
+                Attack.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
+                Attack.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
+                Attack.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnAttack;
+                Jump.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
+                Jump.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
+                Jump.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnJump;
+                Dash.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
+                Dash.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
+                Dash.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnDash;
+                Skill1.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
+                Skill1.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
+                Skill1.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill1;
+                Skill2.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
+                Skill2.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
+                Skill2.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill2;
+                Skill3.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
+                Skill3.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
+                Skill3.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill3;
+                Skill4.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
+                Skill4.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
+                Skill4.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnSkill4;
+                VerticalMovement.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnVerticalMovement;
             }
             m_Wrapper.m_Player2ActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Run.started += instance.OnRun;
-                @Run.performed += instance.OnRun;
-                @Run.canceled += instance.OnRun;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
-                @Dash.started += instance.OnDash;
-                @Dash.performed += instance.OnDash;
-                @Dash.canceled += instance.OnDash;
-                @Skill1.started += instance.OnSkill1;
-                @Skill1.performed += instance.OnSkill1;
-                @Skill1.canceled += instance.OnSkill1;
-                @Skill2.started += instance.OnSkill2;
-                @Skill2.performed += instance.OnSkill2;
-                @Skill2.canceled += instance.OnSkill2;
-                @Skill3.started += instance.OnSkill3;
-                @Skill3.performed += instance.OnSkill3;
-                @Skill3.canceled += instance.OnSkill3;
-                @Skill4.started += instance.OnSkill4;
-                @Skill4.performed += instance.OnSkill4;
-                @Skill4.canceled += instance.OnSkill4;
-                @VerticalMovement.started += instance.OnVerticalMovement;
-                @VerticalMovement.performed += instance.OnVerticalMovement;
-                @VerticalMovement.canceled += instance.OnVerticalMovement;
+                Run.started += instance.OnRun;
+                Run.performed += instance.OnRun;
+                Run.canceled += instance.OnRun;
+                Attack.started += instance.OnAttack;
+                Attack.performed += instance.OnAttack;
+                Attack.canceled += instance.OnAttack;
+                Jump.started += instance.OnJump;
+                Jump.performed += instance.OnJump;
+                Jump.canceled += instance.OnJump;
+                Dash.started += instance.OnDash;
+                Dash.performed += instance.OnDash;
+                Dash.canceled += instance.OnDash;
+                Skill1.started += instance.OnSkill1;
+                Skill1.performed += instance.OnSkill1;
+                Skill1.canceled += instance.OnSkill1;
+                Skill2.started += instance.OnSkill2;
+                Skill2.performed += instance.OnSkill2;
+                Skill2.canceled += instance.OnSkill2;
+                Skill3.started += instance.OnSkill3;
+                Skill3.performed += instance.OnSkill3;
+                Skill3.canceled += instance.OnSkill3;
+                Skill4.started += instance.OnSkill4;
+                Skill4.performed += instance.OnSkill4;
+                Skill4.canceled += instance.OnSkill4;
+                VerticalMovement.started += instance.OnVerticalMovement;
+                VerticalMovement.performed += instance.OnVerticalMovement;
+                VerticalMovement.canceled += instance.OnVerticalMovement;
             }
         }
     }
@@ -1372,8 +1371,8 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_PlayerNew_Pause;
     public struct PlayerNewActions
     {
-        private @PlayerInputActions m_Wrapper;
-        public PlayerNewActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        private PlayerInputActions m_Wrapper;
+        public PlayerNewActions(PlayerInputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Run => m_Wrapper.m_PlayerNew_Run;
         public InputAction @Attack => m_Wrapper.m_PlayerNew_Attack;
         public InputAction @AttackRelease => m_Wrapper.m_PlayerNew_AttackRelease;
@@ -1400,112 +1399,112 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerNewActionsCallbackInterface != null)
             {
-                @Run.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
-                @Run.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
-                @Run.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
-                @Attack.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
-                @Attack.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
-                @Attack.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
-                @AttackRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
-                @AttackRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
-                @AttackRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
-                @Jump.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
-                @Jump.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
-                @Jump.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
-                @Dash.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
-                @Dash.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
-                @Dash.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
-                @DashRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
-                @DashRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
-                @DashRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
-                @Skill1.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
-                @Skill1.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
-                @Skill1.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
-                @Skill1Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
-                @Skill1Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
-                @Skill1Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
-                @Skill2.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
-                @Skill2.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
-                @Skill2.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
-                @Skill2Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
-                @Skill2Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
-                @Skill2Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
-                @Skill3.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
-                @Skill3.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
-                @Skill3.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
-                @Skill3Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
-                @Skill3Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
-                @Skill3Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
-                @Skill4.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
-                @Skill4.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
-                @Skill4.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
-                @Skill4Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
-                @Skill4Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
-                @Skill4Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
-                @VerticalMovement.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
-                @VerticalMovement.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
-                @JumpRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
-                @JumpRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
-                @JumpRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
-                @Pause.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
+                Run.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                Run.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                Run.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnRun;
+                Attack.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                Attack.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                Attack.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttack;
+                AttackRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                AttackRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                AttackRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnAttackRelease;
+                Jump.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                Jump.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                Jump.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJump;
+                Dash.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                Dash.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                Dash.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDash;
+                DashRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                DashRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                DashRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnDashRelease;
+                Skill1.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                Skill1.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                Skill1.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1;
+                Skill1Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                Skill1Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                Skill1Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill1Release;
+                Skill2.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                Skill2.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                Skill2.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2;
+                Skill2Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                Skill2Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                Skill2Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill2Release;
+                Skill3.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                Skill3.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                Skill3.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3;
+                Skill3Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                Skill3Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                Skill3Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill3Release;
+                Skill4.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                Skill4.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                Skill4.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4;
+                Skill4Release.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                Skill4Release.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                Skill4Release.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnSkill4Release;
+                VerticalMovement.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                VerticalMovement.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnVerticalMovement;
+                JumpRelease.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                JumpRelease.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                JumpRelease.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnJumpRelease;
+                Pause.started -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
+                Pause.performed -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
+                Pause.canceled -= m_Wrapper.m_PlayerNewActionsCallbackInterface.OnPause;
             }
             m_Wrapper.m_PlayerNewActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Run.started += instance.OnRun;
-                @Run.performed += instance.OnRun;
-                @Run.canceled += instance.OnRun;
-                @Attack.started += instance.OnAttack;
-                @Attack.performed += instance.OnAttack;
-                @Attack.canceled += instance.OnAttack;
-                @AttackRelease.started += instance.OnAttackRelease;
-                @AttackRelease.performed += instance.OnAttackRelease;
-                @AttackRelease.canceled += instance.OnAttackRelease;
-                @Jump.started += instance.OnJump;
-                @Jump.performed += instance.OnJump;
-                @Jump.canceled += instance.OnJump;
-                @Dash.started += instance.OnDash;
-                @Dash.performed += instance.OnDash;
-                @Dash.canceled += instance.OnDash;
-                @DashRelease.started += instance.OnDashRelease;
-                @DashRelease.performed += instance.OnDashRelease;
-                @DashRelease.canceled += instance.OnDashRelease;
-                @Skill1.started += instance.OnSkill1;
-                @Skill1.performed += instance.OnSkill1;
-                @Skill1.canceled += instance.OnSkill1;
-                @Skill1Release.started += instance.OnSkill1Release;
-                @Skill1Release.performed += instance.OnSkill1Release;
-                @Skill1Release.canceled += instance.OnSkill1Release;
-                @Skill2.started += instance.OnSkill2;
-                @Skill2.performed += instance.OnSkill2;
-                @Skill2.canceled += instance.OnSkill2;
-                @Skill2Release.started += instance.OnSkill2Release;
-                @Skill2Release.performed += instance.OnSkill2Release;
-                @Skill2Release.canceled += instance.OnSkill2Release;
-                @Skill3.started += instance.OnSkill3;
-                @Skill3.performed += instance.OnSkill3;
-                @Skill3.canceled += instance.OnSkill3;
-                @Skill3Release.started += instance.OnSkill3Release;
-                @Skill3Release.performed += instance.OnSkill3Release;
-                @Skill3Release.canceled += instance.OnSkill3Release;
-                @Skill4.started += instance.OnSkill4;
-                @Skill4.performed += instance.OnSkill4;
-                @Skill4.canceled += instance.OnSkill4;
-                @Skill4Release.started += instance.OnSkill4Release;
-                @Skill4Release.performed += instance.OnSkill4Release;
-                @Skill4Release.canceled += instance.OnSkill4Release;
-                @VerticalMovement.started += instance.OnVerticalMovement;
-                @VerticalMovement.performed += instance.OnVerticalMovement;
-                @VerticalMovement.canceled += instance.OnVerticalMovement;
-                @JumpRelease.started += instance.OnJumpRelease;
-                @JumpRelease.performed += instance.OnJumpRelease;
-                @JumpRelease.canceled += instance.OnJumpRelease;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
+                Run.started += instance.OnRun;
+                Run.performed += instance.OnRun;
+                Run.canceled += instance.OnRun;
+                Attack.started += instance.OnAttack;
+                Attack.performed += instance.OnAttack;
+                Attack.canceled += instance.OnAttack;
+                AttackRelease.started += instance.OnAttackRelease;
+                AttackRelease.performed += instance.OnAttackRelease;
+                AttackRelease.canceled += instance.OnAttackRelease;
+                Jump.started += instance.OnJump;
+                Jump.performed += instance.OnJump;
+                Jump.canceled += instance.OnJump;
+                Dash.started += instance.OnDash;
+                Dash.performed += instance.OnDash;
+                Dash.canceled += instance.OnDash;
+                DashRelease.started += instance.OnDashRelease;
+                DashRelease.performed += instance.OnDashRelease;
+                DashRelease.canceled += instance.OnDashRelease;
+                Skill1.started += instance.OnSkill1;
+                Skill1.performed += instance.OnSkill1;
+                Skill1.canceled += instance.OnSkill1;
+                Skill1Release.started += instance.OnSkill1Release;
+                Skill1Release.performed += instance.OnSkill1Release;
+                Skill1Release.canceled += instance.OnSkill1Release;
+                Skill2.started += instance.OnSkill2;
+                Skill2.performed += instance.OnSkill2;
+                Skill2.canceled += instance.OnSkill2;
+                Skill2Release.started += instance.OnSkill2Release;
+                Skill2Release.performed += instance.OnSkill2Release;
+                Skill2Release.canceled += instance.OnSkill2Release;
+                Skill3.started += instance.OnSkill3;
+                Skill3.performed += instance.OnSkill3;
+                Skill3.canceled += instance.OnSkill3;
+                Skill3Release.started += instance.OnSkill3Release;
+                Skill3Release.performed += instance.OnSkill3Release;
+                Skill3Release.canceled += instance.OnSkill3Release;
+                Skill4.started += instance.OnSkill4;
+                Skill4.performed += instance.OnSkill4;
+                Skill4.canceled += instance.OnSkill4;
+                Skill4Release.started += instance.OnSkill4Release;
+                Skill4Release.performed += instance.OnSkill4Release;
+                Skill4Release.canceled += instance.OnSkill4Release;
+                VerticalMovement.started += instance.OnVerticalMovement;
+                VerticalMovement.performed += instance.OnVerticalMovement;
+                VerticalMovement.canceled += instance.OnVerticalMovement;
+                JumpRelease.started += instance.OnJumpRelease;
+                JumpRelease.performed += instance.OnJumpRelease;
+                JumpRelease.canceled += instance.OnJumpRelease;
+                Pause.started += instance.OnPause;
+                Pause.performed += instance.OnPause;
+                Pause.canceled += instance.OnPause;
             }
         }
     }

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
 {
+    
     protected Rigidbody2D rb;
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
@@ -42,6 +43,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
             AudioController.instance.PlayAudio(soundInString.GetAudioType());
         }
         rb = _animator.GetComponent<Rigidbody2D>();
+        GameStateMachine.gamePause += Pause;
+        GameStateMachine.gameUnPause += UnPause;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -102,6 +105,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
+        GameStateMachine.gamePause -= Pause;
+        GameStateMachine.gameUnPause -= UnPause;
     }
 
     // public string LimitUsageFilter(string animationName)
@@ -299,8 +304,10 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
         characterAnimator.SetTrigger("wallslide");
     }
 
+    
     public virtual void Pause()
     {
+        Debug.Log("pausing character animation state machine");
         isPaused = true;
         velocityBeforePause = rb.velocity;
         rb.velocity = Vector2.zero;
@@ -308,6 +315,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
 
     public virtual void UnPause()
     {
+        Debug.Log("unpausing character animation state machine");
         isPaused = false;
         rb.velocity = velocityBeforePause;
     }

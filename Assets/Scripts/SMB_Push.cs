@@ -40,9 +40,13 @@ public class SMB_Push : CharacterStateMachineBehavior
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (playerCharacter.GetComponent<CharacterPauser>().IsPausing) return;
-        
         base.OnStateUpdate(animator, stateInfo, layerIndex);
+
+        if (isPaused)
+        {
+            return;
+        }
+        
         if (!hasHitCollision)
         {
             rb.velocity = pushComponent.pushDirection * pushComponent.pushSpeed;

@@ -87,7 +87,6 @@ public class NewProjectileDamageComponent: MonoBehaviour
         if (detectionMethod == DetectionMethod.Trigger)
         {
             if (!hasSetuped || Expired) return;
-            print("Collide with "+other.gameObject.name);
 
 
             if (other.gameObject.GetComponent<IDamageReceiver>() != null &&
