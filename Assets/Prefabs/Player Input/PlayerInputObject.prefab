@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6484090104208674997}
   - component: {fileID: 6484090104208674996}
   - component: {fileID: 2968089526923908477}
+  - component: {fileID: -9002597927142308152}
+  - component: {fileID: 3678515726278282396}
   m_Layer: 0
   m_Name: PlayerInputObject
   m_TagString: Untagged
@@ -77,10 +79,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalAxis: 0
   verticalAxis: 0
-  jumpButtonPressing: 0
-  attackButtonPressing: 0
-  dashButtonPressing: 0
-  skill1ButtonPressing: 0
-  skill2ButtonPressing: 0
-  skill3ButtonPressing: 0
-  skill4ButtonPressing: 0
+  jumpButtonPressed: 0
+  attackButtonPressed: 0
+  dashButtonPressed: 0
+  skill1ButtonPressed: 0
+  skill2ButtonPressed: 0
+  skill3ButtonPressed: 0
+  skill4ButtonPressed: 0
+  acceptInput: 1
+--- !u!114 &-9002597927142308152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484090104208674999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e661da752ccc899429af21ec84b4083b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3678515726278282396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6484090104208674999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badaa91a48b226d47b9e4f5818b58466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Hero Selection
+  onSceneChangeTo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: -9002597927142308152}
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

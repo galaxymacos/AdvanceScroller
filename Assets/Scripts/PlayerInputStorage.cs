@@ -31,6 +31,13 @@ public class PlayerInputStorage : MonoBehaviour
         onNewInputAdded -= StoreInput;
     }
 
+    public void Reset()
+    {
+        playerInputs.Clear();
+        champions.Clear();
+        mapIndexes.Clear();
+    }
+
     /// <summary>
     /// driven by event
     /// </summary>
