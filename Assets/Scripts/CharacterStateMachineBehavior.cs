@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
+public class CharacterStateMachineBehavior : StateMachineBehaviour
 {
     
     protected Rigidbody2D rb;
@@ -56,8 +56,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
      
         if (animationName != "")
         {
-            // playerCharacter.PrintString(animationName);
-            
             var cooldownFilter = new CooldownFilter(animationName, this, null);
             var ultimateRageFilter = new UltimateRageFilter(animationName, this, cooldownFilter);
             var forceAttackFilter = new ForceAttackFilter(animationName, this, ultimateRageFilter);
@@ -66,41 +64,13 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour, IPauseable
         
             if (limitedUsageFilter.FilterRecur())
             {
-                // playerCharacter.PrintString("player can use this skill");
                 limitedUsageFilter.DealWithResultRecur();
                 _animator.SetTrigger(animationName);
             }
         }
-        
-
-        // animationName = ForceAttackFilter(animationName);
-        // animationName = LimitUsageFilter(animationName);
-        // animationName = CoolDownFilter(animationName);
-
-        // if (animationName != "")
-        // {
-            // _animator.SetTrigger(animationName);
-        // }
     }
     
-    // public string ForceAttackFilter(string animationName)
-    // {
-    //     foreach (var animationAvailable in stateCanForceTransformTo)
-    //     {
-    //         if (animationName == animationAvailable)
-    //         {
-    //             CharacterEnergyComponent characterEnergy = characterAnimator.GetComponent<CharacterEnergyComponent>();
-    //             if (characterEnergy.Consume(30))
-    //             {
-    //                 return animationName;
-    //             }
-    //
-    //             return "";
-    //         }
-    //     }
-    //
-    //     return animationName;
-    // }
+
 
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
