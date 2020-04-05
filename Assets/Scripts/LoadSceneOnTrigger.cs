@@ -12,6 +12,8 @@ public class LoadSceneOnTrigger : MonoBehaviour
     [SerializeField] private bool loadCurrentScene;
 
     public UnityEvent onBeforeLoading;
+    public UnityEvent onLoadingAlmostFinish;
+    [SerializeField] private bool requireConfirm;
     public event Action<float> onLoadingPercentageUpdated;
     private bool hasTriggered;
     public void Trigger()
@@ -32,6 +34,7 @@ public class LoadSceneOnTrigger : MonoBehaviour
 
     public IEnumerator LoadingScene(string sceneNameToLoad)
     {
+        Application.backgroundLoadingPriority = ThreadPriority.BelowNormal;
         var operation = SceneManager.LoadSceneAsync(sceneNameToLoad);
         operation.allowSceneActivation =     false;
         while (!operation.isDone)
@@ -41,15 +44,32 @@ public class LoadSceneOnTrigger : MonoBehaviour
 
             if (progress >= 0.9f)
             {
+                
+                onLoadingAlmostFinish?.Invoke();
                 onLoadingPercentageUpdated?.Invoke(1);
-                yield return new WaitForSeconds(1.5f);
-                operation.allowSceneActivation = true;
+                if (requireConfirm)
+                {
+                    if (confirm)
+                    {
+                        operation.allowSceneActivation = true;
+                    }
+                }
+                else
+                {
+                    operation.allowSceneActivation = true;
+                }
             }
 
             yield return null;
         }
         // yield return new WaitForSeconds(1.5f);
 
+    }
+
+    private bool confirm;
+    public void TriggerConfirm()
+    {
+        confirm = true;
     }
     
     public void Trigger(string _sceneToLoad)

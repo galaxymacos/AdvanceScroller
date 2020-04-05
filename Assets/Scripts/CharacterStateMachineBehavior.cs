@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterStateMachineBehavior : StateMachineBehaviour
@@ -21,8 +22,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     [HideInInspector] public Animator characterAnimator;
     protected PlayerInput playerInput => playerCharacter.playerInput;
     [HideInInspector] public PlayerCharacter playerCharacter;
-    
-    
+
+    private bool hasSetup;
 
     // private Knockable knockable;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -45,6 +46,20 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         rb = _animator.GetComponent<Rigidbody2D>();
         GameStateMachine.gamePause += Pause;
         GameStateMachine.gameUnPause += UnPause;
+        hasSetup = true;
+        
+    }
+
+   
+
+    private void OnDestroy()
+    {
+        if (hasSetup)
+        {
+            GameStateMachine.gamePause -= Pause;
+            GameStateMachine.gameUnPause -= UnPause;
+        }
+        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -75,6 +90,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
+        hasSetup = false;
         GameStateMachine.gamePause -= Pause;
         GameStateMachine.gameUnPause -= UnPause;
     }
@@ -274,19 +290,14 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         characterAnimator.SetTrigger("wallslide");
     }
 
-    
-    public virtual void Pause()
+
+    private void Pause()
     {
-        Debug.Log("pausing character animation state machine");
-        isPaused = true;
-        velocityBeforePause = rb.velocity;
-        rb.velocity = Vector2.zero;
+            isPaused = true;
     }
 
-    public virtual void UnPause()
+    private void UnPause()
     {
-        Debug.Log("unpausing character animation state machine");
-        isPaused = false;
-        rb.velocity = velocityBeforePause;
+            isPaused = false;
     }
 }
