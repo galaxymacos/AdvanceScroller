@@ -1,6 +1,8 @@
-﻿using DG.Tweening;
+﻿using System;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class TipText : MonoBehaviour
 {
@@ -14,10 +16,12 @@ public class TipText : MonoBehaviour
 
     private bool ShouldHide;
     // Start is called before the first frame update
-    void Start()
+
+    private void OnEnable()
     {
         Randomize(tips);
-        tipShowTimeCounter = tipShowInterval;
+        tipShowTimeCounter = 0.1f;
+        ChangeTextContent();
     }
 
     private void Randomize(Tip[] _tips)
@@ -40,16 +44,27 @@ public class TipText : MonoBehaviour
             tipShowTimeCounter -= Time.deltaTime;
             if (tipShowTimeCounter <= 0)
             {
+                print("Change show stats");
                 if (ShouldHide)
                 {
-                    DOTween.To(() => text.alpha, result => text.alpha = result, 0, 2f).OnComplete(ChangeTextContent);
+                    DOTween.To(() => text.alpha, result => text.alpha = result, 0, 2f).OnComplete(AppearDisappear);
                 }
                 else
                 {
-                    DOTween.To(() => text.alpha, result => text.alpha = result, 1, 2f).OnComplete(ChangeTextContent);
+                    DOTween.To(() => text.alpha, result => text.alpha = result, 1, 2f).OnComplete(AppearDisappear);
                 }
                 
             }
+        }
+    }
+
+    private void AppearDisappear()
+    {
+        ChangeStats();
+
+        if (!ShouldHide)
+        {
+            ChangeTextContent();
         }
     }
 
@@ -63,10 +78,13 @@ public class TipText : MonoBehaviour
         {
             tipIndexToShow = 0;
         }
+        text.text = tips[tipIndexToShow].text;
+    }
 
+    private void ChangeStats()
+    {
         if (ShouldHide)
         {
-            text.text = tips[tipIndexToShow].text;
             tipShowTimeCounter = 0.1f;
         }
         else

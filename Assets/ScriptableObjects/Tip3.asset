@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76b39bc6d87480983964491c55d9d38, type: 3}
   m_Name: Tip3
   m_EditorClassIdentifier: 
-  text: Tip 3
+  text: Bat Hero has the highest mobility out of all characters

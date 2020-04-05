@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d76b39bc6d87480983964491c55d9d38, type: 3}
   m_Name: Tip2
   m_EditorClassIdentifier: 
-  text: Tip 2
+  text: Cat Hero is able to do a lot of debuff by his skill1 and skill3 to her enemy

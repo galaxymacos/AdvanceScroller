@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d76b39bc6d87480983964491c55d9d38, type: 3}
-  m_Name: Tip1
+  m_Name: Tip4
   m_EditorClassIdentifier: 
-  text: Physic Hero can charge his skill and skill 1 and fire a total different skill
-    after fully charged
+  text: Axe Hero is able to buff herself during the game using skill 1. After buffed,
+    her skill can deal much more damage and has damage effect.
