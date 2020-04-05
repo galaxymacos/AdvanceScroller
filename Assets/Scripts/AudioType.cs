@@ -74,18 +74,23 @@ public enum AudioType
     CatHero_Dash,
     CatHero_Claw,
     CatHero_Claw2,
+    CatHero_InstantKillStart,
+    CatHero_LightingShield,
+
     CatHero_ClawHit,
     CatHero_Claw2Hit,
-    CatHero_LightingShield,
     CatHero_SendCat,
     CatHero_CatJump,
     CatHero_CatExplode,
     CatHero_BleedingClaw,
+    CatHero_LightingShieldHit,
+    CatHero_LightningFinalAttack,
+
 
     #endregion
 
     #region Psychic Hero
-    
+
     PsychicHero_Jump,
     PsychicHero_DoubleJump,
     PsychicHero_Run,

@@ -635,13 +635,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 358398773}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -994,13 +994,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 404044983}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -2140,6 +2140,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: cc0bd6fbd7a72e142aa5248308befae8, type: 3}
   - typeInString: BatHero_BatEnergyHit
     clip: {fileID: 8300000, guid: 37f841f5031454e4e8b017ab2c98f339, type: 3}
+  - typeInString: CatHero_LightingShieldHit
+    clip: {fileID: 8300000, guid: 076477bc647f0d94b8d59dda6c8bd210, type: 3}
+  - typeInString: CatHero_LightningFinalAttack
+    clip: {fileID: 8300000, guid: 958962f50548bc34b88d211cb63cb0cd, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0
@@ -2767,13 +2771,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1016037452}
-    characterCount: 49
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 9
-    wordCount: 10
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -3888,13 +3892,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1726954616}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -4388,11 +4392,13 @@ MonoBehaviour:
     - typeInString: CatHero_SendCat
       clip: {fileID: 8300000, guid: fc8e2de0b8687374d91bd146b5d6bbea, type: 3}
     - typeInString: CatHero_BleedingClaw
-      clip: {fileID: 8300000, guid: a62488bd3b3adb54c8c698837066b548, type: 3}
+      clip: {fileID: 8300000, guid: 9d6529b4baf52e54f9e08f5e49d5a7f1, type: 3}
     - typeInString: CatHero_LightingShield
       clip: {fileID: 8300000, guid: fac0fb6a06479e44bb24182feb6646c4, type: 3}
     - typeInString: CatHero_Dash
       clip: {fileID: 8300000, guid: 0772ad0b8e4008c41b51cfd52165ab48, type: 3}
+    - typeInString: CatHero_InstantKillStart
+      clip: {fileID: 8300000, guid: 7da36a14c2387474a87c06afdda4eef0, type: 3}
   - source: {fileID: 364014557}
     audio:
     - typeInString: PsychicHero_ShootSmallDagger
@@ -4615,13 +4621,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1893303169}
-    characterCount: 8
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0

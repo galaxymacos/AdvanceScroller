@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateCanTransformTo: []
   stateCanForceTransformTo: []
-  soundInString: 
+  soundInString: CatHero_InstantKillStart
   canControlHorizontalMovement: 0
   canFloatInAir: 1
   characterAnimator: {fileID: 0}
