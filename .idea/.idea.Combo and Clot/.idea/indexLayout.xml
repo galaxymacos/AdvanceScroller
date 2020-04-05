@@ -23,10 +23,9 @@
     <explicitExcludes>
       <Path>.git</Path>
       <Path>.idea</Path>
-      <Path>Combo And Clot</Path>
+      <Path>Builds</Path>
       <Path>Library</Path>
       <Path>Temp</Path>
-      <Path>WebGL build</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>

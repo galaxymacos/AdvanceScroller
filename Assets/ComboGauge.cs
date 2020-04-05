@@ -11,39 +11,30 @@ public class ComboGauge : MonoBehaviour
 
     public float TimeBeforeComboBreak => timeBeforeComboBreak;
 
-    public event Action onComboAdded;
+    public event Action<ComboGaugeEventArgs> onComboAdded;
 
-    public event Action onComboBreak;
+    public event Action<ComboGaugeEventArgs> onComboBreak;
 
     private float comboBreakCounter;
 
-    private void Awake()
+    public class ComboGaugeEventArgs
     {
-        // foreach (var singleAttackComponent in GetComponentsInChildren<SingleAttackComponent>())
-        // {
-        //     singleAttackComponent.onAttackSucceed += AddComboNum;
-        // }
-        //
-        // foreach (var continuousAttack in GetComponentsInChildren<ContinuousAttack>())
-        // {
-        //     continuousAttack.onContinueAttackSuccess+=AddComboNum;
-        // }
-        //
-        // foreach (var instantKill in GetComponentsInChildren<InstantKillContinuousAttack>())
-        // {
-        //     instantKill.onContinueAttackSuccess+=AddComboNum;
-        // }
+        public readonly int comboNum;
+        
+        public ComboGaugeEventArgs(int comboNum)
+        {
+            this.comboNum = comboNum;
+        }
     }
-
     public void BreakComboBecauseOfTakingDamage()
     {
-        onComboBreak?.Invoke();
+        onComboBreak?.Invoke(new ComboGaugeEventArgs(currentComboNum));
     }
 
     public void AddComboNum()
     {
         currentComboNum += 1;
-        onComboAdded?.Invoke();
+        onComboAdded?.Invoke(new ComboGaugeEventArgs(currentComboNum));
         comboBreakCounter = timeBeforeComboBreak;
     }
 
@@ -61,7 +52,7 @@ public class ComboGauge : MonoBehaviour
             if (comboBreakCounter <= 0)
             {
                 ClearComboNum();
-                onComboBreak?.Invoke();
+                onComboBreak?.Invoke(new ComboGaugeEventArgs(currentComboNum));
             }
         }
     }

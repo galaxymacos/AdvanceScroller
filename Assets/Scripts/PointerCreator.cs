@@ -11,7 +11,7 @@ public class PointerCreator : MonoBehaviour
     {
         PlayerInputStorage.onNewInputAdded += CreatePointerForInput;
 
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);    
         if (instance == null)
         {
             instance = this;

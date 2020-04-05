@@ -2465,6 +2465,7 @@ GameObject:
   m_Component:
   - component: {fileID: 982643651}
   - component: {fileID: 982643650}
+  - component: {fileID: 982643652}
   m_Layer: 0
   m_Name: Player Input Storage
   m_TagString: Untagged
@@ -2501,6 +2502,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982643652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982643649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: badaa91a48b226d47b9e4f5818b58466, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneToLoad: Hero Selection
+  onSceneChangeTo:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 982643650}
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1010392095
 GameObject:
   m_ObjectHideFlags: 0
@@ -4244,7 +4272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e215a5dafdab644934abdfa26b6d31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inDebugMode: 1
+  inDebugMode: 0
 --- !u!4 &1767372506
 Transform:
   m_ObjectHideFlags: 0

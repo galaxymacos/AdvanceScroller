@@ -18,7 +18,7 @@ public class AB_Climb_General : CharacterStateMachineBehavior
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         if (playerInput.verticalAxis > Mathf.Epsilon)
@@ -43,9 +43,12 @@ public class AB_Climb_General : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
+        
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1;
+        
         playerCharacter.onPlayerExitLadder -= TransferToIdleState;
         playerCharacter.onPlayerGrounded -= TransferToIdleState;
+        
         animator.speed = 1;
         playerInput.verticalAxis = 0;
 
