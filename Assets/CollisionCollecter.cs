@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class CollisionCollecter : MonoBehaviour
 {
@@ -9,8 +10,10 @@ public class CollisionCollecter : MonoBehaviour
 
     public DetectBy detectMethod;
     public string tagName;
+    public LayerMask layerToCollide;
     
     public event Action<Collider2D> onCollisionDetect;
+    public UnityEvent onCollisionDetectUnityEvent;
 
     private void Awake()
     {
@@ -26,9 +29,21 @@ public class CollisionCollecter : MonoBehaviour
                 {
                     detectedColliders.Add(other);
                     onCollisionDetect?.Invoke(other);
+                    onCollisionDetectUnityEvent?.Invoke();
                 }
                 break;
             case DetectBy.Layer:
+                if ((1<<other.gameObject.layer & layerToCollide)!=0)
+                {
+                    detectedColliders.Add(other);
+                    onCollisionDetect?.Invoke(other);
+                    onCollisionDetectUnityEvent?.Invoke();
+                }
+                break;
+            case DetectBy.Everything:
+                detectedColliders.Add(other);
+                onCollisionDetect?.Invoke(other);
+                onCollisionDetectUnityEvent?.Invoke();
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
@@ -41,5 +56,5 @@ public class CollisionCollecter : MonoBehaviour
 
 public enum DetectBy
 {
-    Tag, Layer
+    Tag, Layer, Everything
 }

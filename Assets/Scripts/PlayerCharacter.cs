@@ -86,11 +86,20 @@ public class PlayerCharacter : MonoBehaviour
     private Rigidbody2D rb;
     public bool isFacingRight => transform.localScale.x > 0;
     
-    public float MovementSpeed => IsMoveSpeedOverriden? OverridenMovementSpeed : MovementSpeedOriginal;
-    public float MovementSpeedOriginal = 5f;
-    public bool IsMoveSpeedOverriden;
-    public float OverridenMovementSpeed;
     
+    public float MovementSpeedOriginal = 5f;
+
+    public float GetMovementSpeed()
+    {
+        var movementSpeedFinal = MovementSpeedOriginal;
+        foreach (Func<float,float> movementSpeedLimiter in limitersForMS)
+        {
+            movementSpeedFinal = movementSpeedLimiter(movementSpeedFinal);
+        }
+        return movementSpeedFinal;
+    }
+    public List<Func<float, float>> limitersForMS;
+
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipByInputComponent;
@@ -103,7 +112,7 @@ public class PlayerCharacter : MonoBehaviour
     {
         // set up variable
         playerInput = GetComponent<PlayerInput>();
-        
+        limitersForMS = new List<Func<float, float>>();
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipByInputComponent = new CharacterFlipComponent(transform);
         characterHealthComponent = GetComponent<CharacterHealthComponent>();

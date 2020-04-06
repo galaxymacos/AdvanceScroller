@@ -12,6 +12,9 @@ public class UltraSpacePlacer : MonoBehaviour
     [SerializeField] private float extraHeight = 5f;
     [SerializeField] private float extraWidth = 10f;
 
+    [SerializeField] private bool onlyDetectOnce = true;
+    private bool hasSpawned;
+
     private GameObject ultraSpace;
 
     private void Awake()
@@ -19,22 +22,31 @@ public class UltraSpacePlacer : MonoBehaviour
         collisionCollector.onCollisionDetect += PlaceOn;
     }
 
+    private void OnDestroy()
+    {
+        collisionCollector.onCollisionDetect -= PlaceOn;
+    }
+
     public void Setup(PlayerCharacter _owner)
     {
         owner = _owner;
     }
 
-    public void PlaceOn(Collider2D target)
+    private void PlaceOn(Collider2D target)
     {
-        print("place on");
-        if (collisionCollector.detectedColliders.Count >= 2 && ultraSpace == null)
+        if (collisionCollector.detectedColliders.Count >= 2)
         {
-            print("instantiate");
-            ultraSpace = Instantiate(ultraSpacePrefab, target.transform.position, Quaternion.identity);
+            if (ultraSpace == null)
+            {
+                ultraSpace = Instantiate(ultraSpacePrefab, target.transform.position, Quaternion.identity);
+                ultraSpace.GetComponent<UltraSpace>().Setup(owner);
+            }
+
+            LimitUltraSpaceToBound();
         }
     }
 
-    public class UltraSpaceData
+    private class UltraSpaceData
     {
         public UltraSpaceData(Vector3 center, float width, float height)
         {
@@ -42,48 +54,30 @@ public class UltraSpacePlacer : MonoBehaviour
             this.width = width;
             this.height = height;
         }
+
         public Vector3 center;
         public float width;
         public float height;
     }
 
-    private void Update()
-    {
-        if (ultraSpace != null)
-        {
-            LimitUltraSpaceToBound();
-        }
-    }
-
     private void LimitUltraSpaceToBound()
     {
-        var ultraSpaceData = GetUltraSpaceBound();
-        if (ultraSpaceData != null)
-        {
-            ultraSpace.transform.position = ultraSpaceData.center;
-            ultraSpace.transform.localScale = new Vector3(ultraSpaceData.width, ultraSpaceData.height, 1);
-        }
+        var ultraSpaceBound = GetUltraSpaceBound();
+        ultraSpace.transform.position = ultraSpaceBound.center;
+        ultraSpace.transform.localScale = new Vector3(ultraSpaceBound.width, ultraSpaceBound.height, 1);
     }
-    
-    public UltraSpaceData GetUltraSpaceBound()
+
+    private UltraSpaceData GetUltraSpaceBound()
     {
         var list = collisionCollector.detectedColliders.Select(col => col.transform).ToList();
-        // list.Add(owner.transform);
-        if (list.Count >= 2)
-        {
-            
-            float top = Mathf.Max(list.Select(trans => trans.position.y).ToArray());
-            float left = Mathf.Min(list.Select(trans => trans.position.x).ToArray());
-            float right = Mathf.Max(list.Select(trans => trans.position.x).ToArray());
-            float bottom = Mathf.Min(list.Select(trans => trans.position.y).ToArray());
-            Vector3 center = new Vector3((right + left)/2, (top + bottom)/2);
-            print(center);
-            float width = right - left + extraWidth;
-            float height = top - bottom + extraHeight;
-            return new UltraSpaceData(center, width, height);
-        }
 
-        return null;
+        float top = Mathf.Max(list.Select(trans => trans.position.y).ToArray());
+        float left = Mathf.Min(list.Select(trans => trans.position.x).ToArray());
+        float right = Mathf.Max(list.Select(trans => trans.position.x).ToArray());
+        float bottom = Mathf.Min(list.Select(trans => trans.position.y).ToArray());
+        Vector3 center = new Vector3((right + left) / 2, (top + bottom) / 2);
+        float width = right - left + extraWidth;
+        float height = top - bottom + extraHeight;
+        return new UltraSpaceData(center, width, height);
     }
-    
 }

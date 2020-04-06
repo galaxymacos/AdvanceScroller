@@ -19,7 +19,7 @@ public class CharacterGroundMovementComponent: MovementComponent
 
         if (_playerCharacter.canControlMovement && _playerCharacter.playerInput!=null && !_playerCharacter.GetComponent<CharacterPauser>().IsPausing)
         {
-            rb.velocity = new Vector2(_playerCharacter.MovementSpeed * _playerCharacter.playerInput.horizontalAxis, rb.velocity.y);
+            rb.velocity = new Vector2(_playerCharacter.GetMovementSpeed() * _playerCharacter.playerInput.horizontalAxis, rb.velocity.y);
         }
         
     }

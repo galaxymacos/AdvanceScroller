@@ -47,14 +47,16 @@ public class SlowEffectProcessor : MonoBehaviour, IAttackEffectProcessor
 
     private void SlowPlayer()
     {
-        player.IsMoveSpeedOverriden = true;
-        player.OverridenMovementSpeed = player.MovementSpeedOriginal * slowPercentage;
+        player.limitersForMS.Add(SlowEffectConditioner);
     }
 
     private void RecoverPlayerSpeed()
     {
-        player.IsMoveSpeedOverriden = false;
-        player.OverridenMovementSpeed = player.MovementSpeedOriginal;
+        player.limitersForMS.Remove(SlowEffectConditioner);
+    }
 
+    private float SlowEffectConditioner(float movementSpeed)
+    {
+        return movementSpeed * slowPercentage;
     }
 }
