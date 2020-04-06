@@ -20,6 +20,7 @@ public class SMB_Ghost_Chase : GhostStateMachineBehavior
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameStateMachine.gameIsPause) return;
         Chase();
         PlayNextActionWhenCloseToAttackRange();
         

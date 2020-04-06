@@ -21,6 +21,8 @@ public class SMB_Bandit_Idle : SMB_Bandit
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameStateMachine.gameIsPause) return;
+        base.OnStateUpdate(animator, stateInfo, layerIndex);
         if (data.targetPlayer!=null)
         {
             AnimatorOverrideController aoc = new AnimatorOverrideController(anim.runtimeAnimatorController);

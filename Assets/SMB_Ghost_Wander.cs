@@ -29,6 +29,7 @@ public class SMB_Ghost_Wander : GhostStateMachineBehavior
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameStateMachine.gameIsPause) return;
         if (isIdling)
         {
             rigidbody.velocity = Vector2.zero;

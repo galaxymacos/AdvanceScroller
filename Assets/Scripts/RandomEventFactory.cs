@@ -26,6 +26,9 @@ public abstract class RandomEvent: MonoBehaviour
 
     protected virtual void Update()
     {
+        if (GameStateMachine.gameIsPause) return;
+        
+        
         if (spawnEventCounter > 0)
         {
             spawnEventCounter -= Time.deltaTime;
@@ -38,4 +41,8 @@ public abstract class RandomEvent: MonoBehaviour
     }
 
     public abstract void Execute();
+    public void UnPause()
+    {
+        throw new NotImplementedException();
+    }
 }

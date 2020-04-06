@@ -20,6 +20,7 @@ public class SMB_Ghost_Attack : GhostStateMachineBehavior
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (GameStateMachine.gameIsPause) return;
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         ghostFacingComponent.SetFacingDelegate(GhostFacingComponent.FacingCondition.FaceByVelocity);
     }

@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 7440506371232588312}
   - component: {fileID: -3216083160800717811}
   - component: {fileID: 9023417166255972847}
+  - component: {fileID: 6630165175594597586}
   m_Layer: 0
   m_Name: Ghost
   m_TagString: Untagged
@@ -349,6 +350,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48c5b04dc5a74aeca5443662be2b527d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6630165175594597586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2515901577015938424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d795918b9649d5a56c21c784083628, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3458185977450829867
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,5 +463,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e0f32ccb1f4fdda2ec5a58c3d7fe87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  owner: {fileID: 0}
   damageData: {fileID: 11400000, guid: 2c301f2d9c9b47b43a95842b722cdb52, type: 2}
   objectsHasProcessed: []
