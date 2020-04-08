@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1560094806420466878}
   - component: {fileID: 7427479794507093527}
   - component: {fileID: 2626787865925736671}
+  - component: {fileID: 7715583234801993171}
   m_Layer: 5
   m_Name: Combo Gauge
   m_TagString: Untagged
@@ -36,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.3750105, y: -0.000061035156}
-  m_SizeDelta: {x: 223, y: 151}
+  m_AnchoredPosition: {x: 0.000026703, y: -0.000061035156}
+  m_SizeDelta: {x: 387.55, y: 151}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &708837287688852049
 CanvasRenderer:
@@ -65,19 +66,20 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 99
+  m_text: HIT 99
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7cc231e859b62ec4e99cea2f483b633a, type: 2}
+  m_sharedMaterial: {fileID: 4469517890448474062, guid: 7cc231e859b62ec4e99cea2f483b633a,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278248191
-  m_fontColor: {r: 1, g: 0.8873453, b: 0, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 1
+  m_colorMode: 0
   m_fontColorGradient:
     topLeft: {r: 1, g: 1, b: 1, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
@@ -93,15 +95,15 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 135
-  m_fontSizeBase: 135
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_textAlignment: 514
-  m_characterSpacing: 0
+  m_characterSpacing: 0.14
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -134,13 +136,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1560094806420466878}
-    characterCount: 0
+    characterCount: 6
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 0
+    spaceCount: 1
+    wordCount: 2
     linkCount: 0
-    lineCount: 0
-    pageCount: 0
+    lineCount: 1
+    pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -183,6 +185,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboGaugeUI: {fileID: 229715942780811559}
+--- !u!114 &7715583234801993171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173906366469542179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fad8b95ce31f7f4a941613381965f56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  comboGaugeUI: {fileID: 229715942780811559}
+  rainbowSprite: {fileID: 2800000, guid: 4d463537943966a41980f370b9d5d119, type: 3}
 --- !u!1 &6066631343731538689
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,7 +216,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6066631343731538688
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1367,7 +1383,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.375, y: 253}
+  m_AnchoredPosition: {x: -7.375, y: 284}
   m_SizeDelta: {x: 387.55, y: 151}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6335506431735809320

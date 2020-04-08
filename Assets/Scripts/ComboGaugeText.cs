@@ -21,6 +21,6 @@ public class ComboGaugeText : MonoBehaviour
 
     private void UpdateText(ComboGauge.ComboGaugeEventArgs obj)
     {
-        textMesh.text = $"Hit {obj.comboNum.ToString()}";
+        textMesh.text = $"HIT {obj.comboNum.ToString()}";
     }
 }
