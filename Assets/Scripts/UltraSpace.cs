@@ -14,13 +14,12 @@ public class UltraSpace : MonoBehaviour
         owner = _owner;
     }
 
-    private List<PlayerCharacter> players;
     
     private void Awake()
     {
         collisionCollector = GetComponent<CollisionCollecter>();
-        players = new List<PlayerCharacter>();
         collisionCollector.onCollisionDetect += RecordPlayer;
+        collisionCollector.onCollisionRemove += ClearPlayer;
     }
 
     private void RecordPlayer(Collider2D obj)
@@ -30,7 +29,6 @@ public class UltraSpace : MonoBehaviour
         {
             Debug.LogError("There is no player character in the collision");
         }
-        players.Add(player);
         if (player == owner)
         {
             ApplyBuffToOwner(player);
@@ -43,25 +41,27 @@ public class UltraSpace : MonoBehaviour
         }
     }
 
-    private void OnDestroy()
+    private void ClearPlayer(Collider2D obj)
     {
-        ClearAllEffects();
-        collisionCollector.onCollisionDetect -= RecordPlayer;
+        PlayerCharacter player = obj.GetComponent<PlayerCharacter>();
+        if (player == null)
+        {
+            Debug.LogError("There is no player character in the collision");
+        }
+        if (player == owner)
+        {
+            RemoveBuffToOwner(player);
+        }
+        else
+        {
+            RemoveDebuffToOtherPlayer(player);
+        }
     }
 
-    private void ClearAllEffects()
+    private void OnDestroy()
     {
-        foreach (PlayerCharacter playerCharacter in players)
-        {
-            if (playerCharacter == owner)
-            {
-                RemoveBuffToPlayer(playerCharacter);
-            }
-            else
-            {
-                RemoveDebuffToOtherPlayer(playerCharacter);
-            }
-        }
+        collisionCollector.onCollisionDetect -= RecordPlayer;
+        collisionCollector.onCollisionRemove -= ClearPlayer;
     }
 
     private void ApplyDebuffToOtherPlayer(PlayerCharacter playerCharacter)
@@ -79,7 +79,7 @@ public class UltraSpace : MonoBehaviour
         playerCharacter.limitersForMS.Add(Buff_IncreaseSpeed);
     }
     
-    private void RemoveBuffToPlayer(PlayerCharacter playerCharacter)
+    private void RemoveBuffToOwner(PlayerCharacter playerCharacter)
     {
         playerCharacter.limitersForMS.Remove(Buff_IncreaseSpeed);
     }

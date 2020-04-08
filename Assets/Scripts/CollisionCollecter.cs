@@ -6,6 +6,7 @@ using UnityEngine.Events;
 
 public class CollisionCollecter : MonoBehaviour
 {
+    // this collider will not be clear when the collider leaves the range
     public List<Collider2D> detectedColliders;
 
     public DetectBy detectMethod;
@@ -13,6 +14,7 @@ public class CollisionCollecter : MonoBehaviour
     public LayerMask layerToCollide;
     
     public event Action<Collider2D> onCollisionDetect;
+    public event Action<Collider2D> onCollisionRemove;
     public UnityEvent onCollisionDetectUnityEvent;
 
     private void Awake()
@@ -44,6 +46,33 @@ public class CollisionCollecter : MonoBehaviour
                 detectedColliders.Add(other);
                 onCollisionDetect?.Invoke(other);
                 onCollisionDetectUnityEvent?.Invoke();
+                break;
+            default:
+                throw new ArgumentOutOfRangeException();
+        }
+    }
+    
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        switch (detectMethod)
+        {
+            case DetectBy.Tag:
+                if (other.CompareTag(tagName))
+                {
+                    // detectedColliders.Remove(other);
+                    onCollisionRemove?.Invoke(other);
+                }
+                break;
+            case DetectBy.Layer:
+                if ((1<<other.gameObject.layer & layerToCollide)!=0)
+                {
+                    // detectedColliders.Remove(other);
+                    onCollisionRemove?.Invoke(other);
+                }
+                break;
+            case DetectBy.Everything:
+                // detectedColliders.Remove(other);
+                onCollisionRemove?.Invoke(other);
                 break;
             default:
                 throw new ArgumentOutOfRangeException();
