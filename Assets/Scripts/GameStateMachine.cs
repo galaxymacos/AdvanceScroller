@@ -130,6 +130,7 @@ public class Play : IState
 
     public void OnEnter()
     {
+        OnGameStart?.Invoke();
     }
 
     public void OnExit()

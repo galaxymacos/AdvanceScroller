@@ -7,6 +7,7 @@ using UnityEngine.Events;
 public class Timer: MonoBehaviour
 {
     public UnityEvent onTimerEnd;
+    public event Action onTimerEndEvent;
     [SerializeField] private float timeToCountdown;
     [SerializeField] private bool awakeLater;
     
@@ -15,6 +16,7 @@ public class Timer: MonoBehaviour
     {
         StopAllCoroutines();
         onTimerEnd?.Invoke();
+        onTimerEndEvent?.Invoke();
     }
 
     private void Start()
@@ -36,5 +38,6 @@ public class Timer: MonoBehaviour
     {
         yield return new WaitForSeconds(timeToCountdown);
         onTimerEnd?.Invoke();
+        onTimerEndEvent?.Invoke();
     }
 }
