@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   comboGaugeUI: {fileID: 229715942780811559}
-  rainbowSprite: {fileID: 2800000, guid: 4d463537943966a41980f370b9d5d119, type: 3}
+  rainbowSprite: {fileID: 2800000, guid: c216153fd6c0b9141aff1932459fd99e, type: 3}
 --- !u!1 &6066631343731538689
 GameObject:
   m_ObjectHideFlags: 0

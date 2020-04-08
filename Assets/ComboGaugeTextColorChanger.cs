@@ -13,7 +13,7 @@ public class ComboGaugeTextColorChanger : MonoBehaviour
     {
         comboGaugeUI.onComboAddedAction += UpdateText;
         textMesh = GetComponent<TextMeshProUGUI>();
-        mat = textMesh.material;
+        mat = textMesh.fontMaterial;
     }
 
     private void OnDestroy()
@@ -34,7 +34,9 @@ public class ComboGaugeTextColorChanger : MonoBehaviour
         }
         else if (obj.comboNum <= 9)
         {
+            textMesh.color = Color.white;
             mat.SetTexture(ShaderUtilities.ID_FaceTex, rainbowSprite);
+            // mat.SetTexture(ShaderUtilities.ID_FaceTex, rainbowSprite);
         }
     }
 }
