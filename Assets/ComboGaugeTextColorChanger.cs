@@ -6,7 +6,7 @@ using UnityEngine;
 public class ComboGaugeTextColorChanger : MonoBehaviour
 {
     [SerializeField] private ComboGaugeUI comboGaugeUI;
-    [SerializeField] private Texture rainbowSprite;
+    [SerializeField] private Texture2D rainbowSprite;
     private TextMeshProUGUI textMesh;
     private Material mat;
     private void Awake()
