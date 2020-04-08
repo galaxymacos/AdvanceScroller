@@ -59,9 +59,12 @@ public enum AudioType
     BatHero_InstantKillStart,
     BatHero_InstantKillHit,
     BatHero_InstantKillExplode,
+
+    BatHero_InstantKillCloseYourEyes,
     BatHero_PunchHit,
     BatHero_ShurikiHit,
     BatHero_BatEnergyHit,
+    BatHero_InstantKillLastStrike,
 
 
     #endregion
