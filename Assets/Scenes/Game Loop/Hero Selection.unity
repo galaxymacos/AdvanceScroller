@@ -2144,6 +2144,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 076477bc647f0d94b8d59dda6c8bd210, type: 3}
   - typeInString: CatHero_LightningFinalAttack
     clip: {fileID: 8300000, guid: 958962f50548bc34b88d211cb63cb0cd, type: 3}
+  - typeInString: BatHero_InstantKillStart
+    clip: {fileID: 8300000, guid: 819f9d27041ecb8499f09a8174685464, type: 3}
 --- !u!4 &881622803
 Transform:
   m_ObjectHideFlags: 0

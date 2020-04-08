@@ -63,13 +63,23 @@ public class UltraSpacePlacer : MonoBehaviour
     private void LimitUltraSpaceToBound()
     {
         var ultraSpaceBound = GetUltraSpaceBound();
-        if (spaceTweeners == null)
+        if (spaceTweeners == null || spaceTweeners.Count == 0)
         {
+            Release();
             spaceTweeners = new List<Tweener>();
-            Tweener tweener1 = DOTween.To(() => ultraSpace.transform.position, result => ultraSpace.transform.position=result, ultraSpaceBound.center,
-                1);
-            Tweener tweener2 = DOTween.To(() => ultraSpace.transform.localScale, result => ultraSpace.transform.localScale = result,
-                new Vector3(ultraSpaceBound.width, ultraSpaceBound.height, 1), 1).OnComplete(Lockdown);
+            Tweener tweener1 = null;
+            tweener1 = DOTween.To(() => ultraSpace.transform.position, result => ultraSpace.transform.position=result, ultraSpaceBound.center,
+                1).OnComplete(() =>
+            {
+                spaceTweeners.Remove(tweener1);
+            });
+            Tweener tweener2 = null;
+            tweener2 = DOTween.To(() => ultraSpace.transform.localScale, result => ultraSpace.transform.localScale = result,
+                new Vector3(ultraSpaceBound.width, ultraSpaceBound.height, 1), 1).OnComplete(()=>
+            {
+                Lockdown();
+                spaceTweeners.Remove(tweener2);
+            });
             spaceTweeners.Add(tweener1);
             spaceTweeners.Add(tweener2);
         }
