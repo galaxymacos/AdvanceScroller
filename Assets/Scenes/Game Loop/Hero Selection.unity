@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -2144,7 +2144,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 076477bc647f0d94b8d59dda6c8bd210, type: 3}
   - typeInString: CatHero_LightningFinalAttack
     clip: {fileID: 8300000, guid: 958962f50548bc34b88d211cb63cb0cd, type: 3}
-  - typeInString: BatHero_InstantKillCloseYourEyes,
+  - typeInString: BatHero_InstantKillCloseYourEyes
     clip: {fileID: 8300000, guid: 836e12bd9c8bc1c408b11c6b751de89d, type: 3}
 --- !u!4 &881622803
 Transform:
