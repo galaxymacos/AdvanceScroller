@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SMB_Jump_General : CharacterStateMachineBehavior
 {
-    [SerializeField] private float jumpForce = 5f;
 
     [SerializeField] private AnimationClip firstJump;
     [SerializeField] private AnimationClip secondJump;
@@ -39,7 +38,7 @@ public class SMB_Jump_General : CharacterStateMachineBehavior
 
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         rb = _animator.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        rb.velocity = new Vector2(rb.velocity.x, playerCharacter.GetJumpSpeed());
 
 
         playerCharacter.jumpTime++;

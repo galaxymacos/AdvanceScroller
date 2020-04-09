@@ -37,7 +37,7 @@ public class UltraSpacePlacer : MonoBehaviour
             if (ultraSpace == null)
             {
                 ultraSpace = Instantiate(ultraSpacePrefab, target.transform.position, Quaternion.identity);
-                ultraSpace.GetComponent<UltraSpace>().Setup(owner);
+                ultraSpace.GetComponent<SamuraiDomain>().Setup(owner);
                 ultraSpace.GetComponent<Timer>().onTimerEndEvent += SpaceClosing;
             }
 

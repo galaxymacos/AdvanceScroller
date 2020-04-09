@@ -61,11 +61,8 @@ public class CharacterHealthComponent : MonoBehaviour
     {
         damageSourceFromLastAttack = _damageSource;
         damageDataFromLastAttack = _damageData;
-        // bleedingComponent.CheckBleed(_damageData);
-        // if (playerCharacter.dashInvincibleTimeCounter > 0)
-        // {
-        //     playerCharacter.onPlayerDodgeDamage?.Invoke();
-        // }
+
+        // float damageAfterFliter = GetComponent<PlayerCharacter>().limitersForAtk(_damageData.damage);
         
         DrainHealth(_damageData.damage);
 

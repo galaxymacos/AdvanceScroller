@@ -83,7 +83,6 @@ public class PlayerCharacter : MonoBehaviour
     public Action onPlayerStartWallSlide;
     public Action onPlayerStopWallSlide;
 
-    private Rigidbody2D rb;
     public bool isFacingRight => transform.localScale.x > 0;
     
     
@@ -100,6 +99,33 @@ public class PlayerCharacter : MonoBehaviour
     }
     public List<Func<float, float>> limitersForMS;
 
+    public float jumpSpeed = 6f;
+    public List<Func<float, float>> limitersForJS;
+
+    public List<Func<float, float>> limitersForAtk;
+
+    public float GetJumpSpeed()
+    {
+        var jumpSpeedFinal = jumpSpeed;
+        foreach (Func<float, float> jumpSpeedLimiter in limitersForJS)
+        {
+            jumpSpeedFinal = jumpSpeedLimiter(jumpSpeedFinal);
+        }
+        return jumpSpeedFinal;
+    }
+
+    public float GetDamageAfterLimiter(float damage)
+    {
+        var damageFinal = damage;
+        foreach (Func<float,float> func in limitersForAtk)
+        {
+            damageFinal = func(damage);
+        }
+        return damageFinal;
+    }
+
+
+
     public bool canControlMovement;
     [HideInInspector]public CharacterGroundMovementComponent characterGroundMovementComponent;
     [HideInInspector] public CharacterFlipComponent flipByInputComponent;
@@ -113,12 +139,12 @@ public class PlayerCharacter : MonoBehaviour
         // set up variable
         playerInput = GetComponent<PlayerInput>();
         limitersForMS = new List<Func<float, float>>();
+        limitersForJS = new List<Func<float, float>>();
         characterGroundMovementComponent = new CharacterGroundMovementComponent(this);
         flipByInputComponent = new CharacterFlipComponent(transform);
         characterHealthComponent = GetComponent<CharacterHealthComponent>();
         onPlayerGrounded += ResetJumpTime;
 
-        rb = GetComponent<Rigidbody2D>();
 
 
     }
