@@ -464,6 +464,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 363965048516875476}
     m_Modifications:
+    - target: {fileID: 1770032457, guid: 5d31b3127f39e634ab25a4c1834092b9, type: 3}
+      propertyPath: maxZoom
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1770032457, guid: 5d31b3127f39e634ab25a4c1834092b9, type: 3}
+      propertyPath: zoomLimiter
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6123412869582249454, guid: 5d31b3127f39e634ab25a4c1834092b9,
         type: 3}
       propertyPath: m_LocalPosition.x

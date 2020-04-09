@@ -128,7 +128,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829747677670258654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.25, y: 0, z: 0}
+  m_LocalPosition: {x: -0.24, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966109100616860237}
@@ -489,8 +489,6 @@ MonoBehaviour:
   - {fileID: 8128414368569400561}
   impactWave: {fileID: 7253243997832406712}
   MovementSpeedOriginal: 5
-  IsMoveSpeedOverriden: 0
-  OverridenMovementSpeed: 0
   canControlMovement: 1
   chargedDagger: {fileID: 0}
   winPose: {fileID: 21300000, guid: c4602dc319de98147b559e4303cbc748, type: 3}
@@ -916,7 +914,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 0}
+  m_Offset: {x: -0.020001888, y: -0.0007663369}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -927,7 +925,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.57, y: 0.72}
+  m_Size: {x: 0.44792938, y: 0.7215327}
   m_EdgeRadius: 0
 --- !u!114 &6546511889251633407
 MonoBehaviour:
@@ -1270,7 +1268,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7500797236233910003}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 0}
+  m_LocalPosition: {x: 0.242, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 966109100616860237}

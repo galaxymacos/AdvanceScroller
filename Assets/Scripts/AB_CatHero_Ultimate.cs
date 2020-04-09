@@ -11,6 +11,7 @@ public class AB_CatHero_Ultimate : CharacterStateMachineBehavior
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
         ultimateComponent = animator.GetComponent<UltimateComponent>();
+        rb.velocity = Vector2.zero;
         ultimateComponent.ShowOff();
         rb.gravityScale = 0;
     }

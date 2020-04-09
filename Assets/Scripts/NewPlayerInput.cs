@@ -183,7 +183,6 @@ public class NewPlayerInput : PlayerInput
     public void OnSkill4()
     {
         if (!acceptInput) return;
-
         skill4ButtonPressed = true;
     }
 

@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CharacterStateMachineBehavior : StateMachineBehaviour
 {
-    
     protected Rigidbody2D rb;
     public List<string> stateCanTransformTo;
     public List<string> stateCanForceTransformTo;
@@ -13,7 +12,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     [SerializeField] private bool canFloatInAir;
     protected bool isPaused;
     private Vector3 velocityBeforePause;
-    
+
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
     /// </summary>
@@ -35,6 +34,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         {
             animations.Add(parameter.name, false);
         }
+
         playerCharacter = _animator.GetComponent<PlayerCharacter>();
         playerCharacter.canControlMovement = canControlHorizontalMovement;
         RegisterInputToNextState(stateCanTransformTo);
@@ -43,14 +43,13 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         {
             AudioController.instance.PlayAudio(soundInString.GetAudioType());
         }
+
         rb = _animator.GetComponent<Rigidbody2D>();
         GameStateMachine.gamePause += Pause;
         GameStateMachine.gameUnPause += UnPause;
         hasSetup = true;
-        
     }
 
-   
 
     private void OnDestroy()
     {
@@ -59,24 +58,23 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             GameStateMachine.gamePause -= Pause;
             GameStateMachine.gameUnPause -= UnPause;
         }
-        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         if (isPaused) return;
-        
+
         string animationName = GenerateAnimationByInput();
-     
+
         if (animationName != "")
         {
             var cooldownFilter = new CooldownFilter(animationName, this, null);
             var ultimateRageFilter = new UltimateRageFilter(animationName, this, cooldownFilter);
             var forceAttackFilter = new ForceAttackFilter(animationName, this, ultimateRageFilter);
             var limitedUsageFilter = new LimitedUsageFilter(animationName, this, forceAttackFilter);
-            
-        
+
+
             if (limitedUsageFilter.FilterRecur())
             {
                 limitedUsageFilter.DealWithResultRecur();
@@ -84,7 +82,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
             }
         }
     }
-    
 
 
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -133,33 +130,14 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public string GenerateAnimationByInput()
     {
         if (playerCharacter.playerInput == null) return "";
+        Debug.Log("GenerateAnimationByInput");
+
         foreach (string animationsKey in animations.Keys)
         {
             if (animations[animationsKey])
             {
                 switch (animationsKey)
                 {
-                    case "idle":
-                        if (Mathf.Abs(playerInput.horizontalAxis) < Mathf.Epsilon)
-                        {
-                            return "idle";
-                        }
-
-                        break;
-                    case "run":
-                        if (Mathf.Abs(playerInput.horizontalAxis) >= Mathf.Epsilon)
-                        {
-                            return "run";
-                        }
-
-                        break;
-                    case "stomp":
-                        if (playerInput.verticalAxis < 0)
-                        {
-                            return "stomp";
-                        }
-
-                        break;
                     case "jump":
                         if (playerInput.jumpButtonPressed)
                         {
@@ -226,19 +204,62 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         }
 
                         break;
-                    case "climb":
-                        if (playerInput.verticalAxis > 0)
-                        {
-                            return "climb";
-                        }
-                        break;
+
                     case "acquire":
                         if (playerInput.verticalAxis < 0)
                         {
                             return "acquire";
                         }
+
                         break;
                     
+                }
+            }
+        }
+        
+        foreach (string animationsKey in animations.Keys)
+        {
+            if (animations[animationsKey])
+            {
+                switch (animationsKey)
+                {
+                    
+
+                    case "acquire":
+                        if (playerInput.verticalAxis < 0)
+                        {
+                            return "acquire";
+                        }
+
+                        break;
+                    case "climb":
+                        if (playerInput.verticalAxis > 0)
+                        {
+                            return "climb";
+                        }
+
+                        break;
+                    case "stomp":
+                        if (playerInput.verticalAxis < 0)
+                        {
+                            return "stomp";
+                        }
+
+                        break;
+                    case "idle":
+                        if (Mathf.Abs(playerInput.horizontalAxis) < Mathf.Epsilon)
+                        {
+                            return "idle";
+                        }
+
+                        break;
+                    case "run":
+                        if (Mathf.Abs(playerInput.horizontalAxis) >= Mathf.Epsilon)
+                        {
+                            return "run";
+                        }
+
+                        break;
                 }
             }
         }
@@ -293,11 +314,11 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
 
     private void Pause()
     {
-            isPaused = true;
+        isPaused = true;
     }
 
     private void UnPause()
     {
-            isPaused = false;
+        isPaused = false;
     }
 }
