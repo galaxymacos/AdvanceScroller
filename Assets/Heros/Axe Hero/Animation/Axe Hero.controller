@@ -1720,7 +1720,6 @@ MonoBehaviour:
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
-  jumpForce: 6
   firstJump: {fileID: 7400000, guid: 8cc6747acc8cf5d45854f62c55ffa9c5, type: 2}
   secondJump: {fileID: 7400000, guid: 8b133f40dad3238429de8462999d54d3, type: 2}
 --- !u!114 &5129958169153463666

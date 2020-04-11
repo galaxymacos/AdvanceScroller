@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SMB_AxeHero_Caught : CharacterStateMachineBehavior
-{
+ {
 
     private PlayerThrowMessager throwMessager;
     private PlayerCharacter playerToThrow;

@@ -22,7 +22,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     protected PlayerInput playerInput => playerCharacter.playerInput;
     [HideInInspector] public PlayerCharacter playerCharacter;
 
-    private bool hasSetup;
 
     // private Knockable knockable;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -45,28 +44,21 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
 
         rb = _animator.GetComponent<Rigidbody2D>();
-        GameStateMachine.gamePause += Pause;
-        GameStateMachine.gameUnPause += UnPause;
-        hasSetup = true;
     }
 
-
-    private void OnDestroy()
-    {
-        if (hasSetup)
-        {
-            GameStateMachine.gamePause -= Pause;
-            GameStateMachine.gameUnPause -= UnPause;
-        }
-    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     public override void OnStateUpdate(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if (isPaused) return;
+        if (Mathf.Abs(playerInput.horizontalAxis) >= Mathf.Epsilon)
+        {
+            Debug.Log("still detecting player input");
+        }
+        if (GameStateMachine.gameIsPause) return;
 
+        
         string animationName = GenerateAnimationByInput();
-
+        
         if (animationName != "")
         {
             var cooldownFilter = new CooldownFilter(animationName, this, null);
@@ -87,39 +79,9 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
-        hasSetup = false;
-        GameStateMachine.gamePause -= Pause;
-        GameStateMachine.gameUnPause -= UnPause;
     }
 
-    // public string LimitUsageFilter(string animationName)
-    // {
-    //     switch (animationName)
-    //     {
-    //         case "dash":
-    //             if (playerCharacter.dashTimeCounter < playerCharacter.maxDashTimeInAir)
-    //             {
-    //                 return "dash";
-    //             }
-    //             else
-    //             {
-    //                 return "";
-    //             }
-    //         case "jump":
-    //             if (playerCharacter.jumpTime < playerCharacter.maxJumpTime)
-    //             {
-    //                 return "jump";
-    //             }
-    //             else
-    //             {
-    //                 return "";
-    //             }
-    //     }
-    //
-    //     return animationName;
-    // }
-
-    public void RegisterInputToNextState(List<string> inputs)
+    protected void RegisterInputToNextState(List<string> inputs)
     {
         foreach (string input in inputs)
         {
@@ -130,7 +92,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public string GenerateAnimationByInput()
     {
         if (playerCharacter.playerInput == null) return "";
-        Debug.Log("GenerateAnimationByInput");
+        
 
         foreach (string animationsKey in animations.Keys)
         {
@@ -204,15 +166,6 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
                         }
 
                         break;
-
-                    case "acquire":
-                        if (playerInput.verticalAxis < 0)
-                        {
-                            return "acquire";
-                        }
-
-                        break;
-                    
                 }
             }
         }
@@ -311,14 +264,5 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         characterAnimator.SetTrigger("wallslide");
     }
 
-
-    private void Pause()
-    {
-        isPaused = true;
-    }
-
-    private void UnPause()
-    {
-        isPaused = false;
-    }
+    
 }
