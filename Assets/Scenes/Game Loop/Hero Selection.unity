@@ -576,8 +576,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -936,8 +936,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1198,10 +1198,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 1313306663}
-  rightElement: {fileID: 1283887270}
-  topElement: {fileID: 1536312444}
-  downElement: {fileID: 1536312444}
+  leftElement: {fileID: 1536312444}
+  rightElement: {fileID: 817789395}
+  topElement: {fileID: 817789395}
+  downElement: {fileID: 1283887270}
 --- !u!114 &448442000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1771,10 +1771,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 817789395}
+  leftElement: {fileID: 1283887270}
   rightElement: {fileID: 1536312444}
   topElement: {fileID: 1313306663}
-  downElement: {fileID: 1313306663}
+  downElement: {fileID: 817789395}
 --- !u!212 &729884636
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1938,7 +1938,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 817789392}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.15, y: -1, z: 0}
+  m_LocalPosition: {x: 1.15, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1986650368}
@@ -2006,8 +2006,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 1536312444}
-  rightElement: {fileID: 729884635}
+  leftElement: {fileID: 448441999}
+  rightElement: {fileID: 1313306663}
   topElement: {fileID: 1283887270}
   downElement: {fileID: 1283887270}
 --- !u!114 &817789396
@@ -2813,8 +2813,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4289863168
+  m_fontColor: {r: 0, g: 0.11816748, b: 0.6981132, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2967,7 +2967,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.06, y: 2.8}
+  m_AnchoredPosition: {x: 0.06, y: 3.34}
   m_SizeDelta: {x: 9.892, y: 0.58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1016037457
@@ -3280,7 +3280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftElement: {fileID: 448441999}
-  rightElement: {fileID: 1313306663}
+  rightElement: {fileID: 729884635}
   topElement: {fileID: 817789395}
   downElement: {fileID: 817789395}
 --- !u!212 &1283887271
@@ -3444,7 +3444,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313306660}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 8.16, y: -1, z: 0}
+  m_LocalPosition: {x: 8.16, y: -0.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1986650368}
@@ -3512,8 +3512,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 1283887270}
-  rightElement: {fileID: 448441999}
+  leftElement: {fileID: 817789395}
+  rightElement: {fileID: 1536312444}
   topElement: {fileID: 729884635}
   downElement: {fileID: 729884635}
 --- !u!114 &1313306664
@@ -3896,10 +3896,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e896dc34e7634f44b8a08ebab3efc41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftElement: {fileID: 729884635}
-  rightElement: {fileID: 817789395}
-  topElement: {fileID: 448441999}
-  downElement: {fileID: 448441999}
+  leftElement: {fileID: 1313306663}
+  rightElement: {fileID: 448441999}
+  topElement: {fileID: 1313306663}
+  downElement: {fileID: 729884635}
 --- !u!212 &1536312445
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4119,8 +4119,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4849,8 +4849,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
