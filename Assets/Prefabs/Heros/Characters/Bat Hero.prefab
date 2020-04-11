@@ -947,6 +947,7 @@ MonoBehaviour:
   - {fileID: 5286924652720532002}
   impactWave: {fileID: 712243004205589408}
   MovementSpeedOriginal: 5
+  jumpSpeed: 6
   canControlMovement: 1
   chargedDagger: {fileID: 0}
   winPose: {fileID: 21300000, guid: 33b65ab7d2b303d43aaf224ddea4b21c, type: 3}
@@ -1216,7 +1217,7 @@ MonoBehaviour:
   showOffTime: 0.7
   uniqueSkillFireParticlePrefab: {fileID: 164592, guid: 5423bfc84896575469c1270496ce5a32,
     type: 3}
-  ultimateIcon: {fileID: 21300000, guid: 9f922002032136c4687b8dced9bc624c, type: 3}
+  ultimateIcon: {fileID: 21300000, guid: 95c42178e72930b47a683bda188d7222, type: 3}
   isPlayingUltimate: 0
 --- !u!114 &-6956731921203344667
 MonoBehaviour:

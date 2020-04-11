@@ -134,6 +134,23 @@ public enum AudioType
 
     #endregion
 
+    #region Samurai
+
+    Samurai_SwordAttack,
+    Samurai_Jump,
+    Samurai_DoubleJump,
+    Samurai_Dash,
+    Samurai_Run,
+    Samurai_Shuriken,
+    Samurai_SwordWave,
+    Samurai_DimentsionBlade,
+
+
+    #endregion
+
+
+
+
     #region Battle
 
     HitSoundGeneral,

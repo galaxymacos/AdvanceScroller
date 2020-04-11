@@ -11741,7 +11741,7 @@ GameObject:
   - component: {fileID: 9208814283855850154}
   - component: {fileID: 9208814283855850155}
   m_Layer: 0
-  m_Name: TerrianAndPlatform(Layer -5)
+  m_Name: TerrainAndPlatform(Layer -5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
