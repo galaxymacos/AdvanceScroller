@@ -269,7 +269,8 @@ AnimatorState:
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -7379756278234767367}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 1885155628191149653}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -388,7 +389,6 @@ MonoBehaviour:
   canFloatInAir: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
-  jumpForce: 5
   firstJump: {fileID: 7400000, guid: 4fc9ac17950bce4409462eabfb37291b, type: 2}
   secondJump: {fileID: 7400000, guid: b07761fc723e28c48bb948d7f30995a6, type: 2}
 --- !u!1101 &-4767646885853427476
@@ -1141,6 +1141,25 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &1885155628191149653
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b020427605a194daebd646b607bb96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
+  soundInString: 
+  canControlHorizontalMovement: 0
+  canFloatInAir: 0
+  characterAnimator: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!114 &2165881739545832756
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1172,6 +1191,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78ad9f2b225c4af40a6a6fbeb1ce6a49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
+  soundInString: 
+  canControlHorizontalMovement: 0
+  canFloatInAir: 0
+  characterAnimator: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1102 &2354090594328751214
 AnimatorState:
   serializedVersion: 5
