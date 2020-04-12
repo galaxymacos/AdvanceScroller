@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AxeHeroAttackMessager : MonoBehaviour
+public class AxeHeroAnimationMessager : MonoBehaviour
 {
     public CatchComponent catchComponent;
 
     public GameObject redAxeBuff;
     public GameObject greenAxeBuff;
     public GameObject axePrefab;
+    public GameObject lockChainPrefab;
+    public Transform lockChainSpawnTransform;
     public Transform axeSpawnPosition;
     public SingleAttackComponent attack;
     public SingleAttackComponent hugeSlash;
@@ -80,6 +82,13 @@ public class AxeHeroAttackMessager : MonoBehaviour
         GameObject axe = Instantiate(axePrefab, axeSpawnPosition.position, Quaternion.identity);
         Projectile projectile = axe.GetComponent<Projectile>();
         projectile.Setup(playerCharacter, 10, 60);
+    }
+
+    public void ThrowLockChain()
+    {
+        var lockChain = Instantiate(lockChainPrefab, lockChainSpawnTransform.position, Quaternion.identity);
+        lockChain.GetComponent<NewProjectile>().Setup(gameObject, 50);
+        lockChain.GetComponent<LockChain>().Setup(gameObject);
     }
 
     public void ActivateAttackHitBox()

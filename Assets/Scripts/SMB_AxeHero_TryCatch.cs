@@ -27,7 +27,7 @@ public class SMB_AxeHero_TryCatch : CharacterStateMachineBehavior
         rb = playerCharacter.GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         playerCharacter.onCatchingSuccess += TransferToThrowState;
-        playerCharacter.GetComponent<AxeHeroAttackMessager>().StartDetectingCatch();
+        playerCharacter.GetComponent<AxeHeroAnimationMessager>().StartDetectingCatch();
         playerCharacter.GetComponent<UltimateComponent>().ShowOff();
 
         
@@ -62,7 +62,7 @@ public class SMB_AxeHero_TryCatch : CharacterStateMachineBehavior
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(animator, stateInfo, layerIndex);
-        playerCharacter.GetComponent<AxeHeroAttackMessager>().StopDetectingCatch();
+        playerCharacter.GetComponent<AxeHeroAnimationMessager>().StopDetectingCatch();
         playerCharacter.onCatchingSuccess -= TransferToThrowState;
         playerCharacter.GetComponent<UltimateComponent>().End();
         rb.gravityScale = 1;
