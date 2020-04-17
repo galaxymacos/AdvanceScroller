@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class BleedDebuffIcon : MonoBehaviour
+public class BuffIcon : MonoBehaviour
 {
     private Image sr;
-    private float bleedDurationCounter;
+    private float duration;
 
     private void Awake()
     {
@@ -20,7 +20,7 @@ public class BleedDebuffIcon : MonoBehaviour
 
     public void Show(object sender, BuffEventArgs e)
     {
-        bleedDurationCounter = e.duration;
+        duration = e.duration;
         sr.enabled = true;
 
     }
@@ -29,11 +29,11 @@ public class BleedDebuffIcon : MonoBehaviour
     void Update()
     {
         
-        if (bleedDurationCounter > 0)
+        if (duration > 0)
         {
-            print("bleed duration: "+bleedDurationCounter);
-            bleedDurationCounter -= Time.deltaTime;
-            if (bleedDurationCounter <= 0)
+            print("bleed duration: "+duration);
+            duration -= Time.deltaTime;
+            if (duration <= 0)
             {
                 sr.enabled = false;
             }

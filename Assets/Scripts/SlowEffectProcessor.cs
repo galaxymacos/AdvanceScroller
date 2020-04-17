@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class SlowEffectProcessor : MonoBehaviour, IAttackEffectProcessor
@@ -6,7 +7,8 @@ public class SlowEffectProcessor : MonoBehaviour, IAttackEffectProcessor
     public bool SlowEffectActive => slowDuration > 0;
     private float slowPercentage;
     private float slowDuration;
-    
+
+    public event EventHandler<BuffEventArgs> onSlow; 
     private void Awake()
     {
         player = GetComponentInParent<PlayerCharacter>();
@@ -23,6 +25,7 @@ public class SlowEffectProcessor : MonoBehaviour, IAttackEffectProcessor
             {
                 slowPercentage = slowEffect.slowPercent;
                 slowDuration = slowEffect.slowDuration;
+                onSlow?.Invoke(this, new BuffEventArgs(slowEffect.slowDuration));
             }
         }
 

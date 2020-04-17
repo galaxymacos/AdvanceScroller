@@ -5,6 +5,7 @@ public class FrozenEffectProcessor : MonoBehaviour, IAttackEffectProcessor
 {
     private float frozenTime;
 
+    public event EventHandler<BuffEventArgs> onFreeze;
     public float FrozenTime => frozenTime;
     public bool IsFrozen => FrozenTime > 0;
 
@@ -20,6 +21,7 @@ public class FrozenEffectProcessor : MonoBehaviour, IAttackEffectProcessor
             {
                 frozenTime = frozenEffect.frozenTime;
                 GetComponentInParent<Animator>().SetTrigger(Frozen);
+                onFreeze?.Invoke(this, new BuffEventArgs(frozenEffect.frozenTime));
             }
         }
     }
