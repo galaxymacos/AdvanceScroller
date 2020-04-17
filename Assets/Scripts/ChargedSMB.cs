@@ -40,7 +40,6 @@ public class ChargedSMB : CharacterStateMachineBehavior
         isButtonPressed = GetDetectedButtonState();
         if (!isButtonPressed && !hasReleaseCharging)
         {
-            // chargeSkill.ReleaseCharging();
             hasReleaseCharging = true;
             _animator.SetTrigger("charge finish");
         }
@@ -53,6 +52,7 @@ public class ChargedSMB : CharacterStateMachineBehavior
         base.OnStateExit(_animator, stateInfo, layerIndex);
         if (!hasReleaseCharging)
         {
+            
             chargeSkill.InteruptCharging();
         }
 
@@ -65,7 +65,7 @@ public class ChargedSMB : CharacterStateMachineBehavior
         }
     }
 
-    public void PressDetectedButton()
+    private void PressDetectedButton()
     {
         switch (buttonToDetect)
         {
@@ -88,7 +88,7 @@ public class ChargedSMB : CharacterStateMachineBehavior
                 throw new ArgumentOutOfRangeException();
         }
     }
-    public bool GetDetectedButtonState()
+    private bool GetDetectedButtonState()
     {
         switch (buttonToDetect)
         {
@@ -107,8 +107,7 @@ public class ChargedSMB : CharacterStateMachineBehavior
                 throw new ArgumentOutOfRangeException();
         }
     }
-    
-    public void ResetChargedButton()
+    private void ResetChargedButton()
     {
         switch (buttonToDetect)
         {

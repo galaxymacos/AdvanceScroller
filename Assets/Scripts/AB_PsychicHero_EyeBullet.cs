@@ -22,6 +22,7 @@ public class AB_PsychicHero_EyeBullet : CharacterStateMachineBehavior
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        base.OnStateExit(animator, stateInfo, layerIndex);
         playerCharacter.GetComponent<Rigidbody2D>().gravityScale = 1f;
     }
 

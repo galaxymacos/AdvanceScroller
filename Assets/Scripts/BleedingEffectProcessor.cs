@@ -7,8 +7,10 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
     private float bleedTimeCounter;
     private float bleedPerSecond;
 
-    public Action onStartBleeding;
-    public Action onEndBleeding;
+    public event Action onStartBleeding;
+    public event Action onEndBleeding;
+
+    public event EventHandler<BuffEventArgs> onStartBleedingEvent;
     public bool isBleeding => bleedTimeCounter > 0;
     private bool wasBleeding;
 
@@ -17,12 +19,13 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
         // healthComponent.onTakeHit += ProcessBridge;
         onStartBleeding += SpawnBloodParticleBridge;
+        
     }
 
-    // private void ProcessBridge(CharacterHealthComponent health)
-    // {
-    //     Process(health.damageDataFromLastAttack);
-    // }
+    private void OnDestroy()
+    {
+        onStartBleeding -= SpawnBloodParticleBridge;
+    }
 
 
     public void Process(DamageData damageData)
@@ -33,8 +36,9 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             var bleedingEffect = attackEffect as BleedingEffect;
             if (bleedingEffect != null)
             {
-                bleedTimeCounter = bleedingEffect.bleedTime;
-                bleedPerSecond = bleedingEffect.bleedAmountPerSecond;
+                bleedTimeCounter = bleedingEffect.bleedDuration;
+                bleedPerSecond = bleedingEffect.damagePerSecond;
+                onStartBleedingEvent?.Invoke(this,new BuffEventArgs(bleedingEffect.bleedDuration));
             }
         }
     }
@@ -72,4 +76,15 @@ public class BleedingEffectProcessor: MonoBehaviour, IAttackEffectProcessor
             bloodParticleSystem.SpawnBloodDrippingParticle(bleedTimeCounter);
         }
     }
+}
+
+public class BleedEffectEventArgs: EventArgs
+{
+    public BleedEffectEventArgs(float bleedAmountPerSec, float bleedDuration)
+    {
+        this.bleedAmountPerSec = bleedAmountPerSec;
+        this.bleedDuration = bleedDuration;
+    }
+    public float bleedAmountPerSec;
+    public float bleedDuration;
 }

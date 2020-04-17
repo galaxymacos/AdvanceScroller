@@ -10,8 +10,11 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public string soundInString;
     [SerializeField] private bool canControlHorizontalMovement;
     [SerializeField] private bool canFloatInAir;
+    [SerializeField] private bool IsRecoverState;
     protected bool isPaused;
     private Vector3 velocityBeforePause;
+    private float timeInCurrentState;
+    private float timeOfCurrentState;
 
     /// <summary>
     /// Contain all animations in this animator, and whether we can transfer to that state
@@ -27,6 +30,8 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     public override void OnStateEnter(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        timeOfCurrentState = _animator.GetCurrentAnimatorStateInfo(0).length;
+        timeInCurrentState = 0;
         characterAnimator = _animator;
         animations = new Dictionary<string, bool>();
         foreach (AnimatorControllerParameter parameter in _animator.parameters)
@@ -56,6 +61,22 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
         if (GameStateMachine.gameIsPause) return;
 
+        if (IsRecoverState && timeInCurrentState < timeOfCurrentState)
+        {
+            timeInCurrentState+=Time.deltaTime;
+            if (timeInCurrentState >= timeOfCurrentState-0.02f)
+            {
+                    if (!playerCharacter.IsGrounded)
+                    {
+                        _animator.SetTrigger("fall down");
+                    }
+                    else
+                    {
+                        _animator.SetTrigger("idle");
+                    }
+            }
+        }
+
         
         string animationName = GenerateAnimationByInput();
         
@@ -79,6 +100,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
     public override void OnStateExit(Animator _animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateExit(_animator, stateInfo, layerIndex);
+        
     }
 
     protected void RegisterInputToNextState(List<string> inputs)
@@ -89,7 +111,7 @@ public class CharacterStateMachineBehavior : StateMachineBehaviour
         }
     }
 
-    public string GenerateAnimationByInput()
+    private string GenerateAnimationByInput()
     {
         if (playerCharacter.playerInput == null) return "";
         

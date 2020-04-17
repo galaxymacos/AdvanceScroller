@@ -66,7 +66,7 @@ public class GalaxyAxeStation : MonoBehaviour
             {
                 // galaxyAx.transform.rotation = Quaternion.Euler(0,0,0);
                 Vector2 direction = (galaxyAx.transform.position - transform.position).normalized;
-                galaxyAx.transform.Translate(transform.InverseTransformDirection(direction) * (Time.deltaTime * 2));
+                galaxyAx.transform.Translate(transform.InverseTransformVector(direction) * (2*Time.deltaTime));
             }
         }
     }

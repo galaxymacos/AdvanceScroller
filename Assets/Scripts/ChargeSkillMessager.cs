@@ -37,9 +37,11 @@ public class ChargeSkillMessager : MonoBehaviour
 
     public void ReleaseCurrentChargeSkill()
     {
-        if (currentChargeSkill != null)
+        if (currentChargeSkill != null && !currentChargeSkill.hasReleased)
         {
             currentChargeSkill.ReleaseCharging();
+            currentChargeSkill.hasReleased = true;
+            currentChargeSkill = null;
         }
     }
 
@@ -61,6 +63,9 @@ public class ChargeSkillMessager : MonoBehaviour
         if (currentChargeSkill != null && !currentChargeSkill.hasReleased)
         {
             currentChargeSkill.InteruptCharging();
+            currentChargeSkill.hasReleased = true;
+            currentChargeSkill = null;
+
         }
     }
 }

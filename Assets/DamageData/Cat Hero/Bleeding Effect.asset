@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aec20fa24653463d914482cfe471b8cf, type: 3}
   m_Name: Bleeding Effect
   m_EditorClassIdentifier: 
-  bleedTime: 3
-  bleedAmountPerSecond: 10
+  bleedDuration: 3
+  damagePerSecond: 10

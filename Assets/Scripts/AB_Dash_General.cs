@@ -68,7 +68,14 @@ public class AB_Dash_General : CharacterStateMachineBehavior
         dashTimeCounter -= Time.deltaTime;
         if (dashTimeCounter <= 0)
         {
-            _animator.SetTrigger("idle");
+            if (playerCharacter.IsGrounded)
+            {
+                _animator.SetTrigger("idle");
+            }
+            else
+            {
+                _animator.SetTrigger("fall down");
+            }
         }
 
         Rigidbody2D rb = _animator.GetComponent<Rigidbody2D>();

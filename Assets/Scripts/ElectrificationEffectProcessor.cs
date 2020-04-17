@@ -13,6 +13,8 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
     private float damagePerTick = 0;
     public bool isElectrification => duration > 0;
 
+    public event EventHandler<BuffEventArgs> onElectrification;
+
     private void Awake()
     {
         healthComponent = GetComponentInParent<CharacterHealthComponent>();
@@ -37,6 +39,7 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
                 duration = electrificationEffect.duration;
                 odd = electrificationEffect.ElectrificationOdd;
                 damagePerTick = electrificationEffect.damagePerTick;
+                onElectrification?.Invoke(this, new BuffEventArgs(electrificationEffect.duration));
             }
         }
     }
@@ -80,4 +83,14 @@ public class ElectrificationEffectProcessor : MonoBehaviour, IAttackEffectProces
         print("ElectricShot");
     }
     
+}
+
+public class BuffEventArgs: EventArgs
+{
+    public float duration;
+
+    public BuffEventArgs(float duration)
+    {
+        this.duration = duration;
+    }
 }
