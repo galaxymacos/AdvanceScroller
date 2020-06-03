@@ -18,6 +18,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: f38145b675259384db72a0dbc7036a20, type: 2}
@@ -127,6 +128,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-7805660817446426652
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hit stun
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: -6164662747280755816}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: de19c02e7f177264a895c216ff32fd61, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-7676351645679248479
 AnimatorState:
   serializedVersion: 5
@@ -201,6 +229,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-7162406955896212917
@@ -232,6 +261,26 @@ MonoBehaviour:
   firstJump: {fileID: 7400000, guid: f7d3db3c8510b9440ad3eac14499b9df, type: 2}
   secondJump: {fileID: 7400000, guid: d977c86c901cde24092b19567b17e5f7, type: 2}
   rb: {fileID: 0}
+--- !u!114 &-6164662747280755816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa4623d9c390372469cd57c7197ba6a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
+  soundInString: 
+  canControlHorizontalMovement: 0
+  canFloatInAir: 0
+  IsRecoverState: 0
+  characterAnimator: {fileID: 0}
+  playerCharacter: {fileID: 0}
 --- !u!1101 &-6046024216257884308
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -312,6 +361,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &-5411506075930033165
@@ -331,6 +381,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   dashSpeed: 8
@@ -387,6 +438,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   firstJump: {fileID: 7400000, guid: 4fc9ac17950bce4409462eabfb37291b, type: 2}
@@ -612,6 +664,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   climbSpeed: 4
@@ -957,6 +1010,31 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1101 &850404661389781745
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: hit stun
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -7805660817446426652}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1107 &1107963775233083112
 AnimatorStateMachine:
   serializedVersion: 5
@@ -1023,6 +1101,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: 2354090594328751214}
     m_Position: {x: 640, y: 280, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -7805660817446426652}
+    m_Position: {x: 640, y: 230, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 4182768417632475764}
@@ -1040,6 +1121,7 @@ AnimatorStateMachine:
   - {fileID: -3948784001345773719}
   - {fileID: -7858774934853611495}
   - {fileID: -2954808298149758262}
+  - {fileID: 850404661389781745}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
@@ -1112,6 +1194,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &1815012004740954244
@@ -1158,6 +1241,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &2165881739545832756
@@ -1177,6 +1261,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &2168296204397353447
@@ -1196,6 +1281,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1102 &2354090594328751214
@@ -1243,6 +1329,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
   fallDownSpeed: 1
@@ -1417,6 +1504,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &6754570484436965191
@@ -1471,6 +1559,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 1
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!114 &7090396117545722440
@@ -1490,6 +1579,7 @@ MonoBehaviour:
   soundInString: 
   canControlHorizontalMovement: 0
   canFloatInAir: 0
+  IsRecoverState: 0
   characterAnimator: {fileID: 0}
   playerCharacter: {fileID: 0}
 --- !u!1101 &7256651560741026464

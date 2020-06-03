@@ -2,17 +2,12 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.883554470.00" t="ExcludeRecursive" />
-    <e p="G:\Unity\AdvanceScroller" t="IncludeRecursive">
+    <e p="C:\Users\galax\AppData\local\JetBrains\Rider2020.1\resharper-host\local\Transient\ReSharperHost\v201\SolutionCaches\_AdvanceScroller.-1515362893.00" t="ExcludeRecursive" />
+    <e p="F:\Unity\Portfolio\AdvanceScroller" t="IncludeRecursive">
       <e p="AdvanceScroller.sln" t="IncludeFlat" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
-        <e p="AB_CatHero_Skill3.cs" t="Include" />
-        <e p="AB_CatHero_Ultimate.cs" t="Include" />
-        <e p="AB_Frozen_General.cs" t="Include" />
-        <e p="AB_PsychicHero_ChargingDagger.cs" t="Include" />
-        <e p="ActionLimiter.cs" t="Include" />
         <e p="AllIn1SpriteShader" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -43,15 +38,6 @@
             <e p="SetAtlasUvs.cs" t="Include" />
           </e>
         </e>
-        <e p="AutoLightingAdapter.cs" t="Include" />
-        <e p="BanditAnimationEvents.cs" t="Include" />
-        <e p="BanditAttackLimiter.cs" t="Include" />
-        <e p="BanditAttackRangeDetector.cs" t="Include" />
-        <e p="BanditData.cs" t="Include" />
-        <e p="BanditEdgeDetector.cs" t="Include" />
-        <e p="BanditEventSystem.cs" t="Include" />
-        <e p="BanditIdleLimiter.cs" t="Include" />
-        <e p="BanditPlayerDetector.cs" t="Include" />
         <e p="Bandits - Pixel Art" t="Include">
           <e p="Demo" t="Include">
             <e p="Bandit.cs" t="Include" />
@@ -59,14 +45,9 @@
             <e p="Sensor_Bandit.cs" t="Include" />
           </e>
         </e>
-        <e p="BloodDebugger.cs" t="Include" />
-        <e p="CatHeroUltimateShadow.cs" t="Include" />
-        <e p="Channel.cs" t="Include" />
-        <e p="ChannelErrorPlacer.cs" t="Include" />
-        <e p="ChannelEventSystem.cs" t="Include" />
-        <e p="CloudFactory.cs" t="Include" />
-        <e p="ComboGauge.cs" t="Include" />
-        <e p="ComboGaugeUI.cs" t="Include" />
+        <e p="BuffEventRegister.cs" t="Include" />
+        <e p="BuffIcon.cs" t="Include" />
+        <e p="ComboGaugeTextColorChanger.cs" t="Include" />
         <e p="Demigiant" t="Include">
           <e p="DemiLib" t="Include">
             <e p="Core" t="Include">
@@ -101,9 +82,8 @@
           </e>
           <e p="readme_DOTweenPro.txt" t="Include" />
         </e>
-        <e p="DestroyOnTrigger.cs" t="Include" />
-        <e p="DrippingBlood.cs" t="Include" />
-        <e p="DropSnowballComponent.cs" t="Include" />
+        <e p="DestroyOnContact.cs" t="Include" />
+        <e p="ElectrificationDebuffIcon.cs" t="Include" />
         <e p="Epic Toon FX" t="Include">
           <e p="Demo" t="Include">
             <e p="Scripts" t="Include">
@@ -138,22 +118,11 @@
             <e p="ETFXRotation.cs" t="Include" />
           </e>
         </e>
-        <e p="FacingComponent2D.cs" t="Include" />
-        <e p="FontColorChanger.cs" t="Include" />
-        <e p="FontPingPongEffect.cs" t="Include" />
-        <e p="FontSizeChanger.cs" t="Include" />
-        <e p="GameOverScreen.cs" t="Include" />
-        <e p="GhostAnimationMessager.cs" t="Include" />
-        <e p="GhostAttackCounter.cs" t="Include" />
-        <e p="GhostDamageReceiver.cs" t="Include" />
-        <e p="GhostDieBehaviour.cs" t="Include" />
-        <e p="GhostEventSystem.cs" t="Include" />
-        <e p="GhostFacingComponent.cs" t="Include" />
-        <e p="GhostHealthComponent.cs" t="Include" />
-        <e p="GhostScoreSystem.cs" t="Include" />
-        <e p="GhostShaderRegister.cs" t="Include" />
-        <e p="GhostStateMachineBehavior.cs" t="Include" />
-        <e p="GhostStats.cs" t="Include" />
+        <e p="Font" t="Include">
+          <e p="Permanent_Marker" t="Include">
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+        </e>
         <e p="Heros" t="Include">
           <e p="Axe Hero" t="Include">
             <e p="Read Me.txt" t="Include" />
@@ -171,11 +140,6 @@
             <e p="Read Me.txt" t="Include" />
           </e>
         </e>
-        <e p="IceSlideDissemableComponent.cs" t="Include" />
-        <e p="IceSlideEventSystem.cs" t="Include" />
-        <e p="IceSlideTrigger.cs" t="Include" />
-        <e p="ImageTransparencyChanger.cs" t="Include" />
-        <e p="JumpEffectOnStart.cs" t="Include" />
         <e p="KaiwenBackgroundDocument" t="Include">
           <e p="IceMap" t="Include">
             <e p="TooCubeForest" t="Include">
@@ -197,12 +161,11 @@
             </e>
           </e>
         </e>
-        <e p="MenuNavigationSystem.cs" t="Include" />
-        <e p="PauseControl.cs" t="Include" />
-        <e p="PauseScreen.cs" t="Include" />
-        <e p="PlayAnimationOnTrigger.cs" t="Include" />
+        <e p="LockChain.cs" t="Include" />
         <e p="PlayerInputActions.cs" t="Include" />
-        <e p="ResetByVelocity.cs" t="Include" />
+        <e p="Samurai Hero" t="Include">
+          <e p="Read Me.txt" t="Include" />
+        </e>
         <e p="Scripts" t="Include">
           <e p="AB_AxeHero_Attack.cs" t="Include" />
           <e p="AB_AxeHero_FallDown.cs" t="Include" />
@@ -219,18 +182,24 @@
           <e p="AB_Cat_Jump.cs" t="Include" />
           <e p="AB_Cat_Run.cs" t="Include" />
           <e p="AB_CatHero_Skill1.cs" t="Include" />
+          <e p="AB_CatHero_Skill3.cs" t="Include" />
           <e p="AB_CatHero_SummonCat.cs" t="Include" />
+          <e p="AB_CatHero_Ultimate.cs" t="Include" />
           <e p="AB_Climb_General.cs" t="Include" />
           <e p="AB_Dash_General.cs" t="Include" />
           <e p="AB_Die_General.cs" t="Include" />
+          <e p="AB_Frozen_General.cs" t="Include" />
           <e p="AB_General_Acquire.cs" t="Include" />
           <e p="AB_Hurt_General.cs" t="Include" />
           <e p="AB_PsychicHero_Attack.cs" t="Include" />
+          <e p="AB_PsychicHero_ChargingDagger.cs" t="Include" />
           <e p="AB_PsychicHero_EyeBullet.cs" t="Include" />
           <e p="AB_PsychicHero_Skill3.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxe.cs" t="Include" />
           <e p="AB_PsychicHero_ThrowAxeCharged.cs" t="Include" />
           <e p="AB_PsychicHero_Ultimate.cs" t="Include" />
+          <e p="AB_Samurai_Attack.cs" t="Include" />
+          <e p="AB_Samurai_SummonDragon.cs" t="Include" />
           <e p="AB_Stomp_General.cs" t="Include" />
           <e p="AB_SwordPrincess_Attack.cs" t="Include" />
           <e p="AB_SwordPrincess_Cross.cs" t="Include" />
@@ -238,20 +207,32 @@
           <e p="AB_SwordPrincess_Ultimate.cs" t="Include" />
           <e p="AB_SwordPrincess_Wolf.cs" t="Include" />
           <e p="AB_WallSlide_General.cs" t="Include" />
+          <e p="ActionLimiter.cs" t="Include" />
+          <e p="AnimationMessagerSamurei.cs" t="Include" />
           <e p="AnimatorEventHandler.cs" t="Include" />
           <e p="AudioController.cs" t="Include" />
           <e p="AudioObject.cs" t="Include" />
           <e p="AudioType.cs" t="Include" />
           <e p="AutoDestroyBlood.cs" t="Include" />
+          <e p="AutoLightingAdapter.cs" t="Include" />
           <e p="AutoSpriteAdapter.cs" t="Include" />
+          <e p="AxeHeroAnimationMessager.cs" t="Include" />
           <e p="AxeHeroAnimatorEvent.cs" t="Include" />
-          <e p="AxeHeroAttackMessager.cs" t="Include" />
           <e p="AxeHeroAttackModifier.cs" t="Include" />
           <e p="BackToMenuPanelElement.cs" t="Include" />
+          <e p="BanditAnimationEvents.cs" t="Include" />
+          <e p="BanditAttackLimiter.cs" t="Include" />
+          <e p="BanditAttackRangeDetector.cs" t="Include" />
+          <e p="BanditData.cs" t="Include" />
+          <e p="BanditEdgeDetector.cs" t="Include" />
+          <e p="BanditEventSystem.cs" t="Include" />
+          <e p="BanditIdleLimiter.cs" t="Include" />
+          <e p="BanditPlayerDetector.cs" t="Include" />
           <e p="BatHeroAttackMessager.cs" t="Include" />
           <e p="BleedingEffect.cs" t="Include" />
           <e p="BleedingEffectProcessor.cs" t="Include" />
           <e p="BleedingHpBarColorModifier.cs" t="Include" />
+          <e p="BloodDebugger.cs" t="Include" />
           <e p="BloodParticleSpawner.cs" t="Include" />
           <e p="BlurMaterialController.cs" t="Include" />
           <e p="BtnTransferToNext.cs" t="Include" />
@@ -262,7 +243,13 @@
           <e p="Cat.cs" t="Include" />
           <e p="CatchComponent.cs" t="Include" />
           <e p="CatHeroAnimatorEventHandler.cs" t="Include" />
+          <e p="CatHeroUltimateShadow.cs" t="Include" />
           <e p="CatStateMachineBahavior.cs" t="Include" />
+          <e p="ChangeImageAlphaOnTrigger.cs" t="Include" />
+          <e p="ChangeTextAlphaOnTrigger.cs" t="Include" />
+          <e p="Channel.cs" t="Include" />
+          <e p="ChannelErrorPlacer.cs" t="Include" />
+          <e p="ChannelEventSystem.cs" t="Include" />
           <e p="CharacterBloodType.cs" t="Include" />
           <e p="CharacterDamageReceiver.cs" t="Include" />
           <e p="CharacterEnergyComponent.cs" t="Include" />
@@ -281,53 +268,93 @@
           <e p="ChargeSkillMessager.cs" t="Include" />
           <e p="ClickToSelectChampionComponent.cs" t="Include" />
           <e p="ClickToSelectMapComponent.cs" t="Include" />
+          <e p="CloudFactory.cs" t="Include" />
+          <e p="CollisionCollecter.cs" t="Include" />
           <e p="CollisionDetector.cs" t="Include" />
+          <e p="ComboGauge.cs" t="Include" />
+          <e p="ComboGaugeText.cs" t="Include" />
+          <e p="ComboGaugeUI.cs" t="Include" />
           <e p="Command.cs" t="Include" />
           <e p="ContinuousAttack.cs" t="Include" />
           <e p="Cross.cs" t="Include" />
           <e p="DaggerRotator.cs" t="Include" />
           <e p="DamageData.cs" t="Include" />
           <e p="DestroyOnDamageComponnet.cs" t="Include" />
+          <e p="DestroyOnTrigger.cs" t="Include" />
           <e p="DisolveShadowShaderComponent.cs" t="Include" />
           <e p="DissolveShaderControl.cs" t="Include" />
           <e p="DissolveShadowCreationMessager.cs" t="Include" />
           <e p="DodgeShadow.cs" t="Include" />
+          <e p="DrippingBlood.cs" t="Include" />
+          <e p="DropSnowballComponent.cs" t="Include" />
           <e p="ElectrificationEffect.cs" t="Include" />
           <e p="ElectrificationEffectProcessor.cs" t="Include" />
           <e p="EndScreen.cs" t="Include" />
+          <e p="EnemyPauser.cs" t="Include" />
           <e p="EnvironmentGenerator.cs" t="Include" />
           <e p="ExitPanel.cs" t="Include" />
           <e p="EyeBullet.cs" t="Include" />
+          <e p="FacingComponent2D.cs" t="Include" />
           <e p="FetchMapData.cs" t="Include" />
           <e p="FightData.cs" t="Include" />
           <e p="FlipComponent.cs" t="Include" />
           <e p="FloatingTextSpawner.cs" t="Include" />
+          <e p="FontColorChanger.cs" t="Include" />
+          <e p="FontPingPongEffect.cs" t="Include" />
+          <e p="FontSizeChanger.cs" t="Include" />
           <e p="ForceCancelShaderControl.cs" t="Include" />
           <e p="ForceCancelShadowCreationMessager.cs" t="Include" />
           <e p="ForceShadowShaderComponent.cs" t="Include" />
+          <e p="FreezePlayerOnReady.cs" t="Include" />
           <e p="FrozenEffect.cs" t="Include" />
           <e p="FrozenEffectProcessor.cs" t="Include" />
           <e p="GalaxyAxeStation.cs" t="Include" />
           <e p="GameAssets.cs" t="Include" />
           <e p="GameEndDetector.cs" t="Include" />
+          <e p="GameOverScreen.cs" t="Include" />
+          <e p="GamePauseProcessor.cs" t="Include" />
           <e p="GameStateMachine.cs" t="Include" />
           <e p="GameStateMachineMessager.cs" t="Include" />
           <e p="GeneratePotionEvent.cs" t="Include" />
+          <e p="GhostAnimationMessager.cs" t="Include" />
+          <e p="GhostAttackCounter.cs" t="Include" />
+          <e p="GhostCapeBuff.cs" t="Include" />
+          <e p="GhostDamageReceiver.cs" t="Include" />
+          <e p="GhostDieBehaviour.cs" t="Include" />
+          <e p="GhostEventSystem.cs" t="Include" />
+          <e p="GhostFacingComponent.cs" t="Include" />
+          <e p="GhostHealthComponent.cs" t="Include" />
+          <e p="GhostScoreSystem.cs" t="Include" />
+          <e p="GhostShaderRegister.cs" t="Include" />
+          <e p="GhostStateMachineBehavior.cs" t="Include" />
+          <e p="GhostStats.cs" t="Include" />
+          <e p="HealthBarShakeComponent.cs" t="Include" />
+          <e p="HealthDecreaseComponent.cs" t="Include" />
+          <e p="HealthPotion.cs" t="Include" />
+          <e p="HeroSelectionDialogBox.cs" t="Include" />
           <e p="IAttackEffect.cs" t="Include" />
-          <e p="IBloodType.cs" t="Include" />
+          <e p="IAttackEffectProcessor.cs" t="Include" />
+          <e p="IceSlideDissemableComponent.cs" t="Include" />
+          <e p="IceSlideEventSystem.cs" t="Include" />
+          <e p="IceSlideTrigger.cs" t="Include" />
           <e p="IceSpike.cs" t="Include" />
           <e p="iceSpikeGenerator.cs" t="Include" />
           <e p="IceSpikePauser.cs" t="Include" />
           <e p="IDamageReceiver.cs" t="Include" />
+          <e p="ImageTransparencyChanger.cs" t="Include" />
           <e p="InfiniteSoundPlayer.cs" t="Include" />
+          <e p="InjuryMaterialController.cs" t="Include" />
+          <e p="InjuryShaderComponent.cs" t="Include" />
           <e p="InstantKill.cs" t="Include" />
           <e p="InstantKillContinuousAttack.cs" t="Include" />
           <e p="IPauseable.cs" t="Include" />
+          <e p="IPlayerBuff.cs" t="Include" />
           <e p="IState.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="ItemPickupComponent.cs" t="Include" />
           <e p="IUniqueSkill.cs" t="Include" />
           <e p="jump_attack_sword_princess.cs" t="Include" />
+          <e p="JumpEffectOnStart.cs" t="Include" />
           <e p="Knockable.cs" t="Include" />
           <e p="LayerInfo.cs" t="Include" />
           <e p="LayerMessager.cs" t="Include" />
@@ -341,6 +368,7 @@
           <e p="LightOnState.cs" t="Include" />
           <e p="LightTurningOffState.cs" t="Include" />
           <e p="LightTurningOnState.cs" t="Include" />
+          <e p="LoadingScreenConfirmButton.cs" t="Include" />
           <e p="LoadSceneOnTrigger.cs" t="Include" />
           <e p="LuckySpin.cs" t="Include" />
           <e p="MainMenuButtonAnimationController.cs" t="Include" />
@@ -350,6 +378,7 @@
           <e p="MaterialChangeComponent.cs" t="Include" />
           <e p="MaterialController.cs" t="Include" />
           <e p="MaterialTintColor.cs" t="Include" />
+          <e p="MenuNavigationSystem.cs" t="Include" />
           <e p="MenuStateMachine.cs" t="Include" />
           <e p="MenuStateMachineMessager.cs" t="Include" />
           <e p="MovementComponent.cs" t="Include" />
@@ -359,8 +388,10 @@
           <e p="NewPlayerInput.cs" t="Include" />
           <e p="NewProjectile.cs" t="Include" />
           <e p="NewProjectileDamageComponent.cs" t="Include" />
+          <e p="NewProjectileOnHit.cs" t="Include" />
           <e p="NewProjectileSticker.cs" t="Include" />
           <e p="NormalBlood.cs" t="Include" />
+          <e p="OnePlayerTest.cs" t="Include" />
           <e p="OptionMenuAnimatorController.cs" t="Include" />
           <e p="ParticleDisposer.cs" t="Include" />
           <e p="ParticleFacingComponent.cs" t="Include" />
@@ -369,7 +400,11 @@
           <e p="ParticleSystemRecycler.cs" t="Include" />
           <e p="ParticleTimeSkipper.cs" t="Include" />
           <e p="PausableSMB.cs" t="Include" />
+          <e p="PauseControl.cs" t="Include" />
+          <e p="PauseScreen.cs" t="Include" />
           <e p="PlatformStickComponent.cs" t="Include" />
+          <e p="PlayAnimationOnTrigger.cs" t="Include" />
+          <e p="PlayerBuffItem.cs" t="Include" />
           <e p="PlayerCharacter.cs" t="Include" />
           <e p="PlayerCharacterSpawner.cs" t="Include" />
           <e p="PlayerDodgingEventRegister.cs" t="Include" />
@@ -392,7 +427,9 @@
           <e p="PointerRecreator.cs" t="Include" />
           <e p="PointerStorage.cs" t="Include" />
           <e p="PointerUtil.cs" t="Include" />
+          <e p="PositionSlider.cs" t="Include" />
           <e p="ProgressBarDataUpdater.cs" t="Include" />
+          <e p="ProgressBarUpdateComponent.cs" t="Include" />
           <e p="Projectile.cs" t="Include" />
           <e p="ProjectileReturnableComponent.cs" t="Include" />
           <e p="PsychicHeroAnimationEventContainer.cs" t="Include" />
@@ -400,20 +437,26 @@
           <e p="RageComponent.cs" t="Include" />
           <e p="RandomColorAssigner.cs" t="Include" />
           <e p="RandomColorComponent.cs" t="Include" />
+          <e p="RandomEvent.cs" t="Include" />
           <e p="RandomEventFactory.cs" t="Include" />
           <e p="ReplayCurrentLevelButton.cs" t="Include" />
+          <e p="ResetByVelocity.cs" t="Include" />
+          <e p="SamuraiDomain.cs" t="Include" />
           <e p="SaveDataComposer.cs" t="Include" />
           <e p="SaveSystem.cs" t="Include" />
+          <e p="ScaleChanger.cs" t="Include" />
           <e p="SceneDealDamageComponent.cs" t="Include" />
           <e p="SceneDealDamageComponentMultiple.cs" t="Include" />
           <e p="SceneEventSystem.cs" t="Include" />
           <e p="SceneLoader.cs" t="Include" />
+          <e p="SceneLoadTrigger.cs" t="Include" />
           <e p="SceneObjectDestroyOnContactComponent.cs" t="Include" />
           <e p="SelectionElementStorage.cs" t="Include" />
           <e p="SelectionPanelElement.cs" t="Include" />
           <e p="SelectionPointer.cs" t="Include" />
           <e p="ShaderController.cs" t="Include" />
           <e p="ShadowFactory.cs" t="Include" />
+          <e p="ShadowSpritesStorer.cs" t="Include" />
           <e p="SignRoationAnimControl.cs" t="Include" />
           <e p="SingleAttackComponent.cs" t="Include" />
           <e p="Skill.cs" t="Include" />
@@ -424,22 +467,42 @@
           <e p="SlowEffectProcessor.cs" t="Include" />
           <e p="SMb_AxeHero_Caught.cs" t="Include" />
           <e p="SMB_AxeHero_TryCatch.cs" t="Include" />
+          <e p="SMB_Bandit_Attack.cs" t="Include" />
+          <e p="SMB_Bandit_DashStrike.cs" t="Include" />
+          <e p="SMB_Bandit_Idle.cs" t="Include" />
+          <e p="SMB_Bandit_Jump.cs" t="Include" />
+          <e p="SMB_Bandit_Run.cs" t="Include" />
           <e p="SMB_BatHero_Attack.cs" t="Include" />
           <e p="SMB_BatHero_InstantKill.cs" t="Include" />
           <e p="SMB_Falldown_General.cs" t="Include" />
+          <e p="SMB_Ghost_Attack.cs" t="Include" />
+          <e p="SMB_Ghost_Celebrate.cs" t="Include" />
+          <e p="SMB_Ghost_Chase.cs" t="Include" />
+          <e p="SMB_Ghost_Die.cs" t="Include" />
+          <e p="SMB_Ghost_Wander.cs" t="Include" />
           <e p="SMB_Hitstun_General.cs" t="Include" />
           <e p="SMB_Idle_General.cs" t="Include" />
           <e p="SMB_Jump_General.cs" t="Include" />
           <e p="SMB_Push.cs" t="Include" />
           <e p="SMB_Run_General.cs" t="Include" />
+          <e p="SMB_Samurai_PierceAttack.cs" t="Include" />
+          <e p="SMB_SamuraiShuriken_Fly.cs" t="Include" />
+          <e p="SMB_SamuraiShuriken_StickToWall.cs" t="Include" />
+          <e p="SMB_SwordQi_Break.cs" t="Include" />
+          <e p="SMB_SwordQi_Fly.cs" t="Include" />
           <e p="SnowballDamageReceiver.cs" t="Include" />
           <e p="SnowballEventSystem.cs" t="Include" />
+          <e p="SnowBallResetComponent.cs" t="Include" />
+          <e p="SnowBallSetuper.cs" t="Include" />
           <e p="SnowBallTryHitEnemyComponent.cs" t="Include" />
           <e p="SoundTrackPlayer.cs" t="Include" />
+          <e p="SpawnFire.cs" t="Include" />
+          <e p="SpawnObjectOnTrigger.cs" t="Include" />
           <e p="Spike.cs" t="Include" />
           <e p="SpinCandidateData.cs" t="Include" />
           <e p="SpinCandidateStorage.cs" t="Include" />
           <e p="SplashBlood.cs" t="Include" />
+          <e p="SplashScreenAnimation.cs" t="Include" />
           <e p="SpriteAnimationDisposer.cs" t="Include" />
           <e p="SpriteEffectFactory.cs" t="Include" />
           <e p="StateMachine.cs" t="Include" />
@@ -448,6 +511,15 @@
           <e p="Sword.cs" t="Include" />
           <e p="SwordPrincessAttackMessagingComponent.cs" t="Include" />
           <e p="SwordPrincessParticleSpawner.cs" t="Include" />
+          <e p="TennisBallBlinkingAndDisappear.cs" t="Include" />
+          <e p="TennisBallDamageReceiver.cs" t="Include" />
+          <e p="TennisBallResetComponent.cs" t="Include" />
+          <e p="TennisBallTimer.cs" t="Include" />
+          <e p="Timer.cs" t="Include" />
+          <e p="Tip.cs" t="Include" />
+          <e p="TipText.cs" t="Include" />
+          <e p="TriggerToUnpause.cs" t="Include" />
+          <e p="TunnelTeleporter.cs" t="Include" />
           <e p="UIControl.cs" t="Include" />
           <e p="UIFactory.cs" t="Include" />
           <e p="UIMessager.cs" t="Include" />
@@ -456,46 +528,18 @@
           <e p="UltimateComponent.cs" t="Include" />
           <e p="UltimateIconComponent.cs" t="Include" />
           <e p="UltimatePotion.cs" t="Include" />
+          <e p="UltraSpacePlacer.cs" t="Include" />
           <e p="UnknownPotion.cs" t="Include" />
           <e p="UserInteractedPanel.cs" t="Include" />
           <e p="UtilityClass.cs" t="Include" />
           <e p="WallCheck.cs" t="Include" />
+          <e p="WayPointSlideComponent.cs" t="Include" />
           <e p="WelcomeText.cs" t="Include" />
+          <e p="WorldTextIndicator.cs" t="Include" />
           <e p="ZoomAccordingToFov.cs" t="Include" />
         </e>
-        <e p="ShadowSpritesStorer.cs" t="Include" />
-        <e p="SMB_Bandit_Attack.cs" t="Include" />
-        <e p="SMB_Bandit_DashStrike.cs" t="Include" />
-        <e p="SMB_Bandit_Idle.cs" t="Include" />
-        <e p="SMB_Bandit_Jump.cs" t="Include" />
-        <e p="SMB_Bandit_Run.cs" t="Include" />
-        <e p="SMB_Ghost_Attack.cs" t="Include" />
-        <e p="SMB_Ghost_Celebrate.cs" t="Include" />
-        <e p="SMB_Ghost_Chase.cs" t="Include" />
-        <e p="SMB_Ghost_Die.cs" t="Include" />
-        <e p="SMB_Ghost_Wander.cs" t="Include" />
-        <e p="SnowBallResetComponent.cs" t="Include" />
-        <e p="SnowBallSetuper.cs" t="Include" />
-        <e p="SpawnFire.cs" t="Include" />
-        <e p="SpawnObjectOnTrigger.cs" t="Include" />
-        <e p="SplashScreenAnimation.cs" t="Include" />
-        <e p="Sprites" t="Include">
-          <e p="GhostCapeBuff.cs" t="Include" />
-          <e p="HealthBarShakeComponent.cs" t="Include" />
-          <e p="HealthDecreaseComponent.cs" t="Include" />
-          <e p="HealthPotion.cs" t="Include" />
-          <e p="HeroSelectionDialogBox.cs" t="Include" />
-          <e p="IAttackEffectProcessor.cs" t="Include" />
-          <e p="InjuryMaterialController.cs" t="Include" />
-          <e p="InjuryShaderComponent.cs" t="Include" />
-          <e p="IPlayerBuff.cs" t="Include" />
-          <e p="OnePlayerTest.cs" t="Include" />
-          <e p="PlayerBuffItem.cs" t="Include" />
-        </e>
-        <e p="TennisBallBlinkingAndDisappear.cs" t="Include" />
-        <e p="TennisBallDamageReceiver.cs" t="Include" />
-        <e p="TennisBallResetComponent.cs" t="Include" />
-        <e p="TennisBallTimer.cs" t="Include" />
+        <e p="SMB_Recover_General.cs" t="Include" />
+        <e p="SMB_Samurai_SwordQi.cs" t="Include" />
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
             <e p="LiberationSans - OFL.txt" t="Include" />
@@ -524,11 +568,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
-        <e p="Timer.cs" t="Include" />
-        <e p="TriggerToUnpause.cs" t="Include" />
-        <e p="TunnelTeleporter.cs" t="Include" />
-        <e p="WayPointSlideComponent.cs" t="Include" />
-        <e p="WorldTextIndicator.cs" t="Include" />
+        <e p="TextRandomColorOnStart.cs" t="Include" />
       </e>
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />

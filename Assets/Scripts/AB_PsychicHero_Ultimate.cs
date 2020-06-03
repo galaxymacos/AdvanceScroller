@@ -28,6 +28,7 @@ public class AB_PsychicHero_Ultimate : CharacterStateMachineBehavior
 
         rb.gravityScale = 1;
         animator.GetComponent<UltimateComponent>().End();
+        Debug.Log("Psychic Hero Ultimate Ends");
         playerInput.horizontalAxis = 0;
         
         if (!playerCharacter.IsGrounded)
