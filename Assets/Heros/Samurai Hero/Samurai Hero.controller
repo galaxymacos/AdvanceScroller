@@ -23,6 +23,31 @@ MonoBehaviour:
   playerCharacter: {fileID: 0}
   groundAttack: {fileID: 7400000, guid: f38145b675259384db72a0dbc7036a20, type: 2}
   jumpAttack: {fileID: 7400000, guid: 02ae433a3bdd7344ca2180829ef2927b, type: 2}
+--- !u!1101 &-9118085941993594704
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: push
+    m_EventTreshold: 0
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: -2197017893597166938}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: 0.75
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
 --- !u!1102 &-8800043818644564488
 AnimatorState:
   serializedVersion: 5
@@ -645,6 +670,33 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-2197017893597166938
+AnimatorState:
+  serializedVersion: 5
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: push
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours:
+  - {fileID: 715758200152937338}
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: da9312ed3f42fa3429b42063de1054ba, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!114 &-1600269649628204265
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1010,6 +1062,27 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!114 &715758200152937338
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c2cc3ad18f4d5c47b27fd8fd219aa99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateCanTransformTo: []
+  stateCanForceTransformTo: []
+  soundInString: 
+  canControlHorizontalMovement: 0
+  canFloatInAir: 0
+  IsRecoverState: 0
+  characterAnimator: {fileID: 0}
+  playerCharacter: {fileID: 0}
+  bounceBackDamageData: {fileID: 0}
 --- !u!1101 &850404661389781745
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -1104,6 +1177,9 @@ AnimatorStateMachine:
   - serializedVersion: 1
     m_State: {fileID: -7805660817446426652}
     m_Position: {x: 640, y: 230, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2197017893597166938}
+    m_Position: {x: 640, y: 180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions:
   - {fileID: 4182768417632475764}
@@ -1122,6 +1198,7 @@ AnimatorStateMachine:
   - {fileID: -7858774934853611495}
   - {fileID: -2954808298149758262}
   - {fileID: 850404661389781745}
+  - {fileID: -9118085941993594704}
   m_EntryTransitions: []
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
